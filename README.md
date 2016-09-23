@@ -32,3 +32,25 @@ The central metaphor for Processing has for years been the sketchbook. Now this 
 
 **Jer Thorp**, Co-founder, The Office for Creative Research \(March 2013\)
 
+## Acknowledgments
+
+I'd like to acknowledge the following individuals who have contributed to this project and thank them deeply for their support:
+
+First and foremost, Jesus Duran, CTO of Ketai LLC, without whom the Ketai library used in this book would neither have come to existence nor contain the comprehensive list of features that it has today&emdash;his talent and rigor have been essential to bringing Android features within Processing's reach in a timely and reliable way;
+
+John Osborn, my editor, whose valuable feedback and recommendations were always right on target and instrumental to completing a book that could be useful and clear to diverse audiences;
+
+Casey Reas, Processing cofounder, whose guidance and friendship are what brought me to Processing in the first place—I consider Processing to be not only one of the most versatile teaching and production tools available to solve problems but also the subject of the most generous community of creative coders out there;
+
+Ben Fry, Processing cofounder, who has relentlessly guided Processing through its countless updates while maintaining a particular sense of humor that helped form the popular multimodal development environment into what it is today;
+
+Andres Colubri, whose four-dimensional genius has produced a significant OpenGL and video overhaul for Processing and who has made major contributions to the Android mode;
+
+Joshua Albers, Jon Buckley, Andres Colubri, Paulo Guerra, Riley Hoonan, Stephen Mendez, Jaskirat Singh Randhawa, Michael Riley, Andreas Schlegel, Jesse Scott, and William Smith for their thorough technical reviews of the book and their valuable feedback;
+
+The University of Illinois at the Chicago School of Art and Design, supporting me to launch the Mobile Processing Conference in Chicago from 2010 to 2013;
+
+The New School in New York City for supporting some of the comprehensive online reference; and
+
+Irena Haiduk, my wife, on whom I rely for the critical judgment and daily joy that is required to write a book.
+
