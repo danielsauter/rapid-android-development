@@ -12,11 +12,11 @@
 
 **William Smith**, Moderator, Processing Forum
 
-Daniel Sauter's _Rapid Android Development_ provides a serious guide to using the platform for creative coding that Processing provides for leveraging the full potential of Android devices. Advanced graphics, gestures and sensors are only the tip of the iceberg, and you will find yourself diving into sophisticated sensor-based applications, games and art-ware, learning a host of techniques for coding and even publishing them in Google’s Play market. This book is invaluable!
+> Daniel Sauter's _Rapid Android Development_ provides a serious guide to using the platform for creative coding that Processing provides for leveraging the full potential of Android devices. Advanced graphics, gestures and sensors are only the tip of the iceberg, and you will find yourself diving into sophisticated sensor-based applications, games and art-ware, learning a host of techniques for coding and even publishing them in Google’s Play market. This book is invaluable!
 
 **Jesus Duran**,** **Artist, educator, and CTO of Ketai LLC
 
-Whether used for education, application prototyping or just plain fun, Processing for Android is easy to learn and can produce truly stunning visual results. If you don't have time or interest to learn the intricacies of Android OpenGL, radios and sensor programming, but want to benefit from all the magic that these technologies have to offer, this book provides the shortest and most informative path toward achieving that goal.
+> Whether used for education, application prototyping or just plain fun, Processing for Android is easy to learn and can produce truly stunning visual results. If you don't have time or interest to learn the intricacies of Android OpenGL, radios and sensor programming, but want to benefit from all the magic that these technologies have to offer, this book provides the shortest and most informative path toward achieving that goal.
 
 **Mike Riley**,** **Author, Programming Your Home
 
