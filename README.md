@@ -54,3 +54,13 @@ The New School in New York City for supporting some of the comprehensive online 
 
 Irena Haiduk, my wife, on whom I rely for the critical judgment and daily joy that is required to write a book.
 
+## Licenses
+
+![](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)
+
+Rapid Android Development by [Daniel Sauter](http://processingandroid.org/) is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/).
+
+Based on a work at [http:\/\/processingandroid.org\/](http://processingandroid.org/).
+
+Permissions beyond the scope of this license may be available at [http:\/\/danielsauter.com\/contact](http://danielsauter.com/contact).
+
