@@ -14,11 +14,11 @@
 
 > Daniel Sauter's _Rapid Android Development_ provides a serious guide to using the platform for creative coding that Processing provides for leveraging the full potential of Android devices. Advanced graphics, gestures and sensors are only the tip of the iceberg, and you will find yourself diving into sophisticated sensor-based applications, games and art-ware, learning a host of techniques for coding and even publishing them in Google’s Play market. This book is invaluable!
 
-**Jesus Duran**,** **Artist, educator, and CTO of Ketai LLC
+**Jesus Duran**, Artist, educator, and CTO of Ketai LLC
 
 > Whether used for education, application prototyping or just plain fun, Processing for Android is easy to learn and can produce truly stunning visual results. If you don't have time or interest to learn the intricacies of Android OpenGL, radios and sensor programming, but want to benefit from all the magic that these technologies have to offer, this book provides the shortest and most informative path toward achieving that goal.
 
-**Mike Riley**,** **Author, Programming Your Home
+**Mike Riley**, Author, Programming Your Home
 
 ## Foreword
 
@@ -66,5 +66,5 @@ Permissions beyond the scope of this license may be available at [http:\/\/danie
 
 ![](http://www.gnu.org/graphics/lgplv3-88x31.png)
 
-The source code of the more than 40 example projects in the book is licensed under the [GNU Lesser General Public License](http://creativecommons.org/licenses/LGPL/2.1/), Version 2.1.
+The source code for the more than 40 example projects in the book is licensed under the [GNU Lesser General Public License](http://creativecommons.org/licenses/LGPL/2.1/), Version 2.1.
 
