@@ -6,7 +6,7 @@
 
 > _Rapid Android Development_ successfully aims at a wide audience—from beginners to experienced developers. I recommend it to anyone who wants to use Processing to develop Android apps, especially creative coders who will be inspired by the diverse techniques for mobile development that fill this book.
 
-**Andrés Colubri, **Computational Researcher, Harvard University and Fathom Information Design
+**Andrés Colubri**, Computational Researcher, Harvard University and Fathom Information Design
 
 > Even if you think you know Processing for Android, this book will still teach you something new, be it 3D, data storage methods, or networking techniques. It provides a solid framework from which aspiring Android developers can launch into developing apps, all while being enjoyable to read.
 
@@ -63,4 +63,8 @@ Rapid Android Development by [Daniel Sauter](http://processingandroid.org/) is l
 Based on a work at [http:\/\/processingandroid.org\/](http://processingandroid.org/).
 
 Permissions beyond the scope of this license may be available at [http:\/\/danielsauter.com\/contact](http://danielsauter.com/contact).
+
+![](http://www.gnu.org/graphics/lgplv3-88x31.png)
+
+The source code of the more than 40 example projects in the book is licensed under the [GNU Lesser General Public License](http://creativecommons.org/licenses/LGPL/2.1/), Version 2.1.
 
