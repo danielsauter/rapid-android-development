@@ -60,9 +60,9 @@ Irena Haiduk, my wife, on whom I rely for the critical judgment and daily joy th
 
 Rapid Android Development by [Daniel Sauter](http://processingandroid.org/) is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/).
 
-Based on a work at [http:\/\/processingandroid.org\/](http://processingandroid.org/).
+Based on a work at [processingandroid.org\/](http://processingandroid.org/).
 
-Permissions beyond the scope of this license may be available at [http:\/\/danielsauter.com\/contact](http://danielsauter.com/contact).
+Permissions beyond the scope of this license may be available at [danielsauter.com\/contact](http://danielsauter.com/contact).
 
 ![](http://www.gnu.org/graphics/lgplv3-88x31.png)
 
