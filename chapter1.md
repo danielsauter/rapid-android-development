@@ -129,3 +129,19 @@ The example code for the projects in this book has been tested on the following 
 * **Google Nexus 6 with 25 GB memory**<br /> (Lollipop)
 
 All the code is available online. Feel free to comment and drop some feedback! 
+
+###Online Resources
+
+You can download the complete set of source files from the book's web page at http://pragprog.com/titles/dsproc/source_code. The compressed file available online contains all the media assets you need organized by chapter directories and individual projects. If you’re reading the ebook, you can also open the discussed source code just by clicking the file path before the code listings.
+
+The online forum for the book, located at http://forums.pragprog.com/forums/209, provides a place for feedback, discussion, questions, and–I hope–answers as well. In the ebook, you'll find a link to the forum on every page next to a "report erratum" link that points to http://pragprog.com/titles/dsproc/errata, where you can report errors such as typos, technical errors, and suggestions. Your feedback and suggestions are very much appreciated.
+
+Let's get started! Once we're done installing our software tools in ***linkend="chp.getting.started"***, we are only minutes away from completing our first Android app.
+<br />
+<br />
+__
+####Daniel Sauter
+Associate Professor, <br />School of Art, Media, and Technology at Parsons, The New School<br />
+***daniel@ketai.org***<br />
+**New York City, 2015-03-31**
+
