@@ -1,6 +1,6 @@
 # Preface
 
-Processing is a favorite among artists and designers and widely popular among developers who look for a productivity edge.[^1] The programming language and environment has developed from a sketching tool to a production environment for a range of operating systems and platforms. The <firstuse>Android mode</firstuse>, introduced to Processing with the release of version 2.0, now makes it as easy to develop Processing apps for the Android as for the desktop.
+Processing is a favorite among artists and designers and widely popular among developers who look for a productivity edge.[^1] The programming language and environment has developed from a sketching tool to a production environment for a range of operating systems and platforms. The Android mode, introduced to Processing with the release of version 2.0, now makes it as easy to develop Processing apps for the Android as for the desktop.
 
 Initiators Ben Fry and Casey Reas have promoted software literacy since 2001 using Processing, a free open source tool that can be used by individuals at any level of programming experience. The Processing project thrives on the support of its generous online community, whose members encourage collaboration and code sharing and are responsible for one of Processing's most important features: its libraries.
 
