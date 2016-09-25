@@ -67,16 +67,15 @@ The book is written for the following readers:
 
 If you have never programmed in Processing or any other language before, you can turn to two excellent sources to get you up to speed; I've listed them at the end of this paragraph. You need to have an idea of the basic principles of programming to fully enjoy the book, such as the use of variables, conditionals, and loops. If you feel a little shaky with any of those concepts, I recommend you get one of the two books and keep it close by for frequent consultation. If you have scripted or programmed before, even if only at a basic level, you should be able follow the examples in this book with a close read.
 
-***Getting Started with Processing (Reas and Fry)***
+***Getting Started with Processing (Reas and Fry)***<br/>
 [This casual, inexpensive book is a concise introduction to Processing and interactive computer graphics.][8] Written by Processing's initiators, it takes you through the learning process one step at a time to help you grasp core programming concepts.
 
-***Processing: A Programming Handbook for Visual Designers and Artists, Second Edition***
+***Processing: A Programming Handbook for Visual Designers and Artists, Second Edition***<br/>
 [This book is an introduction to the ideas of computer programming within the context of the visual arts.][9] It targets an audience of computer-savvy individuals who are interested in creating interactive and visual work through writing software but who have little or no prior experience.
 
-[8]http://shop.oreilly.com/product/0636920000570.do
-[9]http://mitpress.mit.edu/books/processing-1
+[8]: http://shop.oreilly.com/product/0636920000570.do
+[9]: http://mitpress.mit.edu/books/processing-1
 
 ###What's in This Book
 
 This book will have you developing interactive sensor-based Android apps in no time. The chapters include previews of all the classes and methods used for the chapter projects, as well as a description of the particular sensor or hardware device that we'll be working with. Small projects introduce the basic steps to get a particular feature working, which leads up to a more advanced chapter project.
-
