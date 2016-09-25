@@ -80,4 +80,41 @@ If you have never programmed in Processing or any other language before, you can
 
 This book will have you developing interactive sensor-based Android apps in no time. The chapters include previews of all the classes and methods used for the chapter projects, as well as a description of the particular sensor or hardware device that we'll be working with. Small projects introduce the basic steps to get a particular feature working, which leads up to a more advanced chapter project.
 
-Part I of the book gets you started with the touch screen and Android sensors and cameras. <ref linkend="chp.getting.started" />, walks you through the steps of installing Processing and the Android SDK. We'll write a simple app and run it in the emulator and on an Android device. <ref linkend="chp.display" />, will show you how to use mouse position, finger pressure, and multitouch gestures on the touch screen panel while also providing details on the support for color that Processing provides. <ref linkend="chp.sensors" />, introduces us to all the device sensors built into an Android. We'll display accelerometer values on the Android screen, build a motion-based color mixer, and detect a device shake.
+Part I of the book gets you started with the touch screen and Android sensors and cameras. *link>chp.getting.started*, walks you through the steps of installing Processing and the Android SDK. We'll write a simple app and run it in the emulator and on an Android device. *link>chp.display*, will show you how to use mouse position, finger pressure, and multitouch gestures on the touch screen panel while also providing details on the support for color that Processing provides. *link>chp.sensors*, introduces us to all the device sensors built into an Android. We'll display accelerometer values on the Android screen, build a motion-based color mixer, and detect a device shake.
+
+In Part II, we'll be working with the camera and location devices found on most Androids. *line>chp.geolocation*, shows us how to write location-based apps. We'll determine our location, the distance to a destination and to another mobile device on the move, and calculate the speed and bearing of a device. *linkend>chp.camera*, lets us access the Android cameras through Processing. We'll display a camera preview of the front- and back-facing cameras, snap and save pictures to the camera's SD card, and superimpose images.
+
+In Part III, we'll learn about peer-to-peer networking. *link>chp.wifi*, teaches us how to connect the Android with our desktop via Wi-Fi using the Open Sound Control protocol. We'll create a virtual whiteboard app, where you and your friends can doodle collaboratively, and we'll build a marble-balancing game, where two players compete on a shared virtual board. *link>chp.p2p*, shows us how to use Android Bluetooth technology to discover, pair, and connect Android devices. We'll create a remote cursor sketch and build a survey app to share questions and answers between devices. *link>chp.nfc*, introduces us to the emerging short-range radio standard designed for zero-click interaction at close proximity and is expected to revolutionize the point-of-sale industry. We'll read and write NFC tags and exchange data between Android devices via NFC and Bluetooth.
+
+Part IV deals with data and storage, as all advanced apps require some sort of data storage and retrieval to keep user data up-to-date. In *link>chp.data*, we'll load, parse, and display data from text files and write data to a text file in the Android storage. We'll also connect to a data source hosted online to create an earthquake app that visualizes currently reported earthquakes worldwide. *link>chp.sqlite*, introduces us to the popular SQLite database management system and Structured Query Language. We'll record sensor data into a SQLite database and query it for particular data attributes.  
+
+Part V gets us going with 3D graphics and cross-platform apps. *link>chp.mobile.3d*, will show us how to work with 3D primitives, how virtual light sources are used, and how cameras are animated. *link>chp.shapes.objects*, deals with 2D vector shapes and how to load and create 3D objects. *link>chp.web.apps*, opens up our mobile app development to a wide range of devices and platforms using the JavaScript mode in Processing. We'll discuss some of the benefits of web apps being able to run on all modern browsers and the range of limitations using built-in device hardware.
+
+###How to Read This Book
+
+The five parts of the book can each be considered self-contained mini-courses that you can jump right into once you have completed Part I, have properly installed all the required software, and are up and running. While the book does progress in a step-by-step fashion from fundamental to advanced subjects, you can jump right into Part II, III, IV, or V if you need to tackle a particular family of sensors or Android features for a current project.
+
+Whenever we undertake a project that builds on prior code, refines an earlier project, or revisits important concepts mentioned earlier in the book, we'll cross-reference those earlier sections accordingly; if you are using the ebook, you can use the link to jump directly to the referenced section.
+
+Throughout our journey in this book, I encourage you to get inspired by the projects in the Processing exhibition http://processing.org/exhibition/, learn from the Processing community (http://forum.processing.org/), use the code examples included in IDE File &mapsto; &lquot;Examples...,&rquot; refer to the online tutorials (http://processing.org/learning/), collaborate with peers (http://sketchpad.cc), and learn from public sources, such as http://www.openprocessing.org/.
+
+###What You Need to Use This Book
+
+For all the projects in this book, you need the following software tools. The first chapter guides you through installing those tools step by step.
+
+* [Processing 3][10]
+* [Android 4.0 Ice Cream Sandwich or higher][11]
+(2.3 Gingerbread is sufficient for all projects but *link>chp.p2p*, and *link>chp.nfc*).
+* [Ketai Sensor Library for Processing][12]
+* [Processing Android installation instructions][13]
+
+[10]: http://processing.org/download/
+[11]: http://developer.android.com/sdk/
+[12]: http://ketai.org
+[13]: http://wiki.processing.org/w/Android#Instructions
+
+The projects in this book require at least one Android device. To complete Part III, you need two Android devices. This allows us to run and test the sketches on the actual hardware, use the actual sensors, and get the actual mobile user experience that is the focus of this book.
+
+###Tested Android Devices for this Book
+
+The example code for the projects in this book has been tested on the following devices, some shown in *link>fig.tested.devices*:
