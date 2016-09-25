@@ -25,17 +25,17 @@ This book focuses on Android apps developed in Processing. There are no differen
 
 In the last chapter of the book we'll discuss cross-platform challenges for mobile apps and introduce Processing's JavaScript mode. HTML5 web apps developed in Processing run on all modern browsers found on smart phones, tablets, and desktops today. While interoperability is an important factor, we will limit our discussion of web apps to the last chapter, as we can't access many of the hardware sensors and devices that make for exciting apps.
 
-All core Processing methods are identical across modes, so when we develop Android apps we can also consider and use code examples written for Java mode. The Processing website contains a [complete reference][1] for all Processing methods. So does the IDE, which ships with a packaged reference that we can use without a connection to the Web; it's available from the Processing menu by selecting Help &mapsto; Reference.
+All core Processing methods are identical across modes, so when we develop Android apps we can also consider and use code examples written for Java mode. The Processing website contains a [complete reference][5] for all Processing methods. So does the IDE, which ships with a packaged reference that we can use without a connection to the Web; it's available from the Processing menu by selecting Help &mapsto; Reference.
 
 **Let's take a look at some of the main advantages to developing Android apps in Processing:**
 
 * If you are new to programming, Processing for Android is much easier to learn than Java. If you are an experienced Java programmer already, Processing is a great programming environment for rapid prototyping of graphics and sensor-heavy apps.
 
-* Processing uses straightforward syntax. [In comparison to Java,][2] it is more concise.Processing doesn't require you to understand advanced concepts such as classes or screen buffering to get started, yet it makes them accessible to any advanced users who want to use them. This makes Processing programs shorter and easier to read.
+* Processing uses straightforward syntax. [In comparison to Java,][6] it is more concise. Processing doesn't require you to understand advanced concepts such as classes or screen buffering to get started, yet it makes them accessible to any advanced users who want to use them. This makes Processing programs shorter and easier to read.
 
 * The lightweight programming environment installs quickly and is easy to use. Processing is available for GNU/Linux, Mac OS X, and Windows. If you work with multiple computers or want to help someone else get started quickly, being up and running in a few minutes can make all the difference.
 
-* Processing for Android supports [OpenGL.][3] When working with GPU-accelerated 2D and 3D graphics and geometry, lights, or textures, comprehensive OpenGL support is essential to ensure reasonably high frame rates and a fluid user experience.
+* Processing for Android supports [OpenGL.][7] When working with GPU-accelerated 2D and 3D graphics and geometry, lights, or textures, comprehensive OpenGL support is essential to ensure reasonably high frame rates and a fluid user experience.
 
 * The latest version of Processing supports three application environments, or modes. Applications written in Java mode will run on Linux, Mac, or Windows systems. Programs written in Android mode will run on Android devices, and those written in JavaScript mode will run in any HTML5 browser. The Android mode is designed for creating native Android apps.
 
@@ -43,9 +43,9 @@ All core Processing methods are identical across modes, so when we develop Andro
 
 This list of advantages should provide you all the evidence you need to conclude that Processing is a great environment for developing Android apps. Your projects can scale in scope and context: from sketch to prototype and from prototype to market-ready application, from CPU-focused graphics rendering to hardware-accelerated GPU-focused rendering, from Processing statements and libraries to Android and Java statements and packages, and from a particular operating system and device to other operating systems and devices. You won't need to worry about a different last-minute route or an alternative solution for your software projects. Projects can grow with you and will let you enjoy the iterative process of design and development.
 
-[1]: http://processing.org/reference/
-[2]: http://wiki.processing.org/w/Java_Comparison
-[3]: https://www.opengl.org
+[5]: http://processing.org/reference/
+[6]: http://wiki.processing.org/w/Java_Comparison
+[7]: https://www.opengl.org
 
 ###Who This Book Is For
 
@@ -66,3 +66,18 @@ The book is written for the following readers:
 ###Prerequisites
 
 If you have never programmed in Processing or any other language before, you can turn to two excellent sources to get you up to speed; I've listed them at the end of this paragraph. You need to have an idea of the basic principles of programming to fully enjoy the book, such as the use of variables, conditionals, and loops. If you feel a little shaky with any of those concepts, I recommend you get one of the two books and keep it close by for frequent consultation. If you have scripted or programmed before, even if only at a basic level, you should be able follow the examples in this book with a close read.
+
+***Getting Started with Processing (Reas and Fry)***
+[This casual, inexpensive book is a concise introduction to Processing and interactive computer graphics.][8] Written by Processing's initiators, it takes you through the learning process one step at a time to help you grasp core programming concepts.
+
+***Processing: A Programming Handbook for Visual Designers and Artists, Second Edition***
+[This book is an introduction to the ideas of computer programming within the context of the visual arts.][9] It targets an audience of computer-savvy individuals who are interested in creating interactive and visual work through writing software but who have little or no prior experience.
+
+[8] http://shop.oreilly.com/product/0636920000570.do<br/>
+[9] http://mitpress.mit.edu/books/processing-1
+
+###What's in This Book
+
+This book will have you developing interactive sensor-based Android apps in no time. The chapters include previews of all the classes and methods used for the chapter projects, as well as a description of the particular sensor or hardware device that we'll be working with. Small projects introduce the basic steps to get a particular feature working, which leads up to a more advanced chapter project.
+
+Part I of the book gets you started with the touch screen and Android sensors and cameras. <ref linkend="chp.getting.started" />, walks you through the steps of installing Processing and the Android SDK. We'll write a simple app and run it in the emulator and on an Android device. <ref linkend="chp.display" />, will show you how to use mouse position, finger pressure, and multitouch gestures on the touch screen panel while also providing details on the support for color that Processing provides. <ref linkend="chp.sensors" />, introduces us to all the device sensors built into an Android. We'll display accelerometer values on the Android screen, build a motion-based color mixer, and detect a device shake.
