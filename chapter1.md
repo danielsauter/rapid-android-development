@@ -117,7 +117,7 @@ The projects in this book require at least one Android device. To complete Part 
 
 ###Tested Android Devices for this Book
 
-The example code for the projects in this book has been tested on the following devices, some shown in *link>fig.tested.devices*:
+The example code for the projects in this book has been tested on the following devices, some shown in ***link>fig.tested.devices***:
 
 ![](rapid-android-development_p3_0.jpg)
 ######Tested Android phones and tablets. Clockwise from top left: ASUS Transformer Prime, Samsung Galaxy SIII, Samsung Nexus S, and Google Nexus 7
