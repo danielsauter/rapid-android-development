@@ -141,7 +141,7 @@ Let's get started! Once we're done installing our software tools in ***linkend="
 <br />
 __
 ####Daniel Sauter
-Associate Professor, <br />School of Art, Media, and Technology at Parsons, The New School<br />
-***daniel@ketai.org***<br />
-**New York City, 2015-03-31**
+**Associate Professor,** <br />School of Art, Media, and Technology at Parsons, The New School<br />
+**daniel@ketai.org • New York City • 2015-03-31**
+
 
