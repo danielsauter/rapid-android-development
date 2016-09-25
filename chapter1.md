@@ -73,7 +73,7 @@ If you have never programmed in Processing or any other language before, you can
 ***Processing: A Programming Handbook for Visual Designers and Artists, Second Edition***
 [This book is an introduction to the ideas of computer programming within the context of the visual arts.][9] It targets an audience of computer-savvy individuals who are interested in creating interactive and visual work through writing software but who have little or no prior experience.
 
-[8]http://shop.oreilly.com/product/0636920000570.do<br/>
+[8]http://shop.oreilly.com/product/0636920000570.do
 [9]http://mitpress.mit.edu/books/processing-1
 
 ###What's in This Book
