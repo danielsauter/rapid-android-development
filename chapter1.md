@@ -139,6 +139,7 @@ The online forum for the book, located at http://forums.pragprog.com/forums/209,
 Let's get started! Once we're done installing our software tools in ***linkend="chp.getting.started"***, we are only minutes away from completing our first Android app.
 <br />
 <br />
+<br />
 __
 ####Daniel Sauter
 **Associate Professor,** <br />School of Art, Media, and Technology at Parsons, The New School<br />
