@@ -1,7 +1,5 @@
 # Preface
 
-[link text](#test) 
-
 [Processing][1] is a favorite among artists and designers and widely popular among developers who look for a productivity edge. The programming language and environment has developed from a sketching tool to a production environment for a range of operating systems and platforms. The Android mode, introduced to Processing with the release of version 2.0, now makes it as easy to develop Processing apps for the Android as for the desktop.
 
 Initiators Ben Fry and Casey Reas have promoted software literacy since 2001 using Processing, a free open source tool that can be used by individuals at any level of programming experience. The Processing project thrives on the support of its generous online community, whose members encourage collaboration and code sharing and are responsible for one of Processing's most important features: its libraries.
@@ -78,7 +76,7 @@ If you have never programmed in Processing or any other language before, you can
 [8]: http://shop.oreilly.com/product/0636920000570.do
 [9]: http://mitpress.mit.edu/books/processing-1
 
-###[What's in This Book](#test)
+###What's in This Book
 
 This book will have you developing interactive sensor-based Android apps in no time. The chapters include previews of all the classes and methods used for the chapter projects, as well as a description of the particular sensor or hardware device that we'll be working with. Small projects introduce the basic steps to get a particular feature working, which leads up to a more advanced chapter project.
 
