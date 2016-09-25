@@ -121,4 +121,11 @@ The example code for the projects in this book has been tested on the following 
 
 ![](rapid-android-development_p3_0.jpg)
 ######Tested Android phones and tablets. Clockwise from top left: ASUS Transformer Prime, Samsung Galaxy SIII, Samsung Nexus S, and Google Nexus 7
+<br />
+* **Asus Transformer Prime Tablet with 32 GB memory** <br/ >(Ice Cream Sandwich, Jelly Bean)
+* **Samsung Galaxy SIII** <br />(Ice Cream Sandwich, Jelly Bean, KitKat) 
+* **Samsung Nexus S** <br />(Ice Cream Sandwich, Jelly Bean, KitKat) 
+* **Google Nexus 7 with 8 GB memory**<br /> (Jelly Bean, KitKat)
+* **Google Nexus 6 with 25 GB memory**<br /> (Lollipop)
 
+All the code is available online. Feel free to comment and drop some feedback! 
