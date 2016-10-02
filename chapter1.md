@@ -144,7 +144,8 @@ You can download the complete set of source files from the book's web page at ht
 
 The online forum for the book, located at http://forums.pragprog.com/forums/209, provides a place for feedback, discussion, questions, and–I hope–answers as well. In the ebook, you'll find a link to the forum on every page next to a "report erratum" link that points to http://pragprog.com/titles/dsproc/errata, where you can report errors such as typos, technical errors, and suggestions. Your feedback and suggestions are very much appreciated.
 
-Let's get started! Once we're done installing our software tools in ***linkend="chp.getting.started"***, we are only minutes away from completing our first Android app.
+Let's get started! Once we're done installing our software tools in [Chapter 1,
+Getting Started](../chapter1.md#h1), we are only minutes away from completing our first Android app.
 <br />
 <br />
 <br />
