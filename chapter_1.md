@@ -1,4 +1,4 @@
 # Chapter 1
 
-Test: {{ myVariable }}  
+### This is a test: {{ myVariable }}
    
