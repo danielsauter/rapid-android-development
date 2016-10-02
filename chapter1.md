@@ -79,3 +79,80 @@ If you have never programmed in Processing or any other language before, you can
 ###What's in This Book
 
 This book will have you developing interactive sensor-based Android apps in no time. The chapters include previews of all the classes and methods used for the chapter projects, as well as a description of the particular sensor or hardware device that we'll be working with. Small projects introduce the basic steps to get a particular feature working, which leads up to a more advanced chapter project.
+
+Part I of the book gets you started with the touch screen and Android sensors and cameras. [Chapter 1, Getting Started](../chapter1.md#h1), walks you through the steps of installing Processing and the Android SDK. We'll write a simple app and run it in the emulator and on an Android device. [Chapter 2, Working
+with the Touch Screen Display](../chapter2.md#h1), will show you how to use mouse position, finger pressure, and multitouch gestures on the touch screen panel while also providing details on the support for color that Processing provides. [Chapter 3, Using Motion and Position Sensors](../chapter3.md#h1), introduces us to all the device sensors built into an Android. We'll display accelerometer values on the Android screen, build a motion-based color mixer, and detect a device shake.
+
+In Part II, we'll be working with the camera and location devices found on most Androids. [Chapter 4, Using Geolocation and Compass](../chapter4.md#h1), shows us how to write location-based apps. We'll determine our location, the distance to a destination and to another mobile device on the move, and calculate the speed and bearing of a device. [Chapter 5, Using Android Cameras](../chapter5.md#h1), lets us access the Android cameras through Processing. We'll display a camera preview of the front- and back-facing cameras, snap and save pictures to the camera's SD card, and superimpose images.
+
+In Part III, we'll learn about peer-to-peer networking. [Chapter 6, Networking
+Devices with Wi-Fi](../chapter6.md#h1), teaches us how to connect the Android with our desktop via Wi-Fi using the Open Sound Control protocol. We'll create a virtual whiteboard app, where you and your friends can doodle collaboratively, and we'll build a marble-balancing game, where two players compete on a shared virtual board. [Chapter 7, Peer-to-Peer Networking Using Bluetooth and
+Wi-Fi Direct](../chapter7.md#h1), shows us how to use Android Bluetooth technology to discover, pair, and connect Android devices. We'll create a remote cursor sketch and build a survey app to share questions and answers between devices. [Chapter 8, Using Near Field Communication (NFC)](../chapter8.md#h1), introduces us to the emerging short-range radio standard designed for zero-click interaction at close proximity and is expected to revolutionize the point-of-sale industry. We'll read and write NFC tags and exchange data between Android devices via NFC and Bluetooth.
+
+Part IV deals with data and storage, as all advanced apps require some sort of data storage and retrieval to keep user data up-to-date. In [Chapter 9,
+Working with Data](../chapter9.md#h1), we'll load, parse, and display data from text files and write data to a text file in the Android storage. We'll also connect to a data source hosted online to create an earthquake app that visualizes currently reported earthquakes worldwide. [Chapter 10, Using SQLite Databases](../chapter10.md#h1), introduces us to the popular SQLite database management system and Structured Query Language. We'll record sensor data into a SQLite database and query it for particular data attributes.  
+
+Part V gets us going with 3D graphics and cross-platform apps. [Chapter 11,
+Introducing 3D Graphics with OpenGL](../chapter11.md#h1), will show us how to work with 3D primitives, how virtual light sources are used, and how cameras are animated. [Chapter 12, Working with Shapes and 3D Object](../chapter12.md#h1), deals with 2D vector shapes and how to load and create 3D objects. [Chapter 13, Sharing and
+Publishing Applications](../chapter13.md#h1), opens up our mobile app development to a wide range of devices and platforms using the JavaScript mode in Processing. We'll discuss some of the benefits of web apps being able to run on all modern browsers and the range of limitations using built-in device hardware.
+
+###How to Read This Book
+
+The five parts of the book can each be considered self-contained mini-courses that you can jump right into once you have completed Part I, have properly installed all the required software, and are up and running. While the book does progress in a step-by-step fashion from fundamental to advanced subjects, you can jump right into Part II, III, IV, or V if you need to tackle a particular family of sensors or Android features for a current project.
+
+Whenever we undertake a project that builds on prior code, refines an earlier project, or revisits important concepts mentioned earlier in the book, we'll cross-reference those earlier sections accordingly; if you are using the ebook, you can use the link to jump directly to the referenced section.
+
+Throughout our journey in this book, I encourage you to get inspired by the projects in the Processing exhibition http://processing.org/exhibition/, learn from the Processing community (http://forum.processing.org/), use the code examples included in IDE File &mapsto; &lquot;Examples...,&rquot; refer to the online tutorials (http://processing.org/learning/), collaborate with peers (http://sketchpad.cc), and learn from public sources, such as http://www.openprocessing.org/.
+
+###What You Need to Use This Book
+
+For all the projects in this book, you need the following software tools. The first chapter guides you through installing those tools step by step.
+
+* **[Processing 3][10]**
+* **[Android 4.0 Ice Cream Sandwich or higher][11]**<br />
+(2.3 Gingerbread is sufficient for all projects but [Chapter 7, Peer-to-Peer Networking Using Bluetooth
+and Wi-Fi Direct](../chapter7.md#h1), and [Chapter 8, Using Near Field Communication (NFC)](../chapter8.md#h1)).
+* **[Ketai Sensor Library for Processing][12]**
+* **[Processing Android installation instructions][13]**
+
+[10]: http://processing.org/download/
+[11]: http://developer.android.com/sdk/
+[12]: http://ketai.org
+[13]: http://wiki.processing.org/w/Android#Instructions
+
+The projects in this book require at least one Android device. To complete Part III, you need two Android devices. This allows us to run and test the sketches on the actual hardware, use the actual sensors, and get the actual mobile user experience that is the focus of this book.
+
+###Tested Android Devices for this Book
+
+The example code for the projects in this book has been tested on the following devices:
+
+<!--missing link for this content: , some shown in ***link>fig.tested.devices***:-->
+
+![](rapid-android-development_p3_0.jpg)
+######Tested Android phones and tablets. Clockwise from top left: ASUS Transformer Prime, Samsung Galaxy SIII, Samsung Nexus S, and Google Nexus 7
+<br />
+* **Asus Transformer Prime Tablet with 32 GB memory** <br/ >(Ice Cream Sandwich, Jelly Bean)
+* **Samsung Galaxy SIII** <br />(Ice Cream Sandwich, Jelly Bean, KitKat) 
+* **Samsung Nexus S** <br />(Ice Cream Sandwich, Jelly Bean, KitKat) 
+* **Google Nexus 7 with 8 GB memory**<br /> (Jelly Bean, KitKat)
+* **Google Nexus 6 with 25 GB memory**<br /> (Lollipop)
+
+All the code is available online. Feel free to comment and drop some feedback! 
+
+###Online Resources
+
+You can download the complete set of source files from the book's web page at http://pragprog.com/titles/dsproc/source_code. The compressed file available online contains all the media assets you need organized by chapter directories and individual projects. If you’re reading the ebook, you can also open the discussed source code just by clicking the file path before the code listings.
+
+The online forum for the book, located at http://forums.pragprog.com/forums/209, provides a place for feedback, discussion, questions, and–I hope–answers as well. In the ebook, you'll find a link to the forum on every page next to a "report erratum" link that points to http://pragprog.com/titles/dsproc/errata, where you can report errors such as typos, technical errors, and suggestions. Your feedback and suggestions are very much appreciated.
+
+Let's get started! Once we're done installing our software tools in [Chapter 1,
+Getting Started](../chapter1.md#h1), we are only minutes away from completing our first Android app.
+<br />
+<br />
+<br />
+__
+####Daniel Sauter
+**Associate Professor,** <br />School of Art, Media, and Technology at Parsons, The New School<br />
+**daniel@ketai.org • New York City • 2015-03-31**
+
+
