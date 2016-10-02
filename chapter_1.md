@@ -1,4 +1,4 @@
 # Chapter 1
 
-Test: {{ book.myVariable }}  
+Test: {{ book.variables.myVariable }}  
    
