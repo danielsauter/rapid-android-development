@@ -1,8 +1,6 @@
-{
-  "plugins": ["include-codeblock"]
+
 {
     "variables": {
         "myVariable": "Hello World"   
     }
-}
 }
