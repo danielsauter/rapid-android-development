@@ -1,4 +1,3 @@
 {
   "plugins": ["include-codeblock"]
-  "this": "IS A VARIABLE"
 }
