@@ -1,6 +1,6 @@
 # Preface
 
-### {{ test }}
+### 
 
 [Processing][1] is a favorite among artists and designers and widely popular among developers who look for a productivity edge. The programming language and environment has developed from a sketching tool to a production environment for a range of operating systems and platforms. The Android mode, introduced to Processing with the release of version 2.0, now makes it as easy to develop Processing apps for the Android as for the desktop.
 
