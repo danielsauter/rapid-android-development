@@ -110,7 +110,8 @@ For all the projects in this book, you need the following software tools. The fi
 
 * **[Processing 3][10]**
 * **[Android 4.0 Ice Cream Sandwich or higher][11]**<br />
-(2.3 Gingerbread is sufficient for all projects but *link>chp.p2p*, and *link>chp.nfc*).
+(2.3 Gingerbread is sufficient for all projects but [Chapter 7, Peer-to-Peer Networking Using Bluetooth
+and Wi-Fi Direct](../chapter7.md#h1), and [Chapter 8, Using Near Field Communication (NFC)](../chapter8.md#h1)).
 * **[Ketai Sensor Library for Processing][12]**
 * **[Processing Android installation instructions][13]**
 
