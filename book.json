@@ -1,5 +1,5 @@
 
 
 {
-  { var test = 'THING';  }
+  var test = {'THING';}
 }
