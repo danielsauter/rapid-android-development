@@ -1,6 +1,9 @@
+{
 
 {
     "variables": {
         "myVariable": "Hello World"   
     }
+}
+
 }
