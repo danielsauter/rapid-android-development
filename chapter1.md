@@ -174,3 +174,6 @@ Go ahead and add the following statements to <method>setup</method> in your Proc
 
 ```size(400, 400);```
 
+Now rerun the sketch. With a bit more pixel real estate (400 x 400px), we now have the space to build up some speed.
+
+###Save the Sketch
