@@ -22,7 +22,7 @@ Throughout the chapter we'll work with simple code that uses the Android touch s
 
 ###Install the Required Software
 
-Let's get started and download the software we'll need to develop Android apps. The Processing download comes in a fairly small package of approximately 165 MB. It consists of free open source software and is available from the Processing website without prior registration. For workshops, in the lab, in an office, or in a teaching environment where multiple machines are in use, the lightweight Processing development environment (or Processing IDE) is a good alternative to a full-featured integrated development environment (IDE) such as [Eclipse.][2]
+Let's get started and download the software we'll need to develop Android apps. The Processing download comes in a fairly small package of approximately 165 MB. It consists of free open source software and is available from the Processing website without prior registration. For workshops, in the lab, in an office, or in a teaching environment where multiple machines are in use, the lightweight Processing development environment (or "Processing IDE") is a good alternative to a full-featured integrated development environment (IDE) such as [Eclipse.][2]
 
 The Processing IDE supports some of the advanced syntax highlighting and autocomplete features for which [Eclipse is valued.][3] Additionally, professional programmers appreciate the Processing IDE for its quick install. It comes with all the necessary tutorials and example sketches that allow us to explore specific programming topics right away. Processing does not require installation; just extract the application file and start.
 
@@ -35,15 +35,36 @@ The Processing IDE supports some of the advanced syntax highlighting and autocom
 To implement the projects in this book, you'll need the following tools:
 
 * [Processing 3.0][4] (current pre-release is 3.0a5)
-* [Java 1.7 (or Java 7)][5]
+* [Java 1.7 (or "Java 7")][5]
 * [Android 4.0 Ice Cream Sandwich][6] (5.0 Lollipop is the current Android version, however 2.3 Gingerbread is sufficient for all projects except {{ book.chapter7 }}, and {{ book.chapter8 }}.)
 
+*These are the minimum software requirements. If you have a newer version, you'll be just fine*. Later we'll install some additional libraries that give us easier access to the features of an Android device. For now, use the following steps to build the core Processing environment we'll use throughout this book.
 
 [4]: http://processing.org/download/
 
 [5]: http://java.com/en/download/
 
 [6]: https://developer.android.com/studio/index.html#Other
+
+###Install Processing for Android
+
+Here are the steps to install Processing for the Android.
+
+1. Download Processing 3.0 for your operating system (OSX, Windows, or Linux) at [Processing.org/download][4]. The Processing download includes the Processing IDE, a comprehensive set of examples and tutorials, and a language reference. The Processing package does not include the Android software development kit, which you'll need to download separately.
+
+2. [Extract the Processing][7] application from the ```.zip```file on Windows, ```.dmg``` file on Mac OS, or ```.tar.gz``` file on Linux, and move it to your preferred program folder (for example, Applications if you are developing on OSX, ```Program Files``` on Windows, or your preferred ```/bin``` folder on Linux).
+
+[7]: http://processing.org/learning/gettingstarted/
+
+###Install the Android SDK
+
+1. Find and download the  Android SDK by going to http://developer.android.com/sdk/. Choose the package that's right for your operating system and complete the [installation of the Android SDK.][8] On Windows, you may wish to download and use the installer that Android provides to guide your setup. If Java JDK is not present on your system, you will be prompted to [download and install it.][9]
+
+2. When the Android SDK download is complete, go to the Processing wiki at http://wiki.processing.org/w/Android#Instructions and open the Android installation instructions you'll find there. Follow the instructions for your OS step by step. The wiki lists which components are required to configure Processing for Android on your operating system and tells you how to get Android installed properly. Android may have dependencies that are specific to your operating system, such as additional device drivers. If you are developing on Windows, follow the USB driver installation instructions available at http://developer.android.com/tools/extras/oem-usb.html. If you are developing on Linux, follow the instructions for setting up your device for development at http://developer.android.com/tools/device.html#setting-up.
+
+[8]: http://developer.android.com/sdk/installing.html
+
+[9]: http://docs.oracle.com/javase/7/docs/webnotes/install/
 
 <!--
 #run-sketch-android-emulator
