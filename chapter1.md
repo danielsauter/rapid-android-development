@@ -199,3 +199,9 @@ Installing sketch on emulator.
 Stating Sketch on emulator.
 Sketch launched on the emulator.
 ```
+
+The emulator starts up the Android OS exactly as a device would, just a bit more slowly. Once Android is running, Processing then installs the Android package (```apk```) and launches the sketch. If it takes too long for the emulator to start up, Processing might time out and you might have to relaunch your sketch one more time. The sketch looks identical to the Java mode sketch illustrated in ***MISSING IMAGE***, and if you move the mouse in the emulator window, it responds the same way it did in Java mode. The frame rate is noticeably lower, and the screen has a different aspect ratio. In the emulator, the mouse methods are a stand-in for the touch screen interface. Don't close the Android emulator as you keep testing your sketches.
+
+<!--MISSING IMAGE -->
+
+#####Figure 3: Running the drawing sketch in Android mode. We can run a sketch in either the Android emulator installed on our desktop computer (left) or directly on the Android device (right).
