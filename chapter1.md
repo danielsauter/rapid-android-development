@@ -60,13 +60,22 @@ Here are the steps to install Processing for the Android.
 
 1. Find and download the  Android SDK by going to http://developer.android.com/sdk/. Choose the package that's right for your operating system and complete the [installation of the Android SDK.][8] On Windows, you may wish to download and use the installer that Android provides to guide your setup. If Java JDK is not present on your system, you will be prompted to [download and install it.][9]
 
-2. When the Android SDK download is complete, go to the Processing wiki at http://wiki.processing.org/w/Android#Instructions and open the Android installation instructions you'll find there. Follow the instructions for your OS step by step. The wiki lists which components are required to configure Processing for Android on your operating system and tells you how to get Android installed properly. Android may have dependencies that are specific to your operating system, such as additional device drivers. If you are developing on Windows, follow the USB driver installation instructions available at http://developer.android.com/tools/extras/oem-usb.html. If you are developing on Linux, follow the instructions for setting up your device for development at http://developer.android.com/tools/device.html#setting-up.
-
 [8]: http://developer.android.com/sdk/installing.html
 
 [9]: http://docs.oracle.com/javase/7/docs/webnotes/install/
 
-<!--
-#run-sketch-android-emulator
-#introducing-android-touch-screen
--->
+2. When the Android SDK download is complete, go to the Processing wiki at http://wiki.processing.org/w/Android#Instructions and open the Android installation instructions you'll find there. Follow the instructions for your OS step by step. The wiki lists which components are required to configure Processing for Android on your operating system and tells you how to get Android installed properly. Android may have dependencies that are specific to your operating system, such as additional device drivers. If you are developing on Windows, follow the USB driver installation instructions available at http://developer.android.com/tools/extras/oem-usb.html. If you are developing on Linux, follow the instructions for setting up your device for development at http://developer.android.com/tools/device.html#setting-up.
+
+Now that you have installed all the necessary components to develop Android apps on your own system, let's jump right into Processing and write our first sketch.
+
+###Write Your First Android Sketch
+
+Go ahead and launch Processing from the applications directory. The Processing IDE launches, opening an empty sketch window, as shown in Figure 1, The Processing IDE, below.
+
+<!-- MISSING IMAGE HERE -->
+
+#####We edit Processing code directly within the Processing IDE sketch window, as shown here.
+
+Since you've launched the application for the first time, Processing has just created a sketchbook folder for you, which is located in ```Documents``` on the hard drive, independent of the OS you are developing on. I recommend you save all your sketches to this location. Then Processing can list them for you within the IDE (click the "Open..." toolbar button). Also, when you update to future versions of Processing, the sketchbook loads up exactly the same way as before.
+
+
