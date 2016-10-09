@@ -102,6 +102,11 @@ The message area and console below the text editor provide us with valuable feed
 
 You can always find more information on the key IDE features discussed here, as well as a summary of the installation, on the Learning page of the [Processing website.][7]
 
+Now that you know how to work with the Processing editor, you're almost ready to write your first sketch.
+
 [10]: http://processing.org/reference/environment/
 
 [11]: http://processing.org/learning/javascript/
+
+
+###Understand the Structure of a Sketch
