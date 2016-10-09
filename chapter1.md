@@ -214,7 +214,7 @@ As you can see, the emulator is a good way to check whether your sketch is opera
 
 Let's run the sketch on a real Android device. First you'll need to check which version of Android it's running. Then you'll need to connect the device to your computer with a USB cable and enable USB debugging.
 
-To determine which version of Android you're running, go to the home screen, tap Settings and then tap "About phone" (or "About phone/tablet") at the bottom of the menu that appears. Look for the version of Android that is installed on your device under &lquot;Android version&rquot; and make a note. The procedure for enabling USB debugging depends on that number. Now connect your device to your desktop.
+To determine which version of Android you're running, go to the home screen, tap Settings and then tap "About phone" (or "About phone/tablet") at the bottom of the menu that appears. Look for the version of Android that is installed on your device under "Android version" and make a note. The procedure for enabling USB debugging depends on that number. Now connect your device to your desktop.
 
 * If you're running version 4.2 Jelly Bean or a more recent version of Android, activate the hidden "Developer options" menu by tapping "Build number" at the bottom of the "About phone/tablet" menu five times. Then navigate to the Settings &mapsto; "Developer options" menu and check "USB Debugging." To respond to the warning that "USB debugging is intended for development purposes only," tap OK.
 
@@ -229,3 +229,6 @@ With all the software tools in place and the Android device plugged into your de
 ```
 
 [14]: http://developer.android.com/guide/developing/device.html
+
+###Run the App
+
