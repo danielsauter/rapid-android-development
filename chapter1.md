@@ -113,6 +113,12 @@ Now that you know how to work with the Processing editor, you're almost ready to
 
 Any Processing sketch that will interact with users or make use of animated graphics–as is the case for all the sketches in this book–must include two methods:
 
-An instance of the ```setup``` method, which initializes key variables and settings the sketch will use and is executed only once when the app starts
+* An instance of the ```setup``` method, which initializes key variables and settings the sketch will use and is executed only once when the app starts
 
-An instance of the ```draw``` method, which continuously updates or redraws the screen to respond to user input and real-time events
+* An instance of the ```draw``` method, which continuously updates or redraws the screen to respond to user input and real-time events
+
+If we redraw the screen fast enough, users will perceive individual images, or *frames*, as continuous movement. It's a [principle of film and animation][12] we have all experienced. A typical Processing sketch starts by defining the global variables it uses, followed by both ```setup``` and ```draw``` methods. ```setup``` is called exactly once when you start a sketch to initialize key parameters. For instance, we can set a particular  window ```size``` or screen ```orientation```, or we can load custom fonts and media assets. ```setup``` is responsible for taking care of everything we need to do once to configure a sketch.
+
+The ```draw``` method, in contrast, is called repeatedly to update the screen sixty times per second by default. We can adjust this rate using the ```frameRate``` method. If our drawings are complex or if they require substantial amounts of processor power to compute, Processing might not always be able to keep up with the 60 fps frame rate. We can always get some information on the current playback rate through the ```frameRate``` constant Processing provides to us. As a point of reference, cinema film runs at 24 fps and digital video typically at 30 fps.
+
+[12]: http://en.wikipedia.org/wiki/Persistence_of_vision
