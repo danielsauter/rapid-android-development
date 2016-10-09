@@ -222,8 +222,10 @@ To determine which version of Android you're running, go to the home screen, tap
 
 If you are developing on Windows or Linux, you'll need a special USB device driver. You can find instructions on the [Android website][14] for downloading and installing it.  
 
-With all the software tools in place and the Android device plugged into your desktop, let's run our basic drawing example on the device. To run the sketch fullscreen, let's comment out <method>size</method> in <method>setup</method>, so the app covers the full screen of the Android device.
+With all the software tools in place and the Android device plugged into your desktop, let's run our basic drawing example on the device. To run the sketch fullscreen, let's comment out ```size``` in ```setup```, so the app covers the full screen of the Android device.
 
-
+```
+// size(400, 400);
+```
 
 [14]: http://developer.android.com/guide/developing/device.html
