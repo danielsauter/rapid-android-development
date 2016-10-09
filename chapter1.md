@@ -124,3 +124,7 @@ The ```draw``` method, in contrast, is called repeatedly to update the screen si
 Neither ```setup``` nor ```draw``` accepts parameters. They are ```void``` methods and do not return values. Both are used in virtually every Processing sketch.
 
 [12]: http://en.wikipedia.org/wiki/Persistence_of_vision
+
+###Write a Sketch
+
+Let's now say "Hi" to Processing by creating a simple sketch that draws an ellipse repeatedly at the current cursor position. We'll add some complexity to its graphical output by having the ellipse expand or contract along its vertical and horizontal axes, depending on how fast the mouse moves across the screen. This basic drawing sketch, shown in <ref linkend="fig.basic.drawing" />, gives us immediate visual feedback and uses your mouse as input. As you move along, experiment and play with parameter values to better understand them.
