@@ -132,3 +132,28 @@ Let's now say "Hi" to Processing by creating a simple sketch that draws an ellip
 <!-- MISSING IMAGE HERE -->
 
 #####Figure 2: A simple sketch. With the ellipse-drawing primitive, Processing can generate dynamic output. On the left is a 100 x 100 pixel window; on the right, a 400 x 400 pixel window.
+
+We use a single drawing primitive for this sketch, the ```ellipse```, also used to draw circles by providing equal width and height for the ellipse. In Processing, an ```ellipse(x, y, width, height)``` [requires four parameters:][13]
+
+• The horizontal ```x``` position of the ellipse center
+• The vertical ```y``` position of the ellipse center
+• The ellipse ```width```
+• The ellipse ```height```
+
+The following snippet contains the code we’ll need for our sketch.
+
+```
+				void setup()
+				{
+				}
+
+				void draw()
+				{
+					ellipse(mouseX, mouseY, mouseX-pmouseX, mouseY-pmouseY);
+				}
+```
+Go ahead and type this into the text editor, as illustrated in <ref linkend="fig.processing.basic.drawing" />:
+
+<!-- MISSING IMAGE HERE -->
+
+[13]: http://processing.org/reference/ellipse_.html
