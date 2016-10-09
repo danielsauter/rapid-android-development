@@ -121,4 +121,6 @@ If we redraw the screen fast enough, users will perceive individual images, or *
 
 The ```draw``` method, in contrast, is called repeatedly to update the screen sixty times per second by default. We can adjust this rate using the ```frameRate``` method. If our drawings are complex or if they require substantial amounts of processor power to compute, Processing might not always be able to keep up with the 60 fps frame rate. We can always get some information on the current playback rate through the ```frameRate``` constant Processing provides to us. As a point of reference, cinema film runs at 24 fps and digital video typically at 30 fps.
 
+Neither ```setup``` nor ```draw``` accepts parameters. They are ```void``` methods and do not return values. Both are used in virtually every Processing sketch.
+
 [12]: http://en.wikipedia.org/wiki/Persistence_of_vision
