@@ -74,7 +74,7 @@ Go ahead and launch Processing from the applications directory. The Processing I
 
 <!-- MISSING IMAGE HERE -->
 
-#####We edit Processing code directly within the Processing IDE sketch window, as shown here.
+#####Figure 1: The Processing IDE. We edit Processing code directly within the Processing IDE sketch window, as shown here.
 
 Since you've launched the application for the first time, Processing has just created a sketchbook folder for you, which is located in ```Documents``` on the hard drive, independent of the OS you are developing on. I recommend you save all your sketches to this location. Then Processing can list them for you within the IDE (click the "Open..." toolbar button). Also, when you update to future versions of Processing, the sketchbook loads up exactly the same way as before.
 
@@ -128,3 +128,7 @@ Neither ```setup``` nor ```draw``` accepts parameters. They are ```void``` metho
 ###Write a Sketch
 
 Let's now say "Hi" to Processing by creating a simple sketch that draws an ellipse repeatedly at the current cursor position. We'll add some complexity to its graphical output by having the ellipse expand or contract along its vertical and horizontal axes, depending on how fast the mouse moves across the screen. This basic drawing sketch, shown in <ref linkend="fig.basic.drawing" />, gives us immediate visual feedback and uses your mouse as input. As you move along, experiment and play with parameter values to better understand them.
+
+<!-- MISSING IMAGE HERE -->
+
+#####Figure 2: A simple sketch. With the ellipse-drawing primitive, Processing can generate dynamic output. On the left is a 100 x 100 pixel window; on the right, a 400 x 400 pixel window.
