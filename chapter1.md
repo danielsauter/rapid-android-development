@@ -232,3 +232,16 @@ With all the software tools in place and the Android device plugged into your de
 
 ###Run the App
 
+Choose Run on Device from the Sketch menu, or use the shortcut ```⌘R``` on a Mac or ```Ctrl R``` on Windows or Linux. The shortcut is a timesaver when we're testing and running a sketch frequently. Processing compiles the sketch and produces a ```basicDrawing.apk``` package, which it then moves onto the device and launches.
+
+```
+Building Android project...
+Waiting for device to become available...
+Installing sketch on DEVICE_ID.
+Starting Sketch on DEVICE_ID.
+Sketch launched on the device.
+```
+
+Your sketch is now up and running on your Android device. In contrast to running the sketch in the emulator, installing and launching it on an Android device goes fairly quickly. If you play with your sketch on the touch screen, you'll be able to tell how much more responsive the device is. This is because the device provides a higher frame rate. Being able to test the actual user experience more accurately while saving some time rerunning your sketch are the main reasons why testing on the Android device is preferable.
+
+Let's also note what we are*not* doing! We are not signing up as a developer. We are not installing certificates, and we haven't used a credit card. Processing and Android are open platforms. The apps we create can be shared directly with other Android users. And if we intend to further develop our project in Eclipse or collaborate with Eclipse developers, Processing provides us with an Export Android Project option, which you can find on the Processing menu toolbar under File. This command will create a folder containing all the necessary Eclipse project files.
