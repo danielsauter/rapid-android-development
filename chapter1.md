@@ -152,7 +152,7 @@ void draw()
 	ellipse(mouseX, mouseY, mouseX-pmouseX, mouseY-pmouseY);
 }
 ```
-Go ahead and type this into the text editor, as illustrated in <ref linkend="fig.processing.basic.drawing" />:
+Go ahead and type this into the text editor, as illustrated in ***MISSING IMAGE***:
 
 <!-- MISSING IMAGE HERE -->
 
@@ -166,14 +166,36 @@ If we move the mouse, we can calculate the mouse speed by subtracting the previo
 
 ###Run the Sketch
 
-Go ahead and run the sketch by pressing the Play button. Processing will open a display window whose default size is 100 by 100 pixels, as shown in <ref linkend="fig.basic.drawing" />. Alternatively, you can select Sketch &mapsto; Run on the Processing menu bar. When the window appears, place your mouse pointer there and move it around.
+Go ahead and run the sketch by pressing the Play button. Processing will open a display window whose default size is 100 by 100 pixels, as shown in ***MISSING IMAGE***. Alternatively, you can select Sketch &mapsto; Run on the Processing menu bar. When the window appears, place your mouse pointer there and move it around.
 
-If we move the mouse quickly from left to right or up and down inside the display window, the ellipse width and height increase, depending on where we are heading. Drawing in such a small sketch window restricts our mouse movement, so let's use the ```size``` method to increase the window size to ```[400, 400]```, as shown in <ref linkend="fig.basic.drawing" />. We add the ```size``` method to ```setup```, because we need to define the window size only once when we start up the sketch. In a typical Processing sketch, the idea is to keep everything strictly away from ```draw``` so the application doesn't get bogged down executing extra statements at the rate of sixty times per second.
+If we move the mouse quickly from left to right or up and down inside the display window, the ellipse width and height increase, depending on where we are heading. Drawing in such a small sketch window restricts our mouse movement, so let's use the ```size``` method to increase the window size to ```[400, 400]```, as shown in ***MISSING IMAGE***. We add the ```size``` method to ```setup```, because we need to define the window size only once when we start up the sketch. In a typical Processing sketch, the idea is to keep everything strictly away from ```draw``` so the application doesn't get bogged down executing extra statements at the rate of sixty times per second.
 
-Go ahead and add the following statements to <method>setup</method> in your Processing text editor:
+Go ahead and add the following statements to ```setup``` in your Processing text editor:
 
 ```size(400, 400);```
 
 Now rerun the sketch. With a bit more pixel real estate (400 x 400px), we now have the space to build up some speed.
 
 ###Save the Sketch
+
+Let's finish by saving the sketch as ```basicDrawing.pde``` into the ```Processing``` sketchbook, located in ```Documents``` on the hard drive. When the sketch is saved, the tab is renamed to the current sketch name. Press Open in the toolbar and see your sketch listed at the top in the sketchbook.
+
+You've just completed your first Processing sketch in Java mode. Time now to make an Android app from the sketch and run it in the Android emulator.
+
+###Run a Sketch in the Android Emulator
+
+Let's now switch our basic drawing sketch ***MISSING IMAGE***, to Android mode. Click "Java" in the upper right corner of the Processing IDE and use the drop-down menu to add the Android mode. Click "Add mode..." and install the "Android Mode" from the list. Close the Mode Manager and use the drop-down menu to switch to "Android" mode. The structure and statements of a Processing sketch are identical across modes. So there is nothing we need to change in our sketch to run it on an Android.
+
+###Run the App
+
+To run the sketch in the emulator, select Sketch &mapsto; "Run in Emulator" from the Processing menu.
+
+The following lines should appear in the console area at the bottom of the IDE when the Android emulator launches for the first time:
+
+```
+Building Android project...
+Waiting for device to become available...
+Installing sketch on emulator.
+Stating Sketch on emulator.
+Sketch launched on the emulator.
+```
