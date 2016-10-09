@@ -135,22 +135,22 @@ Let's now say "Hi" to Processing by creating a simple sketch that draws an ellip
 
 We use a single drawing primitive for this sketch, the ```ellipse```, also used to draw circles by providing equal width and height for the ellipse. In Processing, an ```ellipse(x, y, width, height)``` [requires four parameters:][13]
 
-• The horizontal ```x``` position of the ellipse center
-• The vertical ```y``` position of the ellipse center
-• The ellipse ```width```
-• The ellipse ```height```
+* The horizontal ```x``` position of the ellipse center
+* The vertical ```y``` position of the ellipse center
+* The ellipse ```width```
+* The ellipse ```height```
 
 The following snippet contains the code we’ll need for our sketch.
 
 ```
-				void setup()
-				{
-				}
+void setup()
+{
+}
 
-				void draw()
-				{
-					ellipse(mouseX, mouseY, mouseX-pmouseX, mouseY-pmouseY);
-				}
+void draw()
+{
+	ellipse(mouseX, mouseY, mouseX-pmouseX, mouseY-pmouseY);
+}
 ```
 Go ahead and type this into the text editor, as illustrated in <ref linkend="fig.processing.basic.drawing" />:
 
