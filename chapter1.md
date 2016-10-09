@@ -163,3 +163,14 @@ We'll use ```mouseX``` and ```mouseY``` to set the horizontal and vertical posit
 If we move the mouse, we can calculate the mouse speed by subtracting the previous from the current mouse position. By subtracting ```mouseX``` from ```pmouseX```, we determine the horizontal mouse travel distance in pixels within one frame, or  for one-sixtieth of a second. We use the same approach for the vertical trajectory by subtracting ```pmouseY``` from ```mouseY``` for the vertical speed. ```pmouseX``` and ```pmouseY``` are lesser-known system defined variables and more rarely used than ```mouseX``` and ```mouseY```, but they're very useful when we are interested in the speed of the mouse.
 
 [13]: http://processing.org/reference/ellipse_.html
+
+###Run the Sketch
+
+Go ahead and run the sketch by pressing the Play button. Processing will open a display window whose default size is 100 by 100 pixels, as shown in <ref linkend="fig.basic.drawing" />. Alternatively, you can select Sketch &mapsto; Run on the Processing menu bar. When the window appears, place your mouse pointer there and move it around.
+
+If we move the mouse quickly from left to right or up and down inside the display window, the ellipse width and height increase, depending on where we are heading. Drawing in such a small sketch window restricts our mouse movement, so let's use the ```size``` method to increase the window size to ```[400, 400]```, as shown in <ref linkend="fig.basic.drawing" />. We add the ```size``` method to ```setup```, because we need to define the window size only once when we start up the sketch. In a typical Processing sketch, the idea is to keep everything strictly away from ```draw``` so the application doesn't get bogged down executing extra statements at the rate of sixty times per second.
+
+Go ahead and add the following statements to <method>setup</method> in your Processing text editor:
+
+```size(400, 400);```
+
