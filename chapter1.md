@@ -90,6 +90,9 @@ The toolbar on top of the sketch window contains the key features of the IDE, wi
 
 When you start Processing for the first time, it defaults to Java mode, as indicated on the right side of the toolbar. This area also functions as a drop-down menu, allowing us to switch between the different modes the Processing IDE provides. You'll need to add the Android mode, choosing "Add mode…" from the menu. Depending on which mode you’ve selected, the Run button on the toolbar produce different results, which are listed next.
 
+* *Java mode* "Run" displays a program window to view the sketch running on the desktop computer.
+* *Android mode* "Run" launches the app on the Android device. &lquot;Export&rquot; creates a signed Android package for Google Play.
+
 [10]: http://processing.org/reference/environment/
 
 
