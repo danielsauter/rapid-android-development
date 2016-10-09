@@ -92,10 +92,16 @@ When you start Processing for the first time, it defaults to Java mode, as indic
 
 * *Java mode* "Run" displays a program window to view the sketch running on the desktop computer.
 * *Android mode* "Run" launches the app on the Android device. "Export" creates a signed Android package for Google Play.
-* *JavaScript mode* http://processing.org/learning/javascript/
+* *[JavaScript mode][11]* "Run" launches a web page in the default browser, with a Processing JavaScript canvas showing the sketch. "Export" creates a web package, including all dependent files for uploading to a web server.
 
+A tab below the toolbar shows the current sketch name, which defaults to one containing the current date if the sketch has not been saved yet. Processing prompts us to provide another filename as soon as we save the sketch. The right-arrow button to the right of the tab allows us to add more tabs if we'd like to split the code into separate sections. As sketches grow in scope and complexity, the use of tabs can be a great way to reduce clutter by separating classes and methods for different purposes into distinct tabs. Each tab is saved as a separate Processing source file, or ```pde```, in the sketch folder.
 
+The text editor, shown in white below the tab in the image above, is the actual area where we write and edit code. The line number of our current cursor location within the code is shown at the very bottom of the sketch window.
+
+The message area and console below the text editor provide us with valuable feedback as we develop and debug.
+
+You can always find more information on the key IDE features discussed here, as well as a summary of the installation, on the Learning page of the [Processing website.][7]
 
 [10]: http://processing.org/reference/environment/
 
-
+[11]: http://processing.org/learning/javascript/
