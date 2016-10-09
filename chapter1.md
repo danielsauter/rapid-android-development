@@ -110,3 +110,9 @@ Now that you know how to work with the Processing editor, you're almost ready to
 
 
 ###Understand the Structure of a Sketch
+
+Any Processing sketch that will interact with users or make use of animated graphics–as is the case for all the sketches in this book–must include two methods:
+
+An instance of the ```setup``` method, which initializes key variables and settings the sketch will use and is executed only once when the app starts
+
+An instance of the ```draw``` method, which continuously updates or redraws the screen to respond to user input and real-time events
