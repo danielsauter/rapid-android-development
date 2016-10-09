@@ -200,8 +200,30 @@ Stating Sketch on emulator.
 Sketch launched on the emulator.
 ```
 
-The emulator starts up the Android OS exactly as a device would, just a bit more slowly. Once Android is running, Processing then installs the Android package (```apk```) and launches the sketch. If it takes too long for the emulator to start up, Processing might time out and you might have to relaunch your sketch one more time. The sketch looks identical to the Java mode sketch illustrated in ***MISSING IMAGE***, and if you move the mouse in the emulator window, it responds the same way it did in Java mode. The frame rate is noticeably lower, and the screen has a different aspect ratio. In the emulator, the mouse methods are a stand-in for the touch screen interface. Don't close the Android emulator as you keep testing your sketches.
-
 <!--MISSING IMAGE -->
 
 #####Figure 3: Running the drawing sketch in Android mode. We can run a sketch in either the Android emulator installed on our desktop computer (left) or directly on the Android device (right).
+
+The emulator starts up the Android OS exactly as a device would, just a bit more slowly. Once Android is running, Processing then installs the Android package (```apk```) and launches the sketch. If it takes too long for the emulator to start up, Processing might time out and you might have to relaunch your sketch one more time. The sketch looks identical to the Java mode sketch illustrated in ***MISSING IMAGE***, and if you move the mouse in the emulator window, it responds the same way it did in Java mode. The frame rate is noticeably lower, and the screen has a different aspect ratio. In the emulator, the mouse methods are a stand-in for the touch screen interface. Don't close the Android emulator as you keep testing your sketches.
+
+Here's the first Android app for you. Congratulations! If you get an error, please jump to {{ book.troubleshooting }}.
+
+As you can see, the emulator is a good way to check whether your sketch is operational. When it comes to testing responsiveness or the touch screen user experience of your app, however, we need an actual device. So next up is testing the sketch on an actual Android device.
+
+###Run a Sketch on an Android Device
+
+Let's run the sketch on a real Android device. First you'll need to check which version of Android it's running. Then you'll need to connect the device to your computer with a USB cable and enable USB debugging.
+
+To determine which version of Android you're running, go to the home screen, tap Settings and then tap "About phone" (or "About phone/tablet") at the bottom of the menu that appears. Look for the version of Android that is installed on your device under &lquot;Android version&rquot; and make a note. The procedure for enabling USB debugging depends on that number. Now connect your device to your desktop.
+
+* If you're running version 4.2 Jelly Bean or a more recent version of Android, activate the hidden "Developer options" menu by tapping "Build number" at the bottom of the "About phone/tablet" menu five times. Then navigate to the Settings &mapsto; "Developer options" menu and check "USB Debugging." To respond to the warning that "USB debugging is intended for development purposes only," tap OK.
+
+* If you're running version 4.1 Jelly Bean or an earlier version of Android, tap Settings and look for the "Developer options" menu under the System section at the bottom of the list. Click OK after the warning and check "USB Debugging" at the top of the list that appears.
+
+If you are developing on Windows or Linux, you'll need a special USB device driver. You can find instructions on the [Android website][14] for downloading and installing it.  
+
+With all the software tools in place and the Android device plugged into your desktop, let's run our basic drawing example on the device. To run the sketch fullscreen, let's comment out <method>size</method> in <method>setup</method>, so the app covers the full screen of the Android device.
+
+
+
+[14]: http://developer.android.com/guide/developing/device.html
