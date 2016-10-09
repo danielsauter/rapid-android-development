@@ -78,4 +78,18 @@ Go ahead and launch Processing from the applications directory. The Processing I
 
 Since you've launched the application for the first time, Processing has just created a sketchbook folder for you, which is located in ```Documents``` on the hard drive, independent of the OS you are developing on. I recommend you save all your sketches to this location. Then Processing can list them for you within the IDE (click the "Open..." toolbar button). Also, when you update to future versions of Processing, the sketchbook loads up exactly the same way as before.
 
+###Explore the Processing IDE
+
+The toolbar on top of the sketch window contains the key features of the IDE, with a Run button to launch and a Stop button to stop your apps. You can find a more detailed description of the sketchbook and the IDE in the [Processing Development Environment tutorial][10] on the Processing website.
+
+* *Java mode* Run button in sketch window
+* *Android mode* Run button in sketch window
+* *Android mode* Export button in sketch window
+* *JavaScript mode* Export button in sketch window
+* *JavaScript mode* Run button in sketch window
+
+When you start Processing for the first time, it defaults to Java mode, as indicated on the right side of the toolbar. This area also functions as a drop-down menu, allowing us to switch between the different modes the Processing IDE provides. You'll need to add the Android mode, choosing "Add mode…" from the menu. Depending on which mode you’ve selected, the Run button on the toolbar produce different results, which are listed next.
+
+[10]: http://processing.org/reference/environment/
+
 
