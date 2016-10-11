@@ -60,13 +60,17 @@ Here are the steps to install Processing for the Android.
 
 1. Find and download the  Android SDK by going to http://developer.android.com/sdk/. Choose the package that's right for your operating system and complete the [installation of the Android SDK.][8] On Windows, you may wish to download and use the installer that Android provides to guide your setup. If Java JDK is not present on your system, you will be prompted to [download and install it.][9]
 
+2. When the Android SDK download is complete, go to the Processing wiki at http://android.processing.org/install.html and open the Android installation instructions you'll find there. Follow the instructions for your OS step by step. The wiki lists which components are required to configure Processing for Android on your operating system and tells you how to get Android installed properly. Android may have dependencies that are specific to your operating system, such as additional device drivers. If you are developing on Windows, follow the USB driver installation instructions available at http://developer.android.com/tools/extras/oem-usb.html. If you are developing on Linux, follow the instructions for setting up your device for development at http://developer.android.com/tools/device.html#setting-up.
+
+<!--
+1.1 REVISION changed http://wiki.processing.org/w/Android#Instructions (development for processing page) to http://android.processing.org/install.html. Given the new install process, I'm not sure that the rest is still relevant. http://android.processing.org/tutorials/getting_started/index.html walks the user through setting up after install and includes an automatic Android SDK setup.
+-->
+
+Now that you have installed all the necessary components to develop Android apps on your own system, let's jump right into Processing and write our first sketch.
+
 [8]: http://developer.android.com/sdk/installing.html
 
 [9]: http://docs.oracle.com/javase/7/docs/webnotes/install/
-
-2. When the Android SDK download is complete, go to the Processing wiki at http://wiki.processing.org/w/Android#Instructions and open the Android installation instructions you'll find there. Follow the instructions for your OS step by step. The wiki lists which components are required to configure Processing for Android on your operating system and tells you how to get Android installed properly. Android may have dependencies that are specific to your operating system, such as additional device drivers. If you are developing on Windows, follow the USB driver installation instructions available at http://developer.android.com/tools/extras/oem-usb.html. If you are developing on Linux, follow the instructions for setting up your device for development at http://developer.android.com/tools/device.html#setting-up.
-
-Now that you have installed all the necessary components to develop Android apps on your own system, let's jump right into Processing and write our first sketch.
 
 ###Write Your First Android Sketch
 
@@ -78,15 +82,19 @@ Go ahead and launch Processing from the applications directory. The Processing I
 
 Since you've launched the application for the first time, Processing has just created a sketchbook folder for you, which is located in ```Documents``` on the hard drive, independent of the OS you are developing on. I recommend you save all your sketches to this location. Then Processing can list them for you within the IDE (click the "Open..." toolbar button). Also, when you update to future versions of Processing, the sketchbook loads up exactly the same way as before.
 
+<!-- 1.2 NOTE I'm not sure that this is exactly true in the newest version - I had to specify and create a folder. It's possible that it did not create a folder because I had previously had Processing 2.2.1 installed. -->
+
 ###Explore the Processing IDE
 
 The toolbar on top of the sketch window contains the key features of the IDE, with a Run button to launch and a Stop button to stop your apps. You can find a more detailed description of the sketchbook and the IDE in the [Processing Development Environment tutorial][10] on the Processing website.
 
+<!-- 1.3 NOTE This was in the .pml file, but is not in the PDF. 
 * *Java mode* Run button in sketch window
 * *Android mode* Run button in sketch window
 * *Android mode* Export button in sketch window
 * *JavaScript mode* Export button in sketch window
 * *JavaScript mode* Run button in sketch window
+ -->
 
 When you start Processing for the first time, it defaults to Java mode, as indicated on the right side of the toolbar. This area also functions as a drop-down menu, allowing us to switch between the different modes the Processing IDE provides. You'll need to add the Android mode, choosing "Add mode…" from the menu. Depending on which mode you’ve selected, the Run button on the toolbar produce different results, which are listed next.
 
@@ -95,6 +103,8 @@ When you start Processing for the first time, it defaults to Java mode, as indic
 * *[JavaScript mode][11]* "Run" launches a web page in the default browser, with a Processing JavaScript canvas showing the sketch. "Export" creates a web package, including all dependent files for uploading to a web server.
 
 A tab below the toolbar shows the current sketch name, which defaults to one containing the current date if the sketch has not been saved yet. Processing prompts us to provide another filename as soon as we save the sketch. The right-arrow button to the right of the tab allows us to add more tabs if we'd like to split the code into separate sections. As sketches grow in scope and complexity, the use of tabs can be a great way to reduce clutter by separating classes and methods for different purposes into distinct tabs. Each tab is saved as a separate Processing source file, or ```pde```, in the sketch folder.
+
+<!-- BOOKMARK 101016 5:50PM -->
 
 The text editor, shown in white below the tab in the image above, is the actual area where we write and edit code. The line number of our current cursor location within the code is shown at the very bottom of the sketch window.
 
@@ -248,3 +258,6 @@ Let's also note what we are *not* doing! We are not signing up as a developer. W
 
 ###Wrapping Up
 
+Let's summarize. You've seen how easy it is to use Processing to create graphics for the Android. You've downloaded the Processing IDE and the Android SDK, and you've installed the software tools to develop Android apps in Processing. You've written your first Processing sketch using the mouse as input, and you are now able to switch to Android mode and write basic Android apps in Processing. The Android emulator that comes with the Android SDK and the Android device you've used in this chapter will help you test the apps you'll write throughout the book.
+
+In the next chapter, we'll work with the touch screen interface and device display. You'll learn how to work with color, use fingertip pressure on the screen surface, and work with multitouch gestures such as *tap* and *pinch* to manipulate the graphical elements on the device display.
