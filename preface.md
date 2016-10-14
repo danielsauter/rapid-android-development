@@ -108,8 +108,7 @@ For all the projects in this book, you need the following software tools. The fi
 
 * **[Processing 3][10]**
 * **[Android 4.0 Ice Cream Sandwich or higher][11]**<br />
-(2.3 Gingerbread is sufficient for all projects but [Chapter 7, Peer-to-Peer Networking Using Bluetooth
-and Wi-Fi Direct](../chapter7.md#h1), and [Chapter 8, Using Near Field Communication (NFC)](../chapter8.md#h1)).
+(2.3 Gingerbread is sufficient for all projects but {{ book.chapter7 }}, and {{ book.chapter8 }}).
 * **[Ketai Sensor Library for Processing][12]**
 * **[Processing Android installation instructions][13]**
 
@@ -143,8 +142,7 @@ You can download the complete set of source files from the book's web page at ht
 
 The online forum for the book, located at http://forums.pragprog.com/forums/209, provides a place for feedback, discussion, questions, and–I hope–answers as well. In the ebook, you'll find a link to the forum on every page next to a "report erratum" link that points to http://pragprog.com/titles/dsproc/errata, where you can report errors such as typos, technical errors, and suggestions. Your feedback and suggestions are very much appreciated.
 
-Let's get started! Once we're done installing our software tools in [Chapter 1,
-Getting Started](../chapter1.md#h1), we are only minutes away from completing our first Android app.
+Let's get started! Once we're done installing our software tools in {{ book.chapter1 }}, we are only minutes away from completing our first Android app.
 <br />
 <br />
 <br />
