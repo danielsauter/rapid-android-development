@@ -1,6 +1,5 @@
 
 {
-    { "plugins": ["include-codeblock"] }
     
     "variables": {
     
@@ -20,4 +19,6 @@
         "troubleshooting": "[Troubleshooting](../troubleshooting.html)"  
         
     }
+    
+    { "plugins": ["include-codeblock"] }
 }
