@@ -1,6 +1,7 @@
 
 {
     "plugins": ["include-codeblock"],
+    
     "variables": {
     
         "chapter1": "[Chapter 1, Getting Started](../chapter1.html)",
