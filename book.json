@@ -1,5 +1,9 @@
 
 {
+    "plugins": [
+    "include-codeblock"
+    ]
+  
     "variables": {
     
         "chapter1": "[Chapter 1, Getting Started](../chapter1.md#h1)",
@@ -15,8 +19,7 @@
         "chapter11": "[Chapter 11, Introducing 3D Graphics with OpenGL](../chapter11.md#h1)",
         "chapter12": "[Chapter 12, Working with Shapes and 3D Object](../chapter12.md#h1)",
         "chapter13": "[Chapter 13, Sharing and Publishing Applications](../chapter13.md#h1)",
-        "troubleshooting": "[Troubleshooting](../troubleshooting.md#h1)"
-        
+        "troubleshooting": "[Troubleshooting](../troubleshooting.md#h1)"  
         
     }
 }
