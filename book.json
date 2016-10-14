@@ -1,6 +1,6 @@
 
 {
-    "plugins": [ "include-codeblock" ]
+    "plugins": ["creativecommons"]
     
     "variables": {
     
