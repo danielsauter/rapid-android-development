@@ -4,7 +4,7 @@
     
     "variables": {
     
-        "chapter1": "[Chapter 1, Getting Started](../chapter1.html)",
+        "chapter1": "[Chapter 1, Getting Started](../gettingStarted.html)",
         "chapter2": "[Chapter 2, Working with the Touch Screen Display](../chapter2.html)",
         "chapter3": "[Chapter 3, Using Motion and Position Sensors](../chapter3.html)",
         "chapter4": "[Chapter 4, Using Geolocation and Compass](../chapter4.html)",
