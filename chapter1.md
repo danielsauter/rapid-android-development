@@ -162,6 +162,7 @@ void draw()
 	ellipse(mouseX, mouseY, mouseX-pmouseX, mouseY-pmouseY);
 }
 ```
+
 Go ahead and type this into the text editor, as illustrated in ***MISSING IMAGE***:
 
 <!-- MISSING IMAGE HERE -->
