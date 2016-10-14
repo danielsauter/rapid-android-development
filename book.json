@@ -1,3 +1,6 @@
+{
+"plugins": [ "include-codeblock" ]
+}
 
 {
     
@@ -20,5 +23,4 @@
         
     }
     
-    "plugins": { "include-codeblock" }
 }
