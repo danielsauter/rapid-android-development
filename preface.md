@@ -14,8 +14,11 @@ Android users expect a rich, interactive mobile user experience from their phone
 
 [1]: http://processing.org/
 [2]: http://arduino.cc/
-[3]: http://code.google.com/p/ketai/
+[3]: http://ketai.org/ 
+<!-- 0.1 REVISION replaced old ketai link (http://code.google.com/p/ketai/) -->
 [4]: http://developer.android.com/sdk/eclipse-adt.html
+<!-- 0.2 NOTE Eclipse IDE is deprecated  (https://developer.android.com/studio/index.html) -->
+
 
 ###Introducing Processing for the Android
 
@@ -31,7 +34,7 @@ All core Processing methods are identical across modes, so when we develop Andro
 
 * If you are new to programming, Processing for Android is much easier to learn than Java. If you are an experienced Java programmer already, Processing is a great programming environment for rapid prototyping of graphics and sensor-heavy apps.
 
-* Processing uses straightforward syntax. [In comparison to Java,][6] it is more concise. Processing doesn't require you to understand advanced concepts such as classes or screen buffering to get started, yet it makes them accessible to any advanced users who want to use them. This makes Processing programs shorter and easier to read.
+* Processing uses straightforward syntax. In comparison to Java, <!-- 0.3 REVISION - Link Removed, http://wiki.processing.org/w/Java_Comparison is a dead link--> it is more concise. Processing doesn't require you to understand advanced concepts such as classes or screen buffering to get started, yet it makes them accessible to any advanced users who want to use them. This makes Processing programs shorter and easier to read.
 
 * The lightweight programming environment installs quickly and is easy to use. Processing is available for GNU/Linux, Mac OS X, and Windows. If you work with multiple computers or want to help someone else get started quickly, being up and running in a few minutes can make all the difference.
 
@@ -74,7 +77,8 @@ If you have never programmed in Processing or any other language before, you can
 [This book is an introduction to the ideas of computer programming within the context of the visual arts.][9] It targets an audience of computer-savvy individuals who are interested in creating interactive and visual work through writing software but who have little or no prior experience.
 
 [8]: http://shop.oreilly.com/product/0636920000570.do
-[9]: http://mitpress.mit.edu/books/processing-1
+[9]: https://processing.org/handbook/ 
+<!--0.4 REVISION - link to processing handbook swapped; MIT Press link dead. http://mitpress.mit.edu/books/processing-1 -->
 
 ###What's in This Book
 
@@ -96,7 +100,7 @@ The five parts of the book can each be considered self-contained mini-courses th
 
 Whenever we undertake a project that builds on prior code, refines an earlier project, or revisits important concepts mentioned earlier in the book, we'll cross-reference those earlier sections accordingly; if you are using the ebook, you can use the link to jump directly to the referenced section.
 
-Throughout our journey in this book, I encourage you to get inspired by the projects in the Processing exhibition http://processing.org/exhibition/, learn from the Processing community (http://forum.processing.org/), use the code examples included in IDE File &mapsto; &lquot;Examples...,&rquot; refer to the online tutorials (http://processing.org/learning/), collaborate with peers (http://sketchpad.cc), and learn from public sources, such as http://www.openprocessing.org/.
+Throughout our journey in this book, I encourage you to get inspired by the projects in the Processing exhibition http://processing.org/exhibition/, learn from the Processing community (http://forum.processing.org/), use the code examples included in IDE "File" &mapsto; "Examples...", refer to the online tutorials (http://processing.org/learning/), collaborate with peers (http://sketchpad.cc), and learn from public sources, such as http://www.openprocessing.org/.
 
 ###What You Need to Use This Book
 
