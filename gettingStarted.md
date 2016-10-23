@@ -77,6 +77,7 @@ Now that you have installed all the necessary components to develop Android apps
 Go ahead and launch Processing from the applications directory. The Processing IDE launches, opening an empty sketch window, as shown in Figure 1, The Processing IDE, below.
 
 ![](images/gettingStarted/Processing_IDE.png)
+<!-- Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
 
 #####Figure 1: The Processing IDE. We edit Processing code directly within the Processing IDE sketch window, as shown here.
 
@@ -137,9 +138,10 @@ Neither ```setup``` nor ```draw``` accepts parameters. They are ```void``` metho
 
 ###Write a Sketch
 
-Let's now say "Hi" to Processing by creating a simple sketch that draws an ellipse repeatedly at the current cursor position. We'll add some complexity to its graphical output by having the ellipse expand or contract along its vertical and horizontal axes, depending on how fast the mouse moves across the screen. This basic drawing sketch, shown in <ref linkend="fig.basic.drawing" />, gives us immediate visual feedback and uses your mouse as input. As you move along, experiment and play with parameter values to better understand them.
+Let's now say "Hi" to Processing by creating a simple sketch that draws an ellipse repeatedly at the current cursor position. We'll add some complexity to its graphical output by having the ellipse expand or contract along its vertical and horizontal axes, depending on how fast the mouse moves across the screen. This basic drawing sketch, shown in Figure 2, gives us immediate visual feedback and uses your mouse as input. As you move along, experiment and play with parameter values to better understand them.
 
 ![](images/gettingStarted/basicDrawing1.png)
+<!-- Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
 
 #####Figure 2: A simple sketch. With the ellipse-drawing primitive, Processing can generate dynamic output. On the left is a 100 x 100 pixel window; on the right, a 400 x 400 pixel window.
 
@@ -155,10 +157,10 @@ The following snippet contains the code we’ll need for our sketch.
 <!-- CODEBLOCK ellipseMouse.pde -->
 [include](code/gettingStarted/ellipseMouse.pde)
 
-Go ahead and type this into the text editor, as illustrated in ***MISSING IMAGE***:
+Go ahead and type this into the text editor, as illustrated below:
 
-![](images/gettingStarted/Processing_IDE_basicDrawing.png)
-<!-- Image compressed via Photoshop 'Save For Web' -->
+![](images/gettingStarted/Processing_IDE_basicDrawing-sm.png)
+<!-- Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
 
 We want the position of the ellipse to follow the mouse, and for this we need to know where it's located at any given moment. Processing stores this information in two system defined variables: ```mouseX``` and ```mouseY```. The pair returns the ```x``` and ```y``` coordinates of the mouse in pixels relative to the origin of the display window, not the computer screen. In Processing, the origin of the display window (```[0, 0]```) is located at the upper left corner of the device window; ```[width-1, height-1]``` is located at the lower right.
 
@@ -170,9 +172,9 @@ If we move the mouse, we can calculate the mouse speed by subtracting the previo
 
 ###Run the Sketch
 
-Go ahead and run the sketch by pressing the Play button. Processing will open a display window whose default size is 100 by 100 pixels, as shown in ***MISSING IMAGE***. Alternatively, you can select Sketch &mapsto; Run on the Processing menu bar. When the window appears, place your mouse pointer there and move it around.
+Go ahead and run the sketch by pressing the Play button. Processing will open a display window whose default size is 100 by 100 pixels, as shown in the image above. Alternatively, you can select Sketch &mapsto; Run on the Processing menu bar. When the window appears, place your mouse pointer there and move it around.
 
-If we move the mouse quickly from left to right or up and down inside the display window, the ellipse width and height increase, depending on where we are heading. Drawing in such a small sketch window restricts our mouse movement, so let's use the ```size``` method to increase the window size to ```[400, 400]```, as shown in ***MISSING IMAGE***. We add the ```size``` method to ```setup```, because we need to define the window size only once when we start up the sketch. In a typical Processing sketch, the idea is to keep everything strictly away from ```draw``` so the application doesn't get bogged down executing extra statements at the rate of sixty times per second.
+If we move the mouse quickly from left to right or up and down inside the display window, the ellipse width and height increase, depending on where we are heading. Drawing in such a small sketch window restricts our mouse movement, so let's use the ```size``` method to increase the window size to ```[400, 400]```, as shown in Figure 2. We add the ```size``` method to ```setup```, because we need to define the window size only once when we start up the sketch. In a typical Processing sketch, the idea is to keep everything strictly away from ```draw``` so the application doesn't get bogged down executing extra statements at the rate of sixty times per second.
 
 Go ahead and add the following statements to ```setup``` in your Processing text editor:
 
@@ -188,7 +190,7 @@ You've just completed your first Processing sketch in Java mode. Time now to mak
 
 ###Run a Sketch in the Android Emulator
 
-Let's now switch our basic drawing sketch ***MISSING IMAGE***, to Android mode. Click "Java" in the upper right corner of the Processing IDE and use the drop-down menu to add the Android mode. Click "Add mode..." and install the "Android Mode" from the list. Close the Mode Manager and use the drop-down menu to switch to "Android" mode. The structure and statements of a Processing sketch are identical across modes. So there is nothing we need to change in our sketch to run it on an Android.
+Let's now switch our basic drawing sketch Figure 2, to Android mode. Click "Java" in the upper right corner of the Processing IDE and use the drop-down menu to add the Android mode. Click "Add mode..." and install the "Android Mode" from the list. Close the Mode Manager and use the drop-down menu to switch to "Android" mode. The structure and statements of a Processing sketch are identical across modes. So there is nothing we need to change in our sketch to run it on an Android.
 
 ###Run the App
 
