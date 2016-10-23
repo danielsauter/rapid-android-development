@@ -163,7 +163,7 @@ void draw()
 }
 ```
 #Test
-[include](  )
+[include](code/gettingStarted/ellipsMouse.pde)
 
 Go ahead and type this into the text editor, as illustrated in ***MISSING IMAGE***:
 
