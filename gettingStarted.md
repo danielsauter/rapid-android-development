@@ -152,17 +152,7 @@ We use a single drawing primitive for this sketch, the ```ellipse```, also used 
 
 The following snippet contains the code we’ll need for our sketch.
 
-```
-void setup()
-{
-}
-
-void draw()
-{
-	ellipse(mouseX, mouseY, mouseX-pmouseX, mouseY-pmouseY);
-}
-```
-#Test
+<!-- CODEBLOCK ellipseMouse.pde -->
 [include](code/gettingStarted/ellipseMouse.pde)
 
 Go ahead and type this into the text editor, as illustrated in ***MISSING IMAGE***:
