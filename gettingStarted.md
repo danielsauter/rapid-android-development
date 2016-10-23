@@ -163,7 +163,7 @@ void draw()
 }
 ```
 #Test
-[include](../code/gettingStarted/ellipseMouse.pde)
+[include](code/gettingStarted/ellipseMouse.pde)
 
 Go ahead and type this into the text editor, as illustrated in ***MISSING IMAGE***:
 
