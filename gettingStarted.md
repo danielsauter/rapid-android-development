@@ -76,7 +76,7 @@ Now that you have installed all the necessary components to develop Android apps
 
 Go ahead and launch Processing from the applications directory. The Processing IDE launches, opening an empty sketch window, as shown in Figure 1, The Processing IDE, below.
 
-<!-- MISSING IMAGE HERE -->
+![](images/gettingStarted/Processing_IDE.png)
 
 #####Figure 1: The Processing IDE. We edit Processing code directly within the Processing IDE sketch window, as shown here.
 
@@ -139,7 +139,7 @@ Neither ```setup``` nor ```draw``` accepts parameters. They are ```void``` metho
 
 Let's now say "Hi" to Processing by creating a simple sketch that draws an ellipse repeatedly at the current cursor position. We'll add some complexity to its graphical output by having the ellipse expand or contract along its vertical and horizontal axes, depending on how fast the mouse moves across the screen. This basic drawing sketch, shown in <ref linkend="fig.basic.drawing" />, gives us immediate visual feedback and uses your mouse as input. As you move along, experiment and play with parameter values to better understand them.
 
-<!-- MISSING IMAGE HERE -->
+![](images/gettingStarted/basicDrawing1.png)
 
 #####Figure 2: A simple sketch. With the ellipse-drawing primitive, Processing can generate dynamic output. On the left is a 100 x 100 pixel window; on the right, a 400 x 400 pixel window.
 
@@ -157,7 +157,8 @@ The following snippet contains the code we’ll need for our sketch.
 
 Go ahead and type this into the text editor, as illustrated in ***MISSING IMAGE***:
 
-<!-- MISSING IMAGE HERE -->
+![](images/gettingStarted/Processing_IDE_basicDrawing.png)
+<!-- Image compressed via Photoshop 'Save For Web' -->
 
 We want the position of the ellipse to follow the mouse, and for this we need to know where it's located at any given moment. Processing stores this information in two system defined variables: ```mouseX``` and ```mouseY```. The pair returns the ```x``` and ```y``` coordinates of the mouse in pixels relative to the origin of the display window, not the computer screen. In Processing, the origin of the display window (```[0, 0]```) is located at the upper left corner of the device window; ```[width-1, height-1]``` is located at the lower right.
 
