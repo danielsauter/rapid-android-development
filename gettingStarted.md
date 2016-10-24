@@ -77,7 +77,7 @@ Now that you have installed all the necessary components to develop Android apps
 Go ahead and launch Processing from the applications directory. The Processing IDE launches, opening an empty sketch window, as shown in Figure 1, The Processing IDE, below.
 
 ![](images/gettingStarted/Processing_IDE.png)
-<!-- Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
+<!-- 1.15 UPDATE: Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
 
 #####Figure 1: The Processing IDE. We edit Processing code directly within the Processing IDE sketch window, as shown here.
 
@@ -104,8 +104,6 @@ When you start Processing for the first time, it defaults to Java mode, as indic
 * *[JavaScript mode][11]* "Run" launches a web page in the default browser, with a Processing JavaScript canvas showing the sketch. "Export" creates a web package, including all dependent files for uploading to a web server.
 
 A tab below the toolbar shows the current sketch name, which defaults to one containing the current date if the sketch has not been saved yet. Processing prompts us to provide another filename as soon as we save the sketch. The right-arrow button to the right of the tab allows us to add more tabs if we'd like to split the code into separate sections. As sketches grow in scope and complexity, the use of tabs can be a great way to reduce clutter by separating classes and methods for different purposes into distinct tabs. Each tab is saved as a separate Processing source file, or ```pde```, in the sketch folder.
-
-<!-- BOOKMARK 101016 5:50PM -->
 
 The text editor, shown in white below the tab in the image above, is the actual area where we write and edit code. The line number of our current cursor location within the code is shown at the very bottom of the sketch window.
 
@@ -141,7 +139,7 @@ Neither ```setup``` nor ```draw``` accepts parameters. They are ```void``` metho
 Let's now say "Hi" to Processing by creating a simple sketch that draws an ellipse repeatedly at the current cursor position. We'll add some complexity to its graphical output by having the ellipse expand or contract along its vertical and horizontal axes, depending on how fast the mouse moves across the screen. This basic drawing sketch, shown in Figure 2, gives us immediate visual feedback and uses your mouse as input. As you move along, experiment and play with parameter values to better understand them.
 
 ![](images/gettingStarted/basicDrawing1.png)
-<!-- NUM PLS Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
+<!-- 1.4 UPDATE: Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
 
 #####Figure 2: A simple sketch. With the ellipse-drawing primitive, Processing can generate dynamic output. On the left is a 100 x 100 pixel window; on the right, a 400 x 400 pixel window.
 
@@ -160,7 +158,7 @@ The following snippet contains the code we’ll need for our sketch.
 Go ahead and type this into the text editor, as illustrated below:
 
 ![](images/gettingStarted/Processing_IDE_basicDrawing-sm.png)
-<!-- NUM PLS Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
+<!-- 1.5 UPDATE: Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
 
 We want the position of the ellipse to follow the mouse, and for this we need to know where it's located at any given moment. Processing stores this information in two system defined variables: ```mouseX``` and ```mouseY```. The pair returns the ```x``` and ```y``` coordinates of the mouse in pixels relative to the origin of the display window, not the computer screen. In Processing, the origin of the display window (```[0, 0]```) is located at the upper left corner of the device window; ```[width-1, height-1]``` is located at the lower right.
 
@@ -207,10 +205,10 @@ Installing sketch on emulator.
 Stating Sketch on emulator.
 Sketch launched on the emulator.
 ```
-
+<!-- 1.6 NOTE: not sure if it matters, but SDK has to be properly initialized for this to work (the app itself has to be opened and it has to go through it's wizard). This was a sticking point for me. -->
 ![](images/gettingStarted/BasicDrawingEmulatorAndDevice-sm.png)
 <!--Compressed Image -->
-
+<!-- 1.7 NOTE: sketch appears as small square on the screen, not full screen as shown in Figure 3 -->
 #####Figure 3: Running the drawing sketch in Android mode. We can run a sketch in either the Android emulator installed on our desktop computer (left) or directly on the Android device (right).
 
 The emulator starts up the Android OS exactly as a device would, just a bit more slowly. Once Android is running, Processing then installs the Android package (```apk```) and launches the sketch. If it takes too long for the emulator to start up, Processing might time out and you might have to relaunch your sketch one more time. The sketch looks identical to the Java mode sketch illustrated in Figure 3, and if you move the mouse in the emulator window, it responds the same way it did in Java mode. The frame rate is noticeably lower, and the screen has a different aspect ratio. In the emulator, the mouse methods are a stand-in for the touch screen interface. Don't close the Android emulator as you keep testing your sketches.
@@ -237,7 +235,9 @@ With all the software tools in place and the Android device plugged into your de
 // size(400, 400);
 ```
 
-[14]: http://developer.android.com/guide/developing/device.html
+[14]:https://developer.android.com/studio/run/oem-usb.html 
+
+<!-- 1.8 REVISION: Old link:http://developer.android.com/guide/developing/device.html is dead. Swapped.-->
 
 ###Run the App
 
@@ -255,7 +255,7 @@ Your sketch is now up and running on your Android device. In contrast to running
 
 Let's also note what we are *not* doing! We are not signing up as a developer. We are not installing certificates, and we haven't used a credit card. Processing and Android are open platforms. The apps we create can be shared directly with other Android users. And if we intend to further develop our project in Eclipse or collaborate with Eclipse developers, Processing provides us with an Export Android Project option, which you can find on the Processing menu toolbar under File. This command will create a folder containing all the necessary Eclipse project files.
 
-#Wrapping Up
+###Wrapping Up
 
 Let's summarize. You've seen how easy it is to use Processing to create graphics for the Android. You've downloaded the Processing IDE and the Android SDK, and you've installed the software tools to develop Android apps in Processing. You've written your first Processing sketch using the mouse as input, and you are now able to switch to Android mode and write basic Android apps in Processing. The Android emulator that comes with the Android SDK and the Android device you've used in this chapter will help you test the apps you'll write throughout the book.
 
