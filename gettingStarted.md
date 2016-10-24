@@ -141,7 +141,7 @@ Neither ```setup``` nor ```draw``` accepts parameters. They are ```void``` metho
 Let's now say "Hi" to Processing by creating a simple sketch that draws an ellipse repeatedly at the current cursor position. We'll add some complexity to its graphical output by having the ellipse expand or contract along its vertical and horizontal axes, depending on how fast the mouse moves across the screen. This basic drawing sketch, shown in Figure 2, gives us immediate visual feedback and uses your mouse as input. As you move along, experiment and play with parameter values to better understand them.
 
 ![](images/gettingStarted/basicDrawing1.png)
-<!-- Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
+<!-- NUM PLS Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
 
 #####Figure 2: A simple sketch. With the ellipse-drawing primitive, Processing can generate dynamic output. On the left is a 100 x 100 pixel window; on the right, a 400 x 400 pixel window.
 
@@ -160,7 +160,7 @@ The following snippet contains the code we’ll need for our sketch.
 Go ahead and type this into the text editor, as illustrated below:
 
 ![](images/gettingStarted/Processing_IDE_basicDrawing-sm.png)
-<!-- Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
+<!-- NUM PLS Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
 
 We want the position of the ellipse to follow the mouse, and for this we need to know where it's located at any given moment. Processing stores this information in two system defined variables: ```mouseX``` and ```mouseY```. The pair returns the ```x``` and ```y``` coordinates of the mouse in pixels relative to the origin of the display window, not the computer screen. In Processing, the origin of the display window (```[0, 0]```) is located at the upper left corner of the device window; ```[width-1, height-1]``` is located at the lower right.
 
@@ -178,7 +178,9 @@ If we move the mouse quickly from left to right or up and down inside the displa
 
 Go ahead and add the following statements to ```setup``` in your Processing text editor:
 
-```size(400, 400);```
+```
+size(400, 400);
+```
 
 Now rerun the sketch. With a bit more pixel real estate (400 x 400px), we now have the space to build up some speed.
 
@@ -206,11 +208,12 @@ Stating Sketch on emulator.
 Sketch launched on the emulator.
 ```
 
-<!--MISSING IMAGE -->
+![](images/gettingStarted/BasicDrawingEmulatorAndDevice-sm.png)
+<!--Compressed Image -->
 
 #####Figure 3: Running the drawing sketch in Android mode. We can run a sketch in either the Android emulator installed on our desktop computer (left) or directly on the Android device (right).
 
-The emulator starts up the Android OS exactly as a device would, just a bit more slowly. Once Android is running, Processing then installs the Android package (```apk```) and launches the sketch. If it takes too long for the emulator to start up, Processing might time out and you might have to relaunch your sketch one more time. The sketch looks identical to the Java mode sketch illustrated in ***MISSING IMAGE***, and if you move the mouse in the emulator window, it responds the same way it did in Java mode. The frame rate is noticeably lower, and the screen has a different aspect ratio. In the emulator, the mouse methods are a stand-in for the touch screen interface. Don't close the Android emulator as you keep testing your sketches.
+The emulator starts up the Android OS exactly as a device would, just a bit more slowly. Once Android is running, Processing then installs the Android package (```apk```) and launches the sketch. If it takes too long for the emulator to start up, Processing might time out and you might have to relaunch your sketch one more time. The sketch looks identical to the Java mode sketch illustrated in Figure 3, and if you move the mouse in the emulator window, it responds the same way it did in Java mode. The frame rate is noticeably lower, and the screen has a different aspect ratio. In the emulator, the mouse methods are a stand-in for the touch screen interface. Don't close the Android emulator as you keep testing your sketches.
 
 Here's the first Android app for you. Congratulations! If you get an error, please jump to {{ book.troubleshooting }}.
 
