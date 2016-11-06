@@ -146,3 +146,36 @@ background(red, green, blue)
 fill(red, green, blue, alpha)
 stroke(red, green, blue, alpha)
 ```
+
+As you can see, your results will differ depending on how many parameters you use. One parameter results in a grayscale value. Two parameters define a grayscale and its opacity (as set by an alpha value). If alpha is set to ```0```, the color is fully transparent. An alpha value of ```255``` results in a fully opaque color. Three parameters correspond by default to red, green, and blue values. Four parameters contain the red, green, and blue values and an alpha value for transparency. Through this approach, Processing reduces the number of core methods by allowing for a different number of parameters and by interpreting them differently depending on the color mode. 
+
+To recall the syntax of any particular method, highlight the method you want to look up in the sketch window and choose the Find in Reference option from  Help. It's the quickest way to look up the syntax and usage of Processing methods while you are working with your code.
+
+###Using Hex Colors
+
+Processing's color method can also handle hexadecimal values, which are often less intuitive to work with but are still fairly common as a way to define color. We'll take a closer look at hexadecimal color values in <!--ref linkend="sec.read.csv" -->. Hex color method parameters, such as the ```hex``` code ```#ff8800``` for orange, are applied like this:
+
+```
+fill(hex)
+stroke(hex)
+background(hex)
+```
+
+```
+fill()
+stroke()
+```
+
+Now let's take a look at the ```HSB``` color mode, which, as we learned earlier, can define a color using hue, brightness, and saturation.
+
+###Using HSB Colors
+
+Why should we care about HSB? Because it's a rather excellent color mode for working algorithmically with color, such as when we want to change only the saturation of a UI element. When we switch the default RGB color mode to HSB, the values of the color parameters passed to ```fill()``` and ```stroke()``` are not interpreted any more as red, green, blue, and alpha values, but instead as hue, saturation, brightness, and alpha color values. We can achieve seamless transitions between more- and less-saturated color values for UI highlights, for instance, which is very difficult to do properly in RGB. So for the objective of algorithmic color combinations, transitions, and animations that need to be seamless, HSB is great.
+
+When we switch to HSB using the ```colorMode(HSB)```, the ```fill()```, ```stroke()```, and ```background()``` methods will be interpreted like this: 
+
+```
+fill(hue, saturation, brightness)
+stroke(hue, saturation, brightness)
+background(hue, saturation, brightness)
+```
