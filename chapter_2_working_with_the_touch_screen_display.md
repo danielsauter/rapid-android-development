@@ -108,6 +108,17 @@ The ```background()``` color of a Processing window cannot be transparent. If yo
 
 Processing provides us with two different color modes that we can switch between using the [```colorMode()``` method.][8] The color mode can be set to RGB or HSB (hue, saturation, brightness), which we'll explore further in <!--ref linkend="sec.hsb.color" -->. ```colorMode()``` changes the way Processing interprets color values. Both RGB and HSB can handle alpha values to make objects appear transparent.
 
-We can adjust the value range of the parameters used in ```colorMode()``` as well. For example, white in the default RGB color mode is defined as ```color()```. If we change the range to ```colorMode()```, white is defined as ```color()```. 
+We can adjust the value range of the parameters used in ```colorMode()``` as well. For example, white in the default RGB color mode is defined as ```color(255)```. If we change the range to ```colorMode(RGB,1.0)```, white is defined as ```color(1.0)```. 
+
+Here are the parameters ```colorMode()``` can take. We can specify ```mode``` as either RGB or HSB and specify  ```range``` in the value range we prefer.
+
+* ```colorMode(mode)```
+* ```colorMode(mode, range)```
+* ```colorMode(mode, range1, range2, range3)```
+* ```colorMode(mode, range1, range2, range3, range4)```
+
+Let's now take a look at the three different color methods Processing has to offer. They are good examples of how Processing uses as few methods as possible to get the job done.
 
 [8]: http://processing.org/reference/colorMode_.html
+
+###Using Grayscale and RGB colors
