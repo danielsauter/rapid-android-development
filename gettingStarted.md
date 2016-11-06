@@ -4,7 +4,7 @@
 
 This book explores the cutting-edge hardware and software features that are built into Android phones and tablets today. You'll create sophisticated graphics and user interfaces in no time, and you'll develop a range of projects that build on the hardware sensors, cameras, and networking capabilities of your Android device. You'll put them to work creatively to make your Android apps more useful, usable, and exciting. We'll consider Android phones and tablets as universal sensors, processors, and remote controls in the context of this book, and we'll create projects that go beyond the typical app. Along the way, we'll spark new app ideas for you to explore in the future.
 
-You'll learn how to create advanced Android apps using Processing, a widely popular open source programming language and environment that is free to use and was designed for learning the fundamentals of programming. With more than 130 libraries expanding the Processing core, as well as the possibility to extend it with Java and Android classes and methods, it is a simple yet powerful language to work with. Processing comes with three modes that let you create applications for different devices and operating systems:  Java mode lets us create standalone applications for GNU/Linux, Mac OS X, and Windows.  Android mode in Processing enables us to create apps for Android phones and tablets---we'll use this mode throughout the book. And finally, JavaScript mode enables us to create web apps, and those will run in all HTML5-enabled web browsers installed on smart phones, tablets, and desktop computers.
+You'll learn how to create advanced Android apps using Processing, a widely popular open source programming language and environment that is free to use and was designed for learning the fundamentals of programming. With more than 150 libraries expanding the Processing core, as well as the possibility to extend it with Java and Android classes and methods, it is a simple yet powerful language to work with. Processing comes with three modes that let you create applications for different devices and operating systems:  Java mode lets us create standalone applications for GNU/Linux, Mac OS X, and Windows.  Android mode in Processing enables us to create apps for Android phones and tablets---we'll use this mode throughout the book. And finally, JavaScript mode enables us to create web apps, and those will run in all HTML5-enabled web browsers installed on smart phones, tablets, and desktop computers.
 
 Processing's simple syntax lets you write apps whose sophisticated displays belie the straightforward, readable code in which they're written. Initially developed to serve as a software sketchbook for artists, designers, and hobbyists and to teach the fundamentals of computer programming in a more visual way, Processing is one of the most versatile production environments on the market today.
 
@@ -34,9 +34,9 @@ The Processing IDE supports some of the advanced syntax highlighting and autocom
 
 To implement the projects in this book, you'll need the following tools:
 
-* [Processing 3.0][4] (current pre-release is 3.0a5)
-* [Java 1.7 (or "Java 7")][5]
-* [Android 4.0 Ice Cream Sandwich][6] (5.0 Lollipop is the current Android version, however 2.3 Gingerbread is sufficient for all projects except {{ book.chapter7 }}, and {{ book.chapter8 }}.)
+* [Processing 3.0][4]
+* [Java 8][5]
+* [Android 4.0 Ice Cream Sandwich][6] (2.3 Gingerbread is sufficient for all projects except {{ book.chapter7 }}, and {{ book.chapter8 }}.)
 
 *These are the minimum software requirements. If you have a newer version, you'll be just fine*. Later we'll install some additional libraries that give us easier access to the features of an Android device. For now, use the following steps to build the core Processing environment we'll use throughout this book.
 
