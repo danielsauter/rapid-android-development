@@ -35,9 +35,42 @@ For compatibility, Processing uses the constants ```mouseX``` and ```mouseY``` w
 
 In Android mode, we can also use the following mouse methods, which are available in all Processing modes. The Android touch screen gestures correspond to the following mouse events:
 
-[mousePressed][5] This callback method is called every time a finger touches the screen panel. It corresponds to a mouse-pressed event on the desktop when the mouse button is pressed down.
+* [```mousePressed()```][5] This callback method is called every time a finger touches the screen panel. It corresponds to a mouse-pressed event on the desktop when the mouse button is pressed down.
+* [```mouseReleased()```][6] This callback method is called every time a finger lifts off the touch screen surface, but only if its position has changed since first touching the panel. It corresponds to a mouse-up event on the desktop.
+* [```mouseDragged()```][7] This callback method is called every time a new finger position is detected by the touch screen panel compared to the previously detected position. It corresponds to a mouse-dragged event on the desktop when the mouse moves while the button is pressed.
 
+All three methods respond only to one finger's touch. When you use more than one finger on the multitouch surface, the finger that triggers callback events is the first one that touches the screen panel&emdash;the second, third, or more are ignored. If you hold down one finger on the screen surface, add another one on, and remove the first, then the second finger one will now be first in line and take over mouse events. We will work with multiple fingers and multitouch gestures in just a bit in <!--ref linkend="sec.multi.touch" -->.
+
+Let's put the mouse callback methods to the test with a simple sketch that prints the mouse position and events into the Processing console. We'll need ```draw()``` to indicate that this sketch is running and listening to the mouse continuously. Then we add our callback methods and have each print a brief text string indicating which mouse method has been called at what finger position.
+
+Create a new Android sketch by choosing  File  &mapsto;  New  from the Processing menu. If your new sketch window is not yet in Android mode, switch it to Android using the drop-down menu in the upper right corner. Add a few lines of code to the sketch window:
+
+```
+void draw()
+			{
+				// no display output, so nothing to do here
+			}
+			
+			void mousePressed ()
+			{
+				println("PRESSED x:" + mouseX + " y: " + mouseY);
+			}
+			
+			void mouseReleased ()
+			{
+				println("RELEASED x:" + mouseX + " y: " + mouseY);
+			}
+			
+			void mouseDragged ()
+			{
+				println("DRAGGED x:" + mouseX + " y: " + mouseY);
+			}
+```
+
+Let's go ahead and test the touch screen panel of an Android device.
 
 [3]: http://android.processing.org/reference/environment/orientation.html
 [4]: http://processing.org/learning/drawing/
 [5]: http://processing.org/reference/mousePressed_.html
+[6]: http://processing.org/reference/mouseReleased_.html
+[7]: http://processing.org/reference/mouseDragged_.html
