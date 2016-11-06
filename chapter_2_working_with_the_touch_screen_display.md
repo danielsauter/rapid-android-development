@@ -201,3 +201,13 @@ Replaced with: https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Hsl-hsv
 [12]: https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Hsl-hsv_models_b.svg/1000px-Hsl-hsv_models_b.svg.png
 
 ###Using the Color Type
+
+The [Processing ```color``` type][13] can store RGBA or HSBA values in one variable, depending on the ```colorMode()``` you choose. It's a great type for any app that we build using a color scheme of multiple colors. Using the ```color``` type, we simply call the ```color``` variable and apply it to the objects we draw. We can create a color palette in our app without requiring a bunch of individual variables for each value of an RGBA or HSBA color. We would apply the ```color``` type like this:
+
+```fill(color)```
+
+```fill(color, alpha)```
+
+If ```color``` included an alpha value of, let's say, ```127.5```, a primitive drawn with ```fill(color)``` would be drawn with ```50%``` opacity (given a possible max alpha value of ```255```). In the unlikely scenario that the same color that already contains an alpha value is used in conjunction with an additional alpha parameter, such as ```fill(color, 128)```, the resulting color would be drawn half as transparent as before, or at ```25%``` opacity. 
+
+[13]: http://processing.org/reference/color_datatype.html
