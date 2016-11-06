@@ -204,10 +204,35 @@ Replaced with: https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Hsl-hsv
 
 The [Processing ```color``` type][13] can store RGBA or HSBA values in one variable, depending on the ```colorMode()``` you choose. It's a great type for any app that we build using a color scheme of multiple colors. Using the ```color``` type, we simply call the ```color``` variable and apply it to the objects we draw. We can create a color palette in our app without requiring a bunch of individual variables for each value of an RGBA or HSBA color. We would apply the ```color``` type like this:
 
-```fill(color)```
+```
+fill(color)
+```
 
-```fill(color, alpha)```
+```
+fill(color, alpha)
+```
 
 If ```color``` included an alpha value of, let's say, ```127.5```, a primitive drawn with ```fill(color)``` would be drawn with ```50%``` opacity (given a possible max alpha value of ```255```). In the unlikely scenario that the same color that already contains an alpha value is used in conjunction with an additional alpha parameter, such as ```fill(color, 128)```, the resulting color would be drawn half as transparent as before, or at ```25%``` opacity. 
 
+Processing color methods are overloaded, so they can handle a range of situations—you can use one method for many applications. In other languages, remembering which syntax to use for a particular color effect can be a challenge, but with Processing you need to remember only a small number of methods. When a color value exceeds the default maximum value of ```255```, Processing caps it for us. So ```fill(300)``` has the same result as ```fill(255)``` does. The same is true for values lower than the default minimum, ```0```.
+
+Now that we've learned about the different color modes, methods, and types available to define colors in an Android app, let's refine our previous drawing sketch.
+
 [13]: http://processing.org/reference/color_datatype.html
+
+###Use Mouse Speed to Control Hues
+
+Now let's explore the HSB mode on the device touch screen display. By adding ```colorMode()``` to our sketch, we switch the color mode, and by modifying our ```fill()``` method to work with HSB values, we change our app from grayscale to shades of color. Here's the result:
+
+<!-- figure id="fig.mouse.speed.hue" -->
+
+##### Using mouse speed to control color. The hue of the ellipses changes depending on how fast you move your finger across the touch screen surface. Slow movements result in greenish, medium in blueish, and fast movements in reddish values.
+
+In this project, we'll keep the screen ```orientation()``` flexible, which is the default setting for our Processing apps, and we don't have to set anything to make the app change orientation when we hold the device upright or sideways. This means it will change orientation when the built-in device accelerometer sensor decides that the app should adapt to the particular orientation at that moment. When such an orientation change occurs, our ```setup()``` method will be called again, reinitializing the sketch and executing all the statements we've included in ```setup()```. Because we set the screen to black, erasing its contents using the ```background(0)``` method, a change in the app's orientation will reset the ```background()``` to black, erasing all the ellipses we've drawn prior to changing the orientation.
+
+We have only two modifications to make using the <!--ref linkend="code.basic.drawing" -->. First we switch the color mode to HSB, which also customizes its value range. Then we calculate the speed of our movement by measuring the distance between the previous and the current mouse position using [Processing's ```dist()```][14] method. The method takes two points as parameters and returns the distance between them. Finally, we apply the distance we've calculated to the hue in the ```fill()``` method for the ellipses we draw. The default value range for the HSB color modes is ```0..255``` by default. We'll override the default hue value to use floating point ranges of ```0..100``` instead, allowing us to use the calculated mouse speed directly to the hue parameter. For the saturation and brightness values, we'll override the default values to use floating point ranges of ```0..1.0```.
+
+Let's take a look at the project code. 
+
+[14]: http://processing.org/reference/dist_.html
+
