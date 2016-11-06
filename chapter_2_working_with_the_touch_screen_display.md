@@ -234,5 +234,9 @@ We have only two modifications to make using the <!--ref linkend="code.basic.dra
 
 Let's take a look at the project code. 
 
+<!-- code id="code.mouse.speed.hue" file="code/Display/MouseSpeedHue/MouseSpeedHue.pde" -->
+
+Here are the modifications we've made.
+
 [14]: http://processing.org/reference/dist_.html
 
