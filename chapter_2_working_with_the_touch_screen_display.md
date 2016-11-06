@@ -122,3 +122,27 @@ Let's now take a look at the three different color methods Processing has to off
 [8]: http://processing.org/reference/colorMode_.html
 
 ###Using Grayscale and RGB colors
+
+The ```fill()``` and ```stroke()``` methods can take either one, two, three, or four parameters. Since the ```background()``` method doesn't accept alpha values, it takes either one or three parameters:
+
+```
+fill(gray)
+stroke(gray)
+background(gray)
+```
+
+```
+fill(gray, alpha)
+stroke(gray, alpha)
+```
+
+```
+fill(red, green, blue)
+stroke(red, green, blue)
+background(red, green, blue)
+```
+
+```
+fill(red, green, blue, alpha)
+stroke(red, green, blue, alpha)
+```
