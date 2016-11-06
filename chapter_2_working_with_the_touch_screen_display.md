@@ -238,5 +238,77 @@ Let's take a look at the project code.
 
 Here are the modifications we've made.
 
+1. Switch the default RGB color mode to HSB using the ```colorMode(HSB, 100, 1, 1)``` method. Set the second parameter for hue to ```100```, allowing for floating point hue values of ```0..100```. Set the third parameter to ```1```, defining the color saturation values for the range ```0..1.0```. Also set the brightness range as ```0..1.0``` in the fourth parameter.
+
+2. Now set the color ```fill()``` of the ellipse in our defined HSB mode. Use  ```dist()``` to calculate the distance between the previous mouse position (```pmouseX```, ```pmouseY```) and the current one (```mouseX```, ```mouseY```), and apply the result to the hue parameter. Use ```1``` for saturation and brightness. We've defined ```1``` as the maximum saturation and brightness, so both are set to ```100``` percent.
+
+Let's test the app.
+
 [14]: http://processing.org/reference/dist_.html
 
+###Run the App
+
+Rerun the sketch on the device now switched to HSB color, and see how the  hue of the ellipses that are drawn changes depending on how fast you move your finger across the screen surface. The changes in the hues occur independently of their saturation and brightness, so all the colors are drawn with maximum saturation and brightness.
+
+If you go back to the HSB color wheel we looked at earlier, you will see how the ```360``` degrees of the HSB or the wheel correspond to the different colored ellipses you draw on the screen. Slow movement results in yellow color values, and then, with increasing speed, you'll see green, cyan, blue, and magenta as the maximum speed values.
+
+Now that we've mastered the use of ```color``` in Processing, let's continue our investigation into the multitouch screen panel. We'll go ahead and install a Processing library that will help us work with multitouch gestures and extend the core features Processing provides us. Besides multitouch, the Ketai library makes it easy for us to work with other hardware devices and sensors built into Android phones and tablets. Let's take a look at the Ketai classes and the features it provides. We'll be using these throughout the rest of the book.
+
+###Introducing the Ketai Library
+
+The [Ketai library for Processing][15] focuses particularly on making it easy to work with the mobile hardware features built into Android phones and tablets. The [term "Ketai"][16] is used in Japan to describe its cell phone culture, enabled by mobile handheld devices. The mobile device translates as Keitai Denwa and literally means "something carried in the hand," or handheld. The Ketai library is free software published under the [GNU General Public License Version 3 (GPL v3),][17] and it is compatible with Android versions 2.3 Gingerbread, 3.0/3.1 Honeycomb, 4.0 Ice Cream Sandwich, 4.1/4.2/4.3 Jelly Bean, 4.4 KitKat, and 5.0 Lollipop. NFC, Wi-Fi Direct, and updated camera features introduced in 4.0 Ice Cream Sandwich are not available in Gingerbread or Honeycomb. Therefore the Ketai library is available as [separate downloads][18] for Gingerbread/Honeycomb and for Ice Cream Sandwich/Jelly Bean. Please refer to <!--ref linkend="sec.run" -->, to find out which version of Android you are running on your device. 
+
+Compared to the desktop, the defining feature of a mobile handheld device is that we use it on the go, where we expect cameras, location, and orientation sensors to help us navigate traffic, find relevant locations near by, and snap pictures while we are on the move. We also might be networking with Bluetooth accessories, interacting with products through embedded NFC tags, or paying for  merchandise with our mobile devices. The Ketai library helps us develop apps for all of these scenarios.
+
+Libraries are arguably one of the most successful aspects of the open source Processing project. There are more than 130 libraries available for Processing; however, on the Android device we can only use those Java libraries that do not make use of desktop hardware. Libraries extend the easy-to-learn Processing core with classes written for particular contexts, including 3D, animation, compilations, computer vision, data and protocols, geometry, graphic interface, hardware interface, import and export, math, simulation, sound, tools, typography, and video—to name the main categories listed on the [Processing website][19], where the libraries are organized.
+
+Many interface, sound, computer vision, and import/export libraries use code that is specific to the desktop context and are not designed for use on Android devices. Many libraries that could be compatible with Processing for Android are currently updated by library authors to eventually be available for us to use in Android mode. The Library Manager added to Processing 2.0 makes it easy to install libraries from within Processing. We'll use it to install the Ketai library in <!--ref linkend="sec.install.library" -->.
+
+There is hardly any computational topic that is not addressed in the Processing libraries. Because all libraries are open source and come with examples and tutorials, Processing is a favorite of students and creative coders alike. Most of the supplemental libraries have been developed for artists and designers for a particular project, so their use is often illustrated with the actual project that inspired it. Some of those projects can also be found in the online [Processing exhibition.][20] This site makes browsing in and "shopping" for free libraries a fun activity and inspiring in its own right. As you download libraries and install them in your Processing sketchbook's ```libraries``` directory, they remain at this location and available even after you upgrade to a new version of the Processing IDE. The idea of this structure is to separate the Processing developer environment from the sketches that you write and the libraries you collect, keeping them independent of updates to Processing itself.
+
+While there are scores of Processing libraries, only a small number of them work on Android phones and tablets. The Ketai library is designed particularly to provide programmer access to Android sensors, cameras, and networking; it is the only library that has been developed to run solely in Android mode.
+
+I've been working on the Ketai library with Jesus Duran since 2010, with the objective to make it really easy to write apps that can effectively use the mobile hardware features built into Android phones and tablets. Convinced by the idea that phones and tablets evolve rapidly alongside the open source Android OS, the Ketai library makes it possible to consider such devices as a great complement to microcontrollers such as the Arduino—an open hardware sister project to Processing that is built on the same IDE.
+
+Besides their compact form factor, multicore Android phones and tablets are computationally quite powerful, are equipped with a wide range of sensors, and run an operating system that is open source, free, and doesn't require subscriptions—characteristics that are advantageous to innovation, academic use, and [DIY culture.][21] What's more, once a mobile phone or tablet is outdated, it remains an inexpensive device, available in abundance and way too functional for a [landfill.][22]
+
+The Ketai library values conciseness and legibility in its syntax and makes hardware features available using just a few lines of code. For example, the simple code we use for our accelerometer project (<!--ref linkend="code.accelerometer" -->) uses less than thirty lines of code altogether, while the Java sample included in the [Android SDK][23] completes the task with more than one hundred lines of code. This ratio increases significantly with more complex subjects such as <!--ref linkend="chp.p2p" -->, and <!--ref linkend="chp.nfc" -->, where Ketai is significantly more concise and easier to understand than the SDK.
+
+Ketai includes a number of classes that make Android hardware sensors and devices available within Processing. The following classes are included in the library, described in more detail in <!--ref linkend="sec.ketai.classes" -->, and explained within the relevant chapters:
+
+```KetaiSensor```
+```KetaiLocation```
+```KetaiCamera```
+```KetaiFaceDetector```
+```KetaiBluetooth```
+```KetaiWiFiDirect```
+```KetaiNFC```
+```KetaiData```
+```KetaiList```
+```KetaiKeyboard```
+```KetaiGesture```
+
+Let's go ahead and install the Ketai library now.
+
+###Install the Ketai Library
+
+Follow these steps to activate the Processing library. It's a one-time process; you won't need to repeat it.
+
+You can install the Ketai library from within the Processing IDE using the "Add Library..."  menu item.
+
+1. Choose  "Add Library...," which you can find under Sketch  &mapsto;  "Import Library..."
+2. At the bottom of the window that opens, enter "Ketai."
+3. Select the Ketai library that appears in the list and press the Install button on the right.
+4. The download starts immediately, and a bar shows the download's progress. When the library is installed, the button on the right changes to  Remove.
+
+Alternatively, you can download and install the library manually from the dedicated website that comes with every Processing library. This process has the advantage that you can read about the library and preview its features alongside a reference and example code for the library.
+
+[15]: http://ketai.org
+[16]: http://iipc.utu.fi/imaginaryjapan/Kusahara.pdf
+[17]: http://www.gnu.org/licenses/gpl.html
+[18]: http://ketai.org/download/
+[19]: http://processing.org/reference/libraries/
+[20]: http://processing.org/exhibition/
+[21]: https://en.wikipedia.org/wiki/DIY_ethic
+[22]: https://en.wikipedia.org/wiki/Mobile_phone_recycling
+[23]: https://developer.android.com/studio/intro/index.html
