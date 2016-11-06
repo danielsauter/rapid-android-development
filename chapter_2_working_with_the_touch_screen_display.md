@@ -179,3 +179,25 @@ fill(hue, saturation, brightness)
 stroke(hue, saturation, brightness)
 background(hue, saturation, brightness)
 ```
+
+```
+fill(hue, saturation, brightness, alpha)
+stroke(hue, saturation, brightness, alpha)
+```
+
+When we work algorithmically in HSB, we can access the hue directly using Processing's [```hue()``` method.][9] It takes a color as a parameter and extracts only the hue value of that color. Similarly, we can get the brightness by using the  [```brightness()``` color method,][10] and we can access the [```saturation()```][11] separately as well. The HSB color cylinder is a very useful illustration of this color space to further investigate and better understand the [HSB color mode,][12] where all hues are represented within the 360-degree circumference of the color cylinder. Take a quick look at it; we'll come back to it in the next project, <!--ref linkend="sec.hsb.color.speed" -->.
+
+Now that we've learned about the different ways to assign color values, let's also take a look at the Processing ```color``` type, which Processing provides for the specific purpose of *storing* colors. 
+
+<!-- 2.2 REVISION
+Old link (footnote 12) is dead:
+http://upload.wikimedia.org/wikipedia/commons/1/16/Hsl-hsv_models_b.svg
+Replaced with: https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Hsl-hsv_models_b.svg/1000px-Hsl-hsv_models_b.svg.png
+-->
+
+[9]: http://processing.org/reference/hue_.html
+[10]: http://processing.org/reference/brightness_.html
+[11]: http://processing.org/reference/saturation_.html
+[12]: https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Hsl-hsv_models_b.svg/1000px-Hsl-hsv_models_b.svg.png
+
+###Using the Color Type
