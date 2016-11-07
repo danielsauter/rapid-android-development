@@ -372,6 +372,33 @@ Let's build an app that puts ```KetaiGesture```'s multitouch methods to use.
 
 For this project, we'll implement the most common user interactions using just one simple geometric primitive—a rectangle—drawn on the screen using Processing's [```rect(x, y, width, height)``` method.][26] To begin, we'll place a rectangle in a specified size of ```100``` pixels in the center of the screen. Then we use a series of ```KetaiGesture``` callback events to trigger changes to the rectangle, including a change of scale, rotation, color, and position, as illustrated in <!--ref linkend="fig.display.gestures" -->.
 
-The illustration shows a rectangle scaled with a two-finger pinch gesture, turned by a two-finger rotation gesture, placed on a brown background color, and triggered by a flick, as well as a gray fill color caused by a long press. The text "DOUBLE" appears due to a double-tap gesture at the position indicated by the hand silhouette.
+<!--figure id="fig.display.gestures" place="top"-->
+#####Using multitouch gestures. The illustration shows a rectangle scaled with a two-finger pinch gesture, turned by a two-finger rotation gesture, placed on a brown background color, and triggered by a flick, as well as a gray fill color caused by a long press. The text "DOUBLE" appears due to a double-tap gesture at the position indicated by the hand silhouette.
+
+We have a number of callback events for the touch surface to try out, so we'll assign each of them with a particular purpose. We'll zoom to fit the rectangle onto the screen using ```onDoubleTap()```, randomly change its fill color ```onLongPress()``` using [Processing's ```random()``` method,][27] cale it ```onPinch()```, rotate it ```onRotate()```, drag it using ```mouseDragged()```, and change the background color ```onFlick()```. Besides manipulating color properties and the rectangle, we'll keep track of the multitouch events as they occur by printing a text string to the Processing Console. The code we use to manipulate the properties and the callback methods themselves are not complicated in any way, but we're now dealing with a bit more code than we have before because we're using a series of callback methods in one sketch.
 
 [26]: http://processing.org/reference/rect_.html
+[27]: http://processing.org/reference/random_.html
+
+###Introducing 2D Transformations
+
+For this project, we'll lock our app into ```LANDSCAPE``` ```orientation()``` so we can maintain a clear reference point as we discuss 2D transformations in reference to the coordinate system. To center our rectangle on the screen when we start up, to scale from its center point using the pinch gesture, and to rotate it around its center point using the rotate gesture, we need to work with [two-dimensional (2D) transformations.][28]
+
+We'll use the [Processing's ```rectMode(CENTER)``` method][29] to overwrite the default way a rectangle is drawn in Processing, which is from the upper left corner of the rectangle located at position ```[x, y]``` with a specified ```width``` and ```height```. Instead we draw it from its center point using ```rectMode(CENTER)```, which allows us to rotate and scale it around its center point.
+
+A common metaphor to explain 2D transformations is a grid or graph paper. Using this analogy, each grid cell stands for one pixel of our app's display window. The default origin in Processing's coordinate system is always the upper left corner of the window. Each graphic element is drawn relative to this origin onto the screen. To move and rotate our rectangle, we'll use Processing's transformation methods: [```translate()```][30] and [```rotate()```][31]. We also have a [```scale()```][32] method, which we won't use in this sketch.
+
+When we draw graphic objects in Processing on our grid paper, we are used to specifying the rectangle's horizontal and vertical coordinates using *x* and *y* values. We can use an alternative method, which is necessary here, where we move our grid (paper) to specified horizontal and vertical coordinates, rotate, and then draw the rotated rectangle at position *x* and *y* ```[0, 0]```. This way the rectangle doesn't move to our intended position, but our grid paper (coordinate system) did. The advantage is that we can now ```rotate()``` our ```rect()``` right on the spot around its center point, something we can't do otherwise.
+
+What's more, we can introduce a whole stack of grid paper if we'd like to by using the Processing methods ```pushMatrix()``` and ```popMatrix()```. When we move, rotate, and scale multiple elements and would like to transform them separately, we need to draw them on separate pieces of grid paper. The ```pushMatrix()``` method saves the current position of our coordinate system, and ```popMatrix()``` restores the coordinate system to the way it was before pushing it.
+
+Like our first project in this chapter, in which we used Processing's ```mousePressed()```, ```mouseReleased()```, and ```mouseDragged()``` callback methods to identify touches to the screen, some of the multitouch gestures introduced here fulfill the same purpose. If we'd like to use Processing's mouse methods alongside multitouch methods provided by ```KetaiGesture```, we'll need to notify the [superclass method][33] ```surfaceTouchEvent()``` to notify the Processing app that a surface touch event has occurred.
+
+Now let's take a look at our multitouch code.
+
+[28]: http://processing.org/learning/transform2d/
+[29]: http://processing.org/reference/rectMode_.html
+[30]: http://processing.org/reference/translate_.html
+[31]: http://processing.org/reference/rotate_.html
+[32]: http://processing.org/reference/scale_.html
+[33]: https://processing.org/reference/super.html
