@@ -157,7 +157,9 @@ The following snippet contains the code we’ll need for our sketch.
 
 Go ahead and type this into the text editor, as illustrated below:
 
+<a name="processing_ide_basicdrawing-sm">
 ![](images/gettingStarted/Processing_IDE_basicDrawing-sm.png)
+</a>
 <!-- 1.5 UPDATE: Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
 
 We want the position of the ellipse to follow the mouse, and for this we need to know where it's located at any given moment. Processing stores this information in two system defined variables: ```mouseX``` and ```mouseY```. The pair returns the ```x``` and ```y``` coordinates of the mouse in pixels relative to the origin of the display window, not the computer screen. In Processing, the origin of the display window (```[0, 0]```) is located at the upper left corner of the device window; ```[width-1, height-1]``` is located at the lower right.
