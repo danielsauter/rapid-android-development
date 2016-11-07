@@ -322,7 +322,7 @@ Alternatively, you can download and install the library manually from the dedica
 1. Go to the Ketai library website, http://ketai.org/download, and download the latest ```zip``` file.
 2. Extract the file to the ```Documents/Processing/libraries``` folder. If the ```libraries``` subfolder doesn't exist in your sketchbook, create it now and put the Ketai folder inside it.
 3. Restart Processing so it can load the newly added library.
-4. Check whether the installation was successful by opening  Sketch&mapsto; "Import Library..." Under  Contributed  libraries you should now see the name "Ketai." If it doesn't show up in the list, please refer to <!--ref linkend="sec.troubleshooting" -->.
+4. Check whether the installation was successful by opening  Sketch&mapsto; "Import Library..." Under  Contributed  libraries you should now see the name "Ketai." If it doesn't show up in the list, please refer to {{ book.troubleshooting }}.
 
 The process for downloading and installing the Ketai library is identical for any other Processing library.
 
