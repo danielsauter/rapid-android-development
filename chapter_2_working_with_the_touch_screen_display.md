@@ -276,17 +276,19 @@ The Ketai library values conciseness and legibility in its syntax and makes hard
 
 Ketai includes a number of classes that make Android hardware sensors and devices available within Processing. The following classes are included in the library, described in more detail in <!--ref linkend="sec.ketai.classes" -->, and explained within the relevant chapters:
 
-```KetaiSensor```
-```KetaiLocation```
-```KetaiCamera```
-```KetaiFaceDetector```
-```KetaiBluetooth```
-```KetaiWiFiDirect```
-```KetaiNFC```
-```KetaiData```
-```KetaiList```
-```KetaiKeyboard```
-```KetaiGesture```
+```
+KetaiSensor
+KetaiLocation
+KetaiCamera
+KetaiFaceDetector
+KetaiBluetooth
+KetaiWiFiDirect
+KetaiNFC
+KetaiData
+KetaiList
+KetaiKeyboard
+KetaiGesture
+```
 
 Let's go ahead and install the Ketai library now.
 
@@ -324,6 +326,7 @@ Let's now move on to our first project—putting the Ketai library to work.
 
 ###Working with the KetaiGesture Class
 
+
 ```KetaiGesture``` gives us access to the most common multitouch gestures used on mobile devices. It provides us with the callback methods that we need to highlight, scale, drag, and rotate objects and UI elements. To select, zoom, focus, and organize the elements we display on the touch screen, we can use a number of gestures that have become user interaction standards on mobile devices. Working off established UI standards, we can build apps that are more intuitive to use and that enable the user to get the job done quickly while on the move.
 
 Using the [```KetaiGesture``` class][24], we can work with the following callback methods, which report back to us when a certain event has occurred on the touch screen surface, which was triggered by a particular user interaction or [multitouch gesture.][25]
@@ -333,22 +336,42 @@ Let's take a look at the main methods included in ```KetaiGesture```:
 ```
 onTap(float x, float y)
 ```
+
 * *Single Tap*—triggered by one short tap on the device screen. Returns the horizontal and vertical position of the single-tap gesture.
 
 ```
 onLongPress(float x, float y)
 ```
+
 * *Long Press*—triggered by tapping and holding a finger at one position on the touch screen for about one second. Returns the horizontal and vertical position of the long press gesture.
 
 ```
 onFlick(float x, float y, float px, float py, float v)
 ```
+
 * *Flick*—triggered by moving a finger in any direction, where the beginning and the end of the gesture occur at two different screen positions while the finger doesn't come to a full stop before lifting it from the screen surface. Returns the horizontal and vertical position where the flick is released, the horizontal and vertical position where the flick started, and the velocity of the flick.
 
 ```
 onPinch(float x, float y, float d)
 ```
+
 * *Pinch*—triggered by a two-finger gesture either away from each other (pinch open) or toward each other (pinch close). The pinch is typically used for zooming in and out of windows or for scaling objects. Returns the horizontal and vertical position of the pinch's centroid and the relative change in distance of the two fingers to each other.
+
+```
+onRotate(float x, float y, float angle)
+```
+
+* *Rotate*—triggered by the relative change of the axis rotation defined by two fingers on the touch screen surface. Returns the centroid of the rotation gesture and the relative change of the axis angle.
+
+Let's build an app that puts ```KetaiGesture```'s multitouch methods to use.
 
 [24]: http://ketai.org/reference/ui/ketaigesture
 [25]: http://en.wikipedia.org/wiki/Multitouch
+
+###Detect Multitouch Gestures
+
+For this project, we'll implement the most common user interactions using just one simple geometric primitive—a rectangle—drawn on the screen using Processing's [```rect(x, y, width, height)``` method.][26] To begin, we'll place a rectangle in a specified size of ```100``` pixels in the center of the screen. Then we use a series of ```KetaiGesture``` callback events to trigger changes to the rectangle, including a change of scale, rotation, color, and position, as illustrated in <!--ref linkend="fig.display.gestures" -->.
+
+The illustration shows a rectangle scaled with a two-finger pinch gesture, turned by a two-finger rotation gesture, placed on a brown background color, and triggered by a flick, as well as a gray fill color caused by a long press. The text "DOUBLE" appears due to a double-tap gesture at the position indicated by the hand silhouette.
+
+[26]: http://processing.org/reference/rect_.html
