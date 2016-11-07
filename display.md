@@ -401,6 +401,7 @@ Like our first project in this chapter, in which we used Processing's ```mousePr
 
 Now let's take a look at our multitouch code.
 
+[include](code/display/gestures.pde)
 <!-- code id="code.gestures" file="code/Display/Gestures/Gestures.pde" language="java" start="import" end="eof"-->
 
 Let's take a look at the steps we need to take to capture and use multitouch gestures on the Android touch screen.
