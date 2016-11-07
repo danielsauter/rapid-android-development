@@ -396,6 +396,10 @@ Like our first project in this chapter, in which we used Processing's ```mousePr
 
 Now let's take a look at our multitouch code.
 
+<!-- code id="code.gestures" file="code/Display/Gestures/Gestures.pde" language="java" start="import" end="eof"-->
+
+Let's take a look at the steps we need to take to capture and use multitouch gestures on the Android touch screen.
+
 [28]: http://processing.org/learning/transform2d/
 [29]: http://processing.org/reference/rectMode_.html
 [30]: http://processing.org/reference/translate_.html
