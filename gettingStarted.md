@@ -12,7 +12,7 @@ In 2010, the case for programming with Processing became even stronger with the 
 
 In this chapter, we'll begin by installing the software tools we'll need, and then we'll take a look at the basic structure of a typical Processing program, known as a sketch. We'll write our first Android sketch, one that draws figures on our desktop screen. Then we'll switch to [Android mode](#run-sketch-android-emulator) without leaving the Processing IDE and run that same app on the built-in Android emulator. Finally, we'll load the sketch onto an actual Android device and run it there.
 
-With an understanding of the basic development cycle in hand, we'll learn [how to use the touch screen interface](#introducing-android-touch-screen) to add some interactivity to our sketch. We'll explore how it differs from a mouse pointer and make use of touch screen values to change the visual properties of the app, first with gradations of gray and then with color.
+With an understanding of the basic development cycle in hand, we'll learn [how to use the touch screen interface](../display.html#introducing-android-touch-screen) to add some interactivity to our sketch. We'll explore how it differs from a mouse pointer and make use of touch screen values to change the visual properties of the app, first with gradations of gray and then with color.
 
 In addition to the traditional RGB (red, green, and blue) values that most programmers are familiar with, Processing provides additional color modes that provide greater control over hue, saturation, and brightness (HSB). As we work on our first apps, we'll take a closer look in particular at the HSB mode, which delivers all three.
 
