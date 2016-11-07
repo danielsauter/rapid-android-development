@@ -49,24 +49,24 @@ Create a new Android sketch by choosing  File  &mapsto;  New  from the Processin
 
 ```
 void draw()
-			{
-				// no display output, so nothing to do here
-			}
+{
+	// no display output, so nothing to do here
+}
 			
-			void mousePressed ()
-			{
-				println("PRESSED x:" + mouseX + " y: " + mouseY);
-			}
+void mousePressed ()
+{
+	println("PRESSED x:" + mouseX + " y: " + mouseY);
+}
 			
-			void mouseReleased ()
-			{
-				println("RELEASED x:" + mouseX + " y: " + mouseY);
-			}
+void mouseReleased ()
+{
+	println("RELEASED x:" + mouseX + " y: " + mouseY);
+}
 			
-			void mouseDragged ()
-			{
-				println("DRAGGED x:" + mouseX + " y: " + mouseY);
-			}
+void mouseDragged ()
+{
+	println("DRAGGED x:" + mouseX + " y: " + mouseY);
+}
 ```
 
 Let's go ahead and test the touch screen panel of an Android device.
