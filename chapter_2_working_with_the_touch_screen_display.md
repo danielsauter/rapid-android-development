@@ -290,6 +290,16 @@ Ketai includes a number of classes that make Android hardware sensors and device
 
 Let's go ahead and install the Ketai library now.
 
+[15]: http://ketai.org
+[16]: http://iipc.utu.fi/imaginaryjapan/Kusahara.pdf
+[17]: http://www.gnu.org/licenses/gpl.html
+[18]: http://ketai.org/download/
+[19]: http://processing.org/reference/libraries/
+[20]: http://processing.org/exhibition/
+[21]: https://en.wikipedia.org/wiki/DIY_ethic
+[22]: https://en.wikipedia.org/wiki/Mobile_phone_recycling
+[23]: https://developer.android.com/studio/intro/index.html
+
 ###Install the Ketai Library
 
 Follow these steps to activate the Processing library. It's a one-time process; you won't need to repeat it.
@@ -312,12 +322,11 @@ The process for downloading and installing the Ketai library is identical for an
 
 Let's now move on to our first project—putting the Ketai library to work.
 
-[15]: http://ketai.org
-[16]: http://iipc.utu.fi/imaginaryjapan/Kusahara.pdf
-[17]: http://www.gnu.org/licenses/gpl.html
-[18]: http://ketai.org/download/
-[19]: http://processing.org/reference/libraries/
-[20]: http://processing.org/exhibition/
-[21]: https://en.wikipedia.org/wiki/DIY_ethic
-[22]: https://en.wikipedia.org/wiki/Mobile_phone_recycling
-[23]: https://developer.android.com/studio/intro/index.html
+###Working with the KetaiGesture Class
+
+```KetaiGesture``` gives us access to the most common multitouch gestures used on mobile devices. It provides us with the callback methods that we need to highlight, scale, drag, and rotate objects and UI elements. To select, zoom, focus, and organize the elements we display on the touch screen, we can use a number of gestures that have become user interaction standards on mobile devices. Working off established UI standards, we can build apps that are more intuitive to use and that enable the user to get the job done quickly while on the move.
+
+Using the [```KetaiGesture``` class][24], we can work with the following callback methods, which report back to us when a certain event has occurred on the touch screen surface, which was triggered by a particular user interaction or [multitouch gesture.][25]
+
+[24]: http://ketai.org/reference/ui/ketaigesture
+[25]: http://en.wikipedia.org/wiki/Multitouch
