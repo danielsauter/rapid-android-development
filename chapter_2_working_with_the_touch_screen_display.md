@@ -328,5 +328,27 @@ Let's now move on to our first project—putting the Ketai library to work.
 
 Using the [```KetaiGesture``` class][24], we can work with the following callback methods, which report back to us when a certain event has occurred on the touch screen surface, which was triggered by a particular user interaction or [multitouch gesture.][25]
 
+Let's take a look at the main methods included in ```KetaiGesture```:
+
+```
+onTap(float x, float y)
+```
+* *Single Tap*—triggered by one short tap on the device screen. Returns the horizontal and vertical position of the single-tap gesture.
+
+```
+onLongPress(float x, float y)
+```
+* *Long Press*—triggered by tapping and holding a finger at one position on the touch screen for about one second. Returns the horizontal and vertical position of the long press gesture.
+
+```
+onFlick(float x, float y, float px, float py, float v)
+```
+* *Flick*—triggered by moving a finger in any direction, where the beginning and the end of the gesture occur at two different screen positions while the finger doesn't come to a full stop before lifting it from the screen surface. Returns the horizontal and vertical position where the flick is released, the horizontal and vertical position where the flick started, and the velocity of the flick.
+
+```
+onPinch(float x, float y, float d)
+```
+* *Pinch*—triggered by a two-finger gesture either away from each other (pinch open) or toward each other (pinch close). The pinch is typically used for zooming in and out of windows or for scaling objects. Returns the horizontal and vertical position of the pinch's centroid and the relative change in distance of the two fingers to each other.
+
 [24]: http://ketai.org/reference/ui/ketaigesture
 [25]: http://en.wikipedia.org/wiki/Multitouch
