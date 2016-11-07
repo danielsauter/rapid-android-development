@@ -7,6 +7,6 @@ void setup()
 
 void draw()
 {
-  fill(dist(pmouseX, pmouseY, mouseX, mouseY), 1, 1);  //  2
+  fill(dist(pmouseX, pmouseY, mouseX, mouseY), 1, 1);   //  2
   ellipse(mouseX, mouseY, mouseX-pmouseX, mouseY-pmouseY);
 }
