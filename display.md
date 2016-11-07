@@ -280,19 +280,19 @@ The Ketai library values conciseness and legibility in its syntax and makes hard
 
 Ketai includes a number of classes that make Android hardware sensors and devices available within Processing. The following classes are included in the library, described in more detail in <!--ref linkend="sec.ketai.classes" -->, and explained within the relevant chapters:
 
-```
-KetaiSensor
-KetaiLocation
-KetaiCamera
-KetaiFaceDetector
-KetaiBluetooth
-KetaiWiFiDirect
-KetaiNFC
-KetaiData
-KetaiList
-KetaiKeyboard
-KetaiGesture
-```
+
+* KetaiSensor
+* KetaiLocation
+* KetaiCamera
+* KetaiFaceDetector
+* KetaiBluetooth
+* KetaiWiFiDirect
+* KetaiNFC
+* KetaiData
+* KetaiList
+* KetaiKeyboard
+* KetaiGesture
+
 
 Let's go ahead and install the Ketai library now.
 
