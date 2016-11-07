@@ -246,7 +246,7 @@ Let's test the app.
 
 [14]: http://processing.org/reference/dist_.html
 
-###Run the App
+####Run the App
 
 Rerun the sketch on the device now switched to HSB color, and see how the  hue of the ellipses that are drawn changes depending on how fast you move your finger across the screen surface. The changes in the hues occur independently of their saturation and brightness, so all the colors are drawn with maximum saturation and brightness.
 
