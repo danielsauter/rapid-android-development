@@ -400,9 +400,48 @@ Now let's take a look at our multitouch code.
 
 Let's take a look at the steps we need to take to capture and use multitouch gestures on the Android touch screen.
 
+1. Import Ketai's ```ui``` package to give us access to the ```KetaiGesture``` class.
+2. Import Android's ```MotionEvent``` package.
+3. Define a variable called ```gesture``` of type ```KetaiGesture```.
+4. Set a variable we call ```rectSize``` to ```100``` pixels to start off.
+5. Define the initial color ```c``` (white), which we'll use as a fill color for the rectangle and text.
+6. Define the initial color ```bg``` (dark green), which we'll use as a background color.
+7. Instantiate our ```KetaiGesture``` object ```gesture```.
+8. Set the initial value for our variable ```x``` as the horizontal position of the rectangle.
+9. Set the initial value for ```y``` as the vertical position of the rectangle.
+10. Push the current matrix on the matrix stack so that we can draw and rotate the rectangle independent of other UI elements, such as the text.
+11. Move to the position ```[x, y]``` using ```translate()```.
+12. Pop the current matrix to restore the previous matrix on the stack.
+13. Use the Processing method ```surfaceTouchEvent()``` to notify Processing about mouse/finger-related updates.
+14. Use the callback method ```onTap()``` to display the text string ```SINGLE``` at the location ```(x, y)``` returned by ```KetaiGesture```.
+15. Use the callback method ```onDoubleTap()``` to display the text string ```DOUBLE``` at the location returned by ```KetaiGesture```, indicating that the user triggered a double-tap event. Use this event to decrease the rectangle size to the original ```100``` pixels if it's currently enlarged, and increase the rectangle scale to the display height minus ```100``` pixels if it's currently minimized to its original scale.
+16. Use the callback method ```onLongPress()``` to display the text string "LONG" at the location ```(x, y)``` returned by ```KetaiGesture```. Use this event to randomly select a new color ```c``` using ```random()```, which we'll use as a fill color for the rectangle.
+17. Use the callback method ```onFlick()``` to display the text string ```FLICK``` at the location ```x``` and ```y``` returned by ```KetaiGesture```. Also, receive the previous location where the flick has been initiated as ```px``` and ```py```, as well as the velocity ```v```.
+18. Use the callback method ```onPinch()``` to calculate the scaled ```rectSize``` using the pinch distance ```d``` at the location ```x``` and ```y``` returned by ```KetaiGesture```.
+19. Use the callback method ```onRotate()``` to calculate the rotation angle ```rectAngle``` using the ```angle``` returned by ```KetaiGesture```.
+20. Use Processing's ```mouseDragged()``` callback to update the rectangle position  (```x``` and ```y```) by the amount of pixels moved. Determine this amount by subtracting the previous ```pmouseX``` from the current ```mouseX```, and ```pmouseY``` from ```mouseY```. Move the rectangle only if absolute distance between the rectangle and the mouse position is less than half the rectangle's size, or when we touch the rectangle.
+
+Let's test the app.
+
 [28]: http://processing.org/learning/transform2d/
 [29]: http://processing.org/reference/rectMode_.html
 [30]: http://processing.org/reference/translate_.html
 [31]: http://processing.org/reference/rotate_.html
 [32]: http://processing.org/reference/scale_.html
 [33]: https://processing.org/reference/super.html
+
+####Run the App
+
+Run the app on your device. You'll see a square show up in the center of the screen. Drag it to a new location, flick to change the background color, and give it a long tap to change the foreground fill color.
+
+To test the multitouch gestures, put two fingers down on the screen and pinch, and you'll see how the rectangle starts scaling. Now rotate the same two fingers to see the rectangle rotate. If you use more than two fingers, the first two fingers you put down on the screen are in charge.
+
+Finally, double-tap the screen to zoom the square to full screen, and double-tap again to scale it to its initial size of ```100``` pixels.
+
+This completes our investigation into the multitouch features of the touch screen panel.
+
+###Wrapping Up
+
+You've used the touch screen panel as the first hardware device we've worked with. You've learned about mouse speed and all the different color features in Processing and worked with the HSB color mode to manipulate the hue values of the geometric primitive we've drawn. And finally, you are now able to use mouse events and multitouch gestures for your app's user interfaces to control the object you display on the device screen.
+
+You are now well positioned to move on to the next chapter, where we'll focus on the hardware sensors built into Android devices. After all, the "native" user experience of mobile apps relies heavily on hardware devices and sensors, and we are now ready to incorporate them into our apps.
