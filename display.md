@@ -238,7 +238,7 @@ We have only two modifications to make using the [code from chapter 1](../gettin
 
 Let's take a look at the project code. 
 
-<!-- code id="code.mouse.speed.hue" file="code/Display/MouseSpeedHue/MouseSpeedHue.pde" -->
+[include](code/display/MouseSpeedHue.pde)
 
 Here are the modifications we've made.
 
