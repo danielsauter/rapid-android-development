@@ -19,9 +19,9 @@ Let's take a look at how the touch screen panel works.
 [1]: http://en.wikipedia.org/wiki/Multi-touch
 [2]: http://ketai.org
 
-<a name="introducing-the-android-touch-screen">
+
 ###Introducing the Android Touch Screen
-</a>
+
 
 The capacitive touch screen panel of an Android device consists of a glass insulator coated with a transparent conductor. When we interact with the touch screen surface, our fingertips act as electrical conductors—not very good ones, but good enough to be detected. A touch on the screen surface distorts the electrostatic field, causing a change in its electric capacitance, which can be located relative to the screen surface. The horizontal and vertical position of the fingertip relative to the screen is then made available to us through the Android OS; it is updated only when we touch or move a fingertip across the screen.
 
