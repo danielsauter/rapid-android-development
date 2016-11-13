@@ -68,3 +68,5 @@ The following sensors let you monitor environmental properties or measure the de
 
 * **Light** Senses the ambient light level
 * **Pressure** Senses the air pressure (the atmospheric pressure)
+* **Relative Humidity** Senses the humidity of the air (in percent)
+* **Temperature** Senses the ambient air temperature
