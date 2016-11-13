@@ -250,3 +250,6 @@ Let's take a look to see if all the sensors return values.
 ###Run the App
 
 Run the sketch on the device, and you should see output similar to this:
+
+<!-- figure id="fig.output.multiple.sensors" -->
+
