@@ -61,3 +61,10 @@ The following sensors let you to determine the location or position of the devic
 * **Proximity** Senses the distance to an object measured from the sensor that is mounted in close proximity to the device speaker&emdash;this is commonly used to determine if the device is held toward, or removed from, the ear.
 
 Now let's take a look at the sensors that measure the device's environment.
+
+####Environment Sensors
+
+The following sensors let you monitor environmental properties or measure the device context:
+
+* **Light** Senses the ambient light level
+* **Pressure** Senses the air pressure (the atmospheric pressure)
