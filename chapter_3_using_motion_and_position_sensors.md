@@ -246,3 +246,7 @@ Let's take a closer look at the different event methods.
 Let's take a look to see if all the sensors return values.
 
 [12]: http://android.processing.org/reference/environment/orientation.html
+
+###Run the App
+
+Run the sketch on the device, and you should see output similar to this:
