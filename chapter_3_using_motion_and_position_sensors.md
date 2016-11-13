@@ -219,3 +219,20 @@ Try placing your device in different positions and observe the acceleration due 
 Let's now see how a sketch would look using multiple sensors.
 
 ###Display Values from Multiple Sensors
+
+So far we've worked with the accelerometer, which is a hardware motion sensor built into the Android device. In future chapters we'll want to work with multiple sensors, so let's fire up a few simultaneously and display their values on the Android screen. For this sketch, we'll activate the accelerometer again and add two position sensors and an environment sensor. The magnetic field sensor and the proximity sensors are considered position sensors; the light sensor is an environment sensor.
+
+We could store the three axes returned by the accelerometer and magnetometer sensors in individual floating point variables. A better solution, however, is to work with Processing's [```PVector``` class.][11]
+
+It can store either a two- or a three-dimensional vector, which is perfect for us, since we can put any two or three values into this package, including sensor values. Instead of three variables for the *x*-, *y*-, and *z*-axes returned by the accelerometer and magnetometer, we can just use one ```PVector```, called ```accelerometer```. We refer later to an individual value or axis using the ```accelerometer.x```, ```accelerometer.y```, and ```accelerometer.z``` components of this ```PVector```. The class is equipped with a number of useful methods to simplify the vector math for us, which we'll use later in this chapter to detect a device shake.
+
+For this sketch, let's lock the screen ```orientation()``` into ```LANDSCAPE``` mode so we can display enough digits behind the comma for the floating point values returned by the sensors.
+
+[11]: http://processing.org/reference/PVector.html
+
+To create a sketch using multiple sensors, we follow these steps:
+
+<!-- code id="code.multiple.sensors" file="code/Sensors/MultipleSensors/MultipleSensors.pde"
+language="java" start="import" end="end"/ -->
+
+Let's take a closer look at the different event methods.
