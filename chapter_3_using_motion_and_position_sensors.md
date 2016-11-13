@@ -83,5 +83,26 @@ For the sketches we'll write in this chapter, the following ```KetaiSensor``` me
 
 * *```list()```* Returns a list of available sensors on the device
 
-* *```onAccelerometerEvent()```* 	Returns *x*-, *y*-, and *z*-axis acceleration minus g-force in meters per second squared (m/s<sup>2</sup>)
+* *```onAccelerometerEvent()```* Returns *x*-, *y*-, and *z*-axis acceleration minus g-force in meters per second squared (m/s<sup>2</sup>)
 
+* *```onMagneticFieldEvent()```* Returns the *x*, *y*, and *z* values for the ambient magnetic field in units of microtesla
+
+* *```onLightEvent()```* Returns the light level in SI units of lux
+
+* *```onProximityEvent()```* Returns the distance to an object measured from the device surface in centimeters&emdash;depending on the device, a typical output is ```0/1``` or ```0/5```—the sensor is typically located next to the speaker on the device. 
+
+* *```onGyroscopeEvent()```* Returns the *x*, *y*, and *z* rates of rotation around the *x*-, *y*-, and *z*-axes in degrees
+
+Because a multitude of devices on the market exist, it's important that we start by checking the sensors that are built into our Android device. Let's use the ```KetaiSensor``` class to see what sensors are built into our Android device. 
+
+###List the Built-In Sensors on an Android Device
+
+Let's find out what sensors are built into our device and available for us to work with. The ```KetaiSensor``` class offers a ```list()``` method that enumerates all Android sensors available in the device and lists them for us in the Processing console.
+
+Open a new sketch window in Android mode and type or copy the following four lines of code; click on the green bar to download the ```SensorList.pde``` source file if you are reading the ebook.
+
+<!-- code id="code.sensor.list" file="code/Sensors/SensorList/SensorList.pde"/ -->
+
+Take a look at the code. First we import the Ketai sensor package, then we create a  ```sensor``` variable of the type ```KetaiSensor```, and finally we create a ```sensor``` object containing all the ```KetaiSensor``` methods we need. As the last step, we print the sensor ```list()``` to the console.
+
+###Run the App
