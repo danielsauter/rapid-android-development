@@ -148,22 +148,26 @@ Here's the code we'll typically use to interact with a device using the classes 
 
 ```
 import ketai.sensors.*;	//<callout id="co.import"/>
-			KetaiSensor sensor;	//<callout id="co.type"/>
+KetaiSensor sensor;	//<callout id="co.type"/>
 
-			void setup()
-			{
-			  sensor = new KetaiSensor(this);	//<callout id="co.instance"/>
-			  sensor.start();	//<callout id="co.start"/>
-			}
-			void draw()
-			{
-			}
-			void onAccelerometerEvent(float x, float y, float z)//<callout id="co.event"/>
-			{
-			}
+void setup()
+{
+sensor = new KetaiSensor(this);	// 1
+sensor.start();	// 2
+}
+
+void draw()
+{
+}
+void onAccelerometerEvent(float x, float y, float z)// 3
+{
+}
 ```
 
 Let's take a look at the code that is specific to ```KetaiSensor```. 
 
 1. Import the Ketai sensor library package from ```Sketchbook/libraries```.
-
+2. Declare a ```sensor``` variable of type ```KetaiSensor```, and register it for any available Android sensors.
+3. Instantiate the ```KetaiSensor``` class to create a ```sensor``` object, which makes ```KetaiSensor``` methods available.
+4. Start listening for accelerometer sensor events.
+5. Each time the accelerometer changes value, receive a callback for the *x*, *y*, and *z* sensor axes.
