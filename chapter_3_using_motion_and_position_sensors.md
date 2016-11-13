@@ -40,7 +40,7 @@ In this chapter, we will work mostly with the accelerometer sensor and use the *
 [4]: http://developer.android.com/guide/topics/sensors/sensors_position.html
 [5]: http://developer.android.com/guide/topics/sensors/sensors_environment.html
 
-###Motion Sensors
+####Motion Sensors
 
 The following sensors let you monitor the motion of the device:
 
@@ -52,7 +52,7 @@ The following sensors let you monitor the motion of the device:
 
 Now let's take a look at the sensors that deal with the device's position.
 
-###Position Sensors
+####Position Sensors
 
 The following sensors let you to determine the location or position of the device:
 
