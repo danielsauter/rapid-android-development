@@ -1,4 +1,4 @@
-# Chapter 3 
+### Chapter 3 
 
-Using Motion and Position Sensors
+#Using Motion and Position Sensors
 
