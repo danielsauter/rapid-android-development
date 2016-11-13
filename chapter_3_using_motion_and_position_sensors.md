@@ -334,3 +334,5 @@ The three color variables (```r```, ```g```, and ```b```) now translate sensor v
 With this small addition, let's run the sketch on the device.
 
 ###Run the App
+
+When you run the sketch on the device, notice how the ```background()``` changes when you tilt or shake it. You are starting to use sketches and ideas from previous sections and reuse them in new contexts. The translation from raw sensor values into a color mixer project is not a big step. To understand how the accelerometer responds to your movement, it is a bit more intuitive to observe color changes displayed on the Android screen rather than fast-changing floating point values.
