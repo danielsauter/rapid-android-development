@@ -24,5 +24,18 @@ Above the Linux kernel sit the Android native libraries written in C/C++, includ
 **Processing**
 The language itself is the next layer in our software stack that builds on the Java core libraries. The Android mode in Processing works with the Android libraries in the Android layer. Processing's software architecture allows us to use Java and Android classes directly within the Processing code.
 
+**Ketai**
+The library builds on the Processing for Android layer, taking advantage of the Processing, Java, and Android libraries. It's the highest layer in the software stack we'll be working with in projects, besides using a few other libraries that sit on the same level in the hierarchy. Ketai focuses specifically on the hardware features built into Android devices, including the multitouch screen panel, sensors, cameras, and networking devices.
+
+Now that we are aware of the different hardware components and the software layers stacked on top of the hardware layer, let's start with the bottommost hardware layer and take a look at the most common sensors built into our Android device.
+
 [1]: http://en.wikipedia.org/wiki/Linux_kernel
 [2]: https://en.wikipedia.org/wiki/Dalvik_(software)
+
+###Introducing Common Android Sensors
+
+In this chapter, we will work mostly with the accelerometer sensor and use the ***KetaiSensor*** class to access it. ***KetaiSensor*** is capable of working with all sensors. Some sensors found on the Android device are based on hardware; others are software-based and provided by the Android SDK. For the projects in this chapter, we'll focus on actual electronic hardware sensors built into the Android phone or tablet. Android distinguishes three different sensor-type categories: [motion sensors,][3] [position sensors,][4] [and environment sensors.][5] Most environment sensors have been added to the Android SDK recently (Android 4.0 Ice Cream Sandwich), so they are not typically found in devices yet. Let's take a look at the different sensors Android supports. 
+
+[3]: http://developer.android.com/guide/topics/sensors/sensors_motion.html
+[4]: http://developer.android.com/guide/topics/sensors/sensors_position.html
+[5]: http://developer.android.com/guide/topics/sensors/sensors_environment.html
