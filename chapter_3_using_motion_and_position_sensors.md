@@ -436,3 +436,54 @@ On the device, we can tap the screen and the color swatches on the bottom of the
 Building on the code we've previously developed, we've compiled a number of features into a color mixer prototype. This iterative process is typical when building software. We take small and manageable steps, test/run frequently, and make sure we have always saved a stable version of the code we are working with. This is good practice so that we can always have a fallback version if we get stuck or called away.
 
 Now that we've used the accelerometer to mix and save colors, we've also established that device motion is a UI feature that allows us to interact with the app. We can now continue to build on device motion and add a shake to clear all swatches in the palette. How can we detect a shake?
+
+###Erase a Palette with a Shake
+
+Shaking a device can be used as a deliberate gesture for controlling UI elements. On smart phones, it is typically assigned to the Undo command so that a shake can reverse or clear a prior action. Let's take a look at how this gesture can be detected and used by our color mixer.
+
+What is a shake? When we move the device abruptly side to side, forward or backward, up or down, the idea is that our sketch triggers a "shake" event. For the color mixer, we want to use the shake for clearing out all color swatches. The shake needs to be detected no matter how we hold the device and independent of what's up or down. You might already anticipate the issue: we know well that the accelerometer is the ideal sensor for us to detect a shake, but we can't just use its *x*, *y*, or *z* values to trigger the shake when a certain threshold is reached because we can't assume our swaying gesture is aligned any of these axes. So this approach won't work and we need something else.
+
+Any movement in space can be described with a three-dimensional vector that describes both the magnitude and the direction of the movement. You might (or might not) envision such a vector as an arrow in three-dimensional space—a visual representation of the mathematical construct from the field of trigonometry. A vector is ideal to handle all three axes from our accelerometer.
+
+We are using the [```PVector``` class][18] again to store three variables in one package, which we are going to use to detect the shake. If we imagine how the vector would react to a shake, it would change erratically in direction and magnitude. In comparison, movement at a constant velocity causes no significant changes to the vector. Hence, if we continuously compare the movement vector of our device to the previous vector, frame by frame, we can detect changes when they reach a certain threshold.
+
+Processing provides a few very useful vector math methods, including [```angleInBetween(vector1, vector2)```][19], to calculate the angle between two given vectors. So if we compare the current accelerometer vector with the vector of the previous frame, we can now determine their difference in angle, summarized into a single numeric value. Because this value describes angular change, we use a threshold to trigger the shake. For now, let's say this threshold angle should be ```45``` degrees. Alternatively, we could use the ```mag()``` method to detect a sudden change to the [vector's magnitude.][20] We'll work with the change to the vector angle in this example. OK, let's put it together.
+
+<!-- code id="code.color.picker.complete" file="code/Sensors/ColorPickerComplete/ColorPickerComplete.pde" language="java" start="import" end="end"-->
+
+Here's how we proceed to implement the shake detection using ```PVector```.
+
+1. Create a processing vector of type ```PVector```.
+2. Create a second vector as a reference to compare change.
+3. Use the first ```.x``` component of the ```accelerometer``` vector. The second component can be accessed via ```.y```, and the third component via ```.z```.
+4. Calculate the ```delta``` between the current and the previous vector.
+5. Check the ```delta``` in radians against a threshold of ```45``` degrees.
+6. Set the reference vector to the current one as the last step in ```draw()```.
+7. Assign raw accelerometers to the accelerometer ```PVector```.
+8. Set all palette colors in the array to the color black.
+
+Let's run the code first and test the shake detection on the device. It helps us better understand some of the shake detection we talked about.
+
+[18]: http://processing.org/reference/PVector.html
+[19]: http://processing.org/reference/PVector_angleBetween_.html
+[20]: http://processing.org/reference/PVector_mag_.html
+
+
+###Run the App
+
+If we play with the app, we can mix and pick colors as we did previously, as shown in <!--ref linkend="fig.color.mixer" -->. Small wiggles go undetected. As soon as we move the device quickly and a shake is triggered, all color swatches are erased from the palette.
+
+Let's compare some of the small adjustments we made to the <!--ref linkend="code.color.picker.complete" -->, to the previous <!--ref linkend="code.accelrometer.color.picker.array" -->, and check what we've added. First of all, we eliminated the three floating point variables we had used globally for incoming accelerometer values. Instead, we are using the ```PVector``` variable ```accelerometer``` to do the same job. This means we need to update our ```map()``` method so it uses the vector components ```.x```, ```.y```, and ```.z``` of the ```accelerometer``` vector.
+
+We use the same approach for the ```onAccelerometerEvent()``` method, where incoming values are now assigned to individual vector components.
+To assign all three components at once to a vector, we can also use the ```set()``` method, as illustrated with ```pAccelerometer``` at the very end of ```draw()```.
+
+In terms of additions, we've added the ```pAccelerometer``` variable so we have something to compare against. We use ```angleBetween()``` to calculate the angle difference between the current and previous frame and assign it to ```delta```. If the difference is larger than ```45``` degrees, we trigger the ```shake()``` method, resetting all ```palette``` colors to black and ```paletteIndex``` to ```0```.
+
+The ```degrees()``` method used here converts radian values provided by the ```angleBetween()``` method into degrees. [Degrees][21] (ranging ```0```..```360```) are far more intuitive to work with than trigonometric measurements in [radians,][22] whose range is ```0```..```TWO_PI```.
+
+When you take a second look at the app, you can also confirm that ```shake()``` is triggered consistently independent of device rotation. The shake detection feature completes our color mixer project.
+
+[21]: http://processing.org/reference/degrees_.html
+[22]: http://processing.org/reference/radians_.html
+
