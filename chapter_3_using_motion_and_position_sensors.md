@@ -101,7 +101,7 @@ Let's find out what sensors are built into our device and available for us to wo
 
 Open a new sketch window in Android mode and type or copy the following four lines of code; click on the green bar to download the ```SensorList.pde``` source file if you are reading the ebook.
 
-<!-- code id="code.sensor.list" file="code/Sensors/SensorList/SensorList.pde"/ -->
+[include](code/sensors/SensorList.pde)
 
 Take a look at the code. First we import the Ketai sensor package, then we create a  ```sensor``` variable of the type ```KetaiSensor```, and finally we create a ```sensor``` object containing all the ```KetaiSensor``` methods we need. As the last step, we print the sensor ```list()``` to the console.
 
@@ -188,12 +188,11 @@ Let's add some code to output raw accelerometer values onto the screen. We're ai
 
 The picture shows the acceleration of the *x*-, *y*-, and *z*-axes of the device in relation to g-force.
 
-<!-- imagedata fileref="images/Sensors/AccelerometerOutput.png" width="40%" -->
+![](images/sensors/AccelerometerOutputNexus6-sm.png)
 
 Now let's dive into the code.
 
-<!-- code id="code.accelerometer" file="code/Sensors/Accelerometer/Accelerometer.pde"
-language="java" start="import" end="end"-->
+[include](code/sensors/Accelerometer.pde)
 
 Let's take a closer look at the Processing methods we've used for the first time.
 
@@ -232,8 +231,7 @@ For this sketch, let's lock the screen ```orientation()``` into ```LANDSCAPE``` 
 
 To create a sketch using multiple sensors, we follow these steps:
 
-<!-- code id="code.multiple.sensors" file="code/Sensors/MultipleSensors/MultipleSensors.pde"
-language="java" start="import" end="end"/ -->
+[include](code/sensors/MultipleSensors.pde)
 
 Let's take a closer look at the different event methods.
 
@@ -326,7 +324,7 @@ background(r, g, b);
 ```
 The three color variables (```r```, ```g```, and ```b```) now translate sensor values in the range of ```-10..10``` to color values of ```0..255```. The sketch then looks something like <!--ref linkend="fig.accelerometer.color" -->.
 
-<!-- code id="code.accelrometer.color" file="code/Sensors/AccelerometerColor/AccelerometerColor.pde" language="java" start="import" end="end"-->
+[include](code/sensors/AccelerometerColor.pde)
 
 With this small addition, let's run the sketch on the device.
 
@@ -344,17 +342,14 @@ To save any color that we create by rotating our device about its three axes, we
 
 To implement the color picker, let's rework our <!--ref linkend="code.accelerometer" -->, and add a variable named ```swatch``` to store whatever color we pick when we tap the screen. We can then display the color pick value in an area at the bottom half of the screen, as shown here:
 
-<!-- figure id="fig.accelerometer.color.picker" -->
+![](images/sensors/AccelerometerColorPicker-sm.png)
 
-###Saving a color swatch
-
-The image shows a color picked from all the possible hues Android can generate, stored in a color swatch.
-
-<!-- imagedata fileref="images/Sensors/AccelerometerColorPicker.png" width="40%" -->
+#####Saving a color swatch
+######The image shows a color picked from all the possible hues Android can generate, stored in a color swatch.
 
 Let's also display the individual values that correspond to the red, green, and blue variables as text using the ```red()```, ```green()```, and ```blue()``` methods to extract color values from the ```swatch``` color variable.
 
-<!-- code id="code.accelrometer.color.picker" file="code/Sensors/AccelerometerColorPicker/AccelerometerColorPicker.pde" language="java" start="import" end="end" -->
+[include](code/sensors/AccelerometerColorPicker.pde)
 
 Let's take a second look at the methods we've added.
 
@@ -388,7 +383,7 @@ ArrayList is an alternative here because it is able to store a varying number of
 
 The image shows the color determined by the device orientation on the top half of the screen and the palette of saved colors at the bottom.
 
-![](images/sensors/AccelerometerColorPicker-sm.png)
+![](images/sensors/ColorPicker.png)
 
 We can create arrays of any data type, for example ```int[]```, ```String[]```, ```float[]```, and ```boolean[]```. For a color array that stores up to, let's say, eight colors, we need to change the ```swatch``` variable from the previous <!--ref linkend="code.accelrometer.color.picker" -->, into this:
 
@@ -406,7 +401,7 @@ Let's now put this into the context of our color mixer sketch.
 
 [16]: http://processing.org/reference/for.html
 
-<!-- code id="code.accelrometer.color.picker.array" file="code/Sensors/AccelerometerColorPickerArray/AccelerometerColorPickerArray.pde" language="java" start="import" end="end" -->
+[include](code/sensors/AccelerometerColorPickerArray.pde)
 
 Let's take a look at the main additions to the sketch.
 
@@ -445,7 +440,7 @@ We are using the [```PVector``` class][18] again to store three variables in one
 
 Processing provides a few very useful vector math methods, including [```angleInBetween(vector1, vector2)```][19], to calculate the angle between two given vectors. So if we compare the current accelerometer vector with the vector of the previous frame, we can now determine their difference in angle, summarized into a single numeric value. Because this value describes angular change, we use a threshold to trigger the shake. For now, let's say this threshold angle should be ```45``` degrees. Alternatively, we could use the ```mag()``` method to detect a sudden change to the [vector's magnitude.][20] We'll work with the change to the vector angle in this example. OK, let's put it together.
 
-<!-- code id="code.color.picker.complete" file="code/Sensors/ColorPickerComplete/ColorPickerComplete.pde" language="java" start="import" end="end"-->
+[include](code/sensors/ColorPickerComplete.pde)
 
 Here's how we proceed to implement the shake detection using ```PVector```.
 
