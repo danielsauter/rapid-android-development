@@ -105,4 +105,4 @@ Open a new sketch window in Android mode and type or copy the following four lin
 
 Take a look at the code. First we import the Ketai sensor package, then we create a  ```sensor``` variable of the type ```KetaiSensor```, and finally we create a ```sensor``` object containing all the ```KetaiSensor``` methods we need. As the last step, we print the sensor ```list()``` to the console.
 
-###Run the App
+####Run the App
