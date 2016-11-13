@@ -487,3 +487,8 @@ When you take a second look at the app, you can also confirm that ```shake()``` 
 [21]: http://processing.org/reference/degrees_.html
 [22]: http://processing.org/reference/radians_.html
 
+###Wrapping Up
+
+You've completed a series of sensor-based apps in this chapter, and you've worked with motion, position, and environment sensors using the ```KetaiSensor``` class of the Ketai library. You've learned the difference between software- and hardware-based sensors and determined which sensors your device supports. You've used multiple sensors in one app, and you could go on to imagine other uses for motion-based features for your apps, such as speedometers for cars, shake detectors for putting your phone in silent mode, "breathometers" for biofeedback and analysis of breathing patterns...and the list goes on. You've also mastered working with color and learned how to mix and map it. You've learned how to work with Processing vectors to store multiple sensor values and to detect shakes.
+
+Now that you know how the accelerometer can be used to determine the movement of an Android device, you are now ready to explore a more complex set of devices, such as GPS. Our next topic explores how to determine the device's geographic location using Android's geolocation features, which are typically used for navigation and location-based services.
