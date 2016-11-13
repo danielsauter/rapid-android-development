@@ -137,3 +137,30 @@ KetaiSensor sensor: MPL rotation vector:11
 ```
 
 The Google Nexus 6 reports a lists 32 software and hardware sensors. The list includes some hardware info, its type, and an ID. Your results, no doubt, will differ; there are a lot of Android makes and models out there today. 
+
+The list includes more than hardware sensors. The Android SDK also includes software-based sensors, known as fused sensors. Fused sensors use multiple hardware sensors and an Android software layer to improve the readings from one individual sensor. They make it easier for us as developers to work with the resulting data. The ```Gravity```, ```Linear Acceleration```, and ```Rotation Vector``` sensors are examples of such hybrid sensors, combining gyroscope, accelerometer, and compass data to improve the results. In the list of available sensors, however, no distinction is made between hardware sensors and fused sensors.
+
+This also means that even if you don't update your device hardware, new versions of the Android API might include fused software-based sensor types that might be easier to use or might produce better results. For example, if you browse Android's sensor hardware overview and switch the &lquot;Filter by API Level&rquot; to ```8``` 
+		  (http://developer.android.com/reference/android/hardware/Sensor.html), you will see a list of the sensor types and methods that have been added to the API since the release of API ```8```.
+          
+As you start adding methods from the Ketai library to the sketch, note that contributed libraries are not highlighted by the Processing IDE because they are not part of the core. This is not a big deal, but it's something you should be aware of.
+
+Here's the code we'll typically use to interact with a device using the classes and methods that the Ketai library provides:
+
+```
+import ketai.sensors.*;	//<callout id="co.import"/>
+			KetaiSensor sensor;	//<callout id="co.type"/>
+
+			void setup()
+			{
+			  sensor = new KetaiSensor(this);	//<callout id="co.instance"/>
+			  sensor.start();	//<callout id="co.start"/>
+			}
+			void draw()
+			{
+			}
+			void onAccelerometerEvent(float x, float y, float z)//<callout id="co.event"/>
+			{
+			}
+```
+
