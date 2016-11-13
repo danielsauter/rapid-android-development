@@ -340,3 +340,23 @@ When you run the sketch on the device, notice how the ```background()``` changes
 Now look more closely at the display as you rotate the device. Notice how the red value is linked to rotation around the *x*-axis, green to the *y*-axis, and blue to the *z*-axis. This helps us figure out how the Android coordinate system is aligned with the actual device. The coordinate system does *not* reconfigure when the screen orientation switches from ```PORTRAIT``` to ```LANDSCAPE```. This is why we locked the app into ```orientation(PORTRAIT)```. We don't have to maintain the one-to-one relationship between the device coordinate system and the Processing coordinate system, but we'd sure have a harder time learning about it.
 
 Let's now figure out how to save the colors we generate.
+
+###Save a Color
+
+To save any color that we create by rotating our device about its three axes, we need a container that is good for storing color values. Processing provides us with the ```color``` type, which we looked at briefly in the previous chapter, <!--ref linkend="sec.color.type" -->.
+
+To implement the color picker, let's rework our <!--ref linkend="code.accelerometer" -->, and add a variable named ```swatch``` to store whatever color we pick when we tap the screen. We can then display the color pick value in an area at the bottom half of the screen, as shown here:
+
+<!-- figure id="fig.accelerometer.color.picker" -->
+
+###Saving a color swatch
+
+The image shows a color picked from all the possible hues Android can generate, stored in a color swatch.
+
+<!-- imagedata fileref="images/Sensors/AccelerometerColorPicker.png" width="40%" -->
+
+Let's also display the individual values that correspond to the red, green, and blue variables as text using the ```red()```, ```green()```, and ```blue()``` methods to extract color values from the ```swatch``` color variable.
+
+<!-- code id="code.accelrometer.color.picker" file="code/Sensors/AccelerometerColorPicker/AccelerometerColorPicker.pde" language="java" start="import" end="end" -->
+
+Let's take a second look at the methods we've added.
