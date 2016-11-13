@@ -106,3 +106,34 @@ Open a new sketch window in Android mode and type or copy the following four lin
 Take a look at the code. First we import the Ketai sensor package, then we create a  ```sensor``` variable of the type ```KetaiSensor```, and finally we create a ```sensor``` object containing all the ```KetaiSensor``` methods we need. As the last step, we print the sensor ```list()``` to the console.
 
 ####Run the App
+
+Run this code on your Android device and take a look at the Processing console. For example, the Google Nexus S reports the following list of sensors:
+
+```
+KetaiSensor sensor: KR3DM 3-axis Accelerometer:1
+				KetaiSensor sensor: AK8973 3-axis Magnetic field sensor:2
+				KetaiSensor sensor: GP2A Light sensor:5
+				KetaiSensor sensor: GP2A Proximity sensor:8
+				KetaiSensor sensor: K3G Gyroscope sensor:4
+				KetaiSensor sensor: Rotation Vector Sensor:11
+				KetaiSensor sensor: Gravity Sensor:9
+				KetaiSensor sensor: Linear Acceleration Sensor:10
+				KetaiSensor sensor: Orientation Sensor:3
+				KetaiSensor sensor: Corrected Gyroscope Sensor:4
+```
+
+The Asus Transformer Prime tablet reports the following sensors: 
+
+```
+KetaiSensor sensor: MPL rotation vector:11
+				KetaiSensor sensor: MPL linear accel:10
+				KetaiSensor sensor: MPL gravity:9
+				KetaiSensor sensor: MPL Gyro:4
+				KetaiSensor sensor: MPL accel:1
+				KetaiSensor sensor: MPL magnetic field:2
+				KetaiSensor sensor: MPL Orientation:3
+				KetaiSensor sensor: Lite-On al3010 Ambient Light Sensor:5
+				KetaiSensor sensor: Intersilisl29018 Proximity sensor:8
+```
+
+The Google Nexus 6 reports a lists 32 software and hardware sensors. The list includes some hardware info, its type, and an ID. Your results, no doubt, will differ; there are a lot of Android makes and models out there today. 
