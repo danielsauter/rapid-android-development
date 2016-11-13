@@ -378,7 +378,7 @@ Clearly, though, storing one color is not enough. We've organized the screen and
 
 ###Build a Palette of Colors
 
-In this section, we'll build a palette of colors using a list of colors, or a color [array,][15] as illustrated in <!--ref linkend="fig.color.mixer" -->. When you see a color you like, you'll be able to store it as one of eight swatches on the screen. In our example, we are dealing with a color array and we want to store a list of colors in a ```palette[]``` array. Each data/color entry in the list is identified by an index number that represents the position in the array. The first element is identified by the index number, ```[0]```; the second element, ```[1]```; and the last element, ```palette.length-1```. We need to define the array ```length``` when we create the array.
+In this section, we'll build a palette of colors using a list of colors, or a color [array,][15] as illustrated in <!-- ref linkend="fig.color.mixer" -->. When you see a color you like, you'll be able to store it as one of eight swatches on the screen. In our example, we are dealing with a color array and we want to store a list of colors in a ```palette[]``` array. Each data/color entry in the list is identified by an index number that represents the position in the array. The first element is identified by the index number, ```[0]```; the second element, ```[1]```; and the last element, ```palette.length-1```. We need to define the array ```length``` when we create the array.
 
 ArrayList is an alternative here because it is able to store a varying number of objects. It's great, but it has a steeper learning curve. More info is available at http://processing.org/reference/ArrayList.html.
 
@@ -388,7 +388,7 @@ ArrayList is an alternative here because it is able to store a varying number of
 
 The image shows the color determined by the device orientation on the top half of the screen and the palette of saved colors at the bottom.
 
-<!-- imagedata fileref="images/Sensors/ColorPicker.png" width="40%" -->
+![](images/sensors/AccelerometerColorPicker-sm.png)
 
 We can create arrays of any data type, for example ```int[]```, ```String[]```, ```float[]```, and ```boolean[]```. For a color array that stores up to, let's say, eight colors, we need to change the ```swatch``` variable from the previous <!--ref linkend="code.accelrometer.color.picker" -->, into this:
 
@@ -398,8 +398,7 @@ color[] palette = new color[8];
 
 As a result, we can then store eight colors sequentially within the ```palette``` array. This touches on a prime programming principle: build the code to be as adaptable and versatile as possible. In our case, we want the app to work with any number of colors, not just eight. So we need to aim at more (```n```) colors and introduce a ```num``` variable that can be set to the amount we want to work with (```8```). Sure, the UI might not adapt as neatly if we set ```num``` to ```100```, for example. But the code should be able to handle it without breaking. With adaptability in mind, we also program the GUI independent of the screen's size and resolution. In a diverse and rapidly changing device market, this approach prepares the app for a future filled with Android devices of every conceivable size.
 
-Now that we have an array in which to store our colors, let's talk about its sidekick: [the ```for``` loop.][16]
-Because arrays are equivalent to multiples, the ```for``` loop is typically used to parse the array. It's designed to iterate a defined number of times, here ```num``` times, until it reaches the end of our ```palette```. The init, test, and update conditions in a ```for``` loop are separated by semicolons, here with ```i``` serving as the counter variable.
+Now that we have an array in which to store our colors, let's talk about its sidekick: [the ```for``` loop.][16] Because arrays are equivalent to multiples, the ```for``` loop is typically used to parse the array. It's designed to iterate a defined number of times, here ```num``` times, until it reaches the end of our ```palette```. The init, test, and update conditions in a ```for``` loop are separated by semicolons, here with ```i``` serving as the counter variable.
 
 When Processing encounters the ```for``` loop, the counter variable is set to the init condition (```i=0```) and then tested (```i<num```);  if the test passes, all statements in the loop are executed. At the end of the loop, the counter variable is updated (```i++```), which here means  incremented by one and then tested again, and if the test passes, all statements in the loop are executed. This continues until the test condition is ```false```, and Processing continues to interpret the statements following the ```for``` loop.
 
