@@ -39,3 +39,11 @@ In this chapter, we will work mostly with the accelerometer sensor and use the *
 [3]: http://developer.android.com/guide/topics/sensors/sensors_motion.html
 [4]: http://developer.android.com/guide/topics/sensors/sensors_position.html
 [5]: http://developer.android.com/guide/topics/sensors/sensors_environment.html
+
+###Motion Sensors
+
+The following sensors let you monitor the motion of the device:
+
+* **Accelerometer (hardware)** Determines the orientation of the device as well as its acceleration in three-dimensional space, which we'll use to detect shakes
+* **Gravity (software-based)** Calculates the orientation of the device, returning a three-dimensional vector indicating the direction and magnitude of gravity
+* **Gyroscope (hardware)** Measures the movement of the device, returning the rate of rotation around each device axis—if available, this sensor is often used for games that rely on immediate and precise responses to device movement.
