@@ -286,3 +286,51 @@ Please keep in mind that features that rely on built-in sensor hardware cannot b
 [13]: http://code.google.com/p/openintents/downloads/list.
 
 
+###Build a Motion-Based Color Mixer and Palette
+
+<!-- Not seeing section from PDF in the .pml
+Simulating Sensors in the Emulator - p3.0.pdf page 53 -->
+
+We're going to build a color mixer that generates hues by mapping the orientation of an Android device relative to its *x*-, *y*-, and *z*-axes to the *R*, *G*, and *B* values of a ```color``` variable. We've already discussed the Processing ```color``` type in <!--ref linkend="sec.color.type" -->. When the sketch is complete, as shown in <!--ref linkend="fig.color.mixer" -->, you'll be able to create every hue available to your device by rotating it in three-dimensional space.
+
+In <!--ref linkend="sec.shake" -->, we'll add a feature that lets you erase the stored colors by shaking the device. The color mixer will help us to get a better sense of the Processing ```color``` type and the value ranges of the accelerometer motion sensor, and it will provide us with a good foundation for working within the device coordinate system.
+
+###Mix a Color
+
+Now let's move ahead and connect the accelerometer to change color hues. Since we successfully registered the accelerometer earlier, we can now take the <!--ref linkend="code.accelerometer" -->, to the next level for our color mixer project. The global variables ```accelerometerX```, ```accelerometerY```, and ```accelerometerZ``` keep track of raw values already, and it's a small step now to tie color values to device orientation. Earlier we observed magnitude values roughly in the range of ```-10``` and ```10``` for each axis. We can now map these raw values to the RGB color spectrum in the default target range of ```0..255```. For that, we use the handy ```map()``` method, which takes one number range (in this case, incoming values of ```-10..10```), and maps it onto another (our target of ```0..255```):
+
+Here's a description of ```map()``` parameters. Once we've learned how to use it, we'll find ourselves using it all the time:
+
+```
+map(value, low1, high1, low2, high2)
+```
+
+* *```value```* Incoming value to be converted
+* *```low1```* Lower bound of the value's current range
+* *```high1```* Upper bound of the value's current range
+* *```low2```* Lower bound of the value's target range
+* *```high2```* Upper bound of the value's target range
+
+Now let's use ```map()``` to assign accelerometer values to the three values of an RGB color, and let's use ```background()``` to display the result, as shown in <!--ref linkend="fig.accelerometer.color"-->.
+
+###Mapping accelerometer values to RGB color
+
+Accelerometer values for each axis in the range of ```-10..10``` are mapped to about 50 percent red, 50 percent green, and 100 percent blue values, resulting in a purple background.
+
+<!-- imagedata fileref="images/Sensors/AccelerometerColor.png" width="40%" -->
+
+We need to add the accelerometer bounds for each axis and ```map()``` the values to three variables, called ```r```, ```g```, and ```b```. Add the code snippet below to the <!--ref linkend="code.accelerometer"-->, at the beginning of ```draw()``` and adjust the ```background()``` method:
+
+```
+float r = map(accelerometerX, -10, 10, 0, 255);
+float g = map(accelerometerY, -10, 10, 0, 255);
+float b = map(accelerometerZ, -10, 10, 0, 255);
+background(r, g, b);
+```
+The three color variables (```r```, ```g```, and ```b```) now translate sensor values in the range of ```-10..10``` to color values of ```0..255```. The sketch then looks something like <!--ref linkend="fig.accelerometer.color" -->.
+
+<!-- code id="code.accelrometer.color" file="code/Sensors/AccelerometerColor/AccelerometerColor.pde" language="java" start="import" end="end"-->
+
+With this small addition, let's run the sketch on the device.
+
+###Run the App
