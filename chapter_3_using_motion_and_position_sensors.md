@@ -147,19 +147,19 @@ As you start adding methods from the Ketai library to the sketch, note that cont
 Here's the code we'll typically use to interact with a device using the classes and methods that the Ketai library provides:
 
 ```
-import ketai.sensors.*;	//<callout id="co.import"/>
-KetaiSensor sensor;	//<callout id="co.type"/>
+import ketai.sensors.*;	// 1 id="co.import"/>
+KetaiSensor sensor;	// 2
 
 void setup()
 {
-sensor = new KetaiSensor(this);	// 1
-sensor.start();	// 2
+sensor = new KetaiSensor(this);	// 3
+sensor.start();	// 4
 }
 
 void draw()
 {
 }
-void onAccelerometerEvent(float x, float y, float z)// 3
+void onAccelerometerEvent(float x, float y, float z) // 5
 {
 }
 ```
