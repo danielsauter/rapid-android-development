@@ -175,3 +175,9 @@ Let's take a look at the code that is specific to ```KetaiSensor```.
 Sensor values change at a different rate than the ```draw()``` method does. By default,  ```draw()``` runs ```60``` times per second. The sensor can report much faster than that rate, which is why we work with an ```onAccelerometerEvent()``` callback method. It is called every time we receive a new value from the accelerometer.
 
 Different devices use different accelerometers. Some contain hardware filters that stop reporting values altogether when the device is absolutely still. Others might be more accurate—or noisy—and keep reporting even when the device is seemingly still. Accelerometers are sensitive to the smallest motion. Let's take a look at the raw values such a device will display.
+
+###Display Values from the Accelerometer
+
+Using the Ketai library, let's see what the accelerometer has to report. The accelerometer is the most common sensor found in mobile devices and is designed to detect device acceleration and its orientation toward g-force. It returns the *x*-, *y*-, and *z*-axes of the device, measured in meters per second squared. These axes are *not* swapped when the app's screen orientation changes.
+
+The accelerometer sensor's shortcomings are related to the fact that it cannot distinguish between rotation and movement. For instance, moving the device back and forth on a flat table and rotating it about its axes can produce identical accelerometer values. To differentiate between movement and rotation, we require an additional sensor, the gyroscope, which we'll also use in <ref linkend="chp.mobile.3d" />. When we want to find out how the device is oriented with respect to gravity, however, the accelerometer is the only sensor that can help us.
