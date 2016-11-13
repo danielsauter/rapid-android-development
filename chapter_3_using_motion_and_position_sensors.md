@@ -253,3 +253,28 @@ Run the sketch on the device, and you should see output similar to this:
 
 <!-- figure id="fig.output.multiple.sensors" -->
 
+###Using multiple Android sensors
+
+The image shows the accelerometer, magnetic field, light, and proximity sensor output.
+
+<!-- imagedata fileref="images/Sensors/MultipleSensors.png" width="90%" -->
+
+Move and rotate the device to see how sensor values change. The proximity sensor is located on the Android next to the speaker and is typically used to detect whether the device is held against or away from the ear. It returns values in centimeters, and you can use your hand to play with the returned proximity values. Depending on your Android make and model, you get a ```0``` if you are close to the device and either a ```1``` or a ```5``` if you are more than 1 or 5 centimeters away. Current proximity sensors are not accurate enough to use as a measuring tool just yet.
+
+Tapping the screen calls the ```stop()``` method and stops all the sensors. If the app doesn't require sensor updates all the time, stopping sensors is a good way to save some battery power.
+
+Your sensor list <!-- ref linkend="code.sensor.list" --> might have already shown that your Android has a gyroscope built in. If not, Ketai will report, "Disabling ```onGyroscopeSensorEvent()``` because of an error" in the console.
+
+To work with the gyro as well, add the following code snippet to the sketch <!--ref linkend="code.multiple.sensors" -->, add a global ```rotation``` variable of type ```PVector```, and rerun the app on the device:
+
+```
+void onGyroscopeEvent(float x, float y, float z) {
+rotation.x = x;
+rotation.y = y;
+rotation.z = z;
+}
+```
+
+If you have a gyro, you are all set for <!--ref linkend="chp.mobile.3d" -->, where we use it to navigate a 3D environment. No worries though if your device doesn't support it. There are plenty of motion-based apps we'll develop based on the accelerometer, and there are numerous other projects to discover in this book that don't require the gyro.
+
+Let's now move on to the main chapter project and use what we've learned so far to build an app that combines what we know about the accelerometer with the support the Processing language provides for working with colors.
