@@ -171,3 +171,7 @@ Let's take a look at the code that is specific to ```KetaiSensor```.
 3. Instantiate the ```KetaiSensor``` class to create a ```sensor``` object, which makes ```KetaiSensor``` methods available.
 4. Start listening for accelerometer sensor events.
 5. Each time the accelerometer changes value, receive a callback for the *x*, *y*, and *z* sensor axes.
+
+Sensor values change at a different rate than the ```draw()``` method does. By default,  ```draw()``` runs ```60``` times per second. The sensor can report much faster than that rate, which is why we work with an ```onAccelerometerEvent()``` callback method. It is called every time we receive a new value from the accelerometer.
+
+Different devices use different accelerometers. Some contain hardware filters that stop reporting values altogether when the device is absolutely still. Others might be more accurate—or noisy—and keep reporting even when the device is seemingly still. Accelerometers are sensitive to the smallest motion. Let's take a look at the raw values such a device will display.
