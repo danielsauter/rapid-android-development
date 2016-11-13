@@ -47,3 +47,10 @@ The following sensors let you monitor the motion of the device:
 * **Accelerometer (hardware)** Determines the orientation of the device as well as its acceleration in three-dimensional space, which we'll use to detect shakes
 * **Gravity (software-based)** Calculates the orientation of the device, returning a three-dimensional vector indicating the direction and magnitude of gravity
 * **Gyroscope (hardware)** Measures the movement of the device, returning the rate of rotation around each device axis—if available, this sensor is often used for games that rely on immediate and precise responses to device movement.
+* **Linear Acceleration (software-based)** Calculates the movement of the device, returning a three-dimensional vector that indicates the acceleration of each device axis, excluding gravity
+* **Rotation Vector (software-based)** Calculates the orientation of the device, returning an angle and an axis—it can simplify calculations for 3D apps, providing a rotation angle combined with a rotation axis around which the device rotated.
+
+Now let's take a look at the sensors that deal with the device's position.
+
+###Position Sensors
+
