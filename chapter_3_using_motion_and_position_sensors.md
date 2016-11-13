@@ -215,3 +215,7 @@ We format the numbers via ```nfp()```, a method that helps us to maintain two di
 In case you didn't already run the sketch in anticipation, now is the time. Remember that the shortcut for Run on Device is ⌘R.
 
 Try placing your device in different positions and observe the acceleration due to gravity reported for each axis. If you lay your Android device flat on a table, for example, the *z*-axis will report an acceleration of approximately ```+9.81``` m/s<sup>2</sup>. When you hold it vertically in a reading position, notice how the acceleration due to gravity shifts to the *y*-axis. The screen output is similar to <!--ref linkend="fig.output.accelerometer" -->. Tiny movements of the device trigger very observable changes in value, which are reported back to us via ```onAccelerometerEvent()```.
+
+Let's now see how a sketch would look using multiple sensors.
+
+###Display Values from Multiple Sensors
