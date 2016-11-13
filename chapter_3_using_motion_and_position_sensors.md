@@ -253,7 +253,7 @@ Run the sketch on the device, and you should see output similar to this:
 
 ![](images/sensors/MultipleSensorsNexus6-sm.png)
 
-#####Using multiple Android sensors
+#####Figure 1 — Using multiple Android sensors
 ######The image shows the accelerometer, magnetic field, light, and proximity sensor output.
 
 
