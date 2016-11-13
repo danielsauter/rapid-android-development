@@ -191,3 +191,18 @@ The picture shows the acceleration of the *x*-, *y*-, and *z*-axes of the device
 <!-- imagedata fileref="images/Sensors/AccelerometerOutput.png" width="40%" -->
 
 Now let's dive into the code.
+
+<!-- code id="code.accelerometer" file="code/Sensors/Accelerometer/Accelerometer.pde"
+language="java" start="import" end="end"-->
+
+Let's take a closer look at the Processing methods we've used for the first time.
+
+1. Align the text to the ```CENTER``` of the screen using [```textAlign()```.][7]
+2. Set the text size to ```72``` using [```textSize()```.][8] The default text size is tiny and hard to decipher in motion.
+3. Display the data using [```text()```.][9] We output a series of strings tied together via the plus sign (```+```), known as the concatenation operator. This way we can use only one text method to display all the labels and reformatted values we need.
+
+Acceleration values are measured in m/s<sup>2</sup>. If the device is sitting *flat* and *still* on the table, the accelerometer reads a magnitude of ```+9.81``` m/s<sup>2</sup>. This number represents the acceleration needed to hold the device up against  g-force and the result of the following calculation: acceleration of the device (```0``` m/s<sup>2</sup>) minus the acceleration due to gravity (```-9.81``` m/s<sup>2</sup>).
+
+[7]: http://processing.org/reference/textAlign_.html
+[8]: http://processing.org/reference/textSize_.html
+[9]: http://processing.org/reference/text_.html
