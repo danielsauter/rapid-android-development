@@ -311,11 +311,10 @@ map(value, low1, high1, low2, high2)
 
 Now let's use ```map()``` to assign accelerometer values to the three values of an RGB color, and let's use ```background()``` to display the result, as shown in <!--ref linkend="fig.accelerometer.color"-->.
 
-###Mapping accelerometer values to RGB color
+![](images/sensors/AccelerometerColor-sm.png)
+#####Mapping accelerometer values to RGB color
+######Accelerometer values for each axis in the range of ```-10..10``` are mapped to about 50 percent red, 50 percent green, and 100 percent blue values, resulting in a purple background.
 
-Accelerometer values for each axis in the range of ```-10..10``` are mapped to about 50 percent red, 50 percent green, and 100 percent blue values, resulting in a purple background.
-
-<!-- imagedata fileref="images/Sensors/AccelerometerColor.png" width="40%" -->
 
 We need to add the accelerometer bounds for each axis and ```map()``` the values to three variables, called ```r```, ```g```, and ```b```. Add the code snippet below to the <!--ref linkend="code.accelerometer"-->, at the beginning of ```draw()``` and adjust the ```background()``` method:
 
