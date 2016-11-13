@@ -251,13 +251,11 @@ Let's take a look to see if all the sensors return values.
 
 Run the sketch on the device, and you should see output similar to this:
 
-<!-- figure id="fig.output.multiple.sensors" -->
+![](images/sensors/MultipleSensorsNexus6-sm.png)
 
-###Using multiple Android sensors
+#####Using multiple Android sensors
+######The image shows the accelerometer, magnetic field, light, and proximity sensor output.
 
-The image shows the accelerometer, magnetic field, light, and proximity sensor output.
-
-<!-- imagedata fileref="images/Sensors/MultipleSensors.png" width="90%" -->
 
 Move and rotate the device to see how sensor values change. The proximity sensor is located on the Android next to the speaker and is typically used to detect whether the device is held against or away from the ear. It returns values in centimeters, and you can use your hand to play with the returned proximity values. Depending on your Android make and model, you get a ```0``` if you are close to the device and either a ```1``` or a ```5``` if you are more than 1 or 5 centimeters away. Current proximity sensors are not accurate enough to use as a measuring tool just yet.
 
