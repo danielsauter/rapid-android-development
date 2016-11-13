@@ -236,3 +236,13 @@ To create a sketch using multiple sensors, we follow these steps:
 language="java" start="import" end="end"/ -->
 
 Let's take a closer look at the different event methods.
+
+1. Rotate the screen [```orientation()```.][12]
+2. Measure the strength of the ambient magnetic field in microteslas along the *x*-, *y*-, and *z*-axes.
+3. Capture the light intensity, measured in lux ambient illumination.
+4. Measure the distance between the device display and an object (ear, hand, and so on). Some proximity sensors support only near (```1```) or far (```0```) measurements.
+5. Tap on the touch screen to invoke the ```start()``` and ```stop()``` methods for the sensors on the device. This will start and stop all sensors here, as all of them are registered with the same ```sensor``` object.
+
+Let's take a look to see if all the sensors return values.
+
+[12]: http://android.processing.org/reference/environment/orientation.html
