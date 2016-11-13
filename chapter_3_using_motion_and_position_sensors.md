@@ -80,3 +80,8 @@ Let's start by looking at the ```KetaiSensor``` class, which we'll use when we w
 ####Working with the KetaiSensor Class
 
 For the sketches we'll write in this chapter, the following ```KetaiSensor``` methods are the most relevant:
+
+* *```list()```* Returns a list of available sensors on the device
+
+* *```onAccelerometerEvent()```* 	Returns *x*-, *y*-, and *z*-axis acceleration minus g-force in meters per second squared (m/s<sup>2</sup>)
+
