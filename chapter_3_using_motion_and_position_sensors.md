@@ -336,3 +336,7 @@ With this small addition, let's run the sketch on the device.
 ###Run the App
 
 When you run the sketch on the device, notice how the ```background()``` changes when you tilt or shake it. You are starting to use sketches and ideas from previous sections and reuse them in new contexts. The translation from raw sensor values into a color mixer project is not a big step. To understand how the accelerometer responds to your movement, it is a bit more intuitive to observe color changes displayed on the Android screen rather than fast-changing floating point values.
+
+Now look more closely at the display as you rotate the device. Notice how the red value is linked to rotation around the *x*-axis, green to the *y*-axis, and blue to the *z*-axis. This helps us figure out how the Android coordinate system is aligned with the actual device. The coordinate system does *not* reconfigure when the screen orientation switches from ```PORTRAIT``` to ```LANDSCAPE```. This is why we locked the app into ```orientation(PORTRAIT)```. We don't have to maintain the one-to-one relationship between the device coordinate system and the Processing coordinate system, but we'd sure have a harder time learning about it.
+
+Let's now figure out how to save the colors we generate.
