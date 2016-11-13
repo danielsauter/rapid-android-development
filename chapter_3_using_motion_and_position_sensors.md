@@ -164,3 +164,7 @@ import ketai.sensors.*;	//<callout id="co.import"/>
 			}
 ```
 
+Let's take a look at the code that is specific to ```KetaiSensor```. 
+
+1. Import the Ketai sensor library package from ```Sketchbook/libraries```.
+
