@@ -201,8 +201,17 @@ Let's take a closer look at the Processing methods we've used for the first time
 2. Set the text size to ```72``` using [```textSize()```.][8] The default text size is tiny and hard to decipher in motion.
 3. Display the data using [```text()```.][9] We output a series of strings tied together via the plus sign (```+```), known as the concatenation operator. This way we can use only one text method to display all the labels and reformatted values we need.
 
-Acceleration values are measured in m/s<sup>2</sup>. If the device is sitting *flat* and *still* on the table, the accelerometer reads a magnitude of ```+9.81``` m/s<sup>2</sup>. This number represents the acceleration needed to hold the device up against  g-force and the result of the following calculation: acceleration of the device (```0``` m/s<sup>2</sup>) minus the acceleration due to gravity (```-9.81``` m/s<sup>2</sup>).
+Acceleration values are measured in m/s<sup>2</sup>. If the device is sitting *flat* and *still* on the table, the accelerometer reads a magnitude of ```+9.81``` m/s<sup>2</sup>. This number represents the acceleration needed to hold the device up against  g-force and the result of the following calculation: acceleration of the device (```0``` m/s<sup>2</sup>) minus the acceleration due to gravity [(```-9.81``` m/s<sup>2</sup>).][10] If we move and rotate the device, we can observe values in the range of roughly ```-10``` to ```10``` m/s<sup>2</sup>. Shake the device and the values will surge momentarily to maybe ```+-20``` m/s<sup>2</sup>. Values beyond that become tricky to observe; feel free to try.
+
+We format the numbers via ```nfp()```, a method that helps us to maintain two digits to the left and three digits to the right of the decimal point. This way, values we observe don't jump around as much. The "p" in ```nfp()``` puts a "+" in front of positive accelerometer values and a "-" in front of negative values, helping us to understand the device orientation better with regard to the accelerometer's nomenclature.
 
 [7]: http://processing.org/reference/textAlign_.html
 [8]: http://processing.org/reference/textSize_.html
 [9]: http://processing.org/reference/text_.html
+[10]: http://en.wikipedia.org/wiki/G-force
+
+###Run the App
+
+In case you didn't already run the sketch in anticipation, now is the time. Remember that the shortcut for Run on Device is ⌘R.
+
+Try placing your device in different positions and observe the acceleration due to gravity reported for each axis. If you lay your Android device flat on a table, for example, the *z*-axis will report an acceleration of approximately ```+9.81``` m/s<sup>2</sup>. When you hold it vertically in a reading position, notice how the acceleration due to gravity shifts to the *y*-axis. The screen output is similar to <!--ref linkend="fig.output.accelerometer" -->. Tiny movements of the device trigger very observable changes in value, which are reported back to us via ```onAccelerometerEvent()```.
