@@ -70,3 +70,13 @@ The following sensors let you monitor environmental properties or measure the de
 * **Pressure** Senses the air pressure (the atmospheric pressure)
 * **Relative Humidity** Senses the humidity of the air (in percent)
 * **Temperature** Senses the ambient air temperature
+
+Since this list will grow and remain a moving target as new generations of devices and APIs are released, the [Android Sensor website][6] is the best source for keeping an eye on changes and additions.
+
+Let's start by looking at the ```KetaiSensor``` class, which we'll use when we work with sensors throughout the book.
+
+[6]: http://developer.android.com/reference/android/hardware/Sensor.html
+
+####Working with the KetaiSensor Class
+
+For the sketches we'll write in this chapter, the following ```KetaiSensor``` methods are the most relevant:
