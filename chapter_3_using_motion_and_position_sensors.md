@@ -281,4 +281,8 @@ Let's now move on to the main chapter project and use what we've learned so far 
 
 ###Simulating Sensors in the Emulator
 
+Please keep in mind that features that rely on built-in sensor hardware cannot be emulated on the desktop computer. Because the emulator doesn't have a built-in accelerometer, for example, it can only give you a default value. The emulator does a good job of showing us whether the Processing sketch is compiling happily, but we can't get to an actual user experience. If you'd like to explore further how the emulator can be fed with "simulated" sensor values, you need to download [additional software.][13]
+
+[13]: http://code.google.com/p/openintents/downloads/list.
+
 
