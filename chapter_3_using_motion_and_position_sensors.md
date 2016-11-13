@@ -425,4 +425,14 @@ Let's take a look at the main additions to the sketch.
 9. Increment the index number, moving on to the next position in the list.
 10. Reset the index when the ```palette``` is full.
 
+Let's run the sketch now.
+
 [17]: http://processing.org/reference/round_.html
+
+###Run the App
+
+On the device, we can tap the screen and the color swatches on the bottom of the screen update to the current color we've mixed by moving the device. If we fill all the swatches, it continues again at the beginning of the buffer. This is because we are setting  ```paletteIndex``` back to ```0``` when the array reaches its end.
+
+Building on the code we've previously developed, we've compiled a number of features into a color mixer prototype. This iterative process is typical when building software. We take small and manageable steps, test/run frequently, and make sure we have always saved a stable version of the code we are working with. This is good practice so that we can always have a fallback version if we get stuck or called away.
+
+Now that we've used the accelerometer to mix and save colors, we've also established that device motion is a UI feature that allows us to interact with the app. We can now continue to build on device motion and add a shake to clear all swatches in the palette. How can we detect a shake?
