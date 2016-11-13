@@ -187,3 +187,7 @@ Let's add some code to output raw accelerometer values onto the screen. We're ai
 ###Accelerometer output
 
 The picture shows the acceleration of the *x*-, *y*-, and *z*-axes of the device in relation to g-force.
+
+<!-- imagedata fileref="images/Sensors/AccelerometerOutput.png" width="40%" -->
+
+Now let's dive into the code.
