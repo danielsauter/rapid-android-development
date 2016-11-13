@@ -278,3 +278,7 @@ rotation.z = z;
 If you have a gyro, you are all set for <!--ref linkend="chp.mobile.3d" -->, where we use it to navigate a 3D environment. No worries though if your device doesn't support it. There are plenty of motion-based apps we'll develop based on the accelerometer, and there are numerous other projects to discover in this book that don't require the gyro.
 
 Let's now move on to the main chapter project and use what we've learned so far to build an app that combines what we know about the accelerometer with the support the Processing language provides for working with colors.
+
+###Simulating Sensors in the Emulator
+
+
