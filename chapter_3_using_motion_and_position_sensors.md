@@ -360,3 +360,69 @@ Let's also display the individual values that correspond to the red, green, and 
 <!-- code id="code.accelrometer.color.picker" file="code/Sensors/AccelerometerColorPicker/AccelerometerColorPicker.pde" language="java" start="import" end="end" -->
 
 Let's take a second look at the methods we've added.
+
+1. Declare the variable ```swatch``` to be of type ```color```.
+2. Apply the swatch color to the ```fill()``` before drawing the color picker rectangle.
+3. Draw the color picker rectangle.
+4. Extract the red, green, and blue values individually from the ```swatch``` color.
+5. Update the ```swatch``` color.
+
+Let's test the app.
+
+###Run the App
+
+Tapping the top half of the screen stores the current ```swatch``` color, which appears as a strip of color on the bottom half of the screen. The numeric color values displayed as text on the bottom of the screen are taken directly from the ```swatch``` variable.
+
+The sequence of events can be summarized as follows: We receive the accelerometer values from the hardware sensor and remap them into color values that we then display via the ```background()``` method in real time. When we tap the screen and pick a color, all three color values are stored in ```swatch```. The numeric color value displayed as text is derived directly from the ```swatch``` color by using [Processing's ```red()```][14], ```green()```, and ```blue()``` extraction methods, grabbing each value from ```swatch``` individually.
+
+Clearly, though, storing one color is not enough. We've organized the screen and code so we can handle multiple colors, so let's take it a step further. We want to store multiple colors in such a way that we can recall them later individually. To implement this effectively, we need a color array.
+
+[14]: http://processing.org/reference/red_.html
+
+###Build a Palette of Colors
+
+In this section, we'll build a palette of colors using a list of colors, or a color [array,][15] as illustrated in <!--ref linkend="fig.color.mixer" -->. When you see a color you like, you'll be able to store it as one of eight swatches on the screen. In our example, we are dealing with a color array and we want to store a list of colors in a ```palette[]``` array. Each data/color entry in the list is identified by an index number that represents the position in the array. The first element is identified by the index number, ```[0]```; the second element, ```[1]```; and the last element, ```palette.length-1```. We need to define the array ```length``` when we create the array.
+
+ArrayList is an alternative here because it is able to store a varying number of objects. It's great, but it has a steeper learning curve. More info is available at http://processing.org/reference/ArrayList.html.
+
+[15]: http://processing.org/reference/Array.html
+
+###Color mixer app
+
+The image shows the color determined by the device orientation on the top half of the screen and the palette of saved colors at the bottom.
+
+<!-- imagedata fileref="images/Sensors/ColorPicker.png" width="40%" -->
+
+We can create arrays of any data type, for example ```int[]```, ```String[]```, ```float[]```, and ```boolean[]```. For a color array that stores up to, let's say, eight colors, we need to change the ```swatch``` variable from the previous <!--ref linkend="code.accelrometer.color.picker" -->, into this:
+
+```
+color[] palette = new color[8];
+```
+
+As a result, we can then store eight colors sequentially within the ```palette``` array. This touches on a prime programming principle: build the code to be as adaptable and versatile as possible. In our case, we want the app to work with any number of colors, not just eight. So we need to aim at more (```n```) colors and introduce a ```num``` variable that can be set to the amount we want to work with (```8```). Sure, the UI might not adapt as neatly if we set ```num``` to ```100```, for example. But the code should be able to handle it without breaking. With adaptability in mind, we also program the GUI independent of the screen's size and resolution. In a diverse and rapidly changing device market, this approach prepares the app for a future filled with Android devices of every conceivable size.
+
+Now that we have an array in which to store our colors, let's talk about its sidekick: [the ```for``` loop.][16]
+Because arrays are equivalent to multiples, the ```for``` loop is typically used to parse the array. It's designed to iterate a defined number of times, here ```num``` times, until it reaches the end of our ```palette```. The init, test, and update conditions in a ```for``` loop are separated by semicolons, here with ```i``` serving as the counter variable.
+
+When Processing encounters the ```for``` loop, the counter variable is set to the init condition (```i=0```) and then tested (```i<num```);  if the test passes, all statements in the loop are executed. At the end of the loop, the counter variable is updated (```i++```), which here means  incremented by one and then tested again, and if the test passes, all statements in the loop are executed. This continues until the test condition is ```false```, and Processing continues to interpret the statements following the ```for``` loop.
+
+Let's now put this into the context of our color mixer sketch.
+
+[16]: http://processing.org/reference/for.html
+
+<!-- code id="code.accelrometer.color.picker.array" file="code/Sensors/AccelerometerColorPickerArray/AccelerometerColorPickerArray.pde" language="java" start="import" end="end" -->
+
+Let's take a look at the main additions to the sketch.
+
+1. Set the quantity of colors to be stored to ```8```.
+2. Set up the color [array][15] to hold the previously defined number of colors.
+3. Set an index variable that indicates the current color we are working with in the palette, represented by the index number in the color array.
+4. [Round][17] the floating point value of the color value to an integer so we can read it better.
+5. Iterate through the color array using a [```for```][16] loop.
+6. Step through all the colors in the list using the ```for``` loop, and set the fill color for the rectangle to be drawn.
+7. Display each color in the array with a rectangle set to the individual fill color in the list. Rectangles are displayed in sequence on the bottom of the screen; their width and position is defined by the number of colors in the list. The rectangle size is determined by the screen width and then divided by the total number of swatches, ```num```.
+8. Assign the three color values to the palette, cast as color type.
+9. Increment the index number, moving on to the next position in the list.
+10. Reset the index when the ```palette``` is full.
+
+[17]: http://processing.org/reference/round_.html
