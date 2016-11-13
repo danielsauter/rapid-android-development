@@ -54,3 +54,5 @@ Now let's take a look at the sensors that deal with the device's position.
 
 ###Position Sensors
 
+The following sensors let you to determine the location or position of the device:
+
