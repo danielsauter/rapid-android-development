@@ -152,6 +152,6 @@ __
 **Associate Professor**<br />
 School of Art, Media, and Technology<br />
 Parsons School of Design<br />
-**daniel@ketai.org • New York City • 2015-03-31**
+**daniel@ketai.org • New York City • 2016-11-18**
 
 
