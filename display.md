@@ -187,12 +187,6 @@ to Control Hues](#use-mouse-speed-to-control-hues).
 
 Now that we've learned about the different ways to assign color values, let's also take a look at the Processing ```color``` type, which Processing provides for the specific purpose of *storing* colors. 
 
-<!-- 2.2 REVISION
-Old link (footnote 12) is dead:
-http://upload.wikimedia.org/wikipedia/commons/1/16/Hsl-hsv_models_b.svg
-Replaced with: https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Hsl-hsv_models_b.svg/1000px-Hsl-hsv_models_b.svg.png
--->
-
 [9]: http://processing.org/reference/hue_.html
 [10]: http://processing.org/reference/brightness_.html
 [11]: http://processing.org/reference/saturation_.html
