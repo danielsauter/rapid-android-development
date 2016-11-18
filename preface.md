@@ -139,9 +139,9 @@ All the code is available online. Feel free to comment and drop some feedback!
 
 ###Online Resources
 
-You can download the complete set of source files from the book's web page at http://pragprog.com/titles/dsproc/source_code. The compressed file available online contains all the media assets you need organized by chapter directories and individual projects. If you’re reading the ebook, you can also open the discussed source code just by clicking the file path before the code listings.
+You can download the complete set of source files from the book's web page at http://mobileprocessing.org/code.
 
-The online forum for the book, located at http://forums.pragprog.com/forums/209, provides a place for feedback, discussion, questions, and–I hope–answers as well. In the ebook, you'll find a link to the forum on every page next to a "report erratum" link that points to http://pragprog.com/titles/dsproc/errata, where you can report errors such as typos, technical errors, and suggestions. Your feedback and suggestions are very much appreciated.
+The online forum for the book, located at https://www.gitbook.com/book/danielsauter/rapid-android-development/discussions, provides a place for feedback, discussion, and errata, and–I hope–answers from readers as well. In the ebook, you'll find a link next to every paragraph to report errors such as typos, technical errors, and suggestions. Your feedback and suggestions are very much appreciated. Please file Ketai library issues at https://github.com/ketai/ketai/issues.
 
 Let's get started! Once we're done installing our software tools in {{ book.chapter1 }}, we are only minutes away from completing our first Android app.
 <br />
