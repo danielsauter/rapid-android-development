@@ -126,13 +126,14 @@ The example code for the projects in this book has been tested on the following 
 <!--missing link for this content: , some shown in ***link>fig.tested.devices***:-->
 
 ![](images/preface/rapid-android-development_p3_0.jpg)
-######Tested Android phones and tablets. Clockwise from top left: ASUS Transformer Prime, Samsung Galaxy SIII, Samsung Nexus S, and Google Nexus 7
+######A selection of tested Android phones and tablets. Clockwise from top left: ASUS Transformer Prime, Samsung Galaxy SIII, Samsung Nexus S, and Google Nexus 7
 <br />
 * **Asus Transformer Prime Tablet with 32 GB memory** <br/ >(Ice Cream Sandwich, Jelly Bean)
 * **Samsung Galaxy SIII** <br />(Ice Cream Sandwich, Jelly Bean, KitKat) 
 * **Samsung Nexus S** <br />(Ice Cream Sandwich, Jelly Bean, KitKat) 
 * **Google Nexus 7 with 8 GB memory**<br /> (Jelly Bean, KitKat)
-* **Google Nexus 6 with 25 GB memory**<br /> (Lollipop)
+* **Google Nexus 6 with 25 GB memory**<br /> (Lollipop, Marshmallow)
+* **LG V10 with 64 GB memory**<br /> (Marshmallow)
 
 All the code is available online. Feel free to comment and drop some feedback! 
 
@@ -148,7 +149,9 @@ Let's get started! Once we're done installing our software tools in {{ book.chap
 <br />
 __
 ####Daniel Sauter
-**Associate Professor,** <br />School of Art, Media, and Technology at Parsons, The New School<br />
+**Associate Professor**<br />
+School of Art, Media, and Technology<br />
+Parsons School of Design<br />
 **daniel@ketai.org • New York City • 2015-03-31**
 
 
