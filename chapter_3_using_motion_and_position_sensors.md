@@ -405,7 +405,7 @@ ArrayList is an alternative here because it is able to store a varying number of
 #####Figure 3.5 — Color mixer app
 ######The image shows the color determined by the device orientation on the top half of the screen and the palette of saved colors at the bottom.
 
-We can create arrays of any data type, for example ```int[]```, ```String[]```, ```float[]```, and ```boolean[]```. For a color array that stores up to, let's say, eight colors, we need to change the ```swatch``` variable from the previous <!--ref linkend="code.accelrometer.color.picker" -->, into this:
+We can create arrays of any data type, for example ```int[]```, ```String[]```, ```float[]```, and ```boolean[]```. For a color array that stores up to, let's say, eight colors, we need to change the ```swatch``` variable from the previous [AccelerometerColorPicker.pde](#sensorsaccelerometercolorpickeraccelerometercolorpickerpde), into this:
 
 ```
 color[] palette = new color[8];
@@ -484,9 +484,9 @@ Let's run the code first and test the shake detection on the device. It helps us
 
 ###Run the App
 
-If we play with the app, we can mix and pick colors as we did previously, as shown in <!--ref linkend="fig.color.mixer" -->. Small wiggles go undetected. As soon as we move the device quickly and a shake is triggered, all color swatches are erased from the palette.
+If we play with the app, we can mix and pick colors as we did previously, as shown in [Figure 3.5](#figure-35-—-color-mixer-app). Small wiggles go undetected. As soon as we move the device quickly and a shake is triggered, all color swatches are erased from the palette.
 
-Let's compare some of the small adjustments we made to the <!--ref linkend="code.color.picker.complete" -->, to the previous <!--ref linkend="code.accelrometer.color.picker.array" -->, and check what we've added. First of all, we eliminated the three floating point variables we had used globally for incoming accelerometer values. Instead, we are using the ```PVector``` variable ```accelerometer``` to do the same job. This means we need to update our ```map()``` method so it uses the vector components ```.x```, ```.y```, and ```.z``` of the ```accelerometer``` vector.
+Let's compare some of the small adjustments we made to [ColorPickerComplete.pde](#sensorscolorpickercompletecolorpickercompletepde), to the previous [AccelerometerColorPickerArray.pde](#sensorsaccelerometercolorpickerarrayaccelerometercolorpickerarraypde), and check what we've added. First of all, we eliminated the three floating point variables we had used globally for incoming accelerometer values. Instead, we are using the ```PVector``` variable ```accelerometer``` to do the same job. This means we need to update our ```map()``` method so it uses the vector components ```.x```, ```.y```, and ```.z``` of the ```accelerometer``` vector.
 
 We use the same approach for the ```onAccelerometerEvent()``` method, where incoming values are now assigned to individual vector components.
 To assign all three components at once to a vector, we can also use the ```set()``` method, as illustrated with ```pAccelerometer``` at the very end of ```draw()```.
