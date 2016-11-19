@@ -90,7 +90,8 @@ Since you've launched the application for the first time, Processing has just cr
 
 The toolbar on top of the sketch window contains the key features of the IDE, with a Run button to launch and a Stop button to stop your apps. You can find a more detailed description of the sketchbook and the IDE in the [Processing Development Environment tutorial][10] on the Processing website.
 
-<!-- 1.3 NOTE This was in the .pml file, but is not in the PDF. 
+<!-- 1.3 NOTE 
+This was in the .pml file, but is not in the PDF. 
 * *Java mode* Run button in sketch window
 * *Android mode* Run button in sketch window
 * *Android mode* Export button in sketch window
@@ -162,7 +163,9 @@ Go ahead and type this into the text editor, as illustrated below:
 <a name="processing_ide_basicdrawing-sm">
 ![](images/gettingStarted/Processing_IDE_basicDrawing-sm.png)
 </a>
-<!-- 1.5 UPDATE: Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
+<!-- 1.5 UPDATE: 
+Orignal image too large. 
+Image compressed via Photoshop 'Save For Web' -->
 
 We want the position of the ellipse to follow the mouse, and for this we need to know where it's located at any given moment. Processing stores this information in two system defined variables: ```mouseX``` and ```mouseY```. The pair returns the ```x``` and ```y``` coordinates of the mouse in pixels relative to the origin of the display window, not the computer screen. In Processing, the origin of the display window (```[0, 0]```) is located at the upper left corner of the device window; ```[width-1, height-1]``` is located at the lower right.
 
@@ -213,7 +216,10 @@ Sketch launched on the emulator.
 <!-- 1.6 NOTE: not sure if it matters, but SDK has to be properly initialized for this to work (the app itself has to be opened and it has to go through it's wizard). This was a sticking point for me. -->
 ![](images/gettingStarted/BasicDrawingEmulatorAndDevice-sm.png)
 <!--Compressed Image -->
-<!-- 1.7 NOTE: sketch appears as small square on the screen, not full screen as shown in Figure 3 -->
+<!-- 1.7 NOTE: 
+sketch appears as small square on the screen, 
+not full screen as shown in Figure 3 -->
+
 #####Figure 3 — Running the drawing sketch in Android mode. 
 ######We can run a sketch in either the Android emulator installed on our desktop computer (left) or directly on the Android device (right).
 
