@@ -182,11 +182,11 @@ Using the Ketai library, let's see what the accelerometer has to report. The acc
 
 The accelerometer sensor's shortcomings are related to the fact that it cannot distinguish between rotation and movement. For instance, moving the device back and forth on a flat table and rotating it about its axes can produce identical accelerometer values. To differentiate between movement and rotation, we require an additional sensor, the gyroscope, which we'll also use in {{ book.chapter11 }}. When we want to find out how the device is oriented with respect to gravity, however, the accelerometer is the only sensor that can help us.
 
-Let's add some code to output raw accelerometer values onto the screen. We're aiming for the result shown in [Figure 6, Accelerometer output](). We use the ```text()``` method and some formatting to display accelerometer values. As we move the device, it will also come in handy to lock the screen orientation so we can keep an eye on the quickly changing values. Because we only need to set the screen ```orientation(PORTRAIT)``` once at startup, the method goes into ```setup()```.
+Let's add some code to output raw accelerometer values onto the screen. We're aiming for the result shown in Figure 6, Accelerometer output. We use the ```text()``` method and some formatting to display accelerometer values. As we move the device, it will also come in handy to lock the screen orientation so we can keep an eye on the quickly changing values. Because we only need to set the screen ```orientation(PORTRAIT)``` once at startup, the method goes into ```setup()```.
 
 
 ![](images/sensors/AccelerometerOutputNexus6-sm.png)
-#####Accelerometer output
+#####Figure 1 — Accelerometer output
 ######The picture shows the acceleration of the *x*-, *y*-, and *z*-axes of the device in relation to g-force.
 
 Now let's dive into the code.
@@ -250,7 +250,7 @@ Run the sketch on the device, and you should see output similar to this:
 
 ![](images/sensors/MultipleSensorsNexus6-sm.png)
 
-#####Figure 1 — Using multiple Android sensors
+#####Figure 2 — Using multiple Android sensors
 ######The image shows the accelerometer, magnetic field, light, and proximity sensor output.
 
 
@@ -309,7 +309,7 @@ map(value, low1, high1, low2, high2)
 Now let's use ```map()``` to assign accelerometer values to the three values of an RGB color, and let's use ```background()``` to display the result, as shown in <!--ref linkend="fig.accelerometer.color"-->.
 
 ![](images/sensors/AccelerometerColor-sm.png)
-#####Figure 2 — Mapping accelerometer values to RGB color
+#####Figure 3 — Mapping accelerometer values to RGB color
 ######Accelerometer values for each axis in the range of ```-10..10``` are mapped to about 50 percent red, 50 percent green, and 100 percent blue values, resulting in a purple background.
 
 
@@ -343,7 +343,7 @@ To implement the color picker, let's rework our <!--ref linkend="code.accelerome
 
 ![](images/sensors/AccelerometerColorPicker-sm.png)
 
-#####Saving a color swatch
+#####Figure 4 — Saving a color swatch
 ######The image shows a color picked from all the possible hues Android can generate, stored in a color swatch.
 
 Let's also display the individual values that correspond to the red, green, and blue variables as text using the ```red()```, ```green()```, and ```blue()``` methods to extract color values from the ```swatch``` color variable.
