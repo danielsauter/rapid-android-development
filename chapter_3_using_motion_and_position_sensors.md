@@ -461,6 +461,7 @@ We are using the [```PVector``` class][18] again to store three variables in one
 
 Processing provides a few very useful vector math methods, including [```angleInBetween(vector1, vector2)```][19], to calculate the angle between two given vectors. So if we compare the current accelerometer vector with the vector of the previous frame, we can now determine their difference in angle, summarized into a single numeric value. Because this value describes angular change, we use a threshold to trigger the shake. For now, let's say this threshold angle should be ```45``` degrees. Alternatively, we could use the ```mag()``` method to detect a sudden change to the [vector's magnitude.][20] We'll work with the change to the vector angle in this example. OK, let's put it together.
 
+#####Sensors/ColorPickerComplete/ColorPickerComplete.pde
 [include](code/sensors/ColorPickerComplete.pde)
 
 Here's how we proceed to implement the shake detection using ```PVector```.
