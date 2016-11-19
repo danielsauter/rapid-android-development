@@ -290,8 +290,11 @@ Please keep in mind that features that rely on built-in sensor hardware cannot b
 
 ###Build a Motion-Based Color Mixer and Palette
 
-<!-- Not seeing section from PDF in the .pml
-Simulating Sensors in the Emulator - p3.0.pdf page 53 -->
+<!-- 3.2 QUESTION - 
+Not seeing section from PDF in the .pml
+Simulating Sensors in the Emulator - p3.0.pdf page 53
+Should we include?
+-->
 
 We're going to build a color mixer that generates hues by mapping the orientation of an Android device relative to its *x*-, *y*-, and *z*-axes to the *R*, *G*, and *B* values of a ```color``` variable. We've already discussed the Processing ```color``` type in <!--ref linkend="sec.color.type" -->. When the sketch is complete, as shown in <!--ref linkend="fig.color.mixer" -->, you'll be able to create every hue available to your device by rotating it in three-dimensional space.
 
