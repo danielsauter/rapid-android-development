@@ -226,6 +226,7 @@ We have only two modifications to make using the [code from chapter 1](../gettin
 
 Let's take a look at the project code. 
 
+#####Display/MouseSpeedHue/MouseSpeedHue.pde
 [include](code/display/MouseSpeedHue.pde)
 
 Here are the modifications we've made.
@@ -389,6 +390,7 @@ Like our first project in this chapter, in which we used Processing's ```mousePr
 
 Now let's take a look at our multitouch code.
 
+#####Display/Gestures/Gestures.pde
 [include](code/display/gestures.pde)
 <!-- code id="code.gestures" file="code/Display/Gestures/Gestures.pde" language="java" start="import" end="eof"-->
 
