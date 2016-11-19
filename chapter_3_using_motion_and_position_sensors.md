@@ -341,8 +341,9 @@ float g = map(accelerometerY, -10, 10, 0, 255);
 float b = map(accelerometerZ, -10, 10, 0, 255);
 background(r, g, b);
 ```
-The three color variables (```r```, ```g```, and ```b```) now translate sensor values in the range of ```-10..10``` to color values of ```0..255```. The sketch then looks something like <!--ref linkend="fig.accelerometer.color" -->.
+The three color variables (```r```, ```g```, and ```b```) now translate sensor values in the range of ```-10..10``` to color values of ```0..255```. The sketch then looks something like Figure 3.3.
 
+#####Sensors/AccelerometerColor/AccelerometerColor.pde
 [include](code/sensors/AccelerometerColor.pde)
 
 With this small addition, let's run the sketch on the device.
