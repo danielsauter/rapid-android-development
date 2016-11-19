@@ -217,7 +217,7 @@ Now that we've learned about the different color modes, methods, and types avail
 Now let's explore the HSB mode on the device touch screen display. By adding ```colorMode()``` to our sketch, we switch the color mode, and by modifying our ```fill()``` method to work with HSB values, we change our app from grayscale to shades of color. Here's the result:
 
 ![](images/display/MouseSpeed-sm.png)
-#####Figure 4 — Using mouse speed to control color. 
+#####Figure 2.1 — Using mouse speed to control color. 
 ######The hue of the ellipses changes depending on how fast you move your finger across the touch screen surface. Slow movements result in greenish, medium in blueish, and fast movements in reddish values.
 
 In this project, we'll keep the screen ```orientation()``` flexible, which is the default setting for our Processing apps, and we don't have to set anything to make the app change orientation when we hold the device upright or sideways. This means it will change orientation when the built-in device accelerometer sensor decides that the app should adapt to the particular orientation at that moment. When such an orientation change occurs, our ```setup()``` method will be called again, reinitializing the sketch and executing all the statements we've included in ```setup()```. Because we set the screen to black, erasing its contents using the ```background(0)``` method, a change in the app's orientation will reset the ```background()``` to black, erasing all the ellipses we've drawn prior to changing the orientation.
@@ -365,7 +365,7 @@ Let's build an app that puts ```KetaiGesture```'s multitouch methods to use.
 For this project, we'll implement the most common user interactions using just one simple geometric primitive—a rectangle—drawn on the screen using Processing's [```rect(x, y, width, height)``` method.][26] To begin, we'll place a rectangle in a specified size of ```100``` pixels in the center of the screen. Then we use a series of ```KetaiGesture``` callback events to trigger changes to the rectangle, including a change of scale, rotation, color, and position, as illustrated in <!--ref linkend="fig.display.gestures" -->.
 
 ![](images/display/DisplayGestureFinger.png)
-#####Figure 6 — Using multitouch gestures. 
+#####Figure 2.2 — Using multitouch gestures. 
 ######The illustration shows a rectangle scaled with a two-finger pinch gesture, turned by a two-finger rotation gesture, placed on a brown background color, and triggered by a flick, as well as a gray fill color caused by a long press. The text "DOUBLE" appears due to a double-tap gesture at the position indicated by the hand silhouette.
 
 We have a number of callback events for the touch surface to try out, so we'll assign each of them with a particular purpose. We'll zoom to fit the rectangle onto the screen using ```onDoubleTap()```, randomly change its fill color ```onLongPress()``` using [Processing's ```random()``` method,][27] cale it ```onPinch()```, rotate it ```onRotate()```, drag it using ```mouseDragged()```, and change the background color ```onFlick()```. Besides manipulating color properties and the rectangle, we'll keep track of the multitouch events as they occur by printing a text string to the Processing Console. The code we use to manipulate the properties and the callback methods themselves are not complicated in any way, but we're now dealing with a bit more code than we have before because we're using a series of callback methods in one sketch.
