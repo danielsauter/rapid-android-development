@@ -296,7 +296,7 @@ Simulating Sensors in the Emulator - p3.0.pdf page 53
 Should we include?
 -->
 
-We're going to build a color mixer that generates hues by mapping the orientation of an Android device relative to its *x*-, *y*-, and *z*-axes to the *R*, *G*, and *B* values of a ```color``` variable. We've already discussed the Processing ```color``` type in <!--ref linkend="sec.color.type" -->. When the sketch is complete, as shown in <!--ref linkend="fig.color.mixer" -->, you'll be able to create every hue available to your device by rotating it in three-dimensional space.
+We're going to build a color mixer that generates hues by mapping the orientation of an Android device relative to its *x*-, *y*-, and *z*-axes to the *R*, *G*, and *B* values of a ```color``` variable. We've already discussed the Processing ```color``` type in [Using the Color Type](#using-the-color-type). When the sketch is complete, as shown in <!--ref linkend="fig.color.mixer" -->, you'll be able to create every hue available to your device by rotating it in three-dimensional space.
 
 In <!--ref linkend="sec.shake" -->, we'll add a feature that lets you erase the stored colors by shaking the device. The color mixer will help us to get a better sense of the Processing ```color``` type and the value ranges of the accelerometer motion sensor, and it will provide us with a good foundation for working within the device coordinate system.
 
