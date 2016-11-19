@@ -258,9 +258,16 @@ Move and rotate the device to see how sensor values change. The proximity sensor
 
 Tapping the screen calls the ```stop()``` method and stops all the sensors. If the app doesn't require sensor updates all the time, stopping sensors is a good way to save some battery power.
 
-Your sensor list <!-- ref linkend="code.sensor.list" --> might have already shown that your Android has a gyroscope built in. If not, Ketai will report, "Disabling ```onGyroscopeSensorEvent()``` because of an error" in the console.
+[Your sensor list](#list-the-built-in-sensors-on-an-android-device) might have already shown that your Android has a gyroscope built in. If not, Ketai will report, "Disabling ```onGyroscopeSensorEvent()``` because of an error" in the console.
 
-To work with the gyro as well, add the following code snippet to the sketch <!--ref linkend="code.multiple.sensors" -->, add a global ```rotation``` variable of type ```PVector```, and rerun the app on the device:
+To work with the gyro as well, add the following code snippet to the [sketch above](#display-values-from-multiple-sensors), add a global ```rotation``` variable of type ```PVector```, and rerun the app on the device:
+
+<!-- 
+3.1 NOTE: 
+wording adjusted slightly to not 
+reference pages on 'Your sensor list' 
+link and 'sketch above' link 
+-->
 
 ```
 void onGyroscopeEvent(float x, float y, float z) {
@@ -270,7 +277,7 @@ rotation.z = z;
 }
 ```
 
-If you have a gyro, you are all set for <!--ref linkend="chp.mobile.3d" -->, where we use it to navigate a 3D environment. No worries though if your device doesn't support it. There are plenty of motion-based apps we'll develop based on the accelerometer, and there are numerous other projects to discover in this book that don't require the gyro.
+If you have a gyro, you are all set for {{ book.chapter11 }}, where we use it to navigate a 3D environment. No worries though if your device doesn't support it. There are plenty of motion-based apps we'll develop based on the accelerometer, and there are numerous other projects to discover in this book that don't require the gyro.
 
 Let's now move on to the main chapter project and use what we've learned so far to build an app that combines what we know about the accelerometer with the support the Processing language provides for working with colors.
 
