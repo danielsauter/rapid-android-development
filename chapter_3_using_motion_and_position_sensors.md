@@ -302,9 +302,13 @@ In [Erase a Palette with a Shake](#erase-a-palette-with-a-shake), we'll add a fe
 
 ###Mix a Color
 
-Now let's move ahead and connect the accelerometer to change color hues. Since we successfully registered the accelerometer earlier, we can now take the <!--ref linkend="code.accelerometer" -->, to the next level for our color mixer project. The global variables ```accelerometerX```, ```accelerometerY```, and ```accelerometerZ``` keep track of raw values already, and it's a small step now to tie color values to device orientation. Earlier we observed magnitude values roughly in the range of ```-10``` and ```10``` for each axis. We can now map these raw values to the RGB color spectrum in the default target range of ```0..255```. For that, we use the handy ```map()``` method, which takes one number range (in this case, incoming values of ```-10..10```), and maps it onto another (our target of ```0..255```):
+Now let's move ahead and connect the accelerometer to change color hues. Since we successfully registered the accelerometer earlier, we can now take the [code above](figure-31-—-accelerometer-output) to the next level for our color mixer project. The global variables ```accelerometerX```, ```accelerometerY```, and ```accelerometerZ``` keep track of raw values already, and it's a small step now to tie color values to device orientation. Earlier we observed magnitude values roughly in the range of ```-10``` and ```10``` for each axis. We can now map these raw values to the RGB color spectrum in the default target range of ```0..255```. For that, we use the handy ```map()``` method, which takes one number range (in this case, incoming values of ```-10..10```), and maps it onto another (our target of ```0..255```):
 
 Here's a description of ```map()``` parameters. Once we've learned how to use it, we'll find ourselves using it all the time:
+
+<!-- 3.3 NOTE - 
+Quick edits to re-title links ('image here', 'code above') without page numbers
+-->
 
 ```
 map(value, low1, high1, low2, high2)
