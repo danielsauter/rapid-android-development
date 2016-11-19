@@ -79,7 +79,7 @@ Go ahead and launch Processing from the applications directory. The Processing I
 ![](images/gettingStarted/Processing_IDE.png)
 <!-- 1.15 UPDATE: Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
 
-#####Figure 1 — The Processing IDE. 
+#####Figure 1.1 — The Processing IDE. 
 ######We edit Processing code directly within the Processing IDE sketch window, as shown here.
 
 Since you've launched the application for the first time, Processing has just created a sketchbook folder for you, which is located in ```Documents``` on the hard drive, independent of the OS you are developing on. I recommend you save all your sketches to this location. Then Processing can list them for you within the IDE (click the "Open..." toolbar button). Also, when you update to future versions of Processing, the sketchbook loads up exactly the same way as before.
@@ -143,7 +143,7 @@ Let's now say "Hi" to Processing by creating a simple sketch that draws an ellip
 ![](images/gettingStarted/basicDrawing1.png)
 <!-- 1.4 UPDATE: Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
 
-#####Figure 2 — A simple sketch. 
+#####Figure 1.2 — A simple sketch. 
 ######With the ellipse-drawing primitive, Processing can generate dynamic output. On the left is a 100 x 100 pixel window; on the right, a 400 x 400 pixel window.
 
 We use a single drawing primitive for this sketch, the ```ellipse```, also used to draw circles by providing equal width and height for the ellipse. In Processing, an ```ellipse(x, y, width, height)``` [requires four parameters:][13]
@@ -220,7 +220,7 @@ Sketch launched on the emulator.
 sketch appears as small square on the screen, 
 not full screen as shown in Figure 3 -->
 
-#####Figure 3 — Running the drawing sketch in Android mode. 
+#####Figure 1.3 — Running the drawing sketch in Android mode. 
 ######We can run a sketch in either the Android emulator installed on our desktop computer (left) or directly on the Android device (right).
 
 The emulator starts up the Android OS exactly as a device would, just a bit more slowly. Once Android is running, Processing then installs the Android package (```apk```) and launches the sketch. If it takes too long for the emulator to start up, Processing might time out and you might have to relaunch your sketch one more time. The sketch looks identical to the Java mode sketch illustrated in Figure 3, and if you move the mouse in the emulator window, it responds the same way it did in Java mode. The frame rate is noticeably lower, and the screen has a different aspect ratio. In the emulator, the mouse methods are a stand-in for the touch screen interface. Don't close the Android emulator as you keep testing your sketches.
