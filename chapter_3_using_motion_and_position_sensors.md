@@ -358,9 +358,9 @@ Let's now figure out how to save the colors we generate.
 
 ###Save a Color
 
-To save any color that we create by rotating our device about its three axes, we need a container that is good for storing color values. Processing provides us with the ```color``` type, which we looked at briefly in the previous chapter, <!--ref linkend="sec.color.type" -->.
+To save any color that we create by rotating our device about its three axes, we need a container that is good for storing color values. Processing provides us with the ```color``` type, which we looked at briefly in the previous chapter, [Using the Color Type](../display.html/#using-the-color-type).
 
-To implement the color picker, let's rework our <!--ref linkend="code.accelerometer" -->, and add a variable named ```swatch``` to store whatever color we pick when we tap the screen. We can then display the color pick value in an area at the bottom half of the screen, as shown here:
+To implement the color picker, let's rework our [accelerometer code](#sensorsaccelerometeraccelerometerpde), and add a variable named ```swatch``` to store whatever color we pick when we tap the screen. We can then display the color pick value in an area at the bottom half of the screen, as shown here:
 
 ![](images/sensors/AccelerometerColorPicker-sm.png)
 
@@ -369,6 +369,7 @@ To implement the color picker, let's rework our <!--ref linkend="code.accelerome
 
 Let's also display the individual values that correspond to the red, green, and blue variables as text using the ```red()```, ```green()```, and ```blue()``` methods to extract color values from the ```swatch``` color variable.
 
+#####Sensors/AccelerometerColorPicker/AccelerometerColorPicker.pde
 [include](code/sensors/AccelerometerColorPicker.pde)
 
 Let's take a second look at the methods we've added.
