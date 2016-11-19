@@ -394,17 +394,16 @@ Clearly, though, storing one color is not enough. We've organized the screen and
 
 ###Build a Palette of Colors
 
-In this section, we'll build a palette of colors using a list of colors, or a color [array,][15] as illustrated in <!-- ref linkend="fig.color.mixer" -->. When you see a color you like, you'll be able to store it as one of eight swatches on the screen. In our example, we are dealing with a color array and we want to store a list of colors in a ```palette[]``` array. Each data/color entry in the list is identified by an index number that represents the position in the array. The first element is identified by the index number, ```[0]```; the second element, ```[1]```; and the last element, ```palette.length-1```. We need to define the array ```length``` when we create the array.
+In this section, we'll build a palette of colors using a list of colors, or a color [array,][15] as illustrated in Figure 3.5. When you see a color you like, you'll be able to store it as one of eight swatches on the screen. In our example, we are dealing with a color array and we want to store a list of colors in a ```palette[]``` array. Each data/color entry in the list is identified by an index number that represents the position in the array. The first element is identified by the index number, ```[0]```; the second element, ```[1]```; and the last element, ```palette.length-1```. We need to define the array ```length``` when we create the array.
 
 ArrayList is an alternative here because it is able to store a varying number of objects. It's great, but it has a steeper learning curve. More info is available at http://processing.org/reference/ArrayList.html.
 
 [15]: http://processing.org/reference/Array.html
 
-###Color mixer app
-
-The image shows the color determined by the device orientation on the top half of the screen and the palette of saved colors at the bottom.
 
 ![](images/sensors/ColorPicker.png)
+#####Figure 3.5 — Color mixer app
+######The image shows the color determined by the device orientation on the top half of the screen and the palette of saved colors at the bottom.
 
 We can create arrays of any data type, for example ```int[]```, ```String[]```, ```float[]```, and ```boolean[]```. For a color array that stores up to, let's say, eight colors, we need to change the ```swatch``` variable from the previous <!--ref linkend="code.accelrometer.color.picker" -->, into this:
 
