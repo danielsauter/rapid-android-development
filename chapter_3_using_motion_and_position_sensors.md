@@ -184,11 +184,10 @@ The accelerometer sensor's shortcomings are related to the fact that it cannot d
 
 Let's add some code to output raw accelerometer values onto the screen. We're aiming for the result shown in <!--ref linkend="fig.output.accelerometer" /-->. We use the ```text()``` method and some formatting to display accelerometer values. As we move the device, it will also come in handy to lock the screen orientation so we can keep an eye on the quickly changing values. Because we only need to set the screen ```orientation(PORTRAIT)``` once at startup, the method goes into ```setup()```.
 
-###Accelerometer output
-
-The picture shows the acceleration of the *x*-, *y*-, and *z*-axes of the device in relation to g-force.
 
 ![](images/sensors/AccelerometerOutputNexus6-sm.png)
+#####Accelerometer output
+######The picture shows the acceleration of the *x*-, *y*-, and *z*-axes of the device in relation to g-force.
 
 Now let's dive into the code.
 
