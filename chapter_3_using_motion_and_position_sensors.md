@@ -182,7 +182,7 @@ Using the Ketai library, let's see what the accelerometer has to report. The acc
 
 The accelerometer sensor's shortcomings are related to the fact that it cannot distinguish between rotation and movement. For instance, moving the device back and forth on a flat table and rotating it about its axes can produce identical accelerometer values. To differentiate between movement and rotation, we require an additional sensor, the gyroscope, which we'll also use in {{ book.chapter11 }}. When we want to find out how the device is oriented with respect to gravity, however, the accelerometer is the only sensor that can help us.
 
-Let's add some code to output raw accelerometer values onto the screen. We're aiming for the result shown in Figure 6, Accelerometer output. We use the ```text()``` method and some formatting to display accelerometer values. As we move the device, it will also come in handy to lock the screen orientation so we can keep an eye on the quickly changing values. Because we only need to set the screen ```orientation(PORTRAIT)``` once at startup, the method goes into ```setup()```.
+Let's add some code to output raw accelerometer values onto the screen. We're aiming for the result shown in Figure 3.1, Accelerometer output. We use the ```text()``` method and some formatting to display accelerometer values. As we move the device, it will also come in handy to lock the screen orientation so we can keep an eye on the quickly changing values. Because we only need to set the screen ```orientation(PORTRAIT)``` once at startup, the method goes into ```setup()```.
 
 
 ![](images/sensors/AccelerometerOutputNexus6-sm.png)
@@ -212,7 +212,7 @@ We format the numbers via ```nfp()```, a method that helps us to maintain two di
 
 In case you didn't already run the sketch in anticipation, now is the time. Remember that the shortcut for Run on Device is ⌘R.
 
-Try placing your device in different positions and observe the acceleration due to gravity reported for each axis. If you lay your Android device flat on a table, for example, the *z*-axis will report an acceleration of approximately ```+9.81``` m/s<sup>2</sup>. When you hold it vertically in a reading position, notice how the acceleration due to gravity shifts to the *y*-axis. The screen output is similar to <!--ref linkend="fig.output.accelerometer" -->. Tiny movements of the device trigger very observable changes in value, which are reported back to us via ```onAccelerometerEvent()```.
+Try placing your device in different positions and observe the acceleration due to gravity reported for each axis. If you lay your Android device flat on a table, for example, the *z*-axis will report an acceleration of approximately ```+9.81``` m/s<sup>2</sup>. When you hold it vertically in a reading position, notice how the acceleration due to gravity shifts to the *y*-axis. The screen output is similar to Figure 3.1, Accelerometer output. Tiny movements of the device trigger very observable changes in value, which are reported back to us via ```onAccelerometerEvent()```.
 
 Let's now see how a sketch would look using multiple sensors.
 
