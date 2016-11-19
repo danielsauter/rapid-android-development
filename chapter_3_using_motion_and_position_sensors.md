@@ -191,6 +191,7 @@ Let's add some code to output raw accelerometer values onto the screen. We're ai
 
 Now let's dive into the code.
 
+#####Sensors/Accelerometer/Accelerometer.pde
 [include](code/sensors/Accelerometer.pde)
 
 Let's take a closer look at the Processing methods we've used for the first time.
@@ -320,7 +321,12 @@ map(value, low1, high1, low2, high2)
 * *```low2```* Lower bound of the value's target range
 * *```high2```* Upper bound of the value's target range
 
-Now let's use ```map()``` to assign accelerometer values to the three values of an RGB color, and let's use ```background()``` to display the result, as shown in <!--ref linkend="fig.accelerometer.color"-->.
+<!-- 3.4 NOTE - 
+Link to image (following 'as shown in' in .pdf) 
+removed since they are adjacent.
+-->
+
+Now let's use ```map()``` to assign accelerometer values to the three values of an RGB color, and let's use ```background()``` to display the result, as shown in the image below.
 
 ![](images/sensors/AccelerometerColor-sm.png)
 #####Figure 3.3 — Mapping accelerometer values to RGB color
