@@ -421,6 +421,7 @@ Let's now put this into the context of our color mixer sketch.
 
 [16]: http://processing.org/reference/for.html
 
+#####Sensors/AccelerometerColorPickerArray/AccelerometerColorPickerArray.pde
 [include](code/sensors/AccelerometerColorPickerArray.pde)
 
 Let's take a look at the main additions to the sketch.
