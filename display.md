@@ -265,7 +265,7 @@ Now that we've mastered the use of ```color``` in Processing, let's continue our
 
 The [Ketai library for Processing][15] focuses particularly on making it easy to work with the mobile hardware features built into Android phones and tablets. The [term "Ketai"][16] is used in Japan to describe its cell phone culture, enabled by mobile handheld devices. The mobile device translates as Keitai Denwa and literally means "something carried in the hand," or handheld. The Ketai library is free software published under the [GNU General Public License Version 3 (GPL v3),][17] and it is compatible with Android versions 2.3 Gingerbread, 3.0/3.1 Honeycomb, 4.0 Ice Cream Sandwich, 4.1/4.2/4.3 Jelly Bean, 4.4 KitKat, and 5.0 Lollipop. NFC, Wi-Fi Direct, and updated camera features introduced in 4.0 Ice Cream Sandwich are not available in Gingerbread or Honeycomb. Therefore the Ketai library is available as [separate downloads][18] for Gingerbread/Honeycomb and for Ice Cream Sandwich/Jelly Bean. Please refer to [Run a Sketch on an Android Device](../gettingStarted.html#run-a-sketch-on-an-android-device), to find out which version of Android you are running on your device. 
 
-<!-- ISSUE: Check updated link 'run a sketch' once update comes through -->
+<!-- 2.3 ISSUE: Check updated link 'run a sketch' once update comes through -->
 
 Compared to the desktop, the defining feature of a mobile handheld device is that we use it on the go, where we expect cameras, location, and orientation sensors to help us navigate traffic, find relevant locations near by, and snap pictures while we are on the move. We also might be networking with Bluetooth accessories, interacting with products through embedded NFC tags, or paying for  merchandise with our mobile devices. The Ketai library helps us develop apps for all of these scenarios.
 
@@ -283,7 +283,9 @@ Besides their compact form factor, multicore Android phones and tablets are comp
 
 The Ketai library values conciseness and legibility in its syntax and makes hardware features available using just a few lines of code. For example, the simple code we use for our accelerometer project ([code available here](../sensors.html#sensorsaccelerometeraccelerometerpde)) uses less than thirty lines of code altogether, while the Java sample included in the [Android SDK][23] completes the task with more than one hundred lines of code. This ratio increases significantly with more complex subjects such as {{ book.chapter7 }}, and {{ book.chapter8 }}, where Ketai is significantly more concise and easier to understand than the SDK.
 
-Ketai includes a number of classes that make Android hardware sensors and devices available within Processing. The following classes are included in the library, described in more detail in <!--ref linkend="sec.ketai.classes" -->, and explained within the relevant chapters:
+<!-- 2.4 ISSUE: ketai classes link not defined yet; will need to be updated after chapter is added -->
+
+Ketai includes a number of classes that make Android hardware sensors and devices available within Processing. The following classes are included in the library, described in more detail in [ketai classes](), and explained within the relevant chapters:
 
 
 * KetaiSensor
