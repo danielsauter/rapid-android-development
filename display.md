@@ -96,6 +96,8 @@ Because we touched the screen, we first trigger a ```mousePressed()``` event. By
 
 Now that we can now work with the mouse callback methods, we're ready to take a look at the color support that Processing provides, which is one of its strengths. Knowing how to control color values is a fundamental skill that we'll frequently return to as we work with graphics and images throughout the book. We'll come back to the Android touch screen and its multitouch features later in this chapter. 
 
+<!-- 2.1 ISSUE: The canvas(nomenclature?) is taking up a very small section of the screen. The console only returns values if the user starts their touch on the small section that the canvas occupies. -->
+
 ###Using Colors
 
 Any geometric primitive we draw on the screen uses a particular ```fill()``` and ```stroke()``` color. If we don't say otherwise, Processing will default to a black stroke and a white fill color. We can use the ```fill()``` and ```stroke()``` methods to change default values, and we can also use grayscale, RGB, HSB, or hexadecimal color in the Android apps we create. The ```background()``` method uses color in the same way, with the exception that it cannot set a value for opacity, formally known as the alpha value. 
