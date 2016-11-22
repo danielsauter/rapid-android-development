@@ -96,7 +96,15 @@ Because we touched the screen, we first trigger a ```mousePressed()``` event. By
 
 Now that we can now work with the mouse callback methods, we're ready to take a look at the color support that Processing provides, which is one of its strengths. Knowing how to control color values is a fundamental skill that we'll frequently return to as we work with graphics and images throughout the book. We'll come back to the Android touch screen and its multitouch features later in this chapter. 
 
-<!-- 2.1 ISSUE: The canvas(nomenclature?) is taking up a very small section of the screen. The console only returns values if the user starts their touch on the small section that the canvas occupies. -->
+<!-- 2.1 ISSUE: The canvas(nomenclature?) is taking up a very small section of the screen. The console only returns values if the user starts their touch on the small section that the canvas occupies. Adding
+
+void setup ()
+{
+ fullScreen(); 
+}
+
+to the top of the sketch solved this for me, although Ben Fry cautions in his github post about fullScreen that it is not applicable to Android: https://github.com/processing/processing/wiki/Window-Size-and-Full-Screen
+-->
 
 ###Using Colors
 
