@@ -412,7 +412,11 @@ Now let's take a look at our multitouch code.
 
 #####Display/Gestures/Gestures.pde
 [include](code/display/gestures.pde)
-<!-- code id="code.gestures" file="code/Display/Gestures/Gestures.pde" language="java" start="import" end="eof"-->
+
+<!--2.6 NOTE: 
+a. Line 68 returns an alert 'The value of the parameter px is not used' 
+b. also needs 'fullScreen()'
+-->
 
 Let's take a look at the steps we need to take to capture and use multitouch gestures on the Android touch screen.
 
