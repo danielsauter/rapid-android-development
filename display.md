@@ -103,7 +103,7 @@ void setup ()
  fullScreen(); 
 }
 
-to the top of the sketch solved this for me, although Ben Fry cautions in his github post about fullScreen that it is not applicable to Android: https://github.com/processing/processing/wiki/Window-Size-and-Full-Screen
+to the top of the sketch solved this for me, although Ben Fry cautions in his github post about fullScreen that it is not applicable to Android, so I wonder if it's applicable across devices. https://github.com/processing/processing/wiki/Window-Size-and-Full-Screen
 -->
 
 ###Using Colors
