@@ -114,7 +114,7 @@ By default, Processing draws all graphic elements in the RGB (red, green, blue) 
 
 The ```background()``` color of a Processing window cannot be transparent. If you provide an alpha parameter for ```background()```, the method will just ignore its value. Within ```draw()```, the ```background()``` method is used in most cases to clear the display window at the beginning of each frame. The method can also accept an image as a parameter, drawing a background image if the image has the same size as the Processing window. 
 
-Processing provides us with two different color modes that we can switch between using the [```colorMode()``` method.][8] The color mode can be set to RGB or HSB (hue, saturation, brightness), which we'll explore further in [Using HSB Colors](#using-colors). ```colorMode()``` changes the way Processing interprets color values. Both RGB and HSB can handle alpha values to make objects appear transparent.
+Processing provides us with two different color modes that we can switch between using the [```colorMode()``` method.][8] The color mode can be set to RGB or HSB (hue, saturation, brightness), which we'll explore further in [Using HSB Colors](#using-hsb-colors). ```colorMode()``` changes the way Processing interprets color values. Both RGB and HSB can handle alpha values to make objects appear transparent.
 
 We can adjust the value range of the parameters used in ```colorMode()``` as well. For example, white in the default RGB color mode is defined as ```color(255)```. If we change the range to ```colorMode(RGB,1.0)```, white is defined as ```color(1.0)```. 
 
