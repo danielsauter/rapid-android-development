@@ -241,6 +241,8 @@ Let's take a look at the project code.
 #####Display/MouseSpeedHue/MouseSpeedHue.pde
 [include](code/display/MouseSpeedHue.pde)
 
+<!-- 2.2 ISSUE: Same as 2.1. fullscreen() solves. -->
+
 Here are the modifications we've made.
 
 1. Switch the default RGB color mode to HSB using the ```colorMode(HSB, 100, 1, 1)``` method. Set the second parameter for hue to ```100```, allowing for floating point hue values of ```0..100```. Set the third parameter to ```1```, defining the color saturation values for the range ```0..1.0```. Also set the brightness range as ```0..1.0``` in the fourth parameter.
@@ -261,7 +263,7 @@ Now that we've mastered the use of ```color``` in Processing, let's continue our
 
 ###Introducing the Ketai Library
 
-The [Ketai library for Processing][15] focuses particularly on making it easy to work with the mobile hardware features built into Android phones and tablets. The [term "Ketai"][16] is used in Japan to describe its cell phone culture, enabled by mobile handheld devices. The mobile device translates as Keitai Denwa and literally means "something carried in the hand," or handheld. The Ketai library is free software published under the [GNU General Public License Version 3 (GPL v3),][17] and it is compatible with Android versions 2.3 Gingerbread, 3.0/3.1 Honeycomb, 4.0 Ice Cream Sandwich, 4.1/4.2/4.3 Jelly Bean, 4.4 KitKat, and 5.0 Lollipop. NFC, Wi-Fi Direct, and updated camera features introduced in 4.0 Ice Cream Sandwich are not available in Gingerbread or Honeycomb. Therefore the Ketai library is available as [separate downloads][18] for Gingerbread/Honeycomb and for Ice Cream Sandwich/Jelly Bean. Please refer to [Run a Sketch on an Android Device](../gettingStarted#run-a-sketch-on-an-android-device), to find out which version of Android you are running on your device. 
+The [Ketai library for Processing][15] focuses particularly on making it easy to work with the mobile hardware features built into Android phones and tablets. The [term "Ketai"][16] is used in Japan to describe its cell phone culture, enabled by mobile handheld devices. The mobile device translates as Keitai Denwa and literally means "something carried in the hand," or handheld. The Ketai library is free software published under the [GNU General Public License Version 3 (GPL v3),][17] and it is compatible with Android versions 2.3 Gingerbread, 3.0/3.1 Honeycomb, 4.0 Ice Cream Sandwich, 4.1/4.2/4.3 Jelly Bean, 4.4 KitKat, and 5.0 Lollipop. NFC, Wi-Fi Direct, and updated camera features introduced in 4.0 Ice Cream Sandwich are not available in Gingerbread or Honeycomb. Therefore the Ketai library is available as [separate downloads][18] for Gingerbread/Honeycomb and for Ice Cream Sandwich/Jelly Bean. Please refer to [Run a Sketch on an Android Device](../gettingStarted.html#run-a-sketch-on-an-android-device), to find out which version of Android you are running on your device. 
 
 Compared to the desktop, the defining feature of a mobile handheld device is that we use it on the go, where we expect cameras, location, and orientation sensors to help us navigate traffic, find relevant locations near by, and snap pictures while we are on the move. We also might be networking with Bluetooth accessories, interacting with products through embedded NFC tags, or paying for  merchandise with our mobile devices. The Ketai library helps us develop apps for all of these scenarios.
 
