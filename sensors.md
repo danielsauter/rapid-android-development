@@ -268,7 +268,7 @@ Tapping the screen calls the ```stop()``` method and stops all the sensors. If t
 To work with the gyro as well, add the following code snippet to the [sketch above](#display-values-from-multiple-sensors), add a global ```rotation``` variable of type ```PVector```, and rerun the app on the device:
 
 <!-- 
-3.1 NOTE: 
+3.3 NOTE: 
 wording adjusted slightly to not 
 reference pages on 'Your sensor list' 
 link and 'sketch above' link 
@@ -292,16 +292,19 @@ Please keep in mind that features that rely on built-in sensor hardware cannot b
 
 [13]: http://code.google.com/p/openintents/downloads/list.
 
+<!-- 
+3.4 NOTE: Link goes to archived page
+-->
 
 ###Build a Motion-Based Color Mixer and Palette
 
-<!-- 3.2 QUESTION - 
+<!-- 3.5 QUESTION - 
 Not seeing section from PDF in the .pml
 Simulating Sensors in the Emulator - p3.0.pdf page 53
 Should we include?
 -->
 
-We're going to build a color mixer that generates hues by mapping the orientation of an Android device relative to its *x*-, *y*-, and *z*-axes to the *R*, *G*, and *B* values of a ```color``` variable. We've already discussed the Processing ```color``` type in [Using the Color Type](../display.html/#using-the-color-type). When the sketch is complete, as shown in the [image here]((#build-a-palette-of-colors), you'll be able to create every hue available to your device by rotating it in three-dimensional space.
+We're going to build a color mixer that generates hues by mapping the orientation of an Android device relative to its *x*-, *y*-, and *z*-axes to the *R*, *G*, and *B* values of a ```color``` variable. We've already discussed the Processing ```color``` type in [Using the Color Type](../display.html/#using-the-color-type). When the sketch is complete, as shown in the [image here](#build-a-palette-of-colors), you'll be able to create every hue available to your device by rotating it in three-dimensional space.
 
 In [Erase a Palette with a Shake](#erase-a-palette-with-a-shake), we'll add a feature that lets you erase the stored colors by shaking the device. The color mixer will help us to get a better sense of the Processing ```color``` type and the value ranges of the accelerometer motion sensor, and it will provide us with a good foundation for working within the device coordinate system.
 
