@@ -58,7 +58,7 @@ The following sensors let you to determine the location or position of the devic
 
 * **Magnetic Field** A three-axis digital compass that senses the bearing of the device relative to magnetic north
 
-* **Proximity** Senses the distance to an object measured from the sensor that is mounted in close proximity to the device speaker&emdash;this is commonly used to determine if the device is held toward, or removed from, the ear.
+* **Proximity** Senses the distance to an object measured from the sensor that is mounted in close proximity to the device speaker—this is commonly used to determine if the device is held toward, or removed from, the ear.
 
 Now let's take a look at the sensors that measure the device's environment.
 
