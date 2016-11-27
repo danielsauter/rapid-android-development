@@ -89,7 +89,7 @@ For the sketches we'll write in this chapter, the following ```KetaiSensor``` me
 
 * *```onLightEvent()```* Returns the light level in SI units of lux
 
-* *```onProximityEvent()```* Returns the distance to an object measured from the device surface in centimeters&emdash;depending on the device, a typical output is ```0/1``` or ```0/5```—the sensor is typically located next to the speaker on the device. 
+* *```onProximityEvent()```* Returns the distance to an object measured from the device surface in centimeters—depending on the device, a typical output is ```0/1``` or ```0/5```—the sensor is typically located next to the speaker on the device. 
 
 * *```onGyroscopeEvent()```* Returns the *x*, *y*, and *z* rates of rotation around the *x*-, *y*-, and *z*-axes in degrees
 
@@ -193,6 +193,8 @@ Now let's dive into the code.
 
 #####Sensors/Accelerometer/Accelerometer.pde
 [include](code/sensors/Accelerometer.pde)
+
+<!--NOTE 3.1 needed fullScreen() in setup to run as pictured-->
 
 Let's take a closer look at the Processing methods we've used for the first time.
 
