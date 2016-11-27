@@ -380,6 +380,7 @@ Let's also display the individual values that correspond to the red, green, and 
 
 #####Sensors/AccelerometerColorPicker/AccelerometerColorPicker.pde
 [include](code/sensors/AccelerometerColorPicker.pde)
+<!-- 3.9 NOTE - fullScreen() -->
 
 Let's take a second look at the methods we've added.
 
