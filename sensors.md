@@ -235,6 +235,7 @@ To create a sketch using multiple sensors, we follow these steps:
 
 #####sensors/MultipleSensors.pde
 [include](code/sensors/MultipleSensors.pde)
+<!--NOTE 3.2 needed fullScreen() in setup to run as pictured-->
 
 Let's take a closer look at the different event methods.
 
