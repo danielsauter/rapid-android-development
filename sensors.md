@@ -233,6 +233,7 @@ For this sketch, let's lock the screen ```orientation()``` into ```LANDSCAPE``` 
 
 To create a sketch using multiple sensors, we follow these steps:
 
+#####sensors/MultipleSensors.pde
 [include](code/sensors/MultipleSensors.pde)
 
 Let's take a closer look at the different event methods.
