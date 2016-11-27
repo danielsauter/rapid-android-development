@@ -314,7 +314,7 @@ Now let's move ahead and connect the accelerometer to change color hues. Since w
 
 Here's a description of ```map()``` parameters. Once we've learned how to use it, we'll find ourselves using it all the time:
 
-<!-- 3.3 NOTE - 
+<!-- 3.6 NOTE - 
 Quick edits to re-title links ('image here', 'code above') without page numbers
 -->
 
@@ -328,7 +328,7 @@ map(value, low1, high1, low2, high2)
 * *```low2```* Lower bound of the value's target range
 * *```high2```* Upper bound of the value's target range
 
-<!-- 3.4 NOTE - 
+<!-- 3.7 NOTE - 
 Link to image (following 'as shown in' in .pdf) 
 removed since they are adjacent.
 -->
@@ -352,6 +352,8 @@ The three color variables (```r```, ```g```, and ```b```) now translate sensor v
 
 #####Sensors/AccelerometerColor/AccelerometerColor.pde
 [include](code/sensors/AccelerometerColor.pde)
+
+<!-- 3.8 NOTE - fullScreen() -->
 
 With this small addition, let's run the sketch on the device.
 
