@@ -340,7 +340,7 @@ Now let's use ```map()``` to assign accelerometer values to the three values of 
 ######Accelerometer values for each axis in the range of ```-10..10``` are mapped to about 50 percent red, 50 percent green, and 100 percent blue values, resulting in a purple background.
 
 
-We need to add the accelerometer bounds for each axis and ```map()``` the values to three variables, called ```r```, ```g```, and ```b```. Add the code snippet below to the <!--ref linkend="code.accelerometer"-->, at the beginning of ```draw()``` and adjust the ```background()``` method:
+We need to add the accelerometer bounds for each axis and ```map()``` the values to three variables, called ```r```, ```g```, and ```b```. Add the code snippet below to the Accelerometer.pde, at the beginning of ```draw()``` and adjust the ```background()``` method:
 
 ```
 float r = map(accelerometerX, -10, 10, 0, 255);
