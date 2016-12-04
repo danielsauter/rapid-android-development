@@ -49,6 +49,11 @@ Now let's take a look at the ```KetaiLocation``` methods we'll be using in this 
 [8]: http://ketai.org/reference/sensors/ketailocation
 [9]: http://developer.android.com/reference/android/location/Location.html
 
-###Introducing GPS
-
-
+<div class="box">
+<h3>Introducing GPS</h3>
+<p>
+The transmitters built into GPS satellites broadcast with about 50 watts, similar to the light bulb in a desk lamp, and yet the GPS module in the phone is able receive a sequence of numbers sent by all the satellites simultaneously, every microsecond. The atomic clock in each satellite takes care of that. The satellite doesn't know anything about us; it's only transmitting. The receiver in our mobile device makes sense of the transmission by deciphering the sequence of numbers the satellite sends. The GPS receiver then determines from the number sequence (which includes the time it was sent by the satellite) how far each individual radio signal has travelled, using the speed of light as its velocity. If a satellite is close by (about 20,000 kilometers), the signal would take about 67 microseconds to travel. The distance is measured by multiplying the time it has taken the radio signal to reach your phone by the speed of light.
+</p><p>
+We need to "see" at least four satellites to determine latitude, longitude, and altitude (or three if we assume an incorrect altitude of zero). It's clear that a 50-watt signal from 20,000 kilometers away cannot penetrate buildings. We can only "see" satellites if there are no obstructions. If the signal bounces off a building surface, the estimate is less accurate as a consequence. Because the satellite orbits are arranged so that there are at always six within the line of sight, it's fine if one or two are not "seen" or are inaccurate. Accuracy is higher for military  receivers getting a signal every tenth of a microsecond, bringing it theoretically down to 0.3 meters (or about 1 ft). High-end receivers used for survey and measurement can increase accuracy even more—to within about 2 mm.
+</p>
+</div>
