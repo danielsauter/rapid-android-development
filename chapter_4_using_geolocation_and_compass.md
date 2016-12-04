@@ -31,7 +31,7 @@ The most notorious case was [Google's now abandoned effort][7] to associate GPS 
 
 Nowadays, we're the ones who do this work for Google whenever we take an Android device for a stroll. If we have activated Google's location service by selecting Settings &mapsto; "Location services" on the main menu of our device, then by default we have agreed to "collect anonymous location data" and that "collection may occur even when no apps are running." The MAC addresses of available Wi-Fi networks are sent to Google during this collection process, along with their geographic coordinates. The next user who walks through the same geographic area can then geolocate solely via the Wi-Fi network information, even if GPS is turned off.
 
-It takes a few seconds for the Android to narrow the location estimate and improve its accuracy, so we typically need to start ```KetaiLocation``` as soon as the app launches. With fewer than ten lines of code, ```KetaiLocation``` can provide us with our geographic coordinates and notify us of changes in our location via the <method>onLocationEvent</method> callback method.
+It takes a few seconds for the Android to narrow the location estimate and improve its accuracy, so we typically need to start ```KetaiLocation``` as soon as the app launches. With fewer than ten lines of code, ```KetaiLocation``` can provide us with our geographic coordinates and notify us of changes in our location via the ```onLocationEvent``` callback method.
 
 For the location-based apps we'll develop in this chapter, we'll use the following Ketai library and Android classes:
 
