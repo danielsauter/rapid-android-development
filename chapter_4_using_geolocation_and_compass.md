@@ -1,2 +1,4 @@
-# Chapter 4: Using Geolocation and Compass
+###Chapter 4:
+#Using Geolocation and Compass
+
 
