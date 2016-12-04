@@ -229,3 +229,46 @@ Go back to the geolocation you've previously noted via Google Maps. Use this loc
 Rerun the sketch on the device, and notice how the ```distance``` has changed. You should be able to confirm the distance to the landmark you've Googled using this app.
 
 Now that you know how to calculate the distance between two points, you're ready to use some additional Android ```Location``` methods to determine the bearing and speed of an Android phone or tablet when it's in motion. We'll take a look at that topic in the next section.
+
+###Determine the Speed and Bearing of a Moving Device
+
+To determine the speed and bearing of a device, three other useful Android ```Location``` methods can be applied in ways that are similar to what we did with ```distanceTo()```. Let's create a new sketch and focus for a moment on travel speed and bearing.
+
+We've mastered latitude, longitude, and altitude and calculated the distance between two points. The next step is to determine where we are heading and how fast we are going. Because these parameters are only fun to test while we are on the move, let's create a simple new sketch that focuses on speed and bearing. Then we'll bring it all together in the next section, <!-- ref linkend="sec.destination.finder-->.
+
+Let's take a look.
+
+<!-- code/Geolocation/LocationSpeed/LocationSpeed.pde -->
+
+Here are the two new Android ```Location``` methods we are using for this sketch.
+
+1. Get the current travel speed using the Android ```Location``` method ```getSpeed()```, which returns the speed of the device over ground in meters per second.
+2. Get the current device bearing using the Android ```Location``` method ```getBearing()```, which returns the direction of travel in degrees.
+
+Let's run the sketch and get ready to go outside.
+
+###Run the App
+
+Run the sketch on the device and take the Android for a little trip—again, the app can only give us reasonable feedback when we're on the move. The ```onLocationEvent()``` method returns a ```Location``` object containing speed and bearing info, which we extract using the ```getSpeed()``` method and the ```getBearing()``` method. The numeric feedback we receive on speed and bearing is useful for the navigation apps we write. If we want to calculate bearing toward a fixed destination instead of magnetic north, however, we should use the [```bearingTo()``` method][27] instead of ```getBearing()```.
+
+We'll look at ```bearingTo()``` in the next section, where we'll build on a destination finder app.
+
+[27]:http://developer.android.com/reference/android/location/Location.html#bearingTo%28android.location.Location%29
+
+###Find Your Way to a Destination
+
+If we are heading toward a destination and want to use our Android device like a compass to guide us there, we need to calculate the angle toward the destination relative to our location. And to make it at all useful, we also need to consider the direction the device is "looking" relative to geographic north. When used together, these two numbers can then successfully point us to where we want to go. We'll build on the <!-- ref linkend="code.location.distance-->, and add a simple triangle to our user interface that points toward our destination no matter which way the device itself is facing.
+
+The core idea here is that we'll calculate the ```bearing``` and then use it to rotate a graphic object, a triangle, which will serve as our compass needle. The rotation of our graphic object and text will be performed by moving the triangle to the center of the screen using ```translate()```. Then we'll ```rotate()``` the compass needle by the angle resulting from the difference of the device orientation toward north and the calculated ```bearing``` toward the destination. We'll calculate the ```bearing``` using the ```bearingTo()``` method, which returns values ranging ```-180..180``` measured from true north—the shortest path between our device location and the destination.
+
+Then we'll draw the triangle and the text showing the distance to the destination in meters and miles. We convert the ```distance``` from the default measurement unit returned by the Android, meters, into miles by multiplying ```distance``` by ```0.000621371192```. Because ```bearing``` is measured in degrees and so is the compass azimuth, we'll need to convert it into ```radians()``` first before performing the rotation. Degree values range ```0..360``` degrees and radians range [```0..``````TW0_PI```.][28] All trigonometric methods in Processing require parameters to be specified in radians.
+
+We'll use the ```PVector``` class we've already used earlier so we can keep the code concise and don't use more variables than we need.  For numeric feedback, we use the ```mousePressed()``` method to display the location values and the bearing we'll calculate.
+
+Let's build.
+
+[28]:http://processing.org/reference/TWO_PI.html
+
+<!--code id="code.destination.compass" file="code/Geolocation/DestinationCompass/DestinationCompass.pde" /-->
+
+Let's take a look at the code additions.
