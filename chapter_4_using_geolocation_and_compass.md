@@ -92,14 +92,31 @@ If we'd like to use the device's location data, we need to ask for permission. A
 
 As illustrated in <!-- ref linkend="fig.sketch.permissions-->, the location permissions need to be set for this app. When we run the sketch on the device and Processing compiles the Android package, it generates a so-called ```AndroidManifest.xml``` file that corresponds to our permission settings. We don't need to worry much about the details of [```AndroidManifest.xml```;][12] owever, as follows, we can see how Processing's Permissions Selector translates our selection into a user-permissions list.
 
-[10]: http://developer.android.com/guide/topics/security/security.html#permissions
-[11]: http://www.nytimes.com/2012/04/01/us/police-tracking-of-cellphones-raises-privacy-fears.html
-[12]: http://developer.android.com/guide/topics/manifest/manifest-intro.html
+<!--code id="code.android.manifest" file="code/Geolocation/Geolocation/AndroidManifest.xml" language="java"/-->
 
 <!-- IMAGE -->
 #####Figure 4.1 — Sketch permissions.
 ######The Android Permissions Selector lists all permissions that can be requested by the Android app. The location permissions required by the first geolocation app are checked.
 
+To make sure our location app is able to work with location data, we need to enable Google's location service on the device under Settings &mapsto; "Location" and agree to the prompt, shown here:
 
+```
+Let Google's location service help apps determine location.
+This means sending anonymous location data to Google,
+even when no apps are running.
+```
 
+Otherwise our app will will display the following warning:
+
+```
+Location data is unavailable. Please check your location settings.
+```
+
+We've programmed this warning into our sketch, assuming that ```getProvider()``` returns ```none```, which is also the case if Google's location service is switched off.
+
+Let's go ahead and write our first location-based app.
+
+[10]: http://developer.android.com/guide/topics/security/security.html#permissions
+[11]: http://www.nytimes.com/2012/04/01/us/police-tracking-of-cellphones-raises-privacy-fears.html
+[12]: http://developer.android.com/guide/topics/manifest/manifest-intro.html
 
