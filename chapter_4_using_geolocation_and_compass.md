@@ -120,3 +120,6 @@ Let's go ahead and write our first location-based app.
 [11]: http://www.nytimes.com/2012/04/01/us/police-tracking-of-cellphones-raises-privacy-fears.html
 [12]: http://developer.android.com/guide/topics/manifest/manifest-intro.html
 
+###Determine Your Location
+
+
