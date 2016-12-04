@@ -101,3 +101,5 @@ As illustrated in <!-- ref linkend="fig.sketch.permissions-->, the location perm
 ######The Android Permissions Selector lists all permissions that can be requested by the Android app. The location permissions required by the first geolocation app are checked.
 
 
+
+
