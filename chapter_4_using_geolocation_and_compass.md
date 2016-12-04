@@ -181,4 +181,22 @@ Now let's work on the next project, where we'll put ```Location``` methods to wo
 
 ###Determine the Distance Between Two Locations
 
-In this project, we'll calculate the distance between our current device location and another fixed location that we predetermine.
+In this project, we'll calculate the distance between our current device location and [another fixed location][21] that we predetermine. We provide the fixed location coordinate through latitude and longitude decimal degree values. To get a better idea about what those values represent, let's first obtain the latitude and longitude values of our current geographic location via [Google Maps.][22]
+
+Browse Google Maps on your desktop, and find a location close to a landmark you recognize and know your approximate distance to. Now right-click anywhere close to that landmark on the map. From the menu, choose "Directions to here." You need to be zoomed in all the way so Maps doesn't grab the close-by landmark and display only the landmark's name instead of the latitude and longitude. If you hit a non-landmark spot, Maps will display the ```lat``` and ```lon``` values of the location inside the site's destination field. My current location in Brooklyn, for instance, looks like this:
+
+```
+40.67937996,-73.9377679
+```
+
+Write down your location—we'll use it in the next project. If you use the format shown above, ```lat,lon``` (latitude comma longitude), Google Maps will understand and take you to this location. This approach is a quick and easy way to double-check a location when you want to test a location app.
+
+Now let's create a sketch to determine the distance between a fixed point and the device, as shown in <!-- ref linkend="fig.location.distance-->.
+
+<!-- IMAGE -->
+
+#####Figure 4.3 — Calculating distance.
+######
+
+[21]: http://en.wikipedia.org/wiki/Wikipedia:Obtaining_geographic_coordinates
+[22]:http://maps.google.com
