@@ -269,6 +269,7 @@ Let's build.
 
 [28]:http://processing.org/reference/TWO_PI.html
 
+#####Geolocation/DestinationCompass/DestinationCompass.pde
 <!--code id="code.destination.compass" file="code/Geolocation/DestinationCompass/DestinationCompass.pde" /-->
 
 Let's take a look at the code additions.
