@@ -96,6 +96,8 @@ As illustrated in <!-- ref linkend="fig.sketch.permissions-->, the location perm
 [11]: http://www.nytimes.com/2012/04/01/us/police-tracking-of-cellphones-raises-privacy-fears.html
 [12]: http://developer.android.com/guide/topics/manifest/manifest-intro.html
 
+<!-- IMAGE -->
 #####Figure 4.1 — Sketch permissions.
 ######The Android Permissions Selector lists all permissions that can be requested by the Android app. The location permissions required by the first geolocation app are checked.
+
 
