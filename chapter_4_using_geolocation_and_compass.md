@@ -58,3 +58,8 @@ We need to "see" at least four satellites to determine latitude, longitude, and 
 </p>
 </div>
 
+###Working with the KetaiLocation Class
+
+The ```KetaiLocation``` class is designed to provide us with the longitude, latitude, and altitude of the device, as well as the accuracy of that estimate. Besides the typical ```start()``` and ```stop()``` methods, ```KetaiLocation``` also provides a method to identify the location provider that has been used to calculate the estimate. Let's take a look.
+
+```onLocationEvent()```
