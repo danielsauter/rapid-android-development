@@ -151,3 +151,7 @@ With the location service turned on, let's run the sketch on our device. Type or
 Next, let's disconnect the phone and take it for a little walk. Step outside your building. Watch for a location update and a change in provider.
 
 Great—now head back inside. Take a peek again at your latitude and longitude coordinates, and double-check the location accuracy in Google Maps, as described. How far off are you? If you walk a block, you will be able to observe a change to the third digit after the decimal in either the latitude or longitude, depending on where you are headed. The seemingly small change in this digit represents about 200 feet, which brings us to our next application.
+
+###Working with the Location Class
+
+The event method ```onLocationEvent()``` we worked with earlier returns the latitude, longitude, altitude, and accuracy of the device location—or alternatively, an Android ```Location``` object. If we look at the ```onLocationEvent()``` method in more detail, we can use it with the following sets of parameters:
