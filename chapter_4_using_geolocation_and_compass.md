@@ -193,10 +193,39 @@ Write down your location—we'll use it in the next project. If you use the form
 
 Now let's create a sketch to determine the distance between a fixed point and the device, as shown in <!-- ref linkend="fig.location.distance-->.
 
-<!-- IMAGE -->
+<!-- images/Geolocation/LocationDistance.png -->
 
 #####Figure 4.3 — Calculating distance.
-######
+######The screen output shows the device's current location, the calculated distance to the predefined ```bam``` destination, and the current location provider.
+
+We'll use both the ```KetaiLocation``` and Android's ```Location``` classes. ```KetaiLocation``` provides us with the current device latitude and longitude, ```Location``` lets us define a destination location object that we can use to calculate the ```distance``` between both points. Finally, we'll use the ```round()``` method to calculate the closest integer and display full meters.
+
+Let's take a look at the code.
+
+<!-- code/Geolocation/LocationDistance/LocationDistance.pde -->
+
+Here's what's new in this sketch compared to our previous project.
+
+1. Create an Android ```Location``` object to store a fixed location against which to compare your current device location. I named mine "bam" (for the Brooklyn Academy of Music). We'll use the [```setLatitude()```][23] and [```setLongitude()```][24] Android methods to set its values.
+2. Use the ```distanceTo()``` method to compare the device's location via ```location.getLocation()``` with the fixed ```bam``` location. The [```round()``` method][25] calculates the closest integer number to the floating point value returned by ```distanceTo()```.
+3. Receive a location update using ```onLocationEvent()```, which now returns a ```Location``` object instead of individual values for latitude, longitude, altitude, and accuracy. The different parameter options for ```onLocationEvent()``` are described next.
+4. Use the Android [```toString()```][26] method to print a concise, human-readable description of the location object to the console.
+
+Let's try this sketch.
 
 [21]: http://en.wikipedia.org/wiki/Wikipedia:Obtaining_geographic_coordinates
 [22]:http://maps.google.com
+[23]: http://developer.android.com/reference/android/location/Location.html#setLatitude%28double%29
+[24]:http://developer.android.com/reference/android/location/Location.html#setLongitude(double)
+[25]:processing.org/reference/round_.html
+[26]:http://developer.android.com/reference/android/location/Location.html#toString%28%29
+
+###Run the App
+
+Run the sketch on the device and take a look at the location info, including the distance to your fixed location. In this example, the app calculates the distance to the ```bam``` ```Location``` in Brooklyn's Fort Greene neighborhood. So the ```distance``` will vary significantly depending on the state or country you are currently located in.
+
+Go back to the geolocation you've previously noted via Google Maps. Use this location now to adjust the ```bam``` location object in ```setup()```, and adjust the ```setLatitude()``` and ```setLongitude()``` parameters to match your location. Feel free to also adjust the ```bam``` variable and the ```Location``` name called ```"bam"``` to reflect your location—it's not crucial for this sketch though.
+
+Rerun the sketch on the device, and notice how the ```distance``` has changed. You should be able to confirm the distance to the landmark you've Googled using this app.
+
+Now that you know how to calculate the distance between two points, you're ready to use some additional Android ```Location``` methods to determine the bearing and speed of an Android phone or tablet when it's in motion. We'll take a look at that topic in the next section.
