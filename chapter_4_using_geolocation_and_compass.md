@@ -134,3 +134,11 @@ This exercise will familiarize us with the kinds of values we'll use to determin
 
 Let's take a look at how the newly introduced class and methods are used in this example.
 
+1. Declare the variable ```location``` to be of type ```KetaiLocation```. We'll use this variable to store location updates.
+2. Create the ```KetaiLocation``` object we've called ```location```.
+3. Check whether we currently have a location provider via the [```getProvider()``` method.][13]
+4. Display location values ```latitude```, ```longitude```, ```altitude```, ```accuracy```, and the location provider using ```getProvider()```.
+
+[13]: http://developer.android.com/reference/android/location/LocationManager.html#getProvider%28java.lang.String%29
+
+
