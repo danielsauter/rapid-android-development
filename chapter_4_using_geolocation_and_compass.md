@@ -144,4 +144,10 @@ Ketai defaults the Location Manager to provide location updates every ten second
 
 [13]: http://developer.android.com/reference/android/location/LocationManager.html#getProvider%28java.lang.String%29
 
+###Run the App
 
+With the location service turned on, let's run the sketch on our device. Type or copy the code <!--ref linkend="code.geolocation--> into your Processing environment and run it on your Android phone or tablet. You should now see your current geographic location. If you are inside a building, chances are that the location estimate is based on the ```network``` provider, as shown in <!-- ref linkend="fig.geolocation-->. In this example, the Location Manager calculated the estimate with an accuracy of ```46``` meters, which means that the estimate can range from 46 meters, worst case, to "right on" in the best case.
+
+Next, let's disconnect the phone and take it for a little walk. Step outside your building. Watch for a location update and a change in provider.
+
+Great—now head back inside. Take a peek again at your latitude and longitude coordinates, and double-check the location accuracy in Google Maps, as described. How far off are you? If you walk a block, you will be able to observe a change to the third digit after the decimal in either the latitude or longitude, depending on where you are headed. The seemingly small change in this digit represents about 200 feet, which brings us to our next application.
