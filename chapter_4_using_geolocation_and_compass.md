@@ -273,3 +273,37 @@ Let's build.
 <!--code id="code.destination.compass" file="code/Geolocation/DestinationCompass/DestinationCompass.pde" /-->
 
 Let's take a look at the code additions.
+
+1. Introduce the ```compass``` variable to store the rotation around the [**z**-axis.][29]
+2. Apply the ```bearingTo()``` method to determine the direction of the destination pointer.
+3. Move the triangle to the center of the screen using [```translate()```][30]. Translate horizontally by half of the ```width``` and vertically by half of the ```height```.
+4. Rotate the triangle toward the destination. The angle is calculated by subtracting the device ```bearing``` toward the destination from the device orientation toward north stored in ```compass```. Both angles are calculated in degrees and need to be converted into [```radians()```][31] for the trigonometric [```rotate()```][32] method. ```rotate()``` adds a rotation matrix to the stack, which makes all objects drawn after the method call appear rotated in relation to the default screen orientation.
+5. Draw the destination pointer using [```triangle()```][33]. Draw the triangle pointing up using three points, starting with the left base, followed by the right base, and finally by the top point, which provides direction.
+6. Convert the distance to the destination from meters to miles.
+7. Use the ```PVector``` variable ```locationVector``` to store the device latitude and longitude.
+8. Receive bearing values from the ```onOrientationEvent()``` method, returning azimuth (**z**-axis), pitch (**x**-axis), and roll (**y**-axis).
+
+We are  now using two methods, ```onLocationEvent()``` and ```onOrientationEvent()```, that operate in concert with each other. One tracks the location of the device in latitude, longitude, and altitude values, and the other determines where the device is pointing.
+
+[29]: http://developer.android.com/reference/android/hardware/SensorManager.html#getOrientation%28float[],%20float[]%29
+[30]:http://processing.org/reference/translate_.html
+[31]:http://processing.org/reference/radians_.html
+[32]:http://processing.org/reference/rotate_.html
+[33]:http://processing.org/reference/triangle_.html
+
+###Run the App
+
+Let's run the app on the device and find out whether we are being pointed in the right direction. Make sure to set the correct permissions again, as we've discussed in <!-- ref linkend="sec.sketch.permissions-->. For this test, it's quite helpful that we've looked up the destination earlier so we can better gage how well the app is doing.
+
+If you tap the screen, you can observe raw device location values, the ```compass``` variable we've calculated, and the calculated ```bearing``` angle of the device. The ```distance``` toward the destination and the location provider are also displayed on the screen, as shown in <!-- ref linkend="fig.destination.compass-->.
+
+<!-- images/Geolocation/DestinationCompass.png -->
+
+#####Figure 4.4 — Compass app.
+######The triangle points to the second device, whose distance is displayed at its base in meters and miles.
+
+We've now used several pieces of location info in concert and created an app that guides us home (or to work, or wherever ```destination``` is pointing to). Before you rely on your app to find your way, please make sure ```destination``` is pointing to the right place.
+
+Now that we've seen how to find our way to a fixed destination, the next task in line is to create an app that targets a moving destination. For our next project let's navigate toward another mobile device and address some of the challenges when it comes to sharing locations.
+
+
