@@ -140,6 +140,8 @@ Let's take a look at how the newly introduced class and methods are used in this
 4. Display location values ```latitude```, ```longitude```, ```altitude```, ```accuracy```, and the location provider using ```getProvider()```.
 5. Whenever a location update occurs, use the ```onLocationEvent()``` method to retrieve location data and print them to the screen.
 
+Ketai defaults the Location Manager to provide location updates every ten seconds or whenever the device moves more than one meter. This preset number is geared toward applications that strive for a certain level of accuracy. You can change this update rate by calling the ```KetaiLocation``` method ```setUpdateRate(int millis, int meters)```. The app will try to retrieve a ```gps``` location first via the Location Manager, and if that fails it will fall back to ```network``` localization.
+
 [13]: http://developer.android.com/reference/android/location/LocationManager.html#getProvider%28java.lang.String%29
 
 
