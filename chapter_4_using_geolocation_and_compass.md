@@ -306,4 +306,14 @@ We've now used several pieces of location info in concert and created an app tha
 
 Now that we've seen how to find our way to a fixed destination, the next task in line is to create an app that targets a moving destination. For our next project let's navigate toward another mobile device and address some of the challenges when it comes to sharing locations.
 
+###Find a Significant Other (Device)
 
+At first sight, it seems there is not much of a difference between the compass app we've just made and one that guides us  toward another mobile device. If we think about it, though, using a hard-coded latitude and longitude as we did in our previous sketch is quite different from retrieving another device's location data in real time. We'll explore networking techniques in detail in <!-- ref linkend="chp.wifi-->. The difficulty is that two mobile devices separated by some distance will not share a common IP address that we can  use to exchange our location data. So for this task, we need a shared place where each device can write its own latitude and longitude and where each can read the other device's location in return.
+
+For this project, we'll use a web server to facilitate sharing, and we'll equip it with a simple PHP script  that takes the location info from each device and writes it to a text file. If one device knows the (made-up) name of the other, it can look it up on that server and we'll have a significant-other location to navigate to. You can certainly download the script <!-- ref linkend="code.php.io-->, and host it on your own web server as well.
+
+Let's get started. This sketch works with the PHP script on the dedicated web server for this book project. If you point the ```serverURL``` variable to another destination, you'll store your locations there.
+
+<!-- code/Geolocation/DeviceLocator/DeviceLocator.pde -->
+
+There are a few new statements to look at.
