@@ -317,3 +317,35 @@ Let's get started. This sketch works with the PHP script on the dedicated web se
 <!-- code/Geolocation/DeviceLocator/DeviceLocator.pde -->
 
 There are a few new statements to look at.
+
+1. Create a ```KetaiLocation``` type variable to be updated when our device detects a location update.
+2. Create an Android ```Location``` object to store latitude and longitude data from the target device. The Location object also contains a number of useful methods for calculating bearing and distance.
+3. Provide a (unique) phrase or identifier to store the location info.
+4. Point to the identifier of the other device.
+5. Set the PHP script URL responsible for writing location files.
+6. Use Location object to retrieve location updates as opposed to individual variables.
+7. Assemble the string that calls the PHP script with attached device name and location data.
+8. Trigger the PHP script to write a string containing latitude, longitude, and altitude.
+9. Read the other device's location file via the PHP script.
+10. Check if we get a valid location containing latitude, longitude, and altitude, as well as parsing numbers contained in the string.
+11. Write our location to the server via the PHP script.
+
+For this device locater app, we maintain a ```location``` variable that stores our location. We also keep the ```otherDevice``` ```Location```, which this time is responsible for keeping track of a moving target. If we explore the code snippets that we've added to the destination compass app <!--ref linkend="code.destination.compass-->, the ```serverURL``` variable stands out. It's the path to the web server as a shared place for both devices; the server hosts the PHP script that writes and reads the device locations, which is discussed in the next section. We also introduced two string variables that identify each device. Those are necessary and need to be known to both devices—a shared "phrase" or ID that allows us to look up the other device's location. For instance, our location is identified via ```myName```, the other device refers to the location via ```otherDevice```, and vice versa. This is how the exchange is enabled.
+
+Every time we receive a location update from ```onLocationEvent()```, ```updateMyLocation()``` is called to send the device name, latitude, longitude, and altitude to the server. When we tap the screen, we check if there is location info for the remote device called ```deviceTracked```. We connect to the same PHP script that takes care of writing the file, this time with a ```get``` request instead of an ```update``` request. When the server returns a message, we check if we have a complete data package containing all three parameters: latitude, longitude, and altitude. If that's the case, we parse the info and assign it to the ```otherDevice``` location object.
+
+This is how the processing sketch triggers location updates to flows from and to the server to exchange location info between two known devices.	If you feel comfortable writing your location to the book's project server defined in ```serverURL```, you can give it a shot now and run the sketch on two Android devices (otherwise, please jump to <!-- ref linkend="sec.server.io-->). For each, you will have to swap the identifier stored in ```myName``` and ```deviceTracked``` for obvious reasons. Now let's test the app.
+
+###Run the App
+
+Tap the screen on each device to trigger a location update on the server and observe. You should get a distance between both devices somewhere between ```0``` and ```15``` meters. Because our GPS satellites move constantly and the location provider estimates the device location on a [constant basis,][34] location, distance, and compass direction will change even when both devices are static. The closer the devices get to each other, the more erratic the compass changes. To test the compass needle, keep your devices are at least 30 feet apart from each other. You can then take the test to the next level by moving with both devices at increasing distances, which is significantly easier with another set of hands.
+
+You can certainly host the PHP script that is responsible for writing the location data to the web server on your own server. Instructions on how the script (and how PHP) works are located in <!-- ref linkend="sec.server.io-->.
+
+[34]:http://developer.android.com/guide/topics/location/obtaining-user-location.html#BestPerformance
+
+###Wrapping Up
+
+In this chapter, you've created a series of apps where you've learned how to work with location data provided by Android's Location Manager. You've learned that Android devices use the GPS and network methods to determine their geographic location. Given a choice, they will choose the most accurate method available. You can access this information using either the Ketai Library's ```KetaiLocation``` or the Android's ```Location``` class.
+
+You are now able to determine the distance between two geolocations and calculate the bearing toward a fixed location. You've also learned how to write a way-finding app that points to another mobile device on the move. You are able to tackle a wide range of apps that build on geolocation. To complete our investigation into Android sensors, we'll look at another very sophisticated device and common sensor next—the Android camera.
