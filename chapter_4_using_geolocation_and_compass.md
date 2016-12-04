@@ -138,6 +138,7 @@ Let's take a look at how the newly introduced class and methods are used in this
 2. Create the ```KetaiLocation``` object we've called ```location```.
 3. Check whether we currently have a location provider via the [```getProvider()``` method.][13]
 4. Display location values ```latitude```, ```longitude```, ```altitude```, ```accuracy```, and the location provider using ```getProvider()```.
+5. Whenever a location update occurs, use the ```onLocationEvent()``` method to retrieve location data and print them to the screen.
 
 [13]: http://developer.android.com/reference/android/location/LocationManager.html#getProvider%28java.lang.String%29
 
