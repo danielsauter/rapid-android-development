@@ -62,4 +62,12 @@ We need to "see" at least four satellites to determine latitude, longitude, and 
 
 The ```KetaiLocation``` class is designed to provide us with the longitude, latitude, and altitude of the device, as well as the accuracy of that estimate. Besides the typical ```start()``` and ```stop()``` methods, ```KetaiLocation``` also provides a method to identify the location provider that has been used to calculate the estimate. Let's take a look.
 
-```onLocationEvent()```
+<!-- CHECK FOR FORMATTING CONSISTANCY - pg 72 pdf -->
+
+*```onLocationEvent()```* <br />
+Returns the device location, including latitude, longitude, altitude, and location accuracy
+
+*```latitude```*<br />
+Describes the angular distance of a place north or south of the Earth's equator in decimal degrees—positive ```lat``` values describe points north of the equator; negative values describe points south of the equator (for example, Chicago is located at ```41.87338``` degrees latitude in the northern hemisphere; Wellington, New Zealand, is located at ```-41.29019``` degrees latitude in the southern hemisphere).
+
+
