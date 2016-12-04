@@ -163,5 +163,22 @@ Depending on what location data we need for our location-based app, we can choos
 
 The ```Location``` class is loaded with useful methods for dealing with the data they contain, and it is a great way to package returned location data for use in an app. Ketai gives us complete access to the ```Location``` class; let's take a look at some of the ```Location``` methods we'll be working with.
 
+* [*```getBearing()```*][16] Returns the direction of travel in degrees, measured clockwise in relation to magnetic north
+* [*```getSpeed()```*][17] Returns the speed of the device over ground in meters per second (One meter per second is equivalent to ```2.236``` miles per hour.)
+* [*```distanceTo()```*][18] Returns the distance to a given location in meters (The method takes a ```Location``` object as parameter.)
+* [*```setLatitude()```*][19] Sets the latitude of a ```Location```.
+* [*```setLongitude()```*][20] Sets the longitude of a ```Location```.
+
+Now let's work on the next project, where we'll put ```Location``` methods to work and write an app that determines the distance between two locations.
+
 [14]:http://developer.android.com/reference/android/location/LocationProvider.html
 [15]:http://developer.android.com/reference/android/location/Location.html
+[16]:http://developer.android.com/reference/android/location/Location.html#getBearing%28%29
+[17]:http://developer.android.com/reference/android/location/Location.html#getSpeed%28%29
+[18]:http://developer.android.com/reference/android/location/Location.html#distanceTo%28android.location.Location%29
+[19]:http://developer.android.com/reference/android/location/Location.html#setLatitude%28double%29
+[20]:http://developer.android.com/reference/android/location/Location.html#setLongitude%28double%29
+
+###Determine the Distance Between Two Locations
+
+In this project, we'll calculate the distance between our current device location and another fixed location that we predetermine.
