@@ -122,4 +122,15 @@ Let's go ahead and write our first location-based app.
 
 ###Determine Your Location
 
+As our first step, let's write some code to retrieve and display your device's location, as shown in <!-- ref linkend="fig.geolocation-->.
+
+<!--IMAGE images/Geolocation/Geolocation.png-->
+#####Figure 4.2 — Displaying location data.
+######The screen output shows geolocation (latitude, longitude, and altitude), estimation accuracy (in meters), and the current location provider.
+
+This exercise will familiarize us with the kinds of values we'll use to determine our current location on the Earth's surface. Let's display the current latitude, longitude, and altitude on the screen as determined by the Location Manager, as well as display the accuracy of the values and the provider that is used for the calculation. The following example uses ```KetaiLocation``` to gather this info.
+
+<!-- code/Geolocation/Geolocation/Geolocation.pde -->
+
+Let's take a look at how the newly introduced class and methods are used in this example.
 
