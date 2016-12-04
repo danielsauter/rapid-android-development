@@ -189,7 +189,7 @@ Browse Google Maps on your desktop, and find a location close to a landmark you 
 40.67937996,-73.9377679
 ```
 
-Write down your location—we'll use it in the next project. If you use the format shown above, ```lat,lon``` (latitude comma longitude), Google Maps will understand and take you to this location. This approach is a quick and easy way to double-check a location when you want to test a location app.
+Write down your location—we'll use it in the next project. If you use the format shown above, ```lat, lon``` (latitude comma longitude), Google Maps will understand and take you to this location. This approach is a quick and easy way to double-check a location when you want to test a location app.
 
 Now let's create a sketch to determine the distance between a fixed point and the device, as shown in <!-- ref linkend="fig.location.distance-->.
 
