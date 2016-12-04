@@ -70,4 +70,13 @@ Returns the device location, including latitude, longitude, altitude, and locati
 *```latitude```*<br />
 Describes the angular distance of a place north or south of the Earth's equator in decimal degrees—positive ```lat``` values describe points north of the equator; negative values describe points south of the equator (for example, Chicago is located at ```41.87338``` degrees latitude in the northern hemisphere; Wellington, New Zealand, is located at ```-41.29019``` degrees latitude in the southern hemisphere).
 
+*```longitude```*<br />
+Describes the angular distance of a place east or west of the meridian at Greenwich, England, in decimal degrees (for example, Chicago, which is west of the Greenwich meridian, is located at -87.648798 degrees longitude; Yanqi in the Xinjiang Province, China, is located at ```87.648798``` degrees longitude.)
 
+*```altitude```*<br />
+Returns the height of the device in relation to sea level measured in meters
+
+*```accuracy```*<br />
+Returns the accuracy of the location estimate in meters
+
+*```getProvider()```*<br />
