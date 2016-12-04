@@ -155,3 +155,13 @@ Great—now head back inside. Take a peek again at your latitude and longitude c
 ###Working with the Location Class
 
 The event method ```onLocationEvent()``` we worked with earlier returns the latitude, longitude, altitude, and accuracy of the device location—or alternatively, an Android ```Location``` object. If we look at the ```onLocationEvent()``` method in more detail, we can use it with the following sets of parameters:
+
+* *```onLocationEvent(double latitude, double longitude, double altitude, float accuracy)```* Four parameters return the latitude, longitude, altitude, and accuracy of the location estimate.
+* *```onLocationEvent(Location location)```* One parameter returns an [Android location object,][14] where Android location methods can be applied directly.
+
+Depending on what location data we need for our location-based app, we can choose our preferred set of parameters from either ```latitude```, ```longitude```, ```altitude```, ```accuracy```, or the ```Location``` type. We can also select a few parameters if we don't require them all. The ```Location``` object returned in the second iteration of the ```onLocationEvent()``` implementation listed here allows us to access any [Android ```Location``` method.][15]
+
+The ```Location``` class is loaded with useful methods for dealing with the data they contain, and it is a great way to package returned location data for use in an app. Ketai gives us complete access to the ```Location``` class; let's take a look at some of the ```Location``` methods we'll be working with.
+
+[14]:http://developer.android.com/reference/android/location/LocationProvider.html
+[15]:http://developer.android.com/reference/android/location/Location.html
