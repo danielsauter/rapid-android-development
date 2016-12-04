@@ -35,8 +35,20 @@ It takes a few seconds for the Android to narrow the location estimate and impro
 
 For the location-based apps we'll develop in this chapter, we'll use the following Ketai library and Android classes:
 
+[*```KetaiLocation class```*][8] <br />
+A class that simplifies working with Android's Location Manager—it instantiates the Location Manager, registers for location updates, and returns geolocation data.
+
+[*```Location```*][9]<br />
+A wrapper for Android's Location Manager that provides us with many useful methods for determining our position, bearing, and speed—if we're only interested in our location, we won't need this class, but we will use some of its features for later projects in this chapter.
+
+Now let's take a look at the ```KetaiLocation``` methods we'll be using in this chapter.
+
 [5]: http://en.wikipedia.org/wiki/Triangulation
 [6]: http://en.wikipedia.org/wiki/MAC_address
 [7]: http://www.nytimes.com/2012/05/23/technology/google-privacy-inquiries-get-little-cooperation.html
+[8]: http://ketai.org/reference/sensors/ketailocation
+[9]: http://developer.android.com/reference/android/location/Location.html
+
+###Introducing GPS
 
 
