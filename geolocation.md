@@ -300,8 +300,7 @@ Let's run the app on the device and find out whether we are being pointed in the
 
 If you tap the screen, you can observe raw device location values, the ```compass``` variable we've calculated, and the calculated ```bearing``` angle of the device. The ```distance``` toward the destination and the location provider are also displayed on the screen, as shown in <!-- ref linkend="fig.destination.compass-->.
 
-<!-- images/Geolocation/DestinationCompass.png -->
-
+![](images/geolocation/DestinationCompass-sm.png)
 #####Figure 4.4 — Compass app.
 ######The triangle points to the second device, whose distance is displayed at its base in meters and miles.
 
