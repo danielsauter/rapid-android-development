@@ -1,16 +1,4 @@
-/**
- * <p>Ketai Sensor Library for Android: http://ketai.org</p>
- *
- * <p>KetaiLocation Features:
- * <ul>
- * <li>Uses location class to determine travel speed</li>
- * </ul>
- * More information:
- * http://developer.android.com/reference/android/location/Location.html</p>
- * <p>Updated: 2011-06-09 Daniel Sauter/Jesus Duran</p>
- */
-
-import ketai.sensors.*; 
+import ketai.sensors.*;
 KetaiLocation location;
 float speed, bearing;
 
@@ -29,6 +17,6 @@ void draw() {
 
 void onLocationEvent(Location _location) {
   println("onLocation event: " + _location.toString());
-  speed = _location.getSpeed();  //<callout id="co.travel.speed"/>
-  bearing = _location.getBearing();  //<callout id="co.travel.bearing"/>
+  speed = _location.getSpeed();                                 // 1
+  bearing = _location.getBearing();                             // 2
 }
