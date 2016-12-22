@@ -260,7 +260,7 @@ We'll look at ```bearingTo()``` in the next section, where we'll build on a dest
 
 ###Find Your Way to a Destination
 
-If we are heading toward a destination and want to use our Android device like a compass to guide us there, we need to calculate the angle toward the destination relative to our location. And to make it at all useful, we also need to consider the direction the device is "looking" relative to geographic north. When used together, these two numbers can then successfully point us to where we want to go. We'll build on the <!-- ref linkend="code.location.distance-->, and add a simple triangle to our user interface that points toward our destination no matter which way the device itself is facing.
+If we are heading toward a destination and want to use our Android device like a compass to guide us there, we need to calculate the angle toward the destination relative to our location. And to make it at all useful, we also need to consider the direction the device is "looking" relative to geographic north. When used together, these two numbers can then successfully point us to where we want to go. We'll build on the <!-- ref linkend="code.location.distance -->, and add a simple triangle to our user interface that points toward our destination no matter which way the device itself is facing.
 
 The core idea here is that we'll calculate the ```bearing``` and then use it to rotate a graphic object, a triangle, which will serve as our compass needle. The rotation of our graphic object and text will be performed by moving the triangle to the center of the screen using ```translate()```. Then we'll ```rotate()``` the compass needle by the angle resulting from the difference of the device orientation toward north and the calculated ```bearing``` toward the destination. We'll calculate the ```bearing``` using the ```bearingTo()``` method, which returns values ranging ```-180..180``` measured from true north—the shortest path between our device location and the destination.
 
@@ -273,7 +273,7 @@ Let's build.
 [28]:http://processing.org/reference/TWO_PI.html
 
 #####Geolocation/DestinationCompass/DestinationCompass.pde
-<!--code id="code.destination.compass" file="code/Geolocation/DestinationCompass/DestinationCompass.pde" /-->
+[include](code/geolocation/geolocation.pde)
 
 Let's take a look at the code additions.
 
