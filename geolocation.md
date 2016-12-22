@@ -173,13 +173,13 @@ The ```Location``` class is loaded with useful methods for dealing with the data
 
 Now let's work on the next project, where we'll put ```Location``` methods to work and write an app that determines the distance between two locations.
 
-[14]:http://developer.android.com/reference/android/location/LocationProvider.html
-[15]:http://developer.android.com/reference/android/location/Location.html
-[16]:http://developer.android.com/reference/android/location/Location.html#getBearing%28%29
-[17]:http://developer.android.com/reference/android/location/Location.html#getSpeed%28%29
-[18]:http://developer.android.com/reference/android/location/Location.html#distanceTo%28android.location.Location%29
-[19]:http://developer.android.com/reference/android/location/Location.html#setLatitude%28double%29
-[20]:http://developer.android.com/reference/android/location/Location.html#setLongitude%28double%29
+[14]: http://developer.android.com/reference/android/location/LocationProvider.html
+[15]: http://developer.android.com/reference/android/location/Location.html
+[16]: http://developer.android.com/reference/android/location/Location.html#getBearing%28%29
+[17]: http://developer.android.com/reference/android/location/Location.html#getSpeed%28%29
+[18]: http://developer.android.com/reference/android/location/Location.html#distanceTo%28android.location.Location%29
+[19]: http://developer.android.com/reference/android/location/Location.html#setLatitude%28double%29
+[20]: http://developer.android.com/reference/android/location/Location.html#setLongitude%28double%29
 
 ###Determine the Distance Between Two Locations
 
@@ -256,7 +256,7 @@ Run the sketch on the device and take the Android for a little trip—again, the
 
 We'll look at ```bearingTo()``` in the next section, where we'll build on a destination finder app.
 
-[27]:http://developer.android.com/reference/android/location/Location.html#bearingTo%28android.location.Location%29
+[27]: http://developer.android.com/reference/android/location/Location.html#bearingTo%28android.location.Location%29
 
 ###Find Your Way to a Destination
 
@@ -270,7 +270,7 @@ We'll use the ```PVector``` class we've already used earlier so we can keep the 
 
 Let's build.
 
-[28]:http://processing.org/reference/TWO_PI.html
+[28]: http://processing.org/reference/TWO_PI.html
 
 #####Geolocation/DestinationCompass/DestinationCompass.pde
 [include](code/geolocation/geolocation.pde)
@@ -316,7 +316,8 @@ For this project, we'll use a web server to facilitate sharing, and we'll equip 
 
 Let's get started. This sketch works with the PHP script on the dedicated web server for this book project. If you point the ```serverURL``` variable to another destination, you'll store your locations there.
 
-<!-- code/Geolocation/DeviceLocator/DeviceLocator.pde -->
+#####code/Geolocation/DeviceLocator/DeviceLocator.pde
+[include](code/geolocation/DeviceLocator.pde)
 
 There are a few new statements to look at.
 
@@ -344,7 +345,7 @@ Tap the screen on each device to trigger a location update on the server and obs
 
 You can certainly host the PHP script that is responsible for writing the location data to the web server on your own server. Instructions on how the script (and how PHP) works are located in [Writing to a Text File on a WebServer]()<!-- DEAD LINK -->.
 
-[34]:http://developer.android.com/guide/topics/location/obtaining-user-location.html#BestPerformance
+[34]: http://developer.android.com/guide/topics/location/obtaining-user-location.html#BestPerformance
 
 ###Wrapping Up
 
