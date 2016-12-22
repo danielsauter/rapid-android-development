@@ -216,11 +216,11 @@ Here's what's new in this sketch compared to our previous project.
 Let's try this sketch.
 
 [21]: http://en.wikipedia.org/wiki/Wikipedia:Obtaining_geographic_coordinates
-[22]:http://maps.google.com
+[22]: http://maps.google.com
 [23]: http://developer.android.com/reference/android/location/Location.html#setLatitude%28double%29
-[24]:http://developer.android.com/reference/android/location/Location.html#setLongitude(double)
-[25]:processing.org/reference/round_.html
-[26]:http://developer.android.com/reference/android/location/Location.html#toString%28%29
+[24]: http://developer.android.com/reference/android/location/Location.html#setLongitude(double)
+[25]: processing.org/reference/round_.html
+[26]: http://developer.android.com/reference/android/location/Location.html#toString%28%29
 
 ###Run the App
 
@@ -289,10 +289,10 @@ Let's take a look at the code additions.
 We are  now using two methods, ```onLocationEvent()``` and ```onOrientationEvent()```, that operate in concert with each other. One tracks the location of the device in latitude, longitude, and altitude values, and the other determines where the device is pointing.
 
 [29]: http://developer.android.com/reference/android/hardware/SensorManager.html#getOrientation%28float[],%20float[]%29
-[30]:http://processing.org/reference/translate_.html
-[31]:http://processing.org/reference/radians_.html
-[32]:http://processing.org/reference/rotate_.html
-[33]:http://processing.org/reference/triangle_.html
+[30]: http://processing.org/reference/translate_.html
+[31]: http://processing.org/reference/radians_.html
+[32]: http://processing.org/reference/rotate_.html
+[33]: http://processing.org/reference/triangle_.html
 
 ###Run the App
 
