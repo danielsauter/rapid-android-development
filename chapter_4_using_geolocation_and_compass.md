@@ -38,7 +38,7 @@ For the location-based apps we'll develop in this chapter, we'll use the followi
 [*```KetaiLocation class```*][8] <br />
 A class that simplifies working with Android's Location Manager—it instantiates the Location Manager, registers for location updates, and returns geolocation data.
 
-[*```Location```*][9]<br />
+[*```Location```*][9] <br />
 A wrapper for Android's Location Manager that provides us with many useful methods for determining our position, bearing, and speed—if we're only interested in our location, we won't need this class, but we will use some of its features for later projects in this chapter.
 
 Now let's take a look at the ```KetaiLocation``` methods we'll be using in this chapter.
@@ -90,11 +90,12 @@ By default, [Android denies permissions][10] to any app that requests access to 
 
 If we'd like to use the device's location data, we need to ask for permission. Android prompts the user to grant permission if an app requests permission that has not been given to the app before. The Processing IDE (PDE) helps us administer permission requests through the Android Permission Selector, which is available from the menu by selecting Android &mapsto; Sketch Permissions. There we'll find a list of all the permissions that can be requested by an app on the Android.
 
-As illustrated in <!-- ref linkend="fig.sketch.permissions-->, the location permissions need to be set for this app. When we run the sketch on the device and Processing compiles the Android package, it generates a so-called ```AndroidManifest.xml``` file that corresponds to our permission settings. We don't need to worry much about the details of [```AndroidManifest.xml```;][12] owever, as follows, we can see how Processing's Permissions Selector translates our selection into a user-permissions list.
+As illustrated in Figure 4.1 below, the location permissions need to be set for this app. When we run the sketch on the device and Processing compiles the Android package, it generates a so-called ```AndroidManifest.xml``` file that corresponds to our permission settings. We don't need to worry much about the details of [```AndroidManifest.xml```;][12] owever, as follows, we can see how Processing's Permissions Selector translates our selection into a user-permissions list.
 
-<!--code id="code.android.manifest" file="code/Geolocation/Geolocation/AndroidManifest.xml" language="java"/-->
+#####code/Geolocation/Geolocation/AndroidManifest.xml
+[include](code/geolocation/AndroidManifest.xml)
 
-<!-- IMAGE -->
+![](images/geolocation/geolocationSketchPermissions-sm.png)
 #####Figure 4.1 — Sketch permissions.
 ######The Android Permissions Selector lists all permissions that can be requested by the Android app. The location permissions required by the first geolocation app are checked.
 
@@ -193,7 +194,7 @@ Write down your location—we'll use it in the next project. If you use the form
 
 Now let's create a sketch to determine the distance between a fixed point and the device, as shown in <!-- ref linkend="fig.location.distance-->.
 
-<!-- images/Geolocation/LocationDistance.png -->
+![](images/geolocation/LocationDistance-sm.png)
 
 #####Figure 4.3 — Calculating distance.
 ######The screen output shows the device's current location, the calculated distance to the predefined ```bam``` destination, and the current location provider.
@@ -334,13 +335,13 @@ For this device locater app, we maintain a ```location``` variable that stores o
 
 Every time we receive a location update from ```onLocationEvent()```, ```updateMyLocation()``` is called to send the device name, latitude, longitude, and altitude to the server. When we tap the screen, we check if there is location info for the remote device called ```deviceTracked```. We connect to the same PHP script that takes care of writing the file, this time with a ```get``` request instead of an ```update``` request. When the server returns a message, we check if we have a complete data package containing all three parameters: latitude, longitude, and altitude. If that's the case, we parse the info and assign it to the ```otherDevice``` location object.
 
-This is how the processing sketch triggers location updates to flows from and to the server to exchange location info between two known devices.	If you feel comfortable writing your location to the book's project server defined in ```serverURL```, you can give it a shot now and run the sketch on two Android devices (otherwise, please jump to <!-- ref linkend="sec.server.io-->). For each, you will have to swap the identifier stored in ```myName``` and ```deviceTracked``` for obvious reasons. Now let's test the app.
+This is how the processing sketch triggers location updates to flows from and to the server to exchange location info between two known devices.	If you feel comfortable writing your location to the book's project server defined in ```serverURL```, you can give it a shot now and run the sketch on two Android devices (otherwise, please jump to [Writing to a Text File on a WebServer]()<!-- DEAD LINK -->). For each, you will have to swap the identifier stored in ```myName``` and ```deviceTracked``` for obvious reasons. Now let's test the app.
 
 ###Run the App
 
 Tap the screen on each device to trigger a location update on the server and observe. You should get a distance between both devices somewhere between ```0``` and ```15``` meters. Because our GPS satellites move constantly and the location provider estimates the device location on a [constant basis,][34] location, distance, and compass direction will change even when both devices are static. The closer the devices get to each other, the more erratic the compass changes. To test the compass needle, keep your devices are at least 30 feet apart from each other. You can then take the test to the next level by moving with both devices at increasing distances, which is significantly easier with another set of hands.
 
-You can certainly host the PHP script that is responsible for writing the location data to the web server on your own server. Instructions on how the script (and how PHP) works are located in <!-- ref linkend="sec.server.io-->.
+You can certainly host the PHP script that is responsible for writing the location data to the web server on your own server. Instructions on how the script (and how PHP) works are located in [Writing to a Text File on a WebServer]()<!-- DEAD LINK -->.
 
 [34]:http://developer.android.com/guide/topics/location/obtaining-user-location.html#BestPerformance
 
