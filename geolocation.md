@@ -298,7 +298,7 @@ We are  now using two methods, ```onLocationEvent()``` and ```onOrientationEvent
 
 Let's run the app on the device and find out whether we are being pointed in the right direction. Make sure to set the correct permissions again, as we've discussed in <!-- ref linkend="sec.sketch.permissions-->. For this test, it's quite helpful that we've looked up the destination earlier so we can better gage how well the app is doing.
 
-If you tap the screen, you can observe raw device location values, the ```compass``` variable we've calculated, and the calculated ```bearing``` angle of the device. The ```distance``` toward the destination and the location provider are also displayed on the screen, as shown in <!-- ref linkend="fig.destination.compass-->.
+If you tap the screen, you can observe raw device location values, the ```compass``` variable we've calculated, and the calculated ```bearing``` angle of the device. The ```distance``` toward the destination and the location provider are also displayed on the screen, as shown in Figure 4.4.
 
 ![](images/geolocation/DestinationCompass-sm.png)
 #####Figure 4.4 — Compass app.
