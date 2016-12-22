@@ -123,7 +123,7 @@ Let's go ahead and write our first location-based app.
 
 ###Determine Your Location
 
-As our first step, let's write some code to retrieve and display your device's location, as shown in <!-- ref linkend="fig.geolocation-->.
+As our first step, let's write some code to retrieve and display your device's location, as shown in Figure 4.2.
 
 ![](images/geolocation/Geolocation-sm.png)
 #####Figure 4.2 — Displaying location data.
@@ -193,10 +193,9 @@ Browse Google Maps on your desktop, and find a location close to a landmark you 
 
 Write down your location—we'll use it in the next project. If you use the format shown above, ```lat, lon``` (latitude comma longitude), Google Maps will understand and take you to this location. This approach is a quick and easy way to double-check a location when you want to test a location app.
 
-Now let's create a sketch to determine the distance between a fixed point and the device, as shown in <!-- ref linkend="fig.location.distance-->.
+Now let's create a sketch to determine the distance between a fixed point and the device, as shown in Figure 4.3.
 
 ![](images/geolocation/LocationDistance-sm.png)
-
 #####Figure 4.3 — Calculating distance.
 ######The screen output shows the device's current location, the calculated distance to the predefined ```bam``` destination, and the current location provider.
 
@@ -204,7 +203,8 @@ We'll use both the ```KetaiLocation``` and Android's ```Location``` classes. ```
 
 Let's take a look at the code.
 
-<!-- code/Geolocation/LocationDistance/LocationDistance.pde -->
+#####code/Geolocation/LocationDistance/LocationDistance.pde
+[include](code/geolocation/LocationDistance.pde)
 
 Here's what's new in this sketch compared to our previous project.
 
@@ -240,7 +240,8 @@ We've mastered latitude, longitude, and altitude and calculated the distance bet
 
 Let's take a look.
 
-<!-- code/Geolocation/LocationSpeed/LocationSpeed.pde -->
+#####code/Geolocation/LocationSpeed/LocationSpeed.pde
+[include](code/geolocation/LocationSpeed.pde)
 
 Here are the two new Android ```Location``` methods we are using for this sketch.
 
