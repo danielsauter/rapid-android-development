@@ -14,7 +14,7 @@ In this chapter, we'll build a series of navigation apps. We'll start by working
 
 Let's first take a look at how the Android device estimates its location.
 
-[1]:http://en.wikipedia.org/wiki/Location-based_service
+[1]: http://en.wikipedia.org/wiki/Location-based_service
 [2]: http://developer.android.com/reference/android/location/LocationManager.html
 [3]: http://en.wikipedia.org/wiki/GSM_localization
 [4]: http://developer.android.com/guide/topics/location/obtaining-user-location.html
@@ -148,7 +148,7 @@ Ketai defaults the Location Manager to provide location updates every ten second
 
 ###Run the App
 
-With the location service turned on, let's run the sketch on our device. Type or copy the code <!--ref linkend="code.geolocation--> into your Processing environment and run it on your Android phone or tablet. You should now see your current geographic location. If you are inside a building, chances are that the location estimate is based on the ```network``` provider, as shown in <!-- ref linkend="fig.geolocation-->. In this example, the Location Manager calculated the estimate with an accuracy of ```46``` meters, which means that the estimate can range from 46 meters, worst case, to "right on" in the best case.
+With the location service turned on, let's run the sketch on our device. Type or copy the code above into your Processing environment and run it on your Android phone or tablet. You should now see your current geographic location. If you are inside a building, chances are that the location estimate is based on the ```network``` provider, as shown in <!-- ref linkend="fig.geolocation-->. In this example, the Location Manager calculated the estimate with an accuracy of ```46``` meters, which means that the estimate can range from 46 meters, worst case, to "right on" in the best case.
 
 Next, let's disconnect the phone and take it for a little walk. Step outside your building. Watch for a location update and a change in provider.
 
