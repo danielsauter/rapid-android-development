@@ -56,7 +56,12 @@ Besides providing the typical ```start``` and ```stop``` methods that we use to 
 
 * *[```KetaiSimpleFace()```][5]* A Ketai wrapper for the ```Face``` class in [Android's ```FaceDetector``` package][6], which returns the midpoint location and distance between the eyes recognized by the device cameras
 
-* *
+* *```KetaiSimpleFace[]```* A ```PVector``` list containing the position data of detected faces within a camera image&emdash;the center point between the left and right eyes and the distance between the eyes are stored in this array.
+
+With this brief summary of ```KetaiCamera```methods for this chapter, let's get started with our first camera app.
 
 [5]: http://ketai.org/reference/cv/ketaisimpleface/
 [6]: http://developer.android.com/reference/android/media/FaceDetector.Face.html
+
+###Display a Back-Facing Camera Full-Screen Preview
+
