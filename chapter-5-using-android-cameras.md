@@ -65,3 +65,48 @@ With this brief summary of ```KetaiCamera```methods for this chapter, let's get 
 
 ###Display a Back-Facing Camera Full-Screen Preview
 
+For this initial camera app shown below, we'll display the view seen by the back-facing Android camera.
+
+<!-- imagedata fileref="images/Camera/GettingStarted.png" width="90%" -->
+
+#####Figure 5.1 — Camera preview app.
+######The illustration shows a camera preview image at a resolution of 1280 x 768 pixels, displayed on the touch screen of a Google Nexus 6, whose resolution is 2560 x 1440 pixels. 
+
+We'll use the ```KetaiCamera``` class to connect to and start the camera. The ```KetaiCamera``` class streamlines this process significantly for us. For example, creating a simple camera preview app using ```KetaiCamera``` takes about ten lines of code, compared with about three hundred documented on the [Android developer site.][7] ```KetaiCamera``` helps us set up and control the camera, and it also [decodes][8] the YUV color format provided by the Android camera into the RGB format used in Processing.
+
+```KetaiCamera``` works similarly to other Ketai classes that we've explored in <!-- titleref linkend="chp.sensors" -->. First we create a ```KetaiCamera``` object and ```start()``` the camera. Then we update the screen as soon as we receive a new image from the camera via ```onCameraPreviewEvent()```. And finally, we use Processing's own ```image``` method to display the camera preview.
+
+The code for a basic camera sketch looks like this: 
+
+#####code/Camera/CameraGettingStarted/CameraGettingStarted.pde
+
+<!-- CODE -->
+
+Let's take a closer look at the steps you take and the methods you use to set up a camera sketch.
+
+1. Create an instance of the ```KetaiCamera``` class to generate a new camera object with a preview width and height of 1280 x 768 pixels and an update rate of 30 frames per second.
+
+2. Call ```imageMode()``` to tell Android to center its camera images on its screen. All images are now drawn from their center point instead of from the default upper left corner.
+
+3. Display the camera preview using the [```image()``` method][9]. It requires an image source as well as the ```x``` and ```y``` coordinates of the image to display. Optionally, the image can be rescaled using an additional parameter for the image ```width``` and ```height```, which is what we are doing here.
+
+4. Use the ```onCameraPreviewEvent()``` callback method for notification that a new preview image is available. This is the best time to read the new image.
+
+5. Read the camera preview using the ```read()``` camera method.
+
+6. Toggle the camera preview on and off when you tap the screen.
+
+Let's try the sketch on the Android phone or tablet.
+
+[7]: http://developer.android.com/samples/Camera2Basic/project.html
+[8]: https://en.wikipedia.org/wiki/YUV#Conversion_to.2Ffrom_RGB
+[9]: http://processing.org/reference/image_.html
+
+###Run the App
+
+Before we run the sketch, we need to give the app permission to use the camera. Here's how: On the Processing menu bar, select  Android  &mapsto;  Sketch Permissions.  In the Android Permissions Selector that appears, select Camera. As we've done already in <!-- titleref linkend="chp.geolocation" --> earlier in <!-- ref linkend="sec.sketch.permissions" -->, the Android must allow the app to use the camera through a certificate, or it must prompt the user to approve the request to use the camera. If the app has permission to use the camera, the device will remember and not prompt the user anymore. For this app, we only need to check the permission for ```CAMERA```.
+
+Now run the sketch on the device. The rear-facing camera preview starts up as illustrated in <!-- ref linkend="fig.camera.getting.started" / -->, in a [resolution of 1280px width and 768px height][10], known as WXGA. Android cameras are set to auto mode, so they adjust focus and exposure automatically. Depending on your phone's native screen resolution, the preview image might cover the screen only partially. You can certainly scale and stretch the preview image, which also changes the image aspect ratio and distorts the image. For instance, if you set the width and height parameters in the ```image()``` method to ```screenWidth``` and ```screenHeight``` as in the following code, the camera preview will always stretch full screen independent of the screen's size and resolution. 
+
+
+[10]: http://en.wikipedia.org/wiki/Display_resolution
