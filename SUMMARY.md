@@ -6,6 +6,5 @@
 * [Chapter 2: Working with the Touch Screen Display](display.md)
 * [Chapter 3: Using Motion and Position Sensors](sensors.md)
 * [Chapter 4: Using Geolocation and Compass](geolocation.md)
-
-
+* [Chapter 5: Using Android Cameras](chapter-5-using-android-cameras.md)
 
