@@ -40,13 +40,23 @@ Now let's take a closer look at the ```KetaiCamera``` methods we'll be using.
 
 Besides providing the typical ```start``` and ```stop``` methods that we use to control the sensors on a device, we'll use the following more specialized ```KetaiCamera``` methods for the projects in this chapter:
 
-* *```onCameraPreviewEvent```* Returns a preview image from the camera when a new frame is available&emdash;the image can then be read into the ```KetaiCamera``` object using the ```read``` method.
+* *```onCameraPreviewEvent()```* Returns a preview image from the camera when a new frame is available&emdash;the image can then be read into the ```KetaiCamera``` object using the ```read()``` method.
 
-* *```addToMediaLibrary```* Makes a picture publicly available in the default preferred media storage on the device&emdash;the method requires a picture filename or path to the picture. After using the method, pictures are also available as an album in the Gallery app.   
+* *```addToMediaLibrary()```* Makes a picture publicly available in the default preferred media storage on the device&emdash;the method requires a picture filename or path to the picture. After using the method, pictures are also available as an album in the Gallery app.   
 
-* *```manualSettings``` and ```autoSettings```* Toggles between manual and automatic camera settings&emdash;```manualSettings``` locks the current camera exposure, white balance, and focus. ```autoSettings``` lets the device adjust exposure, white balance, and focus automatically.
+* *```manualSettings()``` and ```autoSettings()```* Toggles between manual and automatic camera settings&emdash;```manualSettings()``` locks the current camera exposure, white balance, and focus. ```autoSettings()``` lets the device adjust exposure, white balance, and focus automatically.
 
-* *```enableFlash``` and ```disableFlash```* Switches the built-in rear-facing camera flash on and off&emdash;this can only be used if the rear camera is on.
+* *```enableFlash()``` and ```disableFlash()```* Switches the built-in rear-facing camera flash on and off&emdash;this can only be used if the rear camera is on.
 
-* *```savePhoto```* Saves a picture in the current camera preview size to the preferred media storage
+* *```savePhoto()```* Saves a picture in the current camera preview size to the preferred media storage
 
+* *```setPhotoSize()```* Sets the picture's size to be saved in a different, for example, higher, resolution
+
+* *```setSaveDirectory()```* Defines where to save the pictures to&emdash;by default, pictures are saved to the public media storage on the device. The path can also be set to another destination, including private folders. Requires testing whether the directory path is valid.
+
+* *[```KetaiSimpleFace()```][5]* A Ketai wrapper for the ```Face``` class in [Android's ```FaceDetector``` package][6], which returns the midpoint location and distance between the eyes recognized by the device cameras
+
+* *
+
+[5]: http://ketai.org/reference/cv/ketaisimpleface/
+[6]: http://developer.android.com/reference/android/media/FaceDetector.Face.html
