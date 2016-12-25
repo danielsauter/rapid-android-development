@@ -15,4 +15,42 @@ Before we get started on our first project, let's first take a look at some of t
 
 [1]: http://developer.android.com/guide/topics/data/data-storage.html#filesExternal
 
+###Introducing the Android Camera and APIs
 
+Android phones and tablets are typically equipped with two cameras. Camera hardware varies across phones and tablets, but typically the back-facing camera is used to capture images and HD video at a resolution of 5 mega-pixels. The lower-resolution, front-facing camera is designed for video calls. The Google Nexus 6 phone, for example, features a 13-megapixel back-facing camera (4160 x 3120 pixels) with a built-in LED flash and a 2-megapixel front-facing camera.
+
+Mobile cameras don't rely on hardware alone. The Android SDK provides a variety of features through its ```Camera``` class that make the camera more than just a [camera.][2] We can use code to work with camera metering, focus, exposure, white balance, zoom, image capture, and even face detection. Geolocation data can also be added to image metadata so that images can be organized by the location where they were taken. The Google Camera app that ships with Android devices allows users to manipulate those features in its UI. But we're going to learn how apps can use them as well.
+
+To implement the camera features in this chapter, we'll work mainly with a single Ketai library class and a highly versatile Processing type:
+
+[```KetaiCamera```][3]
+This Ketai library class provides simplified access to the cameras on a device by making Android's ```Camera``` class available to Processing. When we work with ```KetaiCamera```, we define the width, height, and frame rate for the camera preview we'd like to work with. It provides the necessary methods to define basic camera settings (such as resolution) and camera controls. It also provides access to the camera flash and Android's built-in face recognizer. 
+
+[```PImage```][4]
+This is a Processing datatype for storing images (```gif```, ```jpg```, ```png```, ```tif```, and ```tga```). It provides a number of methods that help us load, save, and filter  images, including access to the image ```pixels[]``` array that contains information on pixel color values. The methods we are using in this chapter are described further in <!--ref linkend="sec.pimage" /-->.
+
+Now let's take a closer look at the ```KetaiCamera``` methods we'll be using.
+
+[2]: http://developer.android.com/guide/topics/media/camera.html
+<!-- Need to reconcile second link for this 2: http://developer.android.com/reference/android/hardware/Camera.html -->
+[3]: http://ketai.org/reference/camera/
+[4]: http://processing.org/reference/PImage.html
+
+###Working with the KetaiCamera Class
+
+Besides providing the typical ```start``` and ```stop``` methods that we use to control the sensors on a device, we'll use the following more specialized ```KetaiCamera``` methods for the projects in this chapter:
+
+```onCameraPreviewEvent```
+Returns a preview image from the camera when a new frame is available&emdash;the image can then be read into the ```KetaiCamera``` object using the ```read``` method.
+
+```addToMediaLibrary```
+Makes a picture publicly available in the default preferred media storage on the device&emdash;the method requires a picture filename or path to the picture. After using the method, pictures are also available as an album in the Gallery app.   
+
+```manualSettings``` and ```autoSettings```
+Toggles between manual and automatic camera settings&emdash;```manualSettings``` locks the current camera exposure, white balance, and focus. ```autoSettings``` lets the device adjust exposure, white balance, and focus automatically.
+
+```enableFlash``` and ```disableFlash```
+Switches the built-in rear-facing camera flash on and off&emdash;this can only be used if the rear camera is on.
+
+```savePhoto```
+Saves a picture in the current camera preview size to the preferred media storage
