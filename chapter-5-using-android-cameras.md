@@ -248,15 +248,118 @@ Let's start by looking in more detail at some of the ```PImage``` features we'll
 
 [```PImage```][12] is a datatype for storing images that supports ```.tif```, ```.tga```, ```.gif```, ```.png```, and ```.jpg``` image formats. Listed below are some of the ```PImage``` methods that we'll be using for this project:
 
-* *[```loadImage```][13]* Loads the pixel data for the image into its ```pixels[]``` array
-* *[```loadPixels```][14]* Loads the pixel data for the image into its ```pixels[]``` array&emdash;this function must always be called before reading from or writing to ```pixels[]```.
-* *[```updatePixels```][15]* Updates the image with the data in the ```pixels[]``` array&emdash;the method is used in conjunction with ```loadPixels```.
+* *[```loadImage()```][13]* Loads the pixel data for the image into its ```pixels[]``` array
+* *[```loadPixels()```][14]* Loads the pixel data for the image into its ```pixels[]``` array&emdash;this function must always be called before reading from or writing to ```pixels[]```.
+* *[```updatePixels()```][15]* Updates the image with the data in the ```pixels[]``` array&emdash;the method is used in conjunction with ```loadPixels```.
 * *[```pixels[]```][16]* Array containing the color of every pixel in the image
-
-http://processing.org/reference/pixels.htm
+* *[```get()```][17]* Reads the color of any pixel or grabs a rectangle of pixels
+* *[```set()```][18]* Writes a color to any pixel or writes an image into another
+* *[```copy()```][19]* Copies the entire image
+* *[```resize()```][20]* Resizes an image to a new width and height&emdash;to resize proportionally, use ```0``` as the value for the width or height parameter.
+* *[```save()```][21]* Saves the image to a TIFF, TARGA, GIF, PNG, or JPEG file
 
 [12]: http://processing.org/reference/PImage.html
 [13]: http://processing.org/reference/loadImage_.html
 [14]: http://processing.org/reference/loadPixels_.html
 [15]: http://processing.org/reference/PImage_updatePixels_.html
 [16]: http://processing.org/reference/pixels.html
+[17]: http://processing.org/reference/PImage_get_.html
+[18]: http://processing.org/reference/set_.html
+[19]: http://processing.org/reference/copy_.html
+[20]: http://processing.org/reference/PImage_resize_.html
+[21]: http://processing.org/reference/save_.html
+
+Now let's write some code.
+
+For this project, we'll create a new sketch, again with two tabs, and copy the code into each tab individually. We'll call the main tab ```CameraPhotoBooth``` and the second tab ```CameraControls```, which we'll reuse from the previous sketch <!--ref linkend="code.camera.saving.images.camera.controls" /-->.
+
+Let's first take a look at the main tab.
+
+#####code/Camera/CameraPhotoBooth/CameraPhotoBooth.pde
+
+Here are the steps we need to take in the main tab.
+
+1. Set the camera ID to the front-facing camera using ```setCameraID()```, which has the index number ```1```.
+2. Load the ```rover.jpg``` resource image from the data folder using ```loadImage()```, which will serve as a replacement for the background.
+3. Load the camera pixel array using ```loadPixels()```.
+4. Load the snapshot picture pixel array using ```loadPixels()```.
+5. Load the ```mux``` pixel array using ```loadPixels()``` to store the composite photo booth image.
+6. Parse the ```pixels``` array and get the current screen pixel color at array position ```i```.
+7. Calculate the ```red()``` difference between the individual camera and snapshot pixel values. Convert the result into an absolute, always positive number using [```abs()```][22]. Make the same calculation for the green and blue pixel values.
+8. Add the differences for the red, green, and blue values to calculate the ```total``` difference in color, which will be used as a threshold for the composite image. Values can range from ```0``` (no change) to ```255``` (maximum change) for ```total```. Use ```128``` (50 percent change) as the threshold to choose between the live camera or the background image.
+9. Set the composite ```mux``` image to the background image ```bg``` pixel for small changes in the camera image.
+10. Set ```mux``` to the camera pixel if the camera preview changed a lot.
+11. Update the composite ```mux``` pixels used to display the calculated result using ```updatePixels()```.
+12. Display the composite image ```mux``` on the screen using the ```image()``` method, which now contains the combined pixel data from the live camera and the background image.
+
+[22]: http://processing.org/reference/abs_.html
+
+In this app, we've changed the ```draw``` method from our previous camera app <!--ref linkend="code.camera.saving.images" -->. We focus on combining images in ```draw```, where we use a background image&emdash;a snapshot taken from the camera preview&emdash;and the current camera preview taken in the same location. We calculate the difference between this current camera preview and the snapshot to determine which pixels changed. Then we display the stored background image in all the pixels that did not change and display the live camera pixels where the preview changed. When a person enters the scene after taking the snapshot, those changed pixels function as a mask for the background image. This is why it's also important that the camera doesn't move during the process.
+
+###Adding Media Assets to a Sketch
+
+The ```setup``` method contains a reference to a &lquot;canned&rquot; image called ```rover.jpg```. The image is stored in the sketch's ```data``` folder. We load the image into the ```PImage``` variable ```bg``` at the beginning, when the app starts up. Here we use ```PImage``` only to store the image. We'll discuss this datatype further in the next project, <!-- ref linkend="sec.pimage" -->, where we rely on some useful ```PImage``` methods to work with pixel values.
+
+The sole purpose of the sketch's ```data``` folder is to host all necessary media assets and resource files for our sketch, such as images, movie clips, sounds, or data files. If a resource file is outside the sketch's ```data```, we must provide an absolute path within the file system to the file. If the file is online, we need to provide a URL. There are three ways to add a media asset to a sketch:
+
+* Drag and drop the file you want to add onto the sketch window from your file system (for example, from the desktop) onto the Processing sketch window you want to add the file to. Processing will create the ```data``` folder for you in that sketch and place the resource file inside it.
+
+* Choose  Sketch  &mapsto;  Add File...  from the Processing menu, and browse to the asset.
+
+* Browse to the sketch folder (choose  Sketch  &mapsto;  Show Sketch Folder).
+
+Now let's check what's changed in ```CameraControls```.
+
+#####code/Camera/CameraPhotoBooth/CameraControls.pde
+
+In the Camera Controls tab, we reuse the UI button for the flash from the previous code <!--ref linkend="code.camera.saving.images.camera.controls" /--> and label it &lquot;Snapshot.&rquot; Because the flash belongs to the back-facing camera and it's much easier for us to use the front camera here, we don't need the flash any more for this project. The Snapshot button is now responsible for copying the pixels from ```cam``` to ```snapshot```, as shown below.
+
+1. Set the camera to manual mode using the ```manualSettings()``` method, locking the current camera exposure, white balance, and focus.
+2. Use the ```copy()``` method to take the snapshot. Use the snapshot image to subtract from the camera preview, erasing the background, and extracting the image foreground of the camera.
+
+###Run the App
+
+Now lean the Android upright against something solid so it can remain static, and run the app. When it starts up, press the Snapshot button, capturing a ```snapshot``` image from the camera preview. Make sure you are out of the camera field of view; if not, you can always retake the snapshot. Now, reenter the scene and see yourself superimposed on the landscape of Mars. Adjust the threshold value of ```128``` to be higher or lower to best match your lighting situation. You can use any resource image stored in ```CameraPhotoBooth/data```, so go ahead and swap it with another image resource of your choice.
+
+This project showed us how to take control of two different image sources and combine them in creative ways. The project can easily be expanded to create a [chroma-key TV studio][23], in which we could superimpose live video of a TV show host onto a studio green screen. But we'll leave that as an exercise for the reader.
+
+Now that we've gained some experience in manipulating images, let's use our ability to process information about pixels to create a two-person drawing game.
+
+[23]: http://en.wikipedia.org/wiki/Chroma_key
+
+###Detect and Trace the Motion of Colored Objects
+
+In the drawing game that we'll build in this section, two players will compete to see who can  fill the screen of an Android device with the color of a red or blue object first. Without touching the device screen, each player scribbles in the air above it with a blue or red object in an attempt to fill as much space as possible with the object's color. When more than 50 percent of the screen is filled, the player that filled in the most pixels wins. We'll use the front-facing camera as the interactive interface for this game. It's job is to detect the presence of the colors blue or red within its field of vision and capture them each time it records a frame. The game code will increase the score of each player who succeeds in leaving a mark on the screen.
+
+The camera remains static during the game. As <!--ref linkend="fig.magic.marker" thispage="yes" -->, illustrates, only the primary colors red and blue leave traces and count toward the score. If the red player succeeds in covering more pixel real estate than the blue, red wins. If blue dominates the screen, blue wins. If you are using an Android tablet you can step a little bit further away from the device than is the case for a phone, where the players are more likely to get in each other's way, making the game more competitive and intimate.
+
+#####Figure 5.5 – Magic marker drawing game.
+######Red- and blue-colored objects leave color marks, gradually covering  the camera preview. The color that dominates wins the game.
+
+The magic marker drawing game uses color tracking as its main feature. As we implement this game, we put Processing's image class, called ```PImage```, to use. The main purpose of this datatype is to store images, but it also contains a number of very useful methods that help us manipulate digital images. In the context of this game, we'll use ```PImage``` methods again to retrieve pixel color values and to set pixel values based on some conditions we implement in our sketch.
+
+###Manipulating Pixel Color Values
+
+To create this magic marker drawing game, we need to extract individual pixel colors and decide whether a pixel matches the particular colors (blue and red) we are looking for. A color value is only considered blue if it is within a range of &lquot;blueish&rquot; colors we consider blue enough to pass the test, and the same is true for red. Once we detect a dominant color between the two, we need to call a winner.
+
+For an RGB color to be considered blue, the [```blue()``` value][24] of the pixel color needs to be relatively high, while at the same time the [```red()```][25] and [```green()```][26] values must be relatively low. Only then does the color appear blue. We are using the Processing color methods ```red()```, ```green()```, and ```blue()``` to extract *R*, *G*, and *B* values from each camera pixel. Then we determine whether we have a blue pixel, for instance, using a condition that checks if ```blue()``` is high (let's say ```200```) and at the same time ```red()``` and ```green()``` are low (let's say ```30```) on a scale of ```0..255```. To make these relative thresholds adjustable, let's introduce variables called ```high``` and ```low``` for this purpose.
+
+Let's take a look. The sketch again contains ```CameraControls```, which we don't discuss here because we already know the method to ```start``` and ```stop``` the camera.
+
+[24]: http://processing.org/reference/blue_.html
+[25]: http://processing.org/reference/red_.html
+[26]: http://processing.org/reference/green_.html
+
+#####code/Camera/CameraMagicMarker/CameraMagicMarker.pde
+
+There are a couple of new methods for us to look at.
+
+1. Create an empty ```PImage``` called ```container``` using the ```createImage()``` method to hold red and blue color pixels that have been detected in the camera preview image. The empty RGB image container matches the size of the camera preview image.
+2. Calculate the fullscreen camera preview image width ```propWidth``` proportional to the camera preview aspect ratio. We get the ratio by dividing the screen ```height``` by the camera preview height ```camHeight``` and multiplying that with the ```camWidth```.
+3. Draw the camera preview image in fullscreen size using ```image()``` if no player has won the game yet (```win``` equals ```0```). Match the image height with the screen height and scale the image width proportionately.
+4. Get the color value at the image pixel location ```x``` and ```y``` using the ```PImage``` method ```get()```. Store the value in the ```color``` variable ```pixelColor```.
+5. heck for reddish pixel values within the camera preview using the ```red()```, ```green()```, and ```blue()``` ```PImage``` methods to extract individual color values from the ```color``` datatype. Consider only pixel values with a red content greater than the ```high``` threshold and ```low``` green and blue values. Use the globals ```high``` and ```low``` for the upper and lower limits of this condition.
+6. Check if the pixel is already taken by a color using ```brightness```. If the ```container``` is empty and not set yet, it has a brightness value of ```0```.
+7. Check for blueish pixel value in the camera image. It requires a color with a high blue content, while the red and green values are ```low```.
+8. Draw the ```container``` using the ```image()``` method. This ```PImage``` contains all the red and blue pixels we grabbed from the camera's preview image.
+
