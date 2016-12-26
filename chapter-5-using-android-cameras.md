@@ -362,4 +362,77 @@ There are a couple of new methods for us to look at.
 6. Check if the pixel is already taken by a color using ```brightness```. If the ```container``` is empty and not set yet, it has a brightness value of ```0```.
 7. Check for blueish pixel value in the camera image. It requires a color with a high blue content, while the red and green values are ```low```.
 8. Draw the ```container``` using the ```image()``` method. This ```PImage``` contains all the red and blue pixels we grabbed from the camera's preview image.
+9. Check for the winner when at least 50 percent of the image is covered, comparing the combined ```redScore``` and ```blueScore``` values against ```0.50``` of all camera preview pixels.
+10. Fade to the winning color by changing the ```fill``` opacity of a colored rectangle covering the screen. To achieve a continuous fade, use the ```win``` variable for the alpha parameter so that the following rectangle is drawn with decreasing opacity (```0```: fully opaque, ```255``` fully transparent).
+11. Load the pixel data from the container ```PImage``` into the pixels[] array. The function must be called before writing to (or reading from) ```pixels[]```.
+12. Empty all ```pixels[]``` in the container image pixel array. Set all pixels to the ```color(0, 0, 0, 0)```, which is a fully transparent black color. The Processing rule is that you must call ```loadPixels()``` before you read from or write to ```pixels[]```, even if some renderers seem not to require this call.
 
+Now let's test the game using some blueish and reddish objects and test how well the camera picks up their colors. Any kind of object will do as long as its color is a vibrant red or blue&emdash;the more intense its hue and brightness the better.
+
+###Run the App
+
+Grab a friend and a few blueish and reddish objects, and get ready to scribble madly mid-air and fight for pixel real estate on the Android device. Run the sketch on the device. When the game starts up, the camera preview will appear centered on the screen, stretched to fullscreen size. Reddish and blueish colors are instantly picked up and drawn on top of the preview image. This immediate feedback lets us play with different objects and quickly get an idea about which objects have the greatest color impact as we try to cover the screen.
+
+Try it. The status bar on either side of the screen grows as colors are picked up, showing us how much pixel real estate each player owns. Individual scores are compared with the total number of available pixels. If 50 percent of all pixels are grabbed by the red player, for instance, the red progress bar covers half of the screen height. Once more than 50 percent of all available pixels are taken, the sketch calls a winner and fades to the winning color. It resets the game to start over.
+
+This game has taken us deep into the world of pixels using all the prior color knowledge we've acquired in <!-- ref linkend="sec.color.mixer" -->. The ```PImage``` datatype is a convenient way to work with images, which are in principle &lquot;just&rquot; lists of colors containing red, green, blue, and alpha (transparency) values that we can use for our own purposes, such as our magic marker drawing game.
+
+If your device is up to the challenge, feel free to double the camera resolution via ```camWidth``` and ```camHeight``` for better image quality, but consequently you'll have to lower the frame rate. We've discussed that pixel-level calculations are computationally expensive and hence require a speedy Android device to run smoothly. In <ref linkend="chp.mobile.3d" />, we will learn a few tricks that help us put the graphics processing unit (GPU) to use, keeping the central processing unit (CPU) free for other tasks.
+
+Since you've successfully interpreted images on a pixel level, let's take it a step further now and explore how pixel-level image algorithms are used for advanced image processing and computer vision purposes, specifically for Android's face detection API.
+
+###Detect Faces
+
+One of the most amazing hidden features of the camera software is the ability to detect faces. We've seen that access to the pixel values enables us to interpret images and make inferences about their content. Such computer vision algorithms have many applications in robotics, automation, and security. The [Android face detection API][27] is designed to trigger an event when one or more faces are detected.
+
+Facial recognition is an Android feature that uses complex computer vision algorithms to detect typical facial features, which are recognized by their shape and the position of a person's eyes within the camera's field of view. The Android device uses so-called [Haar cascades][28] for face recognition.
+
+The Camera app, for instance, uses this feature to set the focus of the camera on the eyes of a person when taking a photo. Face Unlock added to Ice Cream Sandwich uses face recognition to unlock your device. When you first activate Face Unlock (Security Settings  &mapsto;  Face Unlock), you provide an image of your face and a PIN. The device remembers the shape and other characteristics of your face and uses those metrics to compare it to a live camera image when you unlock the screen. Depending on the amount of available light, this feature works uncannily well.
+
+```Face``` detection is part of Android's ```Camera``` class, exposed by ```KetaiCamera``` so we can use it within the camera apps we develop using the Ketai library. The information we receive about facial features includes the location of the ```leftEye()```, the ```rightEye()```, the ```mouth()```, an individual  ```id``` for each detected face, and a ```score``` of the confidence level for the detection of the face, with a range of ```1..100```. The ability to detect facial features might come as a surprise when we use and expose it. However, modern digital cameras use similar algorithms to auto-set the focus and auto-correct red-eye effects.
+
+The face finder sketch we are writing is based on Android's ```Face``` detection API. For the sketch, we use the camera's preview image and send it to the face detector. It returns an array of faces to us that contains the metrics of individual facial features that we can use to draw a rectangle where a face is detected. We test the app on the device, point the Android camera to a web page that displays the results of a Google Image search on the term &lquot;faces.&rquot; This way we can see how well the detection works when it has to respond to a variety of faces of different scales and quality. Let's take a look.
+
+[27]: http://developer.android.com/reference/android/hardware/Camera.Face.html
+[28]: http://en.wikipedia.org/wiki/Haar-like_features
+
+<!-- images/Camera/FaceFinder.png -->
+
+#####Face Finder app.
+######The image illustrates Android's Face Detector API, which here displays fourteen faces found by an image search engine. The API does not recognize faces shown in side profiles or cropped portraits.
+
+######code/Camera/CameraFaceFinder/CameraFaceFinder.pde
+
+Let's take a look at the face finder methods used by the sketch.
+
+1. Create an array to store the list of faces found. It contains the *x* and *y* location of each face and the distance between the eyes.
+2. Center the rectangles that mark found faces around their center points.
+3. Turn off the fill color for the green rectangle markers so we can see though them.
+4. Check the boolean that lets us turn the face finder on and off.
+5. Call the ```findFaces()``` method in the ```FaceFinder``` class with the two parameters for the image input (```cam```) and the maximum number of faces to be found (```20```).
+6. Parse the results returned from the ```faces``` array. The array length varies by the number of faces that are found, so we check how often to iterate through the array by testing ```faces.length``` with the *for* loop.
+7. Draw a rectangle based on the returned face ```location``` ```PVector```. Use ```.x()``` and ```.y()``` to access the horizontal and vertical positions of the face location.
+8. Use twice the ```distance``` between the eyes to draw an approximate rectangle marking the detected face.
+9. Display the total number of faces found; a maximum of ```20``` can be found based on our ```findFaces()``` settings.
+
+Let's give it a try.
+
+###Run the App
+
+Run the app and set the device aside. Now go to your PC and do a Google image search on the word &lquot;face.&rquot; Pick up the Android and aim the camera at the PC display. Google displays a grid of images showing a wide range of faces at different exposures and angles. Now tap the screen to start face detection. You immediately experience a performance hit caused by the face detection algorithm. We've instructed ```findFaces``` to extract up to twenty faces from the camera's preview.
+
+Once the camera has a clear and steady shot of the faces on the PC display, you can see on the Android screen where green rectangles are overlaid onto the detected areas, as illustrated in <!-- ref linkend="fig.face.detection" -->. Overall it does a pretty good job. When portraits are cropped or only show faces in profile, the algorithm doesn't consider it a face. To confirm this rule, do a Google search on the term &lquot;face profile&rquot; and see what happens. Finally, see what &lquot;cartoon face&rquot; will produce. Using these different search strings helps us to understand what the algorithm requires to interpret a certain pixel area as a face.
+
+Let's move on to the detection of moving human subjects. Use ```setCameraID(1)``` just before ```cam.start();``` in ```setup``` to switch to the front-facing camera. Run the app again, and test the face detection algorithm on your own face. You should observe that the face detection feature begins to work as soon as you face the camera. You need to keep enough distance so your face doesn't appear cropped in the camera preview. If you turn your head to present a profile to the camera, your face won't be detected anymore because the camera can't &lquot;see&rquot; both of your eyes.
+
+We haven't looked deeply into what the Face API does exactly to extract faces from a list of pixel values, and in this case, we don't need to. Android provides us with a list of faces, the midpoint between the eyes, and their distance. Edge detection and decision trees are the concern of the API. Clearly, this feature, which ships with all current Android devices, can be used for different purposes.
+
+Unlike social media sites that employ face detection algorithms to match a person or identity with an image, the Android is not concerned about that. If we start up face detection in our app, the Android OS will trigger a face event when it &lquot;sees&rquot; a face, whether or not it knows the identity of that person. For some of your apps, it can be relevant to know whether a person is looking at the screen or not.
+
+Now that you are aware of this feature, it's up to you to use it or look at your device from now on with the level of scrutiny this feature calls for. The face detection project is a good example of why we need to ask for permission to use the ```CAMERA``` (<!-- ref linkend="sec.sketch.permissions" / -->). If we do, the user is prompted to grant or deny this request. Once granted, the app will retain the permission certificate to use the camera, and we won't be prompted any more. In <!-- ref linkend="sec.gaze.rotation" / -->, we'll use the face detection feature to rotate a 3D object based on how we look at the screen. It is one example of where the face detection API serves as an interactive user interface within a 3D environment.
+
+###Wrapping Up
+
+In this chapter, you've learned how to work with the cameras on Android devices. You've also learned how to display the images the cameras acquire, how to save them, and how to work with them when they're stored in memory. You're now able to manipulate images down to the pixel level, use the camera to detect colored objects in motion, and display their paths on the screen. You've also learned how to activate and use Android's face recognition feature.
+
+This completes our investigation of a diverse range of sensors found on Android devices. You know how to interact with their touch screens and how to determine their orientation and bearing as well as their motion and geographic location. You can also take pictures with the Android and start to make sense of what the device is seeing. You're ready now to move on to the second part of this book, where we'll learn how to network the Android with PCs and other mobile devices and work with large amounts of data.
