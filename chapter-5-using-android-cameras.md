@@ -131,7 +131,7 @@ Most mobile Android devices come with both the front-facing and back-facing came
 
 Android lists all built-in device cameras and allows us to pick the one we'd like to work with. For instance, the Nexus 6 uses the camera index ID ```0``` for the back-facing camera and  ```1``` for the front-facing camera. Future Android devices might add more cameras to the device, potentially for 3D applications, so having an enumerated list enables Android OS to incorporate them.
 
-Let's build on the previous sketch <!-- ref linkend="code.camera.getting.started" -->, adding some camera controls that will remain pretty much the same throughout the chapter. Because this sketch is longer than the previous one, we'll separate it into two tabs: a main tab containing the essential ```setup``` and ```draw``` methods, which we'll name ```CameraFrontBack``` (identical to the sketch folder), and a second tab, which we'll call ```CameraControls``` and will contain the methods we need to ```read``` the camera preview,  the methods to ```start``` and ```stop``` the camera, and the UI buttons we'll use to control the camera via the touch screen.
+Let's build on the previous sketch <!-- ref linkend="code.camera.getting.started" -->, adding some camera controls that will remain pretty much the same throughout the chapter. Because this sketch is longer than the previous one, we'll separate it into two tabs: a main tab containing the essential ```setup()``` and ```draw()``` methods, which we'll name ```CameraFrontBack``` (identical to the sketch folder), and a second tab, which we'll call ```CameraControls``` and will contain the methods we need to ```read()``` the camera preview,  the methods to ```start()``` and ```stop()``` the camera, and the UI buttons we'll use to control the camera via the touch screen.
 
 Separating the code this way helps us reduce complexity within the main tab and focus on relevant code for the projects we are working on. We'll store each tab in its own Processing source file, or ```pde``` file, inside the sketch folder. You can always check what's inside your sketch folder using the menu  Sketch  &mapsto;  Show Sketch Folder, or the shortcut *```K```*. 
 
@@ -141,3 +141,94 @@ Let's first take a look at the main tab:
 
 In the main ```CameraFrontBack``` tab, we've added new features.
 
+1. Print all available device cameras to the Processing console using the ```list()``` method included in ```KetaiCamera```.
+2. Set the back-facing camera ID to ```0``` via ```setCameraID()```.
+3. Increase the ```textSize()``` for the UI buttons to ```24``` pixels.
+4. Call the custom ```drawUI()``` method, taking care of drawing UI buttons.
+5. The ```draw()``` method contains only a call to the ```image()``` method, used for displaying the camera preview, and a call to the custom ```drawUI()``` method we defined for our UI elements.
+
+Now let's explore the second sketch tab called ```CameraControls```, where we'll keep all the code that controls the camera.
+
+#####code/Camera/CameraFrontBack/CameraControls.pde
+
+In this ```CameraControls``` tab, we use the following UI elements and camera methods to complete these steps.
+
+1. Display the UI on the screen using a custom ```void``` function called ```drawUI()```. Void functions execute but don't return a value. The UI in this example consists of buttons that use half-transparent rectangles for their backgrounds and text labels for their names.
+2. Check if the camera is running using the boolean method ```isStarted()```. If the method returns ```TRUE```, we display &lquot;stop&rquot;; otherwise show &lquot;start.&rquot;
+3. Capture touch screen input for camera controls using ```mousePressed()```.
+4. Check if the user is interacting with the UI at the top of the screen using the ```mouseY``` constant. If we receive user input within the top ```40``` pixels of the screen, we continue checking the horizontal position via ```mouseX```.
+5. Check if the user presses the leftmost button to start and stop the camera. Each button occupies one-fourth of the screen width, so we check if the horizontal tap position is within the range ```(0..width)/4```. We take the same approach for the other buttons.
+6. Check if the user taps the second button, which is responsible for toggling between the rear and the front cameras. We acquire the current camera ID using ```getCameraID()``` and toggle using ```setCameraID()```.
+7. Check if the user taps the third button, which is responsible for toggling the camera flash on and off.
+8. Check the camera's flash status using the ```isFlashEnabled()``` method and toggle the flash by calling ```enableFlash()``` or ```disableFlash()```, depending on the returned boolean value.
+
+Let's go ahead and test the app now.
+
+###Run the App
+
+Load or enter the two tabs of the sketch, run it on your device, and take a look at the Processing console. You should see a list of all the built-in cameras on your device with their respective IDs, as shown below. 
+
+```
+[camera id [0] facing:backfacing, camera id [1] facing:frontfacing]
+```
+
+When the app launches, the rear-facing camera becomes the default camera, but it remains paused until we start it up. Press the Start button now. The camera preview should appear on the screen at the defined resolution of 1280 x 768 pixels. Toggle the camera from the front to the back using the Camera button. Start and stop the flash. The camera flash belongs to the back-facing camera and works only when the rear camera is active.
+
+Now that we know how to preview and control the camera, it's time to put it to work&emdash;let's snap some pictures. In our next project, we'll learn how to store images on the device.
+
+To snap pictures and save them to the external storage of our device, we'll first need to add a ```savePhoto()``` method to the previous sketch <!-- ref linkend="sec.camera.front.back" -->. The method takes care of capturing the image and writing it to the device's external storage in a folder that bears the app's name. When the photo is written to this public directory on the SD card, we receive a callback from ```onSavePhotoEvent()``` notifying us that the writing process is complete. This callback method is also useful if we'd like to notify the device's media library to make the photos available to other applications, which we accomplish with a call to the ```addToMediaLibrary()``` method. Once we've added photos to the media library, we can browse them in the Gallery&emdash;Android's preinstalled app for organizing pictures and video clips shown in <!-- ref linkend="fig.android.gallery" thispage="yes" -->. The larger the captured photo size, the longer it takes to transfer the image buffer and store it on the disk.
+
+<!-- images/Camera/GalleryAlbum.png -->
+
+#####Figure 5.3 — Android gallery.
+######When we take pictures with our camera app and add them to the public external storage, they are available in an album within Android's Gallery.
+
+To refine the camera app UI, let's also add a Save button that allows us to save the image by tapping the touch screen. Some status info on the current camera settings also seems useful.
+
+For the Save feature, we need to modify the ```draw()``` method in the main ```CameraSavingImages``` tab and make some adjustments to ```CameraControls```. The following code snippets show only the modifications to the previous code in <!-- ref linkend="code.camera.front.back" -->CameraFrontBack.pde<!--/xref--> and <!-- xref linkend="code.camera.front.back.controls" -->CameraControls.pde<!--/xref-->. You can also download the complete ```pde``` source files from the book's website, and if you’re reading the ebook, just click the green rectangle before the code listings. 
+
+Let's take a look.
+
+#####code/Camera/CameraSavingImages/CameraSavingImages.pde
+
+Now let's take a look at the new code we've added to ```draw()``` and what it does.
+
+1. Check the status through the boolean method ```isStarted()```. Returns ```TRUE``` if the camera is on and ```FALSE``` if it's off.
+2. Save the current style settings using ```pushStyle()``` to preserve the ```stroke()```, ```textSize()```, and default ```textAlign(LEFT, TOP)``` for the UI elements, and add a new ```textAlign(CENTER, CENTER)``` style using [```pushStyle()```][11]. Requires ```popStyle()``` to restore previous style settings.
+3. Get the index number of the currently chosen camera using ```getCameraID()```.
+4. Get the preview image width (in pixels) of the current camera using ```getImageWidth()```.
+5. Get the preview image height (in pixels) of the current camera using ```getImageHeight()```.
+6. Get the image width (pixels) of a photo taken by the current camera using ```getPhotoWidth()```. The photo size is separate from the camera preview size.
+7. Get the image height (pixels) of a photo taken by the current camera using ```getPhotoHeight()```.
+8. Inquire about the status of the flash using the boolean method ```isFlashEnabled()```. (The flash belongs to the rear camera and can only be used if the back-facing camera is on.)
+9. Restore the previous style settings using ```popStyle()```.
+
+Changes to ```draw()``` mostly concern the text output that gives us some feedback on the camera settings. Next let's examine the modifications to the camera controls.
+
+#####code/Camera/CameraSavingImages/CameraControls.pde
+
+Take a look at how the code adds the following features.
+
+1. Add a UI button ```text()``` label for saving images.
+2. Add a condition to check if the user taps the added Save button.
+3. Save the photo to the device's external storage using ```savePhoto()```. The method can also take a parameter for a custom file name.
+4. Receive notification from the ```onSavePhotoEvent()``` callback method when a picture is saved to external storage.
+5. Add the picture to the device's public preferred media directory on the external storage using ```addToMediaLibrary()```.
+
+With the addition of the ```savePhoto()``` and ```addToMediaLibrary()```, the app is now ready to store pictures in external storage, which makes the images public and available for other apps, such as the Android Gallery app. Once again, let's make sure we've set the permissions we need to write to external storage (see also <!-- titleref linkend="sec.sketch.permissions" -->). In the Android Permissions Selector, check the boxes next to Write_External_Storage in addition to Camera. This time, we need both to run this sketch successfully.
+
+[11]: http://processing.org/reference/pushStyle_.html
+
+###Run the App
+
+Run the modified sketch on an Android device and tap Save to save the picture.
+
+Now let's take a look at the Gallery and see if the photos we took show up there properly. Press the  Home  button on the device and launch the  Gallery  app, which comes preinstalled with the Android OS. The images you took will appear in the ```CameraSavingImages``` album that bears the same name as the app. Making the images available publicly allows us to share them with other apps. The use of ```addToMediaLibrary()``` is certainly optional. If we use only the ```savePhoto()``` method, the images are still saved to the publicly available external storage, but they won't be visible to other apps using the external storage.
+
+We've now learned how to save images to the external storage of an Android device. In the next project, we'll create a photo booth app that allows us to blend and superimpose the images we capture. To accomplish this task, we'll blend multiple image sources into one. Let's take a look.
+
+###Superimpose and Combine Images
+
+In this project, we'll superimpose a snapshot on a background image, as we might do with a friend in a photo booth at a carnival. Using the Android's front-facing camera, we'll create an app that works like a photo booth, with the small twist that we use scenery loaded from a still resource image as the image's background instead of the physical backdrop we might find in an actual photo booth. We want to be able to use the app anywhere, independent of our current surroundings or lighting level. This is why we need to separate the foreground image from its background. Using color pixel calculations, we can erase a background image and superimpose a snapshot onto a scene loaded from an image in a resource file, as shown in <!-- ref linkend="fig.photo.booth" -->.
+
+The photo booth app combines images from two sources: the preview image acquired by the front-facing camera and an image loaded from a file that will be included with the app.
