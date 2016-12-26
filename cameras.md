@@ -67,8 +67,7 @@ With this brief summary of ```KetaiCamera```methods for this chapter, let's get 
 
 For this initial camera app shown below, we'll display the view seen by the back-facing Android camera.
 
-<!-- imagedata fileref="images/Camera/GettingStarted.png" width="90%" -->
-
+![](images/camera/GettingStarted-sm.png)
 #####Figure 5.1 — Camera preview app.
 ######The illustration shows a camera preview image at a resolution of 1280 x 768 pixels, displayed on the touch screen of a Google Nexus 6, whose resolution is 2560 x 1440 pixels. 
 
@@ -123,8 +122,7 @@ With less than ten lines of code added to the typical processing sketch methods,
 
 Most mobile Android devices come with both the front-facing and back-facing cameras. We need a UI button that toggles between the front and back camera. Let's also activate the flash that's built into most back-facing cameras and add an additional pair of button controls to start and stop the camera. The final app then looks like this:
 
-<!-- images/Camera/FrontBack.png -->
-
+![](images/camera/FrontBack-sm.jpg)
 #####Figure 5.2 — Camera preview app with UI.
 ######The UI added to the Preview app allows users to start and stop the cameras, toggle between the front- and back-facing cameras, and activate the built-in flash.
 
