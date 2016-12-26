@@ -79,8 +79,7 @@ We'll use the ```KetaiCamera``` class to connect to and start the camera. The ``
 The code for a basic camera sketch looks like this: 
 
 #####code/Camera/CameraGettingStarted/CameraGettingStarted.pde
-
-<!-- CODE -->
+[include](code/camera/CameraGettingStarted.pde)
 
 Let's take a closer look at the steps you take and the methods you use to set up a camera sketch.
 
@@ -138,6 +137,7 @@ Separating the code this way helps us reduce complexity within the main tab and 
 Let's first take a look at the main tab:
 
 #####code/Camera/CameraFrontBack/CameraFrontBack.pde
+[include](code/camera/CameraFrontBack/CameraFrontBack.pde)
 
 In the main ```CameraFrontBack``` tab, we've added new features.
 
@@ -150,6 +150,7 @@ In the main ```CameraFrontBack``` tab, we've added new features.
 Now let's explore the second sketch tab called ```CameraControls```, where we'll keep all the code that controls the camera.
 
 #####code/Camera/CameraFrontBack/CameraControls.pde
+[include](code/camera/CameraFrontBack/CameraControls.pde)
 
 In this ```CameraControls``` tab, we use the following UI elements and camera methods to complete these steps.
 
@@ -190,6 +191,7 @@ For the Save feature, we need to modify the ```draw()``` method in the main ```C
 Let's take a look.
 
 #####code/Camera/CameraSavingImages/CameraSavingImages.pde
+[include](code/camera/CameraSavingImages/CameraSavingImages.pde)
 
 Now let's take a look at the new code we've added to ```draw()``` and what it does.
 
@@ -206,6 +208,7 @@ Now let's take a look at the new code we've added to ```draw()``` and what it do
 Changes to ```draw()``` mostly concern the text output that gives us some feedback on the camera settings. Next let's examine the modifications to the camera controls.
 
 #####code/Camera/CameraSavingImages/CameraControls.pde
+[include](code/camera/CameraSavingImages/CameraControls.pde)
 
 Take a look at how the code adds the following features.
 
@@ -276,6 +279,7 @@ For this project, we'll create a new sketch, again with two tabs, and copy the c
 Let's first take a look at the main tab.
 
 #####code/Camera/CameraPhotoBooth/CameraPhotoBooth.pde
+[include](code/camera/CameraPhotoBooth/CameraPhotoBooth.pde)
 
 Here are the steps we need to take in the main tab.
 
@@ -311,6 +315,7 @@ The sole purpose of the sketch's ```data``` folder is to host all necessary medi
 Now let's check what's changed in ```CameraControls```.
 
 #####code/Camera/CameraPhotoBooth/CameraControls.pde
+[include](code/camera/CameraPhotoBooth/CameraControls.pde)
 
 In the Camera Controls tab, we reuse the UI button for the flash from the previous code <!--ref linkend="code.camera.saving.images.camera.controls" /--> and label it &lquot;Snapshot.&rquot; Because the flash belongs to the back-facing camera and it's much easier for us to use the front camera here, we don't need the flash any more for this project. The Snapshot button is now responsible for copying the pixels from ```cam``` to ```snapshot```, as shown below.
 
@@ -351,6 +356,7 @@ Let's take a look. The sketch again contains ```CameraControls```, which we don'
 [26]: http://processing.org/reference/green_.html
 
 #####code/Camera/CameraMagicMarker/CameraMagicMarker.pde
+[include](code/camera/CameraMagicMarker/CameraMagicMarker.pde)
 
 There are a couple of new methods for us to look at.
 
@@ -402,6 +408,7 @@ The face finder sketch we are writing is based on Android's ```Face``` detection
 ######The image illustrates Android's Face Detector API, which here displays fourteen faces found by an image search engine. The API does not recognize faces shown in side profiles or cropped portraits.
 
 ######code/Camera/CameraFaceFinder/CameraFaceFinder.pde
+[include](code/camera/CameraFaceFinder/CameraFaceFinder.pde)
 
 Let's take a look at the face finder methods used by the sketch.
 
