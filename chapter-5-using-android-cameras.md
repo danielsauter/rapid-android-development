@@ -232,3 +232,31 @@ We've now learned how to save images to the external storage of an Android devic
 In this project, we'll superimpose a snapshot on a background image, as we might do with a friend in a photo booth at a carnival. Using the Android's front-facing camera, we'll create an app that works like a photo booth, with the small twist that we use scenery loaded from a still resource image as the image's background instead of the physical backdrop we might find in an actual photo booth. We want to be able to use the app anywhere, independent of our current surroundings or lighting level. This is why we need to separate the foreground image from its background. Using color pixel calculations, we can erase a background image and superimpose a snapshot onto a scene loaded from an image in a resource file, as shown in <!-- ref linkend="fig.photo.booth" -->.
 
 The photo booth app combines images from two sources: the preview image acquired by the front-facing camera and an image loaded from a file that will be included with the app.
+
+<!-- images/Camera/Photobooth.png -->
+
+#####Figure 5.4 — Photo booth app.
+######The image shows the photo booth app using the rover background image we've chosen.
+
+First, take a snapshot with the device sitting still on the table. When you take the snapshot, be sure to stay out of the camera's field of view. We'll use this snapshot as a reference image, which we'll subtract from the camera's preview image. If we've held the camera steady, this subtraction will leave behind an empty, black image by eliminating all the pixels that have not changed. For example, if the live camera and the snapshot images are identical, any ```pixel[n]``` that we choose at random will have the identical value in both images. Let's say, for the sake of argument, that the color of a particular pixel is ```color(135, 23, 245)```. If we subtract the color value of the pixel in one image from the corresponding pixel in the other&emdash;```color(135, 23, 245)``` minus ```color(135, 23, 245)```&emdash;the result is ```color(0, 0, 0)```.
+
+When this subtraction of color values is performed for all of the pixels in an image pair, the resulting effect is that when someone enters the frame of the camera again, the image of the subject will appear to be &lquot;floating&rquot; in front of the background image of our choosing: the landscape of Mars or a view of Lake Michigan from the grounds of the World's Fair. The result: a portable photo booth that we can use to transport ourselves into any scene we'd like.
+
+Let's start by looking in more detail at some of the ```PImage``` features we'll use.
+
+###Working with the PImage Class
+
+[```PImage```][12] is a datatype for storing images that supports ```.tif```, ```.tga```, ```.gif```, ```.png```, and ```.jpg``` image formats. Listed below are some of the ```PImage``` methods that we'll be using for this project:
+
+* *[```loadImage```][13]* Loads the pixel data for the image into its ```pixels[]``` array
+* *[```loadPixels```][14]* Loads the pixel data for the image into its ```pixels[]``` array&emdash;this function must always be called before reading from or writing to ```pixels[]```.
+* *[```updatePixels```][15]* Updates the image with the data in the ```pixels[]``` array&emdash;the method is used in conjunction with ```loadPixels```.
+* *[```pixels[]```][16]* Array containing the color of every pixel in the image
+
+http://processing.org/reference/pixels.htm
+
+[12]: http://processing.org/reference/PImage.html
+[13]: http://processing.org/reference/loadImage_.html
+[14]: http://processing.org/reference/loadPixels_.html
+[15]: http://processing.org/reference/PImage_updatePixels_.html
+[16]: http://processing.org/reference/pixels.html
