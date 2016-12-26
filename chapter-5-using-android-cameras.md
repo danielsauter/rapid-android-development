@@ -108,5 +108,36 @@ Before we run the sketch, we need to give the app permission to use the camera. 
 
 Now run the sketch on the device. The rear-facing camera preview starts up as illustrated in <!-- ref linkend="fig.camera.getting.started" / -->, in a [resolution of 1280px width and 768px height][10], known as WXGA. Android cameras are set to auto mode, so they adjust focus and exposure automatically. Depending on your phone's native screen resolution, the preview image might cover the screen only partially. You can certainly scale and stretch the preview image, which also changes the image aspect ratio and distorts the image. For instance, if you set the width and height parameters in the ```image()``` method to ```screenWidth``` and ```screenHeight``` as in the following code, the camera preview will always stretch full screen independent of the screen's size and resolution. 
 
+```
+image(cam, width/2, height/2, width, height);
+```
+
+Go ahead and try the fullscreen mode on your device. For a preview image in a camera app, it doesn't seem like a good idea to stretch the image, though. When we write apps that scale seamlessly across devices, we typically lock and maintain aspect ratios for images and UIs.
+
+As we can see in the code <!--xref linkend="code.camera.getting.started" -->, the steps we take to get the camera started are like the steps we took working with other sensors (<!-- titleref linkend="chp.sensors" -->). First we instantiate a ```KetaiCamera``` object using a defined ```width```, ```height```, and ```frameRate```. Then we start the camera. And finally, we read new images from the camera using ```onCameraPreviewEvent()``` and display them. The frame rate in this sketch is set to 30 frames per second, which is the typical playback speed for digital video, giving the appearance of seamless movement. Depending on your device and image conversion performance, the image preview might not be able to keep up with the designated thirty previews per second. In that case, the sketch will try to approach the set frame rate as best it can. 
+
+With less than ten lines of code added to the typical processing sketch methods, we've completed our first camera app. The ```onPause``` and ```exit``` methods are responsible for releasing the camera properly when we pause or exit the app. The methods make sure that other apps can use the cameras and that we don't keep them locked down for our app alone. You can only have one active connection to the cameras at a time.
 
 [10]: http://en.wikipedia.org/wiki/Display_resolution
+
+###Toggle Between the Front- and Back-Facing Cameras
+
+Most mobile Android devices come with both the front-facing and back-facing cameras. We need a UI button that toggles between the front and back camera. Let's also activate the flash that's built into most back-facing cameras and add an additional pair of button controls to start and stop the camera. The final app then looks like this:
+
+<!-- images/Camera/FrontBack.png -->
+
+#####Figure 5.2 — Camera preview app with UI.
+######The UI added to the Preview app allows users to start and stop the cameras, toggle between the front- and back-facing cameras, and activate the built-in flash.
+
+Android lists all built-in device cameras and allows us to pick the one we'd like to work with. For instance, the Nexus 6 uses the camera index ID ```0``` for the back-facing camera and  ```1``` for the front-facing camera. Future Android devices might add more cameras to the device, potentially for 3D applications, so having an enumerated list enables Android OS to incorporate them.
+
+Let's build on the previous sketch <!-- ref linkend="code.camera.getting.started" -->, adding some camera controls that will remain pretty much the same throughout the chapter. Because this sketch is longer than the previous one, we'll separate it into two tabs: a main tab containing the essential ```setup``` and ```draw``` methods, which we'll name ```CameraFrontBack``` (identical to the sketch folder), and a second tab, which we'll call ```CameraControls``` and will contain the methods we need to ```read``` the camera preview,  the methods to ```start``` and ```stop``` the camera, and the UI buttons we'll use to control the camera via the touch screen.
+
+Separating the code this way helps us reduce complexity within the main tab and focus on relevant code for the projects we are working on. We'll store each tab in its own Processing source file, or ```pde``` file, inside the sketch folder. You can always check what's inside your sketch folder using the menu  Sketch  &mapsto;  Show Sketch Folder, or the shortcut *```K```*. 
+
+Let's first take a look at the main tab:
+
+#####code/Camera/CameraFrontBack/CameraFrontBack.pde
+
+In the main ```CameraFrontBack``` tab, we've added new features.
+
