@@ -177,8 +177,7 @@ Now that we know how to preview and control the camera, it's time to put it to w
 
 To snap pictures and save them to the external storage of our device, we'll first need to add a ```savePhoto()``` method to the previous sketch <!-- ref linkend="sec.camera.front.back" -->. The method takes care of capturing the image and writing it to the device's external storage in a folder that bears the app's name. When the photo is written to this public directory on the SD card, we receive a callback from ```onSavePhotoEvent()``` notifying us that the writing process is complete. This callback method is also useful if we'd like to notify the device's media library to make the photos available to other applications, which we accomplish with a call to the ```addToMediaLibrary()``` method. Once we've added photos to the media library, we can browse them in the Gallery&emdash;Android's preinstalled app for organizing pictures and video clips shown in <!-- ref linkend="fig.android.gallery" thispage="yes" -->. The larger the captured photo size, the longer it takes to transfer the image buffer and store it on the disk.
 
-<!-- images/Camera/GalleryAlbum.png -->
-
+![](images/camera/GalleryAlbum-sm.jpg)
 #####Figure 5.3 — Android gallery.
 ######When we take pictures with our camera app and add them to the public external storage, they are available in an album within Android's Gallery.
 
@@ -234,8 +233,8 @@ In this project, we'll superimpose a snapshot on a background image, as we might
 
 The photo booth app combines images from two sources: the preview image acquired by the front-facing camera and an image loaded from a file that will be included with the app.
 
-<!-- images/Camera/Photobooth.png -->
 
+![](images/camera/Photobooth-sm.jpg)
 #####Figure 5.4 — Photo booth app.
 ######The image shows the photo booth app using the rover background image we've chosen.
 
@@ -336,6 +335,7 @@ In the drawing game that we'll build in this section, two players will compete t
 
 The camera remains static during the game. As <!--ref linkend="fig.magic.marker" thispage="yes" -->, illustrates, only the primary colors red and blue leave traces and count toward the score. If the red player succeeds in covering more pixel real estate than the blue, red wins. If blue dominates the screen, blue wins. If you are using an Android tablet you can step a little bit further away from the device than is the case for a phone, where the players are more likely to get in each other's way, making the game more competitive and intimate.
 
+![](images/camera/MagicMarker-sm.png)
 #####Figure 5.5 – Magic marker drawing game.
 ######Red- and blue-colored objects leave color marks, gradually covering  the camera preview. The color that dominates wins the game.
 
@@ -402,7 +402,7 @@ The face finder sketch we are writing is based on Android's ```Face``` detection
 
 <!-- images/Camera/FaceFinder.png -->
 
-#####Face Finder app.
+#####Figure 5.7 — Face Finder app.
 ######The image illustrates Android's Face Detector API, which here displays fourteen faces found by an image search engine. The API does not recognize faces shown in side profiles or cropped portraits.
 
 ######code/Camera/CameraFaceFinder/CameraFaceFinder.pde
