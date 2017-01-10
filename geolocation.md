@@ -90,7 +90,7 @@ By default, [Android denies permissions][10] to any app that requests access to 
 
 If we'd like to use the device's location data, we need to ask for permission. Android prompts the user to grant permission if an app requests permission that has not been given to the app before. The Processing IDE (PDE) helps us administer permission requests through the Android Permission Selector, which is available from the menu by selecting Android &mapsto; Sketch Permissions. There we'll find a list of all the permissions that can be requested by an app on the Android.
 
-As illustrated in Figure 4.1 below, the location permissions need to be set for this app. When we run the sketch on the device and Processing compiles the Android package, it generates a so-called ```AndroidManifest.xml``` file that corresponds to our permission settings. We don't need to worry much about the details of [```AndroidManifest.xml```;][12] owever, as follows, we can see how Processing's Permissions Selector translates our selection into a user-permissions list.
+As illustrated in Figure 4.1 below, the location permissions need to be set for this app. When we run the sketch on the device and Processing compiles the Android package, it generates a so-called ```AndroidManifest.xml``` file that corresponds to our permission settings. We don't need to worry much about the details of [```AndroidManifest.xml```;][12] however, as follows, we can see how Processing's Permissions Selector translates our selection into a user-permissions list.
 
 #####code/Geolocation/Geolocation/AndroidManifest.xml
 [include](code/geolocation/AndroidManifest.xml)
