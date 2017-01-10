@@ -134,7 +134,7 @@ This exercise will familiarize us with the kinds of values we'll use to determin
 ######code/Geolocation/Geolocation/Geolocation.pde
 [include](code/geolocation/geolocation.pde)
 
-<!-- 4.1 ERROR code/geolocation/geolocation.pde is currently non-functional. Checked xml & geolocation settings on the phone. -->
+<!-- 4.1 ERROR code/geolocation/geolocation.pde is currently non-functional. Checked xml & geolocation settings on the phone. Also tried swapping location formatting ala "Working with the Location Class" -->
 
 Let's take a look at how the newly introduced class and methods are used in this example.
 
