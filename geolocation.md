@@ -134,6 +134,8 @@ This exercise will familiarize us with the kinds of values we'll use to determin
 ######code/Geolocation/Geolocation/Geolocation.pde
 [include](code/geolocation/geolocation.pde)
 
+<!-- 4.1 ERROR code/geolocation/geolocation.pde is currently non-functional. Checked xml & geolocation settings on the phone. -->
+
 Let's take a look at how the newly introduced class and methods are used in this example.
 
 1. Declare the variable ```location``` to be of type ```KetaiLocation```. We'll use this variable to store location updates.
