@@ -159,7 +159,8 @@ sensor.start();		                                 // 4
 void draw()
 {
 }
-void onAccelerometerEvent(float x, float y, float z) // 5
+
+void onAccelerometerEvent(float x, float y, float z)       // 5
 {
 }
 ```
