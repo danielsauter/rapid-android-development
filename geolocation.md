@@ -270,7 +270,7 @@ If we are heading toward a destination and want to use our Android device like a
 
 The core idea here is that we'll calculate the ```bearing``` and then use it to rotate a graphic object, a triangle, which will serve as our compass needle. The rotation of our graphic object and text will be performed by moving the triangle to the center of the screen using ```translate()```. Then we'll ```rotate()``` the compass needle by the angle resulting from the difference of the device orientation toward north and the calculated ```bearing``` toward the destination. We'll calculate the ```bearing``` using the ```bearingTo()``` method, which returns values ranging ```-180..180``` measured from true north—the shortest path between our device location and the destination.
 
-Then we'll draw the triangle and the text showing the distance to the destination in meters and miles. We convert the ```distance``` from the default measurement unit returned by the Android, meters, into miles by multiplying ```distance``` by ```0.000621371192```. Because ```bearing``` is measured in degrees and so is the compass azimuth, we'll need to convert it into ```radians()``` first before performing the rotation. Degree values range ```0..360``` degrees and radians range [```0..``````TW0_PI```.][28] All trigonometric methods in Processing require parameters to be specified in radians.
+Then we'll draw the triangle and the text showing the distance to the destination in meters and miles. We convert the ```distance``` from the default measurement unit returned by the Android, meters, into miles by multiplying ```distance``` by ```0.000621371192```. Because ```bearing``` is measured in degrees and so is the compass azimuth, we'll need to convert it into ```radians()``` first before performing the rotation. Degree values range ```0..360``` degrees and radians range [```0..TW0_PI```.][28] All trigonometric methods in Processing require parameters to be specified in radians.
 
 We'll use the ```PVector``` class we've already used earlier so we can keep the code concise and don't use more variables than we need.  For numeric feedback, we use the ```mousePressed()``` method to display the location values and the bearing we'll calculate.
 
@@ -279,7 +279,7 @@ Let's build.
 [28]: http://processing.org/reference/TWO_PI.html
 
 #####Geolocation/DestinationCompass/DestinationCompass.pde
-[include](code/geolocation/geolocation.pde)
+[include](code/geolocation/DestinationCompass.pde)
 
 Let's take a look at the code additions.
 
