@@ -240,7 +240,7 @@ Now that you know how to calculate the distance between two points, you're ready
 
 To determine the speed and bearing of a device, three other useful Android ```Location``` methods can be applied in ways that are similar to what we did with ```distanceTo()```. Let's create a new sketch and focus for a moment on travel speed and bearing.
 
-We've mastered latitude, longitude, and altitude and calculated the distance between two points. The next step is to determine where we are heading and how fast we are going. Because these parameters are only fun to test while we are on the move, let's create a simple new sketch that focuses on speed and bearing. Then we'll bring it all together in the next section, <!-- ref linkend="sec.destination.finder-->.
+We've mastered latitude, longitude, and altitude and calculated the distance between two points. The next step is to determine where we are heading and how fast we are going. Because these parameters are only fun to test while we are on the move, let's create a simple new sketch that focuses on speed and bearing. Then we'll bring it all together in the next section, [Find Your Way to a Destination](../geolocation.html#find-your-way-to-a-destination).
 
 Let's take a look.
 
