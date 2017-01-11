@@ -208,6 +208,8 @@ Let's take a look at the code.
 #####code/Geolocation/LocationDistance/LocationDistance.pde
 [include](code/geolocation/LocationDistance.pde)
 
+<!-- 4.2 NOTE needed fullScreen() -->
+
 Here's what's new in this sketch compared to our previous project.
 
 1. Create an Android ```Location``` object to store a fixed location against which to compare your current device location. I named mine "bam" (for the Brooklyn Academy of Music). We'll use the [```setLatitude()```][23] and [```setLongitude()```][24] Android methods to set its values.
