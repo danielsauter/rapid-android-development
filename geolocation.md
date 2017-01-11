@@ -246,6 +246,7 @@ Let's take a look.
 
 #####code/Geolocation/LocationSpeed/LocationSpeed.pde
 [include](code/geolocation/LocationSpeed.pde)
+<!-- 4.3 NOTE - Also needs fullScreen(); -->
 
 Here are the two new Android ```Location``` methods we are using for this sketch.
 
