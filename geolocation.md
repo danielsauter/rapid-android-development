@@ -283,6 +283,8 @@ Let's build.
 
 <!-- 4.4 NOTE - Needs fullScreen(). Location Lat/Long is shown  as 0/0 despite appearing to correctly calculate distance and bearing -->
 
+<!-- 4.5 NOTE - If run directly from github files, shows compiling errors related to the manifest. Copy and pasting .pde into new file and allowing processing to compile fixes this error. -->
+
 Let's take a look at the code additions.
 
 1. Introduce the ```compass``` variable to store the rotation around the [**z**-axis.][29]
@@ -304,7 +306,7 @@ We are  now using two methods, ```onLocationEvent()``` and ```onOrientationEvent
 
 ###Run the App
 
-Let's run the app on the device and find out whether we are being pointed in the right direction. Make sure to set the correct permissions again, as we've discussed in <!-- ref linkend="sec.sketch.permissions-->. For this test, it's quite helpful that we've looked up the destination earlier so we can better gage how well the app is doing.
+Let's run the app on the device and find out whether we are being pointed in the right direction. Make sure to set the correct permissions again, as we've discussed in [Setting Sketch Permissions](../geolocation.html#setting-sketch-permissions). For this test, it's quite helpful that we've looked up the destination earlier so we can better gage how well the app is doing.
 
 If you tap the screen, you can observe raw device location values, the ```compass``` variable we've calculated, and the calculated ```bearing``` angle of the device. The ```distance``` toward the destination and the location provider are also displayed on the screen, as shown in Figure 4.4.
 
@@ -318,9 +320,9 @@ Now that we've seen how to find our way to a fixed destination, the next task in
 
 ###Find a Significant Other (Device)
 
-At first sight, it seems there is not much of a difference between the compass app we've just made and one that guides us  toward another mobile device. If we think about it, though, using a hard-coded latitude and longitude as we did in our previous sketch is quite different from retrieving another device's location data in real time. We'll explore networking techniques in detail in <!-- ref linkend="chp.wifi-->. The difficulty is that two mobile devices separated by some distance will not share a common IP address that we can  use to exchange our location data. So for this task, we need a shared place where each device can write its own latitude and longitude and where each can read the other device's location in return.
+At first sight, it seems there is not much of a difference between the compass app we've just made and one that guides us  toward another mobile device. If we think about it, though, using a hard-coded latitude and longitude as we did in our previous sketch is quite different from retrieving another device's location data in real time. We'll explore networking techniques in detail in {{ book.chapter6 }}. The difficulty is that two mobile devices separated by some distance will not share a common IP address that we can  use to exchange our location data. So for this task, we need a shared place where each device can write its own latitude and longitude and where each can read the other device's location in return.
 
-For this project, we'll use a web server to facilitate sharing, and we'll equip it with a simple PHP script  that takes the location info from each device and writes it to a text file. If one device knows the (made-up) name of the other, it can look it up on that server and we'll have a significant-other location to navigate to. You can certainly download the script <!-- ref linkend="code.php.io-->, and host it on your own web server as well.
+For this project, we'll use a web server to facilitate sharing, and we'll equip it with a simple PHP script that takes the location info from each device and writes it to a text file. If one device knows the (made-up) name of the other, it can look it up on that server and we'll have a significant-other location to navigate to. You can certainly download the script <!-- ref linkend="code.php.io-->, and host it on your own web server as well.
 
 Let's get started. This sketch works with the PHP script on the dedicated web server for this book project. If you point the ```serverURL``` variable to another destination, you'll store your locations there.
 
