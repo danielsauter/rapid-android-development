@@ -39,18 +39,18 @@ void draw() {
         "Provider: " + location.getProvider(), 20, 0, width, height);
   }
   else {
-    translate(width/2, height/2);  //<callout id="co.center.matrix"/>
-    rotate(radians(bearing) - radians(compass));                  // 3
+    translate(width/2, height/2);                                 // 3
+    rotate(radians(bearing) - radians(compass));                  // 4
     stroke(255);
-    triangle(-width/4, 0, width/4, 0, 0, -width/2);               // 4
+    triangle(-width/4, 0, width/4, 0, 0, -width/2);               // 5
     text((int)distance + " meters", 0, 60);
-    text(nf(distance*0.000621, 0, 2) + " miles", 0, 140);         // 5
+    text(nf(distance*0.000621, 0, 2) + " miles", 0, 140);         // 6
   }
 }
 
 void onLocationEvent(Location _location) {
   println("onLocation event: " + _location.toString());
-  locationVector.x = (float)_location.getLatitude();              // 6
+  locationVector.x = (float)_location.getLatitude();              // 7
   locationVector.y = (float)_location.getLongitude();
 }
 void onOrientationEvent(float x, float y, float z, long time, int accuracy) { // 7

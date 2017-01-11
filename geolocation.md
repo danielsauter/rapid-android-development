@@ -281,6 +281,8 @@ Let's build.
 #####Geolocation/DestinationCompass/DestinationCompass.pde
 [include](code/geolocation/DestinationCompass.pde)
 
+<!-- 4.4 NOTE - Needs fullScreen(). Location Lat/Long is shown  as 0/0 despite appearing to correctly calculate distance and bearing -->
+
 Let's take a look at the code additions.
 
 1. Introduce the ```compass``` variable to store the rotation around the [**z**-axis.][29]
