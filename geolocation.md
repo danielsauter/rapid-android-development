@@ -64,22 +64,22 @@ The ```KetaiLocation``` class is designed to provide us with the longitude, lati
 
 <!-- CHECK FOR FORMATTING CONSISTANCY - pg 72 pdf -->
 
-*```onLocationEvent()```* <br />
+* *```onLocationEvent()```* 
 Returns the device location, including latitude, longitude, altitude, and location accuracy
 
-*```latitude```*<br />
+* *```latitude```* 
 Describes the angular distance of a place north or south of the Earth's equator in decimal degrees—positive ```lat``` values describe points north of the equator; negative values describe points south of the equator (for example, Chicago is located at ```41.87338``` degrees latitude in the northern hemisphere; Wellington, New Zealand, is located at ```-41.29019``` degrees latitude in the southern hemisphere).
 
-*```longitude```*<br />
+* *```longitude```* 
 Describes the angular distance of a place east or west of the meridian at Greenwich, England, in decimal degrees (for example, Chicago, which is west of the Greenwich meridian, is located at -87.648798 degrees longitude; Yanqi in the Xinjiang Province, China, is located at ```87.648798``` degrees longitude.)
 
-*```altitude```*<br />
+* *```altitude```*
 Returns the height of the device in relation to sea level measured in meters
 
-*```accuracy```*<br />
+* *```accuracy```*
 Returns the accuracy of the location estimate in meters
 
-*```getProvider()```*<br />
+* *```getProvider()```*
 Returns the identity of the location provider being used to estimate the location: ```gps``` or ```network```—it does not distinguish between cellular or Wi-Fi networks.
 
 Before we can use data from the location provider, we need to take a look at the permissions the sketch needs to access this data.
