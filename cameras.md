@@ -82,11 +82,11 @@ The code for a basic camera sketch looks like this:
 
 Let's take a closer look at the steps you take and the methods you use to set up a camera sketch.
 
-1. Create an instance of the ```KetaiCamera``` class to generate a new camera object with a preview width and height of 1280 x 768 pixels and an update rate of 30 frames per second.
+1. Create an instance of the `KetaiCamera` class to generate a new camera object with a preview width and height of 1280 x 768 pixels and an update rate of 30 frames per second.
 
-2. Call ```imageMode()``` to tell Android to center its camera images on its screen. All images are now drawn from their center point instead of from the default upper left corner.
+2. Call `imageMode()` to tell Android to center its camera images on its screen. All images are now drawn from their center point instead of from the default upper left corner.
 
-3. Display the camera preview using the [```image()``` method][9]. It requires an image source as well as the ```x``` and ```y``` coordinates of the image to display. Optionally, the image can be rescaled using an additional parameter for the image ```width``` and ```height```, which is what we are doing here.
+3. Display the camera preview using the [`image()` method][9]. It requires an image source as well as the `x` and `y` coordinates of the image to display. Optionally, the image can be rescaled using an additional parameter for the image `width` and `height`, which is what we are doing here.
 
 4. Use the ```onCameraPreviewEvent()``` callback method for notification that a new preview image is available. This is the best time to read the new image.
 
