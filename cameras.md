@@ -147,21 +147,23 @@ In the main `CameraFrontBack` tab, we've added new features.
 4. Call the custom `drawUI()` method, taking care of drawing UI buttons.
 5. The `draw()` method contains only a call to the `image()` method, used for displaying the camera preview, and a call to the custom `drawUI()` method we defined for our UI elements.
 
-Now let's explore the second sketch tab called ```CameraControls```, where we'll keep all the code that controls the camera.
+Now let's explore the second sketch tab called `CameraControls`, where we'll keep all the code that controls the camera.
 
 #####code/Camera/CameraFrontBack/CameraControls.pde
 [include](code/camera/CameraFrontBack/CameraControls.pde)
 
-In this ```CameraControls``` tab, we use the following UI elements and camera methods to complete these steps.
+<!-- 5.4 ISSUE - Code returns error in console, doesn't run -->
 
-1. Display the UI on the screen using a custom ```void``` function called ```drawUI()```. Void functions execute but don't return a value. The UI in this example consists of buttons that use half-transparent rectangles for their backgrounds and text labels for their names.
-2. Check if the camera is running using the boolean method ```isStarted()```. If the method returns ```TRUE```, we display "stop"; otherwise show "start."
-3. Capture touch screen input for camera controls using ```mousePressed()```.
-4. Check if the user is interacting with the UI at the top of the screen using the ```mouseY``` constant. If we receive user input within the top ```40``` pixels of the screen, we continue checking the horizontal position via ```mouseX```.
-5. Check if the user presses the leftmost button to start and stop the camera. Each button occupies one-fourth of the screen width, so we check if the horizontal tap position is within the range ```(0..width)/4```. We take the same approach for the other buttons.
-6. Check if the user taps the second button, which is responsible for toggling between the rear and the front cameras. We acquire the current camera ID using ```getCameraID()``` and toggle using ```setCameraID()```.
+In this `CameraControls` tab, we use the following UI elements and camera methods to complete these steps.
+
+1. Display the UI on the screen using a custom `void` function called `drawUI()`. Void functions execute but don't return a value. The UI in this example consists of buttons that use half-transparent rectangles for their backgrounds and text labels for their names.
+2. Check if the camera is running using the boolean method `isStarted()`. If the method returns `TRUE`, we display "stop"; otherwise show "start."
+3. Capture touch screen input for camera controls using `mousePressed()`.
+4. Check if the user is interacting with the UI at the top of the screen using the `mouseY` constant. If we receive user input within the top `40` pixels of the screen, we continue checking the horizontal position via `mouseX`.
+5. Check if the user presses the leftmost button to start and stop the camera. Each button occupies one-fourth of the screen width, so we check if the horizontal tap position is within the range `(0..width)/4`. We take the same approach for the other buttons.
+6. Check if the user taps the second button, which is responsible for toggling between the rear and the front cameras. We acquire the current camera ID using `getCameraID()` and toggle using `setCameraID()`.
 7. Check if the user taps the third button, which is responsible for toggling the camera flash on and off.
-8. Check the camera's flash status using the ```isFlashEnabled()``` method and toggle the flash by calling ```enableFlash()``` or ```disableFlash()```, depending on the returned boolean value.
+8. Check the camera's flash status using the `isFlashEnabled()` method and toggle the flash by calling `enableFlash()` or `disableFlash()`, depending on the returned boolean value.
 
 Let's go ahead and test the app now.
 
@@ -177,7 +179,7 @@ When the app launches, the rear-facing camera becomes the default camera, but it
 
 Now that we know how to preview and control the camera, it's time to put it to work—let's snap some pictures. In our next project, we'll learn how to store images on the device.
 
-To snap pictures and save them to the external storage of our device, we'll first need to add a ```savePhoto()``` method to the previous sketch <!-- ref linkend="sec.camera.front.back" -->. The method takes care of capturing the image and writing it to the device's external storage in a folder that bears the app's name. When the photo is written to this public directory on the SD card, we receive a callback from ```onSavePhotoEvent()``` notifying us that the writing process is complete. This callback method is also useful if we'd like to notify the device's media library to make the photos available to other applications, which we accomplish with a call to the ```addToMediaLibrary()``` method. Once we've added photos to the media library, we can browse them in the Gallery—Android's preinstalled app for organizing pictures and video clips shown in <!-- ref linkend="fig.android.gallery" thispage="yes" -->. The larger the captured photo size, the longer it takes to transfer the image buffer and store it on the disk.
+To snap pictures and save them to the external storage of our device, we'll first need to add a `savePhoto()` method to the previous sketch <!-- ref linkend="sec.camera.front.back" -->. The method takes care of capturing the image and writing it to the device's external storage in a folder that bears the app's name. When the photo is written to this public directory on the SD card, we receive a callback from ```onSavePhotoEvent()``` notifying us that the writing process is complete. This callback method is also useful if we'd like to notify the device's media library to make the photos available to other applications, which we accomplish with a call to the ```addToMediaLibrary()``` method. Once we've added photos to the media library, we can browse them in the Gallery—Android's preinstalled app for organizing pictures and video clips shown in <!-- ref linkend="fig.android.gallery" thispage="yes" -->. The larger the captured photo size, the longer it takes to transfer the image buffer and store it on the disk.
 
 ![](images/camera/GalleryAlbum-sm.jpg)
 #####Figure 5.3 — Android gallery.
