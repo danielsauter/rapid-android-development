@@ -128,24 +128,24 @@ Most mobile Android devices come with both the front-facing and back-facing came
 #####Figure 5.2 — Camera preview app with UI.
 ######The UI added to the Preview app allows users to start and stop the cameras, toggle between the front- and back-facing cameras, and activate the built-in flash.
 
-Android lists all built-in device cameras and allows us to pick the one we'd like to work with. For instance, the Nexus 6 uses the camera index ID ```0``` for the back-facing camera and  ```1``` for the front-facing camera. Future Android devices might add more cameras to the device, potentially for 3D applications, so having an enumerated list enables Android OS to incorporate them.
+Android lists all built-in device cameras and allows us to pick the one we'd like to work with. For instance, the Nexus 6 uses the camera index ID `0` for the back-facing camera and  `1` for the front-facing camera. Future Android devices might add more cameras to the device, potentially for 3D applications, so having an enumerated list enables Android OS to incorporate them.
 
-Let's build on the previous sketch <!-- ref linkend="code.camera.getting.started" -->, adding some camera controls that will remain pretty much the same throughout the chapter. Because this sketch is longer than the previous one, we'll separate it into two tabs: a main tab containing the essential ```setup()``` and ```draw()``` methods, which we'll name ```CameraFrontBack``` (identical to the sketch folder), and a second tab, which we'll call ```CameraControls``` and will contain the methods we need to ```read()``` the camera preview,  the methods to ```start()``` and ```stop()``` the camera, and the UI buttons we'll use to control the camera via the touch screen.
+Let's build on the previous sketch CameraGettingStarted.pde, adding some camera controls that will remain pretty much the same throughout the chapter. Because this sketch is longer than the previous one, we'll separate it into two tabs: a main tab containing the essential `setup()` and `draw()` methods, which we'll name `CameraFrontBack` (identical to the sketch folder), and a second tab, which we'll call `CameraControls` and will contain the methods we need to `read()` the camera preview,  the methods to `start()` and `stop()` the camera, and the UI buttons we'll use to control the camera via the touch screen.
 
-Separating the code this way helps us reduce complexity within the main tab and focus on relevant code for the projects we are working on. We'll store each tab in its own Processing source file, or ```pde``` file, inside the sketch folder. You can always check what's inside your sketch folder using the menu  Sketch  &mapsto;  Show Sketch Folder, or the shortcut *```K```*. 
+Separating the code this way helps us reduce complexity within the main tab and focus on relevant code for the projects we are working on. We'll store each tab in its own Processing source file, or `pde` file, inside the sketch folder. You can always check what's inside your sketch folder using the menu  Sketch  &mapsto;  Show Sketch Folder, or the shortcut *`K`*. 
 
 Let's first take a look at the main tab:
 
 #####code/Camera/CameraFrontBack/CameraFrontBack.pde
 [include](code/camera/CameraFrontBack/CameraFrontBack.pde)
 
-In the main ```CameraFrontBack``` tab, we've added new features.
+In the main `CameraFrontBack` tab, we've added new features.
 
-1. Print all available device cameras to the Processing console using the ```list()``` method included in ```KetaiCamera```.
-2. Set the back-facing camera ID to ```0``` via ```setCameraID()```.
-3. Increase the ```textSize()``` for the UI buttons to ```24``` pixels.
-4. Call the custom ```drawUI()``` method, taking care of drawing UI buttons.
-5. The ```draw()``` method contains only a call to the ```image()``` method, used for displaying the camera preview, and a call to the custom ```drawUI()``` method we defined for our UI elements.
+1. Print all available device cameras to the Processing console using the `list()` method included in `KetaiCamera`.
+2. Set the back-facing camera ID to `0` via `setCameraID()`.
+3. Increase the `textSize()` for the UI buttons to `24` pixels.
+4. Call the custom `drawUI()` method, taking care of drawing UI buttons.
+5. The `draw()` method contains only a call to the `image()` method, used for displaying the camera preview, and a call to the custom `drawUI()` method we defined for our UI elements.
 
 Now let's explore the second sketch tab called ```CameraControls```, where we'll keep all the code that controls the camera.
 
