@@ -7,7 +7,7 @@ We'll start with the back-facing camera and learn how to display what it "sees" 
 
 Once we have stored an image from a camera, we may want to make further use of it. Additional APIs allow us to stack stored images to create a composite image that consists of a foreground and a background. We'll put this functionality to work by building a photo booth app, where we will create a fake backdrop and superimpose a snapshot on it.
 
-But there's more. The Processing language also provides us with APIs that we can use to analyze the content of the images that we capture at the pixel level. We'll use that capability to build a game that can detect the color of a moving object—red or blue—and display the pattern of its motion on the device screen. To make the activity into a game, two players will compete to fill the screen by waving colored objects above it. The first to fill more than 50 percent of the screen wins. In building the game, we'll get to know the Processing ```PImage``` class, which allows us to manipulate images and work directly with pixel values.
+But there's more. The Processing language also provides us with APIs that we can use to analyze the content of the images that we capture at the pixel level. We'll use that capability to build a game that can detect the color of a moving object—red or blue—and display the pattern of its motion on the device screen. To make the activity into a game, two players will compete to fill the screen by waving colored objects above it. The first to fill more than 50 percent of the screen wins. In building the game, we'll get to know the Processing `PImage` class, which allows us to manipulate images and work directly with pixel values.
 
 Finally, we'll end the chapter with a brief look at Android's built-in face recognizer. This lesser-known camera feature is made possible by computer vision algorithms and the increased processing power that's finding its way into Android devices. Android provides a face-finder API that uses pixel-level image analysis to make inferences about what's going in the device's field of view. We'll demonstrate its use with a brief example.
 
@@ -19,7 +19,7 @@ Before we get started on our first project, let's first take a look at some of t
 
 Android phones and tablets are typically equipped with two cameras. Camera hardware varies across phones and tablets, but typically the back-facing camera is used to capture images and HD video at a resolution of 5 mega-pixels. The lower-resolution, front-facing camera is designed for video calls. The Google Nexus 6 phone, for example, features a 13-megapixel back-facing camera (4160 x 3120 pixels) with a built-in LED flash and a 2-megapixel front-facing camera.
 
-Mobile cameras don't rely on hardware alone. The Android SDK provides a variety of features through its ```Camera``` class that make the camera more than just a [camera.][2] We can use code to work with camera metering, focus, exposure, white balance, zoom, image capture, and even face detection. Geolocation data can also be added to image metadata so that images can be organized by the location where they were taken. The Google Camera app that ships with Android devices allows users to manipulate those features in its UI. But we're going to learn how apps can use them as well.
+Mobile cameras don't rely on hardware alone. The Android SDK provides a variety of features through its `Camera` class that make the camera more than just a [camera.][2] We can use code to work with camera metering, focus, exposure, white balance, zoom, image capture, and even face detection. Geolocation data can also be added to image metadata so that images can be organized by the location where they were taken. The Google Camera app that ships with Android devices allows users to manipulate those features in its UI. But we're going to learn how apps can use them as well.
 
 To implement the camera features in this chapter, we'll work mainly with a single Ketai library class and a highly versatile Processing type:
 
@@ -56,9 +56,9 @@ Besides providing the typical `start` and `stop` methods that we use to control 
 
 * *[`KetaiSimpleFace()`][5]* A Ketai wrapper for the `Face` class in [Android's `FaceDetector` package][6], which returns the midpoint location and distance between the eyes recognized by the device cameras.
 
-* *```KetaiSimpleFace[]```* A ```PVector``` list containing the position data of detected faces within a camera image&emdash;the center point between the left and right eyes and the distance between the eyes are stored in this array.
+* *`KetaiSimpleFace[]`* A `PVector` list containing the position data of detected faces within a camera image—the center point between the left and right eyes and the distance between the eyes are stored in this array.
 
-With this brief summary of ```KetaiCamera```methods for this chapter, let's get started with our first camera app.
+With this brief summary of `KetaiCamera`methods for this chapter, let's get started with our first camera app.
 
 [5]: http://ketai.org/reference/cv/ketaisimpleface/
 [6]: http://developer.android.com/reference/android/media/FaceDetector.Face.html
