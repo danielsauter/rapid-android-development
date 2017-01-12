@@ -79,6 +79,7 @@ The code for a basic camera sketch looks like this:
 
 #####code/Camera/CameraGettingStarted/CameraGettingStarted.pde
 [include](code/camera/CameraGettingStarted.pde)
+<!-- 5.2 ERROR - Sketch does not run. No errors shown in console. -->
 
 Let's take a closer look at the steps you take and the methods you use to set up a camera sketch.
 
@@ -104,7 +105,7 @@ Let's try the sketch on the Android phone or tablet.
 
 Before we run the sketch, we need to give the app permission to use the camera. Here's how: On the Processing menu bar, select  Android  &mapsto;  Sketch Permissions.  In the Android Permissions Selector that appears, select Camera. As we've done already in {{ book.chapter4 }} earlier in [Setting Sketch Permissions](../geolocation.html#setting-sketch-permissions), the Android must allow the app to use the camera through a certificate, or it must prompt the user to approve the request to use the camera. If the app has permission to use the camera, the device will remember and not prompt the user anymore. For this app, we only need to check the permission for `CAMERA`.
 
-Now run the sketch on the device. The rear-facing camera preview starts up as illustrated in Figure 5.1, in a [resolution of 1280px width and 768px height][10], known as WXGA. Android cameras are set to auto mode, so they adjust focus and exposure automatically. Depending on your phone's native screen resolution, the preview image might cover the screen only partially. You can certainly scale and stretch the preview image, which also changes the image aspect ratio and distorts the image. For instance, if you set the width and height parameters in the ```image()``` method to ```screenWidth``` and ```screenHeight``` as in the following code, the camera preview will always stretch full screen independent of the screen's size and resolution. 
+Now run the sketch on the device. The rear-facing camera preview starts up as illustrated in Figure 5.1, in a [resolution of 1280px width and 768px height][10], known as WXGA. Android cameras are set to auto mode, so they adjust focus and exposure automatically. Depending on your phone's native screen resolution, the preview image might cover the screen only partially. You can certainly scale and stretch the preview image, which also changes the image aspect ratio and distorts the image. For instance, if you set the width and height parameters in the `image()` method to `screenWidth` and `screenHeight` as in the following code, the camera preview will always stretch full screen independent of the screen's size and resolution. 
 
 ```
 image(cam, width/2, height/2, width, height);
@@ -112,9 +113,10 @@ image(cam, width/2, height/2, width, height);
 
 Go ahead and try the fullscreen mode on your device. For a preview image in a camera app, it doesn't seem like a good idea to stretch the image, though. When we write apps that scale seamlessly across devices, we typically lock and maintain aspect ratios for images and UIs.
 
-As we can see in the code <!--xref linkend="code.camera.getting.started" -->, the steps we take to get the camera started are like the steps we took working with other sensors (<!-- titleref linkend="chp.sensors" -->). First we instantiate a ```KetaiCamera``` object using a defined ```width```, ```height```, and ```frameRate```. Then we start the camera. And finally, we read new images from the camera using ```onCameraPreviewEvent()``` and display them. The frame rate in this sketch is set to 30 frames per second, which is the typical playback speed for digital video, giving the appearance of seamless movement. Depending on your device and image conversion performance, the image preview might not be able to keep up with the designated thirty previews per second. In that case, the sketch will try to approach the set frame rate as best it can. 
+<!-- 5.3 EDIT - light revision - link removed since code is directly above / presumably currently open in their Processing console -->
+As we can see in CameraGettingStarted.pde, the steps we take to get the camera started are like the steps we took working with other sensors ( {{ book.chapter3 }} ). First we instantiate a `KetaiCamera` object using a defined `width`, `height`, and `frameRate`. Then we start the camera. And finally, we read new images from the camera using `onCameraPreviewEvent()` and display them. The frame rate in this sketch is set to 30 frames per second, which is the typical playback speed for digital video, giving the appearance of seamless movement. Depending on your device and image conversion performance, the image preview might not be able to keep up with the designated thirty previews per second. In that case, the sketch will try to approach the set frame rate as best it can. 
 
-With less than ten lines of code added to the typical processing sketch methods, we've completed our first camera app. The ```onPause``` and ```exit``` methods are responsible for releasing the camera properly when we pause or exit the app. The methods make sure that other apps can use the cameras and that we don't keep them locked down for our app alone. You can only have one active connection to the cameras at a time.
+With less than ten lines of code added to the typical processing sketch methods, we've completed our first camera app. The `onPause()` and `exit()` methods are responsible for releasing the camera properly when we pause or exit the app. The methods make sure that other apps can use the cameras and that we don't keep them locked down for our app alone. You can only have one active connection to the cameras at a time.
 
 [10]: http://en.wikipedia.org/wiki/Display_resolution
 
