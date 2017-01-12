@@ -137,9 +137,9 @@ Separating the code this way helps us reduce complexity within the main tab and 
 Let's first take a look at the main tab:
 
 #####code/Camera/CameraFrontBack/CameraFrontBack.pde
-{% codesnippet "code/camera/CameraFrontBack/CameraControls.pde" %}{% endcodesnippet %}
+{% codesnippet "code/camera/CameraFrontBack/CameraFrontBack.pde" %}{% endcodesnippet %}
 
-[include](code/camera/CameraFrontBack/CameraControls.pde)
+[include](code/camera/CameraFrontBack/CameraFrontBack.pde)
 
 In the main `CameraFrontBack` tab, we've added new features.
 
@@ -152,7 +152,7 @@ In the main `CameraFrontBack` tab, we've added new features.
 Now let's explore the second sketch tab called ```CameraControls```, where we'll keep all the code that controls the camera.
 
 #####code/Camera/CameraFrontBack/CameraControls.pde
-[include](code/camera/CameraFrontBack/CameraFrontBack.pde)
+[include](code/camera/CameraFrontBack/CameraControls.pde)
 
 In this ```CameraControls``` tab, we use the following UI elements and camera methods to complete these steps.
 
