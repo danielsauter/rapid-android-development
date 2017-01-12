@@ -137,8 +137,6 @@ Separating the code this way helps us reduce complexity within the main tab and 
 Let's first take a look at the main tab:
 
 #####code/Camera/CameraFrontBack/CameraFrontBack.pde
-{% codesnippet "code/camera/CameraFrontBack/CameraFrontBack.pde" %}{% endcodesnippet %}
-
 [include](code/camera/CameraFrontBack/CameraFrontBack.pde)
 
 In the main `CameraFrontBack` tab, we've added new features.
