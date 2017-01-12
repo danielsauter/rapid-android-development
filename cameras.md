@@ -152,7 +152,7 @@ In the main `CameraFrontBack` tab, we've added new features.
 Now let's explore the second sketch tab called ```CameraControls```, where we'll keep all the code that controls the camera.
 
 #####code/Camera/CameraFrontBack/CameraControls.pde
-[include](code/camera/camera-front-back/camera-controls.pde)
+[include](code/camera/CameraFrontBack/CameraFrontBack.pde)
 
 In this ```CameraControls``` tab, we use the following UI elements and camera methods to complete these steps.
 
