@@ -1,6 +1,6 @@
 
 {
-    "plugins": ["include-codeblock"],
+    "plugins": ["include-codeblock" "codesnippet"],
     
     "variables": {
     
