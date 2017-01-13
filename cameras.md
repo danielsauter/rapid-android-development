@@ -89,9 +89,9 @@ Let's take a closer look at the steps you take and the methods you use to set up
 
 3. Display the camera preview using the [`image()` method][9]. It requires an image source as well as the `x` and `y` coordinates of the image to display. Optionally, the image can be rescaled using an additional parameter for the image `width` and `height`, which is what we are doing here.
 
-4. Use the ```onCameraPreviewEvent()``` callback method for notification that a new preview image is available. This is the best time to read the new image.
+4. Use the `onCameraPreviewEvent()` callback method for notification that a new preview image is available. This is the best time to read the new image.
 
-5. Read the camera preview using the ```read()``` camera method.
+5. Read the camera preview using the `read()` camera method.
 
 6. Toggle the camera preview on and off when you tap the screen.
 
@@ -187,39 +187,40 @@ To snap pictures and save them to the external storage of our device, we'll firs
 
 To refine the camera app UI, let's also add a Save button that allows us to save the image by tapping the touch screen. Some status info on the current camera settings also seems useful.
 
-For the Save feature, we need to modify the `draw()` method in the main `CameraSavingImages` tab and make some adjustments to `CameraControls`. The following code snippets show only the modifications to the previous code in [CameraFrontBack.pde](./cameras.html#codecameracamerafrontbackcamerafrontbackpde) and [CameraControls.pde](./cameras.html#codecameracamerafrontbackcameracontrolspde). You can also download the complete ```pde``` source files from the book's website, and if you’re reading the ebook, just click the green rectangle before the code listings. 
+For the Save feature, we need to modify the `draw()` method in the main `CameraSavingImages` tab and make some adjustments to `CameraControls`. The following code snippets show only the modifications to the previous code in [CameraFrontBack.pde](./cameras.html#codecameracamerafrontbackcamerafrontbackpde) and [CameraControls.pde](./cameras.html#codecameracamerafrontbackcameracontrolspde). You can also download the complete `pde` source files from the book's website, and if you’re reading the ebook, just click the green rectangle before the code listings. 
 
 Let's take a look.
 
 #####code/Camera/CameraSavingImages/CameraSavingImages.pde
 [include](code/camera/CameraSavingImages/CameraSavingImages.pde)
 
-Now let's take a look at the new code we've added to ```draw()``` and what it does.
+Now let's take a look at the new code we've added to `draw()` and what it does.
 
-1. Check the status through the boolean method ```isStarted()```. Returns ```TRUE``` if the camera is on and ```FALSE``` if it's off.
-2. Save the current style settings using ```pushStyle()``` to preserve the ```stroke()```, ```textSize()```, and default ```textAlign(LEFT, TOP)``` for the UI elements, and add a new ```textAlign(CENTER, CENTER)``` style using [```pushStyle()```][11]. Requires ```popStyle()``` to restore previous style settings.
-3. Get the index number of the currently chosen camera using ```getCameraID()```.
-4. Get the preview image width (in pixels) of the current camera using ```getImageWidth()```.
-5. Get the preview image height (in pixels) of the current camera using ```getImageHeight()```.
-6. Get the image width (pixels) of a photo taken by the current camera using ```getPhotoWidth()```. The photo size is separate from the camera preview size.
-7. Get the image height (pixels) of a photo taken by the current camera using ```getPhotoHeight()```.
-8. Inquire about the status of the flash using the boolean method ```isFlashEnabled()```. (The flash belongs to the rear camera and can only be used if the back-facing camera is on.)
-9. Restore the previous style settings using ```popStyle()```.
+1. Check the status through the boolean method `isStarted()`. Returns `TRUE` if the camera is on and `FALSE` if it's off.
+2. Save the current style settings using `pushStyle()` to preserve the `stroke()`, `textSize()`, and default `textAlign(LEFT, TOP)` for the UI elements, and add a new `textAlign(CENTER, CENTER)` style using [`pushStyle()`][11]. Requires `popStyle()` to restore previous style settings.
+3. Get the index number of the currently chosen camera using `getCameraID()`.
+4. Get the preview image width (in pixels) of the current camera using `getImageWidth()`.
+5. Get the preview image height (in pixels) of the current camera using `getImageHeight()`.
+6. Get the image width (pixels) of a photo taken by the current camera using `getPhotoWidth()`. The photo size is separate from the camera preview size.
+7. Get the image height (pixels) of a photo taken by the current camera using `getPhotoHeight()`.
+8. Inquire about the status of the flash using the boolean method `isFlashEnabled()`. (The flash belongs to the rear camera and can only be used if the back-facing camera is on.)
+9. Restore the previous style settings using `popStyle()`.
 
-Changes to ```draw()``` mostly concern the text output that gives us some feedback on the camera settings. Next let's examine the modifications to the camera controls.
+Changes to `draw()` mostly concern the text output that gives us some feedback on the camera settings. Next let's examine the modifications to the camera controls.
 
 #####code/Camera/CameraSavingImages/CameraControls.pde
 [include](code/camera/CameraSavingImages/CameraControls.pde)
+<!-- 5.5 ISSUE - Sketch does not run. No errors shown in console. -->
 
 Take a look at how the code adds the following features.
 
-1. Add a UI button ```text()``` label for saving images.
+1. Add a UI button `text()` label for saving images.
 2. Add a condition to check if the user taps the added Save button.
-3. Save the photo to the device's external storage using ```savePhoto()```. The method can also take a parameter for a custom file name.
-4. Receive notification from the ```onSavePhotoEvent()``` callback method when a picture is saved to external storage.
-5. Add the picture to the device's public preferred media directory on the external storage using ```addToMediaLibrary()```.
+3. Save the photo to the device's external storage using `savePhoto()`. The method can also take a parameter for a custom file name.
+4. Receive notification from the `onSavePhotoEvent()` callback method when a picture is saved to external storage.
+5. Add the picture to the device's public preferred media directory on the external storage using `addToMediaLibrary()`.
 
-With the addition of the ```savePhoto()``` and ```addToMediaLibrary()```, the app is now ready to store pictures in external storage, which makes the images public and available for other apps, such as the Android Gallery app. Once again, let's make sure we've set the permissions we need to write to external storage (see also <!-- titleref linkend="sec.sketch.permissions" -->). In the Android Permissions Selector, check the boxes next to Write_External_Storage in addition to Camera. This time, we need both to run this sketch successfully.
+With the addition of the `savePhoto()` and `addToMediaLibrary()`, the app is now ready to store pictures in external storage, which makes the images public and available for other apps, such as the Android Gallery app. Once again, let's make sure we've set the permissions we need to write to external storage (see also <!-- titleref linkend="sec.sketch.permissions" -->). In the Android Permissions Selector, check the boxes next to Write_External_Storage in addition to Camera. This time, we need both to run this sketch successfully.
 
 [11]: http://processing.org/reference/pushStyle_.html
 
@@ -404,8 +405,7 @@ The face finder sketch we are writing is based on Android's ```Face``` detection
 [27]: http://developer.android.com/reference/android/hardware/Camera.Face.html
 [28]: http://en.wikipedia.org/wiki/Haar-like_features
 
-<!-- images/Camera/FaceFinder.png -->
-
+![](images/camera/FaceFinder-sm.png)
 #####Figure 5.7 — Face Finder app.
 ######The image illustrates Android's Face Detector API, which here displays fourteen faces found by an image search engine. The API does not recognize faces shown in side profiles or cropped portraits.
 
@@ -428,17 +428,17 @@ Let's give it a try.
 
 ###Run the App
 
-Run the app and set the device aside. Now go to your PC and do a Google image search on the word &lquot;face.&rquot; Pick up the Android and aim the camera at the PC display. Google displays a grid of images showing a wide range of faces at different exposures and angles. Now tap the screen to start face detection. You immediately experience a performance hit caused by the face detection algorithm. We've instructed ```findFaces``` to extract up to twenty faces from the camera's preview.
+Run the app and set the device aside. Now go to your PC and do a Google image search on the word "face." Pick up the Android and aim the camera at the PC display. Google displays a grid of images showing a wide range of faces at different exposures and angles. Now tap the screen to start face detection. You immediately experience a performance hit caused by the face detection algorithm. We've instructed ```findFaces``` to extract up to twenty faces from the camera's preview.
 
-Once the camera has a clear and steady shot of the faces on the PC display, you can see on the Android screen where green rectangles are overlaid onto the detected areas, as illustrated in <!-- ref linkend="fig.face.detection" -->. Overall it does a pretty good job. When portraits are cropped or only show faces in profile, the algorithm doesn't consider it a face. To confirm this rule, do a Google search on the term &lquot;face profile&rquot; and see what happens. Finally, see what &lquot;cartoon face&rquot; will produce. Using these different search strings helps us to understand what the algorithm requires to interpret a certain pixel area as a face.
+Once the camera has a clear and steady shot of the faces on the PC display, you can see on the Android screen where green rectangles are overlaid onto the detected areas, as illustrated in <!-- ref linkend="fig.face.detection" -->. Overall it does a pretty good job. When portraits are cropped or only show faces in profile, the algorithm doesn't consider it a face. To confirm this rule, do a Google search on the term "face profile" and see what happens. Finally, see what "cartoon face" will produce. Using these different search strings helps us to understand what the algorithm requires to interpret a certain pixel area as a face.
 
-Let's move on to the detection of moving human subjects. Use ```setCameraID(1)``` just before ```cam.start();``` in ```setup``` to switch to the front-facing camera. Run the app again, and test the face detection algorithm on your own face. You should observe that the face detection feature begins to work as soon as you face the camera. You need to keep enough distance so your face doesn't appear cropped in the camera preview. If you turn your head to present a profile to the camera, your face won't be detected anymore because the camera can't &lquot;see&rquot; both of your eyes.
+Let's move on to the detection of moving human subjects. Use ```setCameraID(1)``` just before ```cam.start();``` in ```setup``` to switch to the front-facing camera. Run the app again, and test the face detection algorithm on your own face. You should observe that the face detection feature begins to work as soon as you face the camera. You need to keep enough distance so your face doesn't appear cropped in the camera preview. If you turn your head to present a profile to the camera, your face won't be detected anymore because the camera can't "see" both of your eyes.
 
 We haven't looked deeply into what the Face API does exactly to extract faces from a list of pixel values, and in this case, we don't need to. Android provides us with a list of faces, the midpoint between the eyes, and their distance. Edge detection and decision trees are the concern of the API. Clearly, this feature, which ships with all current Android devices, can be used for different purposes.
 
-Unlike social media sites that employ face detection algorithms to match a person or identity with an image, the Android is not concerned about that. If we start up face detection in our app, the Android OS will trigger a face event when it &lquot;sees&rquot; a face, whether or not it knows the identity of that person. For some of your apps, it can be relevant to know whether a person is looking at the screen or not.
+Unlike social media sites that employ face detection algorithms to match a person or identity with an image, the Android is not concerned about that. If we start up face detection in our app, the Android OS will trigger a face event when it "sees" a face, whether or not it knows the identity of that person. For some of your apps, it can be relevant to know whether a person is looking at the screen or not.
 
-Now that you are aware of this feature, it's up to you to use it or look at your device from now on with the level of scrutiny this feature calls for. The face detection project is a good example of why we need to ask for permission to use the ```CAMERA``` (<!-- ref linkend="sec.sketch.permissions" / -->). If we do, the user is prompted to grant or deny this request. Once granted, the app will retain the permission certificate to use the camera, and we won't be prompted any more. In <!-- ref linkend="sec.gaze.rotation" / -->, we'll use the face detection feature to rotate a 3D object based on how we look at the screen. It is one example of where the face detection API serves as an interactive user interface within a 3D environment.
+Now that you are aware of this feature, it's up to you to use it or look at your device from now on with the level of scrutiny this feature calls for. The face detection project is a good example of why we need to ask for permission to use the `CAMERA` ([Setting Sketch Permissions](../geolocation.html#setting-sketch-permissions)). If we do, the user is prompted to grant or deny this request. Once granted, the app will retain the permission certificate to use the camera, and we won't be prompted any more. In <!-- ref linkend="sec.gaze.rotation" / -->, we'll use the face detection feature to rotate a 3D object based on how we look at the screen. It is one example of where the face detection API serves as an interactive user interface within a 3D environment.
 
 ###Wrapping Up
 
