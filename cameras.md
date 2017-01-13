@@ -220,7 +220,7 @@ Take a look at how the code adds the following features.
 4. Receive notification from the `onSavePhotoEvent()` callback method when a picture is saved to external storage.
 5. Add the picture to the device's public preferred media directory on the external storage using `addToMediaLibrary()`.
 
-With the addition of the `savePhoto()` and `addToMediaLibrary()`, the app is now ready to store pictures in external storage, which makes the images public and available for other apps, such as the Android Gallery app. Once again, let's make sure we've set the permissions we need to write to external storage (see also <!-- titleref linkend="sec.sketch.permissions" -->). In the Android Permissions Selector, check the boxes next to Write_External_Storage in addition to Camera. This time, we need both to run this sketch successfully.
+With the addition of the `savePhoto()` and `addToMediaLibrary()`, the app is now ready to store pictures in external storage, which makes the images public and available for other apps, such as the Android Gallery app. Once again, let's make sure we've set the permissions we need to write to external storage (see also [Setting Sketch Permissions](../geolocation.html#setting-sketch-permissions)). In the Android Permissions Selector, check the boxes next to Write_External_Storage in addition to Camera. This time, we need both to run this sketch successfully.
 
 [11]: http://processing.org/reference/pushStyle_.html
 
@@ -228,40 +228,39 @@ With the addition of the `savePhoto()` and `addToMediaLibrary()`, the app is now
 
 Run the modified sketch on an Android device and tap Save to save the picture.
 
-Now let's take a look at the Gallery and see if the photos we took show up there properly. Press the  Home  button on the device and launch the  Gallery  app, which comes preinstalled with the Android OS. The images you took will appear in the ```CameraSavingImages``` album that bears the same name as the app. Making the images available publicly allows us to share them with other apps. The use of ```addToMediaLibrary()``` is certainly optional. If we use only the ```savePhoto()``` method, the images are still saved to the publicly available external storage, but they won't be visible to other apps using the external storage.
+Now let's take a look at the Gallery and see if the photos we took show up there properly. Press the  Home  button on the device and launch the  Gallery  app, which comes preinstalled with the Android OS. The images you took will appear in the `CameraSavingImages` album that bears the same name as the app. Making the images available publicly allows us to share them with other apps. The use of `addToMediaLibrary()` is certainly optional. If we use only the `savePhoto()` method, the images are still saved to the publicly available external storage, but they won't be visible to other apps using the external storage.
 
 We've now learned how to save images to the external storage of an Android device. In the next project, we'll create a photo booth app that allows us to blend and superimpose the images we capture. To accomplish this task, we'll blend multiple image sources into one. Let's take a look.
 
 ###Superimpose and Combine Images
 
-In this project, we'll superimpose a snapshot on a background image, as we might do with a friend in a photo booth at a carnival. Using the Android's front-facing camera, we'll create an app that works like a photo booth, with the small twist that we use scenery loaded from a still resource image as the image's background instead of the physical backdrop we might find in an actual photo booth. We want to be able to use the app anywhere, independent of our current surroundings or lighting level. This is why we need to separate the foreground image from its background. Using color pixel calculations, we can erase a background image and superimpose a snapshot onto a scene loaded from an image in a resource file, as shown in <!-- ref linkend="fig.photo.booth" -->.
+In this project, we'll superimpose a snapshot on a background image, as we might do with a friend in a photo booth at a carnival. Using the Android's front-facing camera, we'll create an app that works like a photo booth, with the small twist that we use scenery loaded from a still resource image as the image's background instead of the physical backdrop we might find in an actual photo booth. We want to be able to use the app anywhere, independent of our current surroundings or lighting level. This is why we need to separate the foreground image from its background. Using color pixel calculations, we can erase a background image and superimpose a snapshot onto a scene loaded from an image in a resource file, as shown in Figure 5.4.
 
 The photo booth app combines images from two sources: the preview image acquired by the front-facing camera and an image loaded from a file that will be included with the app.
-
 
 ![](images/camera/Photobooth-sm.jpg)
 #####Figure 5.4 — Photo booth app.
 ######The image shows the photo booth app using the rover background image we've chosen.
 
-First, take a snapshot with the device sitting still on the table. When you take the snapshot, be sure to stay out of the camera's field of view. We'll use this snapshot as a reference image, which we'll subtract from the camera's preview image. If we've held the camera steady, this subtraction will leave behind an empty, black image by eliminating all the pixels that have not changed. For example, if the live camera and the snapshot images are identical, any ```pixel[n]``` that we choose at random will have the identical value in both images. Let's say, for the sake of argument, that the color of a particular pixel is ```color(135, 23, 245)```. If we subtract the color value of the pixel in one image from the corresponding pixel in the other&emdash;```color(135, 23, 245)``` minus ```color(135, 23, 245)```&emdash;the result is ```color(0, 0, 0)```.
+First, take a snapshot with the device sitting still on the table. When you take the snapshot, be sure to stay out of the camera's field of view. We'll use this snapshot as a reference image, which we'll subtract from the camera's preview image. If we've held the camera steady, this subtraction will leave behind an empty, black image by eliminating all the pixels that have not changed. For example, if the live camera and the snapshot images are identical, any `pixel[n]` that we choose at random will have the identical value in both images. Let's say, for the sake of argument, that the color of a particular pixel is `color(135, 23, 245)`. If we subtract the color value of the pixel in one image from the corresponding pixel in the other—`color(135, 23, 245)` minus `color(135, 23, 245)`—the result is `color(0, 0, 0)`.
 
 When this subtraction of color values is performed for all of the pixels in an image pair, the resulting effect is that when someone enters the frame of the camera again, the image of the subject will appear to be &lquot;floating&rquot; in front of the background image of our choosing: the landscape of Mars or a view of Lake Michigan from the grounds of the World's Fair. The result: a portable photo booth that we can use to transport ourselves into any scene we'd like.
 
-Let's start by looking in more detail at some of the ```PImage``` features we'll use.
+Let's start by looking in more detail at some of the `PImage` features we'll use.
 
 ###Working with the PImage Class
 
-[```PImage```][12] is a datatype for storing images that supports ```.tif```, ```.tga```, ```.gif```, ```.png```, and ```.jpg``` image formats. Listed below are some of the ```PImage``` methods that we'll be using for this project:
+[`PImage`][12] is a datatype for storing images that supports `.tif`, `.tga`, `.gif`, `.png`, and `.jpg` image formats. Listed below are some of the `PImage` methods that we'll be using for this project:
 
-* *[```loadImage()```][13]* Loads the pixel data for the image into its ```pixels[]``` array
-* *[```loadPixels()```][14]* Loads the pixel data for the image into its ```pixels[]``` array&emdash;this function must always be called before reading from or writing to ```pixels[]```.
-* *[```updatePixels()```][15]* Updates the image with the data in the ```pixels[]``` array&emdash;the method is used in conjunction with ```loadPixels```.
-* *[```pixels[]```][16]* Array containing the color of every pixel in the image
-* *[```get()```][17]* Reads the color of any pixel or grabs a rectangle of pixels
-* *[```set()```][18]* Writes a color to any pixel or writes an image into another
-* *[```copy()```][19]* Copies the entire image
-* *[```resize()```][20]* Resizes an image to a new width and height&emdash;to resize proportionally, use ```0``` as the value for the width or height parameter.
-* *[```save()```][21]* Saves the image to a TIFF, TARGA, GIF, PNG, or JPEG file
+* *[`loadImage()`][13]* Loads the pixel data for the image into its `pixels[]` array
+* *[`loadPixels()`][14]* Loads the pixel data for the image into its `pixels[]` array—this function must always be called before reading from or writing to `pixels[]`.
+* *[`updatePixels()`][15]* Updates the image with the data in the `pixels[]` array—the method is used in conjunction with `loadPixels`.
+* *[`pixels[]`][16]* Array containing the color of every pixel in the image
+* *[`get()`][17]* Reads the color of any pixel or grabs a rectangle of pixels
+* *[`set()`][18]* Writes a color to any pixel or writes an image into another
+* *[`copy()`][19]* Copies the entire image
+* *[`resize()`][20]* Resizes an image to a new width and height—to resize proportionally, use `0` as the value for the width or height parameter.
+* *[`save()`][21]* Saves the image to a TIFF, TARGA, GIF, PNG, or JPEG file
 
 [12]: http://processing.org/reference/PImage.html
 [13]: http://processing.org/reference/loadImage_.html
@@ -276,7 +275,7 @@ Let's start by looking in more detail at some of the ```PImage``` features we'll
 
 Now let's write some code.
 
-For this project, we'll create a new sketch, again with two tabs, and copy the code into each tab individually. We'll call the main tab ```CameraPhotoBooth``` and the second tab ```CameraControls```, which we'll reuse from the previous sketch <!--ref linkend="code.camera.saving.images.camera.controls" /-->.
+For this project, we'll create a new sketch, again with two tabs, and copy the code into each tab individually. We'll call the main tab `CameraPhotoBooth` and the second tab `CameraControls`, which we'll reuse from the previous sketch [CameraSavingImages/CameraControls.pde](./cameras.html#codecameracamerasavingimagescameracontrolspde).
 
 Let's first take a look at the main tab.
 
@@ -285,48 +284,48 @@ Let's first take a look at the main tab.
 
 Here are the steps we need to take in the main tab.
 
-1. Set the camera ID to the front-facing camera using ```setCameraID()```, which has the index number ```1```.
-2. Load the ```rover.jpg``` resource image from the data folder using ```loadImage()```, which will serve as a replacement for the background.
-3. Load the camera pixel array using ```loadPixels()```.
-4. Load the snapshot picture pixel array using ```loadPixels()```.
-5. Load the ```mux``` pixel array using ```loadPixels()``` to store the composite photo booth image.
-6. Parse the ```pixels``` array and get the current screen pixel color at array position ```i```.
-7. Calculate the ```red()``` difference between the individual camera and snapshot pixel values. Convert the result into an absolute, always positive number using [```abs()```][22]. Make the same calculation for the green and blue pixel values.
-8. Add the differences for the red, green, and blue values to calculate the ```total``` difference in color, which will be used as a threshold for the composite image. Values can range from ```0``` (no change) to ```255``` (maximum change) for ```total```. Use ```128``` (50 percent change) as the threshold to choose between the live camera or the background image.
-9. Set the composite ```mux``` image to the background image ```bg``` pixel for small changes in the camera image.
-10. Set ```mux``` to the camera pixel if the camera preview changed a lot.
-11. Update the composite ```mux``` pixels used to display the calculated result using ```updatePixels()```.
-12. Display the composite image ```mux``` on the screen using the ```image()``` method, which now contains the combined pixel data from the live camera and the background image.
+1. Set the camera ID to the front-facing camera using `setCameraID()`, which has the index number `1`.
+2. Load the `rover.jpg` resource image from the data folder using `loadImage()`, which will serve as a replacement for the background.
+3. Load the camera pixel array using `loadPixels()`.
+4. Load the snapshot picture pixel array using `loadPixels()`.
+5. Load the `mux` pixel array using `loadPixels()` to store the composite photo booth image.
+6. Parse the `pixels` array and get the current screen pixel color at array position `i`.
+7. Calculate the `red()` difference between the individual camera and snapshot pixel values. Convert the result into an absolute, always positive number using [`abs()`][22]. Make the same calculation for the green and blue pixel values.
+8. Add the differences for the red, green, and blue values to calculate the `total` difference in color, which will be used as a threshold for the composite image. Values can range from `0` (no change) to `255` (maximum change) for `total`. Use `128` (50 percent change) as the threshold to choose between the live camera or the background image.
+9. Set the composite `mux` image to the background image `bg` pixel for small changes in the camera image.
+10. Set `mux` to the camera pixel if the camera preview changed a lot.
+11. Update the composite `mux` pixels used to display the calculated result using `updatePixels()`.
+12. Display the composite image `mux` on the screen using the `image()` method, which now contains the combined pixel data from the live camera and the background image.
 
 [22]: http://processing.org/reference/abs_.html
 
-In this app, we've changed the ```draw``` method from our previous camera app <!--ref linkend="code.camera.saving.images" -->. We focus on combining images in ```draw```, where we use a background image&emdash;a snapshot taken from the camera preview&emdash;and the current camera preview taken in the same location. We calculate the difference between this current camera preview and the snapshot to determine which pixels changed. Then we display the stored background image in all the pixels that did not change and display the live camera pixels where the preview changed. When a person enters the scene after taking the snapshot, those changed pixels function as a mask for the background image. This is why it's also important that the camera doesn't move during the process.
+In this app, we've changed the `draw()` method from our previous camera app [CameraSavingImages.pde](./cameras.html#codecameracamerasavingimagescamerasavingimagespde). We focus on combining images in `draw`, where we use a background image—a snapshot taken from the camera preview—and the current camera preview taken in the same location. We calculate the difference between this current camera preview and the snapshot to determine which pixels changed. Then we display the stored background image in all the pixels that did not change and display the live camera pixels where the preview changed. When a person enters the scene after taking the snapshot, those changed pixels function as a mask for the background image. This is why it's also important that the camera doesn't move during the process.
 
 ###Adding Media Assets to a Sketch
 
-The ```setup``` method contains a reference to a &lquot;canned&rquot; image called ```rover.jpg```. The image is stored in the sketch's ```data``` folder. We load the image into the ```PImage``` variable ```bg``` at the beginning, when the app starts up. Here we use ```PImage``` only to store the image. We'll discuss this datatype further in the next project, <!-- ref linkend="sec.pimage" -->, where we rely on some useful ```PImage``` methods to work with pixel values.
+The `setup` method contains a reference to a "canned" image called `rover.jpg`. The image is stored in the sketch's `data` folder. We load the image into the `PImage` variable `bg` at the beginning, when the app starts up. Here we use `PImage` only to store the image. We'll discuss this datatype further in the next project, [Working with the PImage Class](../cameras.html#working-with-the-pimage-class), where we rely on some useful `PImage` methods to work with pixel values.
 
-The sole purpose of the sketch's ```data``` folder is to host all necessary media assets and resource files for our sketch, such as images, movie clips, sounds, or data files. If a resource file is outside the sketch's ```data```, we must provide an absolute path within the file system to the file. If the file is online, we need to provide a URL. There are three ways to add a media asset to a sketch:
+The sole purpose of the sketch's `data` folder is to host all necessary media assets and resource files for our sketch, such as images, movie clips, sounds, or data files. If a resource file is outside the sketch's `data`, we must provide an absolute path within the file system to the file. If the file is online, we need to provide a URL. There are three ways to add a media asset to a sketch:
 
-* Drag and drop the file you want to add onto the sketch window from your file system (for example, from the desktop) onto the Processing sketch window you want to add the file to. Processing will create the ```data``` folder for you in that sketch and place the resource file inside it.
+* Drag and drop the file you want to add onto the sketch window from your file system (for example, from the desktop) onto the Processing sketch window you want to add the file to. Processing will create the `data` folder for you in that sketch and place the resource file inside it.
 
 * Choose  Sketch  &mapsto;  Add File...  from the Processing menu, and browse to the asset.
 
 * Browse to the sketch folder (choose  Sketch  &mapsto;  Show Sketch Folder).
 
-Now let's check what's changed in ```CameraControls```.
+Now let's check what's changed in `CameraControls`.
 
 #####code/Camera/CameraPhotoBooth/CameraControls.pde
 [include](code/camera/CameraPhotoBooth/CameraControls.pde)
 
-In the Camera Controls tab, we reuse the UI button for the flash from the previous code <!--ref linkend="code.camera.saving.images.camera.controls" /--> and label it &lquot;Snapshot.&rquot; Because the flash belongs to the back-facing camera and it's much easier for us to use the front camera here, we don't need the flash any more for this project. The Snapshot button is now responsible for copying the pixels from ```cam``` to ```snapshot```, as shown below.
+In the Camera Controls tab, we reuse the UI button for the flash from the previous code [CameraSavingImages/CameraControls.pde](./cameras.html#codecameracamerasavingimagescameracontrolspde) and label it "Snapshot." Because the flash belongs to the back-facing camera and it's much easier for us to use the front camera here, we don't need the flash any more for this project. The Snapshot button is now responsible for copying the pixels from `cam` to `snapshot`, as shown below.
 
-1. Set the camera to manual mode using the ```manualSettings()``` method, locking the current camera exposure, white balance, and focus.
-2. Use the ```copy()``` method to take the snapshot. Use the snapshot image to subtract from the camera preview, erasing the background, and extracting the image foreground of the camera.
+1. Set the camera to manual mode using the `manualSettings()` method, locking the current camera exposure, white balance, and focus.
+2. Use the `copy()` method to take the snapshot. Use the snapshot image to subtract from the camera preview, erasing the background, and extracting the image foreground of the camera.
 
 ###Run the App
 
-Now lean the Android upright against something solid so it can remain static, and run the app. When it starts up, press the Snapshot button, capturing a ```snapshot``` image from the camera preview. Make sure you are out of the camera field of view; if not, you can always retake the snapshot. Now, reenter the scene and see yourself superimposed on the landscape of Mars. Adjust the threshold value of ```128``` to be higher or lower to best match your lighting situation. You can use any resource image stored in ```CameraPhotoBooth/data```, so go ahead and swap it with another image resource of your choice.
+Now lean the Android upright against something solid so it can remain static, and run the app. When it starts up, press the Snapshot button, capturing a `snapshot` image from the camera preview. Make sure you are out of the camera field of view; if not, you can always retake the snapshot. Now, reenter the scene and see yourself superimposed on the landscape of Mars. Adjust the threshold value of `128` to be higher or lower to best match your lighting situation. You can use any resource image stored in `CameraPhotoBooth/data`, so go ahead and swap it with another image resource of your choice.
 
 This project showed us how to take control of two different image sources and combine them in creative ways. The project can easily be expanded to create a [chroma-key TV studio][23], in which we could superimpose live video of a TV show host onto a studio green screen. But we'll leave that as an exercise for the reader.
 
@@ -338,19 +337,19 @@ Now that we've gained some experience in manipulating images, let's use our abil
 
 In the drawing game that we'll build in this section, two players will compete to see who can  fill the screen of an Android device with the color of a red or blue object first. Without touching the device screen, each player scribbles in the air above it with a blue or red object in an attempt to fill as much space as possible with the object's color. When more than 50 percent of the screen is filled, the player that filled in the most pixels wins. We'll use the front-facing camera as the interactive interface for this game. It's job is to detect the presence of the colors blue or red within its field of vision and capture them each time it records a frame. The game code will increase the score of each player who succeeds in leaving a mark on the screen.
 
-The camera remains static during the game. As <!--ref linkend="fig.magic.marker" thispage="yes" -->, illustrates, only the primary colors red and blue leave traces and count toward the score. If the red player succeeds in covering more pixel real estate than the blue, red wins. If blue dominates the screen, blue wins. If you are using an Android tablet you can step a little bit further away from the device than is the case for a phone, where the players are more likely to get in each other's way, making the game more competitive and intimate.
+The camera remains static during the game. As Figure 5.5 illustrates, only the primary colors red and blue leave traces and count toward the score. If the red player succeeds in covering more pixel real estate than the blue, red wins. If blue dominates the screen, blue wins. If you are using an Android tablet you can step a little bit further away from the device than is the case for a phone, where the players are more likely to get in each other's way, making the game more competitive and intimate.
 
 ![](images/camera/MagicMarker-sm.png)
 #####Figure 5.5 – Magic marker drawing game.
 ######Red- and blue-colored objects leave color marks, gradually covering  the camera preview. The color that dominates wins the game.
 
-The magic marker drawing game uses color tracking as its main feature. As we implement this game, we put Processing's image class, called ```PImage```, to use. The main purpose of this datatype is to store images, but it also contains a number of very useful methods that help us manipulate digital images. In the context of this game, we'll use ```PImage``` methods again to retrieve pixel color values and to set pixel values based on some conditions we implement in our sketch.
+The magic marker drawing game uses color tracking as its main feature. As we implement this game, we put Processing's image class, called `PImage`, to use. The main purpose of this datatype is to store images, but it also contains a number of very useful methods that help us manipulate digital images. In the context of this game, we'll use `PImage` methods again to retrieve pixel color values and to set pixel values based on some conditions we implement in our sketch.
 
 ###Manipulating Pixel Color Values
 
-To create this magic marker drawing game, we need to extract individual pixel colors and decide whether a pixel matches the particular colors (blue and red) we are looking for. A color value is only considered blue if it is within a range of &lquot;blueish&rquot; colors we consider blue enough to pass the test, and the same is true for red. Once we detect a dominant color between the two, we need to call a winner.
+To create this magic marker drawing game, we need to extract individual pixel colors and decide whether a pixel matches the particular colors (blue and red) we are looking for. A color value is only considered blue if it is within a range of "blueish" colors we consider blue enough to pass the test, and the same is true for red. Once we detect a dominant color between the two, we need to call a winner.
 
-For an RGB color to be considered blue, the [```blue()``` value][24] of the pixel color needs to be relatively high, while at the same time the [```red()```][25] and [```green()```][26] values must be relatively low. Only then does the color appear blue. We are using the Processing color methods ```red()```, ```green()```, and ```blue()``` to extract *R*, *G*, and *B* values from each camera pixel. Then we determine whether we have a blue pixel, for instance, using a condition that checks if ```blue()``` is high (let's say ```200```) and at the same time ```red()``` and ```green()``` are low (let's say ```30```) on a scale of ```0..255```. To make these relative thresholds adjustable, let's introduce variables called ```high``` and ```low``` for this purpose.
+For an RGB color to be considered blue, the [`blue()` value][24] of the pixel color needs to be relatively high, while at the same time the [`red()`][25] and [`green()`][26] values must be relatively low. Only then does the color appear blue. We are using the Processing color methods `red()`, `green()`, and `blue()` to extract *R*, *G*, and *B* values from each camera pixel. Then we determine whether we have a blue pixel, for instance, using a condition that checks if `blue()` is high (let's say `200`) and at the same time `red()` and `green()` are low (let's say `30`) on a scale of `0..255`. To make these relative thresholds adjustable, let's introduce variables called `high` and `low` for this purpose.
 
 Let's take a look. The sketch again contains ```CameraControls```, which we don't discuss here because we already know the method to ```start``` and ```stop``` the camera.
 
