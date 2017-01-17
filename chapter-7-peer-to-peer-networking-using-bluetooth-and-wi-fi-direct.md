@@ -265,10 +265,11 @@ On your first device (currently disconnected from USB), show the software keyboa
  [i] - show Bluetooth info 
  
  %%%b 
- Alert: An app on your phone 
- wants to make your phone 
- discoverable by other Bluetooth 
- devices for 300 seconds. 
+ Alert: 
+ An app on your phone wants to 
+ make your phone discoverable 
+ by other Bluetooth devices for 
+ 300 seconds. 
  %%%ALLOW
 ```
   Now switch to your second device (currently connected to USB), and follow the process of discovering devices. Pick the name of the first Android device:
