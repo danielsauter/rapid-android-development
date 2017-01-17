@@ -257,21 +257,49 @@ On your first device (currently disconnected from USB), show the software keyboa
 
 
 ```
- Android 1 [b] - make this device discoverable [d] - discover devices [c] - pick device to connect to [p] - list paired devices [i] - show Bluetooth info %%%b Alert: An app on your phone wants to make your phone discoverable by other Bluetooth devices for 300 seconds. %%%ALLOW
+ Android 1 
+ [b] - make this device discoverable 
+ [d] - discover devices 
+ [c] - pick device to connect to 
+ [p] - list paired devices 
+ [i] - show Bluetooth info 
+ 
+ %%%b 
+ Alert: An app on your phone 
+ wants to make your phone 
+ discoverable by other Bluetooth 
+ devices for 300 seconds. 
+ %%%ALLOW
 ```
   Now switch to your second device (currently connected to USB), and follow the process of discovering devices. Pick the name of the first Android device:
 
 
 ```
- Android 2 %%%d Discovered Devices [0] Nexus 6 %%%c %%%Nexus 6
+ Android 2 
+ %%%d 
+ Discovered Devices 
+ [0] Nexus 6 
+ %%%c 
+ %%%Nexus 6
 ```
 
 ```
- Android 1 Bluetooth pairing Request %%%pair
+ Android 1 
+ Bluetooth pairing Request 
+ %%%pair
 ```
 
 ```
- Android 2 %%%p Paired Devices [0] Nexus 6 %%%i Sever Running: true Device Discoverable: true Connected Devices: Nexus S (78:47:1D:A6:20:48)
+ Android 2 
+ %%%p 
+ Paired Devices 
+ [0] Nexus 6 
+ %%%i 
+ Sever Running: true 
+ Device Discoverable: true 
+ 
+ Connected Devices: 
+ Nexus S (78:47:1D:A6:20:48)
 ```
 When your screen output looks like what’s shown above, the Bluetooth server is running on your second device and you have your first device show up in the list of connected devices. You are now ready to interact.
 
