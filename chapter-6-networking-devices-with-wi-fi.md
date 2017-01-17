@@ -54,7 +54,7 @@ Let’s first take a look at the networking classes we’ll be using in this cha
 
   For the projects in this chapter, we’ll use the `netP5` library to read and write data over the network. It’s already available because it’s part of Processing’s core library. The `KetaiNet` class is also available because it’s part of the Ketai library, which we’ve already installed. 
 
-  Let’s go download the `oscP5` library now. You can find it at http://www.sojamo.de/libraries/oscP5/ and also among other Processing libraries in the Data/Protocols section of the Processing libraries website.[][9] 
+  Let’s go download the `oscP5` library now. You can find it at http://www.sojamo.de/libraries/oscP5/ and also among other Processing libraries in the [Data/Protocols][9] section of the Processing libraries website.
 
   Let’s follow the same process we already used to install the Ketai library, which is the same process we use for installing any Processing library: 
 
@@ -76,7 +76,6 @@ Let’s first take a look at the networking classes we’ll be using in this cha
 
   The sketchbook `libraries` folder now looks something like <!--ref linkend="fig.libraries.folder-->. Now let’s put OSC to work and network the Android with the PC.
 
- </sect1> <sect1 id="sec.osc.networking--> 
 
 ###Network an Android with a Desktop PC
   For our first project, we’re going to network a desktop PC and an Android device and then use the Wi-Fi network to exchange data between them. Wireless local area networks provide us with a high-bandwidth connection, which allows us to write applications that let us interact with peers within the network in real time. We can send fairly large data payloads without noticeable delays, making it a good choice for a diverse range of multiuser applications. 
@@ -89,21 +88,17 @@ Let’s first take a look at the networking classes we’ll be using in this cha
 
   We’ll build this application in two steps: first we’ll write a sketch for the Android device and then for the PC. 
 
- <sect2> 
 
 ###Program the Android Device
   Before you can connect your Android to the PC, you first need to figure out the IP address of the desktop computer on the local network. Make sure your PC is on the same network as the Android via Wi-Fi. 
 
- <ul style="compact--> 
-*   On a Mac, you’ll find your IP address under System Preferences &mapsto; Network. 
+* On a Mac, you’ll find your IP address under System Preferences &mapsto; Network. 
 
-  
-*   On a PC, try Control Panel &mapsto; Network and Internet. 
+* On a PC, try Control Panel &mapsto; Network and Internet. 
 
-  
-*   On Linux you can go to Administration &mapsto; Network Tools. 
+* On Linux you can go to Administration &mapsto; Network Tools. 
 
-    My IP address looks like this: 
+My IP address looks like this: 
 
  
 ```
@@ -111,11 +106,14 @@ Let’s first take a look at the networking classes we’ll be using in this cha
 ```
   Your address most likely looks different. Write yours down, as it is not very intuitive, and this needs to be correct to connect successfully. 
 
-  We’ll first code the Android sketch using the oscP5 `NetAddress` class to specify the destination of the OSC message.[][10] We’ll create a `NetAddress` object called `remoteLocation` and consisting of the IP address of the remote device&—in this case our PC&—and the port number (12000) that both devices will use to communicate. For this first sketch, the OSC message we send will consist of three floating point numbers, the values of the *x*-, *y*-, and *z*-axes of the accelerometer that we’ll `add()` to the message before it’s sent. In turn, we’ll receive three integer values from the desktop PC, consisting of the *x* and *y* positions of the mouse cursor, followed by a `0` or a `1`, depending on whether the mouse button is pressed (`1`) or not (`0`). 
+  We’ll first code the Android sketch using the oscP5 [`NetAddress` class][10] to specify the destination of the OSC message. We’ll create a `NetAddress` object called `remoteLocation` and consisting of the IP address of the remote device&—in this case our PC&—and the port number (12000) that both devices will use to communicate. For this first sketch, the OSC message we send will consist of three floating point numbers, the values of the *x*-, *y*-, and *z*-axes of the accelerometer that we’ll `add()` to the message before it’s sent. In turn, we’ll receive three integer values from the desktop PC, consisting of the *x* and *y* positions of the mouse cursor, followed by a `0` or a `1`, depending on whether the mouse button is pressed (`1`) or not (`0`). 
 
   Now let’s take a look at the code for the sketch: 
 
- #####code/Networking/WiFiDataExchangeAndroid/WiFiDataExchangeAndroid.pde [include](code/Networking/WiFiDataExchangeAndroid/WiFiDataExchangeAndroid.pde) Here are the steps outlining what the sketch does.
+#####code/Networking/WiFiDataExchangeAndroid/WiFiDataExchangeAndroid.pde
+[include](code/Networking/WiFiDataExchangeAndroid/WiFiDataExchangeAndroid.pde)
+
+Here are the steps outlining what the sketch does.
 
  1.  Import the Processing networking library `netP5` to read and write data over the network. Import the `oscP5` library to send data using the OSC protocol. Import the Ketai networking class to look up the device’s current IP address and the `KetaiSensor` class to work with the accelerometer sensor. 
 
@@ -133,24 +131,21 @@ Let’s first take a look at the networking classes we’ll be using in this cha
 
  8.  Once a complete OSC data package containing three integers is detected, we set `x`, `y`, and `p` to the incoming values. 
 
- 9.  Instantiate an OSC object from the `oscP5` library and start an OSC connection on port `12000`.[][11] 
+ 9.  Instantiate an OSC object from the [`oscP5` library][11] and start an OSC connection on port `12000`. 
 
  10.  Set the destination IP and port number to the `remoteAddress` at port number `12000`; the port number must be identical to successfully exchange data. 
 
  11.  Look up the Android IP address assigned by the Wi-Fi network using `getIP()`. 
 
-  The `oscP5` library relies on some methods from the core network library in Processing called `netP5`,[][12] which is why we `import` both at the beginning of the code. To work with the accelerometer, we use the `KetaiSensor` class again, which is why we `import` the `ketai.sensors` package. To look up the Android’s assigned Wi-Fi IP address we use the `getIP()` method contained in the `ketai.net` package.[][13] Make sure to customize `remoteAddress` to match your desktop IP address. 
+  The `oscP5` library relies on some methods from the core [network library in Processing called `netP5`,][12] which is why we `import` both at the beginning of the code. To work with the accelerometer, we use the `KetaiSensor` class again, which is why we `import` the `ketai.sensors` package. To look up the Android’s assigned Wi-Fi IP address we use the `getIP()` method contained in the [`ketai.net` package.][13] Make sure to customize `remoteAddress` to match your desktop IP address. 
 
   Now we are ready on the Android side to start talking. 
 
- <sidebar id="sb.open.sound.control" place="top--> 
 
 ###Open Sound Control
-  Developed by Matt Wright and Adrian Freed at the Center for New Music and Audio Technologies in 1997,[][14] the OSC protocol has been used for a variety of applications, including sensor-based electronic music instruments, mapping data to sound, multiuser controls, and web interfaces, to name a few. OSC messages consist of numeric and symbolic arguments, 32-bit integers and floats, time tags, strings, and blobs.[][15] Messages can be bundled so they can act simultaneously when received. Pattern matching allows OSC to specify multiple targets for a single message as well. This allows us to broadcast values to a number of devices. Optional time tags (64 bit) allow highly accurate synchronization of timed events. Many data exchange applications don’t require the optional time tags, as they utilize only the OSC data structure, triggering events upon delivery. 
+  Developed by Matt Wright and Adrian Freed at the Center for New Music and Audio Technologies [in 1997,][14] the OSC protocol has been used for a variety of applications, including sensor-based electronic music instruments, mapping data to sound, multiuser controls, and web interfaces, to name a few. [OSC messages consist of numeric and symbolic arguments, 32-bit integers and floats, time tags, strings, and blobs.][15] Messages can be bundled so they can act simultaneously when received. Pattern matching allows OSC to specify multiple targets for a single message as well. This allows us to broadcast values to a number of devices. Optional time tags (64 bit) allow highly accurate synchronization of timed events. Many data exchange applications don’t require the optional time tags, as they utilize only the OSC data structure, triggering events upon delivery. 
 
-  Although less convenient and more fundamental in nature, other widespread communication protocols include TCP (Transmission Control protocol),[][16] UDP (User Datagram protocol),[][17] and asynchronous serial communication. They use different ports to exchange data,[][18] and they “shake hands” slightly differently. Handshaking is the process of negotiating communication parameters on both sides before the actual communication begins. 
-
- </sidebar> </sect2> <sect2> 
+  Although less convenient and more fundamental in nature, other widespread communication protocols include [TCP (Transmission Control protocol),][16] [UDP (User Datagram protocol),][17] and asynchronous serial communication. [They use different ports to exchange data,][18] and they “shake hands” slightly differently. Handshaking is the process of negotiating communication parameters on both sides before the actual communication begins. 
 
 ###Run the App
   Before we run the sketch, let’s check the `INTERNET` permissions in the Android Permissions Selector that we’ll need in order to send data through the network. We’ve already worked with different types of permissions for geolocation and cameras, and we follow the same procedure (<!--ref linkend="sec.sketch.permissions-->) in the Permissions Selector, choosing `INTERNET` from the Android &mapsto; Sketch Permissions dialog. 
