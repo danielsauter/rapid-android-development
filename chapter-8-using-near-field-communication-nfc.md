@@ -67,7 +67,7 @@ When we run the app on the networked Androids, we will get a sense of how much d
 
 ###Generate a Low-Resolution Preview
  
- Let’s go ahead and work on the main tab of our sketch, where we’ll put our camera code, and write a function to generate images of the camera preview at higher and higher resolutions. The program works by repeatedly calling itself, a technique known to programmers as recursion.[][12] This technique allows us to iterate through the image until we reach a number of divisions that we’ll set beforehand with a variable we’ll name `divisions`. Setting a limit is important since the recursion would otherwise continue forever, eventually “freezing” the app. Let’s name the recursive function `interlace()`. Each time it runs when we tap the screen, it will split each pixel in the current image into four new pixels. 
+ Let’s go ahead and work on the main tab of our sketch, where we’ll put our camera code, and write a function to generate images of the camera preview at higher and higher resolutions. The program works by repeatedly calling itself, a technique known to programmers as [recursion.][12] This technique allows us to iterate through the image until we reach a number of divisions that we’ll set beforehand with a variable we’ll name `divisions`. Setting a limit is important since the recursion would otherwise continue forever, eventually “freezing” the app. Let’s name the recursive function `interlace()`. Each time it runs when we tap the screen, it will split each pixel in the current image into four new pixels. 
  
  The `interlace()` method we’ll create works with the `divisions` parameter to control how many recursions will be executed. We’ll start with a `divisions` value of `1`, for one division. Each time we tap the screen, `divisions` will increase to `2`, `3`, and so on, which will also increase the `level` parameter in our `interlace()` method. There we are using `level` to check that it has a value greater than `1` before recursively calling the `interlace()` method again to split each pixel into four. 
  
@@ -107,7 +107,7 @@ When we run the app on the networked Androids, we will get a sense of how much d
  
  To use `NFC` and Bluetooth, we need to take similar steps in the activity life cycle as we’ve done for our Bluetooth peer-to-peer app. In <!--ref linkend="sec.activity.lifecycle-->, we looked at the callback methods called during an activity life cycle. For this project, we need tell Android that we’d like to activate both `NFC` and Bluetooth. Let’s put the lifecycle code for the activity into an `ActivityLifecycle` tab. 
  
- At the very beginning of the life cycle, `onCreate()`, we’ll launch `KetaiBluetooth` by initiating our `KetaiBluetooth` object, and we’ll tell Android that we intend to use `NFC`. We do so using an intent,[][13] which is a data structure to tell Android that an operation needs to be performed. For example, an intent can launch another activity or send a result to a component that declared interest in it. Functioning like a kind of glue between activities, an intent binds events between the code in different applications. We need an Intent to launch `NFC`. 
+ At the very beginning of the life cycle, `onCreate()`, we’ll launch `KetaiBluetooth` by initiating our `KetaiBluetooth` object, and we’ll tell Android that we intend to use `NFC`. We do so using an [intent,][13] which is a data structure to tell Android that an operation needs to be performed. For example, an intent can launch another activity or send a result to a component that declared interest in it. Functioning like a kind of glue between activities, an intent binds events between the code in different applications. We need an Intent to launch `NFC`. 
  
  When `NFC` becomes available because our activity is running in the foreground on top of the activity stack, we get notified via `onNewIntent()`, because we asked for such notification with our intent in `onCreate()`. This is where we tell Android that we use the result of the returned intent with our `ketaiNFC` object, launching `NFC` in our sketch. An activity is always paused before receiving a new intent, and `onResume()` is always called right after this method. 
  
@@ -280,7 +280,7 @@ Let’s introduce a variable called `tagStatus` to provide us with some onscreen
  5. Adjust the display layout to `TOP`-align vertically so we can accommodate the software keyboard. 
  6. Check if the key press is `CODED`. 
  7. Add the last character typed on the software keyboard to the `tagText` `String`. 
- 8. Check if the Enter `key` is pressed on the keyboard.[][18] 
+ 8. Check if the Enter [`key`][18] is pressed on the keyboard. 
  9. Prepare writing the content of the `tagText` variable to the tag on contact using `write()`. 
  10. Check if the coded backspace button `67` is pressed on the software keyboard to remove the last character in `tagText`. 
  11. Remove the last character in the `tagText` `String` using the `String` method `substring()` and `length()`. Determine the current `length()` of the `String` and return a `substring()` from the first character `0` to the next-to-last character. 
