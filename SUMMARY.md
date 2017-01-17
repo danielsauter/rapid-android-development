@@ -7,4 +7,5 @@
 * [Chapter 3: Using Motion and Position Sensors](sensors.md)
 * [Chapter 4: Using Geolocation and Compass](geolocation.md)
 * [Chapter 5: Using Android Cameras](cameras.md)
+* [Chapter 6: Networking Devices with Wi-Fi](chapter-6-networking-devices-with-wi-fi.md)
 
