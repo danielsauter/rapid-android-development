@@ -364,7 +364,7 @@ Let’s take a look at our main tab, which contains the following methods: `setu
 
  15.  Update the poll statistic for the question we’ve received via OSC by updating the total number of responses for each answer.
 
- 16.  Load the questions from the `questions.txt` flat file located in the `data` folder of the sketch using `loadStrings()` if we operate as the server.[][21] `loadStrings()` loads each line of the text file as an item in the `String` array `lines`. If we are connected as a client, we receive the questions peer-to-peer from the server.
+ 16.  Load the questions from the `questions.txt` flat file located in the `data` folder of the sketch using [`loadStrings()`][21] if we operate as the server. `loadStrings()` loads each line of the text file as an item in the `String` array `lines`. If we are connected as a client, we receive the questions peer-to-peer from the server.
 
  17.  `add()` the `Question` object to the `questions` `ArrayList`.
 
