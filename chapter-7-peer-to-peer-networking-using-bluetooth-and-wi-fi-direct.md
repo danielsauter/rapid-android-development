@@ -445,12 +445,13 @@ Wi-Fi Direct is currently supported on a few of the newest Android devices, so t
 
 We’ve already implemented the remote cursors app earlier in this chapter in <!--ref linkend="sec.p2p.bluetooth-->. In order to compare Wi-Fi Direct to Bluetooth, we’ll implement the same remote cursor app, replacing its Bluetooth peer-to-peer networking functionality with Wi-Fi Direct. Large portions of the code are identical to the Bluetooth version of the sketch shown <!--ref linkend="code.p2p.bluetooth--> and <!--ref linkend="code.p2p.bluetooth.ui-->, so we will focus only on the code that we’ll change from Bluetooth to Wi-Fi Direct.
 
-  Using Wi-Fi Direct, we’ll be able to use the `OSC` protocol again to send data to remote devices, as we’ve already done in <!--ref linkend="sec.osc.networking-->.
-
- <sect2>
+Using Wi-Fi Direct, we’ll be able to use the `OSC` protocol again to send data to remote devices, as we’ve already done in <!--ref linkend="sec.osc.networking-->.
 
 ###Modify the Main Tab
- #####code/P2P/WiFiDirectCursors/WiFiDirectCursors.pde [include](code/P2P/WiFiDirectCursors/WiFiDirectCursors.pde)  Let’s take a look at the steps we took to change our remote cursor app to use Wi-Fi Direct.
+
+#####code/P2P/WiFiDirectCursors/WiFiDirectCursors.pde 
+[include](code/P2P/WiFiDirectCursors/WiFiDirectCursors.pde)  
+Let’s take a look at the steps we took to change our remote cursor app to use Wi-Fi Direct.
 
  1.  Import the Ketai library’s Wi-Fi Direct package.
 
