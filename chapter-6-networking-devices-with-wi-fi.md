@@ -84,9 +84,11 @@ Let’s first take a look at the networking classes we’ll be using in this cha
 
  ![](images/Networking/WiFiDataExchangeOSC.png)
 #####Figure 6.1 - Connecting an Android to a PC.
-######The screen output shows remote mouse data from the PC on the Android screen (left) and accelerometer data from the Android in the PC display window (right). The local Android IP address and the remote PC address are shown at the bottom of the Android screen.  Before we get started, let’s make sure that both devices are connected to the same Wi-Fi network. Go ahead and check the Android (Settings &mapsto; Wireless & networks) to activate Wi-Fi. If your device is not already connected to a Wi-Fi network, choose the same network that the PC is connected to. Once connected, write down the IP address that has been assigned to the Android device. On your desktop machine, check your network settings so your desktop computer is connected to the same network as the Android. You can use an Ethernet connection for the PC as well, as long as you are connected to the same network as the Android. 
+######The screen output shows remote mouse data from the PC on the Android screen (left) and accelerometer data from the Android in the PC display window (right). The local Android IP address and the remote PC address are shown at the bottom of the Android screen.  
 
-  We’ll build this application in two steps: first we’ll write a sketch for the Android device and then for the PC. 
+Before we get started, let’s make sure that both devices are connected to the same Wi-Fi network. Go ahead and check the Android (Settings &mapsto; Wireless & networks) to activate Wi-Fi. If your device is not already connected to a Wi-Fi network, choose the same network that the PC is connected to. Once connected, write down the IP address that has been assigned to the Android device. On your desktop machine, check your network settings so your desktop computer is connected to the same network as the Android. You can use an Ethernet connection for the PC as well, as long as you are connected to the same network as the Android. 
+
+We’ll build this application in two steps: first we’ll write a sketch for the Android device and then for the PC. 
 
 
 ###Program the Android Device
