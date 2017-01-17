@@ -376,11 +376,10 @@ Let’s take a closer look at the `Question` class variables and methods.
 
  9.  Return the `String` output presented on the screen. If no answer has been given yet on the device, show the question and the multiple choice answers; otherwise, show the statistics as well.
 
- Now it’s time modify the `UI` tab.
-
- </sect2> <sect2>
+Now it’s time modify the `UI` tab.
 
 ###Program the UI Tab
+
 We need to make few adjustments to the `UI` tab to modify it for our survey app based on the previous code <!--ref linkend="code.p2p.bluetooth.ui-->. Most of it is redundant and otherwise called out.
 
 #####code/P2P/BluetoothSurvey/UI.pde 
