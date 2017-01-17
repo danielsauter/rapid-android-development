@@ -210,7 +210,7 @@ Let’s start by programming the Android; then we’ll program the PC.
 
 ![](images/Networking/CollaborativeDrawing.png)
 #####Figure 6.2 - Networked drawing app.
-######The image illustrates the app running on the Android (left) and the sketch running on the desktop PC (right). <sect2> 
+######The image illustrates the app running on the Android (left) and the sketch running on the desktop PC (right). 
 
 ###Program the Android
 Compared to the previous sketch, where we sent accelerometer data from the Android to the desktop and mouse info from the desktop to the Android, we’ll focus now on the `mouseX` and `mouseY` integer values we’ll need to draw, sending only those two constants back and forth using OSC. The sketches for the Android and the PC are identical, with the exception of the single line of code that specifies the remote IP address. Since we now know the IP addresses of both the Android and the PC, we can complete this project using only the oscP5 and netP5 libraries. 
