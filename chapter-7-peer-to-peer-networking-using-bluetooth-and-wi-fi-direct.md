@@ -336,7 +336,9 @@ Our approach is as follows. We’ll write a sketch that we’ll load onto every 
 Let’s take a look at our main tab, which contains the following methods: `setup()`, `draw()`, `onBluetoothDataEvent()`, `getBluetoothInformation()`, `loadQuestions()`, `requestQuestions()`, and `findQuestion()`.
 
 #####code/P2P/BluetoothSurvey/BluetoothSurvey.pde 
-[include](code/P2P/BluetoothSurvey/BluetoothSurvey.pde)  These are the main steps we need to take to implement the survey app.
+[include](code/P2P/BluetoothSurvey/BluetoothSurvey.pde)  
+
+These are the main steps we need to take to implement the survey app.
 
  1.  Create an `ArrayList` called `questions`, which we’ll use to store objects of the custom `Question` class we’ll write to store questions and corresponding answers.
 
@@ -512,12 +514,14 @@ Let’s take a look at the steps we took to change our remote cursor app to use 
 
   For the UI, we won’t change very much compared to the previous `UI` <!--ref linkend="code.p2p.bluetooth.ui-->. Let’s take a look.
 
- </sect2> <sect2>
 
 ###Modify the UI Tab
-  Now it’s time to see what’s needed to modify the `UI` tab to support Wi-Fi direct. We’ll need to adjust the discover key (`d`) to call the Wi-Fi Direct `discover()` method and the info key (`i`) to get the Wi-Fi Direct connection info using `getConnectionInfo()`. Also, we need to introduce an `OSC` key (`o`) to the menu, allowing us to start `OSC` networking now over Wi-Fi Direct.
+Now it’s time to see what’s needed to modify the `UI` tab to support Wi-Fi direct. We’ll need to adjust the discover key (`d`) to call the Wi-Fi Direct `discover()` method and the info key (`i`) to get the Wi-Fi Direct connection info using `getConnectionInfo()`. Also, we need to introduce an `OSC` key (`o`) to the menu, allowing us to start `OSC` networking now over Wi-Fi Direct.
 
- #####code/P2P/WiFiDirectCursors/UI.pde [include](code/P2P/WiFiDirectCursors/UI.pde)  Now let’s see what we adjusted for the `UI` tab of the Wi-Fi Direct remote cursor sketch.
+ #####code/P2P/WiFiDirectCursors/UI.pde
+[include](code/P2P/WiFiDirectCursors/UI.pde)
+
+Now let’s see what we adjusted for the `UI` tab of the Wi-Fi Direct remote cursor sketch.
 
  1.  Discover Wi-Fi Direct devices if we press `d` on the keyboard.
 
@@ -525,20 +529,18 @@ Let’s take a look at the steps we took to change our remote cursor app to use 
 
  3.  Initialize the `OSC` connection on port `12000`.
 
-  Everything looks quite familiar from the Bluetooth version of this sketch. The difference is that we are connecting and sending `OSC` messages like we’ve done in <!--ref linkend="chp.wifi-->.
+Everything looks quite familiar from the Bluetooth version of this sketch. The difference is that we are connecting and sending `OSC` messages like we’ve done in <!--ref linkend="chp.wifi-->.
 
-  Now let’s test the app.
+Now let’s test the app.
 
- <sect3>
 
 ###Run the App
-  Run the app on your Wi-Fi Direct--enabled Android device. Disconnect the USB cable, and run the app on your second Wi-Fi Direct device. Press `d` on the keyboard to discover Wi-Fi Direct devices. Then press `c` to show the list of discovered devices and pick your second device. You need to allow the Wi-Fi Direct connection request. Once you do, press the Interact tab on both devices and move your finger across the screen. Notice how quickly both cursors respond; there seems to be no noticeable delay, and the motion is continuous at a high frame rate.
+Run the app on your Wi-Fi Direct--enabled Android device. Disconnect the USB cable, and run the app on your second Wi-Fi Direct device. Press `d` on the keyboard to discover Wi-Fi Direct devices. Then press `c` to show the list of discovered devices and pick your second device. You need to allow the Wi-Fi Direct connection request. Once you do, press the Interact tab on both devices and move your finger across the screen. Notice how quickly both cursors respond; there seems to be no noticeable delay, and the motion is continuous at a high frame rate.
 
-  Compare the performance of the Wi-Fi Direct remote cursor app to the Bluetooth remote cursor app we’ve installed earlier. You can observe that Wi-Fi Direct performs better. Now grab a friend and put the connection range to the test for both flavors of the remote cursor sketch and see which one has the better range.
+Compare the performance of the Wi-Fi Direct remote cursor app to the Bluetooth remote cursor app we’ve installed earlier. You can observe that Wi-Fi Direct performs better. Now grab a friend and put the connection range to the test for both flavors of the remote cursor sketch and see which one has the better range.
 
- </sect3> </sect2>  This concludes our explorations in the world of peer-to-peer networking. Now you are independent of networking infrastructure and ready to program your multiuser and multiplayer apps for users within close proximity.
+This concludes our explorations in the world of peer-to-peer networking. Now you are independent of networking infrastructure and ready to program your multiuser and multiplayer apps for users within close proximity.
 
- </sect1> <sect1>
 
 ###Wrapping Up
 We’ve learned that we don’t need Wi-Fi/3G/4G infrastructure to interact with other Android users. We can write a range of apps that use peer-to-peer principles. We’ve learned about Bluetooth discovery, pairing, connecting, and exchanging data. We’ve learned that Wi-Fi Direct uses a similar discovery process as Bluetooth but it provides more bandwidth and greater connection distances.
