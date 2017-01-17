@@ -541,11 +541,10 @@ Let’s take a look at the steps we took to change our remote cursor app to use 
  </sect1> <sect1>
 
 ###Wrapping Up
-  We’ve learned that we don’t need Wi-Fi/3G/4G infrastructure to interact with other Android users. We can write a range of apps that use peer-to-peer principles. We’ve learned about Bluetooth discovery, pairing, connecting, and exchanging data. We’ve learned that Wi-Fi Direct uses a similar discovery process as Bluetooth but it provides more bandwidth and greater connection distances.
+We’ve learned that we don’t need Wi-Fi/3G/4G infrastructure to interact with other Android users. We can write a range of apps that use peer-to-peer principles. We’ve learned about Bluetooth discovery, pairing, connecting, and exchanging data. We’ve learned that Wi-Fi Direct uses a similar discovery process as Bluetooth but it provides more bandwidth and greater connection distances.
 
-  With a range of networking projects under our belt, it’s time now to move on to another emerging standard, near field communication, or NFC, which allows us not only to interact with other NFC-enabled Android devices but also with NFC tags embedded in stickers, posters, objects, or point-of-sale p
+With a range of networking projects under our belt, it's time now to move on to another emerging standard, near field communication, or NFC, which allows us not only to interact with other NFC-enabled Android devices but also with NFC tags embedded in stickers, posters, objects, or point-of-sale payment systems.
 
-</sect1></chapter>
 [0]: http://en.wikipedia.org/wiki/Peer-to-peer
 [1]: http://ketai.org/reference/netbluetooth/ketai-bluetooth/
 [2]: http://developer.android.com/guide/topics/wireless/bluetooth.html
