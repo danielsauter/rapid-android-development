@@ -134,7 +134,7 @@ When we run the app on the networked Androids, we will get a sense of how much d
  
  Now let’s move on to the `NFC` tab, where we put the `NFC` classes and methods. 
 
-###Add the `NFC` Code
+###Add the NFC Code
  
  We don’t need much code to import `NFC` and make the `KetaiNFC` class available to the sketch. When we receive an `NFC` event using `onNFCEvent()`, we take the Bluetooth address that has been transferred as a text `String` and use it to connect to that device using `connectDevice()`. 
  
