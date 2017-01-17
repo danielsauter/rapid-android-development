@@ -8,4 +8,5 @@
 * [Chapter 4: Using Geolocation and Compass](geolocation.md)
 * [Chapter 5: Using Android Cameras](cameras.md)
 * [Chapter 6: Networking Devices with Wi-Fi](chapter-6-networking-devices-with-wi-fi.md)
+* [Chapter 7: Peer-to-Peer Networking Using Bluetooth and Wi-Fi Direct](chapter-7-peer-to-peer-networking-using-bluetooth-and-wi-fi-direct.md)
 
