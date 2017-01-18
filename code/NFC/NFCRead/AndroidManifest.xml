@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="">
+  <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23"/>
+  <uses-permission android:name="android.permission.NFC"/>  <!--<callout id="co.nfc.permission"/>--><application android:debuggable="true" android:icon="@drawable/icon" android:label="">
+    <activity android:name="">
+      <intent-filter>
+        <action android:name="android.nfc.action.TECH_DISCOVERED"/> <!--<callout id="co.tech.discovered"/>--></intent-filter>
+      <intent-filter>
+        <action android:name="android.nfc.action.NDEF_DISCOVERED"/> <!--<callout id="co.intent.ndef"/>--></intent-filter>
+      <intent-filter>
+        <action android:name="android.nfc.action.TAG_DISCOVERED"/>  <!--<callout id="co.tag.discovered"/>--><category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </activity>
+  </application>
+</manifest>
