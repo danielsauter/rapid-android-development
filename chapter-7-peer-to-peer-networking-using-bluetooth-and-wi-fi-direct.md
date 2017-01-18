@@ -474,8 +474,6 @@ Wi-Fi Direct is currently supported on a few of the newest Android devices, so t
 
  </row> </table>  Now, let’s go ahead and implement the remote cursor app using Wi-Fi Direct.
 
- </sect1> <sect1 id="sec.wifidirect.remote.cursors">
-
 ###Use Wi-Fi Direct to Control Remote Cursors
 
 We’ve already implemented the remote cursors app earlier in this chapter in <!--ref linkend="sec.p2p.bluetooth-->. In order to compare Wi-Fi Direct to Bluetooth, we’ll implement the same remote cursor app, replacing its Bluetooth peer-to-peer networking functionality with Wi-Fi Direct. Large portions of the code are identical to the Bluetooth version of the sketch shown <!--ref linkend="code.p2p.bluetooth--> and <!--ref linkend="code.p2p.bluetooth.ui-->, so we will focus only on the code that we’ll change from Bluetooth to Wi-Fi Direct.
