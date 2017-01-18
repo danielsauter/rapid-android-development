@@ -18,7 +18,7 @@
  
  To autocomplete the words that users type, guess a user’s intent, or allow users to pick up where they have left off requires that our apps work with files and databases; there is simply no alternative. For example, when we pull up a bookmark, check a score, or restore prior user settings, we read data that we’ve written earlier into a local file or database. Data is essential for mobile apps because both time and location are ubiquitous dimensions when we use our Android devices, and it requires additional considerations when we develop, compared to desktop software. We expect our mobile apps to also be functional when cellular or Wi-Fi networks are unavailable. In such a scenario, apps typically rely on the data that has been saved in prior sessions, which typically get updated when a network becomes available. 
  
- Whether they are stored in tabular files or as object-oriented records, databases generally share one characteristic&—structured data in the form of text and numbers, separated into distinct categories, or fields. The more specific the fields, the better the results and sorts the database can deliver. As we know, for example, dumping all of our receipts into one shoebox is not the kind of database structure an accountant or financial advisor would recommend: labeled files and folders are far more efficient and searchable. 
+ Whether they are stored in tabular files or as object-oriented records, databases generally share one characteristic—structured data in the form of text and numbers, separated into distinct categories, or fields. The more specific the fields, the better the results and sorts the database can deliver. As we know, for example, dumping all of our receipts into one shoebox is not the kind of database structure an accountant or financial advisor would recommend: labeled files and folders are far more efficient and searchable. 
  
  Recommending which type of organization, or data architecture, is the best for a particular task goes beyond the scope of this book. It’s the subject of numerous anthologies [(such as *Visualizing Data (Fry, '08)*)][0], which do a great job of breaking down appropriate table relations, data types, and queries. We’re going to limit the scope of our exploration to tab- and comma-separated values (`TSV` and `CSV`) because they are easy to use and very common, and we’ll balance it with the more powerful SQLite data management system, providing us with more complex queries and the most widely deployed data management system out there. 
  
@@ -31,7 +31,7 @@
  Throughout this chapter, we'll work with Processing’s `Table` class, and particularly with the following methods: 
  <table> <colspec col="1" width="23%--> <row><col>
 `Table`
- <col> <p size="small--> A comprehensive Processing class to load, parse, and write data in different file formats&—it provides similar methods that we’d find in a database. 
+ <col> <p size="small--> A comprehensive Processing class to load, parse, and write data in different file formats—it provides similar methods that we’d find in a database. 
  </row> <row><col>
 `getRowCount()`
  <col> 
@@ -63,7 +63,7 @@
  </row> <row><col>
 [`BufferedReader`][4]
  <col> 
- A Java class that reads text from a character-input stream and buffers them so we can read individual characters as complete text&—we use it in this chapter to make sure we’ve received all the comma-separated values stored in our online data source. 
+ A Java class that reads text from a character-input stream and buffers them so we can read individual characters as complete text—we use it in this chapter to make sure we’ve received all the comma-separated values stored in our online data source. 
  </row> <row><col>
 [`InputStreamReader`][5]
  <col> 
@@ -71,14 +71,14 @@
  </row> <row><col>
 `sketchPath()`
  <col> 
- A Processing method returning the file path to the sketch in the file system&—if we run our sketch on the Android device, it returns the path to the app’s location within Android’s file system. 
+ A Processing method returning the file path to the sketch in the file system—if we run our sketch on the Android device, it returns the path to the app’s location within Android’s file system. 
  </row> <row><col>
 [`KetaiVibrate()`][6]
  <col> <p size="small--> A Ketai class giving access to the built-in device vibration motor 
  </row> <row><col>
 [`vibrate()`][7]
  <col> 
- A `KetaiVibrate` method to control the built-in device vibration motor&—this can be used without parameters for a simple vibration signal, a duration parameter in milliseconds, or an array of numbers that trigger a pattern of vibrations, `vibrate(long[] pattern, int repeat)`. 
+ A `KetaiVibrate` method to control the built-in device vibration motor—this can be used without parameters for a simple vibration signal, a duration parameter in milliseconds, or an array of numbers that trigger a pattern of vibrations, `vibrate(long[] pattern, int repeat)`. 
 
  Since we are writing to the device’s file system in this chapter, let’s take a look at the options we have. 
 
@@ -157,7 +157,7 @@ loadTable("groceries.txt", "header, tsv");
 #####Figure 9.1 - Reading comma-separated color values.
 ######Sixteen named colors from the HTML specification are stored in a csv file and juxtaposed with their hexadecimal color value. 
 
-Hexadecimal is a numbering system with a base of `16`. Each value is represented by symbols ranging `0..9` and `A..F` (`0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F`)&—sixteen symbols that each represent one hexadecimal value. Two hex values combined can represent decimal numbers up to `256` (`16` times `16`)—the same number we use to define colors in other Processing color modes such as `RGB` and `HSB` (see <!--ref linkend="sec.color.modes-->). 
+Hexadecimal is a numbering system with a base of `16`. Each value is represented by symbols ranging `0..9` and `A..F` (`0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F`)—sixteen symbols that each represent one hexadecimal value. Two hex values combined can represent decimal numbers up to `256` (`16` times `16`)—the same number we use to define colors in other Processing color modes such as `RGB` and `HSB` (see <!--ref linkend="sec.color.modes-->). 
  
 In most programming languages, hexadecimal color values are typically identified by a hash tag (`#`) or the prefix `0x`. The hex values stored in column 1 of our file contains a `#` prefix. We need to convert the text `String` representing the hex color in the first column into an actual hex value we can use as a parameter for our `fill()` method. For that, we use two Processing methods, [`substring()`][14] and [`unhex()`][24], to bring the hex value into the correct format, and then we convert the `String` representation of a hex number into its equivalent integer value *before* applying it to `fill()`. 
  
@@ -220,7 +220,7 @@ Now that you know how it works, let’s run the app.
  1. Create a new variable called `tsv` of type `Table`. 
  2. Create a `PVector` `ArrayList` called `points` to store the *x* and *y* location of a fingertip. 
  3. Try reading the `data.tsv` file from the Android sketch folder, if it exists. 
- 4. Create the `tsv` `Table` object using a parameter. For the parameter, use Java’s `File` class and Processing’s `sketchPath()` for the file path, which the `Table` class will attempt to load&—causing an exception that the file doesn’t exist. 
+ 4. Create the `tsv` `Table` object using a parameter. For the parameter, use Java’s `File` class and Processing’s `sketchPath()` for the file path, which the `Table` class will attempt to load—causing an exception that the file doesn’t exist. 
  5. Catch the `java.io.FileNotFoundException`, which you can see in the console if the `data.tsv` file doesn’t exist at the defined location. 
  6. Create a new `tsv` `Table` object without a parameter if it’s the first time we run the sketch and the `data.tsv` file doesn’t exist. 
  7. Parse the `tsv` `Table` object row by row and add a new `PVector` to our `points` `ArrayList` for every record in our `data.tsv` file. Do nothing if `getRowCount()` returns `0`. 
@@ -296,13 +296,13 @@ The actual data source we’ll work with is hosted online:
  
  To display the geographic location of each earthquake, we’ll use an [equirectangular projection world map,][19] which stretches the globe into a rectangular format. This allows us to translate the longitude and latitude values for each earthquake into an *x* and *y* location that we can display on our device screen. [Such a projection maps][20] the longitude meridians to regularly spaced vertical lines and maps latitudes to regularly spaced horizontal lines. The constant intervals between parallel lines lets us overlay each earthquake’s geolocation accurately in relation to the world map. 
  
- The map includes the complete range of longitude meridians from -180 to 180 degrees, but only a portion of the latitude degree spectrum&—from -60 to 85 degrees instead of the usual -90 to 90 degrees. The poles are not included in the map, which are the most distorted portion of an equirectangular projection map. Because they are less populated and less frequently the source of earthquakes, they are also less relevant for our app, and we can use the map’s pixel real estate for its more populated land masses. 
+ The map includes the complete range of longitude meridians from -180 to 180 degrees, but only a portion of the latitude degree spectrum—from -60 to 85 degrees instead of the usual -90 to 90 degrees. The poles are not included in the map, which are the most distorted portion of an equirectangular projection map. Because they are less populated and less frequently the source of earthquakes, they are also less relevant for our app, and we can use the map’s pixel real estate for its more populated land masses. 
  
  To use our pixel real estate most effectively, we’ll draw the world map full screen, covering the complete `width` and `height` of the Android screen and introducing some additional distortion to our data visualization due to the device’s own aspect ratio. Because both the map and the location data scales depend on the display `width` and `height`, our information remains geographically accurate. 
  
  ![](images/Data/Earthquakes.png)
 #####Figure 9.3 - Earthquakes reported worldwide during the last hour.
-######The device location is indicated by a green circle. Red circles indicate the locations of earthquakes reported within the hour&—the size and pulse frequency indicate their magnitude. 
+######The device location is indicated by a green circle. Red circles indicate the locations of earthquakes reported within the hour—the size and pulse frequency indicate their magnitude. 
 
  Using a data file that is hosted online changes the way we load the file into Processing’s `Table` class. Unlike our earlier examples, where we loaded the file from the Android’s storage, we won’t know ahead of time whether we can successfully connect to the file due to a very slow or an absent Internet connection, for instance. So we’ll use the `try` `catch` construct we’ve seen in <!--ref linkend="code.data.write-->, again to attempt loading from the online source. If it fails, catch the exception and load a data sample stored in our sketch’s `data` folder as a fallback. 
  
@@ -368,7 +368,7 @@ Now rerun the code. Looking at the seven-day-period visualization, you can see h
 #####Figure 9.4 - Earthquakes reported worldwide during the last seven days.
 ######Only earthquakes with a magnitude of 2.5 and higher are included in this data source. 
 
-Let’s now refine the earthquake app using a feature that we’re quite familiar with&—device vibration. 
+Let’s now refine the earthquake app using a feature that we’re quite familiar with—device vibration. 
 
 ###Add Vibes to the Earthquake App
  
