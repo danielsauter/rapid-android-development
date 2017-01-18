@@ -13,4 +13,5 @@
 * [Chapter 9:  Working With Data](chapter-9--working-with-data.md)
 * [Chapter 10: Using SQLite Databases](chapter-10-using-sqlite-databases.md)
 * [Chapter 11: Introducing 3D Graphics with OpenGL](chapter-11-introducing-3d-graphics-with-opengl.md)
+* [Chapter 12: Working with Shapes and 3D Objects](chapter-12-working-with-shapes-and-3d-objects.md)
 
