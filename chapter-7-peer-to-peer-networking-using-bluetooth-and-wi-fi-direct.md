@@ -2,7 +2,7 @@
 
 #Peer-to-Peer Networking Using Bluetooth and Wi-Fi Direct
 
-In this chapter, we’ll give peer-to-peer (`P2P`) networks the attention they deserve. We’ve mastered the exchange of data between Android devices using Wi-Fi. Now it’s time to end our dependence on wireless infrastructure. Popular services such as Skype and BitTorrent are only two examples that use peer-to-peer technology.[][0] However, the concept of P2P communication doesn’t stop with telephony or file sharing and has little do with copyright.
+In this chapter, we’ll give peer-to-peer (`P2P`) networks the attention they deserve. We’ve mastered the exchange of data between Android devices using Wi-Fi. Now it’s time to end our dependence on wireless infrastructure. Popular services such as Skype and BitTorrent are only two examples that use [peer-to-peer technology.][0] However, the concept of P2P communication doesn’t stop with telephony or file sharing and has little do with copyright.
 
 P2P networking has several advantages. First of all, it’s free. We don’t require a carrier network or access to `Wi-Fi` infrastructure, and we won’t be restricted by data quotas. P2P still works if wireless infrastructure is unavailable or overwhelmed due to high demand, for instance. It uses less power due to its short range and can help protect privacy because information remains decentralized. And finally, information flows directly from one device to the other&—we can control the information flow and choose whether data is saved or retained.
 
