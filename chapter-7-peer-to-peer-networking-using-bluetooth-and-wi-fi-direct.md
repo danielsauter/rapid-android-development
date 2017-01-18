@@ -4,7 +4,7 @@
 
 In this chapter, we’ll give peer-to-peer (`P2P`) networks the attention they deserve. We’ve mastered the exchange of data between Android devices using Wi-Fi. Now it’s time to end our dependence on wireless infrastructure. Popular services such as Skype and BitTorrent are only two examples that use [peer-to-peer technology.][0] However, the concept of P2P communication doesn’t stop with telephony or file sharing and has little do with copyright.
 
-P2P networking has several advantages. First of all, it’s free. We don’t require a carrier network or access to `Wi-Fi` infrastructure, and we won’t be restricted by data quotas. P2P still works if wireless infrastructure is unavailable or overwhelmed due to high demand, for instance. It uses less power due to its short range and can help protect privacy because information remains decentralized. And finally, information flows directly from one device to the other&—we can control the information flow and choose whether data is saved or retained.
+P2P networking has several advantages. First of all, it’s free. We don’t require a carrier network or access to `Wi-Fi` infrastructure, and we won’t be restricted by data quotas. P2P still works if wireless infrastructure is unavailable or overwhelmed due to high demand, for instance. It uses less power due to its short range and can help protect privacy because information remains decentralized. And finally, information flows directly from one device to the other—we can control the information flow and choose whether data is saved or retained.
 
 P2P communication between two devices doesn’t preclude us from also reaching out to web or cloud servers. For example, if we are connected P2P while we are on the move, we can update an online database as soon as a carrier network becomes available. Both networking paradigms can coexist and complement each other. P2P has the advantage that it can reliably provide us with instantaneous feedback across devices due to the very small lag time, and it provides the transmission rates that are crucial for some multiuser or multiplayer apps.
 
@@ -91,7 +91,7 @@ When an activity goes though this life cycle, Android provides the following cal
 
  </row> <row><col>`onStart()`
 
- <col>  Called after `onCreate()` when the activity starts up&—if the activity is already running, `onRestart()` is called before `onStart()`.
+ <col>  Called after `onCreate()` when the activity starts up—if the activity is already running, `onRestart()` is called before `onStart()`.
 
  </row> <row><col>`onResume()`
 
@@ -326,7 +326,7 @@ For this survey app, we’ll broadcast a number of questions that you can imagin
 #####Figure 7.1 - Bluetooth survey app.
 ######The illustration shows the Bluetooth server running on one device (left) and a client running on the other (right). The server determines which question is displayed on the client screens by pressing the arrow pointing to the right (next question) and left (previous question). 
 
-Both server and client receive real-time feedback on how the question was answered.  There are many examples of survey and polling applications that are available online. They typically use proprietary online databases or a dedicated hardware infrastructure. Virtually no app exists using peer-to-peer connectivity on mobile devices&—let’s change that. Let’s go ahead and write a survey app using some of the code we’ve already created for the remote cursor app in <!--ref linkend="sec.p2p.bluetooth-->.
+Both server and client receive real-time feedback on how the question was answered.  There are many examples of survey and polling applications that are available online. They typically use proprietary online databases or a dedicated hardware infrastructure. Virtually no app exists using peer-to-peer connectivity on mobile devices—let’s change that. Let’s go ahead and write a survey app using some of the code we’ve already created for the remote cursor app in <!--ref linkend="sec.p2p.bluetooth-->.
 
 For this survey app, we’ll work with four tabs for this sketch: the main tab, which we’ll name `BluetoothSurvey`, the `EnableBluetooth` tab, which is identical to the tab with the same name <!--ref linkend="code.p2p.enable.bluetooth-->, a `Question` tab for a custom Processing class we’ll write to take care of our Q & A, and a slightly modified version of the `UI` tab, which we developed <!--ref linkend="code.p2p.bluetooth.ui-->.
 
