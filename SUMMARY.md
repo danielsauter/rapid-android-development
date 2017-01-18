@@ -11,5 +11,5 @@
 * [Chapter 7: Peer-to-Peer Networking Using Bluetooth and Wi-Fi Direct](chapter-7-peer-to-peer-networking-using-bluetooth-and-wi-fi-direct.md)
 * [Chapter 8: Using Near Field Communication \(NFC\)](chapter-8-using-near-field-communication-nfc.md)
 * [Chapter 9:  Working With Data](chapter-9--working-with-data.md)
-* Chapter 10: Using SQLite Databases
+* [Chapter 10: Using SQLite Databases](chapter-10-using-sqlite-databases.md)
 
