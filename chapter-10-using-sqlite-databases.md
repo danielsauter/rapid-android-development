@@ -28,7 +28,7 @@
  <table> <row> <col>
 [`KetaiSQLite`][2]
  <col> 
- Ketai class for working with SQLite databases&—it can be used to create a KetaiSQLite database or to load an existing database. 
+ Ketai class for working with SQLite databases—it can be used to create a KetaiSQLite database or to load an existing database. 
  </row> <row> <col>
 `execute()`
  <col> 
@@ -160,7 +160,7 @@ CREATE TABLE data ( time INTEGER PRIMARY KEY, x FLOAT, y FLOAT, z FLOAT)
  </row> <row><col>
 `time` `INTEGER` `PRIMARY KEY`
  <col> 
- Defines the first `time` field we’ll create with the datatype `INTEGER`&—the `id` field also functions as the `PRIMARY KEY` for the table. In a database that can use multiple tables that relate to each other, the primary key uniquely identifies each record in the table. 
+ Defines the first `time` field we’ll create with the datatype `INTEGER`—the `id` field also functions as the `PRIMARY KEY` for the table. In a database that can use multiple tables that relate to each other, the primary key uniquely identifies each record in the table. 
  </row> <row><col>
 `x`
  <col> 
@@ -222,15 +222,15 @@ You can reduce the number of entries into our database, for example, by recordin
 
 The process of creating tables and inserting and selecting data is in principle the same for any SQLite database project. Whether you have four or forty fields, a hundred or a thousand rows, this project can serve as a template for many of your data-driven Android projects. 
  
-Besides working with all the data in our database table, there is another important aspect of a database we need to explore&—selecting data using a condition and returning only values that match that condition, which brings us to our next section. 
+Besides working with all the data in our database table, there is another important aspect of a database we need to explore—selecting data using a condition and returning only values that match that condition, which brings us to our next section. 
 
 ###Refine SQLite Results Using WHERE Clauses
  
 Since we recorded data into a SQLite database, we can do much more with the data than parsing our `data` row by row. For example, `KetaiSQLite` methods can help us get the minimum and maximum values of a particular field in our table. This comes in very handy when we’re displaying time-series graphs and want to distribute our data points evenly across a display in a way that takes full advantage of the available pixel real estate of each Android device. 
  
-Conditional `SQL` queries using `WHERE` clauses allow us to search table records that match a particular value we specify in our clause. It returns all rows for which the `WHERE` clause is `true`. `WHERE` clauses are often used with one of the following operators: `=`, `&lt;&gt;`, `&gt;`, `&gt;=`, `&lt;`, `&lt;=`, or `LIKE`. 
+Conditional `SQL` queries using `WHERE` clauses allow us to search table records that match a particular value we specify in our clause. It returns all rows for which the `WHERE` clause is `true`. `WHERE` clauses are often used with one of the following operators: `=`, `<>`, `>`, `>=`, `<`, `<=`, or `LIKE`. 
  
-For instance, adding `WHERE x &gt; 5` to our `SELECT` statement will only return records that have values greater than `5` in the `x` field of our `data` table. Similarly, we could request from the `data` table in our previous sketch <!--ref linkend="code.sqlite-->, only the `name` of a person older than `age` `21`. This way we can quickly implement many of the user-driven interactions we know from searching an online store for books only by a particular author, or shopping for merchandise from a particular brand. 
+For instance, adding `WHERE x > 5` to our `SELECT` statement will only return records that have values greater than `5` in the `x` field of our `data` table. Similarly, we could request from the `data` table in our previous sketch <!--ref linkend="code.sqlite-->, only the `name` of a person older than `age` `21`. This way we can quickly implement many of the user-driven interactions we know from searching an online store for books only by a particular author, or shopping for merchandise from a particular brand. 
  
 Let’s explore `WHERE` clauses based on the code we’ve just worked on to visualize sensor data stored in our SQLite database table we’ve called `data`. We’ll leave the structure of the sketch intact but add a query that uses a `WHERE` clause to find only those records that match our condition. 
  
