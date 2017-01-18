@@ -85,33 +85,16 @@ We can summarize the four states an activity can take like this:
 
 When an activity goes though this life cycle, Android provides the following callback methods for us to use. When the activity starts up, Android calls the following:
 
- <table> <row><col>[`onCreate()`][14]
+| [`onCreate()`][14] | Called when the activity is starting |
+| `onStart()` | Called after `onCreate()` when the activity starts up—if the activity is already running, `onRestart()` is called before `onStart()`. |
+| `onResume()` | Called after `onStart()` when the activity becomes visible |
 
- <col>  Called when the activity is starting
+After `onResume()`, the activity is running in the foreground and active. If we launch another activity, Android calls these methods:
 
- </row> <row><col>`onStart()`
+| `onPause()` | Called when another activity comes in the foreground |
+| `onStop()` | Called after `onPause()` when the activity is no longer visible |
+| `onDestroy()` | Called after `onStop()` when the activity is finishing or destroyed by the system |
 
- <col>  Called after `onCreate()` when the activity starts up—if the activity is already running, `onRestart()` is called before `onStart()`.
-
- </row> <row><col>`onResume()`
-
- <col>  Called after `onStart()` when the activity becomes visible
-
- </row> </table>  After `onResume()`, the activity is running in the foreground and active. If we launch another activity, Android calls these methods:
-
- <table> <row><col>`onPause()`
-
- <col>  Called when another activity comes in the foreground
-
- </row> <row><col>`onStop()`
-
- <col>  Called after `onPause()` when the activity is no longer visible
-
- </row> <row><col>`onDestroy()`
-
- <col>  Called after `onStop()` when the activity is finishing or destroyed by the system
-
- </row> </table> <sect2>
 
 ###Enabling Bluetooth
 To work with Bluetooth for the Bluetooth apps we’ll create in this chapter, we will need to launch a new activity to initialize our Bluetooth right at the beginning when the activity starts up using `onCreate()`. Once Bluetooth is active, this activity returns to us the Bluetooth object we need via [`onActivityResult()`,][15] which is called when the app starts up immediately before [`onResume()`][16] in the activity life cycle. We’ll look at the code to enable Bluetooth in more detail in this <!--ref linkend="code.p2p.enable.bluetooth-->.
@@ -245,11 +228,11 @@ Because the Bluetooth pairing process requires us to select a device from a whol
 ###Run the App
   Let’s set the correct Android permissions before we run the sketch. Open the Android Permission Selector as we’ve done previously (see <!--ref linkend="sec.sketch.permissions-->), and check the following permissions:
 
-*   `BLUETOOTH`
+* `BLUETOOTH`
 
-*   `BLUETOOTH ADMIN`
+* `BLUETOOTH ADMIN`
 
-*   `INTERNET`
+* `INTERNET`
 
 Now connect your first device to your workstation with a USB cable and run the sketch. When the app is compiled, all three tabs in the sketch, `BluetoothCursors`, `EnableBluetooth`, and `UI`, will be compiled into one app. You will see our Bluetooth tab active and the menu options displayed on the screen. Before we interact, let’s install the app on our second Android device.
 
@@ -312,7 +295,7 @@ Congratulations! You’ve established a data connection between two Android devi
 
 The process of discovering and pairing Bluetooth devices can seem cumbersome. However, Bluetooth can’t just accept an incoming connection without confirmation for good security reasons. Once paired, we can reconnect automatically by picking the device address again from the list of paired devices. This is a sketch refinement you can try. If you’d like to “unpair” previously paired devices on your Android, tap the device name under Settings &mapsto; Bluetooth &mapsto; Paired Devices, and choose Unpair.
 
-  We will implement this remote cursor’s app using Wi-Fi Direct later in this chapter <!--ref linkend="sec.wifidirect.remote.cursors-->, and you can then compare how the two standards perform in terms of update rate and wireless range.
+We will implement this remote cursor’s app using Wi-Fi Direct later in this chapter <!--ref linkend="sec.wifidirect.remote.cursors-->, and you can then compare how the two standards perform in terms of update rate and wireless range.
 
 Since you’ve mastered peer-to-peer networking using Bluetooth, let’s build on our Bluetooth skills and create a survey app for multiple Bluetooth users.
 
@@ -340,45 +323,45 @@ Let’s take a look at our main tab, which contains the following methods: `setu
 
 These are the main steps we need to take to implement the survey app.
 
- 1.  Create an `ArrayList` called `questions`, which we’ll use to store objects of the custom `Question` class we’ll write to store questions and corresponding answers.
+1. Create an `ArrayList` called `questions`, which we’ll use to store objects of the custom `Question` class we’ll write to store questions and corresponding answers.
 
- 2.  Store the current question in a variable, `currentQuestion`, which is presented on all devices simultaneously for the survey.
+2. Store the current question in a variable, `currentQuestion`, which is presented on all devices simultaneously for the survey.
 
- 3.  Set the `currentQuestion` to the first question in the `questions` `ArrayList`.
+3. Set the `currentQuestion` to the first question in the `questions` `ArrayList`.
 
- 4.  Present the `currentQuestion` on the screen as formatted output `String`, using our custom `toString()` method in the `Question` class.
+4. Present the `currentQuestion` on the screen as formatted output `String`, using our custom `toString()` method in the `Question` class.
 
- 5.  Check if the `OSC` message we receive via `onBluetoothDataEvent()` contains the label “poll-request.”
+5. Check if the `OSC` message we receive via `onBluetoothDataEvent()` contains the label “poll-request.”
 
- 6.  Create a new `OscMessage` `msg` with the label “poll-question” for each object in our `questions` `ArrayList`, add the question and answers stored in the `Question` object to the `OSC` message, and `broadcast()` the message to all connected users.
+6. Create a new `OscMessage` `msg` with the label “poll-question” for each object in our `questions` `ArrayList`, add the question and answers stored in the `Question` object to the `OSC` message, and `broadcast()` the message to all connected users.
 
- 7.  Check if we received an `OSC` message labeled “poll-question.”
+7. Check if we received an `OSC` message labeled “poll-question.”
 
- 8.  Check if the `OSC` message labeled “poll-question” contains an `integer` followed by four `String` values, if we are connected as a client.
+8. Check if the `OSC` message labeled “poll-question” contains an `integer` followed by four `String` values, if we are connected as a client.
 
- 9.  Create a new `Question` object based on the received `integer` and `String` data.
+9. Create a new `Question` object based on the received `integer` and `String` data.
 
- 10.  Check if the received `OSC` message is labeled “poll-answer.”
+10. Check if the received `OSC` message is labeled “poll-answer.”
 
- 11.  Check if the “poll-answer” message contains two `integer` values if we are the server app.
+11. Check if the “poll-answer” message contains two `integer` values if we are the server app.
 
- 12.  Find the corresponding question to the answer we’ve received and process the answer, adding to the tally of responses.
+12. Find the corresponding question to the answer we’ve received and process the answer, adding to the tally of responses.
 
- 13.  Check if the `OSC` message is labeled “poll-update.”
+13. Check if the `OSC` message is labeled “poll-update.”
 
- 14.  Check if the `OSC` message labeled “poll-update” contains four `integer` values.
+14. Check if the `OSC` message labeled “poll-update” contains four `integer` values.
 
- 15.  Update the poll statistic for the question we’ve received via OSC by updating the total number of responses for each answer.
+15. Update the poll statistic for the question we’ve received via OSC by updating the total number of responses for each answer.
 
- 16.  Load the questions from the `questions.txt` flat file located in the `data` folder of the sketch using [`loadStrings()`][21] if we operate as the server. `loadStrings()` loads each line of the text file as an item in the `String` array `lines`. If we are connected as a client, we receive the questions peer-to-peer from the server.
+16. Load the questions from the `questions.txt` flat file located in the `data` folder of the sketch using [`loadStrings()`][21] if we operate as the server. `loadStrings()` loads each line of the text file as an item in the `String` array `lines`. If we are connected as a client, we receive the questions peer-to-peer from the server.
 
- 17.  `add()` the `Question` object to the `questions` `ArrayList`.
+17.  `add()` the `Question` object to the `questions` `ArrayList`.
 
- 18.  Request question if we don’t have any in our `questions` `ArrayList`. Retry every thirtieth frame, or once a second, at a default `frameRate` of `30` fps.
+18. Request question if we don’t have any in our `questions` `ArrayList`. Retry every thirtieth frame, or once a second, at a default `frameRate` of `30` fps.
 
- 19.  Find the corresponding question to the received answer ID in the `questions` `ArrayList` method.
+19. Find the corresponding question to the received answer ID in the `questions` `ArrayList` method.
 
- 20.  When the custom method `broadcastStats()` is called and the device is serving as the Bluetooth server, send an update with all totals to all connected client devices using an `OSC` message labeled “poll-update.”
+20. When the custom method `broadcastStats()` is called and the device is serving as the Bluetooth server, send an update with all totals to all connected client devices using an `OSC` message labeled “poll-update.”
 
 ###Program the Question Tab
 
@@ -456,23 +439,12 @@ Wi-Fi Direct is currently supported on a few of the newest Android devices, so t
 
   Let’s take a look at the [`KetaiWi-FiDirect` class first,][24] which makes working with [Android’s Wi-Fi Direct features][25] an easy task. For this sketch, we’ll work with the following `KetaiWi-FiDirect` methods:
 
- <table> <row><col>`connectToDevice()`
+| `connectToDevice()` | Connects to a specific Wi-Fi Direct-enabled device |
+| `getConnectionInfo()` | Gets the status of the Wi-Fi Direct connection |
+| `getIPAddress()` | Gets the IP address of a specified `Wi-Fi` Direct device |
+| `getPeerNameList()` | Returns the list of connected `Wi-Fi` Direct devices |
 
- <col>  Connects to a specific Wi-Fi Direct-enabled device
-
- </row> <row><col>`getConnectionInfo()`
-
- <col>  Gets the status of the Wi-Fi Direct connection
-
- </row> <row><col>`getIPAddress()`
-
- <col>  Gets the IP address of a specified `Wi-Fi` Direct device
-
- </row> <row><col>`getPeerNameList()`
-
- <col>  Returns the list of connected `Wi-Fi` Direct devices
-
- </row> </table>  Now, let’s go ahead and implement the remote cursor app using Wi-Fi Direct.
+Now, let’s go ahead and implement the remote cursor app using Wi-Fi Direct.
 
 ###Use Wi-Fi Direct to Control Remote Cursors
 
@@ -516,7 +488,7 @@ Let’s take a look at the steps we took to change our remote cursor app to use 
 ###Modify the UI Tab
 Now it’s time to see what’s needed to modify the `UI` tab to support Wi-Fi direct. We’ll need to adjust the discover key (`d`) to call the Wi-Fi Direct `discover()` method and the info key (`i`) to get the Wi-Fi Direct connection info using `getConnectionInfo()`. Also, we need to introduce an `OSC` key (`o`) to the menu, allowing us to start `OSC` networking now over Wi-Fi Direct.
 
- #####code/P2P/WiFiDirectCursors/UI.pde
+#####code/P2P/WiFiDirectCursors/UI.pde
 [include](code/P2P/WiFiDirectCursors/UI.pde)
 
 Now let’s see what we adjusted for the `UI` tab of the Wi-Fi Direct remote cursor sketch.
