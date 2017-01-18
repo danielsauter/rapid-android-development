@@ -474,7 +474,7 @@ Wi-Fi Direct is currently supported on a few of the newest Android devices, so t
 
  </row> </table>  Now, let’s go ahead and implement the remote cursor app using Wi-Fi Direct.
 
- </sect1> <sect1 id="sec.wifidirect.remote.cursors-->
+ </sect1> <sect1 id="sec.wifidirect.remote.cursors">
 
 ###Use Wi-Fi Direct to Control Remote Cursors
 
