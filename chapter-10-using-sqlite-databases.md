@@ -261,9 +261,9 @@ Now let’s see what changes we’ve made to our previous sketch <!--ref linkend
 3. Parse the data, including the `time` field, which contains a `long` value that we store in the variable `t`. 
 4. Calculate the `plotX` position of our data point based on the `time` value stored in `data`. 
 5. Draw a text label for the data point’s Unix time stamp. 
-6. Use a `WHERE` clause that only returns results where the condition is `true`.[][14] 
+6. Use a [`WHERE` clause][14] that only returns results where the condition is `true`. 
 7. Draw a white circle around the data points that match the device’s rest state. 
-8. Define the user-defined method `mapLong()` as working identically to `map()` but handling values of datatype `long`.[][15] 
+8. Define the user-defined method `mapLong()` as working identically to [`map()`][15] but handling values of datatype `long`. 
  
 Now let’s test our sketch. 
 
