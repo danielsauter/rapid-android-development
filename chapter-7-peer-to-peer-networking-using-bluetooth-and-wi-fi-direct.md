@@ -22,9 +22,9 @@ For the apps we’ll develop in this chapter, we’ll use the following networki
 
   * *[`KetaiWiFiDirect`][3]*   A Ketai class to simplify working with [Wi-Fi Direct on Android devices][4]—the class contains the necessary methods for Wi-Fi Direct peer discovery and data exchange. In a Wi-Fi Direct network, every Wi-Fi Direct-enabled device can serve as the access point for the other devices in the Wi-Fi network.
 
-  * *[`KetaiOSCMessage`][5]*   A Ketai class that is identical to the oscP5 library’s `OscMessage` class we worked with in <!--ref linkend="sec.osc-->, with the difference being that it allows us to create `KetaiOSCMessage` using a byte array&—it makes some private methods in `OscMessage` public so we can use it for Bluetooth communication.
+  * *[`KetaiOSCMessage`][5]*   A Ketai class that is identical to the oscP5 library’s `OscMessage` class we worked with in <!--ref linkend="sec.osc-->, with the difference being that it allows us to create `KetaiOSCMessage` using a byte array—it makes some private methods in `OscMessage` public so we can use it for Bluetooth communication.
 
-  * *[`KetaiList`][6]*   A Ketai UI class that makes it easier to work with the native Android `ListView` widget&—this class contains methods to populate, display, refresh, and retrieve strings from a selected list item. A `KetaiList` can be created using a `String` array or a `String` [`ArrayList`][7].
+  * *[`KetaiList`][6]*   A Ketai UI class that makes it easier to work with the native Android `ListView` widget—this class contains methods to populate, display, refresh, and retrieve strings from a selected list item. A `KetaiList` can be created using a `String` array or a `String` [`ArrayList`][7].
 
   * *[`KetaiKeyboard`][8]*   A class included in the Ketai `UI` package that allows us to toggle the Android software keyboard on and off without importing additional Android UI classes
 
