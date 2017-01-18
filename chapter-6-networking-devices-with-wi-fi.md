@@ -12,7 +12,7 @@ We’ll start this chapter by creating an app that exchanges data between an And
 
 ###Working with Wi-Fi on Android Devices
 
-Wi-Fi is so ubiquitous in cities that you can find a Wi-Fi network virtually anywhere you go. It’s true that most Wi-Fi networks that you encounter while you’re on the move are protected and won’t allow devices to connect. But most domestic and workplace destinations that we visit regularly&—including many coffee shops, libraries, and airports&—do offer the opportunity to subscribe or connect for free. Once connected, the phones, tablets, and laptop devices that you carry will remember a particular Wi-Fi network, making it easy to connect again when you return. 
+Wi-Fi is so ubiquitous in cities that you can find a Wi-Fi network virtually anywhere you go. It’s true that most Wi-Fi networks that you encounter while you’re on the move are protected and won’t allow devices to connect. But most domestic and workplace destinations that we visit regularly—including many coffee shops, libraries, and airports—do offer the opportunity to subscribe or connect for free. Once connected, the phones, tablets, and laptop devices that you carry will remember a particular Wi-Fi network, making it easy to connect again when you return. 
 
 Most Wi-Fi networks are set up to connect to the Internet. But you can also use a wireless network access point to set up a local Wi-Fi network for the sole purpose of connecting multiple Wi-Fi--enabled devices between one another. Many Android devices will even let you create a Wi-Fi hotspot using the device itself (Settings &mapsto; Wireless & networks &mapsto; More... &mapsto; Tethering & portable hotspots). 
 
@@ -22,7 +22,7 @@ When two devices wish to communicate, they must also share a common [port number
 
 If we’re on the move and a known Wi-Fi network is not available to us, the Android device requests an IP address from the cell phone carrier’s 3G or 4G network. Although it is possible to network two devices over the carrier network, we cannot sustain a peer-to-peer network as the device connects from cell tower to cell tower. Connecting two (or more) devices inside a Wi-Fi network is significantly different from connecting them outside the network, which is described in further detail in <!--ref linkend="sb.p2p-->. In this chapter, we’ll stay focused on Wi-Fi communications. 
 
-<sidebar id="sb.p2p" place="top"> 
+<sidebar> 
 
 ###Peer-to-Peer Networking (P2P)
 When it comes to peer-to-peer networking, the difference between an IP address provided by a local area network and an IP address from a 4G or 3G cellular network is that we can send data to a local area network address directly. If we go outside the local area network, our IP address undergoes network address translation, or [`NAT`][2]. There is no way to connect directly to a device without knowing exactly how to translate that new number in reverse. “Getting through” the NAT router is often referred to as “traversing” the NAT, or NAT-busting. Applications such as Skype (voice-over-IP), Hamachi, or LogMeIn (remote desktop) are very good at traversing. IP addresses are managed centrally, and the techniques that companies use to traverse the NAT are proprietary. It is clear, though, that NAT-busting is a messy and complicated process, one that exploits NAT router and firewall loopholes. Why the trouble? Because of the great benefit that we can have very efficient [peer-to-peer][3]
