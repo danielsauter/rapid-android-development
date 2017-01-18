@@ -1,0 +1,6 @@
+time,latitude,longitude,depth,mag,magType,nst,gap,dmin,rms,net,id,updated,place,type
+2015-02-24T21:43:49.600Z,19.4117,-155.2845,9.4,1.9,ml,,39.5999968320002,0,0.21,hv,hv60858986,2015-02-24T21:49:39.000Z,"5km WSW of Volcano, Hawaii",earthquake
+2015-02-24T21:43:27.020Z,36.0663333,-117.6928333,0.54,1.57,ml,30,58,0.07162,0.23,ci,ci37101903,2015-02-24T21:55:35.640Z,"23km E of Coso Junction, California",earthquake
+2015-02-24T21:41:38.560Z,34.0128333,-117.2171667,16.86,1.88,ml,73,34,0.08989,0.3,ci,ci37101895,2015-02-24T21:52:27.900Z,"6km SE of Loma Linda, California",earthquake
+2015-02-24T21:39:55.690Z,37.3209991,-122.105835,0.03,1.83,md,9,163,0.03779,0.1,nc,nc72400960,2015-02-24T21:55:04.419Z,"3km S of Loyola, California",earthquake
+2015-02-24T21:22:35.300Z,19.4045,-155.2823,7.6,2,Ml,,21.6,0.00898315,0.23,hv,hv60858971,2015-02-24T21:28:46.169Z,"5km WSW of Volcano, Hawaii",earthquake
