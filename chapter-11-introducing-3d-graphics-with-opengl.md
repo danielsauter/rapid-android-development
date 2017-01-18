@@ -22,7 +22,7 @@
  
 * *[`size(width, height, MODE)`][4]* Defines the dimension of the display window in pixels, followed by an optional render mode parameter. By default, the renderer is set to `2D`. Use `3D` to draw 3D shapes. You should call `size()` only once in `setup()` as the first line of code. 
 
-* * [**P3D** and **OPENGL**][5]* Identical render modes defined in the `size()` method&—the `OPENGL` renderer used to differ from `P3D`, but it is now an alias pointing to the `P3D` renderer. `P3D` allows us to use the *z*-axis as the third dimension in our sketch, oriented perpendicular to the device screen. Larger *z* values move objects further into the scene, negative *z* values toward us. The `P3D` renderer uses OpenGL hardware. 
+* *[P3D and OPENGL][5]* Identical render modes defined in the `size()` method&—the `OPENGL` renderer used to differ from `P3D`, but it is now an alias pointing to the `P3D` renderer. `P3D` allows us to use the *z*-axis as the third dimension in our sketch, oriented perpendicular to the device screen. Larger *z* values move objects further into the scene, negative *z* values toward us. The `P3D` renderer uses OpenGL hardware. 
 
 * *`displayHeight`* A Processing constant that returns the current height of the device display in pixels 
 
@@ -48,7 +48,7 @@ The different types of virtual light sources available in Processing are defined
 
 * *[`ambientLight()`][11]* Adds an ambient light to the scene, which is a type typically used in a 3D scene alongside directional light sources&—it makes objects appear evenly lit from all sides. The method uses three parameters for the light color and three parameters for the position of the light. 
 
-* *[`directionalLight()`][12]* Adds a directional light to the scene coming from a defined direction&—it illuminates an object more where the light hits perpendicular to the surface and less so at smaller angles. The method uses three parameters for the light color and three parameters for its direction. 
+* *[`directionalLight()`][12]* Adds a directional light to the scene coming from a defined direction—it illuminates an object more where the light hits perpendicular to the surface and less so at smaller angles. The method uses three parameters for the light color and three parameters for its direction. 
 
 * *[`pointLight()`[][13]* Adds a point light to the scene; an omnidirectional light source emitting light from one point&—it uses the light color and position within the scene as parameters. 
 
@@ -56,7 +56,7 @@ The different types of virtual light sources available in Processing are defined
 
 ###Create a 3D Scene
  
-We’ll use the `lights()` method for this project, which sets default light values for the scene.[][15] The default values for ambient light are then set to `ambientLight(128, 128, 128)`, defining a medium bright white ambient light. In addition, we’ll use the touch screen interface to control a directional light, where we translate the finger position on the display into a direction for this directional light, allowing us to change the objects’ illumination interactively. 
+We’ll use the [`lights()` method][15] for this project, which sets default light values for the scene. The default values for ambient light are then set to `ambientLight(128, 128, 128)`, defining a medium bright white ambient light. In addition, we’ll use the touch screen interface to control a directional light, where we translate the finger position on the display into a direction for this directional light, allowing us to change the objects’ illumination interactively. 
  
 ![](images/Mobile3D/PrimitivesLights.png)
 #####Figure 11.0 - Using 3D primitives and lights.
