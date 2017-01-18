@@ -455,7 +455,8 @@ Using Wi-Fi Direct, we’ll be able to use the `OSC` protocol again to send data
 ###Modify the Main Tab
 
 #####code/P2P/WiFiDirectCursors/WiFiDirectCursors.pde 
-[include](code/P2P/WiFiDirectCursors/WiFiDirectCursors.pde)  
+[include](code/P2P/WiFiDirectCursors/WiFiDirectCursors.pde)
+  
 Let’s take a look at the steps we took to change our remote cursor app to use Wi-Fi Direct.
 
  1.  Import the Ketai library’s Wi-Fi Direct package.
