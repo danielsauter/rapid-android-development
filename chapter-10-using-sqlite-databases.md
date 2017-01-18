@@ -47,7 +47,7 @@
  <col> 
  `KetaiSQLite` method returning all records in a database across all tables 
  </row> </table> 
- Now let’s take a look at the most important declarative `SQL` we’ll use in our database project.[][3] 
+ Now let’s take a look at [the most important declarative `SQL`][3] we’ll use in our database project.
  <table> <row> <col>
 [`CREATE`][4]
  <col> 
