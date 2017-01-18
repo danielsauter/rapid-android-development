@@ -1,6 +1,6 @@
+###Chapter 10:
 
-
-###Using SQLite Databases
+#Using SQLite Databases
  
  In this second part of our introduction to data, we’ll work with SQLite, the popular relational database management system for local clients such as the Android, used also by many browsers and operating systems to store data. It implements the popular Structured Query Language (`SQL`) syntax for database queries, which we can use to access data stored locally on our Android device. 
  
