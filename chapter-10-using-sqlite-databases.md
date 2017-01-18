@@ -9,7 +9,6 @@
  In this chapter, we’ll first get SQLite running with a simple sketch and learn how to use `SQL` queries to retrieve data from a SQLite table. Then we’ll create an app that uses SQLite to capture accelerometer data from the sensor built into the Android. We’ll use the recorded sensor values to create a time series visualization of the data. Finally, we’ll query the data set we’ve recorded based on a certain device orientation we are looking for, and we’ll highlight the sensor value that matches our query criteria. 
  
  Let’s take a look at the classes and methods that allow us to use SQLitedatabases for more complex data-driven apps. 
- <sect1 id="sec.sqlite--> 
 
 ###Working with SQLite Databases
  
