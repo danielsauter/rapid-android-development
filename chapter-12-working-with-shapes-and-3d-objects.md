@@ -339,7 +339,7 @@ Let’s apply our knowledge about hardware-accelerated graphics now in our last 
 [3]: http://processing.org/reference/endShape_.html
 [4]: http://processing.org/reference/vertex_.html
 [5]: http://processing.org/reference/bezierVertex_.html
-[18]: http://processing.org/reference/curveVertex_.html.
+[18]: http://processing.org/reference/curveVertex_.html
 [6]: http://processing.org/reference/createShape_.html
 [7]: http://processing.org/reference/camera_.html
 [8]: http://en.wikipedia.org/wiki/Bitmap
