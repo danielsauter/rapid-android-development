@@ -102,26 +102,26 @@ Here are the steps we need to recursively process the live camera image.
  8. Call `interlace()` recursively from within itself using a new location and half the width and height of the previous call as parameters. 
  9. Increment the number of divisions when tapping the screen. 
  
- Now that we are done with our coding for the camera and the recursive program to create a higher-and-higher resolution image preview, let’s create the code we need to activate `NFC` and Bluetooth in the activity life cycle. 
+Now that we are done with our coding for the camera and the recursive program to create a higher-and-higher resolution image preview, let’s create the code we need to activate `NFC` and Bluetooth in the activity life cycle. 
 
 ###Enable NFC and Bluetooth in the Activity Life Cycle
  
- To use `NFC` and Bluetooth, we need to take similar steps in the activity life cycle as we’ve done for our Bluetooth peer-to-peer app. In <!--ref linkend="sec.activity.lifecycle-->, we looked at the callback methods called during an activity life cycle. For this project, we need tell Android that we’d like to activate both `NFC` and Bluetooth. Let’s put the lifecycle code for the activity into an `ActivityLifecycle` tab. 
+To use `NFC` and Bluetooth, we need to take similar steps in the activity life cycle as we’ve done for our Bluetooth peer-to-peer app. In <!--ref linkend="sec.activity.lifecycle-->, we looked at the callback methods called during an activity life cycle. For this project, we need tell Android that we’d like to activate both `NFC` and Bluetooth. Let’s put the lifecycle code for the activity into an `ActivityLifecycle` tab. 
  
- At the very beginning of the life cycle, `onCreate()`, we’ll launch `KetaiBluetooth` by initiating our `KetaiBluetooth` object, and we’ll tell Android that we intend to use `NFC`. We do so using an [intent,][13] which is a data structure to tell Android that an operation needs to be performed. For example, an intent can launch another activity or send a result to a component that declared interest in it. Functioning like a kind of glue between activities, an intent binds events between the code in different applications. We need an Intent to launch `NFC`. 
+At the very beginning of the life cycle, `onCreate()`, we’ll launch `KetaiBluetooth` by initiating our `KetaiBluetooth` object, and we’ll tell Android that we intend to use `NFC`. We do so using an [intent,][13] which is a data structure to tell Android that an operation needs to be performed. For example, an intent can launch another activity or send a result to a component that declared interest in it. Functioning like a kind of glue between activities, an intent binds events between the code in different applications. We need an Intent to launch `NFC`. 
  
- When `NFC` becomes available because our activity is running in the foreground on top of the activity stack, we get notified via `onNewIntent()`, because we asked for such notification with our intent in `onCreate()`. This is where we tell Android that we use the result of the returned intent with our `ketaiNFC` object, launching `NFC` in our sketch. An activity is always paused before receiving a new intent, and `onResume()` is always called right after this method. 
+When `NFC` becomes available because our activity is running in the foreground on top of the activity stack, we get notified via `onNewIntent()`, because we asked for such notification with our intent in `onCreate()`. This is where we tell Android that we use the result of the returned intent with our `ketaiNFC` object, launching `NFC` in our sketch. An activity is always paused before receiving a new intent, and `onResume()` is always called right after this method. 
  
- When Bluetooth is available as the result of the Bluetooth activity we launched `onCreate()` while instantiating `KetaiBluetooth`, the connection is handed to us via `onActivityResult()`, which we then assign to our `bt` object. 
+When Bluetooth is available as the result of the Bluetooth activity we launched `onCreate()` while instantiating `KetaiBluetooth`, the connection is handed to us via `onActivityResult()`, which we then assign to our `bt` object. 
  
- Finally, `onResume()`, we start our Bluetooth object `bt` and instantiate our `NFC` object `ketaiNFC`. 
+Finally, `onResume()`, we start our Bluetooth object `bt` and instantiate our `NFC` object `ketaiNFC`. 
  
- Let’s take a look at the actual code for `ActivityLifecycle`. 
+Let’s take a look at the actual code for `ActivityLifecycle`. 
  
- #####code/NFC/NFCBTTransmit/ActivityLifecycle.pde 
- [include](code/NFC/NFCBTTransmit/ActivityLifecycle.pde) 
+#####code/NFC/NFCBTTransmit/ActivityLifecycle.pde 
+[include](code/NFC/NFCBTTransmit/ActivityLifecycle.pde) 
  
- We need these steps to initiate `NFC` and Bluetooth correctly within the activity life cycle.
+We need these steps to initiate `NFC` and Bluetooth correctly within the activity life cycle.
   
  1. Instantiate the Bluetooth object `bt` to start a Bluetooth activity. Register the `NFC` intent when our activity is running by itself in the foreground using `FLAG_ACTIVITY_SINGLE_TOP`. 
  2. Receive the `NFC` intent that we declared in `onCreate()`, and tell Android that `ketaiNFC` handles it. 
@@ -129,92 +129,93 @@ Here are the steps we need to recursively process the live camera image.
  4. Release the camera when another activity starts so it can use it. 
  5. Stop Bluetooth and the camera when the activity stops. 
  
- All of this happens right at the beginning when our sketch starts up. The callback methods we are using require some getting used to. Because `NFC` and Bluetooth launch in separate treads or activities from our sketch—and not sequentially within our sketch—we need the callback methods to get notified when the Bluetooth activity and the `NFC` intent have finished with their individual tasks. 
+All of this happens right at the beginning when our sketch starts up. The callback methods we are using require some getting used to. Because `NFC` and Bluetooth launch in separate treads or activities from our sketch—and not sequentially within our sketch—we need the callback methods to get notified when the Bluetooth activity and the `NFC` intent have finished with their individual tasks. 
  
- And because we depend on the successful delivery of the `NFC` payload for our Bluetooth connection, we need to use those callback methods and integrate them into the activity life cycle of our sketch. Processing and Ketai streamline many aspects of this programming process; when it comes to peer-to-peer networking between Android devices, we still need to deal with those essentials individually. 
+And because we depend on the successful delivery of the `NFC` payload for our Bluetooth connection, we need to use those callback methods and integrate them into the activity life cycle of our sketch. Processing and Ketai streamline many aspects of this programming process; when it comes to peer-to-peer networking between Android devices, we still need to deal with those essentials individually. 
  
- Now let’s move on to the `NFC` tab, where we put the `NFC` classes and methods. 
+Now let’s move on to the `NFC` tab, where we put the `NFC` classes and methods. 
 
 ###Add the NFC Code
  
- We don’t need much code to import `NFC` and make the `KetaiNFC` class available to the sketch. When we receive an `NFC` event using `onNFCEvent()`, we take the Bluetooth address that has been transferred as a text `String` and use it to connect to that device using `connectDevice()`. 
+We don’t need much code to import `NFC` and make the `KetaiNFC` class available to the sketch. When we receive an `NFC` event using `onNFCEvent()`, we take the Bluetooth address that has been transferred as a text `String` and use it to connect to that device using `connectDevice()`. 
  
- Let’s take a look at the code. 
+Let’s take a look at the code. 
  
- #####code/NFC/NFCBTTransmit/NFC.pde 
- [include](code/NFC/NFCBTTransmit/NFC.pde) 
+#####code/NFC/NFCBTTransmit/NFC.pde 
+[include](code/NFC/NFCBTTransmit/NFC.pde) 
  
- Here are the `NFC` steps we take. 
- 1. Receive the `String` from the `NFC` event using the `onNFCEvent()` callback method. 
- 2. Connect to the Bluetooth address we’ve received, removing the prefix “bt:” first. 
+Here are the `NFC` steps we take. 
+
+1. Receive the `String` from the `NFC` event using the `onNFCEvent()` callback method. 
+2. Connect to the Bluetooth address we’ve received, removing the prefix “bt:” first. 
  
- Finally, let’s take a look at the `Bluetooth` tab. 
+Finally, let’s take a look at the `Bluetooth` tab. 
 
 ###Add the Bluetooth Code
  
- In the `Bluetooth` tab, we import the necessary Ketai Bluetooth and `OSC` package to send the Bluetooth messages. Let’s use a custom function called `send()` to assemble the `OSC` message, sending out the color, location, and dimension of our pixel. 
+In the `Bluetooth` tab, we import the necessary Ketai Bluetooth and `OSC` package to send the Bluetooth messages. Let’s use a custom function called `send()` to assemble the `OSC` message, sending out the color, location, and dimension of our pixel. 
  
- If we receive such a pixel from the networked Android via `onBluetoothDataEvent()`, we unpack the data contained in the `OSC` message and draw our pixel rectangle using a custom function, `receive()`. 
+If we receive such a pixel from the networked Android via `onBluetoothDataEvent()`, we unpack the data contained in the `OSC` message and draw our pixel rectangle using a custom function, `receive()`. 
  
- Let’s take a look at the code. 
+Let’s take a look at the code. 
  
- #####code/NFC/NFCBTTransmit/Bluetooth.pde 
- [include](code/NFC/NFCBTTransmit/Bluetooth.pde) 
+#####code/NFC/NFCBTTransmit/Bluetooth.pde 
+[include](code/NFC/NFCBTTransmit/Bluetooth.pde) 
  
- Here are the steps we take to send and receive `OSC` messages over Bluetooth. 
+Here are the steps we take to send and receive `OSC` messages over Bluetooth. 
  1. Add individual values to the `OscMessage` `m`. 
  2. Send the `byte` data contained in the `OSC` message `m` via Bluetooth using `broadcast()`. 
  3. Receive individual values sent via `OSC`, and draw a rectangle in the size and color determined by the received values. 
  4. Check if all seven integers in the `OSC` message are complete before using the values as parameters for the `receive()` method. 
  
- Now with our recursive program, camera, `NFC`, and Bluetooth code completed, it’s time to test the app. 
+Now with our recursive program, camera, `NFC`, and Bluetooth code completed, it’s time to test the app. 
 
 ###Run the App
  
- Before we run the app, we need to set two permissions. Open the Permission Selector from the Sketch menu and select `CAMERA` and `INTERNET`. 
+Before we run the app, we need to set two permissions. Open the Permission Selector from the Sketch menu and select `CAMERA` and `INTERNET`. 
  
- Now browse to the sketch folder and open `AndroidManifest.xml` in your text editor, where you’ll see that those permissions have been set. Add `NFC` permissions so the file looks something like this: 
+Now browse to the sketch folder and open `AndroidManifest.xml` in your text editor, where you’ll see that those permissions have been set. Add `NFC` permissions so the file looks something like this: 
  
- #####code/NFC/NFCBTTransmit/AndroidManifest.xml 
- [include](code/NFC/NFCBTTransmit/AndroidManifest.xml) 
+#####code/NFC/NFCBTTransmit/AndroidManifest.xml 
+[include](code/NFC/NFCBTTransmit/AndroidManifest.xml) 
  
- Run the app on the device that is already connected to the PC via USB. When it launches, disconnect and run the app on your second Android device. Now it’s time for the moment of truth—touch both devices back-to-back and confirm the P2P connection. 
+Run the app on the device that is already connected to the PC via USB. When it launches, disconnect and run the app on your second Android device. Now it’s time for the moment of truth—touch both devices back-to-back and confirm the P2P connection. 
  
- You should see a colored rectangle on each display, taken from the camera preview of the other device. If you move your camera slightly, you’ll recognize that its color is based on a live feed. Tap each screen to increase the resolution and observe what happens on the other device, then tap again. Each new division requires more performance from the devices as the number of pixels we send and display increases exponentially. 
+You should see a colored rectangle on each display, taken from the camera preview of the other device. If you move your camera slightly, you’ll recognize that its color is based on a live feed. Tap each screen to increase the resolution and observe what happens on the other device, then tap again. Each new division requires more performance from the devices as the number of pixels we send and display increases exponentially. 
  
- Keep tapping and you will observe how the app slows as the size of the data payload increases. 
+Keep tapping and you will observe how the app slows as the size of the data payload increases. 
 
-  Now that we’ve learned how to send a Bluetooth ID via `NFC` Beam technology to another device, let’s move on to reading and writing `NFC` tags. 
+Now that we’ve learned how to send a Bluetooth ID via `NFC` Beam technology to another device, let’s move on to reading and writing `NFC` tags. 
 
 ###Read a URL from an NFC Tag
  
- Moving on to the world of `NFC` tags, our sketches will get significantly shorter. Tags come in different shapes and sizes, as illustrated in <!--ref linkend="fig.nfc.tags-->, and they mostly store a few dozen characters, which is why most tags contain a `URL` pointing to a website. For this first app, we’ll create a sketch that can read `NFC` tags. 
+Moving on to the world of `NFC` tags, our sketches will get significantly shorter. Tags come in different shapes and sizes, as illustrated in <!--ref linkend="fig.nfc.tags-->, and they mostly store a few dozen characters, which is why most tags contain a `URL` pointing to a website. For this first app, we’ll create a sketch that can read `NFC` tags. 
  
- Because we are dealing mostly with `URL`s, let’s also include some Processing code that lets us open the link in the device browser. We’ll check if it is a valid URL before we launch the browser. When we launch our sketch on the device, the app will wait for an `NFC` event to occur, which will be triggered when we touch the tag with the device. We’ll also want to display the tag’s content on the device, as shown in <!--ref linkend="fig.nfc.read-->. 
+Because we are dealing mostly with `URL`s, let’s also include some Processing code that lets us open the link in the device browser. We’ll check if it is a valid URL before we launch the browser. When we launch our sketch on the device, the app will wait for an `NFC` event to occur, which will be triggered when we touch the tag with the device. We’ll also want to display the tag’s content on the device, as shown in <!--ref linkend="fig.nfc.read-->. 
  
- ![](images/NFC/ReadNFC.png)
+![](images/NFC/ReadNFC.png)
 #####Figure 8.2 - Read an NFC tag.
 ######When you approach the NFC tag with the Android device, it outputs the collected text/URL on the display. Tapping the screen will take you to the URL saved on the tag. 
 
 ###Enable NFC
  
- To get started, let’s enable `NFC` using the now familiar activity lifecycle methods we used in the previous sketch. All the lifecycle code we need to enable `NFC` goes into our `EnableNFC` tab. 
+To get started, let’s enable `NFC` using the now familiar activity lifecycle methods we used in the previous sketch. All the lifecycle code we need to enable `NFC` goes into our `EnableNFC` tab. 
  
- This tab is identical to <!--ref linkend="sec.nfc.bluetooth.activity.lifecycle-->, with the exception that we don’t have to start up Bluetooth as well. Let’s take a look at the code. 
+This tab is identical to <!--ref linkend="sec.nfc.bluetooth.activity.lifecycle-->, with the exception that we don’t have to start up Bluetooth as well. Let’s take a look at the code. 
  
- #####code/NFC/NFCRead/EnableNFC.pde 
- [include](code/NFC/NFCRead/EnableNFC.pde) 
+#####code/NFC/NFCRead/EnableNFC.pde 
+[include](code/NFC/NFCRead/EnableNFC.pde) 
  
- Now let’s move on to our main sketch, `NFCRead`. 
+Now let’s move on to our main sketch, `NFCRead`. 
 
 ###Add the Main Tab
  
- Now that we’ve set up everything so `NFC` can start up properly, let’s take a look at the main tab, where we read the tag. When we receive an `NFC` event that includes a text `String`, we then use Processing methods to clean the `String`, check if it’s a valid `URL`, and link to the browser. We use [`trim()`][14] to remove whitespace characters from the beginning and the end of the `String`. Then we can use the resulting `String` directly with Processing’s `link()` method, which opens the browser and shows the website stored on the tag. To check if it’s a valid `URL`, we use the [`indexOf()` method][15], which tests if a substring is embedded in a string. If it is, it returns the index position of the substring, and if not, it returns `-1`. 
+Now that we’ve set up everything so `NFC` can start up properly, let’s take a look at the main tab, where we read the tag. When we receive an `NFC` event that includes a text `String`, we then use Processing methods to clean the `String`, check if it’s a valid `URL`, and link to the browser. We use [`trim()`][14] to remove whitespace characters from the beginning and the end of the `String`. Then we can use the resulting `String` directly with Processing’s `link()` method, which opens the browser and shows the website stored on the tag. To check if it’s a valid `URL`, we use the [`indexOf()` method][15], which tests if a substring is embedded in a string. If it is, it returns the index position of the substring, and if not, it returns `-1`. 
  
- Here is the code. 
+Here is the code. 
  
- #####code/NFC/NFCRead/NFCRead.pde 
- [include](code/NFC/NFCRead/NFCRead.pde) 
+#####code/NFC/NFCRead/NFCRead.pde 
+[include](code/NFC/NFCRead/NFCRead.pde) 
  
  1. Specify how to display the content of the tag stored in `tagText` on the device display. 
  2. Receive a `String` from the tag when the device touches it and an `NFC` event occurs. 
@@ -222,45 +223,45 @@ Here are the steps we need to recursively process the live camera image.
  4. Receive a `String` from the tag when the device touches it and an `NFC` event occurs. 
  5. Jump to the link stored on the tag using `link()`. Follow the link in the device browser when tapping the screen, given there is text stored on the tag. 
  
- Before we run the sketch, we’ll again need to make sure that we have the appropriate `NFC` permissions. 
+Before we run the sketch, we’ll again need to make sure that we have the appropriate `NFC` permissions. 
 
 ###Set NFC Permissions
  
- Because `NFC` permissions are not listed in Processing’s Android Permissions Selector, where we usually make our permission selections (<!--ref linkend="sec.sketch.permissions-->), we need to modify `AndroidManifest.xml` directly to enable `NFC`. Processing typically takes care of creating this file for us when we run the sketch, based on the selection(s) we’ve made in the Permission Selector, and it re-creates the file every time we change our permission settings. Also, when we make no permission selections at all, Processing creates a basic manifest file inside our sketch folder. 
+Because `NFC` permissions are not listed in Processing’s Android Permissions Selector, where we usually make our permission selections (<!--ref linkend="sec.sketch.permissions-->), we need to modify `AndroidManifest.xml` directly to enable `NFC`. Processing typically takes care of creating this file for us when we run the sketch, based on the selection(s) we’ve made in the Permission Selector, and it re-creates the file every time we change our permission settings. Also, when we make no permission selections at all, Processing creates a basic manifest file inside our sketch folder. 
  
- Since we are already editing the Android manifest file manually, let’s jump ahead and also add an [intent filter][17] that launches our app when a tag is discovered. This way, `NFCRead` will start when the app is not yet running and resume when it is running in the background. 
+Since we are already editing the Android manifest file manually, let’s jump ahead and also add an [intent filter][17] that launches our app when a tag is discovered. This way, `NFCRead` will start when the app is not yet running and resume when it is running in the background. 
  
- Let’s take a look at the sketch folder and see if `AndroidManifest.xml` already exists inside it. Open the sketch folder by choosing Sketch &mapsto; Show Sketch Folder. You should see two Processing source files in the folder for this sketch, one named `EnableNFC` and the other `NFCRead`. 
+Let’s take a look at the sketch folder and see if `AndroidManifest.xml` already exists inside it. Open the sketch folder by choosing Sketch &mapsto; Show Sketch Folder. You should see two Processing source files in the folder for this sketch, one named `EnableNFC` and the other `NFCRead`. 
  
- Now to create a manifest, return to Processing and choose Android &mapsto; Sketch Permissions from the menu. Although we won’t find an `NFC` check box in there, it will still create an `AndroidManifest.xml` template for us that we can modify. 
+Now to create a manifest, return to Processing and choose Android &mapsto; Sketch Permissions from the menu. Although we won’t find an `NFC` check box in there, it will still create an `AndroidManifest.xml` template for us that we can modify. 
  
- To modify the manifest, navigate to the sketch folder and open `AndroidManifest.xml`. Make your changes to the manifest so it looks like the following `xml` code. 
+To modify the manifest, navigate to the sketch folder and open `AndroidManifest.xml`. Make your changes to the manifest so it looks like the following `xml` code. 
  
- #####code/NFC/NFCRead/AndroidManifest.xml 
- [include](code/NFC/NFCRead/AndroidManifest.xml) 
+#####code/NFC/NFCRead/AndroidManifest.xml 
+[include](code/NFC/NFCRead/AndroidManifest.xml) 
  
- In the manifest `xml`, we take the following steps. 
+In the manifest `xml`, we take the following steps. 
  
  1. Set `NFC` permission. 
  2. Have the app look for a tag. 
  3. Make Android look for an `NDEF` tag. 
  4. If an `NDEF` tag is discovered and the app is not already running in the foreground, make the activity the default. 
  
- Now that the appropriate `NFC` permissions are in place, let’s run the app. 
+Now that the appropriate `NFC` permissions are in place, let’s run the app. 
 
 ###Run the App
  
- Run the app on the device. When it starts up, our `tagText` `String` is empty. You can tap the screen but nothing happens, because we don’t yet have a link to jump to. 
+Run the app on the device. When it starts up, our `tagText` `String` is empty. You can tap the screen but nothing happens, because we don’t yet have a link to jump to. 
  
- Now approach your tag with the back of your device. A few centimeters before you touch the tag, you will hear a beep, which signals that an `NFC` event has occurred. The `URL` stored on the tag should now appear on your display (<!--ref linkend="fig.nfc.read-->). If you have another one, try the other tag and see if it has a different `URL`. 
+Now approach your tag with the back of your device. A few centimeters before you touch the tag, you will hear a beep, which signals that an `NFC` event has occurred. The `URL` stored on the tag should now appear on your display (<!--ref linkend="fig.nfc.read-->). If you have another one, try the other tag and see if it has a different `URL`. 
 
- Now that you’ve successfully read `NFC` tags, it’s time to learn how to write them as well, either to add your own URL or to change the `NDEF` message on there. 
+Now that you’ve successfully read `NFC` tags, it’s time to learn how to write them as well, either to add your own URL or to change the `NDEF` message on there. 
 
-###Write a `URL` to an `NFC` Tag
+###Write a URL to an NFC Tag
  
- The `NFC` device built into the Android can also write to `NFC` tags. Most tags you get in a starter kit can be repeatedly rewritten. So if you’d like to produce a small series of `NFC`-enabled business cards, provide a quick way to share information at a fair booth, or create your own scavenger hunt with `NFC` stickers, you can write tags with your Android. 
+The `NFC` device built into the Android can also write to `NFC` tags. Most tags you get in a starter kit can be repeatedly rewritten. So if you’d like to produce a small series of `NFC`-enabled business cards, provide a quick way to share information at a fair booth, or create your own scavenger hunt with `NFC` stickers, you can write tags with your Android. 
  
- Let’s build on our previous sketch and add a feature to do that. The app must still be able to read a tag to confirm that our content has been successfully written. To write tags, let’s use the software keyboard to type the text we want to send as a `String` to the tag, as illustrated in <!--ref linkend="fig.nfc.write-->. If we mistype, we need the backspace key to delete the last character in our `String`. Once we’ve completed the `String`, let’s use the `ENTER` key to confirm and `write()` the tag. The transmission to write the actual tag is then completed when we touch the tag. Finally, when we come in contact with the tag again, we read its content.
+Let’s build on our previous sketch and add a feature to do that. The app must still be able to read a tag to confirm that our content has been successfully written. To write tags, let’s use the software keyboard to type the text we want to send as a `String` to the tag, as illustrated in <!--ref linkend="fig.nfc.write-->. If we mistype, we need the backspace key to delete the last character in our `String`. Once we’ve completed the `String`, let’s use the `ENTER` key to confirm and `write()` the tag. The transmission to write the actual tag is then completed when we touch the tag. Finally, when we come in contact with the tag again, we read its content.
   
 ![](images/NFC/WriteNFC.png)
 #####Figure 8.3 - Read and write NFC tags.
@@ -268,12 +269,13 @@ Here are the steps we need to recursively process the live camera image.
 
 Let’s introduce a variable called `tagStatus` to provide us with some onscreen feedback during this process. The sketch itself is structured identically to our previous example <!--ref linkend="code.nfc.read-->. We’ll keep the `EnableNFC` tab and the permissions we set for `AndroidManifest.xml`. 
  
- Let’s take a look at the main tab.
+Let’s take a look at the main tab.
   
- #####code/NFC/NFCWrite/NFCWrite.pde 
- [include](code/NFC/NFCWrite/NFCWrite.pde) 
+#####code/NFC/NFCWrite/NFCWrite.pde 
+[include](code/NFC/NFCWrite/NFCWrite.pde) 
  
- Let’s take a look at the steps we need to take to write a tag. 
+Let’s take a look at the steps we need to take to write a tag. 
+
  1. Import the Ketai user interface package to show and hide Android’s software keyboard. 
  2. Declare a variable `tagStatus` to give us feedback on the text input and writing status. 
  3. Show the tag status and the current text input to write to the tag. 
@@ -289,13 +291,13 @@ Let’s introduce a variable called `tagStatus` to provide us with some onscreen
 
 ###Run the App
  
- Run the app on the device and follow the instruction on the display. Start by tapping the screen, which will cause the software keyboard to appear. Type your text. If you mistype, you can correct it using the backspace button. When you are done, finish up by tapping the Enter key. Now the device is ready to write to the tag. Touch the tag with the back of the device, and if the sketch is operating properly, you should hear a beep, which indicates the device has found and written to the tag. Touch the tag again to read what’s now on it. That’s it! 
+Run the app on the device and follow the instruction on the display. Start by tapping the screen, which will cause the software keyboard to appear. Type your text. If you mistype, you can correct it using the backspace button. When you are done, finish up by tapping the Enter key. Now the device is ready to write to the tag. Touch the tag with the back of the device, and if the sketch is operating properly, you should hear a beep, which indicates the device has found and written to the tag. Touch the tag again to read what’s now on it. That’s it! 
 
- Now that we’ve completed both reading and writing tags, we know how easy this kind of interaction is to do and we’ve got an idea of how useful it can be. 
+Now that we’ve completed both reading and writing tags, we know how easy this kind of interaction is to do and we’ve got an idea of how useful it can be. 
 
 ###Wrapping Up
  
- With all those different networking techniques under your belt, you’ve earned the networking badge of honor. Now you’ll be able to choose the right networking method for your mobile projects. You already know how to share data with a remote device and you’ve mastered peer-to-peer networking for those that are nearby. You’ve seen how near field communication can be used to initiate a peer-to-peer connection between two devices and to read `NFC` tags. Each of these highly relevant mobile concepts complement each other and can be combined—making for a whole lot of apps you can build. 
+With all those different networking techniques under your belt, you’ve earned the networking badge of honor. Now you’ll be able to choose the right networking method for your mobile projects. You already know how to share data with a remote device and you’ve mastered peer-to-peer networking for those that are nearby. You’ve seen how near field communication can be used to initiate a peer-to-peer connection between two devices and to read `NFC` tags. Each of these highly relevant mobile concepts complement each other and can be combined—making for a whole lot of apps you can build. 
  
 Now that we've seen how to share all kinds of data between networked devices, it's time to take a closer look at the databases and formats we can use both locally and remotely.
 
