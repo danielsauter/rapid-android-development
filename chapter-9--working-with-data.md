@@ -293,26 +293,26 @@ The actual data source we’ll work with is hosted online:
  
 [`http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.csv`](http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.csv)
  
- Follow the link in your browser, and you’ll see the current live `CSV` file consisting of comma-separated values. We won’t need to use all of the fields in order to visualize the location and magnitude of each earthquake, but we will need `latitude`, `longitude`, and `mag`. 
+Follow the link in your browser, and you’ll see the current live `CSV` file consisting of comma-separated values. We won’t need to use all of the fields in order to visualize the location and magnitude of each earthquake, but we will need `latitude`, `longitude`, and `mag`. 
  
- To display the geographic location of each earthquake, we’ll use an [equirectangular projection world map,][19] which stretches the globe into a rectangular format. This allows us to translate the longitude and latitude values for each earthquake into an *x* and *y* location that we can display on our device screen. [Such a projection maps][20] the longitude meridians to regularly spaced vertical lines and maps latitudes to regularly spaced horizontal lines. The constant intervals between parallel lines lets us overlay each earthquake’s geolocation accurately in relation to the world map. 
+To display the geographic location of each earthquake, we’ll use an [equirectangular projection world map,][19] which stretches the globe into a rectangular format. This allows us to translate the longitude and latitude values for each earthquake into an *x* and *y* location that we can display on our device screen. [Such a projection maps][20] the longitude meridians to regularly spaced vertical lines and maps latitudes to regularly spaced horizontal lines. The constant intervals between parallel lines lets us overlay each earthquake’s geolocation accurately in relation to the world map. 
  
- The map includes the complete range of longitude meridians from -180 to 180 degrees, but only a portion of the latitude degree spectrum—from -60 to 85 degrees instead of the usual -90 to 90 degrees. The poles are not included in the map, which are the most distorted portion of an equirectangular projection map. Because they are less populated and less frequently the source of earthquakes, they are also less relevant for our app, and we can use the map’s pixel real estate for its more populated land masses. 
+The map includes the complete range of longitude meridians from -180 to 180 degrees, but only a portion of the latitude degree spectrum—from -60 to 85 degrees instead of the usual -90 to 90 degrees. The poles are not included in the map, which are the most distorted portion of an equirectangular projection map. Because they are less populated and less frequently the source of earthquakes, they are also less relevant for our app, and we can use the map’s pixel real estate for its more populated land masses. 
  
- To use our pixel real estate most effectively, we’ll draw the world map full screen, covering the complete `width` and `height` of the Android screen and introducing some additional distortion to our data visualization due to the device’s own aspect ratio. Because both the map and the location data scales depend on the display `width` and `height`, our information remains geographically accurate. 
+To use our pixel real estate most effectively, we’ll draw the world map full screen, covering the complete `width` and `height` of the Android screen and introducing some additional distortion to our data visualization due to the device’s own aspect ratio. Because both the map and the location data scales depend on the display `width` and `height`, our information remains geographically accurate. 
  
- ![](images/Data/Earthquakes.png)
+![](images/Data/Earthquakes.png)
 #####Figure 9.3 - Earthquakes reported worldwide during the last hour.
 ######The device location is indicated by a green circle. Red circles indicate the locations of earthquakes reported within the hour—the size and pulse frequency indicate their magnitude. 
 
- Using a data file that is hosted online changes the way we load the file into Processing’s `Table` class. Unlike our earlier examples, where we loaded the file from the Android’s storage, we won’t know ahead of time whether we can successfully connect to the file due to a very slow or an absent Internet connection, for instance. So we’ll use the `try` `catch` construct we’ve seen in <!--ref linkend="code.data.write-->, again to attempt loading from the online source. If it fails, catch the exception and load a data sample stored in our sketch’s `data` folder as a fallback. 
+Using a data file that is hosted online changes the way we load the file into Processing’s `Table` class. Unlike our earlier examples, where we loaded the file from the Android’s storage, we won’t know ahead of time whether we can successfully connect to the file due to a very slow or an absent Internet connection, for instance. So we’ll use the `try` `catch` construct we’ve seen in <!--ref linkend="code.data.write-->, again to attempt loading from the online source. If it fails, catch the exception and load a data sample stored in our sketch’s `data` folder as a fallback. 
  
- Let’s take a look at the code. 
+Let’s take a look at the code. 
  
 #####code/Data/DataEarthquakes/DataEarthquakes.pde
 [include](code/Data/DataEarthquakes/DataEarthquakes.pde)
   
- Here are the steps we need to take to load and visualize the data. 
+Here are the steps we need to take to load and visualize the data. 
  1. Define an `src` string containing the `URL` to the data source hosted online. 
  2. Load the data into the `earthquakes` `Table` object using the `header, csv` to indicate that we have a header row and use a comma-separated data structure. 
  3. Use the fallback local data source `all_hour_2015-02-24.txt` stored in the `data` folder of our sketch if the connection to the online source fails. The local file is a sample of the online source using the same data structure. 
@@ -336,7 +336,8 @@ Let’s look at the `Location` tab next, which includes all the necessary code t
 #####code/Data/DataEarthquakes/Location.pde
 [include](code/Data/DataEarthquakes/Location.pde)
  
- Here’s what we need to do to determine our device location. 
+Here’s what we need to do to determine our device location. 
+
  1. Create a `KetaiLocation` variable named `location`. 
  2. Create two floating point number variables to store the *x* and *y* position of the device relative to the world map so we can use it in `draw()`. 
  3. Map the `lon` value we receive from the Location Manager relative to the screen width. 
@@ -357,13 +358,13 @@ Your device might not have an updated coarse location available, so it might tak
  
 Try another source from the [`USGS`’s data feed,][22] where you can find `CSV` files containing other earthquake data using the same file structure we’ve seen earlier in the <!--ref linkend="code.data.earthquakes.source-->. 
  
- Replace the `src` text string with this `URL`: 
+Replace the `src` text string with this `URL`: 
  
- http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.csv 
+http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.csv 
 
 Now rerun the code. Looking at the seven-day-period visualization, you can see how vibrant our planet is, even though we’ve limited the scope of the application to [earthquakes][23] of magnitude 2.5 and higher. In terms of their physical impact, experts say earthquakes of magnitude 3 or lower are almost imperceptible, while earthquakes of magnitude 7 and higher can cause serious damage over large areas.
  
- Because the comma-separated data structure of this seven-day-period data file is identical to the one we used earlier in the last hour, we don’t have to do anything else besides replace the source `URL`. The app loads the additional data rows containing the earthquake data and displays it independent of how many earthquakes are reported, as shown in <!--ref linkend="fig.earthquakes.past.week" thispage="yes-->. 
+Because the comma-separated data structure of this seven-day-period data file is identical to the one we used earlier in the last hour, we don’t have to do anything else besides replace the source `URL`. The app loads the additional data rows containing the earthquake data and displays it independent of how many earthquakes are reported, as shown in <!--ref linkend="fig.earthquakes.past.week" thispage="yes-->. 
 
 ![](images/Data/EarthquakesSevenDays.png)
 #####Figure 9.4 - Earthquakes reported worldwide during the last seven days.
@@ -381,10 +382,10 @@ To refine our app in this way, we can work with `KetaiVibrate`, which gives us s
  
 Let’s take a look at the code, focusing on the `vibrate()` and `update()` methods that provide the functionality we’re looking for. Besides the main tab, we’ll use the `Location` tab we’ve seen already in the previous iteration of the app in the <!--ref linkend="code.data.earthquakes.location-->. 
  
- #####code/Data/DataEarthquakesShake/DataEarthquakesShake.pde
- [include](code/Data/DataEarthquakesShake/DataEarthquakesShake.pde)
+#####code/Data/DataEarthquakesShake/DataEarthquakesShake.pde
+[include](code/Data/DataEarthquakesShake/DataEarthquakesShake.pde)
  
- Let’s take a look at the modifications we need to make to frequent updates and add vibration feedback to the earthquake app. 
+Let’s take a look at the modifications we need to make to frequent updates and add vibration feedback to the earthquake app. 
  1. Create a `motor` variable of type `KetaiVibrate`. 
  2. Create the `KetaiVibrate` object `motor`. 
  3. Check if the ten-second interval has expired. 
@@ -399,7 +400,7 @@ Let’s take a look at the code, focusing on the `vibrate()` and `update()` meth
  12. Create a `boolean` custom method to iterate through a table and find a specific `String` entry we call `needle`. Use the table name, the column index number we are searching in, and the `needle` as parameters for the method. 
  13. Iterate through the table `t` contents in column `col`, and compare the entry to the `needle`. Return `true` if we find a matching entry, and `false` if we don’t. 
  
- Let’s test the sketch. 
+Let’s test the sketch. 
 
 ###Run the App
  
