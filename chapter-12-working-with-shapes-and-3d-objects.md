@@ -17,7 +17,8 @@ To give users a way to interact with the M&#xF6;bius strip, we’ll introduce an
 ###Working with the PShape Class
  
  In this chapter, we’ll use [Processing’s `PShape`][0] features for all the projects we’ll create. We can use the class to load 2D vector shape files (`svg`) and 3D object files (`obj`) and work with 3D vertices generated algorithmically. Let’s take a look at the methods we’ll use to load and create the 3D scenes in this chapter. 
- <table> <row><col>
+
+  <table> <row><col>
 [`loadShape()`][1]
  <col> 
  A Processing method to load a Scalable Vector Graphic, or `svg`, file into a `PShape` object 
