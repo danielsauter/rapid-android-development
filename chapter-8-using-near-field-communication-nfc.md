@@ -123,11 +123,11 @@ Let’s take a look at the actual code for `ActivityLifecycle`.
  
 We need these steps to initiate `NFC` and Bluetooth correctly within the activity life cycle.
   
- 1. Instantiate the Bluetooth object `bt` to start a Bluetooth activity. Register the `NFC` intent when our activity is running by itself in the foreground using `FLAG_ACTIVITY_SINGLE_TOP`. 
- 2. Receive the `NFC` intent that we declared in `onCreate()`, and tell Android that `ketaiNFC` handles it. 
- 3. Receive the Bluetooth connection if it started properly when we initiated it in `onCreate()`. 
- 4. Release the camera when another activity starts so it can use it. 
- 5. Stop Bluetooth and the camera when the activity stops. 
+1. Instantiate the Bluetooth object `bt` to start a Bluetooth activity. Register the `NFC` intent when our activity is running by itself in the foreground using `FLAG_ACTIVITY_SINGLE_TOP`. 
+2. Receive the `NFC` intent that we declared in `onCreate()`, and tell Android that `ketaiNFC` handles it. 
+3. Receive the Bluetooth connection if it started properly when we initiated it in `onCreate()`. 
+4. Release the camera when another activity starts so it can use it. 
+5. Stop Bluetooth and the camera when the activity stops. 
  
 All of this happens right at the beginning when our sketch starts up. The callback methods we are using require some getting used to. Because `NFC` and Bluetooth launch in separate treads or activities from our sketch—and not sequentially within our sketch—we need the callback methods to get notified when the Bluetooth activity and the `NFC` intent have finished with their individual tasks. 
  
