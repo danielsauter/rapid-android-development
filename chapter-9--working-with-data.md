@@ -2,25 +2,25 @@
 
 #Working with Data
  
- Sooner or later, we’ll need to be able to store and read data. To keep track of user choices and settings, we need to write data into a file or database stored on the Android device. We can’t always rely on a carrier or network connection to read and write data from the Web or the Cloud, so we require a repository on the Android device; that way we can stop the app or reboot the phone without losing data and provide continuity between user sessions. Users expect mobile devices to seamlessly integrate into their daily routines and provide them with information that is relevant to their geographic and time-specific context. Entire books have been dedicated to each section in this chapter. As we create the chapter projects, we’ll try our best to remain focused on the Android specifics when we are working with data and to explore only those formats and techniques you’re most likely to use. 
+Sooner or later, we’ll need to be able to store and read data. To keep track of user choices and settings, we need to write data into a file or database stored on the Android device. We can’t always rely on a carrier or network connection to read and write data from the Web or the Cloud, so we require a repository on the Android device; that way we can stop the app or reboot the phone without losing data and provide continuity between user sessions. Users expect mobile devices to seamlessly integrate into their daily routines and provide them with information that is relevant to their geographic and time-specific context. Entire books have been dedicated to each section in this chapter. As we create the chapter projects, we’ll try our best to remain focused on the Android specifics when we are working with data and to explore only those formats and techniques you’re most likely to use. 
  
- Processing has received a major upgrade to its data features, which were compiled into a comprehensive `Table` class. The `Table` class allows us to read, parse, manipulate, and write tabular data in different datatypes. With Processing 2.0, Ben Fry, one of its principal authors, has now integrated the methods and techniques from his seminal *Visualizing Data (Fry, '08)* into the Processing core, making it easier for us to visually explore data. 
+Processing has received a major upgrade to its data features, which were compiled into a comprehensive `Table` class. The `Table` class allows us to read, parse, manipulate, and write tabular data in different datatypes. With Processing 2.0, Ben Fry, one of its principal authors, has now integrated the methods and techniques from his seminal *Visualizing Data (Fry, '08)* into the Processing core, making it easier for us to visually explore data. 
  
- Using the `Table` class, we'll be visualizing tab- and comma-separated data in no time. We'll learn how to work with private and public data storage on the Android, keeping data accessible only for our app, and alternatively share it with other apps via Android’s external storage. We’ll read data from the internal and external storage and write data into tab-separated value files stored on the Android. 
+Using the `Table` class, we'll be visualizing tab- and comma-separated data in no time. We'll learn how to work with private and public data storage on the Android, keeping data accessible only for our app, and alternatively share it with other apps via Android’s external storage. We’ll read data from the internal and external storage and write data into tab-separated value files stored on the Android. 
  
- To demonstrate how sensors, stored data, and Processing techniques for displaying data can be combined, we’ll create an app that acquires real-time earthquake data and displays the result. The app will read, store, and show all reported earthquakes worldwide during the last hour using the data access techniques you’ll learn in this chapter and data collected by the US Environmental Protection Agency (`EPA`). For the project, we’ll make use of the `Location` code introduced in <!--ref linkend="chp.geolocation-->. In a second step, we’ll refine the earthquake app to indicate when new earthquakes are reported using timed device vibrations. 
+To demonstrate how sensors, stored data, and Processing techniques for displaying data can be combined, we’ll create an app that acquires real-time earthquake data and displays the result. The app will read, store, and show all reported earthquakes worldwide during the last hour using the data access techniques you’ll learn in this chapter and data collected by the US Environmental Protection Agency (`EPA`). For the project, we’ll make use of the `Location` code introduced in <!--ref linkend="chp.geolocation-->. In a second step, we’ll refine the earthquake app to indicate when new earthquakes are reported using timed device vibrations. 
  
- In the following chapter of this two-part introduction to data, we’ll work with SQLite, the popular relational database management system for local clients like the Android and used by many browsers and operating systems. It implements the popular Structured Query Language (`SQL`) syntax for database queries, which we can use to access data that we’ve stored locally on our device. We’ll first get SQLite running with a simple sketch and learn how to use `SQL` queries to retrieve data from one or more tables, and then we’ll use it to capture, store, browse, and visualize sensor values. These are the tools we’ll need to write some more ambitious data-driven projects. 
+In the following chapter of this two-part introduction to data, we’ll work with SQLite, the popular relational database management system for local clients like the Android and used by many browsers and operating systems. It implements the popular Structured Query Language (`SQL`) syntax for database queries, which we can use to access data that we’ve stored locally on our device. We’ll first get SQLite running with a simple sketch and learn how to use `SQL` queries to retrieve data from one or more tables, and then we’ll use it to capture, store, browse, and visualize sensor values. These are the tools we’ll need to write some more ambitious data-driven projects. 
  
- Let’s first take a closer look at data, data storage, and databases. 
+Let’s first take a closer look at data, data storage, and databases. 
 
 ###Introducing Databases
  
- To autocomplete the words that users type, guess a user’s intent, or allow users to pick up where they have left off requires that our apps work with files and databases; there is simply no alternative. For example, when we pull up a bookmark, check a score, or restore prior user settings, we read data that we’ve written earlier into a local file or database. Data is essential for mobile apps because both time and location are ubiquitous dimensions when we use our Android devices, and it requires additional considerations when we develop, compared to desktop software. We expect our mobile apps to also be functional when cellular or Wi-Fi networks are unavailable. In such a scenario, apps typically rely on the data that has been saved in prior sessions, which typically get updated when a network becomes available. 
+To autocomplete the words that users type, guess a user’s intent, or allow users to pick up where they have left off requires that our apps work with files and databases; there is simply no alternative. For example, when we pull up a bookmark, check a score, or restore prior user settings, we read data that we’ve written earlier into a local file or database. Data is essential for mobile apps because both time and location are ubiquitous dimensions when we use our Android devices, and it requires additional considerations when we develop, compared to desktop software. We expect our mobile apps to also be functional when cellular or Wi-Fi networks are unavailable. In such a scenario, apps typically rely on the data that has been saved in prior sessions, which typically get updated when a network becomes available. 
  
- Whether they are stored in tabular files or as object-oriented records, databases generally share one characteristic—structured data in the form of text and numbers, separated into distinct categories, or fields. The more specific the fields, the better the results and sorts the database can deliver. As we know, for example, dumping all of our receipts into one shoebox is not the kind of database structure an accountant or financial advisor would recommend: labeled files and folders are far more efficient and searchable. 
+Whether they are stored in tabular files or as object-oriented records, databases generally share one characteristic—structured data in the form of text and numbers, separated into distinct categories, or fields. The more specific the fields, the better the results and sorts the database can deliver. As we know, for example, dumping all of our receipts into one shoebox is not the kind of database structure an accountant or financial advisor would recommend: labeled files and folders are far more efficient and searchable. 
  
- Recommending which type of organization, or data architecture, is the best for a particular task goes beyond the scope of this book. It’s the subject of numerous anthologies [(such as *Visualizing Data (Fry, '08)*)][0], which do a great job of breaking down appropriate table relations, data types, and queries. We’re going to limit the scope of our exploration to tab- and comma-separated values (`TSV` and `CSV`) because they are easy to use and very common, and we’ll balance it with the more powerful SQLite data management system, providing us with more complex queries and the most widely deployed data management system out there. 
+Recommending which type of organization, or data architecture, is the best for a particular task goes beyond the scope of this book. It’s the subject of numerous anthologies [(such as Visualizing Data (Fry, '08))][0], which do a great job of breaking down appropriate table relations, data types, and queries. We’re going to limit the scope of our exploration to tab- and comma-separated values (`TSV` and `CSV`) because they are easy to use and very common, and we’ll balance it with the more powerful SQLite data management system, providing us with more complex queries and the most widely deployed data management system out there. 
  
  The most common structural metaphor for representing a database is a table (or a couple of them). Known to us from spreadsheets, a table uses columns and rows as a data structure. Columns, also known as fields, provide the different categories for a table; rows contain entries in the form of numbers and text that always adhere to the structure provided by the columns. 
  
@@ -29,7 +29,8 @@
 ###Working with the Table Class and the File System
  
  Throughout this chapter, we'll work with Processing’s `Table` class, and particularly with the following methods: 
- <table> <colspec col="1" width="23%--> <row><col>
+ 
+ <table> <row><col>
 `Table`
  <col> <p size="small--> A comprehensive Processing class to load, parse, and write data in different file formats—it provides similar methods that we’d find in a database. 
  </row> <row><col>
@@ -74,7 +75,7 @@
  A Processing method returning the file path to the sketch in the file system—if we run our sketch on the Android device, it returns the path to the app’s location within Android’s file system. 
  </row> <row><col>
 [`KetaiVibrate()`][6]
- <col> <p size="small--> A Ketai class giving access to the built-in device vibration motor 
+ <col> A Ketai class giving access to the built-in device vibration motor 
  </row> <row><col>
 [`vibrate()`][7]
  <col> 
@@ -262,22 +263,22 @@ Now that you’ve learned how to write data to the app using a specified locatio
  
  1. Use Android’s `Environment` method `getExternalStorageDirectory()` to get the name of the external storage directory on the Android device, and use `getAbsolutePath()` to get the absolute path to that directory. Work with that path as a parameter for Java’s `File` object, providing a `File`-type parameter for Processing’s `writeTSV()` `Table` method, used to write the actual `TSV` file. 
  
- Let’s test the app now. 
+Let’s test the app now. 
 
 
 ###Run the App
  
- Before we can write to the external storage, we need to give the appropriate permission to do so in the Permissions Selector. Open the Android Permissions Selector, scroll to Write External Storage and check the permission box. 
+Before we can write to the external storage, we need to give the appropriate permission to do so in the Permissions Selector. Open the Android Permissions Selector, scroll to Write External Storage and check the permission box. 
  
- Now run the sketch on your device. It looks and behaves identically to the previous sketch shown in <!--ref linkend="fig.data.write-->. Draw some points on the screen and save it by pressing any of the menu keys. The only difference here is that we save `data.tsv` now into the root of your Android’s external storage directory. 
+Now run the sketch on your device. It looks and behaves identically to the previous sketch shown in <!--ref linkend="fig.data.write-->. Draw some points on the screen and save it by pressing any of the menu keys. The only difference here is that we save `data.tsv` now into the root of your Android’s external storage directory. 
  
- Let’s browse the external storage and look for our `data.tsv` file. Depending on your Android make and model, try unplugging the USB cable connecting your device and the desktop, and plug it back in. You should be prompted to “Turn on USB” storage. If this is the case, go ahead and confirm (on some devices, try browsing to Settings &mapsto; “More...” on the Android and look for a USB mass storage option. Alternatively, look for the USB mass storage process recommended by your device manufacturer). 
+Let’s browse the external storage and look for our `data.tsv` file. Depending on your Android make and model, try unplugging the USB cable connecting your device and the desktop, and plug it back in. You should be prompted to “Turn on USB” storage. If this is the case, go ahead and confirm (on some devices, try browsing to Settings &mapsto; “More...” on the Android and look for a USB mass storage option. Alternatively, look for the USB mass storage process recommended by your device manufacturer). 
  
- When you turn on USB storage, the device lets you know that some apps will stop; go ahead and OK that. Now move over to your desktop computer and browse to your USB mass storage medium, often called `NO NAME` if you haven’t renamed it. Click on your mass storage device, and right there in the root folder, find a file called `data.tsv`. 
+When you turn on USB storage, the device lets you know that some apps will stop; go ahead and OK that. Now move over to your desktop computer and browse to your USB mass storage medium, often called `NO NAME` if you haven’t renamed it. Click on your mass storage device, and right there in the root folder, find a file called `data.tsv`. 
  
- Check `data.tsv` by opening it in your favorite text editor. You’ll find two columns there neatly separated by a tab; in each row, you’ll find a pair of integer values. This is perfectly sufficient for our project. More complex data projects typically require a unique identifier for each row, a row in one table to point to a specific record in another. We’ll look into this when we are in <!--ref linkend="sec.sqlite-->, later in this chapter. 
+Check `data.tsv` by opening it in your favorite text editor. You’ll find two columns there neatly separated by a tab; in each row, you’ll find a pair of integer values. This is perfectly sufficient for our project. More complex data projects typically require a unique identifier for each row, a row in one table to point to a specific record in another. We’ll look into this when we are in <!--ref linkend="sec.sqlite-->, later in this chapter. 
  
- Now that we’ve learned how to use `CSV` and `TSV` data stored on the Android device, let’s explore how to load comma-separated values from a source hosted online in the next project. 
+Now that we’ve learned how to use `CSV` and `TSV` data stored on the Android device, let’s explore how to load comma-separated values from a source hosted online in the next project. 
 
 ###Visualize Real-Time Earthquake Data
  
