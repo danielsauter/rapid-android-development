@@ -83,14 +83,15 @@ When we run the app on the networked Androids, we will get a sense of how much d
   
   * *`NFC`* The tab that contains the `setupNFC()` method to create the `NFC` object we are working with and the `onNFCEvent()` method that launches the Bluetooth connection when we received the other device’s Bluetooth `ID` via `NFC`. 
    
- We’ll create each of those tabs step by step and present the code for each component separately in the following sections. 
+We’ll create each of those tabs step by step and present the code for each component separately in the following sections. 
  
- Let’s first take a look at our main tab. 
+Let’s first take a look at our main tab. 
  
- #####code/NFC/NFCBTTransmit/NFCBTTransmit.pde 
- [include](code/NFC/NFCBTTransmit/NFCBTTransmit.pde) 
+#####code/NFC/NFCBTTransmit/NFCBTTransmit.pde
+[include](code/NFC/NFCBTTransmit/NFCBTTransmit.pde) 
  
- Here are the steps we need to recursively process the live camera image. 
+Here are the steps we need to recursively process the live camera image.
+ 
  1. Set the initial number of divisions to `1`, showing one fullscreen rectangle. 
  2. Center the rectangle around the horizontal and vertical location where it is drawn, using `rectMode()`. 
  3. Call the recursive function with starting values for each parameter, starting in the center of the camera preview. 
