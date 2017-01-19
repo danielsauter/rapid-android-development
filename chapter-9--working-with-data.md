@@ -148,11 +148,11 @@ loadTable("groceries.txt", "header, tsv");
  13. Output the text label for each named color centered within the row rectangle. 
  14. Move downward by one `rowHeight` using `translate()`. 
  
- Let’s now move on to reading comma-separated values from a text file. 
+Let’s now move on to reading comma-separated values from a text file. 
 
 ###Read Comma-Separated Web Color Data
  
- In the next sketch, we’ll work with hexadecimal values of web colors and juxtapose them with their official name from the HTML web specification. Our data source contains comma (“,”) separated values (`CSV`), which we read from the file stored in the `data` directory of our sketch. The `CSV` file contains sixteen rows, each containing two values separated by a comma. The first value contains a `String` that is one of the named colors in the [W3C’s `HTML` `color` specification.][12] The second value contains a text `String` that represents the hexadecimal value (or “hex value,” for short) of that named color. When we juxtapose a text description with its color in a list of individually labeled swatches, our sketch will display a screen like that shown in <!--ref linkend="fig.data.read-->. To distribute each swatch vertically, we use the `translate()` method we’ve implemented already in <!--ref linkend="sec.destination.finder-->.[][13] 
+In the next sketch, we’ll work with hexadecimal values of web colors and juxtapose them with their official name from the HTML web specification. Our data source contains comma (“,”) separated values (`CSV`), which we read from the file stored in the `data` directory of our sketch. The `CSV` file contains sixteen rows, each containing two values separated by a comma. The first value contains a `String` that is one of the named colors in the [W3C’s `HTML` `color` specification.][12] The second value contains a text `String` that represents the hexadecimal value (or “hex value,” for short) of that named color. When we juxtapose a text description with its color in a list of individually labeled swatches, our sketch will display a screen like that shown in <!--ref linkend="fig.data.read-->. To distribute each swatch vertically, we use the `translate()` method we’ve implemented already in <!--ref linkend="sec.destination.finder-->.[][13] 
  
 ![](images/Data/DataRead.png)
 #####Figure 9.1 - Reading comma-separated color values.
@@ -171,12 +171,12 @@ Let’s first take a peek at the color data we copy into `colors.csv`.
 
 Open the file in your text editor and copy the file into your sketch’s `data` folder. The file contents are fairly easy for us to grasp, as the file only contains two columns and sixteen rows. Our approach would be the same if we faced a `csv` file containing fifty columns and one thousand rows. Note that there are no spaces after the commas separating the values, as this would translate into a whitespace contained in the value following the comma. 
  
- Now let’s take a look at our Processing sketch. 
+Now let’s take a look at our Processing sketch. 
  
 #####code/Data/DataRead/DataRead.pde
 [include](code/Data/DataRead/DataRead.pde)
   
- Here are the steps we take to load and parse the data. 
+Here are the steps we take to load and parse the data. 
  
  1. Load the text file containing colors as comma-separated values. 
  2. Define a hex color from the `String` contained in column `1` after removing the `#` prefix using `substring()` and prepending `"FF"` for a fully opaque alpha channel. 
@@ -186,29 +186,29 @@ Now that you know how it works, let’s run the app.
 
 ###Run the App
  
- When our sketch runs, the `colors.csv` file will be included as a resource and installed with our app on the device. You’ll see the sixteen named colors in `HTML` as individual swatches filling up the screen. Because we haven’t locked `orientation()` in this sketch, the display will change its orientation depending on how we hold the device. We’ve implemented the position and alignment of the swatches in a variable manner based on the current display’s `width` and `height`, so the sketch will scale to any orientation or display size on our Android phone or tablet. 
+When our sketch runs, the `colors.csv` file will be included as a resource and installed with our app on the device. You’ll see the sixteen named colors in `HTML` as individual swatches filling up the screen. Because we haven’t locked `orientation()` in this sketch, the display will change its orientation depending on how we hold the device. We’ve implemented the position and alignment of the swatches in a variable manner based on the current display’s `width` and `height`, so the sketch will scale to any orientation or display size on our Android phone or tablet. 
  
- Now that we know how to read data from a file, let’s now move ahead and read and write tab-separated values. 
+Now that we know how to read data from a file, let’s now move ahead and read and write tab-separated values. 
 
 ###Save User Data in a TSV File
  
- In this project, we’ll learn how to save user data. We’ll implement a simple drawing sketch that allows us to place a sequence of points on the Android touch screen. When we press a button on the device triggering a `keyPressed()` event, the resulting drawing doodle consisting of individual points is saved to the app folder on the Android device. 
+In this project, we’ll learn how to save user data. We’ll implement a simple drawing sketch that allows us to place a sequence of points on the Android touch screen. When we press a button on the device triggering a `keyPressed()` event, the resulting drawing doodle consisting of individual points is saved to the app folder on the Android device. 
  
- Using the menu button on the device as a trigger, we’ll write each horizontal and vertical position *x* and *y* into a text file using tab-separated values. To keep track of how many points we’ve saved into our file, we’ll output our row count on the display as well. If we pause or close the app and come back later, the points we’ve saved will be loaded into the sketch again, and we can continue where we left off. If we add to the drawing and press the menu button again, the new points will be appended to our `data.tsv` file and saved alongside our previous points. 
+Using the menu button on the device as a trigger, we’ll write each horizontal and vertical position *x* and *y* into a text file using tab-separated values. To keep track of how many points we’ve saved into our file, we’ll output our row count on the display as well. If we pause or close the app and come back later, the points we’ve saved will be loaded into the sketch again, and we can continue where we left off. If we add to the drawing and press the menu button again, the new points will be appended to our `data.tsv` file and saved alongside our previous points. 
  
- We’ll revisit the simple drawing concepts from <!--ref linkend="sec.touch.screen-->, and <!--ref linkend="sec.real.time.data-->, and use the `mouseX` and `mouseY` location of our fingertip to continuously draw points on the screen, as shown in <!--ref linkend="fig.data.write-->. Using Java’s `File` class, we’ll also learn about Android storage and file paths, because we are creating a `tsv` file inside our app. This file will only be available for our app and not be usable by other locations, keeping the data private. 
+We’ll revisit the simple drawing concepts from <!--ref linkend="sec.touch.screen-->, and <!--ref linkend="sec.real.time.data-->, and use the `mouseX` and `mouseY` location of our fingertip to continuously draw points on the screen, as shown in <!--ref linkend="fig.data.write-->. Using Java’s `File` class, we’ll also learn about Android storage and file paths, because we are creating a `tsv` file inside our app. This file will only be available for our app and not be usable by other locations, keeping the data private. 
  
- In terms of working with data, we’ll start this time from scratch. We won’t be copying an existing data source into the sketch’s `data` folder. Instead we’ll create data via the touch screen interface and write it into a file located in our sketch folder. This time, we use tab-separated values and save the data into a `data.tsv` file. 
+In terms of working with data, we’ll start this time from scratch. We won’t be copying an existing data source into the sketch’s `data` folder. Instead we’ll create data via the touch screen interface and write it into a file located in our sketch folder. This time, we use tab-separated values and save the data into a `data.tsv` file. 
  
- There is no significant difference between the two [delimiters.][15] Instead of a comma, `TSV` uses a tab (`\t`) to separate values. The most important thing to consider when choosing between the two formats is this: if you use comma-separated values, you cannot have entries that include a comma in a text string, and if you use tab-separated values, you cannot have entries that use tabs without changing the table structure and making it impossible to parse the file correctly. 
+There is no significant difference between the two [delimiters.][15] Instead of a comma, `TSV` uses a tab (`\t`) to separate values. The most important thing to consider when choosing between the two formats is this: if you use comma-separated values, you cannot have entries that include a comma in a text string, and if you use tab-separated values, you cannot have entries that use tabs without changing the table structure and making it impossible to parse the file correctly. 
  
- You can modify `CSV` and `TSV` text files in any text editor, and your operating system might already open it up with your default spreadsheet software. I personally have an easier time deciphering tab-separated values because tabs lay out the columns in a more legible way, which is why I prefer `TSV`. The `Table` class can handle, read, and write either format equally well, so from a technical perspective, it really doesn’t make much of difference how we store our data. 
+You can modify `CSV` and `TSV` text files in any text editor, and your operating system might already open it up with your default spreadsheet software. I personally have an easier time deciphering tab-separated values because tabs lay out the columns in a more legible way, which is why I prefer `TSV`. The `Table` class can handle, read, and write either format equally well, so from a technical perspective, it really doesn’t make much of difference how we store our data. 
  
- To implement this sketch, we’ll revisit the handy `PVector` class we already used in <!--ref linkend="sec.multiple.sensors-->, to store value pairs in a vector. When we worked with an existing file earlier, we were certain that the `csv` file exists. Now when we run the sketch for the first time, the `data.tsv` file we’ll be using to store our data won’t exist yet, and we’ll need to create one using Processing’s `Table` method `writeCSV()`. To check if `data.tsv` exists from a prior session, we’ll use the `try` `catch` construct typically used in Java to catch exceptions that would cause our app to crash.[][16] We use it in our sketch to check if `data.tsv` already exists within our app. If we are trying to load the file when it does not exist the first time around, we’ll receive an exception, which we can use to create the file. 
+To implement this sketch, we’ll revisit the handy `PVector` class we already used in <!--ref linkend="sec.multiple.sensors-->, to store value pairs in a vector. When we worked with an existing file earlier, we were certain that the `csv` file exists. Now when we run the sketch for the first time, the `data.tsv` file we’ll be using to store our data won’t exist yet, and we’ll need to create one using Processing’s `Table` method `writeCSV()`. To check if `data.tsv` exists from a prior session, we’ll use the `try` `catch` construct typically used in Java to catch exceptions that would cause our app to crash.[][16] We use it in our sketch to check if `data.tsv` already exists within our app. If we are trying to load the file when it does not exist the first time around, we’ll receive an exception, which we can use to create the file. 
  
- To draw, we’ll use Processing’s `mouseDragged()` method again, called every time we move our finger by one or more pixels while tapping the screen. This means that we will add new points to our table only when we move to a new position. The point count we display at the top of the screen will give us some feedback whenever we’ve added a new point to the list. To save the points to the Android’s internal storage, press one of the device buttons. 
+To draw, we’ll use Processing’s `mouseDragged()` method again, called every time we move our finger by one or more pixels while tapping the screen. This means that we will add new points to our table only when we move to a new position. The point count we display at the top of the screen will give us some feedback whenever we’ve added a new point to the list. To save the points to the Android’s internal storage, press one of the device buttons. 
  
- Let’s take a look at the sketch. 
+Let’s take a look at the sketch. 
  
 ![](images/Data/DataWrite.png)
 #####Figure 9.2 - Write data to an Android.
@@ -217,7 +217,8 @@ Now that you know how it works, let’s run the app.
 #####code/Data/DataWrite/DataWrite.pde
 [include](code/Data/DataWrite/DataWrite.pde)
 
- We take the following steps to create a new `Table`, add points to it, and save those points into a file. 
+We take the following steps to create a new `Table`, add points to it, and save those points into a file. 
+ 
  1. Create a new variable called `tsv` of type `Table`. 
  2. Create a `PVector` `ArrayList` called `points` to store the *x* and *y* location of a fingertip. 
  3. Try reading the `data.tsv` file from the Android sketch folder, if it exists. 
