@@ -36,7 +36,7 @@ The central metaphor for Processing has for years been the sketchbook. Now this 
 
 I'd like to acknowledge the following individuals who have contributed to this project and thank them deeply for their support:
 
-First and foremost, Jesus Duran, CTO of Ketai LLC, without whom the Ketai library used in this book would neither have come to existence nor contain the comprehensive list of features that it has today&emdash;his talent and rigor have been essential to bringing Android features within Processing's reach in a timely and reliable way;
+First and foremost, Jesus Duran, CTO of Ketai LLC, without whom the Ketai library used in this book would neither have come to existence nor contain the comprehensive list of features that it has today—his talent and rigor have been essential to bringing Android features within Processing's reach in a timely and reliable way;
 
 John Osborn, my editor, whose valuable feedback and recommendations were always right on target and instrumental to completing a book that could be useful and clear to diverse audiences;
 
