@@ -48,6 +48,29 @@ Let’s take a look at the `KetaiSQLite` class and SQLight basics.
  
  Now let’s take a look at [the most important declarative `SQL`][3] we’ll use in our database project.
 
+<table> <tr> <td><a href="4"><code>CREATE</code></a></td><td>
+<code>SQL</code> statement for creating a table in a database with specified fields and data types
+</td></tr> <tr> <td><a href="5"><code>INSERT</code></a></td><td>
+<code>SQL</code> statement for creating a new row in a table
+</td></tr> <tr> <td><a href="6"><code>SELECT</code></a></td><td>
+<code>SQL</code> statement to query a database, returning zero or more rows of data
+</td></tr> <tr> <td><a href="7"><code>WHERE</code></a></td><td><a href="8">expressions</a></td></tr> <tr> <td>
+<code>*</code>
+</td><td>
+<code>SQL</code> wildcard that stands for &#x201C;all&#x201D; in a query
+</td></tr> <tr> <td>
+<code>INTEGER</code>, <code>TEXT</code>
+</td><td>
+<code>SQL</code> field data types
+</td></tr> <tr> <td>
+<code>PRIMARY KEY</code>
+</td><td>
+<code>SQL</code> statement to make a field the primary key
+</td></tr> <tr> <td>
+<code>AUTOINCREMENT</code>
+</td><td>
+<code>SQL</code> statement to make an integer field, which is typically also the primary key to automatically increment by one in order to be unique
+</td></tr> </table>
  
  Now let’s get started with our first `KetaiSQLite` database. 
 
