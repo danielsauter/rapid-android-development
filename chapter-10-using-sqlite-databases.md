@@ -66,40 +66,9 @@ KetaiSQLite method returning all records in a specified table, using the table n
 KetaiSQLite method returning all records in a database across all tables
 
  </td></tr> </table>
+ 
  Now let’s take a look at [the most important declarative `SQL`][3] we’ll use in our database project.
- <table> <row> <col>
-[`CREATE`][4]
- <col> 
- `SQL` statement for creating a table in a database with specified fields and data types 
- </row> <row> <col>
-[`INSERT`][5]
- <col> 
- `SQL` statement for creating a new row in a table 
- </row> <row> <col>
-[`SELECT`][6]
- <col> 
- `SQL` statement to query a database, returning zero or more rows of data 
- </row> <row> <col>
-[`WHERE`][7]
- <col> 
- `SQL` clause used in conjunction with a `SELECT` statement and [expressions][8] 
- </row> <row> <col>
-`*`
- <col> 
- `SQL` wildcard that stands for “all” in a query 
- </row> <row> <col>
-`INTEGER`, `TEXT`
- <col> 
- `SQL` field data types 
- </row> <row> <col>
-`PRIMARY KEY`
- <col> 
- `SQL` statement to make a field the primary key 
- </row> <row> <col>
-`AUTOINCREMENT`
- <col> 
- `SQL` statement to make an integer field, which is typically also the primary key to automatically increment by one in order to be unique 
- </row> </table> 
+
  
  Now let’s get started with our first `KetaiSQLite` database. 
 
