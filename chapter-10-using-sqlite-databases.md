@@ -27,45 +27,24 @@ Let’s take a look at the `KetaiSQLite` class and SQLight basics.
  To use SQLite on the Android, we’ll work with the following `KetaiSQLite` methods. 
  <table> 
  <tr> 
-  <td>
-   <a href="2"><code>KetaiSQLite</code></a>
-  </td>
- <td>
-Ketai class for working with SQLite databases&#x2014;it can be used to create a KetaiSQLite database or to load an existing database.
-
- </td></tr> 
+  <td><a href="2"><code>KetaiSQLite</code></a></td>
+  <td>Ketai class for working with SQLite databases&#x2014;it can be used to create a KetaiSQLite database or to load an existing database.</td>
+ </tr> 
  <tr> 
- <td>
-  <code>execute()</code>
- </td>
-  <td>
-KetaiSQLite method for executing a SQLite query to a database, which doesn&#x2019;t return data
- </td>
+  <td><code>execute()</code></td>
+  <td>KetaiSQLite method for executing a SQLite query to a database, which doesn&#x2019;t return data</td>
  </tr> 
  <tr>
- <td>
-<code>query()</code>
-
- </td><td>
-KetaiSQLite method for sending a SQLite query to a database, returning data
-
- </td></tr> 
+ <td><code>query()</code></td>
+ <td>KetaiSQLite method for sending a SQLite query to a database, returning data</td>
+ </tr> 
  <tr> 
- <td>
-<code>getRecordCount()</code>
-
- </td><td>
-KetaiSQLite method returning all records in a specified table, using the table name as parameter
-
- </td></tr> 
+ <td><code>getRecordCount()</code></td>
+ <td>KetaiSQLite method returning all records in a specified table, using the table name as parameter</td></tr> 
  <tr> 
- <td>
-<code>getDataCount()</code>
-
- </td><td>
-KetaiSQLite method returning all records in a database across all tables
-
- </td></tr> </table>
+ <td><code>getDataCount()</code></td>
+ <td>KetaiSQLite method returning all records in a database across all tables
+</td></tr></table>
  
  Now let’s take a look at [the most important declarative `SQL`][3] we’ll use in our database project.
 
