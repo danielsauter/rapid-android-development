@@ -160,19 +160,20 @@ We’ll use the basic light colors red, green, and blue, because those colors mi
  
 The [`spotLight()` method][19] we’ll use takes eleven parameters and offers the most amount of control compared with other light options in Processing. We can set the light color, position, direction, angle, and concentration using the method. Let’s take a look. 
  
- ``` 
+``` 
  spotLight(v1, v2, v3, x, y, z, nx, ny, nz, angle, concentration) 
- ``` 
- 
-<table> <tr><td>
-<code>v1</code>
-</td><td>
-The red or hue value of the light&#x2014;red in the default <code>RGB</code> color mode and hue in the <code>HSB</code> color mode
-</td></tr> <tr><td>
-<code>v2</code>
-</td><td>
-The green or saturation value of the light
-</td></tr> <tr><td>
+``` 
+
+<table>
+<tr>
+<td><code>v1</code></td>
+<td>The red or hue value of the light&#x2014;red in the default <code>RGB</code> color mode and hue in the <code>HSB</code> color mode</td>
+</tr>
+<tr>
+<td><code>v2</code></td>
+<td>The green or saturation value of the light</td>
+</tr>
+<tr><td>
 <code>v3</code>
 </td><td>
 The blue or brightness value of the light
