@@ -164,53 +164,53 @@ The [`spotLight()` method][19] we’ll use takes eleven parameters and offers th
  spotLight(v1, v2, v3, x, y, z, nx, ny, nz, angle, concentration) 
  ``` 
  
- <table> <row><col>
-`v1`
- <col> 
- The red or hue value of the light&—red in the default `RGB` color mode and hue in the `HSB` color mode 
- </row> <row><col>
-`v2`
- <col> 
- The green or saturation value of the light 
- </row> <row><col>
-`v3`
- <col> 
- The blue or brightness value of the light 
- </row> <row><col>
-`x`
- <col> 
- The horizontal or *x* position of the light 
- </row> <row><col>
-`y`
- <col> 
- The vertical or *y* position of the light 
- </row> <row><col>
-`z`
- <col> 
- The depth or *z* position of the light 
- </row> <row><col>
-`nx`
- <col> 
- The direction of the light along the *x*-axis 
- </row> <row><col>
-`ny`
- <col> 
- The direction of the light along the *y*-axis 
- </row> <row><col>
-`nz`
- <col> 
- The direction of the light along the *z*-axis 
- </row> <row><col>
-`angle`
- <col> 
- The angle of the light cone 
- </row> <row><col>
-`concentration`
- <col> 
- The concentration exponent determining the center bias of the spotlight cone 
- </row> </table> 
+<table> <tr><td>
+<code>v1</code>
+</td><td>
+The red or hue value of the light&#x2014;red in the default <code>RGB</code> color mode and hue in the <code>HSB</code> color mode
+</td></tr> <tr><td>
+<code>v2</code>
+</td><td>
+The green or saturation value of the light
+</td></tr> <tr><td>
+<code>v3</code>
+</td><td>
+The blue or brightness value of the light
+</td></tr> <tr><td>
+<code>x</code>
+</td><td>
+The horizontal or <i>x</i> position of the light
+</td></tr> <tr><td>
+<code>y</code>
+</td><td>
+The vertical or <i>y</i> position of the light
+</td></tr> <tr><td>
+<code>z</code>
+</td><td>
+The depth or <i>z</i> position of the light
+</td></tr> <tr><td>
+<code>nx</code>
+</td><td>
+The direction of the light along the <i>x</i>-axis
+</td></tr> <tr><td>
+<code>ny</code>
+</td><td>
+The direction of the light along the <i>y</i>-axis
+</td></tr> <tr><td>
+<code>nz</code>
+</td><td>
+The direction of the light along the <i>z</i>-axis
+</td></tr> <tr><td>
+<code>angle</code>
+</td><td>
+The angle of the light cone
+</td></tr> <tr><td>
+<code>concentration</code>
+</td><td>
+The concentration exponent determining the center bias of the spotlight cone
+</td></tr> </table>
  
- Every object we draw after calling this or any other lighting method in Processing is affected by that light source; objects drawn before the method call are unfazed by the light source. To retain a light source in the scene, we must call the lighting method within `draw()`. If we call the lighting method in `setup()`, the light will only affect the first frame of our app and not the consecutive frames. 
+Every object we draw after calling this or any other lighting method in Processing is affected by that light source; objects drawn before the method call are unfazed by the light source. To retain a light source in the scene, we must call the lighting method within `draw()`. If we call the lighting method in `setup()`, the light will only affect the first frame of our app and not the consecutive frames. 
  
  We’ll place our three colored spotlights slightly off-center while pointing straight ahead at the scene. Each of the lights will hit our sphere object at an individual spot off the sphere’s center, and we can observe how the three spotlights interact with the sphere’s surface when they mix together. We’ll define the spotlight cone angle at `15` degrees, which happens to match a standard lens used in theater lighting, and we’ll keep the concentration bias at `0` to achieve the maximum blending effect between the colors for now. 
  
