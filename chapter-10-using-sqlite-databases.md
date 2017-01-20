@@ -4,48 +4,68 @@
  
  In this second part of our introduction to data, we’ll work with SQLite, the popular relational database management system for local clients such as the Android, used also by many browsers and operating systems to store data. It implements the popular Structured Query Language (`SQL`) syntax for database queries, which we can use to access data stored locally on our Android device. 
  
- SQLite is a fairly simple and fast system, is considered very reliable, and has a small footprint that can be embedded in larger programs. It offers less fine-grained control over access to data than other systems like PostgreSQL or MySQL does, but it is simpler to use and administer, which is the main objective of the technology. It works very well as a file format for applications like [Computer-Aided Design (`CAD`), financial software, and record keeping.][0] It is often used in cellphones, tablet computers, set-top boxes, and appliances because SQLite does not require administration or maintenance. This simple database management system can be used instead of disk files, like the tab- or comma-delimited text files we’ve worked with in <!--ref linkend="chp.data-->, replacing them with ad-hoc SQLite disk files. 
+SQLite is a fairly simple and fast system, is considered very reliable, and has a small footprint that can be embedded in larger programs. It offers less fine-grained control over access to data than other systems like PostgreSQL or MySQL does, but it is simpler to use and administer, which is the main objective of the technology. It works very well as a file format for applications like [Computer-Aided Design (`CAD`), financial software, and record keeping.][0] It is often used in cellphones, tablet computers, set-top boxes, and appliances because SQLite does not require administration or maintenance. This simple database management system can be used instead of disk files, like the tab- or comma-delimited text files we’ve worked with in <!--ref linkend="chp.data-->, replacing them with ad-hoc SQLite disk files. 
  
- In this chapter, we’ll first get SQLite running with a simple sketch and learn how to use `SQL` queries to retrieve data from a SQLite table. Then we’ll create an app that uses SQLite to capture accelerometer data from the sensor built into the Android. We’ll use the recorded sensor values to create a time series visualization of the data. Finally, we’ll query the data set we’ve recorded based on a certain device orientation we are looking for, and we’ll highlight the sensor value that matches our query criteria. 
+In this chapter, we’ll first get SQLite running with a simple sketch and learn how to use `SQL` queries to retrieve data from a SQLite table. Then we’ll create an app that uses SQLite to capture accelerometer data from the sensor built into the Android. We’ll use the recorded sensor values to create a time series visualization of the data. Finally, we’ll query the data set we’ve recorded based on a certain device orientation we are looking for, and we’ll highlight the sensor value that matches our query criteria. 
  
- Let’s take a look at the classes and methods that allow us to use SQLitedatabases for more complex data-driven apps. 
+Let’s take a look at the classes and methods that allow us to use SQLitedatabases for more complex data-driven apps. 
 
 ###Working with SQLite Databases
  
- Now that we’ve seen most of Processing’s `Table` features, it’s time we take a look at the widely used SQLite database management system for local clients. It is based on the the popular Structured Query Language syntax for database queries and will look very familiar if you’ve worked with `SQL` before. Ketai gives us access to Android’s `SQLiteDatabase` class and provides us with the essential methods we need to create, query, and update content in the database tables. 
+Now that we’ve seen most of Processing’s `Table` features, it’s time we take a look at the widely used SQLite database management system for local clients. It is based on the the popular Structured Query Language syntax for database queries and will look very familiar if you’ve worked with `SQL` before. Ketai gives us access to Android’s `SQLiteDatabase` class and provides us with the essential methods we need to create, query, and update content in the database tables. 
  
- The Ketai `KetaiSQLite` class is what we need to create full-fledged local SQLite databases on the device. For the projects in this chapter, we’ll use it to store a number of points that we’ll create by tapping the touch screen interface, and later we’ll use it to record accelerometer sensor data using the `KetaiSensor` class we’ve seen in <!--ref linkend="chp.sensors-->. Let’s get started by taking a look at the relevant Processing and Ketai methods we’ll be working with throughout the chapter. 
+The Ketai `KetaiSQLite` class is what we need to create full-fledged local SQLite databases on the device. For the projects in this chapter, we’ll use it to store a number of points that we’ll create by tapping the touch screen interface, and later we’ll use it to record accelerometer sensor data using the `KetaiSensor` class we’ve seen in <!--ref linkend="chp.sensors-->. Let’s get started by taking a look at the relevant Processing and Ketai methods we’ll be working with throughout the chapter. 
  
- We’ll create two SQLite projects, one to get us up and running with a few random values in a SQLite database. The next project will take advantage of the `KetaiSensor` class to capture accelerometer data directly into a SQLite database, which we’ll browse and visualize on the Android display. 
+We’ll create two SQLite projects, one to get us up and running with a few random values in a SQLite database. The next project will take advantage of the `KetaiSensor` class to capture accelerometer data directly into a SQLite database, which we’ll browse and visualize on the Android display. 
  
- For the SQLite app we’ll create in this chapter, we’ll discuss `SQL` queries only very briefly. If you are unfamiliar with the language or would like to explore `SQL` queries further later on, you can find [a more thorough reference][1] online for the statements outlined next. 
+For the SQLite app we’ll create in this chapter, we’ll discuss `SQL` queries only very briefly. If you are unfamiliar with the language or would like to explore `SQL` queries further later on, you can find [a more thorough reference][1] online for the statements outlined next. 
  
- Let’s take a look at the `KetaiSQLite` class and SQLight basics. 
+Let’s take a look at the `KetaiSQLite` class and SQLight basics. 
 
 ###Working with the KetaiSQLite Class
  
  To use SQLite on the Android, we’ll work with the following `KetaiSQLite` methods. 
- <table> <row> <col>
-[`KetaiSQLite`][2]
- <col> 
- Ketai class for working with SQLite databases—it can be used to create a KetaiSQLite database or to load an existing database. 
- </row> <row> <col>
-`execute()`
- <col> 
- `KetaiSQLite` method for executing a SQLite query to a database, which doesn’t return data 
- </row> <row><col>
-`query()`
- <col> 
- `KetaiSQLite` method for sending a SQLite query to a database, returning data 
- </row> <row> <col>
-`getRecordCount()`
- <col> 
- `KetaiSQLite` method returning all records in a specified table, using the table name as parameter 
- </row> <row> <col>
-`getDataCount()`
- <col> 
- `KetaiSQLite` method returning all records in a database across all tables 
- </row> </table> 
+ <table> 
+ <tr> 
+  <td>
+   <a href="2"><code>KetaiSQLite</code></a>
+  </td>
+ <td>
+Ketai class for working with SQLite databases&#x2014;it can be used to create a KetaiSQLite database or to load an existing database.
+
+ </td></tr> 
+ <tr> 
+ <td>
+  <code>execute()</code>
+ </td>
+  <td>
+KetaiSQLite method for executing a SQLite query to a database, which doesn&#x2019;t return data
+ </td>
+ </tr> 
+ <tr>
+ <td>
+<code>query()</code>
+
+ </td><td>
+KetaiSQLite method for sending a SQLite query to a database, returning data
+
+ </td></tr> 
+ <tr> 
+ <td>
+<code>getRecordCount()</code>
+
+ </td><td>
+KetaiSQLite method returning all records in a specified table, using the table name as parameter
+
+ </td></tr> 
+ <tr> 
+ <td>
+<code>getDataCount()</code>
+
+ </td><td>
+KetaiSQLite method returning all records in a database across all tables
+
+ </td></tr> </table>
  Now let’s take a look at [the most important declarative `SQL`][3] we’ll use in our database project.
  <table> <row> <col>
 [`CREATE`][4]
