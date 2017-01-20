@@ -30,56 +30,44 @@ Recommending which type of organization, or data architecture, is the best for a
  
  Throughout this chapter, we'll work with Processing’s `Table` class, and particularly with the following methods: 
  
- <table> <row><col>
-`Table`
- <col> <p size="small--> A comprehensive Processing class to load, parse, and write data in different file formats—it provides similar methods that we’d find in a database. 
- </row> <row><col>
-`getRowCount()`
- <col> 
- A `Table` method, which returns the number of rows or entries inside a table 
- </row> <row><col>
-`getInt()`, `getLong()`, `getFloat()`, `getDouble()`, `getString()`
- <col> 
- A series of `Table` methods to retrieve the different value types from a specified row and column provided to the methods as two parameters separated by comma 
- </row> <row><col>
-`addRow()`
- <col> 
- A `Table` method to add a new row to the table 
- </row> <row><col>
-`writeTSV()`
- <col> 
- A `Table` method to write a `tsv` file to a specified location in the file system, provided to the method as a parameter 
- </row> <row><col>
-[`Environment`][1]
- <col> 
- An Android class that provides access to environment variables such as directories 
- </row> <row><col>
-[`File`][2]
- <col> 
- A Java method to create a file path to a specified location in the file system 
- </row> <row><col>
-[`URL`][3]
- <col> 
- A Java class for a Uniform Resource Locator, a pointer to a resource on the Web 
- </row> <row><col>
-[`BufferedReader`][4]
- <col> 
- A Java class that reads text from a character-input stream and buffers them so we can read individual characters as complete text—we use it in this chapter to make sure we’ve received all the comma-separated values stored in our online data source. 
- </row> <row><col>
-[`InputStreamReader`][5]
- <col> 
- A Java class reading a bytes stream and decoding the data into text characters 
- </row> <row><col>
-`sketchPath()`
- <col> 
- A Processing method returning the file path to the sketch in the file system—if we run our sketch on the Android device, it returns the path to the app’s location within Android’s file system. 
- </row> <row><col>
-[`KetaiVibrate()`][6]
- <col> A Ketai class giving access to the built-in device vibration motor 
- </row> <row><col>
-[`vibrate()`][7]
- <col> 
- A `KetaiVibrate` method to control the built-in device vibration motor—this can be used without parameters for a simple vibration signal, a duration parameter in milliseconds, or an array of numbers that trigger a pattern of vibrations, `vibrate(long[] pattern, int repeat)`. 
+<table><tr><td>
+<code>Table</code>
+</td><td>A comprehensive Processing class to load, parse, and write data in different file formats&#x2014;it provides similar methods that we&#x2019;d find in a database.
+</td></tr> <tr><td>
+<code>getRowCount()</code>
+</td><td>
+A <code>Table</code> method, which returns the number of rows or entries inside a table
+</td></tr> <tr><td>
+<code>getInt()</code>, <code>getLong()</code>, <code>getFloat()</code>, <code>getDouble()</code>, <code>getString()</code>
+</td><td>
+A series of <code>Table</code> methods to retrieve the different value types from a specified row and column provided to the methods as two parameters separated by comma
+</td></tr> <tr><td>
+<code>addRow()</code>
+</td><td>
+A <code>Table</code> method to add a new row to the table
+</td></tr> <tr><td>
+<code>writeTSV()</code>
+</td><td>
+A <code>Table</code> method to write a <code>tsv</code> file to a specified location in the file system, provided to the method as a parameter
+</td></tr> <tr><td><a href="1"><code>Environment</code></a></td><td>
+An Android class that provides access to environment variables such as directories
+</td></tr> <tr><td><a href="2"><code>File</code></a></td><td>
+A Java method to create a file path to a specified location in the file system
+</td></tr> <tr><td><a href="3"><code>URL</code></a></td><td>
+A Java class for a Uniform Resource Locator, a pointer to a resource on the Web
+</td></tr> <tr><td><a href="4"><code>BufferedReader</code></a></td><td>
+A Java class that reads text from a character-input stream and buffers them so we can read individual characters as complete text&#x2014;we use it in this chapter to make sure we&#x2019;ve received all the comma-separated values stored in our online data source.
+</td></tr> <tr><td><a href="5"><code>InputStreamReader</code></a></td><td>
+A Java class reading a bytes stream and decoding the data into text characters
+</td></tr> <tr><td>
+<code>sketchPath()</code>
+</td><td>
+A Processing method returning the file path to the sketch in the file system&#x2014;if we run our sketch on the Android device, it returns the path to the app&#x2019;s location within Android&#x2019;s file system.
+</td></tr> <tr><td><a href="6"><code>KetaiVibrate()</code></a></td><td> A Ketai class giving access to the built-in device vibration motor
+</td></tr> <tr><td><a href="7"><code>vibrate()</code></a></td><td>
+A <code>KetaiVibrate</code> method to control the built-in device vibration motor&#x2014;this can be used without parameters for a simple vibration signal, a duration parameter in milliseconds, or an array of numbers that trigger a pattern of vibrations, <code>vibrate(long[] pattern, int repeat)</code>.
+</td></tr>
+</table>
 
  Since we are writing to the device’s file system in this chapter, let’s take a look at the options we have. 
 
