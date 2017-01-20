@@ -18,34 +18,33 @@ To give users a way to interact with the M&#xF6;bius strip, we’ll introduce an
  
  In this chapter, we’ll use [Processing’s `PShape`][0] features for all the projects we’ll create. We can use the class to load 2D vector shape files (`svg`) and 3D object files (`obj`) and work with 3D vertices generated algorithmically. Let’s take a look at the methods we’ll use to load and create the 3D scenes in this chapter. 
 
-  <table> <row><col>
-[`loadShape()`][1]
- <col> 
- A Processing method to load a Scalable Vector Graphic, or `svg`, file into a `PShape` object 
- </row> <row><col>
-[`beginShape()`][2]
- <col> 
- A Processing method to start recording a shape using vertices&—we can connect vertices with the following modes: `POINTS`, `LINES`, `TRIANGLES`, `TRIANGLE_FAN`, `TRIANGLE_STRIP`, `QUADS`, and `QUAD_STRIP`. 
- </row> <row> <col>
-[`endShape()`][3]
- <col> 
- A Processing method to stop recording a shape using vertices 
- </row> <row> <col>
-[`vertex()`][4]
- <col> 
- A Processing method to add a vertex point to a shape using either *x* and *y* values or *x*, *y*, and *z* values for two and three dimensions, respectively&—it takes only two vertices to create a shape, but we can add thousands and are only limited by the memory installed in our device. Vertices are connected with straight lines. To create curves, use the [`bezierVertex()`][5] 
- or [`curveVertex()`][18] instead.
- </row> <row> <col>
-[`createShape()`][6]
- <col> 
- A Processing method to load a 3D primitive or vertices into a `PShape`&—the method can also handle parameters for the 3D primitives `BOX` and `SPHERE`. It also mirrors the `beginShape()` method for recording vertices into a `PShape` object and is used in conjunction with `end()`-to-end recording. 
- </row> <row> <col>
-[`camera()`][7]
- <col> 
- A Processing method to define the camera viewpoint (where the camera is looking and how the camera is facing)&—we use it to navigate a 3D scene while keeping an eye on the particular spot we’ve defined. 
- </row> </table> 
- In a moment we’re going to use these elements to display a map of the United States stored as an `SVG` graphic. But first let’s discuss the `SVG` format itself and its advantages when it comes to displaying line art such as maps. 
- </sect1> <sect1> 
+<table> <tr><td>
+<a href="1"><code>loadShape()</code></a>
+</td><td>
+A Processing method to load a Scalable Vector Graphic, or <code>svg</code>, file into a <code>PShape</code> object
+</td></tr> <tr><td>
+<a href="2"><code>beginShape()</code></a>
+</td><td>
+A Processing method to start recording a shape using vertices&#x2014;we can connect vertices with the following modes: <code>POINTS</code>, <code>LINES</code>, <code>TRIANGLES</code>, <code>TRIANGLE_FAN</code>, <code>TRIANGLE_STRIP</code>, <code>QUADS</code>, and <code>QUAD_STRIP</code>.
+</td></tr> <tr> <td>
+<a href="3"><code>endShape()</code></a>
+</td><td>
+A Processing method to stop recording a shape using vertices
+</td></tr> <tr> <td>
+<a href="4"><code>vertex()</code></a>
+</td><td>
+A Processing method to add a vertex point to a shape using either <i>x</i> and <i>y</i> values or <i>x</i>, <i>y</i>, and <i>z</i> values for two and three dimensions, respectively&#x2014;it takes only two vertices to create a shape, but we can add thousands and are only limited by the memory installed in our device. Vertices are connected with straight lines. To create curves, use the <a href="5"><code>bezierVertex()</code></a>
+or <a href="18"><code>curveVertex()</code></a> instead.
+</td></tr> <tr> <td>
+<a href="6"><code>createShape()</code></a>
+</td><td>
+A Processing method to load a 3D primitive or vertices into a <code>PShape</code>&#x2014;the method can also handle parameters for the 3D primitives <code>BOX</code> and <code>SPHERE</code>. It also mirrors the <code>beginShape()</code> method for recording vertices into a <code>PShape</code> object and is used in conjunction with <code>end()</code>-to-end recording.
+</td></tr> <tr> <td>
+<a href="7"><code>camera()</code></a>
+</td><td>
+A Processing method to define the camera viewpoint (where the camera is looking and how the camera is facing)&#x2014;we use it to navigate a 3D scene while keeping an eye on the particular spot we&#x2019;ve defined.
+</td></tr> </table>
+<code></code><i>
 
 ###Working with SVG Graphics and Maps
  
