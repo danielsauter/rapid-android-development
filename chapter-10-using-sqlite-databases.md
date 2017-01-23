@@ -2,7 +2,7 @@
 
 #Using SQLite Databases
  
- In this second part of our introduction to data, we’ll work with SQLite, the popular relational database management system for local clients such as the Android, used also by many browsers and operating systems to store data. It implements the popular Structured Query Language (`SQL`) syntax for database queries, which we can use to access data stored locally on our Android device. 
+In this second part of our introduction to data, we’ll work with SQLite, the popular relational database management system for local clients such as the Android, used also by many browsers and operating systems to store data. It implements the popular Structured Query Language (`SQL`) syntax for database queries, which we can use to access data stored locally on our Android device. 
  
 SQLite is a fairly simple and fast system, is considered very reliable, and has a small footprint that can be embedded in larger programs. It offers less fine-grained control over access to data than other systems like PostgreSQL or MySQL does, but it is simpler to use and administer, which is the main objective of the technology. It works very well as a file format for applications like [Computer-Aided Design (`CAD`), financial software, and record keeping.][0] It is often used in cellphones, tablet computers, set-top boxes, and appliances because SQLite does not require administration or maintenance. This simple database management system can be used instead of disk files, like the tab- or comma-delimited text files we’ve worked with in <!--ref linkend="chp.data-->, replacing them with ad-hoc SQLite disk files. 
  
@@ -78,7 +78,7 @@ Let’s take a look at the `KetaiSQLite` class and SQLight basics.
  
 In the next project, we’ll create a simple record-keeping sketch using the SQLite data management system, which can store a list of individual names and the IDs associated with them. Using text strings for the names we store and integer values for the associated IDs allows us to explore two different data types within the database. There is essentially no limit to the number of entries we can add to the SQLite table, besides the usual memory restrictions we have in Android’s internal storage. 
  
-The goal of this SQLite project is to familiarize ourselves with the steps we need to follow to create a SQLite database, a new table inside the database, and data entries inside that table. To see whether we are successful, we’ll output the contents of the table to the Android screen as shown in <!--ref linkend="fig.data.sql-->. We’ll use the `KetaiSQLite` class for this project and the remaining projects of this chapter. 
+The goal of this SQLite project is to familiarize ourselves with the steps we need to follow to create a SQLite database, a new table inside the database, and data entries inside that table. To see whether we are successful, we’ll output the contents of the table to the Android screen as shown in the image below. We’ll use the `KetaiSQLite` class for this project and the remaining projects of this chapter. 
  
 ![](images/SQLite/DataSQL.png)
 #####Figure 10.0 - Working with a SQLiteDatabase.
@@ -115,7 +115,7 @@ Note that we are neither using our familiar `setup()` nor the `draw()` method fo
 
 ###Run the App
  
- Run the sketch on your device. You’ll see five records similar to <!--ref linkend="fig.data.sql-->. To retrieve the individual entries of each record, we use the `getString()` and `getInt()` methods, which take the table’s field names as parameters. If we use a field name that doesn’t exist, the `getString()` and `getInt()` methods will return `0`. You can check this out by adding the following line of code to the `output` string. 
+Run the sketch on your device. You’ll see five records similar to <!--ref linkend="fig.data.sql-->. To retrieve the individual entries of each record, we use the `getString()` and `getInt()` methods, which take the table’s field names as parameters. If we use a field name that doesn’t exist, the `getString()` and `getInt()` methods will return `0`. You can check this out by adding the following line of code to the `output` string. 
  
 ``` 
 output += db.getInt("foo") + "\n"; //doesn’t exist, so we get ’0’ 
@@ -133,39 +133,43 @@ You are now able to work with SQLite databases on the Android, which also lets y
  
 To see how useful a database can be, let’s go one step further and create an app that lets us record sensor data directly into a SQLite database table. We’ll then use `SQL` queries to browse the sensor data we’ve recorded from the accelerometer and visualize the data on the Android screen as a [time series.][10] A time series plots data points recorded at fixed intervals. For our example, we will record a data point every time we receive a new accelerometer value. 
  
- Alongside the accelerometer sensor values *x*, *y*, and *z*, we’ll record time as [Unix time][11] (measured in milliseconds since January 1, 1970 UTC) using Android’s `System` method, [`currentTimeMillis()`][12]. This allows us to identify precisely at what time (and date) the data has been captured. The Unix time stamp will also serve as the unique ID in our `data` table. So for our `data` table, we’ll need the following table structure and data types created by the following `SQL` query. 
+Alongside the accelerometer sensor values *x*, *y*, and *z*, we’ll record time as [Unix time][11] (measured in milliseconds since January 1, 1970 UTC) using Android’s `System` method, [`currentTimeMillis()`][12]. This allows us to identify precisely at what time (and date) the data has been captured. The Unix time stamp will also serve as the unique ID in our `data` table. So for our `data` table, we’ll need the following table structure and data types created by the following `SQL` query. 
  
 ```
 CREATE TABLE data ( time INTEGER PRIMARY KEY, x FLOAT, y FLOAT, z FLOAT)
 ```
 
-  Let’s look at each part of the `SQL` statement separately. 
- <table> <row><col>
-**CREATE TABLE**
- <col> 
- The `SQL` keyword to create a table 
- </row> <row><col>
-`data`
- <col> 
- The name we give the created table 
- </row> <row><col>
-`time` `INTEGER` `PRIMARY KEY`
- <col> 
- Defines the first `time` field we’ll create with the datatype `INTEGER`—the `id` field also functions as the `PRIMARY KEY` for the table. In a database that can use multiple tables that relate to each other, the primary key uniquely identifies each record in the table. 
- </row> <row><col>
-`x`
- <col> 
- A field of type `FLOAT` that we use to store the value reported from the accelerometer’s *x*-axis 
- </row> <row><col>
-`y`
- <col> 
- A field of type `FLOAT` that we use to store the value reported from the accelerometer’s *y*-axis 
- </row> <row><col>
-`z`
- <col> 
- A field of type `FLOAT` that we use to store the value reported from the accelerometer’s *z*-axis 
- </row> </table> 
- Here’s our approach to visualizing the time series data from the accelerometer sensor. 
+Let’s look at each part of the `SQL` statement separately. 
+
+<table> <tr><td>
+<code>CREATE TABLE</code>
+</td><td>
+The <code>SQL</code> keyword to create a table
+</td></tr> <tr><td>
+<code>data</code>
+</td><td>
+The name we give the created table
+</td></tr> <tr><td>
+<code>time</code> <code>INTEGER</code> <code>PRIMARY KEY</code>
+</td><td>
+Defines the first <code>time</code> field we&#x2019;ll create with the datatype <code>INTEGER</code>&#x2014;the <code>id</code> field also functions as the <code>PRIMARY KEY</code> for the table. In a database that can use multiple tables that relate to each other, the primary key uniquely identifies each record in the table.
+</td></tr> <tr><td>
+<code>x</code>
+</td><td>
+A field of type <code>FLOAT</code> that we use to store the value reported from the accelerometer&#x2019;s <i>x</i>-axis
+</td></tr> <tr><td>
+<code>y</code>
+</td><td>
+A field of type <code>FLOAT</code> that we use to store the value reported from the accelerometer&#x2019;s <i>y</i>-axis
+</td></tr> <tr><td>
+<code>z</code>
+</td><td>
+A field of type <code>FLOAT</code> that we use to store the value reported from the accelerometer&#x2019;s <i>z</i>-axis
+</td></tr>
+</table>
+
+ 
+Here’s our approach to visualizing the time series data from the accelerometer sensor. 
  
  To display our time series on the screen, we’ll work with a pair of variables called `plotX` and `plotY`, taking each of our data points and mapping it to the correct horizontal and vertical positions on the screen. We calculate `plotX` by using the record counter `i` to determine the total number of entries. We then use this number to spread the collected data over the full display `width`. We determine the vertical position `plotY` for each point by mapping each *x*, *y*, and *z* sensor value in relation to the display `height`. 
  

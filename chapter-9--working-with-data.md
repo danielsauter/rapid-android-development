@@ -69,11 +69,11 @@ A <code>KetaiVibrate</code> method to control the built-in device vibration moto
 </td></tr>
 </table>
 
- Since we are writing to the device’s file system in this chapter, let’s take a look at the options we have. 
+Since we are writing to the device’s file system in this chapter, let’s take a look at the options we have. 
 
 ###Working with Android Storage
  
- The Android device is equipped with the following storage types, which are available to our apps for saving data. We can keep our data private or expose it to other applications, as we’ve done deliberately in <!--ref linkend="sec.save.pictures-->, to share images we took. 
+The Android device is equipped with the following storage types, which are available to our apps for saving data. We can keep our data private or expose it to other applications, as we’ve done deliberately in <!--ref linkend="sec.save.pictures-->, to share images we took. 
 
 * *Internal Storage* This is used to store private data on the device memory. On the Android, files we save are saved by default to internal storage and are private, which means other applications cannot access the data. Because they are stored with our application, files saved to internal storage are removed when we uninstall an app. We’ll use the internal storage in <!--ref linkend="sec.write.tsv-->. 
 
@@ -103,24 +103,24 @@ To implement this sketch, we’ll use Processing’s `Table` class for loading a
  #####code/Data/DataReadGroceries/data/groceries.tsv
  [include](code/Data/DataReadGroceries/data/groceries.tsv)
 
- The file extension `tsv` indicates here that the groceries data is tab-separated. If the file is named `groceries.txt` instead, we can use the option parameter in `loadTable()` to indicate the tab-separated data structure, like this: 
+The file extension `tsv` indicates here that the groceries data is tab-separated. If the file is named `groceries.txt` instead, we can use the option parameter in `loadTable()` to indicate the tab-separated data structure, like this: 
  
 ```
 loadTable("groceries.txt", "tsv");
 ``` 
 
- We can also add `header` in the options parameter to indicate that the file includes a header row. 
+We can also add `header` in the options parameter to indicate that the file includes a header row. 
  
 ```
 loadTable("groceries.txt", "header, tsv");
 ``` 
 
- Now let’s take a look at our code.
+Now let’s take a look at our code.
   
- #####code/Data/DataReadGroceries/DataReadGroceries.pde 
- [include](code/Data/DataReadGroceries/DataReadGroceries.pde)
+#####code/Data/DataReadGroceries/DataReadGroceries.pde 
+[include](code/Data/DataReadGroceries/DataReadGroceries.pde)
  
- Here are the steps we take to read our text file and display the grocery list. 
+Here are the steps we take to read our text file and display the grocery list. 
  1. Load `groceries.tsv` by providing the file name as a parameter to the `Table` object `groceries`. 
  2. Set the rectangle drawing mode to `CENTER` so that the *x* and *y* location of the rectangle specifies the center of the rectangle instead of the default upper left corner. 
  3. Center the text labels for our rows horizontally and vertically within our text area. 
@@ -140,7 +140,7 @@ Let’s now move on to reading comma-separated values from a text file.
 
 ###Read Comma-Separated Web Color Data
  
-In the next sketch, we’ll work with hexadecimal values of web colors and juxtapose them with their official name from the HTML web specification. Our data source contains comma (“,”) separated values (`CSV`), which we read from the file stored in the `data` directory of our sketch. The `CSV` file contains sixteen rows, each containing two values separated by a comma. The first value contains a `String` that is one of the named colors in the [W3C’s `HTML` `color` specification.][12] The second value contains a text `String` that represents the hexadecimal value (or “hex value,” for short) of that named color. When we juxtapose a text description with its color in a list of individually labeled swatches, our sketch will display a screen like that shown in <!--ref linkend="fig.data.read-->. To distribute each swatch vertically, we use the `translate()` method we’ve implemented already in <!--ref linkend="sec.destination.finder-->.[][13] 
+In the next sketch, we’ll work with hexadecimal values of web colors and juxtapose them with their official name from the HTML web specification. Our data source contains comma (“,”) separated values (`CSV`), which we read from the file stored in the `data` directory of our sketch. The `CSV` file contains sixteen rows, each containing two values separated by a comma. The first value contains a `String` that is one of the named colors in the [W3C’s `HTML` `color` specification.][12] The second value contains a text `String` that represents the hexadecimal value (or “hex value,” for short) of that named color. When we juxtapose a text description with its color in a list of individually labeled swatches, our sketch will display a screen like that shown in Figure 9.1. To distribute each swatch vertically, we use the `translate()` method we’ve implemented already in <!--ref linkend="sec.destination.finder-->.[][13] 
  
 ![](images/Data/DataRead.png)
 #####Figure 9.1 - Reading comma-separated color values.
@@ -241,16 +241,16 @@ Now that you’ve learned how to write data to the app using a specified locatio
  
  Building on our previous <!--ref linkend="code.data.write-->, let’s now make some modifications so we can write our data to the Android’s external storage. This allows us to share files with other applications, as we’ve done when we worked with the camera and saved pictures to the external storage in <!--ref linkend="sec.save.pictures-->. We can also copy our data to the desktop by mounting the device as USB mass storage. 
  
- The process of mounting the device as USB mass storage is inconsistent across devices and is manufacturer-specific. Some devices like the Nexus S offer to “Turn on USB storage” when you connect the device to the desktop via a USB cable. Other devices like the Galaxy S3 now require an app to launch the device as mass storage. Either way, Android devices typically offer such a feature, and we’ll take a look at the `data.tsv` file once we’ve created it on the external storage.
+The process of mounting the device as USB mass storage is inconsistent across devices and is manufacturer-specific. Some devices like the Nexus S offer to “Turn on USB storage” when you connect the device to the desktop via a USB cable. Other devices like the Galaxy S3 now require an app to launch the device as mass storage. Either way, Android devices typically offer such a feature, and we’ll take a look at the `data.tsv` file once we’ve created it on the external storage.
  
- To work with the file path to the external storage, we need to `import` [Android’s `android.os.Environment`package,][17] which will give us access to the `Environment` class and its `getExternalStorageDirectory()` method, including the file path method `getAbsolutePath()`. We use both methods to create the path `String` for our sketch, writing to and reading from `data.tsv` on the external storage. 
+To work with the file path to the external storage, we need to `import` [Android’s `android.os.Environment`package,][17] which will give us access to the `Environment` class and its `getExternalStorageDirectory()` method, including the file path method `getAbsolutePath()`. We use both methods to create the path `String` for our sketch, writing to and reading from `data.tsv` on the external storage. 
  
- Let’s take a look at the code snippet showing `keyPressed()`, where we only modify our file path for writing `data.tsv` to the external storage. The path for reading `data.tsv` is, and must be, identical. 
+Let’s take a look at the code snippet showing `keyPressed()`, where we only modify our file path for writing `data.tsv` to the external storage. The path for reading `data.tsv` is, and must be, identical. 
 
- #####code/Data/DataWriteExternal/DataWriteExternal.pde
- [include](code/Data/DataWriteExternal/DataWriteExternal.pde)
+#####code/Data/DataWriteExternal/DataWriteExternal.pde
+[include](code/Data/DataWriteExternal/DataWriteExternal.pde)
  
- 1. Use Android’s `Environment` method `getExternalStorageDirectory()` to get the name of the external storage directory on the Android device, and use `getAbsolutePath()` to get the absolute path to that directory. Work with that path as a parameter for Java’s `File` object, providing a `File`-type parameter for Processing’s `writeTSV()` `Table` method, used to write the actual `TSV` file. 
+1. Use Android’s `Environment` method `getExternalStorageDirectory()` to get the name of the external storage directory on the Android device, and use `getAbsolutePath()` to get the absolute path to that directory. Work with that path as a parameter for Java’s `File` object, providing a `File`-type parameter for Processing’s `writeTSV()` `Table` method, used to write the actual `TSV` file. 
  
 Let’s test the app now. 
 
@@ -353,7 +353,7 @@ http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.csv
 
 Now rerun the code. Looking at the seven-day-period visualization, you can see how vibrant our planet is, even though we’ve limited the scope of the application to [earthquakes][23] of magnitude 2.5 and higher. In terms of their physical impact, experts say earthquakes of magnitude 3 or lower are almost imperceptible, while earthquakes of magnitude 7 and higher can cause serious damage over large areas.
  
-Because the comma-separated data structure of this seven-day-period data file is identical to the one we used earlier in the last hour, we don’t have to do anything else besides replace the source `URL`. The app loads the additional data rows containing the earthquake data and displays it independent of how many earthquakes are reported, as shown in <!--ref linkend="fig.earthquakes.past.week" thispage="yes-->. 
+Because the comma-separated data structure of this seven-day-period data file is identical to the one we used earlier in the last hour, we don’t have to do anything else besides replace the source `URL`. The app loads the additional data rows containing the earthquake data and displays it independent of how many earthquakes are reported, as shown in the image below. 
 
 ![](images/Data/EarthquakesSevenDays.png)
 #####Figure 9.4 - Earthquakes reported worldwide during the last seven days.

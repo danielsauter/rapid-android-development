@@ -74,8 +74,11 @@ Alternatively, you can use your web browser to download the library and install 
 
 3. Move the complete `oscP5` directory, including `library`, `reference`, `examples`, and `src` into the Processing sketchbook, located at `Documents/Processing/libraries`. 
 
-The sketchbook `libraries` folder now looks something like <!--ref linkend="fig.libraries.folder-->. Now let’s put OSC to work and network the Android with the PC.
+The sketchbook `libraries` folder now looks something like the figure below. Now let’s put OSC to work and network the Android with the PC.
 
+<!-- 6.1 REVISION - removed reference link to images/Networking/libraries.png -->
+
+![](images/Networking/libraries.png)
 
 ###Network an Android with a Desktop PC
 For our first project, we’re going to network a desktop PC and an Android device and then use the Wi-Fi network to exchange data between them. Wireless local area networks provide us with a high-bandwidth connection, which allows us to write applications that let us interact with peers within the network in real time. We can send fairly large data payloads without noticeable delays, making it a good choice for a diverse range of multiuser applications. 

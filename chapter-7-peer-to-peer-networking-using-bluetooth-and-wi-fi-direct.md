@@ -187,12 +187,12 @@ Now let’s return to the part of the code that is responsible for all the UI el
 
 Because the Bluetooth pairing process requires us to select a device from a whole list of discovered devices (you’ll probably be surprised by how many Bluetooth devices are broadcasting around you), we’ll use a `KetaiList` to simplify the selection process. We’ll also need the keyboard to make menu selections during the pairing process, and we’ll use the `KetaiKeyboard` class to toggle the keyboard on and off. For the `KetaiList`, we’ll use the `onKetaiListSelection()` method to capture when the user picks an item from the list. And to show and hide the `KetaiKeyboard`, we’ll work with the `toggle()` method.
 
-  Here are the steps to programming the UI.
+Here are the steps to programming the UI.
 
- #####code/P2P/BluetoothCursors/UI.pde 
- [include](code/P2P/BluetoothCursors/UI.pde)  
+#####code/P2P/BluetoothCursors/UI.pde 
+[include](code/P2P/BluetoothCursors/UI.pde)  
  
- Let’s take a look at the steps.
+Let’s take a look at the steps.
 
  1.  Toggle the Android’s software keyboard using `toggle()`. Make the `KetaiKeyboard` visible if it’s hidden; hide it if it’s visible.
 
