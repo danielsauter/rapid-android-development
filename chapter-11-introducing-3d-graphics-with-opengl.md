@@ -87,7 +87,7 @@ Now that we’ve created a 3D scene using basic 3D primitives and lights, we are
 
 ###Apply an Image Texture
  
-For this next project we’ll render a 3D night view of the Earth using a NASA image texture showing the light concentrations that emanate from the urban centers of our planet. We’ll use the `NASA` `JPEG` image as a texture wrapped around a 3D `sphere()` shown in <!--ref linkend="fig.textured.sphere-->. This time we’ll create the 3D primitive using Processing’s `PShape` class so we are able to apply a texture onto that shape. We’ll create the sphere with the `createShape()` method and a `SPHERE` parameter, and then we’ll use the `shape()` method to display the 3D object on the device screen. 
+For this next project we’ll render a 3D night view of the Earth using a NASA image texture showing the light concentrations that emanate from the urban centers of our planet. We’ll use the `NASA` `JPEG` image as a texture wrapped around a 3D `sphere()` shown in Figure 11.1 below. This time we’ll create the 3D primitive using Processing’s `PShape` class so we are able to apply a texture onto that shape. We’ll create the sphere with the `createShape()` method and a `SPHERE` parameter, and then we’ll use the `shape()` method to display the 3D object on the device screen. 
  
  [The NASA satellite image of the Earth][16] seen at night is also an equirectangular projection, as we used already in <!--ref linkend="sec.earthquakes-->, for visualizing earthquakes. An image texture with such a projection stretches perfectly around our sphere, recompensating for the distortions toward the poles that we observe in the flattened `JPEG` image. 
  
@@ -121,7 +121,7 @@ Now that we’ve learned how to use static images as textures for 3D objects, we
  
 Let’s map a live camera preview of our front-facing Android camera next. When we use images as textures for 3D objects in Processing, we can take advantage of the fact that moving images are handled essentially like static images, displayed as a `PImage` object but updated every time we receive a new image from the camera. Building on the previous image texture project <!--ref linkend="sec.image.texture-->, we can use the Android camera previews as textures via the `KetaiCamera` class we’ve worked with in <!--ref linkend="sec.camera.back.front-->. 
  
-For this project we’ll use the `BOX` 3D primitive instead of the `SPHERE`, and we’ll map the camera preview on every face of the box, as shown in <!--ref linkend="fig.camera.texture-->. We are already familiar with the code to instantiate a `KetaiCamera` object and the methods to start and stop the camera, which we’ll reuse from <!--ref linkend="sec.camera.back.front-->. 
+For this project we’ll use the `BOX` 3D primitive instead of the `SPHERE`, and we’ll map the camera preview on every face of the box, as shown in Figure 11.2 below. We are already familiar with the code to instantiate a `KetaiCamera` object and the methods to start and stop the camera, which we’ll reuse from <!--ref linkend="sec.camera.back.front-->. 
 
 ![](images/Mobile3D/CameraTexture.png)
 #####Figure 11.2 - Use a camera preview as a 3D texture.
@@ -150,7 +150,7 @@ Let’s now take a closer look at the different types of light sources we can wo
 
 ###Work with Spot and Point Lights
  
-Lighting affects the appearance of all the geometry in a scene, which is why we’ll take a closer look now at the various lighting options we have in Processing. Let’s create a sketch using three colored spotlights, as shown in <!--ref linkend="fig.spot.lights" thispage="yes-->, where we can see how each of the light sources interacts with the surface of the 3D geometry.
+Lighting affects the appearance of all the geometry in a scene, which is why we’ll take a closer look now at the various lighting options we have in Processing. Let’s create a sketch using three colored spotlights, as shown in Figure 11.3, where we can see how each of the light sources interacts with the surface of the 3D geometry.
 
 ![](images/Mobile3D/SpotLights.png)
 #####Figure 11.3 - Using spotlights.
@@ -217,33 +217,33 @@ Every object we draw after calling this or any other lighting method in Processi
  
  Once we’ve tested the spotlights, we’ll replace them with point lights and compare the difference. Point lights offer less options and control than spotlights do, which makes them arguably easier to use as well. Point lights are omnidirectional light sources emanating equally in all directions from one specified point in 3D space. The `pointLight()` method takes only the light color and position as parameters. 
  
- Let’s go ahead and write our spotlight program next. 
+Let’s go ahead and write our spotlight program next. 
  
- #####code/Mobile3D/SpotLights/SpotLights.pde
- [include](code/Mobile3D/SpotLights/SpotLights.pde)
+#####code/Mobile3D/SpotLights/SpotLights.pde
+[include](code/Mobile3D/SpotLights/SpotLights.pde)
  
- Let’s take a look at the methods we use for defining the spotlight and sphere detail. 
+Let’s take a look at the methods we use for defining the spotlight and sphere detail. 
  1. Increase the number of vertices composing the sphere to `60` for one full `360`-degree revolution. 
  2. Define a variable for the sphere size called `sSize`. 
  3. Create a red spotlight pointing straight at the scene, slightly offset to the right and up. 
  4. Create a green spotlight pointing straight at the scene, slightly offset to the left and up. 
  5. Create a blue spotlight pointing straight at the scene, slightly offset to the bottom. 
  
- Let’s test the sketch. 
+Let’s test the sketch. 
 
 ###Run the App
  
- Now run the sketch on the device, and see how the increased sphere detail and the three spotlights produce a high-quality color blending effect on the sphere’s surface. 
+Now run the sketch on the device, and see how the increased sphere detail and the three spotlights produce a high-quality color blending effect on the sphere’s surface. 
  
- Let’s take a look at our current frame rate to see how computationally expensive this operation is. Go ahead and add these two lines of code at the end of `draw()`: 
+Let’s take a look at our current frame rate to see how computationally expensive this operation is. Go ahead and add these two lines of code at the end of `draw()`: 
  
  ```
  if (frameCount%10 == 0) println(frameRate);
  ``` 
  
- On the Nexus S, the slowest of the devices tested for this book (<!--ref linkend="fig.tested.devices-->), we still get minimum frame rates of `60`, which is the default Processing uses if we don’t determine otherwise via the `frameRate()` method. This is true despite the fact that we have multiple hundreds of vertices and polygons at work to create our sphere with increased detail and we superimpose multiple light sources onto the sphere surface. 
+On the Nexus S, the slowest of the devices tested for this book (<!--ref linkend="fig.tested.devices-->), we still get minimum frame rates of `60`, which is the default Processing uses if we don’t determine otherwise via the `frameRate()` method. This is true despite the fact that we have multiple hundreds of vertices and polygons at work to create our sphere with increased detail and we superimpose multiple light sources onto the sphere surface. 
  
- Let’s replace the spotlights now with point light sources and see the difference. They are already present in the <!--ref linkend="code.spot.lights-->, but currently commented out. The color and position of the point light is identical to the spotlight we’ve used. 
+Let’s replace the spotlights now with point light sources and see the difference. They are already present in the <!--ref linkend="code.spot.lights-->, but currently commented out. The color and position of the point light is identical to the spotlight we’ve used. 
  
 Rerun the app and take a look at how the three colored light sources cover the sphere—mixing white in the center of the sphere. The lighting seems identical to the spotlights since we’ve used a fairly wide spotlight cone earlier and we also did not add a concentration bias. Now change back to the spotlights and decrease the current `15`-degree cone angle to, let’s say, `5`, and increase the concentration bias to `1`. You’ll see how spotlights offer additional controls over the light cone and concentration in our 3D scene. 
 
@@ -262,8 +262,8 @@ Processing uses a default font called Lucida Sans for all its modes because it i
 Processing provides a `PFont` class to us for working with custom fonts loaded into our sketch. We can use it in two ways: 
   
 * Using Processing’s [`createFont()` method,][20] we can load an already installed system font into our app at a defined font size. This way of working with a custom font requires that the font we’d like to use as the `createFont()` parameter is available on the platform we’ll run our app on. To find out what’s available on the system, the `PFont` class provides us with a `list()` method, which we can use to print a list of all available system fonts to the console. 
-  
-* Alternatively, we can use the “Create Font...” dialog in the Processing menu, shown in <!--ref linkend="fig.load.font-->, and available under Tools, which allows us to import any font we’d like&—and are allowed&—to import into our app. Processing opens all the fonts that are installed on our desktop system in a window. We can select the font we’d like, the point size for our import, whether we’d like to “smooth” the font, and how many characters we’d like to load, and it shows a font preview for the selections we’ve made. For the import, we can give the font a custom name for our sketch, and when we OK the dialog window, the font will be loaded as a Processing font file (`vlw`) into the `data` folder of our sketch. Once we’ve created the font, we can load it into a `PFont` object in our sketch using the [`loadFont()` method.][21] 
+
+* Alternatively, we can use the “Create Font...” dialog in the Processing menu, shown in <!--ref linkend="fig.load.font-->, and available under Tools, which allows us to import any font we’d like&—and are allowed—to import into our app. Processing opens all the fonts that are installed on our desktop system in a window. We can select the font we’d like, the point size for our import, whether we’d like to “smooth” the font, and how many characters we’d like to load, and it shows a font preview for the selections we’ve made. For the import, we can give the font a custom name for our sketch, and when we OK the dialog window, the font will be loaded as a Processing font file (`vlw`) into the `data` folder of our sketch. Once we’ve created the font, we can load it into a `PFont` object in our sketch using the [`loadFont()` method.][21] 
 
 Both methods require that we set the current font used to draw `text()` in our sketch to the font we’ve created or loaded using the [`textFont()` method.][22] This is necessary because we could work with two or more fonts in one sketch, and therefore we use the `textFont()` method like we’d also use `fill()` or `stroke()`, this time setting the current text font for all the text we draw after the method call. 
 
@@ -294,16 +294,16 @@ Printed below is the `list()` returned to the console on the Nexus 6 I tested wi
  [11] "Serif-Bold" 
 ```
  
- We’ll first work with Google’s current Roboto font and then switch over to an older [Google font called Droid Serif][24] to learn how to load a custom font that is not currently installed on the system. 
+We’ll first work with Google’s current Roboto font and then switch over to an older [Google font called Droid Serif][24] to learn how to load a custom font that is not currently installed on the system. 
  
- We’ll use two point lights, a blue one positioned to the left of the screen and an orange one positioned to the right, so we can see how the text reacts to the light sources placed into the scene when they move closer and further away from the virtual camera. 
+We’ll use two point lights, a blue one positioned to the left of the screen and an orange one positioned to the right, so we can see how the text reacts to the light sources placed into the scene when they move closer and further away from the virtual camera. 
  
- Let’s take a look at the code. 
+Let’s take a look at the code. 
 
 #####code/Mobile3D/TextLights/TextLights.pde
 [include](code/Mobile3D/TextLights/TextLights.pde)
 
- Here’s what we need to do to place the text dynamically.
+Here’s what we need to do to place the text dynamically.
   
  1. Define a `PFont` variable called `font`. 
  2. Create the `SansSerif` font from the Roboto font family already installed on the Android device in `48`-point size and assign it to the `font` object. 
@@ -330,7 +330,7 @@ Using Roboto as the default font for our app adheres to Android’s typography g
  
 Different fonts are good for different things, and the limited pixel real estate that is available to us on a mobile screen poses particular typographic challenges. We want to use the best font for a particular task and scale. When we introduce a font other than Roboto to the equation, we’ll need to use Processing’s `loadFont()` method for loading a custom font into our app. Before we can load the font into the app, we first need to create it via the “Create Font...” tool in the Processing IDE. Let’s modify our prior sketch (<!--ref linkend="code.text.lights-->) now to use a custom font and make the text we’ll display scalable so we can evaluate the font’s particular text details at different text sizes, as shown in <!--ref linkend="fig.load.font-->. 
  
- ![](images/Mobile3D/LoadFont.png)
+![](images/Mobile3D/LoadFont.png)
 #####Figure 11.5 - Use a custom font in Processing.
 ######The illustration shows the custom Droid Serif font at different scales, resized based on finger position on the screen. 
 
