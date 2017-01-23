@@ -171,9 +171,9 @@ A field of type <code>FLOAT</code> that we use to store the value reported from 
  
 Here’s our approach to visualizing the time series data from the accelerometer sensor. 
  
- To display our time series on the screen, we’ll work with a pair of variables called `plotX` and `plotY`, taking each of our data points and mapping it to the correct horizontal and vertical positions on the screen. We calculate `plotX` by using the record counter `i` to determine the total number of entries. We then use this number to spread the collected data over the full display `width`. We determine the vertical position `plotY` for each point by mapping each *x*, *y*, and *z* sensor value in relation to the display `height`. 
+To display our time series on the screen, we’ll work with a pair of variables called `plotX` and `plotY`, taking each of our data points and mapping it to the correct horizontal and vertical positions on the screen. We calculate `plotX` by using the record counter `i` to determine the total number of entries. We then use this number to spread the collected data over the full display `width`. We determine the vertical position `plotY` for each point by mapping each *x*, *y*, and *z* sensor value in relation to the display `height`. 
  
- Because the device reports a value equal to `1` g when it rests on the table (g-force equals 9.81 m/s<sup>2</sup>, as we know from <!--ref linkend="sec.display.accelerometer.values-->), let’s use `2` g as the assumed maximum so we can move and shake the device and still show those higher values on the screen. Values of `0` g are shown centered vertically on the screen; positive values plot in the upper half of the display, and negative values in the bottom half. 
+Because the device reports a value equal to `1` g when it rests on the table (g-force equals 9.81 m/s<sup>2</sup>, as we know from <!--ref linkend="sec.display.accelerometer.values-->), let’s use `2` g as the assumed maximum so we can move and shake the device and still show those higher values on the screen. Values of `0` g are shown centered vertically on the screen; positive values plot in the upper half of the display, and negative values in the bottom half. 
  
  Let’s take a look at the code. 
  
@@ -205,7 +205,7 @@ Here’s our approach to visualizing the time series data from the accelerometer
  
 Run the sketch on the device. When you run it for the first time, the SQLite `data` table will be created first. Press the menu key on the device to start recording accelerometer data. While you record sensor data, you’ll see the record count increase. Press Menu again to stop the recording process. 
  
-You’ll see a screen output similar to <!--ref linkend="fig.data.capture-->, showing the *x*-, *y*-, and *z*-axis values scattered as red, green, and blue dots around the vertical center representing `0`. Positive g-force values are shown on the top half of the display, and negative values on the bottom. 
+You’ll see a screen output similar to the image below, showing the *x*-, *y*-, and *z*-axis values scattered as red, green, and blue dots around the vertical center representing `0`. Positive g-force values are shown on the top half of the display, and negative values on the bottom. 
 
 ![](images/SQLite/DataCapture.png)
 #####Figure 10.1 - Capturing sensor data in SQLite.
@@ -229,7 +229,7 @@ For instance, adding `WHERE x > 5` to our `SELECT` statement will only return re
  
 Let’s explore `WHERE` clauses based on the code we’ve just worked on to visualize sensor data stored in our SQLite database table we’ve called `data`. We’ll leave the structure of the sketch intact but add a query that uses a `WHERE` clause to find only those records that match our condition. 
  
-As a condition for our `WHERE` clause, let’s look for all the records that indicate the device is resting flat on the table (display pointing up). This is only the case if the *z*-axis shows a value of approximately `1` g, or `+9.81`, while the *x*- and *y*-axis values are close to `0`. Let’s use a white circle to indicate data points that match our condition, as shown in <!--ref linkend="fig.data.capture.clause" thispage="yes-->.
+As a condition for our `WHERE` clause, let’s look for all the records that indicate the device is resting flat on the table (display pointing up). This is only the case if the *z*-axis shows a value of approximately `1` g, or `+9.81`, while the *x*- and *y*-axis values are close to `0`. Let’s use a white circle to indicate data points that match our condition, as shown in Figure 10.2, below.
 
 ![](images/SQLite/DataCaptureClause.png)
 #####Figure 10.2 - Refining SQL queries using WHERE clauses.
@@ -243,10 +243,10 @@ SELECT * FROM data WHERE z > 9.5 AND abs(x) < 0.3 AND abs(y) < 0.3
 
 Instead of the scheme we used in our previous sketch, let’s specify time using the Unix time stored in the `time` field of the `data` table. This is more accurate because we don’t receive sensor updates at an exact interval. Instead, we use the exact moment we’ve received new values in the form of a time stamp, and we use this time stamp to plot the data exactly when it occurred on our horizontal time axis. Essentially we are plotting each recorded data point proportional to the lowest (right) and highest (left) recorded time stamp. To correctly represent a Unix time value, we’ll need thirteen digits. For that level of precision, we’ll use the Java long datatype, a datatype that can handle [long integers.][13] The `map()` method we’ve used throughout the book is not designed to handle such large integer values, so we simply build our helper method `getLong()` based on Processing’s `map()` algorithm. 
  
- Let’s look at the `plotData()` and `mapLong()` methods we are now working with, building on the <!--ref linkend="code.capture.sql-->. 
+Let’s look at the `plotData()` and `mapLong()` methods we are now working with, building on the <!--ref linkend="code.capture.sql-->. 
  
- #####code/SQLite/DataCaptureClause/DataCaptureClause.pde
- [include](code/SQLite/DataCaptureClause/DataCaptureClause.pde)
+#####code/SQLite/DataCaptureClause/DataCaptureClause.pde
+[include](code/SQLite/DataCaptureClause/DataCaptureClause.pde)
  
 Now let’s see what changes we’ve made to our previous sketch <!--ref linkend="code.capture.sql-->. 
 
