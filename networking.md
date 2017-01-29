@@ -84,7 +84,7 @@ The sketchbook `libraries` folder now looks something like the figure below. Now
 ###Network an Android with a Desktop PC
 For our first project, we’re going to network a desktop PC and an Android device and then use the Wi-Fi network to exchange data between them. Wireless local area networks provide us with a high-bandwidth connection, which allows us to write applications that let us interact with peers within the network in real time. We can send fairly large data payloads without noticeable delays, making it a good choice for a diverse range of multiuser applications. 
 
-We’ll need to import the networking classes described in <!--ref linkend="sec.networking.classes-->, so we can exchange data over a common port, as illustrated in <!--ref linkend="fig.osc.exchange-->. We’ll use oscP5, which builds on and requires Processing’s core netP5 library for the exchange of data. We also use the `KetaiNet` class to look up the Android’s IP address, and we’ll use the familiar `KetaiSensor` class to receive accelerometer data. 
+We’ll need to import the networking classes described in <!--ref linkend="sec.networking.classes-->, so we can exchange data over a common port, as illustrated in Figure 6.1. We’ll use oscP5, which builds on and requires Processing’s core netP5 library for the exchange of data. We also use the `KetaiNet` class to look up the Android’s IP address, and we’ll use the familiar `KetaiSensor` class to receive accelerometer data. 
 
 ![](images/Networking/WiFiDataExchangeOSC.png)
 #####Figure 6.1 - Connecting an Android to a PC.
