@@ -92,7 +92,7 @@ The Android device is equipped with the following storage types, which are avail
  
  Let’s get started by working with a familiar list, a grocery list for our favorite pasta recipe, which we’ll display on the device screen. Let’s color-code the ingredients based on where we have to go to get them. We’ll work with tab-separated values stored in a text file called `groceries.tsv`, which is located in the `data` folder of our sketch. The file contains eleven items saved into individual rows, each row containing the amount, unit, item, and source for each ingredient on our list, separated by a tab character. The first row contains the labels for each column, which we’ll keep for our reference but not display on the Android screen, as shown in Figure 9.0. 
  
-![](images/Data/GroceryList.png)
+![](images/Data/GroceryList.jpg)
 #####Figure 9.0 - Reading groceries items from a tab-separated data file.
 ######The eleven items we need for this favorite pasta recipe are listed, color-coded by source (cyan for “market” and orange for “store”). 
 
@@ -142,7 +142,7 @@ Let’s now move on to reading comma-separated values from a text file.
  
 In the next sketch, we’ll work with hexadecimal values of web colors and juxtapose them with their official name from the HTML web specification. Our data source contains comma (“,”) separated values (`CSV`), which we read from the file stored in the `data` directory of our sketch. The `CSV` file contains sixteen rows, each containing two values separated by a comma. The first value contains a `String` that is one of the named colors in the [W3C’s `HTML` `color` specification.][12] The second value contains a text `String` that represents the hexadecimal value (or “hex value,” for short) of that named color. When we juxtapose a text description with its color in a list of individually labeled swatches, our sketch will display a screen like that shown in Figure 9.1. To distribute each swatch vertically, we use the [`translate()` method][13] we’ve implemented already in [Find Your Way to a Destination](../geolocation.html#find-your-way-to-a-destination). 
  
-![](images/Data/DataRead.png)
+![](images/Data/DataRead.jpg)
 #####Figure 9.1 - Reading comma-separated color values.
 ######Sixteen named colors from the HTML specification are stored in a csv file and juxtaposed with their hexadecimal color value. 
 
@@ -198,7 +198,7 @@ To draw, we’ll use Processing’s `mouseDragged()` method again, called every 
  
 Let’s take a look at the sketch. 
  
-![](images/Data/DataWrite.png)
+![](images/Data/DataWrite.jpg)
 #####Figure 9.2 - Write data to an Android.
 ######The illustration shows a total of eighty data points drawn on the touch screen, stored in the points PVector array, and saved to the Android storage in a file called data.tsv when we press a button. 
 
@@ -290,7 +290,7 @@ The map includes the complete range of longitude meridians from -180 to 180 degr
  
 To use our pixel real estate most effectively, we’ll draw the world map full screen, covering the complete `width` and `height` of the Android screen and introducing some additional distortion to our data visualization due to the device’s own aspect ratio. Because both the map and the location data scales depend on the display `width` and `height`, our information remains geographically accurate. 
  
-![](images/Data/Earthquakes.png)
+![](images/Data/Earthquakes.jpg)
 #####Figure 9.3 - Earthquakes reported worldwide during the last hour.
 ######The device location is indicated by a green circle. Red circles indicate the locations of earthquakes reported within the hour—the size and pulse frequency indicate their magnitude. 
 
@@ -355,7 +355,7 @@ Now rerun the code. Looking at the seven-day-period visualization, you can see h
  
 Because the comma-separated data structure of this seven-day-period data file is identical to the one we used earlier in the last hour, we don’t have to do anything else besides replace the source `URL`. The app loads the additional data rows containing the earthquake data and displays it independent of how many earthquakes are reported, as shown in the image below. 
 
-![](images/Data/EarthquakesSevenDays.png)
+![](images/Data/EarthquakesSevenDays.jpg)
 #####Figure 9.4 - Earthquakes reported worldwide during the last seven days.
 ######Only earthquakes with a magnitude of 2.5 and higher are included in this data source. 
 
