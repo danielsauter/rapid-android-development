@@ -179,6 +179,8 @@ When the app launches, the rear-facing camera becomes the default camera, but it
 
 Now that we know how to preview and control the camera, it's time to put it to work—let's snap some pictures. In our next project, we'll learn how to store images on the device.
 
+###Snap and Save Pictures
+
 To snap pictures and save them to the external storage of our device, we'll first need to add a `savePhoto()` method to the previous sketch [CameraFrontBack.pde](./cameras.html#codecameracamerafrontbackcamerafrontbackpde). The method takes care of capturing the image and writing it to the device's external storage in a folder that bears the app's name. When the photo is written to this public directory on the SD card, we receive a callback from `onSavePhotoEvent()` notifying us that the writing process is complete. This callback method is also useful if we'd like to notify the device's media library to make the photos available to other applications, which we accomplish with a call to the `addToMediaLibrary()` method. Once we've added photos to the media library, we can browse them in the Gallery—Android's preinstalled app for organizing pictures and video clips shown in Figure 5.3. The larger the captured photo size, the longer it takes to transfer the image buffer and store it on the disk.
 
 ![](images/camera/GalleryAlbum-sm.jpg)
