@@ -4,7 +4,7 @@
  
 In this second part of our introduction to data, we’ll work with SQLite, the popular relational database management system for local clients such as the Android, used also by many browsers and operating systems to store data. It implements the popular Structured Query Language (`SQL`) syntax for database queries, which we can use to access data stored locally on our Android device. 
  
-SQLite is a fairly simple and fast system, is considered very reliable, and has a small footprint that can be embedded in larger programs. It offers less fine-grained control over access to data than other systems like PostgreSQL or MySQL does, but it is simpler to use and administer, which is the main objective of the technology. It works very well as a file format for applications like [Computer-Aided Design (`CAD`), financial software, and record keeping.][0] It is often used in cellphones, tablet computers, set-top boxes, and appliances because SQLite does not require administration or maintenance. This simple database management system can be used instead of disk files, like the tab- or comma-delimited text files we’ve worked with in <!--ref linkend="chp.data-->, replacing them with ad-hoc SQLite disk files. 
+SQLite is a fairly simple and fast system, is considered very reliable, and has a small footprint that can be embedded in larger programs. It offers less fine-grained control over access to data than other systems like PostgreSQL or MySQL does, but it is simpler to use and administer, which is the main objective of the technology. It works very well as a file format for applications like [Computer-Aided Design (`CAD`), financial software, and record keeping.][0] It is often used in cellphones, tablet computers, set-top boxes, and appliances because SQLite does not require administration or maintenance. This simple database management system can be used instead of disk files, like the tab- or comma-delimited text files we’ve worked with in {{ book.chapter9 }}, replacing them with ad-hoc SQLite disk files. 
  
 In this chapter, we’ll first get SQLite running with a simple sketch and learn how to use `SQL` queries to retrieve data from a SQLite table. Then we’ll create an app that uses SQLite to capture accelerometer data from the sensor built into the Android. We’ll use the recorded sensor values to create a time series visualization of the data. Finally, we’ll query the data set we’ve recorded based on a certain device orientation we are looking for, and we’ll highlight the sensor value that matches our query criteria. 
  
@@ -14,7 +14,7 @@ Let’s take a look at the classes and methods that allow us to use SQLitedataba
  
 Now that we’ve seen most of Processing’s `Table` features, it’s time we take a look at the widely used SQLite database management system for local clients. It is based on the the popular Structured Query Language syntax for database queries and will look very familiar if you’ve worked with `SQL` before. Ketai gives us access to Android’s `SQLiteDatabase` class and provides us with the essential methods we need to create, query, and update content in the database tables. 
  
-The Ketai `KetaiSQLite` class is what we need to create full-fledged local SQLite databases on the device. For the projects in this chapter, we’ll use it to store a number of points that we’ll create by tapping the touch screen interface, and later we’ll use it to record accelerometer sensor data using the `KetaiSensor` class we’ve seen in <!--ref linkend="chp.sensors-->. Let’s get started by taking a look at the relevant Processing and Ketai methods we’ll be working with throughout the chapter. 
+The Ketai `KetaiSQLite` class is what we need to create full-fledged local SQLite databases on the device. For the projects in this chapter, we’ll use it to store a number of points that we’ll create by tapping the touch screen interface, and later we’ll use it to record accelerometer sensor data using the `KetaiSensor` class we’ve seen in {{ book.chapter3 }}. Let’s get started by taking a look at the relevant Processing and Ketai methods we’ll be working with throughout the chapter. 
  
 We’ll create two SQLite projects, one to get us up and running with a few random values in a SQLite database. The next project will take advantage of the `KetaiSensor` class to capture accelerometer data directly into a SQLite database, which we’ll browse and visualize on the Android display. 
  
@@ -115,7 +115,7 @@ Note that we are neither using our familiar `setup()` nor the `draw()` method fo
 
 ###Run the App
  
-Run the sketch on your device. You’ll see five records similar to <!--ref linkend="fig.data.sql-->. To retrieve the individual entries of each record, we use the `getString()` and `getInt()` methods, which take the table’s field names as parameters. If we use a field name that doesn’t exist, the `getString()` and `getInt()` methods will return `0`. You can check this out by adding the following line of code to the `output` string. 
+Run the sketch on your device. You’ll see five records similar to [Figure 10.0](../sqlite.html#figure-100---working-with-a-sqlitedatabase). To retrieve the individual entries of each record, we use the `getString()` and `getInt()` methods, which take the table’s field names as parameters. If we use a field name that doesn’t exist, the `getString()` and `getInt()` methods will return `0`. You can check this out by adding the following line of code to the `output` string. 
  
 ``` 
 output += db.getInt("foo") + "\n"; //doesn’t exist, so we get ’0’ 
@@ -173,7 +173,7 @@ Here’s our approach to visualizing the time series data from the accelerometer
  
 To display our time series on the screen, we’ll work with a pair of variables called `plotX` and `plotY`, taking each of our data points and mapping it to the correct horizontal and vertical positions on the screen. We calculate `plotX` by using the record counter `i` to determine the total number of entries. We then use this number to spread the collected data over the full display `width`. We determine the vertical position `plotY` for each point by mapping each *x*, *y*, and *z* sensor value in relation to the display `height`. 
  
-Because the device reports a value equal to `1` g when it rests on the table (g-force equals 9.81 m/s<sup>2</sup>, as we know from <!--ref linkend="sec.display.accelerometer.values-->), let’s use `2` g as the assumed maximum so we can move and shake the device and still show those higher values on the screen. Values of `0` g are shown centered vertically on the screen; positive values plot in the upper half of the display, and negative values in the bottom half. 
+Because the device reports a value equal to `1` g when it rests on the table (g-force equals 9.81 m/s<sup>2</sup>, as we know from [Display Values from the Accelerometer](../sensors.html#display-values-from-the-accelerometer)), let’s use `2` g as the assumed maximum so we can move and shake the device and still show those higher values on the screen. Values of `0` g are shown centered vertically on the screen; positive values plot in the upper half of the display, and negative values in the bottom half. 
  
  Let’s take a look at the code. 
  
@@ -225,7 +225,7 @@ Since we recorded data into a SQLite database, we can do much more with the data
  
 Conditional `SQL` queries using `WHERE` clauses allow us to search table records that match a particular value we specify in our clause. It returns all rows for which the `WHERE` clause is `true`. `WHERE` clauses are often used with one of the following operators: `=`, `<>`, `>`, `>=`, `<`, `<=`, or `LIKE`. 
  
-For instance, adding `WHERE x > 5` to our `SELECT` statement will only return records that have values greater than `5` in the `x` field of our `data` table. Similarly, we could request from the `data` table in our previous sketch <!--ref linkend="code.sqlite-->, only the `name` of a person older than `age` `21`. This way we can quickly implement many of the user-driven interactions we know from searching an online store for books only by a particular author, or shopping for merchandise from a particular brand. 
+For instance, adding `WHERE x > 5` to our `SELECT` statement will only return records that have values greater than `5` in the `x` field of our `data` table. Similarly, we could request from the `data` table in our previous sketch [SQLite/SQLite/SQLite.pde](../sqlite.html#codesqlitesqlitesqlitepde), only the `name` of a person older than `age` `21`. This way we can quickly implement many of the user-driven interactions we know from searching an online store for books only by a particular author, or shopping for merchandise from a particular brand. 
  
 Let’s explore `WHERE` clauses based on the code we’ve just worked on to visualize sensor data stored in our SQLite database table we’ve called `data`. We’ll leave the structure of the sketch intact but add a query that uses a `WHERE` clause to find only those records that match our condition. 
  
@@ -243,12 +243,12 @@ SELECT * FROM data WHERE z > 9.5 AND abs(x) < 0.3 AND abs(y) < 0.3
 
 Instead of the scheme we used in our previous sketch, let’s specify time using the Unix time stored in the `time` field of the `data` table. This is more accurate because we don’t receive sensor updates at an exact interval. Instead, we use the exact moment we’ve received new values in the form of a time stamp, and we use this time stamp to plot the data exactly when it occurred on our horizontal time axis. Essentially we are plotting each recorded data point proportional to the lowest (right) and highest (left) recorded time stamp. To correctly represent a Unix time value, we’ll need thirteen digits. For that level of precision, we’ll use the Java long datatype, a datatype that can handle [long integers.][13] The `map()` method we’ve used throughout the book is not designed to handle such large integer values, so we simply build our helper method `getLong()` based on Processing’s `map()` algorithm. 
  
-Let’s look at the `plotData()` and `mapLong()` methods we are now working with, building on the <!--ref linkend="code.capture.sql-->. 
+Let’s look at the `plotData()` and `mapLong()` methods we are now working with, building on the [SQLite/DataCapture/DataCapture.pde](../sqlite.html#codesqlitedatacapturedatacapturepde). 
  
 #####code/SQLite/DataCaptureClause/DataCaptureClause.pde
 [include](code/SQLite/DataCaptureClause/DataCaptureClause.pde)
  
-Now let’s see what changes we’ve made to our previous sketch <!--ref linkend="code.capture.sql-->. 
+Now let’s see what changes we’ve made to our previous sketch [SQLite/DataCapture/DataCapture.pde](../sqlite.html#codesqlitedatacapturedatacapturepde). 
 
 1. Get the minimum value of the `time` field in the `data` table using `KetaiSQLite`’s `getFieldMin()` method. Use the datatype `long` to hold the returned thirteen-digit Unix time value. 
 2. Get the maximum value of the `time` field in the `data` table using `getFieldMax()`. Use the datatype `long` to hold the time value. 
