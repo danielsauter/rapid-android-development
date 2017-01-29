@@ -18,30 +18,7 @@ Let’s look first at the classes and methods Processing provides to us to work 
  
 In this chapter, we’ll use [Processing’s `PShape`][0] features for all the projects we’ll create. We can use the class to load 2D vector shape files (`svg`) and 3D object files (`obj`) and work with 3D vertices generated algorithmically. Let’s take a look at the methods we’ll use to load and create the 3D scenes in this chapter. 
 
-<table>
-<tr>
-<td><a href="1"><code>loadShape()</code></a></td>
-<td>A Processing method to load a Scalable Vector Graphic, or <code>svg</code>, file into a <code>PShape</code> object</td>
-</tr>
-<tr>
-<td><a href="2"><code>beginShape()</code></a></td>
-<td>A Processing method to start recording a shape using vertices&#x2014;we can connect vertices with the following modes: <code>POINTS</code>, <code>LINES</code>, <code>TRIANGLES</code>, <code>TRIANGLE_FAN</code>, <code>TRIANGLE_STRIP</code>, <code>QUADS</code>, and <code>QUAD_STRIP</code>.</td>
-</tr>
-<tr>
-<td><a href="3"><code>endShape()</code></a></td>
-<td> A Processing method to stop recording a shape using vertices </td>
-</tr>
-<tr>
-<td><a href="4"><code>vertex()</code></a></td>
-<td>A Processing method to add a vertex point to a shape using either <i>x</i> and <i>y</i> values or <i>x</i>, <i>y</i>, and <i>z</i> values for two and three dimensions, respectively&#x2014;it takes only two vertices to create a shape, but we can add thousands and are only limited by the memory installed in our device. Vertices are connected with straight lines. To create curves, use the <a href="5"><code>bezierVertex()</code></a> or <a href="18"><code>curveVertex()</code></a> instead.</td>
-</tr>
-<tr>
-<td><a href="6"><code>createShape()</code></a></td>
-<td>A Processing method to load a 3D primitive or vertices into a <code>PShape</code>&#x2014;the method can also handle parameters for the 3D primitives <code>BOX</code> and <code>SPHERE</code>. It also mirrors the <code>beginShape()</code> method for recording vertices into a <code>PShape</code> object and is used in conjunction with <code>end()</code>-to-end recording.</td>
-</tr> 
-<tr> 
-<td><a href="7"><code>camera()</code></a></td>
-<td>A Processing method to define the camera viewpoint (where the camera is looking and how the camera is facing)&#x2014;we use it to navigate a 3D scene while keeping an eye on the particular spot we&#x2019;ve defined.
+<table><tr><td><a href="1"><code>loadShape()</code></a></td><td>A Processing method to load a Scalable Vector Graphic, or <code>svg</code>, file into a <code>PShape</code> object</td></tr><tr><td><a href="2"><code>beginShape()</code></a></td><td>A Processing method to start recording a shape using vertices&#x2014;we can connect vertices with the following modes: <code>POINTS</code>, <code>LINES</code>, <code>TRIANGLES</code>, <code>TRIANGLE_FAN</code>, <code>TRIANGLE_STRIP</code>, <code>QUADS</code>, and <code>QUAD_STRIP</code>.</td></tr><tr><td><a href="3"><code>endShape()</code></a></td><td> A Processing method to stop recording a shape using vertices </td></tr><tr><td><a href="4"><code>vertex()</code></a></td><td>A Processing method to add a vertex point to a shape using either <i>x</i> and <i>y</i> values or <i>x</i>, <i>y</i>, and <i>z</i> values for two and three dimensions, respectively&#x2014;it takes only two vertices to create a shape, but we can add thousands and are only limited by the memory installed in our device. Vertices are connected with straight lines. To create curves, use the <a href="5"><code>bezierVertex()</code></a> or <a href="18"><code>curveVertex()</code></a> instead.</td></tr><tr><td><a href="6"><code>createShape()</code></a></td><td>A Processing method to load a 3D primitive or vertices into a <code>PShape</code>&#x2014;the method can also handle parameters for the 3D primitives <code>BOX</code> and <code>SPHERE</code>. It also mirrors the <code>beginShape()</code> method for recording vertices into a <code>PShape</code> object and is used in conjunction with <code>end()</code>-to-end recording.</td></tr> <tr> <td><a href="7"><code>camera()</code></a></td><td>A Processing method to define the camera viewpoint (where the camera is looking and how the camera is facing)&#x2014;we use it to navigate a 3D scene while keeping an eye on the particular spot we&#x2019;ve defined.
 </td></tr>
 </table>
 
