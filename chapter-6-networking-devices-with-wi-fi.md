@@ -24,7 +24,7 @@ If we’re on the move and a known Wi-Fi network is not available to us, the And
 
 <sidebar> 
 
-###Peer-to-Peer Networking (P2P)
+<h3>Peer-to-Peer Networking (P2P)</h3>
 
 When it comes to peer-to-peer networking, the difference between an IP address provided by a local area network and an IP address from a 4G or 3G cellular network is that we can send data to a local area network address directly. If we go outside the local area network, our IP address undergoes network address translation, or [`NAT`][2]. There is no way to connect directly to a device without knowing exactly how to translate that new number in reverse. “Getting through” the NAT router is often referred to as “traversing” the NAT, or NAT-busting. Applications such as Skype (voice-over-IP), Hamachi, or LogMeIn (remote desktop) are very good at traversing. IP addresses are managed centrally, and the techniques that companies use to traverse the NAT are proprietary. It is clear, though, that NAT-busting is a messy and complicated process, one that exploits NAT router and firewall loopholes. Why the trouble? Because of the great benefit that we can have very efficient [peer-to-peer][3]
 connections that provide high update rates at no cost while “off-the-grid”.
