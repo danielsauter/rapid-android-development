@@ -207,7 +207,7 @@ Let’s note that when we use OSC networking, it won’t complain if there is no
 In terms of networking across devices, this is a major milestone we can continue to build on. It’s a small step for us to change the values we’ve sent via OSC to take on different new tasks. So for the next project, we’ll use the code <!--ref linkend="code.wifi.osc.android--> to create a drawing canvas that the Android and the PC can share. 
 
 ###Share Real-Time Data
-For our next project, we’re going to create a program for the Android and the PC that allows users of the two devices to draw on a shared surface, or virtual whiteboard, as shown in <!--ref linkend="fig.collaborative.drawing-->. We’ll refine the previous sketches <!--ref linkend="code.wifi.osc.android--> and <!--ref linkend="code.wifi.osc.pc--> that we’ve written to connect the Android and the desktop PC. The Wi-Fi network has the necessary bandwidth and update rates that we need to draw collaboratively. Whatever one of the users draws will appear instantaneously on the other’s device, and vice versa. 
+For our next project, we’re going to create a program for the Android and the PC that allows users of the two devices to draw on a shared surface, or virtual whiteboard, as shown in Figure 6.2, below. We’ll refine the previous sketches <!--ref linkend="code.wifi.osc.android--> and <!--ref linkend="code.wifi.osc.pc--> that we’ve written to connect the Android and the desktop PC. The Wi-Fi network has the necessary bandwidth and update rates that we need to draw collaboratively. Whatever one of the users draws will appear instantaneously on the other’s device, and vice versa. 
 
 Let’s start by programming the Android; then we’ll program the PC. 
 
@@ -297,7 +297,7 @@ You’ve mastered networking Android devices using Wi-Fi. Now let’s explore a 
 
 
 ###Network a Pair of Androids for a Multiplayer Game
-For this project, we are going to build on the previous sketch, in which we connected two Android devices using Wi-Fi and OSC. Let’s build a simple multiplayer game where each player uses an Android device to tilt a marble toward a selected target, as illustrated in <!--ref linkend="fig.balancing.game-->. Instead of a scenario in which one player controls the outcome on a single device, two devices will share a virtual game board whose orientation reflects the actions of the two players. One player influences the tilt of the other’s game board, and vice versa. 
+For this project, we are going to build on the previous sketch, in which we connected two Android devices using Wi-Fi and OSC. Let’s build a simple multiplayer game where each player uses an Android device to tilt a marble toward a selected target, as illustrated in Figure 6.3. Instead of a scenario in which one player controls the outcome on a single device, two devices will share a virtual game board whose orientation reflects the actions of the two players. One player influences the tilt of the other’s game board, and vice versa. 
 
 ![](images/Networking/WiFiBalancingGame.png)
 #####Figure 6.3 - Multiplayer balancing game
