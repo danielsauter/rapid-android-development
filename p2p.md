@@ -225,8 +225,8 @@ Let’s take a look at the steps.
   Now let’s test the app.
 
 
-###Run the App
-  Let’s set the correct Android permissions before we run the sketch. Open the Android Permission Selector as we’ve done previously (see <!--ref linkend="sec.sketch.permissions-->), and check the following permissions:
+<h3 id='bluetoothcursorsuipde-run'>Run the App</h3>
+Let’s set the correct Android permissions before we run the sketch. Open the Android Permission Selector as we’ve done previously (see <!--ref linkend="sec.sketch.permissions-->), and check the following permissions:
 
 * `BLUETOOTH`
 
@@ -415,7 +415,7 @@ Here are the changes we’ve made to the `UI` tab.
 
  5.  Send an `OSC` message called “poll-answer” if we press `3` that contains the current question ID followed by the answer `3`.
 
-  Now it’s time to test the app.
+Now it’s time to test the app.
 
 ###Run the App
 
