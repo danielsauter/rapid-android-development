@@ -63,7 +63,7 @@ Our sketch will use a recursive program to send an increasingly accurate live ca
 #####Figure 8.1 - Broadcast pixels using NFC and Bluetooth.
 ######Touching NFC devices back-to-back initiates the Bluetooth connection, starting a two-directional pixel broadcast. The camera preview is then sent from one device to the other and displayed there. The top image shows the sampled camera image after four taps, the bottom image after two. 
 
-When we run the app on the networked Androids, we will get a sense of how much data we can send via Bluetooth and at what frame rate. We’ll revisit concepts from previous chapters where we worked with a live camera preview, <!--ref linkend="chp.camera-->, and sent Bluetooth messages, <!--ref linkend="chp.p2p-->, now using `NFC` to initiate the network. 
+When we run the app on the networked Androids, we will get a sense of how much data we can send via Bluetooth and at what frame rate. We’ll revisit concepts from previous chapters where we worked with a live camera preview, {{ book.chapter5 }}, and sent Bluetooth messages, {{ book.chapter7 }}, now using `NFC` to initiate the network. 
 
 ###Generate a Low-Resolution Preview
  
@@ -71,7 +71,7 @@ When we run the app on the networked Androids, we will get a sense of how much d
  
  The `interlace()` method we’ll create works with the `divisions` parameter to control how many recursions will be executed. We’ll start with a `divisions` value of `1`, for one division. Each time we tap the screen, `divisions` will increase to `2`, `3`, and so on, which will also increase the `level` parameter in our `interlace()` method. There we are using `level` to check that it has a value greater than `1` before recursively calling the `interlace()` method again to split each pixel into four. 
  
- In the main tab we also **import** the Ketai camera package, which is familiar to us from <!--ref linkend="chp.camera-->. We’ll create a `KetaiCamera` object that we’ll name `cam`. The `cam` object will read the image each time we receive a new frame from the camera. 
+ In the main tab we also **import** the Ketai camera package, which is familiar to us from {{ book.chapter5 }}. We’ll create a `KetaiCamera` object that we’ll name `cam`. The `cam` object will read the image each time we receive a new frame from the camera. 
  
  For this sketch, we’ll use the following tabs to organize our code: 
  
@@ -106,7 +106,7 @@ Now that we are done with our coding for the camera and the recursive program to
 
 ###Enable NFC and Bluetooth in the Activity Life Cycle
  
-To use `NFC` and Bluetooth, we need to take similar steps in the activity life cycle as we’ve done for our Bluetooth peer-to-peer app. In <!--ref linkend="sec.activity.lifecycle-->, we looked at the callback methods called during an activity life cycle. For this project, we need tell Android that we’d like to activate both `NFC` and Bluetooth. Let’s put the lifecycle code for the activity into an `ActivityLifecycle` tab. 
+To use `NFC` and Bluetooth, we need to take similar steps in the activity life cycle as we’ve done for our Bluetooth peer-to-peer app. In [Working with the Android Activity Life Cycle](../p2p.html#working-with-the-android-activity-life-cycle), we looked at the callback methods called during an activity life cycle. For this project, we need tell Android that we’d like to activate both `NFC` and Bluetooth. Let’s put the lifecycle code for the activity into an `ActivityLifecycle` tab. 
  
 At the very beginning of the life cycle, `onCreate()`, we’ll launch `KetaiBluetooth` by initiating our `KetaiBluetooth` object, and we’ll tell Android that we intend to use `NFC`. We do so using an [intent,][13] which is a data structure to tell Android that an operation needs to be performed. For example, an intent can launch another activity or send a result to a component that declared interest in it. Functioning like a kind of glue between activities, an intent binds events between the code in different applications. We need an Intent to launch `NFC`. 
  
@@ -189,9 +189,9 @@ Now that we’ve learned how to send a Bluetooth ID via `NFC` Beam technology to
 
 ###Read a URL from an NFC Tag
  
-Moving on to the world of `NFC` tags, our sketches will get significantly shorter. Tags come in different shapes and sizes, as illustrated in <!--ref linkend="fig.nfc.tags-->, and they mostly store a few dozen characters, which is why most tags contain a `URL` pointing to a website. For this first app, we’ll create a sketch that can read `NFC` tags. 
+Moving on to the world of `NFC` tags, our sketches will get significantly shorter. Tags come in different shapes and sizes, as illustrated in [Figure 8.0](../nfc.html#figure-80---nfc-tags), and they mostly store a few dozen characters, which is why most tags contain a `URL` pointing to a website. For this first app, we’ll create a sketch that can read `NFC` tags. 
  
-Because we are dealing mostly with `URL`s, let’s also include some Processing code that lets us open the link in the device browser. We’ll check if it is a valid URL before we launch the browser. When we launch our sketch on the device, the app will wait for an `NFC` event to occur, which will be triggered when we touch the tag with the device. We’ll also want to display the tag’s content on the device, as shown in <!--ref linkend="fig.nfc.read-->. 
+Because we are dealing mostly with `URL`s, let’s also include some Processing code that lets us open the link in the device browser. We’ll check if it is a valid URL before we launch the browser. When we launch our sketch on the device, the app will wait for an `NFC` event to occur, which will be triggered when we touch the tag with the device. We’ll also want to display the tag’s content on the device, as shown below. 
  
 ![](images/NFC/ReadNFC.png)
 #####Figure 8.2 - Read an NFC tag.
@@ -201,7 +201,7 @@ Because we are dealing mostly with `URL`s, let’s also include some Processing 
  
 To get started, let’s enable `NFC` using the now familiar activity lifecycle methods we used in the previous sketch. All the lifecycle code we need to enable `NFC` goes into our `EnableNFC` tab. 
  
-This tab is identical to <!--ref linkend="sec.nfc.bluetooth.activity.lifecycle-->, with the exception that we don’t have to start up Bluetooth as well. Let’s take a look at the code. 
+This tab is identical to [Enable NFC and Bluetooth in the Activity Life Cycle](../nfc.html#enable-nfc-and-bluetooth-in-the-activity-life-cycle), with the exception that we don’t have to start up Bluetooth as well. Let’s take a look at the code. 
  
 #####code/NFC/NFCRead/EnableNFC.pde 
 [include](code/NFC/NFCRead/EnableNFC.pde) 
@@ -227,7 +227,7 @@ Before we run the sketch, we’ll again need to make sure that we have the appro
 
 ###Set NFC Permissions
  
-Because `NFC` permissions are not listed in Processing’s Android Permissions Selector, where we usually make our permission selections (<!--ref linkend="sec.sketch.permissions-->), we need to modify `AndroidManifest.xml` directly to enable `NFC`. Processing typically takes care of creating this file for us when we run the sketch, based on the selection(s) we’ve made in the Permission Selector, and it re-creates the file every time we change our permission settings. Also, when we make no permission selections at all, Processing creates a basic manifest file inside our sketch folder. 
+Because `NFC` permissions are not listed in Processing’s Android Permissions Selector, where we usually make our permission selections ([Setting Sketch Permissions](../geolocation.html#setting-sketch-permissions)), we need to modify `AndroidManifest.xml` directly to enable `NFC`. Processing typically takes care of creating this file for us when we run the sketch, based on the selection(s) we’ve made in the Permission Selector, and it re-creates the file every time we change our permission settings. Also, when we make no permission selections at all, Processing creates a basic manifest file inside our sketch folder. 
  
 Since we are already editing the Android manifest file manually, let’s jump ahead and also add an [intent filter][17] that launches our app when a tag is discovered. This way, `NFCRead` will start when the app is not yet running and resume when it is running in the background. 
  
@@ -253,7 +253,7 @@ Now that the appropriate `NFC` permissions are in place, let’s run the app.
  
 Run the app on the device. When it starts up, our `tagText` `String` is empty. You can tap the screen but nothing happens, because we don’t yet have a link to jump to. 
  
-Now approach your tag with the back of your device. A few centimeters before you touch the tag, you will hear a beep, which signals that an `NFC` event has occurred. The `URL` stored on the tag should now appear on your display (<!--ref linkend="fig.nfc.read-->). If you have another one, try the other tag and see if it has a different `URL`. 
+Now approach your tag with the back of your device. A few centimeters before you touch the tag, you will hear a beep, which signals that an `NFC` event has occurred. The `URL` stored on the tag should now appear on your display ([Read a URL from an NFC Tag](../nfc.html#read-a-url-from-an-nfc-tag)). If you have another one, try the other tag and see if it has a different `URL`. 
 
 Now that you’ve successfully read `NFC` tags, it’s time to learn how to write them as well, either to add your own URL or to change the `NDEF` message on there. 
 
@@ -267,7 +267,7 @@ Let’s build on our previous sketch and add a feature to do that. The app must 
 #####Figure 8.3 - Read and write NFC tags.
 ######Use the keyboard to input a URL and press Enter. The string will then be written to the tag on contact. 
 
-Let’s introduce a variable called `tagStatus` to provide us with some onscreen feedback during this process. The sketch itself is structured identically to our previous example <!--ref linkend="code.nfc.read-->. We’ll keep the `EnableNFC` tab and the permissions we set for `AndroidManifest.xml`. 
+Let’s introduce a variable called `tagStatus` to provide us with some onscreen feedback during this process. The sketch itself is structured identically to our previous example [NFC/NFCRead/NFCRead.pde](../nfc.html#codenfcnfcreadnfcreadpde). We’ll keep the `EnableNFC` tab and the permissions we set for `AndroidManifest.xml`. 
  
 Let’s take a look at the main tab.
   
