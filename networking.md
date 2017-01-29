@@ -6,7 +6,7 @@ Social media, location-based services, and multiplayer games are just a few exam
 
 By the end of this chapter, you’ll be able to send data between computers and Androids within a Wi-Fi network. You will be able to write real-time interactive apps running on multiple devices that take advantage of the high bandwidth offered by a Wi-Fi network. This can be useful, for example, to inventory stock in a retail store, monitor a patient, view data from a home security or automation system, or participate in a multiplayer game. 
 
-There are four ways to connect devices without sending data over the Internet: Wi-Fi, Wi-Fi Direct, Bluetooth, and near field communication (`NFC`), listed in decreasing order in terms of connection distance, power consumption, and speed. We will cover peer-to-peer networking, to which Wi-Fi Direct and Bluetooth belong, in the next chapter, called <!--ref linkend="chp.p2p-->, and cover NFC in the following one, called <!--ref linkend="chp.nfc-->. 
+There are four ways to connect devices without sending data over the Internet: Wi-Fi, Wi-Fi Direct, Bluetooth, and near field communication (`NFC`), listed in decreasing order in terms of connection distance, power consumption, and speed. We will cover peer-to-peer networking, to which Wi-Fi Direct and Bluetooth belong, in the next chapter, called {{ book.chapter7 }}, and cover NFC in the following one, called {{ book.chapter8 }}. 
 
 We’ll start this chapter by creating an app that exchanges data between an Android device and a desktop PC using the Open Sound Control (`OSC`) networking format. Then we’ll build a collaborative drawing app, where we use the Wi-Fi network to share a drawing canvas between two Android devices. As the final project for this chapter, we’ll create a game for two players using the accelerometer on each device to control the tilt of a shared playing surface with two balls in play. Local Wi-Fi networks offer us the bandwidth and response time we need for multiplayer games while freeing us from worry about data plans and transmission quotas. 
 
@@ -16,11 +16,12 @@ Wi-Fi is so ubiquitous in cities that you can find a Wi-Fi network virtually any
 
 Most Wi-Fi networks are set up to connect to the Internet. But you can also use a wireless network access point to set up a local Wi-Fi network for the sole purpose of connecting multiple Wi-Fi--enabled devices between one another. Many Android devices will even let you create a Wi-Fi hotspot using the device itself (Settings &mapsto; Wireless & networks &mapsto; More... &mapsto; Tethering & portable hotspots). 
 
-When a Wi-Fi--enabled device connects to a Wi-Fi access point, it is assigned an IP address. An IP address is a unique identifier (see also <!--ref linkend="sb.p2p-->) that is used to identify the device within a network. It functions as a numeric label that other devices can use to access it. Likewise, to connect our Android to other devices within the network, we need to know their IP addresses as well. 
+When a Wi-Fi--enabled device connects to a Wi-Fi access point, it is assigned an IP address. An IP address is a unique identifier (see also [Working with Networking Classes](../networking.html#working-with-networking-classes
+)) that is used to identify the device within a network. It functions as a numeric label that other devices can use to access it. Likewise, to connect our Android to other devices within the network, we need to know their IP addresses as well. 
 
 When two devices wish to communicate, they must also share a common [port number][0] in addition to knowing each other’s IP addresses. A port is an agreed-upon number that establishes communication in conjunction with the IP address. Certain ports are [reserved for services such as FTP (Port 21) or HTTP (Port 80) and should not be used.][1] Port numbers greater than 1000 usually work just fine. 
 
-If we’re on the move and a known Wi-Fi network is not available to us, the Android device requests an IP address from the cell phone carrier’s 3G or 4G network. Although it is possible to network two devices over the carrier network, we cannot sustain a peer-to-peer network as the device connects from cell tower to cell tower. Connecting two (or more) devices inside a Wi-Fi network is significantly different from connecting them outside the network, which is described in further detail in <!--ref linkend="sb.p2p-->. In this chapter, we’ll stay focused on Wi-Fi communications. 
+If we’re on the move and a known Wi-Fi network is not available to us, the Android device requests an IP address from the cell phone carrier’s 3G or 4G network. Although it is possible to network two devices over the carrier network, we cannot sustain a peer-to-peer network as the device connects from cell tower to cell tower. Connecting two (or more) devices inside a Wi-Fi network is significantly different from connecting them outside the network, which is described in further detail in Peer-to-Peer Networking. In this chapter, we’ll stay focused on Wi-Fi communications. 
 
 <sidebar> 
 
@@ -204,10 +205,12 @@ If communication fails, make sure you’ve adjusted `remoteAddress` in the Andro
 
 Let’s note that when we use OSC networking, it won’t complain if there is no other device to talk to. The connection sits and waits until another device enters the conversation on port `12000`. Likewise, OSC doesn’t throw a networking error when a device leaves the conversation; it can also reconnect at any time. This is another great feature of the OSC communication protocol, whether we use it on the Android or the desktop&—a robust connection process combined with a straightforward method to send messages containing different data types. 
 
-In terms of networking across devices, this is a major milestone we can continue to build on. It’s a small step for us to change the values we’ve sent via OSC to take on different new tasks. So for the next project, we’ll use the code <!--ref linkend="code.wifi.osc.android--> to create a drawing canvas that the Android and the PC can share. 
+In terms of networking across devices, this is a major milestone we can continue to build on. It’s a small step for us to change the values we’ve sent via OSC to take on different new tasks. So for the next project, we’ll use [Networking/WiFiDataExchangeAndroid/WiFiDataExchangeAndroid.pde](../networking.html#codenetworkingwifidataexchangeandroidwifidataexchangeandroidpde) to create a drawing canvas that the Android and the PC can share. 
+
+<!-- 6.0 REVISION - minor revision to text for link grammar -->
 
 ###Share Real-Time Data
-For our next project, we’re going to create a program for the Android and the PC that allows users of the two devices to draw on a shared surface, or virtual whiteboard, as shown in Figure 6.2, below. We’ll refine the previous sketches <!--ref linkend="code.wifi.osc.android--> and <!--ref linkend="code.wifi.osc.pc--> that we’ve written to connect the Android and the desktop PC. The Wi-Fi network has the necessary bandwidth and update rates that we need to draw collaboratively. Whatever one of the users draws will appear instantaneously on the other’s device, and vice versa. 
+For our next project, we’re going to create a program for the Android and the PC that allows users of the two devices to draw on a shared surface, or virtual whiteboard, as shown in Figure 6.2, below. We’ll refine the previous sketches [Networking/WiFiDataExchangeAndroid/WiFiDataExchangeAndroid.pde](../networking.html#codenetworkingwifidataexchangeandroidwifidataexchangeandroidpde) and [Networking/WiFiDataExchangePC/WiFiDataExchangePC.pde](../networking.html#codenetworkingwifidataexchangepcwifidataexchangepcpde) that we’ve written to connect the Android and the desktop PC. The Wi-Fi network has the necessary bandwidth and update rates that we need to draw collaboratively. Whatever one of the users draws will appear instantaneously on the other’s device, and vice versa. 
 
 Let’s start by programming the Android; then we’ll program the PC. 
 
@@ -223,9 +226,9 @@ Let’s take a look:
 #####code/Networking/WiFiDataExchangeAndroidDrawing/WiFiDataExchangeAndroidDrawing.pde
 [include](code/Networking/WiFiDataExchangeAndroidDrawing/WiFiDataExchangeAndroidDrawing.pde)
 
-Here are the steps we take to change the `draw()` and `oscEvent()` methods from the previous sketch <!--ref linkend="code.wifi.osc.android-->: 
+Here are the steps we take to change the `draw()` and `oscEvent()` methods from the previous sketch [Networking/WiFiDataExchangeAndroid/WiFiDataExchangeAndroid.pde](../networking.html#codenetworkingwifidataexchangeandroidwifidataexchangeandroidpde): 
 
-1. Create a new OSC connection on port `12001` to avoid conflicts with the previous sketch <!--ref linkend="code.wifi.osc.android-->, which runs an OSC connection on port `12000`. 
+1. Create a new OSC connection on port `12001` to avoid conflicts with the previous sketch [Networking/WiFiDataExchangePC/WiFiDataExchangePC.pde](../networking.html#codenetworkingwifidataexchangepcwifidataexchangepcpde), which runs an OSC connection on port `12000`. 
 
 2. Calculate the speed of the remote mouse, which we’ll use for the stroke weight. 
 
@@ -246,7 +249,7 @@ Here are the steps we take to change the `draw()` and `oscEvent()` methods from 
 We moved a port number higher compared to the previous sketch so that the number would not conflict with the already established connection there. An OSC conflict with an already established connection on a specific port would be reported to the Processing console like this: 
  
 ```
- ERROR @ UdpServer.start() IOException, couldnt create new DatagramSocket @ port 12000 java.net.BindException: Address already in use 
+ERROR @ UdpServer.start() IOException, couldnt create new DatagramSocket @ port 12000 java.net.BindException: Address already in use 
 ```
 
 If we stopped the app that occupies the port, we can reuse that port number. To stop a sketch, hold down the home button on the Android device and swipe the app horizontally to close it, or choose Settings &mapsto; Manage Apps &mapsto; Wi-FiDataExchangeAndroid &mapsto; Force Stop. 
@@ -282,14 +285,14 @@ Now we are ready to doodle and communicate both ways.
 ###Run the PC App
 Let’s go ahead and run the sketch on the desktop PC. The Android sketch is already running. If you draw with your mouse in the display window on the desktop, you will cause white lines to appear on the screen whose weight increases the faster you draw. 
 
-Now let’s go back to the Android and draw on its touch screen surface while keeping an eye on the desktop window. Notice that the lines you draw “locally” appear in white, while those that appear “remotely” are in black. Keep doodling using either the desktop or the Android, and you should see the same image you draw on one device appear in reverse colors on the other, as shown in <!--ref linkend="fig.collaborative.drawing-->. Black and white marks perpetually override each other as we keep doodling. 
+Now let’s go back to the Android and draw on its touch screen surface while keeping an eye on the desktop window. Notice that the lines you draw “locally” appear in white, while those that appear “remotely” are in black. Keep doodling using either the desktop or the Android, and you should see the same image you draw on one device appear in reverse colors on the other, as shown in Figure 6.2 (above). Black and white marks perpetually override each other as we keep doodling. 
 
 You’ve exchanged data between the Android and a desktop PC using Wi-Fi; now is a good time to test OSC communication between two Android devices using Wi-Fi. For this, you’ll need to go find a second Android device. 
 
 
 ###Run the Sketch on a Pair of Androids
 
-Now that you have located a second Android device&—let’s call it Android 2—you can go ahead and confirm that you are able to send OSC messages between a pair of Android devices as well. Let’s make sure again that you are on the correct network with the second device, and choose Settings &mapsto; “Wireless & networks.” Write down the IP address of the second device. With the IP addresses of both devices ready, open the sketch <!--ref linkend="code.wifi.osc.android.drawing-->, that we’ve already loaded onto the first device. 
+Now that you have located a second Android device&—let’s call it Android 2—you can go ahead and confirm that you are able to send OSC messages between a pair of Android devices as well. Let’s make sure again that you are on the correct network with the second device, and choose Settings &mapsto; “Wireless & networks.” Write down the IP address of the second device. With the IP addresses of both devices ready, open the sketch [Networking/WiFiDataExchangeAndroidDrawing/WiFiDataExchangeAndroidDrawing.pde](../networking.html#codenetworkingwifidataexchangeandroiddrawingwifidataexchangeandroiddrawingpde), that we’ve already loaded onto the first device. 
 
 Adjust the IP address for `remoteLocation` to match Android 2, and run the sketch on Android 1. The app starts up and Android 1 is ready. Repeat the steps on the other device, adjusting the IP address to match Android 1 and running the sketch on Android 2. If you are still running the other app on port `12001`, adjust the port number to use another port. 
 
@@ -305,7 +308,7 @@ For this project, we are going to build on the previous sketch, in which we conn
 
 To make the marbles for this game look three-dimensional, we’ll load an image that provides us with the image texture we need for the desired effect. We’ll use Processing’s [`PImage` class][20]  again to store the image.We can load `gif`, `jpg`, `tga`, and `png` images using the `loadImage()`. We are going to use a [PNG-formatted image][21] because it supports a transparent background. With a transparent background, the image will appear to float on the surface of the game board without the background color showing up as a rectangle as the marble moves across it. `PImage` also offers us a `tint()` method, which we can use to create two differently [colored marbles][22] from one image.
 
-The sketch we are going to build is identical on both devices with the exception of the value assigned to the variable `remoteAddress`, which points to the other Android device. This time we’ll send a few more values via OSC compared with the earlier <!--ref linkend="code.wifi.osc.android.drawing-->—seven instead of three, including the position of the marble, its speed, the position of each target, and the score for each player. OSC allows us to mix the data types we send within one message, so we’ll send four floating point values followed by three integers and determine a valid OSC message using the `checkTypetag(ffffiii)` method. 
+The sketch we are going to build is identical on both devices with the exception of the value assigned to the variable `remoteAddress`, which points to the other Android device. This time we’ll send a few more values via OSC compared with the earlier [Networking/WiFiDataExchangeAndroidDrawing/WiFiDataExchangeAndroidDrawing.pde](../networking.html#codenetworkingwifidataexchangeandroiddrawingwifidataexchangeandroiddrawingpde)—seven instead of three, including the position of the marble, its speed, the position of each target, and the score for each player. OSC allows us to mix the data types we send within one message, so we’ll send four floating point values followed by three integers and determine a valid OSC message using the `checkTypetag(ffffiii)` method. 
 
 To assign random positions to the marbles and targets when the app starts up, we’ll use [Processing’s `random()` method.][23] It generates random floating point numbers every time the method is called. We can use it with one parameter (floating point or integer number), causing `random()` to generate values ranging from zero to that number. We can also use it with two parameters, making `random()` return values ranging from the first to the second number parameter. 
 
