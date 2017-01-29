@@ -12,20 +12,20 @@ To demonstrate how we can use `PShape` to manipulate 3D objects, we’ll load a 
 
 To give users a way to interact with the M&#xF6;bius strip, we’ll introduce and use the built-in gyro sensor, a component that now ships with the latest Androids. The gyro makes a useful input device, and we’ll use it to rotate the figure on the screen by rotating the device itself. We’ll conclude the chapter by bringing several of these new features together in a single application that also makes use of Android’s ability to recognize faces. We’ll use our gaze to control the point of view of the virtual camera. The scene consists of Earth and the Moon&—revisiting code from <!--ref linkend="sec.image.texture-->, and face recognition features we’ve explored in <!--ref linkend="sec.face.detection-->. 
  
- Let’s look first at the classes and methods Processing provides to us to work with shapes and 3D objects&—we’ll use them throughout the chapter. 
+Let’s look first at the classes and methods Processing provides to us to work with shapes and 3D objects&—we’ll use them throughout the chapter. 
 
 ###Working with the PShape Class
  
  In this chapter, we’ll use [Processing’s `PShape`][0] features for all the projects we’ll create. We can use the class to load 2D vector shape files (`svg`) and 3D object files (`obj`) and work with 3D vertices generated algorithmically. Let’s take a look at the methods we’ll use to load and create the 3D scenes in this chapter. 
 
-<table> <tr><td>
-<a href="1"><code>loadShape()</code></a>
-</td><td>
-A Processing method to load a Scalable Vector Graphic, or <code>svg</code>, file into a <code>PShape</code> object
-</td></tr> <tr><td>
-<a href="2"><code>beginShape()</code></a>
-</td><td>
-A Processing method to start recording a shape using vertices&#x2014;we can connect vertices with the following modes: <code>POINTS</code>, <code>LINES</code>, <code>TRIANGLES</code>, <code>TRIANGLE_FAN</code>, <code>TRIANGLE_STRIP</code>, <code>QUADS</code>, and <code>QUAD_STRIP</code>.
+<table> 
+<tr>
+<td><a href="1"><code>loadShape()</code></a></td>
+<td>A Processing method to load a Scalable Vector Graphic, or <code>svg</code>, file into a <code>PShape</code> object</td>
+</tr> 
+<tr>
+<td><a href="2"><code>beginShape()</code></a></td>
+<td>A Processing method to start recording a shape using vertices&#x2014;we can connect vertices with the following modes: <code>POINTS</code>, <code>LINES</code>, <code>TRIANGLES</code>, <code>TRIANGLE_FAN</code>, <code>TRIANGLE_STRIP</code>, <code>QUADS</code>, and <code>QUAD_STRIP</code>.
 </td></tr> <tr> <td>
 <a href="3"><code>endShape()</code></a>
 </td><td>
@@ -44,7 +44,6 @@ A Processing method to load a 3D primitive or vertices into a <code>PShape</code
 </td><td>
 A Processing method to define the camera viewpoint (where the camera is looking and how the camera is facing)&#x2014;we use it to navigate a 3D scene while keeping an eye on the particular spot we&#x2019;ve defined.
 </td></tr> </table>
-<code></code><i>
 
 ###Working with SVG Graphics and Maps
  
