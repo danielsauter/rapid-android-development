@@ -140,13 +140,13 @@ Let’s now move on to reading comma-separated values from a text file.
 
 ###Read Comma-Separated Web Color Data
  
-In the next sketch, we’ll work with hexadecimal values of web colors and juxtapose them with their official name from the HTML web specification. Our data source contains comma (“,”) separated values (`CSV`), which we read from the file stored in the `data` directory of our sketch. The `CSV` file contains sixteen rows, each containing two values separated by a comma. The first value contains a `String` that is one of the named colors in the [W3C’s `HTML` `color` specification.][12] The second value contains a text `String` that represents the hexadecimal value (or “hex value,” for short) of that named color. When we juxtapose a text description with its color in a list of individually labeled swatches, our sketch will display a screen like that shown in Figure 9.1. To distribute each swatch vertically, we use the `translate()` method we’ve implemented already in <!--ref linkend="sec.destination.finder-->.[][13] 
+In the next sketch, we’ll work with hexadecimal values of web colors and juxtapose them with their official name from the HTML web specification. Our data source contains comma (“,”) separated values (`CSV`), which we read from the file stored in the `data` directory of our sketch. The `CSV` file contains sixteen rows, each containing two values separated by a comma. The first value contains a `String` that is one of the named colors in the [W3C’s `HTML` `color` specification.][12] The second value contains a text `String` that represents the hexadecimal value (or “hex value,” for short) of that named color. When we juxtapose a text description with its color in a list of individually labeled swatches, our sketch will display a screen like that shown in Figure 9.1. To distribute each swatch vertically, we use the [`translate()` method][13] we’ve implemented already in [Find Your Way to a Destination](../geolocation.html#find-your-way-to-a-destination). 
  
 ![](images/Data/DataRead.png)
 #####Figure 9.1 - Reading comma-separated color values.
 ######Sixteen named colors from the HTML specification are stored in a csv file and juxtaposed with their hexadecimal color value. 
 
-Hexadecimal is a numbering system with a base of `16`. Each value is represented by symbols ranging `0..9` and `A..F` (`0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F`)—sixteen symbols that each represent one hexadecimal value. Two hex values combined can represent decimal numbers up to `256` (`16` times `16`)—the same number we use to define colors in other Processing color modes such as `RGB` and `HSB` (see <!--ref linkend="sec.color.modes-->). 
+Hexadecimal is a numbering system with a base of `16`. Each value is represented by symbols ranging `0..9` and `A..F` (`0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F`)—sixteen symbols that each represent one hexadecimal value. Two hex values combined can represent decimal numbers up to `256` (`16` times `16`)—the same number we use to define colors in other Processing color modes such as `RGB` and `HSB` (see [Using Colors Chapter 2](../dipslay.html#using-colors)). 
  
 In most programming languages, hexadecimal color values are typically identified by a hash tag (`#`) or the prefix `0x`. The hex values stored in column 1 of our file contains a `#` prefix. We need to convert the text `String` representing the hex color in the first column into an actual hex value we can use as a parameter for our `fill()` method. For that, we use two Processing methods, [`substring()`][14] and [`unhex()`][24], to bring the hex value into the correct format, and then we convert the `String` representation of a hex number into its equivalent integer value *before* applying it to `fill()`. 
  
@@ -184,7 +184,7 @@ In this project, we’ll learn how to save user data. We’ll implement a simple
  
 Using the menu button on the device as a trigger, we’ll write each horizontal and vertical position *x* and *y* into a text file using tab-separated values. To keep track of how many points we’ve saved into our file, we’ll output our row count on the display as well. If we pause or close the app and come back later, the points we’ve saved will be loaded into the sketch again, and we can continue where we left off. If we add to the drawing and press the menu button again, the new points will be appended to our `data.tsv` file and saved alongside our previous points. 
  
-We’ll revisit the simple drawing concepts from <!--ref linkend="sec.touch.screen-->, and <!--ref linkend="sec.real.time.data-->, and use the `mouseX` and `mouseY` location of our fingertip to continuously draw points on the screen, as shown in <!--ref linkend="fig.data.write-->. Using Java’s `File` class, we’ll also learn about Android storage and file paths, because we are creating a `tsv` file inside our app. This file will only be available for our app and not be usable by other locations, keeping the data private. 
+We’ll revisit the simple drawing concepts from [Introducing the Android Touch Screen](../display.html#introducing-the-android-touch-screen), and [Share Real-Time Data](../networking.html#share-real-time-data), and use the `mouseX` and `mouseY` location of our fingertip to continuously draw points on the screen, as shown in [Figure 9.2](../data.html#figure-92---write-data-to-an-android). Using Java’s `File` class, we’ll also learn about Android storage and file paths, because we are creating a `tsv` file inside our app. This file will only be available for our app and not be usable by other locations, keeping the data private. 
  
 In terms of working with data, we’ll start this time from scratch. We won’t be copying an existing data source into the sketch’s `data` folder. Instead we’ll create data via the touch screen interface and write it into a file located in our sketch folder. This time, we use tab-separated values and save the data into a `data.tsv` file. 
  
@@ -239,7 +239,7 @@ Now that you’ve learned how to write data to the app using a specified locatio
 
 ###Write Data to External Storage
  
- Building on our previous <!--ref linkend="code.data.write-->, let’s now make some modifications so we can write our data to the Android’s external storage. This allows us to share files with other applications, as we’ve done when we worked with the camera and saved pictures to the external storage in <!--ref linkend="sec.save.pictures-->. We can also copy our data to the desktop by mounting the device as USB mass storage. 
+ Building on our previous [Data/DataWrite/DataWrite.pde](../data.html#codedatadatawritedatawritepde), let’s now make some modifications so we can write our data to the Android’s external storage. This allows us to share files with other applications, as we’ve done when we worked with the camera and saved pictures to the external storage in [Snap and Save Pictures](../cameras.html#snap-and-save-pictures). We can also copy our data to the desktop by mounting the device as USB mass storage. 
  
 The process of mounting the device as USB mass storage is inconsistent across devices and is manufacturer-specific. Some devices like the Nexus S offer to “Turn on USB storage” when you connect the device to the desktop via a USB cable. Other devices like the Galaxy S3 now require an app to launch the device as mass storage. Either way, Android devices typically offer such a feature, and we’ll take a look at the `data.tsv` file once we’ve created it on the external storage.
  
@@ -259,19 +259,19 @@ Let’s test the app now.
  
 Before we can write to the external storage, we need to give the appropriate permission to do so in the Permissions Selector. Open the Android Permissions Selector, scroll to Write External Storage and check the permission box. 
  
-Now run the sketch on your device. It looks and behaves identically to the previous sketch shown in <!--ref linkend="fig.data.write-->. Draw some points on the screen and save it by pressing any of the menu keys. The only difference here is that we save `data.tsv` now into the root of your Android’s external storage directory. 
+Now run the sketch on your device. It looks and behaves identically to the previous sketch shown in [Figure 9.2 - Write data to an Android](../data.html#figure-92---write-data-to-an-android). Draw some points on the screen and save it by pressing any of the menu keys. The only difference here is that we save `data.tsv` now into the root of your Android’s external storage directory. 
  
 Let’s browse the external storage and look for our `data.tsv` file. Depending on your Android make and model, try unplugging the USB cable connecting your device and the desktop, and plug it back in. You should be prompted to “Turn on USB” storage. If this is the case, go ahead and confirm (on some devices, try browsing to Settings &mapsto; “More...” on the Android and look for a USB mass storage option. Alternatively, look for the USB mass storage process recommended by your device manufacturer). 
  
 When you turn on USB storage, the device lets you know that some apps will stop; go ahead and OK that. Now move over to your desktop computer and browse to your USB mass storage medium, often called `NO NAME` if you haven’t renamed it. Click on your mass storage device, and right there in the root folder, find a file called `data.tsv`. 
  
-Check `data.tsv` by opening it in your favorite text editor. You’ll find two columns there neatly separated by a tab; in each row, you’ll find a pair of integer values. This is perfectly sufficient for our project. More complex data projects typically require a unique identifier for each row, a row in one table to point to a specific record in another. We’ll look into this when we are in <!--ref linkend="sec.sqlite-->, later in this chapter. 
+Check `data.tsv` by opening it in your favorite text editor. You’ll find two columns there neatly separated by a tab; in each row, you’ll find a pair of integer values. This is perfectly sufficient for our project. More complex data projects typically require a unique identifier for each row, a row in one table to point to a specific record in another. We’ll look into this when we are in {{ book.chapter10 }}, later in this chapter. 
  
 Now that we’ve learned how to use `CSV` and `TSV` data stored on the Android device, let’s explore how to load comma-separated values from a source hosted online in the next project. 
 
 ###Visualize Real-Time Earthquake Data
  
-Let’s create an app to track earthquakes, putting our newly acquired data skills to work on a nifty data visualization project. The objective of the project is to visualize the location and magnitude of all of the earthquakes that have been reported worldwide during the last hour. We’ll use live data hosted on the U.S. Geological Survey Organization’s website and visualize it as an animated map, shown in <!--ref linkend="fig.earthquakes-->. The `CSV` data format that we’ll work with again is typically available on governmental sites, such as for the `USGS` or [the US Census.][18] 
+Let’s create an app to track earthquakes, putting our newly acquired data skills to work on a nifty data visualization project. The objective of the project is to visualize the location and magnitude of all of the earthquakes that have been reported worldwide during the last hour. We’ll use live data hosted on the U.S. Geological Survey Organization’s website and visualize it as an animated map, shown in [Figure 9.3](../data.html#figure-93---earthquakes-reported-worldwide-during-the-last-hour). The `CSV` data format that we’ll work with again is typically available on governmental sites, such as for the `USGS` or [the US Census.][18] 
  
 When we take a look at the text data source containing comma-separated values, we can see the following data. The file linked here is a sample of the live online source, saved on February 24, 2015, which we’ll use as a fallback in case we don’t have an Internet connection. The first row contains the field labels. 
  
@@ -294,7 +294,7 @@ To use our pixel real estate most effectively, we’ll draw the world map full s
 #####Figure 9.3 - Earthquakes reported worldwide during the last hour.
 ######The device location is indicated by a green circle. Red circles indicate the locations of earthquakes reported within the hour—the size and pulse frequency indicate their magnitude. 
 
-Using a data file that is hosted online changes the way we load the file into Processing’s `Table` class. Unlike our earlier examples, where we loaded the file from the Android’s storage, we won’t know ahead of time whether we can successfully connect to the file due to a very slow or an absent Internet connection, for instance. So we’ll use the `try` `catch` construct we’ve seen in <!--ref linkend="code.data.write-->, again to attempt loading from the online source. If it fails, catch the exception and load a data sample stored in our sketch’s `data` folder as a fallback. 
+Using a data file that is hosted online changes the way we load the file into Processing’s `Table` class. Unlike our earlier examples, where we loaded the file from the Android’s storage, we won’t know ahead of time whether we can successfully connect to the file due to a very slow or an absent Internet connection, for instance. So we’ll use the `try` `catch` construct we’ve seen in [Data/DataWrite/DataWrite.pde](../data.html#codedatadatawritedatawritepde), again to attempt loading from the online source. If it fails, catch the exception and load a data sample stored in our sketch’s `data` folder as a fallback. 
  
 Let’s take a look at the code. 
  
@@ -320,7 +320,7 @@ Here are the steps we need to take to load and visualize the data.
  16. Draw a text label indicating the distance from the current device location to the earthquake at the position of the earthquake on the screen. 
  17. Draw a slowly animated green circle to indicate the current device’s location on the map. The pulse rate is one second for a 100-foot accuracy, or 0.1 seconds for a 10-foot accuracy. 
  
-Let’s look at the `Location` tab next, which includes all the necessary code to determine the location of our device. It’s very similar to our <!--ref linkend="code.geolocation-->. 
+Let’s look at the `Location` tab next, which includes all the necessary code to determine the location of our device. It’s very similar to our [Geolocation/Geolocation/Geolocation.pde](../geolocation.html#codegeolocationgeolocationgeolocationpde). 
  
 #####code/Data/DataEarthquakes/Location.pde
 [include](code/Data/DataEarthquakes/Location.pde)
@@ -345,7 +345,7 @@ Your device might not have an updated coarse location available, so it might tak
 
 ###Try Another Source
  
-Try another source from the [`USGS`’s data feed,][22] where you can find `CSV` files containing other earthquake data using the same file structure we’ve seen earlier in the <!--ref linkend="code.data.earthquakes.source-->. 
+Try another source from the [`USGS`’s data feed,][22] where you can find `CSV` files containing other earthquake data using the same file structure we’ve seen earlier in the [Data/DataEarthquakes/data/all_hour_2015-02-24.txt](../data.html#codedatadataearthquakesdataallhour2015-02-24txt). 
  
 Replace the `src` text string with this `URL`: 
  
@@ -369,7 +369,7 @@ We can take this quite literal translation from Earth’s vibrations to device v
  
 To refine our app in this way, we can work with `KetaiVibrate`, which gives us straightforward access to the device’s vibration motor. We’ll also need an additional Processing `Table` object so we can compare our data to the data received from the live data source and add new quakes to the `earthquakes` `Table` when we determine they have occurred. 
  
-Let’s take a look at the code, focusing on the `vibrate()` and `update()` methods that provide the functionality we’re looking for. Besides the main tab, we’ll use the `Location` tab we’ve seen already in the previous iteration of the app in the <!--ref linkend="code.data.earthquakes.location-->. 
+Let’s take a look at the code, focusing on the `vibrate()` and `update()` methods that provide the functionality we’re looking for. Besides the main tab, we’ll use the `Location` tab we’ve seen already in the previous iteration of the app in the [Data/DataEarthquakes/Location.pde](../data.html#codedatadataearthquakeslocationpde). 
  
 #####code/Data/DataEarthquakesShake/DataEarthquakesShake.pde
 [include](code/Data/DataEarthquakesShake/DataEarthquakesShake.pde)
