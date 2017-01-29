@@ -85,7 +85,7 @@ The sketchbook `libraries` folder now looks something like the figure below. Now
 ###Network an Android with a Desktop PC
 For our first project, we’re going to network a desktop PC and an Android device and then use the Wi-Fi network to exchange data between them. Wireless local area networks provide us with a high-bandwidth connection, which allows us to write applications that let us interact with peers within the network in real time. We can send fairly large data payloads without noticeable delays, making it a good choice for a diverse range of multiuser applications. 
 
-We’ll need to import the networking classes described in <!--ref linkend="sec.networking.classes-->, so we can exchange data over a common port, as illustrated in Figure 6.1. We’ll use oscP5, which builds on and requires Processing’s core netP5 library for the exchange of data. We also use the `KetaiNet` class to look up the Android’s IP address, and we’ll use the familiar `KetaiSensor` class to receive accelerometer data. 
+We’ll need to import the networking classes described in [Working with Networking Classes](../networking.html#working-with-networking-classes), so we can exchange data over a common port, as illustrated in Figure 6.1. We’ll use oscP5, which builds on and requires Processing’s core netP5 library for the exchange of data. We also use the `KetaiNet` class to look up the Android’s IP address, and we’ll use the familiar `KetaiSensor` class to receive accelerometer data. 
 
 ![](images/Networking/WiFiDataExchangeOSC.png)
 #####Figure 6.1 - Connecting an Android to a PC.
@@ -155,7 +155,7 @@ Developed by Matt Wright and Adrian Freed at the Center for New Music and Audio 
 Although less convenient and more fundamental in nature, other widespread communication protocols include [TCP (Transmission Control protocol),][16] [UDP (User Datagram protocol),][17] and asynchronous serial communication. [They use different ports to exchange data,][18] and they “shake hands” slightly differently. Handshaking is the process of negotiating communication parameters on both sides before the actual communication begins. 
 
 ###Run the App
-Before we run the sketch, let’s check the `INTERNET` permissions in the Android Permissions Selector that we’ll need in order to send data through the network. We’ve already worked with different types of permissions for geolocation and cameras, and we follow the same procedure (<!--ref linkend="sec.sketch.permissions-->) in the Permissions Selector, choosing `INTERNET` from the Android &mapsto; Sketch Permissions dialog. 
+Before we run the sketch, let’s check the `INTERNET` permissions in the Android Permissions Selector that we’ll need in order to send data through the network. We’ve already worked with different types of permissions for geolocation and cameras, and we follow the same procedure ([Setting Sketch Permissions](../geolocation.html#setting-sketch-permissions)) in the Permissions Selector, choosing `INTERNET` from the Android &mapsto; Sketch Permissions dialog. 
 
 We’ll take the following steps to network the Android and the PC. First, we’ll run the Android sketch we’ve just created on the Android device. Then we’ll check the Processing console to see if OSC is up and running. Since the Android device is connected to the PC via USB, it gives us some feedback with regard to the OSC status when the app starts up. Finally, when the app is running on the device and the OSC server is running, we move on to run the PC sketch and start the connection. 
 

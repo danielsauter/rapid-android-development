@@ -22,7 +22,7 @@ For the apps we’ll develop in this chapter, we’ll use the following networki
 
   * *[`KetaiWiFiDirect`][3]*   A Ketai class to simplify working with [Wi-Fi Direct on Android devices][4]—the class contains the necessary methods for Wi-Fi Direct peer discovery and data exchange. In a Wi-Fi Direct network, every Wi-Fi Direct-enabled device can serve as the access point for the other devices in the Wi-Fi network.
 
-  * *[`KetaiOSCMessage`][5]*   A Ketai class that is identical to the oscP5 library’s `OscMessage` class we worked with in <!--ref linkend="sec.osc-->, with the difference being that it allows us to create `KetaiOSCMessage` using a byte array—it makes some private methods in `OscMessage` public so we can use it for Bluetooth communication.
+  * *[`KetaiOSCMessage`][5]*   A Ketai class that is identical to the oscP5 library’s `OscMessage` class we worked with in [Using the Open Sound Control Networking Format](../networking.html#using-the-open-sound-control-networking-format), with the difference being that it allows us to create `KetaiOSCMessage` using a byte array—it makes some private methods in `OscMessage` public so we can use it for Bluetooth communication.
 
   * *[`KetaiList`][6]*   A Ketai UI class that makes it easier to work with the native Android `ListView` widget—this class contains methods to populate, display, refresh, and retrieve strings from a selected list item. A `KetaiList` can be created using a `String` array or a `String` [`ArrayList`][7].
 
@@ -97,18 +97,18 @@ After `onResume()`, the activity is running in the foreground and active. If we 
 
 
 ###Enabling Bluetooth
-To work with Bluetooth for the Bluetooth apps we’ll create in this chapter, we will need to launch a new activity to initialize our Bluetooth right at the beginning when the activity starts up using `onCreate()`. Once Bluetooth is active, this activity returns to us the Bluetooth object we need via [`onActivityResult()`,][15] which is called when the app starts up immediately before [`onResume()`][16] in the activity life cycle. We’ll look at the code to enable Bluetooth in more detail in this <!--ref linkend="code.p2p.enable.bluetooth-->.
+To work with Bluetooth for the Bluetooth apps we’ll create in this chapter, we will need to launch a new activity to initialize our Bluetooth right at the beginning when the activity starts up using `onCreate()`. Once Bluetooth is active, this activity returns to us the Bluetooth object we need via [`onActivityResult()`,][15] which is called when the app starts up immediately before [`onResume()`][16] in the activity life cycle. We’ll look at the code to enable Bluetooth in more detail in this [P2P/BluetoothCursors/EnableBluetooth.pde](../p2p.html#codep2pbluetoothcursorsenablebluetoothpde).
 
-For the projects in this book, we’ll need to deal with the life cycle only for Bluetooth and `NFC`. We’ll work more with the activity life cycle in <!--ref linkend="sec.nfc.bluetooth.activity.lifecycle-->, where we initiate `NFC` and Bluetooth. For all other apps, we can let Processing handle the life cycle. Future versions of Processing might allow libraries to work with lifecycle callback methods, so we don’t need to include such code inside the sketch.
+For the projects in this book, we’ll need to deal with the life cycle only for Bluetooth and `NFC`. We’ll work more with the activity life cycle in [Enable NFC and Bluetooth in the Activity Life Cycle](../nfc.html#enable-nfc-and-bluetooth-in-the-activity-life-cycle), where we initiate `NFC` and Bluetooth. For all other apps, we can let Processing handle the life cycle. Future versions of Processing might allow libraries to work with lifecycle callback methods, so we don’t need to include such code inside the sketch.
 
 ###Connect Two Android Devices via Bluetooth
-In the following sketch, we’ll work with three tabs. The main tab, `BluetoothCursors`, contains our usual `setup()` and `draw()` methods and global variables. The second tab, `EnableBluetooth`, contains code that is necessary to enable Bluetooth on startup, registering our Bluetooth class when the so-called [Android activity][17] is created (this step might not be necessary in future versions of Processing). Processing allows us to not dive too deep into the Android application life cycle, and we’ll try to keep it that way. The third tab, called `UI`, contains all the code we’ll use for GUI elements like menus, an Android list to select Bluetooth devices, and the software keyboard to enter user input. When the sketch is complete, we’ll get a screen similar to the one shown in <!--ref linkend="fig.bluetooth.cursors-->.
+In the following sketch, we’ll work with three tabs. The main tab, `BluetoothCursors`, contains our usual `setup()` and `draw()` methods and global variables. The second tab, `EnableBluetooth`, contains code that is necessary to enable Bluetooth on startup, registering our Bluetooth class when the so-called [Android activity][17] is created (this step might not be necessary in future versions of Processing). Processing allows us to not dive too deep into the Android application life cycle, and we’ll try to keep it that way. The third tab, called `UI`, contains all the code we’ll use for GUI elements like menus, an Android list to select Bluetooth devices, and the software keyboard to enter user input. When the sketch is complete, we’ll get a screen similar to the one shown in [Figure 7.0](../p2p.html#figure-70---bluetooth-cursors-app).
 
 ![](images/P2P/BluetoothCursors.png)
 #####Figure 7.0 - Bluetooth Cursors app.
 ######The illustration shows the local (white) and the remote (red) mouse pointer positions, marked as ellipses on the screen. The software keyboard is made visible using the keyboard tab shown at the top. Also shown are the Bluetooth and Interact tabs, which we use to interact with the cursors.  
 
-The code needs to facilitate the Bluetooth pairing process as follows: We start by making both Androids discoverable for Bluetooth by listing discovered devices. Then we choose the device to connect to from the list of discovered devices (you might be surprised to see what shows up). Finally, we pair and connect the devices to transfer the data via OSC, which we’ve already used in <!--ref linkend="sec.osc-->. We’ll need to confirm the Bluetooth connection in a popup window because we will be connecting the devices for the first time.
+The code needs to facilitate the Bluetooth pairing process as follows: We start by making both Androids discoverable for Bluetooth by listing discovered devices. Then we choose the device to connect to from the list of discovered devices (you might be surprised to see what shows up). Finally, we pair and connect the devices to transfer the data via OSC, which we’ve already used in [Using the Open Sound Control Networking Format](../networking.html#using-the-open-sound-control-networking-format). We’ll need to confirm the Bluetooth connection in a popup window because we will be connecting the devices for the first time.
 
 We’ll use the Android software keyboard to discover other Bluetooth devices, make the device itself discoverable, connect to another device, list already paired devices, and show the current Bluetooth status. To work with the keyboard, we’ll use the `KetaiKeyboard` class. And to show and pick discoverable Bluetooth devices to connect to, we’ll use the `KetaiList` class, making it easy for us to work with a native Android list without importing additional packages.
 
@@ -166,7 +166,7 @@ Here are the steps we need to take.
 
  20.  Get a list of all connected Bluetooth devices using `getConnectedDeviceNames()`.
 
-We’ve completed the crucial components of our sketch in `setup()` and `draw()`. To enable Bluetooth when the app starts up, we’ll need to work with the activity life cycle as described in <!--ref linkend="sec.activity.lifecycle-->. We’ll put the code to enable Bluetooth into the tab named `EnableBluetooth`. Let’s take a look.
+We’ve completed the crucial components of our sketch in `setup()` and `draw()`. To enable Bluetooth when the app starts up, we’ll need to work with the activity life cycle as described in [Working with the Android Activity Life Cycle](../p2p.html#working-with-the-android-activity-life-cycle). We’ll put the code to enable Bluetooth into the tab named `EnableBluetooth`. Let’s take a look.
 
 #####code/P2P/BluetoothCursors/EnableBluetooth.pde 
 [include](code/P2P/BluetoothCursors/EnableBluetooth.pde)  
@@ -226,7 +226,7 @@ Let’s take a look at the steps.
 
 
 <h3 id='bluetoothcursorsuipde-run'>Run the App</h3>
-Let’s set the correct Android permissions before we run the sketch. Open the Android Permission Selector as we’ve done previously (see <!--ref linkend="sec.sketch.permissions-->), and check the following permissions:
+Let’s set the correct Android permissions before we run the sketch. Open the Android Permission Selector as we’ve done previously (see [Setting Sketch Permissions](../geolocation.html#setting-sketch-permissions)), and check the following permissions:
 
 * `BLUETOOTH`
 
@@ -295,7 +295,7 @@ Congratulations! You’ve established a data connection between two Android devi
 
 The process of discovering and pairing Bluetooth devices can seem cumbersome. However, Bluetooth can’t just accept an incoming connection without confirmation for good security reasons. Once paired, we can reconnect automatically by picking the device address again from the list of paired devices. This is a sketch refinement you can try. If you’d like to “unpair” previously paired devices on your Android, tap the device name under Settings &mapsto; Bluetooth &mapsto; Paired Devices, and choose Unpair.
 
-We will implement this remote cursor’s app using Wi-Fi Direct later in this chapter <!--ref linkend="sec.wifidirect.remote.cursors-->, and you can then compare how the two standards perform in terms of update rate and wireless range.
+We will implement this remote cursor’s app using Wi-Fi Direct later in this chapter [P2P/WiFiDirectCursors/WiFiDirectCursors.pde](../p2p.html#codep2pwifidirectcursorswifidirectcursorspde), and you can then compare how the two standards perform in terms of update rate and wireless range.
 
 Since you’ve mastered peer-to-peer networking using Bluetooth, let’s build on our Bluetooth skills and create a survey app for multiple Bluetooth users.
 
@@ -303,17 +303,17 @@ Since you’ve mastered peer-to-peer networking using Bluetooth, let’s build o
 
 We’ll now move on to the chapter project, which is a survey app for multiple users using Bluetooth networking. Such an app is useful for teaching, decision-making, and learning assessments. We’ll build on our Bluetooth skills and put them into practice. We’ll learn how to send different data types via `OSC` over Bluetooth, share numeric data across devices in real time, and learn how to work with custom Processing classes.
 
-For this survey app, we’ll broadcast a number of questions that you can imagine as text slides shared by multiple users. All survey participants respond to the questions through each person’s individual device by picking one out of three answers from a multiple choice list. We’ll tally the responses in real time and send an update to all peer devices as illustrated in <!--ref linkend="fig.bluetooth.survey-->, giving each user instantaneous feedback on the survey as it unfolds.
+For this survey app, we’ll broadcast a number of questions that you can imagine as text slides shared by multiple users. All survey participants respond to the questions through each person’s individual device by picking one out of three answers from a multiple choice list. We’ll tally the responses in real time and send an update to all peer devices as illustrated in [Figure 7.1 - Bluetooth survey app](../p2p.html#figure-71---bluetooth-survey-app), giving each user instantaneous feedback on the survey as it unfolds.
 
 ![](images/P2P/SurveyServerClient.png)
 #####Figure 7.1 - Bluetooth survey app.
 ######The illustration shows the Bluetooth server running on one device (left) and a client running on the other (right). The server determines which question is displayed on the client screens by pressing the arrow pointing to the right (next question) and left (previous question). 
 
-Both server and client receive real-time feedback on how the question was answered.  There are many examples of survey and polling applications that are available online. They typically use proprietary online databases or a dedicated hardware infrastructure. Virtually no app exists using peer-to-peer connectivity on mobile devices—let’s change that. Let’s go ahead and write a survey app using some of the code we’ve already created for the remote cursor app in <!--ref linkend="sec.p2p.bluetooth-->.
+Both server and client receive real-time feedback on how the question was answered.  There are many examples of survey and polling applications that are available online. They typically use proprietary online databases or a dedicated hardware infrastructure. Virtually no app exists using peer-to-peer connectivity on mobile devices—let’s change that. Let’s go ahead and write a survey app using some of the code we’ve already created for the remote cursor app in [Connect Two Android Devices via Bluetooth](../p2p.html#connect-two-android-devices-via-bluetooth).
 
-For this survey app, we’ll work with four tabs for this sketch: the main tab, which we’ll name `BluetoothSurvey`, the `EnableBluetooth` tab, which is identical to the tab with the same name <!--ref linkend="code.p2p.enable.bluetooth-->, a `Question` tab for a custom Processing class we’ll write to take care of our Q & A, and a slightly modified version of the `UI` tab, which we developed <!--ref linkend="code.p2p.bluetooth.ui-->.
+For this survey app, we’ll work with four tabs for this sketch: the main tab, which we’ll name `BluetoothSurvey`, the `EnableBluetooth` tab, which is identical to the tab with the same name [P2P/BluetoothCursors/EnableBluetooth.pde](../p2p.html#codep2pbluetoothcursorsenablebluetoothpde), a `Question` tab for a custom Processing class we’ll write to take care of our Q & A, and a slightly modified version of the `UI` tab, which we developed [P2P/BluetoothCursors/UI.pde](../p2p.html#codep2pbluetoothcursorsuipde).
 
-Our approach is as follows. We’ll write a sketch that we’ll load onto every device participating in the survey. This way we can distribute the app without making adjustments for each individual device. The app needs to figure out whether it serves as the Bluetooth server for the other devices or connects as a client. As participants, we then send different messages to the other devices using `OSC` (<!--ref linkend="sec.osc-->), for example, to request the current question, to submit an answer, or to get an update on the statistics. We’ll give each `OSC` message a dedicated label, which we can then use to determine what to do when an `OSC` event occurs. When we receive an `OSC` message, we check its label using `checkAddrPattern()`, and depending on what pattern we detect, we can respond accordingly.
+Our approach is as follows. We’ll write a sketch that we’ll load onto every device participating in the survey. This way we can distribute the app without making adjustments for each individual device. The app needs to figure out whether it serves as the Bluetooth server for the other devices or connects as a client. As participants, we then send different messages to the other devices using `OSC` ([Using the Open Sound Control Networking Format](../networking.html#using-the-open-sound-control-networking-format)), for example, to request the current question, to submit an answer, or to get an update on the statistics. We’ll give each `OSC` message a dedicated label, which we can then use to determine what to do when an `OSC` event occurs. When we receive an `OSC` message, we check its label using `checkAddrPattern()`, and depending on what pattern we detect, we can respond accordingly.
 
 ###Program the BluetoothSurvey Main Tab
 Let’s take a look at our main tab, which contains the following methods: `setup()`, `draw()`, `onBluetoothDataEvent()`, `getBluetoothInformation()`, `loadQuestions()`, `requestQuestions()`, and `findQuestion()`.
@@ -398,7 +398,8 @@ Now it’s time modify the `UI` tab.
 
 ###Program the UI Tab
 
-We need to make few adjustments to the `UI` tab to modify it for our survey app based on the previous code <!--ref linkend="code.p2p.bluetooth.ui-->. Most of it is redundant and otherwise called out.
+We need to make few adjustments to the `UI` tab to modify it for our survey app based on the previous code [P2P/BluetoothCursors/UI.pde](../p2p.html#codep2pbluetoothcursorsuipde)
+. Most of it is redundant and otherwise called out.
 
 #####code/P2P/BluetoothSurvey/UI.pde 
 [include](code/P2P/BluetoothSurvey/UI.pde)  
@@ -421,7 +422,7 @@ Now it’s time to test the app.
 
 Run the app on the Android device you’ve currently connected via USB. When the app is compiled, disconnect that device and run it on the other device. If you have a third (or fourth) device available, load the sketch onto as many Android devices as you’d like to test with.
 
-Now follow the steps we took earlier in <!--ref linkend="sec.run.bluetooth-->, to connect two devices via Bluetooth for the remote cursor app.
+Now follow the steps we took earlier in [Run the App](../p2p.html#bluetoothcursorsuipde-run), to connect two devices via Bluetooth for the remote cursor app.
 
 Finally, press the Survey tab and answer your first question. Press the left and right arrows to move through the questions. Respond to the questions using the software keyboard and notice how the statistics change as you punch in `1`, `2`, and `3`.
 
@@ -433,9 +434,9 @@ Less ubiquitous than Bluetooth but more powerful in terms of bandwidth and range
 
 Wi-Fi Direct was introduced in Android 4.0 (API level 14) to enable Android devices to connect directly to each other via Wi-Fi without a fixed Wi-Fi access point. Each device in a Wi-Fi Direct network can serve as an access point for any of the other devices in the network. Like Bluetooth, Wi-Fi Direct allows us to discover Wi-Fi Direct devices and connect to them if confirmed by the user. Compared to Bluetooth, Wi-Fi Direct offers a faster connection across greater distances and is therefore the preferred networking protocol for multiplayer games or multiuser applications, when every connected device supports Wi-Fi Direct.
 
-In many ways, Wi-Fi Direct is very familiar to us when it comes to allowing devices to connect to each other. We’ve also worked with Wi-Fi already and sent `OSC` messages over the wireless local area network in <!--ref linkend="chp.wifi-->. When we use Wi-Fi Direct, we combine the P2P aspects and pairing process of Bluetooth with the ease of use of Wi-Fi.
+In many ways, Wi-Fi Direct is very familiar to us when it comes to allowing devices to connect to each other. We’ve also worked with Wi-Fi already and sent `OSC` messages over the wireless local area network in {{ book.chapter6 }}. When we use Wi-Fi Direct, we combine the P2P aspects and pairing process of Bluetooth with the ease of use of Wi-Fi.
 
-Wi-Fi Direct is currently supported on a few of the newest Android devices, so the following section may describe operations that are not possible on your device just yet. But because it’s a powerful standard, we’ll discuss it now and compare it to Bluetooth’s wireless peer-to-peer performance using our earlier remote cursor sketch <!--ref linkend="code.p2p.bluetooth-->.
+Wi-Fi Direct is currently supported on a few of the newest Android devices, so the following section may describe operations that are not possible on your device just yet. But because it’s a powerful standard, we’ll discuss it now and compare it to Bluetooth’s wireless peer-to-peer performance using our earlier remote cursor sketch [P2P/BluetoothCursors/BluetoothCursors.pde](../p2p.html#codep2pbluetoothcursorsbluetoothcursorspde).
 
   Let’s take a look at the [`KetaiWi-FiDirect` class first,][24] which makes working with [Android’s Wi-Fi Direct features][25] an easy task. For this sketch, we’ll work with the following `KetaiWi-FiDirect` methods:
 
@@ -448,9 +449,9 @@ Now, let’s go ahead and implement the remote cursor app using Wi-Fi Direct.
 
 ###Use Wi-Fi Direct to Control Remote Cursors
 
-We’ve already implemented the remote cursors app earlier in this chapter in <!--ref linkend="sec.p2p.bluetooth-->. In order to compare Wi-Fi Direct to Bluetooth, we’ll implement the same remote cursor app, replacing its Bluetooth peer-to-peer networking functionality with Wi-Fi Direct. Large portions of the code are identical to the Bluetooth version of the sketch shown <!--ref linkend="code.p2p.bluetooth--> and <!--ref linkend="code.p2p.bluetooth.ui-->, so we will focus only on the code that we’ll change from Bluetooth to Wi-Fi Direct.
+We’ve already implemented the remote cursors app earlier in this chapter in [Connect Two Android Devices via Bluetooth](../p2p.html#connect-two-android-devices-via-bluetooth). In order to compare Wi-Fi Direct to Bluetooth, we’ll implement the same remote cursor app, replacing its Bluetooth peer-to-peer networking functionality with Wi-Fi Direct. Large portions of the code are identical to the Bluetooth version of the sketch shown in [P2P/BluetoothCursors/BluetoothCursors.pde](../p2p.html#codep2pbluetoothcursorsbluetoothcursorspde) and [P2P/BluetoothCursors/UI.pde](../p2p.html#codep2pbluetoothcursorsuipde), so we will focus only on the code that we’ll change from Bluetooth to Wi-Fi Direct.
 
-Using Wi-Fi Direct, we’ll be able to use the `OSC` protocol again to send data to remote devices, as we’ve already done in <!--ref linkend="sec.osc.networking-->.
+Using Wi-Fi Direct, we’ll be able to use the `OSC` protocol again to send data to remote devices, as we’ve already done in [Network an Android with a Desktop PC](../networking.html#network-an-android-with-a-desktop-pc).
 
 ###Modify the Main Tab
 
@@ -465,7 +466,7 @@ Let’s take a look at the steps we took to change our remote cursor app to use 
 
  3.  Create an `ArrayList` for discovered Wi-Fi Direct devices.
 
- 4.  Create a `OscP5`-type variable, `oscP5`, as we’ve used already in <!--ref linkend="chp.wifi-->.
+ 4.  Create a `OscP5`-type variable, `oscP5`, as we’ve used already in {{ book.chapter6 }}.
 
  5.  Create a `String` variable to hold the client IP address.
 
@@ -483,7 +484,7 @@ Let’s take a look at the steps we took to change our remote cursor app to use 
 
  12.  Get the Wi-Fi Direct information, including our IP address and the server’s IP address.
 
-  For the UI, we won’t change very much compared to the previous `UI` <!--ref linkend="code.p2p.bluetooth.ui-->. Let’s take a look.
+  For the UI, we won’t change very much compared to the previous `UI` [P2P/BluetoothCursors/UI.pde](../p2p.html#codep2pbluetoothcursorsuipde). Let’s take a look.
 
 
 ###Modify the UI Tab
@@ -500,7 +501,7 @@ Now let’s see what we adjusted for the `UI` tab of the Wi-Fi Direct remote cur
 
  3.  Initialize the `OSC` connection on port `12000`.
 
-Everything looks quite familiar from the Bluetooth version of this sketch. The difference is that we are connecting and sending `OSC` messages like we’ve done in <!--ref linkend="chp.wifi-->.
+Everything looks quite familiar from the Bluetooth version of this sketch. The difference is that we are connecting and sending `OSC` messages like we’ve done in {{ book.chapter6 }}.
 
 Now let’s test the app.
 
