@@ -23,7 +23,7 @@ When two devices wish to communicate, they must also share a common [port number
 
 If we’re on the move and a known Wi-Fi network is not available to us, the Android device requests an IP address from the cell phone carrier’s 3G or 4G network. Although it is possible to network two devices over the carrier network, we cannot sustain a peer-to-peer network as the device connects from cell tower to cell tower. Connecting two (or more) devices inside a Wi-Fi network is significantly different from connecting them outside the network, which is described in further detail in Peer-to-Peer Networking. In this chapter, we’ll stay focused on Wi-Fi communications. 
 
-<sidebar> 
+<!--sidebar--> 
 
 <h3>Peer-to-Peer Networking (P2P)</h3>
 
@@ -34,7 +34,7 @@ If we are on the move, we will lose the IP address provided by a cellular networ
 
 In short, for true P2P, we need a [public IP address.][4] In the prevalent IPv4 addressing system, there are virtually too few IP addresses available for the number of devices on the planet. An enormous global transition to the new IPv6 addressing system is currently underway, rendering NAT practically obsolete. You can keep an eye on the [IPv6 deployment][5] as it unfolds. For now we need to sit tight; all our toasters, clothes, and children have a dedicated IP address. 
 
- </sidebar>
+ <!--/sidebar-->
 
 Let’s first take a look at the networking classes we’ll be using in this chapter. 
 
