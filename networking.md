@@ -16,7 +16,7 @@ Wi-Fi is so ubiquitous in cities that you can find a Wi-Fi network virtually any
 
 Most Wi-Fi networks are set up to connect to the Internet. But you can also use a wireless network access point to set up a local Wi-Fi network for the sole purpose of connecting multiple Wi-Fi-enabled devices between one another. Many Android devices will even let you create a Wi-Fi hotspot using the device itself (Settings &mapsto; Wireless & networks &mapsto; More... &mapsto; Tethering & portable hotspots). 
 
-When a Wi-Fi--enabled device connects to a Wi-Fi access point, it is assigned an IP address. An IP address is a unique identifier (see also [Working with Networking Classes](../networking.html#working-with-networking-classes
+When a Wi-Fi-enabled device connects to a Wi-Fi access point, it is assigned an IP address. An IP address is a unique identifier (see also [Working with Networking Classes](../networking.html#working-with-networking-classes
 )) that is used to identify the device within a network. It functions as a numeric label that other devices can use to access it. Likewise, to connect our Android to other devices within the network, we need to know their IP addresses as well. 
 
 When two devices wish to communicate, they must also share a common [port number][0] in addition to knowing each other’s IP addresses. A port is an agreed-upon number that establishes communication in conjunction with the IP address. Certain ports are [reserved for services such as FTP (Port 21) or HTTP (Port 80) and should not be used.][1] Port numbers greater than 1000 usually work just fine. 
