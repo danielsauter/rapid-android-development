@@ -141,6 +141,8 @@ Here are the steps outlining what the sketch does.
 
 9. Instantiate an OSC object from the [`oscP5` library][11] and start an OSC connection on port `12000`. 
 
+<!-- 6.1 REVISION - removed dead link and replaced with http://www.sojamo.de/libraries/oscP5/-->
+
 10. Set the destination IP and port number to the `remoteAddress` at port number `12000`; the port number must be identical to successfully exchange data. 
 
 11. Look up the Android IP address assigned by the Wi-Fi network using `getIP()`. 
@@ -378,7 +380,7 @@ But if we don't have access to a Wi-Fi network and we'd like to exchange data wi
 [8]: http://www.sojamo.de/libraries/oscP5/
 [9]: http://processing.org/reference/libraries/#data_protocols
 [10]: http://www.sojamo.de/libraries/oscP5/reference/netP5/NetAddress.html
-[11]: sojamo.de/oscP5
+[11]: http://www.sojamo.de/libraries/oscP5/
 [12]: http://processing.org/reference/libraries/net/index.html
 [13]: http://ketai.org/reference
 [14]: http://archive.cnmat.berkeley.edu/ICMC97/OpenSoundControl.html
