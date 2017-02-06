@@ -35,6 +35,7 @@ If we are on the move, we will lose the IP address provided by a cellular networ
 In short, for true P2P, we need a [public IP address.][4] In the prevalent IPv4 addressing system, there are virtually too few IP addresses available for the number of devices on the planet. An enormous global transition to the new IPv6 addressing system is currently underway, rendering NAT practically obsolete. You can keep an eye on the [IPv6 deployment][5] as it unfolds. For now we need to sit tight; all our toasters, clothes, and children have a dedicated IP address. 
 
  <!--/sidebar-->
+ <!--6.0 COMMENT - We'll want to figure out how to address <sidebar> content at some point. -->
 
 Let’s first take a look at the networking classes we’ll be using in this chapter. 
 
@@ -113,7 +114,7 @@ My IP address looks like this:
 
 Your address most likely looks different. Write yours down, as it is not very intuitive, and this needs to be correct to connect successfully. 
 
-We’ll first code the Android sketch using the oscP5 [`NetAddress` class][10] to specify the destination of the OSC message. We’ll create a `NetAddress` object called `remoteLocation` and consisting of the IP address of the remote device&—in this case our PC&—and the port number (12000) that both devices will use to communicate. For this first sketch, the OSC message we send will consist of three floating point numbers, the values of the *x*-, *y*-, and *z*-axes of the accelerometer that we’ll `add()` to the message before it’s sent. In turn, we’ll receive three integer values from the desktop PC, consisting of the *x* and *y* positions of the mouse cursor, followed by a `0` or a `1`, depending on whether the mouse button is pressed (`1`) or not (`0`). 
+We’ll first code the Android sketch using the oscP5 [`NetAddress` class][10] to specify the destination of the OSC message. We’ll create a `NetAddress` object called `remoteLocation` and consisting of the IP address of the remote device—in this case our PC—and the port number (12000) that both devices will use to communicate. For this first sketch, the OSC message we send will consist of three floating point numbers, the values of the *x*-, *y*-, and *z*-axes of the accelerometer that we’ll `add()` to the message before it’s sent. In turn, we’ll receive three integer values from the desktop PC, consisting of the *x* and *y* positions of the mouse cursor, followed by a `0` or a `1`, depending on whether the mouse button is pressed (`1`) or not (`0`). 
 
 Now let’s take a look at the code for the sketch: 
 
@@ -199,11 +200,11 @@ We are sending three global integers `x`, `y`, and `p` from the desktop to the A
 
 
 ###Run the App
-Let’s run the sketch on the PC in Java mode. The display window starts up on the desktop, and we can now move the mouse in the window to send OSC messages containing mouse info to the Android. On the Android screen we see the horizontal and vertical position of the mouse update and the mouse button state change. Changing the orientation of the Android device gives us a range of accelerometer values, which we can observe on the desktop screen. Value updates seem to occur instantaneously. There is no perceivable lag time, and while we are certainly only sending a few values, it gives us an idea about the bandwidth Wi-Fi has to offer&—a highly interactive setup. 
+Let’s run the sketch on the PC in Java mode. The display window starts up on the desktop, and we can now move the mouse in the window to send OSC messages containing mouse info to the Android. On the Android screen we see the horizontal and vertical position of the mouse update and the mouse button state change. Changing the orientation of the Android device gives us a range of accelerometer values, which we can observe on the desktop screen. Value updates seem to occur instantaneously. There is no perceivable lag time, and while we are certainly only sending a few values, it gives us an idea about the bandwidth Wi-Fi has to offer—a highly interactive setup. 
 
 If communication fails, make sure you’ve adjusted `remoteAddress` in the Android sketch to match the IP address of your desktop PC. It’s close to impossible that your Wi-Fi router assigned the same IPs used in the example sketches here. And while you are at it, go ahead and also check that the port number matches on both sides. The IP address must be correct, and port numbers must match to exchange data successfully. 
 
-Let’s note that when we use OSC networking, it won’t complain if there is no other device to talk to. The connection sits and waits until another device enters the conversation on port `12000`. Likewise, OSC doesn’t throw a networking error when a device leaves the conversation; it can also reconnect at any time. This is another great feature of the OSC communication protocol, whether we use it on the Android or the desktop&—a robust connection process combined with a straightforward method to send messages containing different data types. 
+Let’s note that when we use OSC networking, it won’t complain if there is no other device to talk to. The connection sits and waits until another device enters the conversation on port `12000`. Likewise, OSC doesn’t throw a networking error when a device leaves the conversation; it can also reconnect at any time. This is another great feature of the OSC communication protocol, whether we use it on the Android or the desktop—a robust connection process combined with a straightforward method to send messages containing different data types. 
 
 In terms of networking across devices, this is a major milestone we can continue to build on. It’s a small step for us to change the values we’ve sent via OSC to take on different new tasks. So for the next project, we’ll use [Networking/WiFiDataExchangeAndroid/WiFiDataExchangeAndroid.pde](../networking.html#codenetworkingwifidataexchangeandroidwifidataexchangeandroidpde) to create a drawing canvas that the Android and the PC can share. 
 
@@ -292,7 +293,7 @@ You’ve exchanged data between the Android and a desktop PC using Wi-Fi; now is
 
 ###Run the Sketch on a Pair of Androids
 
-Now that you have located a second Android device&—let’s call it Android 2—you can go ahead and confirm that you are able to send OSC messages between a pair of Android devices as well. Let’s make sure again that you are on the correct network with the second device, and choose Settings &mapsto; “Wireless & networks.” Write down the IP address of the second device. With the IP addresses of both devices ready, open the sketch [Networking/WiFiDataExchangeAndroidDrawing/WiFiDataExchangeAndroidDrawing.pde](../networking.html#codenetworkingwifidataexchangeandroiddrawingwifidataexchangeandroiddrawingpde), that we’ve already loaded onto the first device. 
+Now that you have located a second Android device—let’s call it Android 2—you can go ahead and confirm that you are able to send OSC messages between a pair of Android devices as well. Let’s make sure again that you are on the correct network with the second device, and choose Settings &mapsto; “Wireless & networks.” Write down the IP address of the second device. With the IP addresses of both devices ready, open the sketch [Networking/WiFiDataExchangeAndroidDrawing/WiFiDataExchangeAndroidDrawing.pde](../networking.html#codenetworkingwifidataexchangeandroiddrawingwifidataexchangeandroiddrawingpde), that we’ve already loaded onto the first device. 
 
 Adjust the IP address for `remoteLocation` to match Android 2, and run the sketch on Android 1. The app starts up and Android 1 is ready. Repeat the steps on the other device, adjusting the IP address to match Android 1 and running the sketch on Android 2. If you are still running the other app on port `12001`, adjust the port number to use another port. 
 
