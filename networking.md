@@ -143,11 +143,11 @@ Here are the steps outlining what the sketch does.
 
 9. Instantiate an OSC object from the [`oscP5` library][11] and start an OSC connection on port `12000`. 
 
-<!-- 6.1 REVISION - removed dead link and replaced with http://www.sojamo.de/libraries/oscP5/-->
-
 10. Set the destination IP and port number to the `remoteAddress` at port number `12000`; the port number must be identical to successfully exchange data. 
 
 11. Look up the Android IP address assigned by the Wi-Fi network using `getIP()`. 
+
+<!-- 6.1 REVISION - removed dead link and replaced with http://www.sojamo.de/libraries/oscP5/-->
 
 The `oscP5` library relies on some methods from the core [network library in Processing called `netP5`,][12] which is why we `import` both at the beginning of the code. To work with the accelerometer, we use the `KetaiSensor` class again, which is why we `import` the `ketai.sensors` package. To look up the Android’s assigned Wi-Fi IP address we use the `getIP()` method contained in the [`ketai.net` package.][13] Make sure to customize `remoteAddress` to match your desktop IP address. 
 
