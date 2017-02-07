@@ -385,7 +385,7 @@ But if we don't have access to a Wi-Fi network and we'd like to exchange data wi
 [12]: http://processing.org/reference/libraries/net/index.html
 [13]: http://ketai.org/reference
 [14]: http://archive.cnmat.berkeley.edu/ICMC97/OpenSoundControl.html
-[15]: opensoundcontrol.org/
+[15]: http://www.opensoundcontrol.org/
 [16]: http://en.wikipedia.org/wiki/Transmission_Control_Protocol
 [17]: http://en.wikipedia.org/wiki/User_Datagram_Protocol
 [18]: http://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers
