@@ -118,6 +118,8 @@ We’ll first code the Android sketch using the oscP5 [`NetAddress` class][10] t
 
 Now let’s take a look at the code for the sketch: 
 
+<!-- 6.3 ISSUE Requires fullScreen() -->
+
 #####code/Networking/WiFiDataExchangeAndroid/WiFiDataExchangeAndroid.pde
 [include](code/Networking/WiFiDataExchangeAndroid/WiFiDataExchangeAndroid.pde)
 
