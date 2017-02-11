@@ -185,6 +185,8 @@ With the app launched on the Android, let’s shift our focus to the desktop to 
 #####code/Networking/WiFiDataExchangePC/WiFiDataExchangePC.pde 
 [include](code/Networking/WiFiDataExchangePC/WiFiDataExchangePC.pde)  
 
+<!-- 6.4 ISSUE - WiFiDataExchangePC ‘UI’ does not display accelerometer data while running; does display mouse data, and phone does correctly display mouse data -->
+
 On the desktop, we make the following adjustments. 
 
 1. Point OSC to the remote Android IP address `remoteLocation`, displayed on the Android as “Local IP Address.” Go ahead and customize this address using your Android’s IP address now. 
