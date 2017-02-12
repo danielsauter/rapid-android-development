@@ -215,7 +215,7 @@ Let’s note that when we use OSC networking, it won’t complain if there is no
 
 In terms of networking across devices, this is a major milestone we can continue to build on. It’s a small step for us to change the values we’ve sent via OSC to take on different new tasks. So for the next project, we’ll use [Networking/WiFiDataExchangeAndroid/WiFiDataExchangeAndroid.pde](../networking.html#codenetworkingwifidataexchangeandroidwifidataexchangeandroidpde) to create a drawing canvas that the Android and the PC can share. 
 
-<!-- 6.0 REVISION - minor revision to text for link grammar -->
+<!-- 6.5 REVISION - minor revision to text for link grammar -->
 
 ###Share Real-Time Data
 For our next project, we’re going to create a program for the Android and the PC that allows users of the two devices to draw on a shared surface, or virtual whiteboard, as shown in Figure 6.2, below. We’ll refine the previous sketches [Networking/WiFiDataExchangeAndroid/WiFiDataExchangeAndroid.pde](../networking.html#codenetworkingwifidataexchangeandroidwifidataexchangeandroidpde) and [Networking/WiFiDataExchangePC/WiFiDataExchangePC.pde](../networking.html#codenetworkingwifidataexchangepcwifidataexchangepcpde) that we’ve written to connect the Android and the desktop PC. The Wi-Fi network has the necessary bandwidth and update rates that we need to draw collaboratively. Whatever one of the users draws will appear instantaneously on the other’s device, and vice versa. 
@@ -230,6 +230,8 @@ Let’s start by programming the Android; then we’ll program the PC.
 Compared to the previous sketch, where we sent accelerometer data from the Android to the desktop and mouse info from the desktop to the Android, we’ll focus now on the `mouseX` and `mouseY` integer values we’ll need to draw, sending only those two constants back and forth using OSC. The sketches for the Android and the PC are identical, with the exception of the single line of code that specifies the remote IP address. Since we now know the IP addresses of both the Android and the PC, we can complete this project using only the oscP5 and netP5 libraries. 
 
 Let’s take a look: 
+
+<!-- 6.6 needs fullScreen(); -->
 
 #####code/Networking/WiFiDataExchangeAndroidDrawing/WiFiDataExchangeAndroidDrawing.pde
 [include](code/Networking/WiFiDataExchangeAndroidDrawing/WiFiDataExchangeAndroidDrawing.pde)
