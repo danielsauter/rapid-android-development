@@ -85,16 +85,20 @@ We can summarize the four states an activity can take like this:
 
 When an activity goes though this life cycle, Android provides the following callback methods for us to use. When the activity starts up, Android calls the following:
 
-| [`onCreate()`][14] | Called when the activity is starting |
-| `onStart()` | Called after `onCreate()` when the activity starts up—if the activity is already running, `onRestart()` is called before `onStart()`. |
-| `onResume()` | Called after `onStart()` when the activity becomes visible |
+<table>
+<tr><td><a href="http://developer.android.com/reference/android/app/Activity.html#onCreate%28android.os.Bundle%29
+"><code>onCreate()</code></a> </td><td> Called when the activity is starting </td></tr>
+<tr><td> <code>onStart()</code> </td><td> Called after <code>onCreate()</code> when the activity starts up—if the activity is already running, <code>onRestart()</code> is called before <code>onStart()</code>. </td></tr>
+<tr><td> <code>onResume()</code> </td><td> Called after <code>onStart()</code> when the activity becomes visible </td></tr>
+</table>
 
 After `onResume()`, the activity is running in the foreground and active. If we launch another activity, Android calls these methods:
 
-| `onPause()` | Called when another activity comes in the foreground |
-| `onStop()` | Called after `onPause()` when the activity is no longer visible |
-| `onDestroy()` | Called after `onStop()` when the activity is finishing or destroyed by the system |
-
+<table>
+<tr><td> <code>onPause()</code> </td><td> Called when another activity comes in the foreground </td></tr>
+<tr><td> <code>onStop()</code> </td><td> Called after <code>onPause()</code> when the activity is no longer visible </td></tr>
+<tr><td> <code>onDestroy()</code> </td><td> Called after <code>onStop()</code> when the activity is finishing or destroyed by the system </td></tr>
+</table>
 
 ###Enabling Bluetooth
 To work with Bluetooth for the Bluetooth apps we’ll create in this chapter, we will need to launch a new activity to initialize our Bluetooth right at the beginning when the activity starts up using `onCreate()`. Once Bluetooth is active, this activity returns to us the Bluetooth object we need via [`onActivityResult()`,][15] which is called when the app starts up immediately before [`onResume()`][16] in the activity life cycle. We’ll look at the code to enable Bluetooth in more detail in this [P2P/BluetoothCursors/EnableBluetooth.pde](../p2p.html#codep2pbluetoothcursorsenablebluetoothpde).
@@ -520,9 +524,9 @@ We’ve learned that we don’t need Wi-Fi/3G/4G infrastructure to interact with
 With a range of networking projects under our belt, it's time now to move on to another emerging standard, near field communication, or NFC, which allows us not only to interact with other NFC-enabled Android devices but also with NFC tags embedded in stickers, posters, objects, or point-of-sale payment systems.
 
 [0]: http://en.wikipedia.org/wiki/Peer-to-peer
-[1]: http://ketai.org/reference/netbluetooth/ketai-bluetooth/
+[1]: http://ketai.org/reference/net/ketaibluetooth/
 [2]: http://developer.android.com/guide/topics/wireless/bluetooth.html
-[3]: http://ketai.org/reference/net/wifidirect/
+[3]: http://ketai.org/reference/net/ketaiwifidirect/
 [4]: http://developer.android.com/guide/topics/wireless/wifip2p.html
 [5]: http://ketai.org/reference/net/ketaioscmessage/
 [6]: http://ketai.org/reference/ui/ketailist/
