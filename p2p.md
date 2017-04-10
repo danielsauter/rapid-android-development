@@ -125,6 +125,16 @@ Andreas Schlegel has updated his excellent [ControlP5][19] UI library (as of 09/
 
 Let’s get started with the main tab of our `BluetoothCursors` sketch.
 
+<!-- 
+7.0 ISSUE(S):
+needs this included in sketch:
+public void settings() {
+  fullScreen();
+}
+
+older device does not run as pictured (is still workable but a bit jumbled visually)
+-->
+
 #####code/P2P/BluetoothCursors/BluetoothCursors.pde 
 [include](code/P2P/BluetoothCursors/BluetoothCursors.pde)  
  
