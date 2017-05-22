@@ -454,11 +454,12 @@ Wi-Fi Direct is currently supported on a few of the newest Android devices, so t
 
   Let’s take a look at the [`KetaiWi-FiDirect` class first,][24] which makes working with [Android’s Wi-Fi Direct features][25] an easy task. For this sketch, we’ll work with the following `KetaiWi-FiDirect` methods:
 
-| `connectToDevice()` | Connects to a specific Wi-Fi Direct-enabled device |
-| `getConnectionInfo()` | Gets the status of the Wi-Fi Direct connection |
-| `getIPAddress()` | Gets the IP address of a specified `Wi-Fi` Direct device |
-| `getPeerNameList()` | Returns the list of connected `Wi-Fi` Direct devices |
-
+<table>
+<tr><td> <code>connectToDevice()</code> </td><td> Connects to a specific Wi-Fi Direct-enabled device </td></tr>
+<tr><td> <code>getConnectionInfo()</code> </td><td> Gets the status of the Wi-Fi Direct connection </td></tr>
+<tr><td> <code>getIPAddress()</code> </td><td> Gets the IP address of a specified <code>Wi-Fi</code> Direct device </td></tr>
+<tr><td> <code>getPeerNameList()</code> </td><td> Returns the list of connected <code>Wi-Fi</code> Direct devices </td></tr>
+</table>
 Now, let’s go ahead and implement the remote cursor app using Wi-Fi Direct.
 
 ###Use Wi-Fi Direct to Control Remote Cursors
