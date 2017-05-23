@@ -29,7 +29,7 @@ With `NFC`, we don’t need to make a device discoverable, compare passcodes, or
  
 `NFC` tags come in different shapes and sizes and are roughly between the size of a quarter and a business card, as shown here:
  
-![](images/NFC/NFCTags_lowResolution.png)
+![](images/NFC/NFCTags_lowResolution.jpg)
 #####Figure 8.0 - NFC tags.
 ######Different types of tags with different form factors: (from left to right) a heat resistant token, round and square stickers, and a machine washable tag `NFC` tags carry small amounts of data, typically between 40 bytes or characters and 1 kilobyte. Because of this limited amount of usable memory, tags are commonly used to store a URL that points to more information online. 
  
