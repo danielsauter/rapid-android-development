@@ -525,7 +525,7 @@ Everything looks quite familiar from the Bluetooth version of this sketch. The d
 
 Now let’s test the app.
 
-<!-- Access wifi state err, change wifi state, fullScreen. app runs but it's unclear how to connect the devices  -->
+<!-- ISSUE: need to update permission: Access wifi state, change wifi state. Also need to update fullscreen. App runs but it's unclear how to connect the devices  -->
 
 ###Run the App
 Run the app on your Wi-Fi Direct-enabled Android device. Disconnect the USB cable, and run the app on your second Wi-Fi Direct device. Press `d` on the keyboard to discover Wi-Fi Direct devices. Then press `c` to show the list of discovered devices and pick your second device. You need to allow the Wi-Fi Direct connection request. Once you do, press the Interact tab on both devices and move your finger across the screen. Notice how quickly both cursors respond; there seems to be no noticeable delay, and the motion is continuous at a high frame rate.
