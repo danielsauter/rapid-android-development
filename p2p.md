@@ -385,6 +385,10 @@ A *class* is a composite of data stored in variables and methods. If we use a cu
 
 Now let’s take a look at the Question class, which gets its own tab in the sketch.
 
+<!-- need to add { after first line, needs fullscreen method, include CTA -->
+
+<!-- doesn't appear to be fully functional? devices connect but tab only appears on second phone. limited space of screen on older phone becomes more of an issue. -->
+
 #####code/P2P/BluetoothSurvey/Question.pde 
 [include](code/P2P/BluetoothSurvey/Question.pde)
 
