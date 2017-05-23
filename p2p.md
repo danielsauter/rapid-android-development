@@ -464,6 +464,7 @@ Wi-Fi Direct is currently supported on a few of the newest Android devices, so t
 <tr><td> <code>getIPAddress()</code> </td><td> Gets the IP address of a specified <code>Wi-Fi</code> Direct device </td></tr>
 <tr><td> <code>getPeerNameList()</code> </td><td> Returns the list of connected <code>Wi-Fi</code> Direct devices </td></tr>
 </table>
+
 Now, let’s go ahead and implement the remote cursor app using Wi-Fi Direct.
 
 ###Use Wi-Fi Direct to Control Remote Cursors
@@ -524,9 +525,10 @@ Everything looks quite familiar from the Bluetooth version of this sketch. The d
 
 Now let’s test the app.
 
+<!-- Access wifi state err, change wifi state, fullScreen. app runs but it's unclear how to connect the devices  -->
 
 ###Run the App
-Run the app on your Wi-Fi Direct--enabled Android device. Disconnect the USB cable, and run the app on your second Wi-Fi Direct device. Press `d` on the keyboard to discover Wi-Fi Direct devices. Then press `c` to show the list of discovered devices and pick your second device. You need to allow the Wi-Fi Direct connection request. Once you do, press the Interact tab on both devices and move your finger across the screen. Notice how quickly both cursors respond; there seems to be no noticeable delay, and the motion is continuous at a high frame rate.
+Run the app on your Wi-Fi Direct-enabled Android device. Disconnect the USB cable, and run the app on your second Wi-Fi Direct device. Press `d` on the keyboard to discover Wi-Fi Direct devices. Then press `c` to show the list of discovered devices and pick your second device. You need to allow the Wi-Fi Direct connection request. Once you do, press the Interact tab on both devices and move your finger across the screen. Notice how quickly both cursors respond; there seems to be no noticeable delay, and the motion is continuous at a high frame rate.
 
 Compare the performance of the Wi-Fi Direct remote cursor app to the Bluetooth remote cursor app we’ve installed earlier. You can observe that Wi-Fi Direct performs better. Now grab a friend and put the connection range to the test for both flavors of the remote cursor sketch and see which one has the better range.
 
