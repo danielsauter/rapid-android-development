@@ -47,6 +47,8 @@ The first level of security and privacy protection for near field communication 
  
 We’ll use the `KetaiNFC` class to write `NDEF` data. Depending on the data type provided to `write()`, it will create the corresponding `NdefMessage` for us accordingly. For the projects in this chapter, we’ll use the following `NFC` methods: 
  
+<!-- ISSUE 8.0 - Dead link, unsure of where to find this method -->
+ 
   * *[`write()`][11]*   A Ketai library method to write a text `String`, `URI`, or `byte[]` array—depending on the datatype provided to `write()` as a parameter, it sends an `NFC` message formatted in that datatype. 
   
   * *`onNFCEvent()`*   An event method returning `NDEF` data of different types, such as a text `String` or `byte` array—depending on the datatype returned, `onNFCEvent()` can be used to respond differently depending on the `NDEF` message returned. 
@@ -59,7 +61,7 @@ The idea of this project is to allow two or more individuals to quickly join a p
  
 Our sketch will use a recursive program to send an increasingly accurate live camera image from one Android device to another. Once we’ve paired the two devices via `NFC`, we’ll begin with a camera preview that consists of only one large “pixel,” which we’ll draw as a rectangle in our program. Each time we tap the screen on the remote device, we will increase the resolution of the transmitted camera preview by splitting each pixel of the current image into four elements, as illustrated below. In the next level, each of those pixels is split again into four, and so on—exponentially increasing the preview resolution until the image becomes recognizable. The color is taken from the corresponding pixel of the camera preview pixel located exactly in the area’s center. 
  
-![](images/NFC/NFCBTTransmit.png)
+![](images/NFC/NFCTransmit.png)
 #####Figure 8.1 - Broadcast pixels using NFC and Bluetooth.
 ######Touching NFC devices back-to-back initiates the Bluetooth connection, starting a two-directional pixel broadcast. The camera preview is then sent from one device to the other and displayed there. The top image shows the sampled camera image after four taps, the bottom image after two. 
 
