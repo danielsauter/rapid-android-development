@@ -177,7 +177,7 @@ Now with our recursive program, camera, `NFC`, and Bluetooth code completed, itâ
 Before we run the app, we need to set two permissions. Open the Permission Selector from the Sketch menu and select `CAMERA` and `INTERNET`. 
  
 Now browse to the sketch folder and open `AndroidManifest.xml` in your text editor, where youâ€™ll see that those permissions have been set. Add `NFC` permissions so the file looks something like this: 
- 
+ <!-- Failure [INSTALL_PARSE_FAILED_MANIFEST_MALFORMED] -->
 #####code/NFC/NFCBTTransmit/AndroidManifest.xml 
 [include](code/NFC/NFCBTTransmit/AndroidManifest.xml) 
  
