@@ -1,10 +1,9 @@
-###Chapter 4:
-#Using Geolocation and Compass
+# 4. Using Geolocation and Compass
 
 
 Location-based services have changed the way  we navigate, share, and shop. Since the FCC ruling in 1996 requiring all US mobile operators to be able to locate emergency callers, location has become embedded in the images we take, the articles we blog, the commercials we watch, and the places we check into. These services rely on location information using latitude and longitude—and sometimes altitude—to describe a north-south and east-west position on the Earth's surface.
 
-When we search for local information, get directions to public transportation, or find the nearest bar or bargain, the Android enables us to zero in on the information that is relevant to us at a particular geographic location. Because the device is aware of its own geolocation, we can navigate, detect where we are heading, and know how we are holding the device in relation to magnetic north. A built-in Global Positioning System (GPS) receiver, accelerometer, and digital compass allow the Android to have a full picture about its location and orientation, which plays an important role for navigation apps and [location-based services.][1] 
+When we search for local information, get directions to public transportation, or find the nearest bar or bargain, the Android enables us to zero in on the information that is relevant to us at a particular geographic location. Because the device is aware of its own geolocation, we can navigate, detect where we are heading, and know how we are holding the device in relation to magnetic north. A built-in Global Positioning System (GPS) receiver, accelerometer, and digital compass allow the Android to have a full picture about its location and orientation, which plays an important role for navigation apps and [location-based services.][1]
 
 Android apps make use of the [Android's Location Manager][2] to calculate a location estimate for the device. Its purpose is to negotiate the best location source for us and to keep the location up-to-date while we are on the move. Updates typically occur when the device detects that we've changed location or when a more accurate location becomes available. An Android device uses two different [location providers][3] to estimate its current geographic coordinates: ```gps``` on the one hand and ```network``` on the other, the latter based either on the calculated distance to multiple cell towers or on the known location of the Wi-Fi network provider to which we are connected. [A special ```passive``` provider][4] receives location updates from other apps or services that request a location.
 
@@ -64,13 +63,13 @@ The ```KetaiLocation``` class is designed to provide us with the longitude, lati
 
 <!-- CHECK FOR FORMATTING CONSISTANCY - pg 72 pdf -->
 
-* *```onLocationEvent()```* 
+* *```onLocationEvent()```*
 Returns the device location, including latitude, longitude, altitude, and location accuracy
 
-* *```latitude```* 
+* *```latitude```*
 Describes the angular distance of a place north or south of the Earth's equator in decimal degrees—positive ```lat``` values describe points north of the equator; negative values describe points south of the equator (for example, Chicago is located at ```41.87338``` degrees latitude in the northern hemisphere; Wellington, New Zealand, is located at ```-41.29019``` degrees latitude in the southern hemisphere).
 
-* *```longitude```* 
+* *```longitude```*
 Describes the angular distance of a place east or west of the meridian at Greenwich, England, in decimal degrees (for example, Chicago, which is west of the Greenwich meridian, is located at -87.648798 degrees longitude; Yanqi in the Xinjiang Province, China, is located at ```87.648798``` degrees longitude.)
 
 * *```altitude```*
@@ -139,9 +138,13 @@ This exercise will familiarize us with the kinds of values we'll use to determin
 Let's take a look at how the newly introduced class and methods are used in this example.
 
 1. Declare the variable ```location``` to be of type ```KetaiLocation```. We'll use this variable to store location updates.
+
 2. Create the ```KetaiLocation``` object we've called ```location```.
+
 3. Check whether we currently have a location provider via the [```getProvider()``` method.][13]
+
 4. Display location values ```latitude```, ```longitude```, ```altitude```, ```accuracy```, and the location provider using ```getProvider()```.
+
 5. Whenever a location update occurs, use the ```onLocationEvent()``` method to retrieve location data and print them to the screen.
 
 Ketai defaults the Location Manager to provide location updates every ten seconds or whenever the device moves more than one meter. This preset number is geared toward applications that strive for a certain level of accuracy. You can change this update rate by calling the ```KetaiLocation``` method ```setUpdateRate(int millis, int meters)```. The app will try to retrieve a ```gps``` location first via the Location Manager, and if that fails it will fall back to ```network``` localization.
@@ -160,18 +163,30 @@ Great—now head back inside. Take a peek again at your latitude and longitude c
 
 The event method ```onLocationEvent()``` we worked with earlier returns the latitude, longitude, altitude, and accuracy of the device location—or alternatively, an Android ```Location``` object. If we look at the ```onLocationEvent()``` method in more detail, we can use it with the following sets of parameters:
 
-* *```onLocationEvent(double latitude, double longitude, double altitude, float accuracy)```* Four parameters return the latitude, longitude, altitude, and accuracy of the location estimate.
-* *```onLocationEvent(Location location)```* One parameter returns an [Android location object,][14] where Android location methods can be applied directly.
+* *```onLocationEvent(double latitude, double longitude, double altitude, float accuracy)```*
+Four parameters return the latitude, longitude, altitude, and accuracy of the location estimate.
+
+* *```onLocationEvent(Location location)```*
+One parameter returns an [Android location object,][14] where Android location methods can be applied directly.
 
 Depending on what location data we need for our location-based app, we can choose our preferred set of parameters from either ```latitude```, ```longitude```, ```altitude```, ```accuracy```, or the ```Location``` type. We can also select a few parameters if we don't require them all. The ```Location``` object returned in the second iteration of the ```onLocationEvent()``` implementation listed here allows us to access any [Android ```Location``` method.][15]
 
 The ```Location``` class is loaded with useful methods for dealing with the data they contain, and it is a great way to package returned location data for use in an app. Ketai gives us complete access to the ```Location``` class; let's take a look at some of the ```Location``` methods we'll be working with.
 
-* [*```getBearing()```*][16] Returns the direction of travel in degrees, measured clockwise in relation to magnetic north
-* [*```getSpeed()```*][17] Returns the speed of the device over ground in meters per second (One meter per second is equivalent to ```2.236``` miles per hour.)
-* [*```distanceTo()```*][18] Returns the distance to a given location in meters (The method takes a ```Location``` object as parameter.)
-* [*```setLatitude()```*][19] Sets the latitude of a ```Location```.
-* [*```setLongitude()```*][20] Sets the longitude of a ```Location```.
+* [*```getBearing()```*][16]
+Returns the direction of travel in degrees, measured clockwise in relation to magnetic north
+
+* [*```getSpeed()```*][17]
+Returns the speed of the device over ground in meters per second (One meter per second is equivalent to ```2.236``` miles per hour.)
+
+* [*```distanceTo()```*][18]
+Returns the distance to a given location in meters (The method takes a ```Location``` object as parameter.)
+
+* [*```setLatitude()```*][19]
+Sets the latitude of a ```Location```.
+
+* [*```setLongitude()```*][20]
+Sets the longitude of a ```Location```.
 
 Now let's work on the next project, where we'll put ```Location``` methods to work and write an app that determines the distance between two locations.
 
@@ -213,8 +228,11 @@ Let's take a look at the code.
 Here's what's new in this sketch compared to our previous project.
 
 1. Create an Android ```Location``` object to store a fixed location against which to compare your current device location. I named mine "bam" (for the Brooklyn Academy of Music). We'll use the [```setLatitude()```][23] and [```setLongitude()```][24] Android methods to set its values.
+
 2. Use the ```distanceTo()``` method to compare the device's location via ```location.getLocation()``` with the fixed ```bam``` location. The [```round()``` method][25] calculates the closest integer number to the floating point value returned by ```distanceTo()```.
+
 3. Receive a location update using ```onLocationEvent()```, which now returns a ```Location``` object instead of individual values for latitude, longitude, altitude, and accuracy. The different parameter options for ```onLocationEvent()``` are described next.
+
 4. Use the Android [```toString()```][26] method to print a concise, human-readable description of the location object to the console.
 
 Let's try this sketch.
@@ -251,6 +269,7 @@ Let's take a look.
 Here are the two new Android ```Location``` methods we are using for this sketch.
 
 1. Get the current travel speed using the Android ```Location``` method ```getSpeed()```, which returns the speed of the device over ground in meters per second.
+
 2. Get the current device bearing using the Android ```Location``` method ```getBearing()```, which returns the direction of travel in degrees.
 
 Let's run the sketch and get ready to go outside.
@@ -288,12 +307,19 @@ Let's build.
 Let's take a look at the code additions.
 
 1. Introduce the ```compass``` variable to store the rotation around the [**z**-axis.][29]
+
 2. Apply the ```bearingTo()``` method to determine the direction of the destination pointer.
+
 3. Move the triangle to the center of the screen using [```translate()```][30]. Translate horizontally by half of the ```width``` and vertically by half of the ```height```.
+
 4. Rotate the triangle toward the destination. The angle is calculated by subtracting the device ```bearing``` toward the destination from the device orientation toward north stored in ```compass```. Both angles are calculated in degrees and need to be converted into [```radians()```][31] for the trigonometric [```rotate()```][32] method. ```rotate()``` adds a rotation matrix to the stack, which makes all objects drawn after the method call appear rotated in relation to the default screen orientation.
+
 5. Draw the destination pointer using [```triangle()```][33]. Draw the triangle pointing up using three points, starting with the left base, followed by the right base, and finally by the top point, which provides direction.
+
 6. Convert the distance to the destination from meters to miles.
+
 7. Use the ```PVector``` variable ```locationVector``` to store the device latitude and longitude.
+
 8. Receive bearing values from the ```onOrientationEvent()``` method, returning azimuth (**z**-axis), pitch (**x**-axis), and roll (**y**-axis).
 
 We are  now using two methods, ```onLocationEvent()``` and ```onOrientationEvent()```, that operate in concert with each other. One tracks the location of the device in latitude, longitude, and altitude values, and the other determines where the device is pointing.
@@ -334,15 +360,25 @@ Let's get started. This sketch works with the PHP script on the dedicated web se
 There are a few new statements to look at.
 
 1. Create a ```KetaiLocation``` type variable to be updated when our device detects a location update.
+
 2. Create an Android ```Location``` object to store latitude and longitude data from the target device. The Location object also contains a number of useful methods for calculating bearing and distance.
+
 3. Provide a (unique) phrase or identifier to store the location info.
+
 4. Point to the identifier of the other device.
+
 5. Set the PHP script URL responsible for writing location files.
+
 6. Use Location object to retrieve location updates as opposed to individual variables.
+
 7. Assemble the string that calls the PHP script with attached device name and location data.
+
 8. Trigger the PHP script to write a string containing latitude, longitude, and altitude.
+
 9. Read the other device's location file via the PHP script.
+
 10. Check if we get a valid location containing latitude, longitude, and altitude, as well as parsing numbers contained in the string.
+
 11. Write our location to the server via the PHP script.
 
 For this device locater app, we maintain a ```location``` variable that stores our location. We also keep the ```otherDevice``` ```Location```, which this time is responsible for keeping track of a moving target. If we explore the code snippets that we've added to the [destination compass app](../geolocation.html#geolocationdestinationcompassdestinationcompasspde), the ```serverURL``` variable stands out. It's the path to the web server as a shared place for both devices; the server hosts the PHP script that writes and reads the device locations, which is discussed in the next section. We also introduced two string variables that identify each device. Those are necessary and need to be known to both devices—a shared "phrase" or ID that allows us to look up the other device's location. For instance, our location is identified via ```myName```, the other device refers to the location via ```otherDevice```, and vice versa. This is how the exchange is enabled.

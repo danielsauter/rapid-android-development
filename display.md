@@ -1,12 +1,10 @@
-### Chapter 2: 
-
-#Working with the Touch Screen Display
+# 2. Working with the Touch Screen Display
 
 Now that we've completed our first Android app, let's explore a device feature that has become particularly popular with mobile phones and tablets—multitouch. Virtually all Android devices ship today with a capacitive touch screen panel. It's a device we've gotten so accustomed to that we hardly "see" it as the hardware sensor that it is.
 
 User interaction (UI) with Android touch screens differs somewhat from that of a mouse on a traditional computer display. First of all, we don't have one omnipresent mouse pointer for interacting with UI elements via rollovers, clicks, right-clicks, and double-clicks. In fact, we don't have a rollover or a physical "click" on the touch screen panel at all, hence UI interactions often require adjustments for the touch screen. Typically the Android device uses audiovisual cues such as click sounds or small device vibrations for user feedback.
 
-There are a number of advantages to the multitouch screen interface to point out. First and foremost, the capacitive touch screen panel affords us more than one mouse pointer. We can work with two, five, even ten fingers on the Android, although more than three are rarely used. [Multitouch][1] allows us a variety of distinct finger gestures compared to the mouse, which we can only use to interact with the UI elements and other components displayed on the screen. The two most common multitouch gestures are the pinch and rotate gestures, typically used for scaling and rotating objects on the screen. 
+There are a number of advantages to the multitouch screen interface to point out. First and foremost, the capacitive touch screen panel affords us more than one mouse pointer. We can work with two, five, even ten fingers on the Android, although more than three are rarely used. [Multitouch][1] allows us a variety of distinct finger gestures compared to the mouse, which we can only use to interact with the UI elements and other components displayed on the screen. The two most common multitouch gestures are the pinch and rotate gestures, typically used for scaling and rotating objects on the screen.
 
 In this chapter, we'll get started by learning to use the mouse callback methods available in Processing for Android. Then we'll dive into the different color modes Processing has to offer, an essential topic that we need to address to work with graphics and images throughout the book. Building on the [basic drawing sketch](../gettingStarted.html#write-a-sketch), we'll use the mouse speed to manipulate the hues of the ellipses we draw.
 
@@ -34,7 +32,9 @@ For compatibility, Processing uses the constants ```mouseX``` and ```mouseY``` w
 In Android mode, we can also use the following mouse methods, which are available in all Processing modes. The Android touch screen gestures correspond to the following mouse events:
 
 * [```mousePressed()```][5] This callback method is called every time a finger touches the screen panel. It corresponds to a mouse-pressed event on the desktop when the mouse button is pressed down.
+
 * [```mouseReleased()```][6] This callback method is called every time a finger lifts off the touch screen surface, but only if its position has changed since first touching the panel. It corresponds to a mouse-up event on the desktop.
+
 * [```mouseDragged()```][7] This callback method is called every time a new finger position is detected by the touch screen panel compared to the previously detected position. It corresponds to a mouse-dragged event on the desktop when the mouse moves while the button is pressed.
 
 All three methods respond only to one finger's touch. When you use more than one finger on the multitouch surface, the finger that triggers callback events is the first one that touches the screen panel—the second, third, or more are ignored. If you hold down one finger on the screen surface, add another one on, and remove the first, then the second finger one will now be first in line and take over mouse events. We will work with multiple fingers and multitouch gestures in just a bit in [Detect Multitouch Gestures](#detect-multitouch-gestures).
@@ -48,17 +48,17 @@ void draw()
 {
 	// no display output, so nothing to do here
 }
-			
+
 void mousePressed ()
 {
 	println("PRESSED x:" + mouseX + " y: " + mouseY);
 }
-			
+
 void mouseReleased ()
 {
 	println("RELEASED x:" + mouseX + " y: " + mouseY);
 }
-			
+
 void mouseDragged ()
 {
 	println("DRAGGED x:" + mouseX + " y: " + mouseY);
@@ -94,13 +94,13 @@ RELEASED x:130 y:209
 
 Because we touched the screen, we first trigger a ```mousePressed()``` event. By moving the finger slightly while touching the surface, we trigger ```mouseDragged()``` until we stop moving. Finally, we get a ```mouseReleased()``` event because we've updated our position since we pressed or touched the screen.
 
-Now that we can now work with the mouse callback methods, we're ready to take a look at the color support that Processing provides, which is one of its strengths. Knowing how to control color values is a fundamental skill that we'll frequently return to as we work with graphics and images throughout the book. We'll come back to the Android touch screen and its multitouch features later in this chapter. 
+Now that we can now work with the mouse callback methods, we're ready to take a look at the color support that Processing provides, which is one of its strengths. Knowing how to control color values is a fundamental skill that we'll frequently return to as we work with graphics and images throughout the book. We'll come back to the Android touch screen and its multitouch features later in this chapter.
 
 <!-- 2.1 ISSUE: The canvas(nomenclature?) is taking up a very small section of the screen. The console only returns values if the user starts their touch on the small section that the canvas occupies. Adding
 
 void setup ()
 {
- fullScreen(); 
+ fullScreen();
 }
 
 to the top of the sketch solved this for me, although Ben Fry cautions in his github post about fullScreen that it is not applicable to Android, so I wonder if it's applicable across devices. https://github.com/processing/processing/wiki/Window-Size-and-Full-Screen
@@ -108,21 +108,24 @@ to the top of the sketch solved this for me, although Ben Fry cautions in his gi
 
 ###Using Colors
 
-Any geometric primitive we draw on the screen uses a particular ```fill()``` and ```stroke()``` color. If we don't say otherwise, Processing will default to a black stroke and a white fill color. We can use the ```fill()``` and ```stroke()``` methods to change default values, and we can also use grayscale, RGB, HSB, or hexadecimal color in the Android apps we create. The ```background()``` method uses color in the same way, with the exception that it cannot set a value for opacity, formally known as the alpha value. 
+Any geometric primitive we draw on the screen uses a particular ```fill()``` and ```stroke()``` color. If we don't say otherwise, Processing will default to a black stroke and a white fill color. We can use the ```fill()``` and ```stroke()``` methods to change default values, and we can also use grayscale, RGB, HSB, or hexadecimal color in the Android apps we create. The ```background()``` method uses color in the same way, with the exception that it cannot set a value for opacity, formally known as the alpha value.
 
-By default, Processing draws all graphic elements in the RGB (red, green, blue) color mode. An additional alpha value can be used as a fourth parameter to control the opacity of graphic elements drawn on the screen. An alpha value of ```0``` is fully transparent, and a value of ```255``` is fully opaque. Values of ```0..255``` control the level of opacity for an individual pixel. 
+By default, Processing draws all graphic elements in the RGB (red, green, blue) color mode. An additional alpha value can be used as a fourth parameter to control the opacity of graphic elements drawn on the screen. An alpha value of ```0``` is fully transparent, and a value of ```255``` is fully opaque. Values of ```0..255``` control the level of opacity for an individual pixel.
 
-The ```background()``` color of a Processing window cannot be transparent. If you provide an alpha parameter for ```background()```, the method will just ignore its value. Within ```draw()```, the ```background()``` method is used in most cases to clear the display window at the beginning of each frame. The method can also accept an image as a parameter, drawing a background image if the image has the same size as the Processing window. 
+The ```background()``` color of a Processing window cannot be transparent. If you provide an alpha parameter for ```background()```, the method will just ignore its value. Within ```draw()```, the ```background()``` method is used in most cases to clear the display window at the beginning of each frame. The method can also accept an image as a parameter, drawing a background image if the image has the same size as the Processing window.
 
 Processing provides us with two different color modes that we can switch between using the [```colorMode()``` method.][8] The color mode can be set to RGB or HSB (hue, saturation, brightness), which we'll explore further in [Using HSB Colors](#using-hsb-colors). ```colorMode()``` changes the way Processing interprets color values. Both RGB and HSB can handle alpha values to make objects appear transparent.
 
-We can adjust the value range of the parameters used in ```colorMode()``` as well. For example, white in the default RGB color mode is defined as ```color(255)```. If we change the range to ```colorMode(RGB,1.0)```, white is defined as ```color(1.0)```. 
+We can adjust the value range of the parameters used in ```colorMode()``` as well. For example, white in the default RGB color mode is defined as ```color(255)```. If we change the range to ```colorMode(RGB,1.0)```, white is defined as ```color(1.0)```.
 
 Here are the parameters ```colorMode()``` can take. We can specify ```mode``` as either RGB or HSB and specify  ```range``` in the value range we prefer.
 
 * ```colorMode(mode)```
+
 * ```colorMode(mode, range)```
+
 * ```colorMode(mode, range1, range2, range3)```
+
 * ```colorMode(mode, range1, range2, range3, range4)```
 
 Let's now take a look at the three different color methods Processing has to offer. They are good examples of how Processing uses as few methods as possible to get the job done.
@@ -155,7 +158,7 @@ fill(red, green, blue, alpha)
 stroke(red, green, blue, alpha)
 ```
 
-As you can see, your results will differ depending on how many parameters you use. One parameter results in a grayscale value. Two parameters define a grayscale and its opacity (as set by an alpha value). If alpha is set to ```0```, the color is fully transparent. An alpha value of ```255``` results in a fully opaque color. Three parameters correspond by default to red, green, and blue values. Four parameters contain the red, green, and blue values and an alpha value for transparency. Through this approach, Processing reduces the number of core methods by allowing for a different number of parameters and by interpreting them differently depending on the color mode. 
+As you can see, your results will differ depending on how many parameters you use. One parameter results in a grayscale value. Two parameters define a grayscale and its opacity (as set by an alpha value). If alpha is set to ```0```, the color is fully transparent. An alpha value of ```255``` results in a fully opaque color. Three parameters correspond by default to red, green, and blue values. Four parameters contain the red, green, and blue values and an alpha value for transparency. Through this approach, Processing reduces the number of core methods by allowing for a different number of parameters and by interpreting them differently depending on the color mode.
 
 To recall the syntax of any particular method, highlight the method you want to look up in the sketch window and choose the Find in Reference option from  Help. It's the quickest way to look up the syntax and usage of Processing methods while you are working with your code.
 
@@ -181,7 +184,7 @@ Now let's take a look at the ```HSB``` color mode, which, as we learned earlier,
 
 Why should we care about HSB? Because it's a rather excellent color mode for working algorithmically with color, such as when we want to change only the saturation of a UI element. When we switch the default RGB color mode to HSB, the values of the color parameters passed to ```fill()``` and ```stroke()``` are not interpreted any more as red, green, blue, and alpha values, but instead as hue, saturation, brightness, and alpha color values. We can achieve seamless transitions between more- and less-saturated color values for UI highlights, for instance, which is very difficult to do properly in RGB. So for the objective of algorithmic color combinations, transitions, and animations that need to be seamless, HSB is great.
 
-When we switch to HSB using the ```colorMode(HSB)```, the ```fill()```, ```stroke()```, and ```background()``` methods will be interpreted like this: 
+When we switch to HSB using the ```colorMode(HSB)```, the ```fill()```, ```stroke()```, and ```background()``` methods will be interpreted like this:
 
 ```
 fill(hue, saturation, brightness)
@@ -197,7 +200,7 @@ stroke(hue, saturation, brightness, alpha)
 When we work algorithmically in HSB, we can access the hue directly using Processing's [```hue()``` method.][9] It takes a color as a parameter and extracts only the hue value of that color. Similarly, we can get the brightness by using the  [```brightness()``` color method,][10] and we can access the [```saturation()```][11] separately as well. [The HSB color cylinder][12] is a very useful illustration of this color space to further investigate and better understand the HSB color mode, where all hues are represented within the 360-degree circumference of the color cylinder. Take a quick look at it; we'll come back to it in the next project, [Use Mouse Speed
 to Control Hues](#use-mouse-speed-to-control-hues).
 
-Now that we've learned about the different ways to assign color values, let's also take a look at the Processing ```color``` type, which Processing provides for the specific purpose of *storing* colors. 
+Now that we've learned about the different ways to assign color values, let's also take a look at the Processing ```color``` type, which Processing provides for the specific purpose of *storing* colors.
 
 [9]: http://processing.org/reference/hue_.html
 [10]: http://processing.org/reference/brightness_.html
@@ -216,7 +219,7 @@ fill(color)
 fill(color, alpha)
 ```
 
-If ```color``` included an alpha value of, let's say, ```127.5```, a primitive drawn with ```fill(color)``` would be drawn with ```50%``` opacity (given a possible max alpha value of ```255```). In the unlikely scenario that the same color that already contains an alpha value is used in conjunction with an additional alpha parameter, such as ```fill(color, 128)```, the resulting color would be drawn half as transparent as before, or at ```25%``` opacity. 
+If ```color``` included an alpha value of, let's say, ```127.5```, a primitive drawn with ```fill(color)``` would be drawn with ```50%``` opacity (given a possible max alpha value of ```255```). In the unlikely scenario that the same color that already contains an alpha value is used in conjunction with an additional alpha parameter, such as ```fill(color, 128)```, the resulting color would be drawn half as transparent as before, or at ```25%``` opacity.
 
 Processing color methods are overloaded, so they can handle a range of situations—you can use one method for many applications. In other languages, remembering which syntax to use for a particular color effect can be a challenge, but with Processing you need to remember only a small number of methods. When a color value exceeds the default maximum value of ```255```, Processing caps it for us. So ```fill(300)``` has the same result as ```fill(255)``` does. The same is true for values lower than the default minimum, ```0```.
 
@@ -229,14 +232,14 @@ Now that we've learned about the different color modes, methods, and types avail
 Now let's explore the HSB mode on the device touch screen display. By adding ```colorMode()``` to our sketch, we switch the color mode, and by modifying our ```fill()``` method to work with HSB values, we change our app from grayscale to shades of color. Here's the result:
 
 ![](images/display/MouseSpeed-sm.png)
-#####Figure 2.1 — Using mouse speed to control color. 
+#####Figure 2.1 — Using mouse speed to control color.
 ######The hue of the ellipses changes depending on how fast you move your finger across the touch screen surface. Slow movements result in greenish, medium in blueish, and fast movements in reddish values.
 
 In this project, we'll keep the screen ```orientation()``` flexible, which is the default setting for our Processing apps, and we don't have to set anything to make the app change orientation when we hold the device upright or sideways. This means it will change orientation when the built-in device accelerometer sensor decides that the app should adapt to the particular orientation at that moment. When such an orientation change occurs, our ```setup()``` method will be called again, reinitializing the sketch and executing all the statements we've included in ```setup()```. Because we set the screen to black, erasing its contents using the ```background(0)``` method, a change in the app's orientation will reset the ```background()``` to black, erasing all the ellipses we've drawn prior to changing the orientation.
 
 We have only two modifications to make using the [code from chapter 1](../gettingStarted.html#processing_ide_basicdrawing-sm). First we switch the color mode to HSB, which also customizes its value range. Then we calculate the speed of our movement by measuring the distance between the previous and the current mouse position using [Processing's ```dist()```][14] method. The method takes two points as parameters and returns the distance between them. Finally, we apply the distance we've calculated to the hue in the ```fill()``` method for the ellipses we draw. The default value range for the HSB color modes is ```0..255``` by default. We'll override the default hue value to use floating point ranges of ```0..100``` instead, allowing us to use the calculated mouse speed directly to the hue parameter. For the saturation and brightness values, we'll override the default values to use floating point ranges of ```0..1.0```.
 
-Let's take a look at the project code. 
+Let's take a look at the project code.
 
 #####Display/MouseSpeedHue/MouseSpeedHue.pde
 [include](code/display/MouseSpeedHue.pde)
@@ -263,7 +266,7 @@ Now that we've mastered the use of ```color``` in Processing, let's continue our
 
 ###Introducing the Ketai Library
 
-The [Ketai library for Processing][15] focuses particularly on making it easy to work with the mobile hardware features built into Android phones and tablets. The [term "Ketai"][16] is used in Japan to describe its cell phone culture, enabled by mobile handheld devices. The mobile device translates as Keitai Denwa and literally means "something carried in the hand," or handheld. The Ketai library is free software published under the [GNU General Public License Version 3 (GPL v3),][17] and it is compatible with Android versions 2.3 Gingerbread, 3.0/3.1 Honeycomb, 4.0 Ice Cream Sandwich, 4.1/4.2/4.3 Jelly Bean, 4.4 KitKat, and 5.0 Lollipop. NFC, Wi-Fi Direct, and updated camera features introduced in 4.0 Ice Cream Sandwich are not available in Gingerbread or Honeycomb. Therefore the Ketai library is available as [separate downloads][18] for Gingerbread/Honeycomb and for Ice Cream Sandwich/Jelly Bean. Please refer to [Run a Sketch on an Android Device](../gettingStarted.html#run-a-sketch-on-an-android-device), to find out which version of Android you are running on your device. 
+The [Ketai library for Processing][15] focuses particularly on making it easy to work with the mobile hardware features built into Android phones and tablets. The [term "Ketai"][16] is used in Japan to describe its cell phone culture, enabled by mobile handheld devices. The mobile device translates as Keitai Denwa and literally means "something carried in the hand," or handheld. The Ketai library is free software published under the [GNU General Public License Version 3 (GPL v3),][17] and it is compatible with Android versions 2.3 Gingerbread, 3.0/3.1 Honeycomb, 4.0 Ice Cream Sandwich, 4.1/4.2/4.3 Jelly Bean, 4.4 KitKat, and 5.0 Lollipop. NFC, Wi-Fi Direct, and updated camera features introduced in 4.0 Ice Cream Sandwich are not available in Gingerbread or Honeycomb. Therefore the Ketai library is available as [separate downloads][18] for Gingerbread/Honeycomb and for Ice Cream Sandwich/Jelly Bean. Please refer to [Run a Sketch on an Android Device](../gettingStarted.html#run-a-sketch-on-an-android-device), to find out which version of Android you are running on your device.
 
 <!-- 2.3 ISSUE: Check updated link 'run a sketch' once update comes through -->
 
@@ -289,15 +292,25 @@ Ketai includes a number of classes that make Android hardware sensors and device
 
 
 * KetaiSensor
+
 * KetaiLocation
+
 * KetaiCamera
+
 * KetaiFaceDetector
+
 * KetaiBluetooth
+
 * KetaiWiFiDirect
+
 * KetaiNFC
+
 * KetaiData
+
 * KetaiList
+
 * KetaiKeyboard
+
 * KetaiGesture
 
 
@@ -320,15 +333,21 @@ Follow these steps to activate the Processing library. It's a one-time process; 
 You can install the Ketai library from within the Processing IDE using the "Add Library..."  menu item.
 
 1. Choose  "Add Library...," which you can find under Sketch  &mapsto;  "Import Library..."
+
 2. At the bottom of the window that opens, enter "Ketai."
+
 3. Select the Ketai library that appears in the list and press the Install button on the right.
+
 4. The download starts immediately, and a bar shows the download's progress. When the library is installed, the button on the right changes to  Remove.
 
 Alternatively, you can download and install the library manually from the dedicated website that comes with every Processing library. This process has the advantage that you can read about the library and preview its features alongside a reference and example code for the library.
 
 1. Go to the Ketai library website, http://ketai.org/download, and download the latest ```zip``` file.
+
 2. Extract the file to the ```Documents/Processing/libraries``` folder. If the ```libraries``` subfolder doesn't exist in your sketchbook, create it now and put the Ketai folder inside it.
+
 3. Restart Processing so it can load the newly added library.
+
 4. Check whether the installation was successful by opening  Sketch&mapsto; "Import Library..." Under  Contributed  libraries you should now see the name "Ketai." If it doesn't show up in the list, please refer to {{ book.troubleshooting }}.
 
 The process for downloading and installing the Ketai library is identical for any other Processing library.
@@ -386,7 +405,7 @@ For this project, we'll implement the most common user interactions using just o
 <!-- REVISION 2.5: Removed link to image in paragraph above. -->
 
 ![](images/display/DisplayGestureFinger.png)
-#####Figure 2.2 — Using multitouch gestures. 
+#####Figure 2.2 — Using multitouch gestures.
 ######The illustration shows a rectangle scaled with a two-finger pinch gesture, turned by a two-finger rotation gesture, placed on a brown background color, and triggered by a flick, as well as a gray fill color caused by a long press. The text "DOUBLE" appears due to a double-tap gesture at the position indicated by the hand silhouette.
 
 We have a number of callback events for the touch surface to try out, so we'll assign each of them with a particular purpose. We'll zoom to fit the rectangle onto the screen using ```onDoubleTap()```, randomly change its fill color ```onLongPress()``` using [Processing's ```random()``` method,][27] scale it ```onPinch()```, rotate it ```onRotate()```, drag it using ```mouseDragged()```, and change the background color ```onFlick()```. Besides manipulating color properties and the rectangle, we'll keep track of the multitouch events as they occur by printing a text string to the Processing Console. The code we use to manipulate the properties and the callback methods themselves are not complicated in any way, but we're now dealing with a bit more code than we have before because we're using a series of callback methods in one sketch.
@@ -413,32 +432,51 @@ Now let's take a look at our multitouch code.
 #####Display/Gestures/Gestures.pde
 [include](code/display/gestures.pde)
 
-<!--2.6 NOTE: 
-a. Line 68 returns an alert 'The value of the parameter px is not used' 
+<!--2.6 NOTE:
+a. Line 68 returns an alert 'The value of the parameter px is not used'
 b. also needs 'fullScreen()'
 -->
 
 Let's take a look at the steps we need to take to capture and use multitouch gestures on the Android touch screen.
 
 1. Import Ketai's ```ui``` package to give us access to the ```KetaiGesture``` class.
+
 2. Import Android's ```MotionEvent``` package.
+
 3. Define a variable called ```gesture``` of type ```KetaiGesture```.
+
 4. Set a variable we call ```rectSize``` to ```100``` pixels to start off.
+
 5. Define the initial color ```c``` (white), which we'll use as a fill color for the rectangle and text.
+
 6. Define the initial color ```bg``` (dark green), which we'll use as a background color.
+
 7. Instantiate our ```KetaiGesture``` object ```gesture```.
+
 8. Set the initial value for our variable ```x``` as the horizontal position of the rectangle.
+
 9. Set the initial value for ```y``` as the vertical position of the rectangle.
+
 10. Push the current matrix on the matrix stack so that we can draw and rotate the rectangle independent of other UI elements, such as the text.
+
 11. Move to the position ```[x, y]``` using ```translate()```.
+
 12. Pop the current matrix to restore the previous matrix on the stack.
+
 13. Use the Processing method ```surfaceTouchEvent()``` to notify Processing about mouse/finger-related updates.
+
 14. Use the callback method ```onTap()``` to display the text string ```SINGLE``` at the location ```(x, y)``` returned by ```KetaiGesture```.
+
 15. Use the callback method ```onDoubleTap()``` to display the text string ```DOUBLE``` at the location returned by ```KetaiGesture```, indicating that the user triggered a double-tap event. Use this event to decrease the rectangle size to the original ```100``` pixels if it's currently enlarged, and increase the rectangle scale to the display height minus ```100``` pixels if it's currently minimized to its original scale.
+
 16. Use the callback method ```onLongPress()``` to display the text string "LONG" at the location ```(x, y)``` returned by ```KetaiGesture```. Use this event to randomly select a new color ```c``` using ```random()```, which we'll use as a fill color for the rectangle.
+
 17. Use the callback method ```onFlick()``` to display the text string ```FLICK``` at the location ```x``` and ```y``` returned by ```KetaiGesture```. Also, receive the previous location where the flick has been initiated as ```px``` and ```py```, as well as the velocity ```v```.
+
 18. Use the callback method ```onPinch()``` to calculate the scaled ```rectSize``` using the pinch distance ```d``` at the location ```x``` and ```y``` returned by ```KetaiGesture```.
+
 19. Use the callback method ```onRotate()``` to calculate the rotation angle ```rectAngle``` using the ```angle``` returned by ```KetaiGesture```.
+
 20. Use Processing's ```mouseDragged()``` callback to update the rectangle position  (```x``` and ```y```) by the amount of pixels moved. Determine this amount by subtracting the previous ```pmouseX``` from the current ```mouseX```, and ```pmouseY``` from ```mouseY```. Move the rectangle only if absolute distance between the rectangle and the mouse position is less than half the rectangle's size, or when we touch the rectangle.
 
 Let's test the app.

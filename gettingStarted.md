@@ -1,6 +1,4 @@
-###Chapter 1
-
-#Getting Started
+# 1. Getting Started
 
 This book explores the cutting-edge hardware and software features that are built into Android phones and tablets today. You'll create sophisticated graphics and user interfaces in no time, and you'll develop a range of projects that build on the hardware sensors, cameras, and networking capabilities of your Android device. You'll put them to work creatively to make your Android apps more useful, usable, and exciting. We'll consider Android phones and tablets as universal sensors, processors, and remote controls in the context of this book, and we'll create projects that go beyond the typical app. Along the way, we'll spark new app ideas for you to explore in the future.
 
@@ -35,7 +33,9 @@ The Processing IDE supports some of the advanced syntax highlighting and autocom
 To implement the projects in this book, you'll need the following tools:
 
 * [Processing 3.0][4]
+
 * [Java 8][5]
+
 * [Android 4.0 Ice Cream Sandwich][6] (2.3 Gingerbread is sufficient for all projects except {{ book.chapter7 }}, and {{ book.chapter8 }}.)
 
 *These are the minimum software requirements. If you have a newer version, you'll be just fine*. Later we'll install some additional libraries that give us easier access to the features of an Android device. For now, use the following steps to build the core Processing environment we'll use throughout this book.
@@ -79,7 +79,7 @@ Go ahead and launch Processing from the applications directory. The Processing I
 ![](images/gettingStarted/Processing_IDE.png)
 <!-- 1.15 UPDATE: Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
 
-#####Figure 1.1 — The Processing IDE. 
+#####Figure 1.1 — The Processing IDE.
 ######We edit Processing code directly within the Processing IDE sketch window, as shown here.
 
 Since you've launched the application for the first time, Processing has just created a sketchbook folder for you, which is located in ```Documents``` on the hard drive, independent of the OS you are developing on. I recommend you save all your sketches to this location. Then Processing can list them for you within the IDE (click the "Open..." toolbar button). Also, when you update to future versions of Processing, the sketchbook loads up exactly the same way as before.
@@ -90,8 +90,8 @@ Since you've launched the application for the first time, Processing has just cr
 
 The toolbar on top of the sketch window contains the key features of the IDE, with a Run button to launch and a Stop button to stop your apps. You can find a more detailed description of the sketchbook and the IDE in the [Processing Development Environment tutorial][10] on the Processing website.
 
-<!-- 1.3 NOTE 
-This was in the .pml file, but is not in the PDF. 
+<!-- 1.3 NOTE
+This was in the .pml file, but is not in the PDF.
 * *Java mode* Run button in sketch window
 * *Android mode* Run button in sketch window
 * *Android mode* Export button in sketch window
@@ -102,7 +102,9 @@ This was in the .pml file, but is not in the PDF.
 When you start Processing for the first time, it defaults to Java mode, as indicated on the right side of the toolbar. This area also functions as a drop-down menu, allowing us to switch between the different modes the Processing IDE provides. You'll need to add the Android mode, choosing "Add mode…" from the menu. Depending on which mode you’ve selected, the Run button on the toolbar produce different results, which are listed next.
 
 * *Java mode* "Run" displays a program window to view the sketch running on the desktop computer.
+
 * *Android mode* "Run" launches the app on the Android device. "Export" creates a signed Android package for Google Play.
+
 * *[JavaScript mode][11]* "Run" launches a web page in the default browser, with a Processing JavaScript canvas showing the sketch. "Export" creates a web package, including all dependent files for uploading to a web server.
 
 A tab below the toolbar shows the current sketch name, which defaults to one containing the current date if the sketch has not been saved yet. Processing prompts us to provide another filename as soon as we save the sketch. The right-arrow button to the right of the tab allows us to add more tabs if we'd like to split the code into separate sections. As sketches grow in scope and complexity, the use of tabs can be a great way to reduce clutter by separating classes and methods for different purposes into distinct tabs. Each tab is saved as a separate Processing source file, or ```pde```, in the sketch folder.
@@ -143,14 +145,17 @@ Let's now say "Hi" to Processing by creating a simple sketch that draws an ellip
 ![](images/gettingStarted/basicDrawing1.png)
 <!-- 1.4 UPDATE: Orignal image too large. Image compressed via Photoshop 'Save For Web' -->
 
-#####Figure 1.2 — A simple sketch. 
+#####Figure 1.2 — A simple sketch.
 ######With the ellipse-drawing primitive, Processing can generate dynamic output. On the left is a 100 x 100 pixel window; on the right, a 400 x 400 pixel window.
 
 We use a single drawing primitive for this sketch, the ```ellipse```, also used to draw circles by providing equal width and height for the ellipse. In Processing, an ```ellipse(x, y, width, height)``` [requires four parameters:][13]
 
 * The horizontal ```x``` position of the ellipse center
+
 * The vertical ```y``` position of the ellipse center
+
 * The ellipse ```width```
+
 * The ellipse ```height```
 
 The following snippet contains the code we’ll need for our sketch.
@@ -163,8 +168,8 @@ Go ahead and type this into the text editor, as illustrated below:
 <a name="processing_ide_basicdrawing-sm">
 ![](images/gettingStarted/Processing_IDE_basicDrawing-sm.png)
 </a>
-<!-- 1.5 UPDATE: 
-Orignal image too large. 
+<!-- 1.5 UPDATE:
+Orignal image too large.
 Image compressed via Photoshop 'Save For Web' -->
 
 We want the position of the ellipse to follow the mouse, and for this we need to know where it's located at any given moment. Processing stores this information in two system defined variables: ```mouseX``` and ```mouseY```. The pair returns the ```x``` and ```y``` coordinates of the mouse in pixels relative to the origin of the display window, not the computer screen. In Processing, the origin of the display window (```[0, 0]```) is located at the upper left corner of the device window; ```[width-1, height-1]``` is located at the lower right.
@@ -216,11 +221,11 @@ Sketch launched on the emulator.
 <!-- 1.6 NOTE: not sure if it matters, but SDK has to be properly initialized for this to work (the app itself has to be opened and it has to go through it's wizard). This was a sticking point for me. -->
 ![](images/gettingStarted/BasicDrawingEmulatorAndDevice-sm.png)
 <!--Compressed Image -->
-<!-- 1.7 NOTE: 
-sketch appears as small square on the screen, 
+<!-- 1.7 NOTE:
+sketch appears as small square on the screen,
 not full screen as shown in Figure 3 -->
 
-#####Figure 1.3 — Running the drawing sketch in Android mode. 
+#####Figure 1.3 — Running the drawing sketch in Android mode.
 ######We can run a sketch in either the Android emulator installed on our desktop computer (left) or directly on the Android device (right).
 
 The emulator starts up the Android OS exactly as a device would, just a bit more slowly. Once Android is running, Processing then installs the Android package (```apk```) and launches the sketch. If it takes too long for the emulator to start up, Processing might time out and you might have to relaunch your sketch one more time. The sketch looks identical to the Java mode sketch illustrated in Figure 3, and if you move the mouse in the emulator window, it responds the same way it did in Java mode. The frame rate is noticeably lower, and the screen has a different aspect ratio. In the emulator, the mouse methods are a stand-in for the touch screen interface. Don't close the Android emulator as you keep testing your sketches.
@@ -247,7 +252,7 @@ With all the software tools in place and the Android device plugged into your de
 // size(400, 400);
 ```
 
-[14]:https://developer.android.com/studio/run/oem-usb.html 
+[14]:https://developer.android.com/studio/run/oem-usb.html
 
 <!-- 1.8 REVISION: Old link:http://developer.android.com/guide/developing/device.html is dead. Swapped.-->
 

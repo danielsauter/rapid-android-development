@@ -1,5 +1,4 @@
-###Chapter 5:
-#Using Android Cameras
+# 5. Using Android Cameras
 
 Now that we've learned to work with several of the most important Android sensors, let's take a look at another device that's found on every Android phone and tablet—the digital camera. Your device includes at least one and sometimes two cameras: the back-facing camera, which you commonly use to take high-resolution pictures and capture video, and the front-facing camera, designed for video calls and chat at a lower resolution. The digital camera can also be used as a sophisticated light-sensitive sensor to build a  variety of interactive applications that go beyond pictures and video clips. We'll explore each of these uses and more in this chapter.
 
@@ -24,7 +23,7 @@ Mobile cameras don't rely on hardware alone. The Android SDK provides a variety 
 To implement the camera features in this chapter, we'll work mainly with a single Ketai library class and a highly versatile Processing type:
 
 * [`KetaiCamera`][3]
-This Ketai library class provides simplified access to the cameras on a device by making Android's `Camera` class available to Processing. When we work with `KetaiCamera`, we define the width, height, and frame rate for the camera preview we'd like to work with. It provides the necessary methods to define basic camera settings (such as resolution) and camera controls. It also provides access to the camera flash and Android's built-in face recognizer. 
+This Ketai library class provides simplified access to the cameras on a device by making Android's `Camera` class available to Processing. When we work with `KetaiCamera`, we define the width, height, and frame rate for the camera preview we'd like to work with. It provides the necessary methods to define basic camera settings (such as resolution) and camera controls. It also provides access to the camera flash and Android's built-in face recognizer.
 
 * [`PImage`][4]
 This is a Processing datatype for storing images (`gif`, `jpg`, `png`, `tif`, and `tga`). It provides a number of methods that help us load, save, and filter  images, including access to the image `pixels[]` array that contains information on pixel color values. The methods we are using in this chapter are described further in [Working with the PImage Class](../cameras.html#working-with-the-pimage-class).
@@ -69,13 +68,13 @@ For this initial camera app shown below, we'll display the view seen by the back
 
 ![](images/camera/GettingStarted-sm.png)
 #####Figure 5.1 — Camera preview app.
-######The illustration shows a camera preview image at a resolution of 1280 x 768 pixels, displayed on the touch screen of a Google Nexus 6, whose resolution is 2560 x 1440 pixels. 
+######The illustration shows a camera preview image at a resolution of 1280 x 768 pixels, displayed on the touch screen of a Google Nexus 6, whose resolution is 2560 x 1440 pixels.
 
 We'll use the `KetaiCamera` class to connect to and start the camera. The `KetaiCamera` class streamlines this process significantly for us. For example, creating a simple camera preview app using `KetaiCamera` takes about ten lines of code, compared with about three hundred documented on the [Android developer site.][7] `KetaiCamera` helps us set up and control the camera, and it also decodes the [YUV][8] color format provided by the Android camera into the RGB format used in Processing.
 
 `KetaiCamera` works similarly to other Ketai classes that we've explored in {{ book.chapter3 }}. First we create a `KetaiCamera` object and `start()` the camera. Then we update the screen as soon as we receive a new image from the camera via `onCameraPreviewEvent()`. And finally, we use Processing's own `image` method to display the camera preview.
 
-The code for a basic camera sketch looks like this: 
+The code for a basic camera sketch looks like this:
 
 #####code/Camera/CameraGettingStarted/CameraGettingStarted.pde
 [include](code/camera/CameraGettingStarted.pde)
@@ -105,7 +104,7 @@ Let's try the sketch on the Android phone or tablet.
 
 Before we run the sketch, we need to give the app permission to use the camera. Here's how: On the Processing menu bar, select  Android  &mapsto;  Sketch Permissions.  In the Android Permissions Selector that appears, select Camera. As we've done already in {{ book.chapter4 }} earlier in [Setting Sketch Permissions](../geolocation.html#setting-sketch-permissions), the Android must allow the app to use the camera through a certificate, or it must prompt the user to approve the request to use the camera. If the app has permission to use the camera, the device will remember and not prompt the user anymore. For this app, we only need to check the permission for `CAMERA`.
 
-Now run the sketch on the device. The rear-facing camera preview starts up as illustrated in Figure 5.1, in a [resolution of 1280px width and 768px height][10], known as WXGA. Android cameras are set to auto mode, so they adjust focus and exposure automatically. Depending on your phone's native screen resolution, the preview image might cover the screen only partially. You can certainly scale and stretch the preview image, which also changes the image aspect ratio and distorts the image. For instance, if you set the width and height parameters in the `image()` method to `screenWidth` and `screenHeight` as in the following code, the camera preview will always stretch full screen independent of the screen's size and resolution. 
+Now run the sketch on the device. The rear-facing camera preview starts up as illustrated in Figure 5.1, in a [resolution of 1280px width and 768px height][10], known as WXGA. Android cameras are set to auto mode, so they adjust focus and exposure automatically. Depending on your phone's native screen resolution, the preview image might cover the screen only partially. You can certainly scale and stretch the preview image, which also changes the image aspect ratio and distorts the image. For instance, if you set the width and height parameters in the `image()` method to `screenWidth` and `screenHeight` as in the following code, the camera preview will always stretch full screen independent of the screen's size and resolution.
 
 ```
 image(cam, width/2, height/2, width, height);
@@ -114,7 +113,7 @@ image(cam, width/2, height/2, width, height);
 Go ahead and try the fullscreen mode on your device. For a preview image in a camera app, it doesn't seem like a good idea to stretch the image, though. When we write apps that scale seamlessly across devices, we typically lock and maintain aspect ratios for images and UIs.
 
 <!-- 5.3 REVISION - link removed since code is directly above / presumably currently open in their Processing console -->
-As we can see in CameraGettingStarted.pde, the steps we take to get the camera started are like the steps we took working with other sensors ({{ book.chapter3 }}). First we instantiate a `KetaiCamera` object using a defined `width`, `height`, and `frameRate`. Then we start the camera. And finally, we read new images from the camera using `onCameraPreviewEvent()` and display them. The frame rate in this sketch is set to 30 frames per second, which is the typical playback speed for digital video, giving the appearance of seamless movement. Depending on your device and image conversion performance, the image preview might not be able to keep up with the designated thirty previews per second. In that case, the sketch will try to approach the set frame rate as best it can. 
+As we can see in CameraGettingStarted.pde, the steps we take to get the camera started are like the steps we took working with other sensors ({{ book.chapter3 }}). First we instantiate a `KetaiCamera` object using a defined `width`, `height`, and `frameRate`. Then we start the camera. And finally, we read new images from the camera using `onCameraPreviewEvent()` and display them. The frame rate in this sketch is set to 30 frames per second, which is the typical playback speed for digital video, giving the appearance of seamless movement. Depending on your device and image conversion performance, the image preview might not be able to keep up with the designated thirty previews per second. In that case, the sketch will try to approach the set frame rate as best it can.
 
 With less than ten lines of code added to the typical processing sketch methods, we've completed our first camera app. The `onPause()` and `exit()` methods are responsible for releasing the camera properly when we pause or exit the app. The methods make sure that other apps can use the cameras and that we don't keep them locked down for our app alone. You can only have one active connection to the cameras at a time.
 
@@ -132,7 +131,7 @@ Android lists all built-in device cameras and allows us to pick the one we'd lik
 
 Let's build on the previous sketch CameraGettingStarted.pde, adding some camera controls that will remain pretty much the same throughout the chapter. Because this sketch is longer than the previous one, we'll separate it into two tabs: a main tab containing the essential `setup()` and `draw()` methods, which we'll name `CameraFrontBack` (identical to the sketch folder), and a second tab, which we'll call `CameraControls` and will contain the methods we need to `read()` the camera preview,  the methods to `start()` and `stop()` the camera, and the UI buttons we'll use to control the camera via the touch screen.
 
-Separating the code this way helps us reduce complexity within the main tab and focus on relevant code for the projects we are working on. We'll store each tab in its own Processing source file, or `pde` file, inside the sketch folder. You can always check what's inside your sketch folder using the menu  Sketch  &mapsto;  Show Sketch Folder, or the shortcut *`K`*. 
+Separating the code this way helps us reduce complexity within the main tab and focus on relevant code for the projects we are working on. We'll store each tab in its own Processing source file, or `pde` file, inside the sketch folder. You can always check what's inside your sketch folder using the menu  Sketch  &mapsto;  Show Sketch Folder, or the shortcut *`K`*.
 
 Let's first take a look at the main tab:
 
@@ -142,9 +141,13 @@ Let's first take a look at the main tab:
 In the main `CameraFrontBack` tab, we've added new features.
 
 1. Print all available device cameras to the Processing console using the `list()` method included in `KetaiCamera`.
+
 2. Set the back-facing camera ID to `0` via `setCameraID()`.
+
 3. Increase the `textSize()` for the UI buttons to `24` pixels.
+
 4. Call the custom `drawUI()` method, taking care of drawing UI buttons.
+
 5. The `draw()` method contains only a call to the `image()` method, used for displaying the camera preview, and a call to the custom `drawUI()` method we defined for our UI elements.
 
 Now let's explore the second sketch tab called `CameraControls`, where we'll keep all the code that controls the camera.
@@ -157,19 +160,26 @@ Now let's explore the second sketch tab called `CameraControls`, where we'll kee
 In this `CameraControls` tab, we use the following UI elements and camera methods to complete these steps.
 
 1. Display the UI on the screen using a custom `void` function called `drawUI()`. Void functions execute but don't return a value. The UI in this example consists of buttons that use half-transparent rectangles for their backgrounds and text labels for their names.
+
 2. Check if the camera is running using the boolean method `isStarted()`. If the method returns `TRUE`, we display "stop"; otherwise show "start."
+
 3. Capture touch screen input for camera controls using `mousePressed()`.
+
 4. Check if the user is interacting with the UI at the top of the screen using the `mouseY` constant. If we receive user input within the top `40` pixels of the screen, we continue checking the horizontal position via `mouseX`.
+
 5. Check if the user presses the leftmost button to start and stop the camera. Each button occupies one-fourth of the screen width, so we check if the horizontal tap position is within the range `(0..width)/4`. We take the same approach for the other buttons.
+
 6. Check if the user taps the second button, which is responsible for toggling between the rear and the front cameras. We acquire the current camera ID using `getCameraID()` and toggle using `setCameraID()`.
+
 7. Check if the user taps the third button, which is responsible for toggling the camera flash on and off.
+
 8. Check the camera's flash status using the `isFlashEnabled()` method and toggle the flash by calling `enableFlash()` or `disableFlash()`, depending on the returned boolean value.
 
 Let's go ahead and test the app now.
 
 ###Run the App
 
-Load or enter the two tabs of the sketch, run it on your device, and take a look at the Processing console. You should see a list of all the built-in cameras on your device with their respective IDs, as shown below. 
+Load or enter the two tabs of the sketch, run it on your device, and take a look at the Processing console. You should see a list of all the built-in cameras on your device with their respective IDs, as shown below.
 
 ```
 [camera id [0] facing:backfacing, camera id [1] facing:frontfacing]
@@ -189,7 +199,7 @@ To snap pictures and save them to the external storage of our device, we'll firs
 
 To refine the camera app UI, let's also add a Save button that allows us to save the image by tapping the touch screen. Some status info on the current camera settings also seems useful.
 
-For the Save feature, we need to modify the `draw()` method in the main `CameraSavingImages` tab and make some adjustments to `CameraControls`. The following code snippets show only the modifications to the previous code in [CameraFrontBack.pde](./cameras.html#codecameracamerafrontbackcamerafrontbackpde) and [CameraControls.pde](./cameras.html#codecameracamerafrontbackcameracontrolspde). You can also download the complete `pde` source files from the book's website, and if you’re reading the ebook, just click the green rectangle before the code listings. 
+For the Save feature, we need to modify the `draw()` method in the main `CameraSavingImages` tab and make some adjustments to `CameraControls`. The following code snippets show only the modifications to the previous code in [CameraFrontBack.pde](./cameras.html#codecameracamerafrontbackcamerafrontbackpde) and [CameraControls.pde](./cameras.html#codecameracamerafrontbackcameracontrolspde). You can also download the complete `pde` source files from the book's website, and if you’re reading the ebook, just click the green rectangle before the code listings.
 
 Let's take a look.
 
@@ -199,13 +209,21 @@ Let's take a look.
 Now let's take a look at the new code we've added to `draw()` and what it does.
 
 1. Check the status through the boolean method `isStarted()`. Returns `TRUE` if the camera is on and `FALSE` if it's off.
+
 2. Save the current style settings using `pushStyle()` to preserve the `stroke()`, `textSize()`, and default `textAlign(LEFT, TOP)` for the UI elements, and add a new `textAlign(CENTER, CENTER)` style using [`pushStyle()`][11]. Requires `popStyle()` to restore previous style settings.
+
 3. Get the index number of the currently chosen camera using `getCameraID()`.
+
 4. Get the preview image width (in pixels) of the current camera using `getImageWidth()`.
+
 5. Get the preview image height (in pixels) of the current camera using `getImageHeight()`.
+
 6. Get the image width (pixels) of a photo taken by the current camera using `getPhotoWidth()`. The photo size is separate from the camera preview size.
+
 7. Get the image height (pixels) of a photo taken by the current camera using `getPhotoHeight()`.
+
 8. Inquire about the status of the flash using the boolean method `isFlashEnabled()`. (The flash belongs to the rear camera and can only be used if the back-facing camera is on.)
+
 9. Restore the previous style settings using `popStyle()`.
 
 Changes to `draw()` mostly concern the text output that gives us some feedback on the camera settings. Next let's examine the modifications to the camera controls.
@@ -217,9 +235,13 @@ Changes to `draw()` mostly concern the text output that gives us some feedback o
 Take a look at how the code adds the following features.
 
 1. Add a UI button `text()` label for saving images.
+
 2. Add a condition to check if the user taps the added Save button.
+
 3. Save the photo to the device's external storage using `savePhoto()`. The method can also take a parameter for a custom file name.
+
 4. Receive notification from the `onSavePhotoEvent()` callback method when a picture is saved to external storage.
+
 5. Add the picture to the device's public preferred media directory on the external storage using `addToMediaLibrary()`.
 
 With the addition of the `savePhoto()` and `addToMediaLibrary()`, the app is now ready to store pictures in external storage, which makes the images public and available for other apps, such as the Android Gallery app. Once again, let's make sure we've set the permissions we need to write to external storage (see also [Setting Sketch Permissions](../geolocation.html#setting-sketch-permissions)). In the Android Permissions Selector, check the boxes next to Write_External_Storage in addition to Camera. This time, we need both to run this sketch successfully.
@@ -255,13 +277,21 @@ Let's start by looking in more detail at some of the `PImage` features we'll use
 [`PImage`][12] is a datatype for storing images that supports `.tif`, `.tga`, `.gif`, `.png`, and `.jpg` image formats. Listed below are some of the `PImage` methods that we'll be using for this project:
 
 * *[`loadImage()`][13]* Loads the pixel data for the image into its `pixels[]` array
+
 * *[`loadPixels()`][14]* Loads the pixel data for the image into its `pixels[]` array—this function must always be called before reading from or writing to `pixels[]`.
+
 * *[`updatePixels()`][15]* Updates the image with the data in the `pixels[]` array—the method is used in conjunction with `loadPixels`.
+
 * *[`pixels[]`][16]* Array containing the color of every pixel in the image
+
 * *[`get()`][17]* Reads the color of any pixel or grabs a rectangle of pixels
+
 * *[`set()`][18]* Writes a color to any pixel or writes an image into another
+
 * *[`copy()`][19]* Copies the entire image
+
 * *[`resize()`][20]* Resizes an image to a new width and height—to resize proportionally, use `0` as the value for the width or height parameter.
+
 * *[`save()`][21]* Saves the image to a TIFF, TARGA, GIF, PNG, or JPEG file
 
 [12]: http://processing.org/reference/PImage.html
@@ -287,16 +317,27 @@ Let's first take a look at the main tab.
 Here are the steps we need to take in the main tab.
 
 1. Set the camera ID to the front-facing camera using `setCameraID()`, which has the index number `1`.
+
 2. Load the `rover.jpg` resource image from the data folder using `loadImage()`, which will serve as a replacement for the background.
+
 3. Load the camera pixel array using `loadPixels()`.
+
 4. Load the snapshot picture pixel array using `loadPixels()`.
+
 5. Load the `mux` pixel array using `loadPixels()` to store the composite photo booth image.
+
 6. Parse the `pixels` array and get the current screen pixel color at array position `i`.
+
 7. Calculate the `red()` difference between the individual camera and snapshot pixel values. Convert the result into an absolute, always positive number using [`abs()`][22]. Make the same calculation for the green and blue pixel values.
+
 8. Add the differences for the red, green, and blue values to calculate the `total` difference in color, which will be used as a threshold for the composite image. Values can range from `0` (no change) to `255` (maximum change) for `total`. Use `128` (50 percent change) as the threshold to choose between the live camera or the background image.
+
 9. Set the composite `mux` image to the background image `bg` pixel for small changes in the camera image.
+
 10. Set `mux` to the camera pixel if the camera preview changed a lot.
+
 11. Update the composite `mux` pixels used to display the calculated result using `updatePixels()`.
+
 12. Display the composite image `mux` on the screen using the `image()` method, which now contains the combined pixel data from the live camera and the background image.
 
 [22]: http://processing.org/reference/abs_.html
@@ -323,6 +364,7 @@ Now let's check what's changed in `CameraControls`.
 In the Camera Controls tab, we reuse the UI button for the flash from the previous code [CameraSavingImages/CameraControls.pde](./cameras.html#codecameracamerasavingimagescameracontrolspde) and label it "Snapshot." Because the flash belongs to the back-facing camera and it's much easier for us to use the front camera here, we don't need the flash any more for this project. The Snapshot button is now responsible for copying the pixels from `cam` to `snapshot`, as shown below.
 
 1. Set the camera to manual mode using the `manualSettings()` method, locking the current camera exposure, white balance, and focus.
+
 2. Use the `copy()` method to take the snapshot. Use the snapshot image to subtract from the camera preview, erasing the background, and extracting the image foreground of the camera.
 
 ###Run the App
@@ -365,16 +407,27 @@ Let's take a look. The sketch again contains ```CameraControls```, which we don'
 There are a couple of new methods for us to look at.
 
 1. Create an empty `PImage` called `container` using the `createImage()` method to hold red and blue color pixels that have been detected in the camera preview image. The empty RGB image container matches the size of the camera preview image.
+
 2. Calculate the fullscreen camera preview image width `propWidth` proportional to the camera preview aspect ratio. We get the ratio by dividing the screen `height` by the camera preview height `camHeight` and multiplying that with the `camWidth`.
+
 3. Draw the camera preview image in fullscreen size using `image()` if no player has won the game yet (`win` equals `0`). Match the image height with the screen height and scale the image width proportionately.
+
 4. Get the color value at the image pixel location `x` and `y` using the `PImage` method `get()`. Store the value in the `color` variable `pixelColor`.
+
 5. heck for reddish pixel values within the camera preview using the `red()`, `green()`, and `blue()` `PImage` methods to extract individual color values from the `color` datatype. Consider only pixel values with a red content greater than the `high` threshold and `low` green and blue values. Use the globals `high` and `low` for the upper and lower limits of this condition.
+
 6. Check if the pixel is already taken by a color using `brightness`. If the `container` is empty and not set yet, it has a brightness value of `0`.
+
 7. Check for blueish pixel value in the camera image. It requires a color with a high blue content, while the red and green values are `low`.
+
 8. Draw the `container` using the `image()` method. This `PImage` contains all the red and blue pixels we grabbed from the camera's preview image.
+
 9. Check for the winner when at least 50 percent of the image is covered, comparing the combined `redScore` and `blueScore` values against `0.50` of all camera preview pixels.
+
 10. Fade to the winning color by changing the `fill` opacity of a colored rectangle covering the screen. To achieve a continuous fade, use the `win` variable for the alpha parameter so that the following rectangle is drawn with decreasing opacity (`0`: fully opaque, `255` fully transparent).
+
 11. Load the pixel data from the container `PImage` into the pixels[] array. The function must be called before writing to (or reading from) `pixels[]`.
+
 12. Empty all `pixels[]` in the container image pixel array. Set all pixels to the `color(0, 0, 0, 0)`, which is a fully transparent black color. The Processing rule is that you must call `loadPixels()` before you read from or write to `pixels[]`, even if some renderers seem not to require this call.
 
 Now let's test the game using some blueish and reddish objects and test how well the camera picks up their colors. Any kind of object will do as long as its color is a vibrant red or blue—the more intense its hue and brightness the better.
@@ -416,13 +469,21 @@ The face finder sketch we are writing is based on Android's `Face` detection API
 Let's take a look at the face finder methods used by the sketch.
 
 1. Create an array to store the list of faces found. It contains the *x* and *y* location of each face and the distance between the eyes.
+
 2. Center the rectangles that mark found faces around their center points.
+
 3. Turn off the fill color for the green rectangle markers so we can see though them.
+
 4. Check the boolean that lets us turn the face finder on and off.
+
 5. Call the ```findFaces()``` method in the ```FaceFinder``` class with the two parameters for the image input (```cam```) and the maximum number of faces to be found (```20```).
+
 6. Parse the results returned from the ```faces``` array. The array length varies by the number of faces that are found, so we check how often to iterate through the array by testing ```faces.length``` with the *for* loop.
+
 7. Draw a rectangle based on the returned face ```location``` ```PVector```. Use ```.x()``` and ```.y()``` to access the horizontal and vertical positions of the face location.
+
 8. Use twice the ```distance``` between the eyes to draw an approximate rectangle marking the detected face.
+
 9. Display the total number of faces found; a maximum of ```20``` can be found based on our ```findFaces()``` settings.
 
 Let's give it a try.

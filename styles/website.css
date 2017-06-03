@@ -1,0 +1,114 @@
+body {
+  background-color: blue !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+.markdown-section p, h2, h3, h4, h5, ol,li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  /*color: #252525;*/
+  line-height: 155%;
+  font-size: 1.1em
+}
+
+.markdown-section p {
+  padding: 0 0 1em 0;
+}
+
+.markdown-section p strong {
+  font-weight: 500;
+}
+
+.markdown-section em {
+  font-style: normal;
+}
+
+.markdown-section h1 {
+  font-weight: 300;
+  font-size: 4em;
+  font-family: Roboto;
+  line-height: 105%;
+  width: 80%;
+}
+
+.markdown-section h3 {
+  font-size: 2em;
+}
+
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4 {
+  font-weight: 400;
+}
+
+/* IMAGE TITLES & CODEBLOCK FILENAMES */
+.markdown-section img {
+  max-height: 700px;
+}
+
+.markdown-section h5 {
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+/* IMAGE DESCRIPTIONS */
+.markdown-section h6 {
+  margin: -.5em 0 2em 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: .8em;
+}
+
+
+.markdown-section blockquote {
+  color: #858585;
+  border-left: 1px solid #CDCDCD;
+}
+
+::selection {
+  /*background: green; /* WebKit/Blink Browsers */*/
+}
+::-moz-selection {
+  /*background: green; /* Gecko Browsers */*/
+}
+
+/* List styles */
+
+ol {
+  list-style-type: none;
+}
+
+ol li {
+  counter-increment: custom;
+  border-top: 1px solid #E8E8E8;
+  padding: 1em 0 0 0; 
+}
+
+ol li::before {
+  display: inline-block;
+  word-break: keep-all;
+  content: counter(custom);
+  color: black;
+  height: 1em;
+  padding: 0 0 5px 0;
+  text-align: left;
+  line-height: 100%;
+  position: absolute;
+  font-size: 1em;
+  font-weight: 500;
+  left: 1em;
+  margin: 5px 0 0 0;
+}
+
+
+
+/*
+
+.markdown-section
+
+p, ol, table, ul
+
+h2, h3, h4, h5
+
+*/

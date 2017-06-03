@@ -1,6 +1,4 @@
-### Chapter 3 
-
-#Using Motion and Position Sensors
+# 3. Using Motion and Position Sensors
 
 This chapter is about how to interact with sensors on an Android device using the Ketai library. Android devices come packed with sensors that allow us to write mobile apps that react to how we position and move the Android device to make them more engaging, useful, and interactive. Android sensors provide us with information about device motion, position, and environment. We'll focus on motion sensors in this chapter and take a look at some position sensors.
 
@@ -34,7 +32,7 @@ Now that we are aware of the different hardware components and the software laye
 
 ###Introducing Common Android Sensors
 
-In this chapter, we will work mostly with the accelerometer sensor and use the ***KetaiSensor*** class to access it. ***KetaiSensor*** is capable of working with all sensors. Some sensors found on the Android device are based on hardware; others are software-based and provided by the Android SDK. For the projects in this chapter, we'll focus on actual electronic hardware sensors built into the Android phone or tablet. Android distinguishes three different sensor-type categories: [motion sensors,][3] [position sensors,][4] [and environment sensors.][5] Most environment sensors have been added to the Android SDK recently (Android 4.0 Ice Cream Sandwich), so they are not typically found in devices yet. Let's take a look at the different sensors Android supports. 
+In this chapter, we will work mostly with the accelerometer sensor and use the ***KetaiSensor*** class to access it. ***KetaiSensor*** is capable of working with all sensors. Some sensors found on the Android device are based on hardware; others are software-based and provided by the Android SDK. For the projects in this chapter, we'll focus on actual electronic hardware sensors built into the Android phone or tablet. Android distinguishes three different sensor-type categories: [motion sensors,][3] [position sensors,][4] [and environment sensors.][5] Most environment sensors have been added to the Android SDK recently (Android 4.0 Ice Cream Sandwich), so they are not typically found in devices yet. Let's take a look at the different sensors Android supports.
 
 [3]: http://developer.android.com/guide/topics/sensors/sensors_motion.html
 [4]: http://developer.android.com/guide/topics/sensors/sensors_position.html
@@ -44,11 +42,20 @@ In this chapter, we will work mostly with the accelerometer sensor and use the *
 
 The following sensors let you monitor the motion of the device:
 
-* **Accelerometer (hardware)** Determines the orientation of the device as well as its acceleration in three-dimensional space, which we'll use to detect shakes
-* **Gravity (software-based)** Calculates the orientation of the device, returning a three-dimensional vector indicating the direction and magnitude of gravity
-* **Gyroscope (hardware)** Measures the movement of the device, returning the rate of rotation around each device axis—if available, this sensor is often used for games that rely on immediate and precise responses to device movement.
-* **Linear Acceleration (software-based)** Calculates the movement of the device, returning a three-dimensional vector that indicates the acceleration of each device axis, excluding gravity
-* **Rotation Vector (software-based)** Calculates the orientation of the device, returning an angle and an axis—it can simplify calculations for 3D apps, providing a rotation angle combined with a rotation axis around which the device rotated.
+* **Accelerometer (hardware)**
+Determines the orientation of the device as well as its acceleration in three-dimensional space, which we'll use to detect shakes
+
+* **Gravity (software-based)**
+Calculates the orientation of the device, returning a three-dimensional vector indicating the direction and magnitude of gravity
+
+* **Gyroscope (hardware)**
+Measures the movement of the device, returning the rate of rotation around each device axis—if available, this sensor is often used for games that rely on immediate and precise responses to device movement.
+
+* **Linear Acceleration (software-based)**
+Calculates the movement of the device, returning a three-dimensional vector that indicates the acceleration of each device axis, excluding gravity
+
+* **Rotation Vector (software-based)**
+Calculates the orientation of the device, returning an angle and an axis—it can simplify calculations for 3D apps, providing a rotation angle combined with a rotation axis around which the device rotated.
 
 Now let's take a look at the sensors that deal with the device's position.
 
@@ -56,9 +63,11 @@ Now let's take a look at the sensors that deal with the device's position.
 
 The following sensors let you to determine the location or position of the device:
 
-* **Magnetic Field** A three-axis digital compass that senses the bearing of the device relative to magnetic north
+* **Magnetic Field**
+A three-axis digital compass that senses the bearing of the device relative to magnetic north
 
-* **Proximity** Senses the distance to an object measured from the sensor that is mounted in close proximity to the device speaker—this is commonly used to determine if the device is held toward, or removed from, the ear.
+* **Proximity**
+Senses the distance to an object measured from the sensor that is mounted in close proximity to the device speaker—this is commonly used to determine if the device is held toward, or removed from, the ear.
 
 Now let's take a look at the sensors that measure the device's environment.
 
@@ -66,10 +75,17 @@ Now let's take a look at the sensors that measure the device's environment.
 
 The following sensors let you monitor environmental properties or measure the device context:
 
-* **Light** Senses the ambient light level
-* **Pressure** Senses the air pressure (the atmospheric pressure)
-* **Relative Humidity** Senses the humidity of the air (in percent)
-* **Temperature** Senses the ambient air temperature
+* **Light**
+Senses the ambient light level
+
+* **Pressure**
+Senses the air pressure (the atmospheric pressure)
+
+* **Relative Humidity**
+Senses the humidity of the air (in percent)
+
+* **Temperature**
+Senses the ambient air temperature
 
 Since this list will grow and remain a moving target as new generations of devices and APIs are released, the [Android Sensor website][6] is the best source for keeping an eye on changes and additions.
 
@@ -81,19 +97,25 @@ Let's start by looking at the ```KetaiSensor``` class, which we'll use when we w
 
 For the sketches we'll write in this chapter, the following ```KetaiSensor``` methods are the most relevant:
 
-* *```list()```* Returns a list of available sensors on the device
+* *```list()```*
+Returns a list of available sensors on the device
 
-* *```onAccelerometerEvent()```* Returns *x*-, *y*-, and *z*-axis acceleration minus g-force in meters per second squared (m/s<sup>2</sup>)
+* *```onAccelerometerEvent()```*
+Returns *x*-, *y*-, and *z*-axis acceleration minus g-force in meters per second squared (m/s<sup>2</sup>)
 
-* *```onMagneticFieldEvent()```* Returns the *x*, *y*, and *z* values for the ambient magnetic field in units of microtesla
+* *```onMagneticFieldEvent()```*
+Returns the *x*, *y*, and *z* values for the ambient magnetic field in units of microtesla
 
-* *```onLightEvent()```* Returns the light level in SI units of lux
+* *```onLightEvent()```*
+Returns the light level in SI units of lux
 
-* *```onProximityEvent()```* Returns the distance to an object measured from the device surface in centimeters—depending on the device, a typical output is ```0/1``` or ```0/5```—the sensor is typically located next to the speaker on the device. 
+* *```onProximityEvent()```*
+Returns the distance to an object measured from the device surface in centimeters—depending on the device, a typical output is ```0/1``` or ```0/5```—the sensor is typically located next to the speaker on the device.
 
-* *```onGyroscopeEvent()```* Returns the *x*, *y*, and *z* rates of rotation around the *x*-, *y*-, and *z*-axes in degrees
+* *```onGyroscopeEvent()```*
+Returns the *x*, *y*, and *z* rates of rotation around the *x*-, *y*-, and *z*-axes in degrees
 
-Because a multitude of devices on the market exist, it's important that we start by checking the sensors that are built into our Android device. Let's use the ```KetaiSensor``` class to see what sensors are built into our Android device. 
+Because a multitude of devices on the market exist, it's important that we start by checking the sensors that are built into our Android device. Let's use the ```KetaiSensor``` class to see what sensors are built into our Android device.
 
 ###List the Built-In Sensors on an Android Device
 
@@ -122,7 +144,7 @@ KetaiSensor sensor: Orientation Sensor:3
 KetaiSensor sensor: Corrected Gyroscope Sensor:4
 ```
 
-The Asus Transformer Prime tablet reports the following sensors: 
+The Asus Transformer Prime tablet reports the following sensors:
 
 ```
 KetaiSensor sensor: MPL rotation vector:11
@@ -136,41 +158,45 @@ KetaiSensor sensor: Lite-On al3010 Ambient Light Sensor:5
 KetaiSensor sensor: Intersilisl29018 Proximity sensor:8
 ```
 
-The Google Nexus 6 reports a lists 32 software and hardware sensors. The list includes some hardware info, its type, and an ID. Your results, no doubt, will differ; there are a lot of Android makes and models out there today. 
+The Google Nexus 6 reports a lists 32 software and hardware sensors. The list includes some hardware info, its type, and an ID. Your results, no doubt, will differ; there are a lot of Android makes and models out there today.
 
 The list includes more than hardware sensors. The Android SDK also includes software-based sensors, known as fused sensors. Fused sensors use multiple hardware sensors and an Android software layer to improve the readings from one individual sensor. They make it easier for us as developers to work with the resulting data. The ```Gravity```, ```Linear Acceleration```, and ```Rotation Vector``` sensors are examples of such hybrid sensors, combining gyroscope, accelerometer, and compass data to improve the results. In the list of available sensors, however, no distinction is made between hardware sensors and fused sensors.
 
 This also means that even if you don't update your device hardware, new versions of the Android API might include fused software-based sensor types that might be easier to use or might produce better results. For example, if you browse Android's sensor hardware overview and switch the "Filter by API Level" to ```8``` (http://developer.android.com/reference/android/hardware/Sensor.html), you will see a list of the sensor types and methods that have been added to the API since the release of API ```8```.
-          
+
 As you start adding methods from the Ketai library to the sketch, note that contributed libraries are not highlighted by the Processing IDE because they are not part of the core. This is not a big deal, but it's something you should be aware of.
 
 Here's the code we'll typically use to interact with a device using the classes and methods that the Ketai library provides:
 
 ```
 import ketai.sensors.*;	                             // 1
-KetaiSensor sensor;		                             // 2
+KetaiSensor sensor;		                               // 2
 
 void setup()
 {
-sensor = new KetaiSensor(this);		                 // 3
-sensor.start();		                                 // 4
+sensor = new KetaiSensor(this);		                   // 3
+sensor.start();		                                   // 4
 }
 
 void draw()
 {
 }
 
-void onAccelerometerEvent(float x, float y, float z)       // 5
+void onAccelerometerEvent(float x, float y, float z) // 5
 {
 }
 ```
 
-Let's take a look at the code that is specific to ```KetaiSensor```. 
+Let's take a look at the code that is specific to ```KetaiSensor```.
 
 1. Import the Ketai sensor library package from ```Sketchbook/libraries```.
+
 2. Declare a ```sensor``` variable of type ```KetaiSensor```, and register it for any available Android sensors.
+
 3. Instantiate the ```KetaiSensor``` class to create a ```sensor``` object, which makes ```KetaiSensor``` methods available.
+
 4. Start listening for accelerometer sensor events.
+
 5. Each time the accelerometer changes value, receive a callback for the *x*, *y*, and *z* sensor axes.
 
 Sensor values change at a different rate than the ```draw()``` method does. By default,  ```draw()``` runs ```60``` times per second. The sensor can report much faster than that rate, which is why we work with an ```onAccelerometerEvent()``` callback method. It is called every time we receive a new value from the accelerometer.
@@ -200,7 +226,9 @@ Now let's dive into the code.
 Let's take a closer look at the Processing methods we've used for the first time.
 
 1. Align the text to the ```CENTER``` of the screen using [```textAlign()```.][7]
+
 2. Set the text size to ```72``` using [```textSize()```.][8] The default text size is tiny and hard to decipher in motion.
+
 3. Display the data using [```text()```.][9] We output a series of strings tied together via the plus sign (```+```), known as the concatenation operator. This way we can use only one text method to display all the labels and reformatted values we need.
 
 Acceleration values are measured in m/s<sup>2</sup>. If the device is sitting *flat* and *still* on the table, the accelerometer reads a magnitude of ```+9.81``` m/s<sup>2</sup>. This number represents the acceleration needed to hold the device up against  g-force and the result of the following calculation: acceleration of the device (```0``` m/s<sup>2</sup>) minus the acceleration due to gravity [(```-9.81``` m/s<sup>2</sup>).][10] If we move and rotate the device, we can observe values in the range of roughly ```-10``` to ```10``` m/s<sup>2</sup>. Shake the device and the values will surge momentarily to maybe ```+-20``` m/s<sup>2</sup>. Values beyond that become tricky to observe; feel free to try.
@@ -241,9 +269,13 @@ To create a sketch using multiple sensors, we follow these steps:
 Let's take a closer look at the different event methods.
 
 1. Rotate the screen [```orientation()```.][12]
+
 2. Measure the strength of the ambient magnetic field in microteslas along the *x*-, *y*-, and *z*-axes.
+
 3. Capture the light intensity, measured in lux ambient illumination.
+
 4. Measure the distance between the device display and an object (ear, hand, and so on). Some proximity sensors support only near (```1```) or far (```0```) measurements.
+
 5. Tap on the touch screen to invoke the ```start()``` and ```stop()``` methods for the sensors on the device. This will start and stop all sensors here, as all of them are registered with the same ```sensor``` object.
 
 Let's take a look to see if all the sensors return values.
@@ -268,11 +300,11 @@ Tapping the screen calls the ```stop()``` method and stops all the sensors. If t
 
 To work with the gyro as well, add the following code snippet to the [sketch above](#display-values-from-multiple-sensors), add a global ```rotation``` variable of type ```PVector```, and rerun the app on the device:
 
-<!-- 
-3.3 NOTE: 
-wording adjusted slightly to not 
-reference pages on 'Your sensor list' 
-link and 'sketch above' link 
+<!--
+3.3 NOTE:
+wording adjusted slightly to not
+reference pages on 'Your sensor list'
+link and 'sketch above' link
 -->
 
 ```
@@ -293,13 +325,13 @@ Please keep in mind that features that rely on built-in sensor hardware cannot b
 
 [13]: http://code.google.com/p/openintents/downloads/list.
 
-<!-- 
+<!--
 3.4 NOTE: Link goes to archived page
 -->
 
 ###Build a Motion-Based Color Mixer and Palette
 
-<!-- 3.5 QUESTION - 
+<!-- 3.5 QUESTION -
 Not seeing section from PDF in the .pml
 Simulating Sensors in the Emulator - p3.0.pdf page 53
 Should we include?
@@ -315,7 +347,7 @@ Now let's move ahead and connect the accelerometer to change color hues. Since w
 
 Here's a description of ```map()``` parameters. Once we've learned how to use it, we'll find ourselves using it all the time:
 
-<!-- 3.6 NOTE - 
+<!-- 3.6 NOTE -
 Quick edits to re-title links ('image here', 'code above') without page numbers
 -->
 
@@ -323,14 +355,23 @@ Quick edits to re-title links ('image here', 'code above') without page numbers
 map(value, low1, high1, low2, high2)
 ```
 
-* *```value```* Incoming value to be converted
-* *```low1```* Lower bound of the value's current range
-* *```high1```* Upper bound of the value's current range
-* *```low2```* Lower bound of the value's target range
-* *```high2```* Upper bound of the value's target range
+* *```value```*
+Incoming value to be converted
 
-<!-- 3.7 NOTE - 
-Link to image (following 'as shown in' in .pdf) 
+* *```low1```*
+Lower bound of the value's current range
+
+* *```high1```*
+Upper bound of the value's current range
+
+* *```low2```*
+Lower bound of the value's target range
+
+* *```high2```*
+Upper bound of the value's target range
+
+<!-- 3.7 NOTE -
+Link to image (following 'as shown in' in .pdf)
 removed since they are adjacent.
 -->
 
@@ -386,9 +427,13 @@ Let's also display the individual values that correspond to the red, green, and 
 Let's take a second look at the methods we've added.
 
 1. Declare the variable ```swatch``` to be of type ```color```.
+
 2. Apply the swatch color to the ```fill()``` before drawing the color picker rectangle.
+
 3. Draw the color picker rectangle.
+
 4. Extract the red, green, and blue values individually from the ```swatch``` color.
+
 5. Update the ```swatch``` color.
 
 Let's test the app.
@@ -438,14 +483,23 @@ Let's now put this into the context of our color mixer sketch.
 Let's take a look at the main additions to the sketch.
 
 1. Set the quantity of colors to be stored to ```8```.
+
 2. Set up the color [array][15] to hold the previously defined number of colors.
+
 3. Set an index variable that indicates the current color we are working with in the palette, represented by the index number in the color array.
+
 4. [Round][17] the floating point value of the color value to an integer so we can read it better.
+
 5. Iterate through the color array using a [```for```][16] loop.
+
 6. Step through all the colors in the list using the ```for``` loop, and set the fill color for the rectangle to be drawn.
+
 7. Display each color in the array with a rectangle set to the individual fill color in the list. Rectangles are displayed in sequence on the bottom of the screen; their width and position is defined by the number of colors in the list. The rectangle size is determined by the screen width and then divided by the total number of swatches, ```num```.
+
 8. Assign the three color values to the palette, cast as color type.
+
 9. Increment the index number, moving on to the next position in the list.
+
 10. Reset the index when the ```palette``` is full.
 
 Let's run the sketch now.
@@ -478,12 +532,19 @@ Processing provides a few very useful vector math methods, including [```angleIn
 Here's how we proceed to implement the shake detection using ```PVector```.
 
 1. Create a processing vector of type ```PVector```.
+
 2. Create a second vector as a reference to compare change.
+
 3. Use the first ```.x``` component of the ```accelerometer``` vector. The second component can be accessed via ```.y```, and the third component via ```.z```.
+
 4. Calculate the ```delta``` between the current and the previous vector.
+
 5. Check the ```delta``` in radians against a threshold of ```45``` degrees.
+
 6. Set the reference vector to the current one as the last step in ```draw()```.
+
 7. Assign raw accelerometers to the accelerometer ```PVector```.
+
 8. Set all palette colors in the array to the color black.
 
 Let's run the code first and test the shake detection on the device. It helps us better understand some of the shake detection we talked about.

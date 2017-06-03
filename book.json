@@ -1,9 +1,9 @@
 
 {
     "plugins": ["include-codeblock", "codesnippet"],
-    
+
     "variables": {
-    
+
         "chapter1": "[Chapter 1, Getting Started](../gettingStarted.html)",
         "chapter2": "[Chapter 2, Working with the Touch Screen Display](../display.html)",
         "chapter3": "[Chapter 3, Using Motion and Position Sensors](../sensors.html)",
@@ -17,8 +17,17 @@
         "chapter11": "[Chapter 11, Introducing 3D Graphics with OpenGL](../mobile3d.html)",
         "chapter12": "[Chapter 12, Working with Shapes and 3D Object](../shapes.html)",
         "chapter13": "[Chapter 13, Sharing and Publishing Applications](../webapps.html)",
-        "troubleshooting": "[Troubleshooting](../troubleshooting.html)" 
-        
-    }
-    
+        "troubleshooting": "[Troubleshooting](../troubleshooting.html)"
+
+    },
+
+    "styles": {
+       "website": "styles/website.css",
+       "ebook": "styles/ebook.css",
+       "pdf": "styles/pdf.css",
+       "mobi": "styles/mobi.css",
+       "epub": "styles/epub.css"
+   }
+
+
 }

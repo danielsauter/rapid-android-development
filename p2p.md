@@ -1,6 +1,4 @@
-###Chapter: 7
-
-#Peer-to-Peer Networking Using Bluetooth and Wi-Fi Direct
+# 7. Peer-to-Peer Networking Using Bluetooth and Wi-Fi Direct
 
 In this chapter, we’ll give peer-to-peer (`P2P`) networks the attention they deserve. We’ve mastered the exchange of data between Android devices using Wi-Fi. Now it’s time to end our dependence on wireless infrastructure. Popular services such as Skype and BitTorrent are only two examples that use [peer-to-peer technology.][0] However, the concept of P2P communication doesn’t stop with telephony or file sharing and has little do with copyright.
 
@@ -18,15 +16,20 @@ Then we’ll move on to Wi-Fi Direct, an emerging peer-to-peer networking standa
 
 For the apps we’ll develop in this chapter, we’ll use the following networking and UI classes from the Ketai library:
 
-  * *[`KetaiBluetooth`][1]*   A Ketai class for working with [Bluetooth on Android devices][2]—the class contains the necessary methods for Bluetooth discovery, pairing, and communication using the popular Bluetooth standard
+  * *[`KetaiBluetooth`][1]*
+  A Ketai class for working with [Bluetooth on Android devices][2]—the class contains the necessary methods for Bluetooth discovery, pairing, and communication using the popular Bluetooth standard
 
-  * *[`KetaiWiFiDirect`][3]*   A Ketai class to simplify working with [Wi-Fi Direct on Android devices][4]—the class contains the necessary methods for Wi-Fi Direct peer discovery and data exchange. In a Wi-Fi Direct network, every Wi-Fi Direct-enabled device can serve as the access point for the other devices in the Wi-Fi network.
+  * *[`KetaiWiFiDirect`][3]*
+  A Ketai class to simplify working with [Wi-Fi Direct on Android devices][4]—the class contains the necessary methods for Wi-Fi Direct peer discovery and data exchange. In a Wi-Fi Direct network, every Wi-Fi Direct-enabled device can serve as the access point for the other devices in the Wi-Fi network.
 
-  * *[`KetaiOSCMessage`][5]*   A Ketai class that is identical to the oscP5 library’s `OscMessage` class we worked with in [Using the Open Sound Control Networking Format](../networking.html#using-the-open-sound-control-networking-format), with the difference being that it allows us to create `KetaiOSCMessage` using a byte array—it makes some private methods in `OscMessage` public so we can use it for Bluetooth communication.
+  * *[`KetaiOSCMessage`][5]*
+  A Ketai class that is identical to the oscP5 library’s `OscMessage` class we worked with in [Using the Open Sound Control Networking Format](../networking.html#using-the-open-sound-control-networking-format), with the difference being that it allows us to create `KetaiOSCMessage` using a byte array—it makes some private methods in `OscMessage` public so we can use it for Bluetooth communication.
 
-  * *[`KetaiList`][6]*   A Ketai UI class that makes it easier to work with the native Android `ListView` widget—this class contains methods to populate, display, refresh, and retrieve strings from a selected list item. A `KetaiList` can be created using a `String` array or a `String` [`ArrayList`][7].
+  * *[`KetaiList`][6]*
+  A Ketai UI class that makes it easier to work with the native Android `ListView` widget—this class contains methods to populate, display, refresh, and retrieve strings from a selected list item. A `KetaiList` can be created using a `String` array or a `String` [`ArrayList`][7].
 
-  * *[`KetaiKeyboard`][8]*   A class included in the Ketai `UI` package that allows us to toggle the Android software keyboard on and off without importing additional Android UI classes
+  * *[`KetaiKeyboard`][8]*
+  A class included in the Ketai `UI` package that allows us to toggle the Android software keyboard on and off without importing additional Android UI classes
 
 We’ll start with Bluetooth because it’s the most ubiquitous peer-to-peer technology. Let’s take a closer look at the Bluetooth methods that Ketai provides.
 
@@ -74,12 +77,9 @@ We can summarize the four states an activity can take like this:
 
 *   The activity is active and running in the foreground on top of the stack.
 
-
 *   The activity lost focus because another non-fullscreen activity runs on top of the activity.
 
-
 *   The activity stopped because another activity is covering it completely.
-
 
 *   The paused or stopped activity is killed to make memory available for the active activity.
 
@@ -125,7 +125,7 @@ Andreas Schlegel has updated his excellent [ControlP5][19] UI library (as of 09/
 
 Let’s get started with the main tab of our `BluetoothCursors` sketch.
 
-<!-- 
+<!--
 7.0 ISSUE(S):
 needs this included in sketch:
 public void settings() {
@@ -135,9 +135,9 @@ public void settings() {
 older device does not run as pictured (is still workable but a bit jumbled visually)
 -->
 
-#####code/P2P/BluetoothCursors/BluetoothCursors.pde 
+#####code/P2P/BluetoothCursors/BluetoothCursors.pde
 [include](code/P2P/BluetoothCursors/BluetoothCursors.pde)  
- 
+
 Here are the steps we need to take.
 
  1.  Import the `os.Bundle` Android package containing the `onCreate()` method we need to initialize Bluetooth.
@@ -182,9 +182,9 @@ Here are the steps we need to take.
 
 We’ve completed the crucial components of our sketch in `setup()` and `draw()`. To enable Bluetooth when the app starts up, we’ll need to work with the activity life cycle as described in [Working with the Android Activity Life Cycle](../p2p.html#working-with-the-android-activity-life-cycle). We’ll put the code to enable Bluetooth into the tab named `EnableBluetooth`. Let’s take a look.
 
-#####code/P2P/BluetoothCursors/EnableBluetooth.pde 
+#####code/P2P/BluetoothCursors/EnableBluetooth.pde
 [include](code/P2P/BluetoothCursors/EnableBluetooth.pde)  
- 
+
 These are the steps we need to take to enable Bluetooth.
 
  1.  Use the Android `onCreate()` method to initialize our Bluetooth object. The method is called when the activity is starting.
@@ -203,9 +203,9 @@ Because the Bluetooth pairing process requires us to select a device from a whol
 
 Here are the steps to programming the UI.
 
-#####code/P2P/BluetoothCursors/UI.pde 
+#####code/P2P/BluetoothCursors/UI.pde
 [include](code/P2P/BluetoothCursors/UI.pde)  
- 
+
 Let’s take a look at the steps.
 
  1.  Toggle the Android’s software keyboard using `toggle()`. Make the `KetaiKeyboard` visible if it’s hidden; hide it if it’s visible.
@@ -256,49 +256,49 @@ On your first device (currently disconnected from USB), show the software keyboa
 
 
 ```
- Android 1 
- [b] - make this device discoverable 
- [d] - discover devices 
- [c] - pick device to connect to 
- [p] - list paired devices 
- [i] - show Bluetooth info 
- 
- %%%b 
- Alert: 
- An app on your phone wants to 
- make your phone discoverable 
- by other Bluetooth devices for 
- 300 seconds. 
+ Android 1
+ [b] - make this device discoverable
+ [d] - discover devices
+ [c] - pick device to connect to
+ [p] - list paired devices
+ [i] - show Bluetooth info
+
+ %%%b
+ Alert:
+ An app on your phone wants to
+ make your phone discoverable
+ by other Bluetooth devices for
+ 300 seconds.
  %%%ALLOW
 ```
   Now switch to your second device (currently connected to USB), and follow the process of discovering devices. Pick the name of the first Android device:
 
 
 ```
- Android 2 
- %%%d 
- Discovered Devices 
- [0] Nexus 6 
- %%%c 
+ Android 2
+ %%%d
+ Discovered Devices
+ [0] Nexus 6
+ %%%c
  %%%Nexus 6
 ```
 
 ```
- Android 1 
- Bluetooth pairing Request 
+ Android 1
+ Bluetooth pairing Request
  %%%pair
 ```
 
 ```
- Android 2 
- %%%p 
- Paired Devices 
- [0] Nexus 6 
- %%%i 
- Sever Running: true 
- Device Discoverable: true 
- 
- Connected Devices: 
+ Android 2
+ %%%p
+ Paired Devices
+ [0] Nexus 6
+ %%%i
+ Sever Running: true
+ Device Discoverable: true
+
+ Connected Devices:
  Nexus S (78:47:1D:A6:20:48)
 ```
 When your screen output looks like what’s shown above, the Bluetooth server is running on your second device and you have your first device show up in the list of connected devices. You are now ready to interact.
@@ -321,7 +321,7 @@ For this survey app, we’ll broadcast a number of questions that you can imagin
 
 ![](images/P2P/SurveyServerClient.png)
 #####Figure 7.1 - Bluetooth survey app.
-######The illustration shows the Bluetooth server running on one device (left) and a client running on the other (right). The server determines which question is displayed on the client screens by pressing the arrow pointing to the right (next question) and left (previous question). 
+######The illustration shows the Bluetooth server running on one device (left) and a client running on the other (right). The server determines which question is displayed on the client screens by pressing the arrow pointing to the right (next question) and left (previous question).
 
 Both server and client receive real-time feedback on how the question was answered.  There are many examples of survey and polling applications that are available online. They typically use proprietary online databases or a dedicated hardware infrastructure. Virtually no app exists using peer-to-peer connectivity on mobile devices—let’s change that. Let’s go ahead and write a survey app using some of the code we’ve already created for the remote cursor app in [Connect Two Android Devices via Bluetooth](../p2p.html#connect-two-android-devices-via-bluetooth).
 
@@ -332,7 +332,7 @@ Our approach is as follows. We’ll write a sketch that we’ll load onto every 
 ###Program the BluetoothSurvey Main Tab
 Let’s take a look at our main tab, which contains the following methods: `setup()`, `draw()`, `onBluetoothDataEvent()`, `getBluetoothInformation()`, `loadQuestions()`, `requestQuestions()`, and `findQuestion()`.
 
-#####code/P2P/BluetoothSurvey/BluetoothSurvey.pde 
+#####code/P2P/BluetoothSurvey/BluetoothSurvey.pde
 [include](code/P2P/BluetoothSurvey/BluetoothSurvey.pde)  
 
 These are the main steps we need to take to implement the survey app.
@@ -389,7 +389,7 @@ Now let’s take a look at the Question class, which gets its own tab in the ske
 
 <!-- doesn't appear to be fully functional? devices connect but tab only appears on second phone. limited space of screen on older phone becomes more of an issue. -->
 
-#####code/P2P/BluetoothSurvey/Question.pde 
+#####code/P2P/BluetoothSurvey/Question.pde
 [include](code/P2P/BluetoothSurvey/Question.pde)
 
 Let’s take a closer look at the `Question` class variables and methods.
@@ -419,7 +419,7 @@ Now it’s time modify the `UI` tab.
 We need to make few adjustments to the `UI` tab to modify it for our survey app based on the previous code [P2P/BluetoothCursors/UI.pde](../p2p.html#codep2pbluetoothcursorsuipde)
 . Most of it is redundant and otherwise called out.
 
-#####code/P2P/BluetoothSurvey/UI.pde 
+#####code/P2P/BluetoothSurvey/UI.pde
 [include](code/P2P/BluetoothSurvey/UI.pde)  
 
 Here are the changes we’ve made to the `UI` tab.
@@ -475,9 +475,9 @@ Using Wi-Fi Direct, we’ll be able to use the `OSC` protocol again to send data
 
 ###Modify the Main Tab
 
-#####code/P2P/WiFiDirectCursors/WiFiDirectCursors.pde 
+#####code/P2P/WiFiDirectCursors/WiFiDirectCursors.pde
 [include](code/P2P/WiFiDirectCursors/WiFiDirectCursors.pde)
-  
+
 Let’s take a look at the steps we took to change our remote cursor app to use Wi-Fi Direct.
 
  1.  Import the Ketai library’s Wi-Fi Direct package.

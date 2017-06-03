@@ -1,0 +1,6926 @@
+{
+"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and\/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https:\/\/codekitapp.com\/",
+"buildSteps": [
+	{
+		"name": "Process All Remaining Files and Folders",
+		"stepType": 1,
+		"uuidString": "201AADDD-34B5-47B1-95E9-68845D01EDE0"
+		}
+	],
+"creatorBuild": "25813",
+"files": {
+	"\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.gitignore",
+		"oF": 0
+		},
+	"\/_book\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/.gitignore",
+		"oF": 0
+		},
+	"\/_book\/cameras.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/cameras.html",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraFaceFinder\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraFaceFinder\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraFaceFinder\/CameraFaceFinder.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraFaceFinder\/CameraFaceFinder.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraFaceFinder\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraFaceFinder\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraFrontBack\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraFrontBack\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraFrontBack\/CameraControls.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraFrontBack\/CameraControls.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraFrontBack\/CameraFrontBack.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraFrontBack\/CameraFrontBack.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraFrontBack\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraFrontBack\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraGettingStarted.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraGettingStarted.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraMagicMarker\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraMagicMarker\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraMagicMarker\/CameraControls.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraMagicMarker\/CameraControls.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraMagicMarker\/CameraMagicMarker.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraMagicMarker\/CameraMagicMarker.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraMagicMarker\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraMagicMarker\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraPhotoBooth\/CameraControls.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraPhotoBooth\/CameraControls.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraPhotoBooth\/CameraPhotoBooth.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraPhotoBooth\/CameraPhotoBooth.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraPhotoBooth\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/_book\/code\/camera\/CameraPhotoBooth\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/_book\/code\/camera\/CameraSavingImages\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraSavingImages\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraSavingImages\/CameraControls.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraSavingImages\/CameraControls.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraSavingImages\/CameraSavingImages.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraSavingImages\/CameraSavingImages.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/CameraSavingImages\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/camera\/CameraSavingImages\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/camera\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/_book\/code\/camera\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/_book\/code\/Data\/DataEarthquakes\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataEarthquakes\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataEarthquakes\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataEarthquakes\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataEarthquakes\/data\/all_hour_2015-02-24.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataEarthquakes\/data\/all_hour_2015-02-24.txt",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataEarthquakes\/data\/eqs1hour_2012-07-24.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataEarthquakes\/data\/eqs1hour_2012-07-24.txt",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataEarthquakes\/data\/world.png": {
+		"ft": 32768,
+		"iS": 375445,
+		"oA": 0,
+		"oAP": "\/_book\/code\/Data\/DataEarthquakes\/data\/world.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/code\/Data\/DataEarthquakes\/DataEarthquakes.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataEarthquakes\/DataEarthquakes.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataEarthquakes\/Location.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataEarthquakes\/Location.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataEarthquakes\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataEarthquakes\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataEarthquakesShake\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataEarthquakesShake\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataEarthquakesShake\/data\/all_week_2015-02-24.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataEarthquakesShake\/data\/all_week_2015-02-24.txt",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataEarthquakesShake\/data\/eqs7day-M2_5_2012-08-14.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataEarthquakesShake\/data\/eqs7day-M2_5_2012-08-14.txt",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataEarthquakesShake\/data\/world.png": {
+		"ft": 32768,
+		"iS": 375445,
+		"oA": 0,
+		"oAP": "\/_book\/code\/Data\/DataEarthquakesShake\/data\/world.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/code\/Data\/DataEarthquakesShake\/DataEarthquakesShake.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataEarthquakesShake\/DataEarthquakesShake.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataEarthquakesShake\/Location.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataEarthquakesShake\/Location.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataEarthquakesShake\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataEarthquakesShake\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataRead\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataRead\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataRead\/data\/colors.csv": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataRead\/data\/colors.csv",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataRead\/DataRead.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataRead\/DataRead.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataRead\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataRead\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataReadGroceries\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataReadGroceries\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataReadGroceries\/data\/groceries.tsv": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataReadGroceries\/data\/groceries.tsv",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataReadGroceries\/DataReadGroceries.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataReadGroceries\/DataReadGroceries.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataReadGroceries\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataReadGroceries\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataWrite\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataWrite\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataWrite\/DataWrite.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataWrite\/DataWrite.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataWrite\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataWrite\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataWriteExternal\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataWriteExternal\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataWriteExternal\/DataWriteExternal.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataWriteExternal\/DataWriteExternal.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Data\/DataWriteExternal\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Data\/DataWriteExternal\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/display\/gestures.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/display\/gestures.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/display\/MouseSpeedHue.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/display\/MouseSpeedHue.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/display\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/_book\/code\/display\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/_book\/code\/geolocation\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/geolocation\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/geolocation\/DestinationCompass.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/geolocation\/DestinationCompass.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/geolocation\/DeviceLocator.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/geolocation\/DeviceLocator.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/geolocation\/geolocation.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/geolocation\/geolocation.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/geolocation\/LocationDistance.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/geolocation\/LocationDistance.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/geolocation\/LocationSpeed.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/geolocation\/LocationSpeed.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/geolocation\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/_book\/code\/geolocation\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/_book\/code\/gettingStarted\/ellipseMouse.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/gettingStarted\/ellipseMouse.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/gettingStarted\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/_book\/code\/gettingStarted\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/_book\/code\/gettingStarted\/test.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/gettingStarted\/test.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Mobile3D\/CameraTexture\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Mobile3D\/CameraTexture\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Mobile3D\/CameraTexture\/CameraTexture.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Mobile3D\/CameraTexture\/CameraTexture.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Mobile3D\/CameraTexture\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Mobile3D\/CameraTexture\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/Mobile3D\/Geometry\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Mobile3D\/Geometry\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Mobile3D\/Geometry\/Geometry.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Mobile3D\/Geometry\/Geometry.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Mobile3D\/Geometry\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Mobile3D\/Geometry\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/Mobile3D\/LoadFont\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Mobile3D\/LoadFont\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Mobile3D\/LoadFont\/data\/DroidSerif-48.vlw": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Mobile3D\/LoadFont\/data\/DroidSerif-48.vlw",
+		"oF": 0
+		},
+	"\/_book\/code\/Mobile3D\/LoadFont\/LoadFont.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Mobile3D\/LoadFont\/LoadFont.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Mobile3D\/PrimitivesLights\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Mobile3D\/PrimitivesLights\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Mobile3D\/PrimitivesLights\/PrimitivesLights.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Mobile3D\/PrimitivesLights\/PrimitivesLights.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Mobile3D\/SpotLights\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Mobile3D\/SpotLights\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Mobile3D\/SpotLights\/SpotLights.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Mobile3D\/SpotLights\/SpotLights.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Mobile3D\/TextLights\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Mobile3D\/TextLights\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Mobile3D\/TextLights\/TextLights.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Mobile3D\/TextLights\/TextLights.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Mobile3D\/TexturedSphere\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Mobile3D\/TexturedSphere\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Mobile3D\/TexturedSphere\/data\/earth_lights.jpg": {
+		"ft": 16384,
+		"iS": 547269,
+		"oA": 0,
+		"oAP": "\/_book\/code\/Mobile3D\/TexturedSphere\/data\/earth_lights.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/code\/Mobile3D\/TexturedSphere\/TexturedSphere.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Mobile3D\/TexturedSphere\/TexturedSphere.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/MultiplayerBalance\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/MultiplayerBalance\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/MultiplayerBalance\/data\/marble.png": {
+		"ft": 32768,
+		"iS": 6548,
+		"oA": 0,
+		"oAP": "\/_book\/code\/Networking\/MultiplayerBalance\/data\/marble.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/code\/Networking\/MultiplayerBalance\/MultiplayerBalance.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/MultiplayerBalance\/MultiplayerBalance.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/MultiplayerBalance\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/MultiplayerBalance\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/WiFiDataExchangeAndroid\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/WiFiDataExchangeAndroid\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/WiFiDataExchangeAndroid\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/WiFiDataExchangeAndroid\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/WiFiDataExchangeAndroid\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/WiFiDataExchangeAndroid\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/WiFiDataExchangeAndroid\/WiFiDataExchangeAndroid.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/WiFiDataExchangeAndroid\/WiFiDataExchangeAndroid.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/WiFiDataExchangeAndroidDrawing\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/WiFiDataExchangeAndroidDrawing\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/WiFiDataExchangeAndroidDrawing\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/WiFiDataExchangeAndroidDrawing\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/WiFiDataExchangeAndroidDrawing\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/WiFiDataExchangeAndroidDrawing\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/WiFiDataExchangeAndroidDrawing\/WiFiDataExchangeAndroidDrawing.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/WiFiDataExchangeAndroidDrawing\/WiFiDataExchangeAndroidDrawing.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/WiFiDataExchangePC\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/WiFiDataExchangePC\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/WiFiDataExchangePC\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/WiFiDataExchangePC\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/WiFiDataExchangePC\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/WiFiDataExchangePC\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/WiFiDataExchangePC\/WiFiDataExchangePC.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/WiFiDataExchangePC\/WiFiDataExchangePC.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/WiFiDataExchangePCDrawing\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/WiFiDataExchangePCDrawing\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/WiFiDataExchangePCDrawing\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/WiFiDataExchangePCDrawing\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/WiFiDataExchangePCDrawing\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/WiFiDataExchangePCDrawing\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/Networking\/WiFiDataExchangePCDrawing\/WiFiDataExchangePCDrawing.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/Networking\/WiFiDataExchangePCDrawing\/WiFiDataExchangePCDrawing.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/NFC\/NFCBTTransmit\/ActivityLifecycle.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/NFC\/NFCBTTransmit\/ActivityLifecycle.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/NFC\/NFCBTTransmit\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/NFC\/NFCBTTransmit\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/NFC\/NFCBTTransmit\/Bluetooth.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/NFC\/NFCBTTransmit\/Bluetooth.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/NFC\/NFCBTTransmit\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/NFC\/NFCBTTransmit\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/NFC\/NFCBTTransmit\/NFC.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/NFC\/NFCBTTransmit\/NFC.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/NFC\/NFCBTTransmit\/NFCBTTransmit.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/NFC\/NFCBTTransmit\/NFCBTTransmit.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/NFC\/NFCBTTransmit\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/NFC\/NFCBTTransmit\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/NFC\/NFCRead\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/NFC\/NFCRead\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/NFC\/NFCRead\/EnableNFC.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/NFC\/NFCRead\/EnableNFC.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/NFC\/NFCRead\/NFCRead.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/NFC\/NFCRead\/NFCRead.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/NFC\/NFCRead\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/NFC\/NFCRead\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/NFC\/NFCWrite\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/NFC\/NFCWrite\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/NFC\/NFCWrite\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/NFC\/NFCWrite\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/NFC\/NFCWrite\/EnableNFC.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/NFC\/NFCWrite\/EnableNFC.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/NFC\/NFCWrite\/NFCWrite.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/NFC\/NFCWrite\/NFCWrite.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/BluetoothCursors\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/BluetoothCursors\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/BluetoothCursors\/BluetoothCursors.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/BluetoothCursors\/BluetoothCursors.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/BluetoothCursors\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/BluetoothCursors\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/BluetoothCursors\/EnableBluetooth.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/BluetoothCursors\/EnableBluetooth.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/BluetoothCursors\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/BluetoothCursors\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/BluetoothCursors\/UI.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/BluetoothCursors\/UI.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/BluetoothSurvey\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/BluetoothSurvey\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/BluetoothSurvey\/BluetoothSurvey.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/BluetoothSurvey\/BluetoothSurvey.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/BluetoothSurvey\/data\/next.png": {
+		"ft": 32768,
+		"iS": 1737,
+		"oA": 0,
+		"oAP": "\/_book\/code\/P2P\/BluetoothSurvey\/data\/next.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/code\/P2P\/BluetoothSurvey\/data\/previous.png": {
+		"ft": 32768,
+		"iS": 1734,
+		"oA": 0,
+		"oAP": "\/_book\/code\/P2P\/BluetoothSurvey\/data\/previous.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/code\/P2P\/BluetoothSurvey\/data\/questions.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/BluetoothSurvey\/data\/questions.txt",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/BluetoothSurvey\/EnableBluetooth.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/BluetoothSurvey\/EnableBluetooth.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/BluetoothSurvey\/Question.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/BluetoothSurvey\/Question.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/BluetoothSurvey\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/BluetoothSurvey\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/BluetoothSurvey\/UI.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/BluetoothSurvey\/UI.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/BluetoothSurvey\/web-export\/BluetoothSurvey.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/BluetoothSurvey\/web-export\/BluetoothSurvey.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/BluetoothSurvey\/web-export\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/BluetoothSurvey\/web-export\/index.html",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/BluetoothSurvey\/web-export\/next.png": {
+		"ft": 32768,
+		"iS": 1737,
+		"oA": 0,
+		"oAP": "\/_book\/code\/P2P\/BluetoothSurvey\/web-export\/next.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/code\/P2P\/BluetoothSurvey\/web-export\/previous.png": {
+		"ft": 32768,
+		"iS": 1734,
+		"oA": 0,
+		"oAP": "\/_book\/code\/P2P\/BluetoothSurvey\/web-export\/previous.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/code\/P2P\/BluetoothSurvey\/web-export\/processing.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/_book\/code\/P2P\/BluetoothSurvey\/web-export\/processing-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/_book\/code\/P2P\/BluetoothSurvey\/web-export\/questions.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/BluetoothSurvey\/web-export\/questions.txt",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/WiFiDirectCursors\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/WiFiDirectCursors\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/WiFiDirectCursors\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/WiFiDirectCursors\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/WiFiDirectCursors\/UI.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/WiFiDirectCursors\/UI.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/P2P\/WiFiDirectCursors\/WiFiDirectCursors.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/P2P\/WiFiDirectCursors\/WiFiDirectCursors.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/_book\/code\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/_book\/code\/sensors\/Accelerometer.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/sensors\/Accelerometer.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/sensors\/AccelerometerColor.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/sensors\/AccelerometerColor.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/sensors\/AccelerometerColorPicker.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/sensors\/AccelerometerColorPicker.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/sensors\/AccelerometerColorPickerArray.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/sensors\/AccelerometerColorPickerArray.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/sensors\/ColorPickerComplete.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/sensors\/ColorPickerComplete.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/sensors\/MultipleSensors.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/sensors\/MultipleSensors.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/sensors\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/_book\/code\/sensors\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/_book\/code\/sensors\/SensorList.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/sensors\/SensorList.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/data\/earth_lights.jpg": {
+		"ft": 16384,
+		"iS": 405510,
+		"oA": 0,
+		"oAP": "\/_book\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/data\/earth_lights.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/data\/earth_lights_lrg.jpg": {
+		"ft": 16384,
+		"iS": 405510,
+		"oA": 0,
+		"oAP": "\/_book\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/data\/earth_lights_lrg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/LiveFaceDetectionAndroid.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/LiveFaceDetectionAndroid.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/Moebius\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/Moebius\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/Moebius\/Moebius.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/Moebius\/Moebius.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/Moebius\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/Moebius\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/MoebiusRetained\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/MoebiusRetained\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/MoebiusRetained\/MoebiusRetained.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/MoebiusRetained\/MoebiusRetained.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/MoebiusRetained\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/MoebiusRetained\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/OneWTC.mtl": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/OneWTC.mtl",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/OneWTC.obj": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/OneWTC.obj",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture0.jpg": {
+		"ft": 16384,
+		"iS": 49976,
+		"oA": 0,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture0.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture1.jpg": {
+		"ft": 16384,
+		"iS": 94774,
+		"oA": 0,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture10.jpg": {
+		"ft": 16384,
+		"iS": 29182,
+		"oA": 0,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture10.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture11.jpg": {
+		"ft": 16384,
+		"iS": 26090,
+		"oA": 0,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture11.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture12.jpg": {
+		"ft": 16384,
+		"iS": 2307,
+		"oA": 0,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture12.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture2.jpg": {
+		"ft": 16384,
+		"iS": 71462,
+		"oA": 0,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture3.jpg": {
+		"ft": 16384,
+		"iS": 69247,
+		"oA": 0,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture4.jpg": {
+		"ft": 16384,
+		"iS": 67760,
+		"oA": 0,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture4.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture5.jpg": {
+		"ft": 16384,
+		"iS": 66022,
+		"oA": 0,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture5.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture6.jpg": {
+		"ft": 16384,
+		"iS": 22920,
+		"oA": 0,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture6.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture7.jpg": {
+		"ft": 16384,
+		"iS": 7530,
+		"oA": 0,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture7.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture8.jpg": {
+		"ft": 16384,
+		"iS": 2508,
+		"oA": 0,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture8.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture9.jpg": {
+		"ft": 16384,
+		"iS": 25778,
+		"oA": 0,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/data\/texture9.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/ObjectFiles.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/ObjectFiles.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/ObjectFiles\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/ObjectFiles\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/ScalableVectorGraphics\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/ScalableVectorGraphics\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/ScalableVectorGraphics\/data\/Blank_US_map_borders.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/ScalableVectorGraphics\/data\/Blank_US_map_borders.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/_book\/code\/ShapesObjects\/ScalableVectorGraphics\/ScalableVectorGraphics.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/ScalableVectorGraphics\/ScalableVectorGraphics.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/ScalableVectorGraphics\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/ScalableVectorGraphics\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/ScalableVectorGraphicsChild\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/ScalableVectorGraphicsChild\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/ScalableVectorGraphicsChild\/data\/Blank_US_map_borders.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/ScalableVectorGraphicsChild\/data\/Blank_US_map_borders.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/_book\/code\/ShapesObjects\/ScalableVectorGraphicsChild\/ScalableVectorGraphicsChild.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/ScalableVectorGraphicsChild\/ScalableVectorGraphicsChild.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/ShapesObjects\/ScalableVectorGraphicsChild\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/ShapesObjects\/ScalableVectorGraphicsChild\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/SQLite\/DataCapture\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/SQLite\/DataCapture\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/SQLite\/DataCapture\/DataCapture.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/SQLite\/DataCapture\/DataCapture.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/SQLite\/DataCapture\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/SQLite\/DataCapture\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/SQLite\/DataCaptureClause\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/SQLite\/DataCaptureClause\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/SQLite\/DataCaptureClause\/DataCaptureClause.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/SQLite\/DataCaptureClause\/DataCaptureClause.pde",
+		"oF": 0
+		},
+	"\/_book\/code\/SQLite\/DataCaptureClause\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/SQLite\/DataCaptureClause\/sketch.properties",
+		"oF": 0
+		},
+	"\/_book\/code\/SQLite\/SQLite\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/SQLite\/SQLite\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/_book\/code\/SQLite\/SQLite\/SQLite.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/code\/SQLite\/SQLite\/SQLite.pde",
+		"oF": 0
+		},
+	"\/_book\/cover.jpg": {
+		"ft": 16384,
+		"iS": 553987,
+		"oA": 0,
+		"oAP": "\/_book\/cover.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/data.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/data.html",
+		"oF": 0
+		},
+	"\/_book\/display.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/display.html",
+		"oF": 0
+		},
+	"\/_book\/geolocation.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/geolocation.html",
+		"oF": 0
+		},
+	"\/_book\/gettingStarted.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/gettingStarted.html",
+		"oF": 0
+		},
+	"\/_book\/gitbook\/fonts\/fontawesome\/fontawesome-webfont.eot": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/gitbook\/fonts\/fontawesome\/fontawesome-webfont.eot",
+		"oF": 0
+		},
+	"\/_book\/gitbook\/fonts\/fontawesome\/fontawesome-webfont.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/_book\/gitbook\/fonts\/fontawesome\/fontawesome-webfont.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/_book\/gitbook\/fonts\/fontawesome\/fontawesome-webfont.ttf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/gitbook\/fonts\/fontawesome\/fontawesome-webfont.ttf",
+		"oF": 0
+		},
+	"\/_book\/gitbook\/fonts\/fontawesome\/fontawesome-webfont.woff": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/gitbook\/fonts\/fontawesome\/fontawesome-webfont.woff",
+		"oF": 0
+		},
+	"\/_book\/gitbook\/fonts\/fontawesome\/fontawesome-webfont.woff2": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/gitbook\/fonts\/fontawesome\/fontawesome-webfont.woff2",
+		"oF": 0
+		},
+	"\/_book\/gitbook\/fonts\/fontawesome\/FontAwesome.otf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/gitbook\/fonts\/fontawesome\/FontAwesome.otf",
+		"oF": 0
+		},
+	"\/_book\/gitbook\/gitbook-plugin-fontsettings\/fontsettings.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/_book\/gitbook\/gitbook-plugin-fontsettings\/fontsettings-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/_book\/gitbook\/gitbook-plugin-fontsettings\/website.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/_book\/gitbook\/gitbook-plugin-fontsettings\/website-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/_book\/gitbook\/gitbook-plugin-highlight\/ebook.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/_book\/gitbook\/gitbook-plugin-highlight\/ebook-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/_book\/gitbook\/gitbook-plugin-highlight\/website.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/_book\/gitbook\/gitbook-plugin-highlight\/website-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/_book\/gitbook\/gitbook-plugin-livereload\/plugin.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/_book\/gitbook\/gitbook-plugin-livereload\/plugin-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/_book\/gitbook\/gitbook-plugin-lunr\/lunr.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/_book\/gitbook\/gitbook-plugin-lunr\/lunr.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/_book\/gitbook\/gitbook-plugin-lunr\/search-lunr.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/_book\/gitbook\/gitbook-plugin-lunr\/search-lunr-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/_book\/gitbook\/gitbook-plugin-search\/lunr.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/_book\/gitbook\/gitbook-plugin-search\/lunr.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/_book\/gitbook\/gitbook-plugin-search\/search-engine.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/_book\/gitbook\/gitbook-plugin-search\/search-engine-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/_book\/gitbook\/gitbook-plugin-search\/search.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/_book\/gitbook\/gitbook-plugin-search\/search-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/_book\/gitbook\/gitbook-plugin-search\/search.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/_book\/gitbook\/gitbook-plugin-search\/search-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/_book\/gitbook\/gitbook-plugin-sharing\/buttons.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/_book\/gitbook\/gitbook-plugin-sharing\/buttons-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/_book\/gitbook\/gitbook.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/_book\/gitbook\/gitbook-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/_book\/gitbook\/images\/apple-touch-icon-precomposed-152.png": {
+		"ft": 32768,
+		"iS": 4817,
+		"oA": 0,
+		"oAP": "\/_book\/gitbook\/images\/apple-touch-icon-precomposed-152.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/gitbook\/images\/favicon.ico": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/gitbook\/images\/favicon.ico",
+		"oF": 0
+		},
+	"\/_book\/gitbook\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/_book\/gitbook\/style-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/_book\/gitbook\/theme.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/_book\/gitbook\/theme-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/_book\/images\/camera\/FaceFinder-sm.png": {
+		"ft": 32768,
+		"iS": 521750,
+		"oA": 0,
+		"oAP": "\/_book\/images\/camera\/FaceFinder-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/camera\/FrontBack-sm.jpg": {
+		"ft": 16384,
+		"iS": 241435,
+		"oA": 0,
+		"oAP": "\/_book\/images\/camera\/FrontBack-sm.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/images\/camera\/GalleryAlbum-sm.jpg": {
+		"ft": 16384,
+		"iS": 542712,
+		"oA": 0,
+		"oAP": "\/_book\/images\/camera\/GalleryAlbum-sm.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/images\/camera\/GettingStarted-sm.png": {
+		"ft": 32768,
+		"iS": 673127,
+		"oA": 0,
+		"oAP": "\/_book\/images\/camera\/GettingStarted-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/camera\/MagicMarker-sm.png": {
+		"ft": 32768,
+		"iS": 484753,
+		"oA": 0,
+		"oAP": "\/_book\/images\/camera\/MagicMarker-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/camera\/Photobooth-sm.jpg": {
+		"ft": 16384,
+		"iS": 902133,
+		"oA": 0,
+		"oAP": "\/_book\/images\/camera\/Photobooth-sm.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/images\/camera\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/_book\/images\/camera\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/_book\/images\/Data\/DataRead.jpg": {
+		"ft": 16384,
+		"iS": 194980,
+		"oA": 0,
+		"oAP": "\/_book\/images\/Data\/DataRead.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/images\/Data\/DataWrite.jpg": {
+		"ft": 16384,
+		"iS": 108585,
+		"oA": 0,
+		"oAP": "\/_book\/images\/Data\/DataWrite.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/images\/Data\/Earthquakes.jpg": {
+		"ft": 16384,
+		"iS": 460138,
+		"oA": 0,
+		"oAP": "\/_book\/images\/Data\/Earthquakes.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/images\/Data\/EarthquakesSevenDays.jpg": {
+		"ft": 16384,
+		"iS": 710141,
+		"oA": 0,
+		"oAP": "\/_book\/images\/Data\/EarthquakesSevenDays.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/images\/Data\/GroceryList.jpg": {
+		"ft": 16384,
+		"iS": 255976,
+		"oA": 0,
+		"oAP": "\/_book\/images\/Data\/GroceryList.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/images\/display\/DisplayGestureFinger.png": {
+		"ft": 32768,
+		"iS": 930875,
+		"oA": 0,
+		"oAP": "\/_book\/images\/display\/DisplayGestureFinger.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/display\/MouseSpeed-sm.png": {
+		"ft": 32768,
+		"iS": 135332,
+		"oA": 0,
+		"oAP": "\/_book\/images\/display\/MouseSpeed-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/display\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/_book\/images\/display\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/_book\/images\/geolocation\/DestinationCompass-sm.png": {
+		"ft": 32768,
+		"iS": 170896,
+		"oA": 0,
+		"oAP": "\/_book\/images\/geolocation\/DestinationCompass-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/geolocation\/Geolocation-sm.png": {
+		"ft": 32768,
+		"iS": 195108,
+		"oA": 0,
+		"oAP": "\/_book\/images\/geolocation\/Geolocation-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/geolocation\/geolocationSketchPermissions-sm.png": {
+		"ft": 32768,
+		"iS": 99437,
+		"oA": 0,
+		"oAP": "\/_book\/images\/geolocation\/geolocationSketchPermissions-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/geolocation\/LocationDistance-sm.png": {
+		"ft": 32768,
+		"iS": 227022,
+		"oA": 0,
+		"oAP": "\/_book\/images\/geolocation\/LocationDistance-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/geolocation\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/_book\/images\/geolocation\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/_book\/images\/gettingStarted\/basicDrawing1.png": {
+		"ft": 32768,
+		"iS": 62009,
+		"oA": 0,
+		"oAP": "\/_book\/images\/gettingStarted\/basicDrawing1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/gettingStarted\/BasicDrawingEmulatorAndDevice-sm.png": {
+		"ft": 32768,
+		"iS": 551050,
+		"oA": 0,
+		"oAP": "\/_book\/images\/gettingStarted\/BasicDrawingEmulatorAndDevice-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/gettingStarted\/Processing_IDE.png": {
+		"ft": 32768,
+		"iS": 27790,
+		"oA": 0,
+		"oAP": "\/_book\/images\/gettingStarted\/Processing_IDE.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/gettingStarted\/Processing_IDE_basicDrawing-sm.png": {
+		"ft": 32768,
+		"iS": 84783,
+		"oA": 0,
+		"oAP": "\/_book\/images\/gettingStarted\/Processing_IDE_basicDrawing-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/gettingStarted\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/_book\/images\/gettingStarted\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/_book\/images\/Mobile3D\/CameraTexture.png": {
+		"ft": 32768,
+		"iS": 363437,
+		"oA": 0,
+		"oAP": "\/_book\/images\/Mobile3D\/CameraTexture.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/Mobile3D\/LoadDroidFont.png": {
+		"ft": 32768,
+		"iS": 91505,
+		"oA": 0,
+		"oAP": "\/_book\/images\/Mobile3D\/LoadDroidFont.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/Mobile3D\/LoadFont.png": {
+		"ft": 32768,
+		"iS": 496182,
+		"oA": 0,
+		"oAP": "\/_book\/images\/Mobile3D\/LoadFont.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/Mobile3D\/PrimitivesLights.png": {
+		"ft": 32768,
+		"iS": 161743,
+		"oA": 0,
+		"oAP": "\/_book\/images\/Mobile3D\/PrimitivesLights.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/Mobile3D\/SpotLights.png": {
+		"ft": 32768,
+		"iS": 368269,
+		"oA": 0,
+		"oAP": "\/_book\/images\/Mobile3D\/SpotLights.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/Mobile3D\/TextLights.png": {
+		"ft": 32768,
+		"iS": 450361,
+		"oA": 0,
+		"oAP": "\/_book\/images\/Mobile3D\/TextLights.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/Mobile3D\/TexturedSphere.png": {
+		"ft": 32768,
+		"iS": 646582,
+		"oA": 0,
+		"oAP": "\/_book\/images\/Mobile3D\/TexturedSphere.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/Networking\/CollaborativeDrawing.png": {
+		"ft": 32768,
+		"iS": 235995,
+		"oA": 0,
+		"oAP": "\/_book\/images\/Networking\/CollaborativeDrawing.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/Networking\/libraries.png": {
+		"ft": 32768,
+		"iS": 100177,
+		"oA": 0,
+		"oAP": "\/_book\/images\/Networking\/libraries.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/Networking\/WiFiBalancingGame.png": {
+		"ft": 32768,
+		"iS": 149946,
+		"oA": 0,
+		"oAP": "\/_book\/images\/Networking\/WiFiBalancingGame.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/Networking\/WiFiDataExchangeOSC.png": {
+		"ft": 32768,
+		"iS": 294762,
+		"oA": 0,
+		"oAP": "\/_book\/images\/Networking\/WiFiDataExchangeOSC.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/NFC\/NFCTags_lowResolution.jpg": {
+		"ft": 16384,
+		"iS": 392508,
+		"oA": 0,
+		"oAP": "\/_book\/images\/NFC\/NFCTags_lowResolution.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/images\/NFC\/NFCTransmit.png": {
+		"ft": 32768,
+		"iS": 256767,
+		"oA": 0,
+		"oAP": "\/_book\/images\/NFC\/NFCTransmit.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/NFC\/ReadNFC.png": {
+		"ft": 32768,
+		"iS": 164825,
+		"oA": 0,
+		"oAP": "\/_book\/images\/NFC\/ReadNFC.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/NFC\/WriteNFC.png": {
+		"ft": 32768,
+		"iS": 196362,
+		"oA": 0,
+		"oAP": "\/_book\/images\/NFC\/WriteNFC.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/P2P\/BluetoothCursors.png": {
+		"ft": 32768,
+		"iS": 199741,
+		"oA": 0,
+		"oAP": "\/_book\/images\/P2P\/BluetoothCursors.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/P2P\/SurveyServerClient.png": {
+		"ft": 32768,
+		"iS": 368195,
+		"oA": 0,
+		"oAP": "\/_book\/images\/P2P\/SurveyServerClient.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/preface\/rapid-android-development_p3_0.jpg": {
+		"ft": 16384,
+		"iS": 115148,
+		"oA": 0,
+		"oAP": "\/_book\/images\/preface\/rapid-android-development_p3_0.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/images\/preface\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/_book\/images\/preface\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/_book\/images\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/_book\/images\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/_book\/images\/sensors\/AccelerometerColor-sm.png": {
+		"ft": 32768,
+		"iS": 55221,
+		"oA": 0,
+		"oAP": "\/_book\/images\/sensors\/AccelerometerColor-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/sensors\/AccelerometerColorPicker-sm.png": {
+		"ft": 32768,
+		"iS": 56309,
+		"oA": 0,
+		"oAP": "\/_book\/images\/sensors\/AccelerometerColorPicker-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/sensors\/AccelerometerOutputNexus6-sm.png": {
+		"ft": 32768,
+		"iS": 58277,
+		"oA": 0,
+		"oAP": "\/_book\/images\/sensors\/AccelerometerOutputNexus6-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/sensors\/ColorPicker.png": {
+		"ft": 32768,
+		"iS": 54494,
+		"oA": 0,
+		"oAP": "\/_book\/images\/sensors\/ColorPicker.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/sensors\/MultipleSensorsNexus6-sm.png": {
+		"ft": 32768,
+		"iS": 113714,
+		"oA": 0,
+		"oAP": "\/_book\/images\/sensors\/MultipleSensorsNexus6-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/sensors\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/_book\/images\/sensors\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/_book\/images\/ShapesObjects\/Gaze.png": {
+		"ft": 32768,
+		"iS": 623176,
+		"oA": 0,
+		"oAP": "\/_book\/images\/ShapesObjects\/Gaze.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/ShapesObjects\/Moebius.png": {
+		"ft": 32768,
+		"iS": 199406,
+		"oA": 0,
+		"oAP": "\/_book\/images\/ShapesObjects\/Moebius.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/ShapesObjects\/OneWTC.png": {
+		"ft": 32768,
+		"iS": 240598,
+		"oA": 0,
+		"oAP": "\/_book\/images\/ShapesObjects\/OneWTC.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/ShapesObjects\/SVG.png": {
+		"ft": 32768,
+		"iS": 338149,
+		"oA": 0,
+		"oAP": "\/_book\/images\/ShapesObjects\/SVG.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/SQLite\/DataCapture.png": {
+		"ft": 32768,
+		"iS": 232925,
+		"oA": 0,
+		"oAP": "\/_book\/images\/SQLite\/DataCapture.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/SQLite\/DataCaptureClause.png": {
+		"ft": 32768,
+		"iS": 277402,
+		"oA": 0,
+		"oAP": "\/_book\/images\/SQLite\/DataCaptureClause.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/images\/SQLite\/DataSQL.jpg": {
+		"ft": 16384,
+		"iS": 179241,
+		"oA": 0,
+		"oAP": "\/_book\/images\/SQLite\/DataSQL.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_book\/images\/SQLite\/DataSQL.png": {
+		"ft": 32768,
+		"iS": 232097,
+		"oA": 0,
+		"oAP": "\/_book\/images\/SQLite\/DataSQL.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_book\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/index.html",
+		"oF": 0
+		},
+	"\/_book\/mobile3d.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/mobile3d.html",
+		"oF": 0
+		},
+	"\/_book\/networking.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/networking.html",
+		"oF": 0
+		},
+	"\/_book\/nfc.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/nfc.html",
+		"oF": 0
+		},
+	"\/_book\/p2p.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/p2p.html",
+		"oF": 0
+		},
+	"\/_book\/preface.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/preface.html",
+		"oF": 0
+		},
+	"\/_book\/search_index.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/_book\/search_index-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/_book\/sensors.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/sensors.html",
+		"oF": 0
+		},
+	"\/_book\/shapes.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/shapes.html",
+		"oF": 0
+		},
+	"\/_book\/sqlite.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_book\/sqlite.html",
+		"oF": 0
+		},
+	"\/_book\/styles\/ebook.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/_book\/styles\/ebook-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/_book\/styles\/website.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/_book\/styles\/website-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/_layouts\/ebook\/page.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_layouts\/ebook\/page.html",
+		"oF": 0
+		},
+	"\/_layouts\/ebook\/pdf_footer.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_layouts\/ebook\/pdf_footer.html",
+		"oF": 0
+		},
+	"\/_layouts\/ebook\/pdf_header.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_layouts\/ebook\/pdf_header.html",
+		"oF": 0
+		},
+	"\/_layouts\/ebook\/summary.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_layouts\/ebook\/summary.html",
+		"oF": 0
+		},
+	"\/_layouts\/layout.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_layouts\/layout.html",
+		"oF": 0
+		},
+	"\/_layouts\/website\/header.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_layouts\/website\/header.html",
+		"oF": 0
+		},
+	"\/_layouts\/website\/languages.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_layouts\/website\/languages.html",
+		"oF": 0
+		},
+	"\/_layouts\/website\/layout.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_layouts\/website\/layout.html",
+		"oF": 0
+		},
+	"\/_layouts\/website\/page.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_layouts\/website\/page.html",
+		"oF": 0
+		},
+	"\/_layouts\/website\/summary.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_layouts\/website\/summary.html",
+		"oF": 0
+		},
+	"\/book.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/book-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/cameras.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/cameras.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/code\/camera\/CameraFaceFinder\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraFaceFinder\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/camera\/CameraFaceFinder\/CameraFaceFinder.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraFaceFinder\/CameraFaceFinder.pde",
+		"oF": 0
+		},
+	"\/code\/camera\/CameraFaceFinder\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraFaceFinder\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/camera\/CameraFrontBack\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraFrontBack\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/camera\/CameraFrontBack\/CameraControls.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraFrontBack\/CameraControls.pde",
+		"oF": 0
+		},
+	"\/code\/camera\/CameraFrontBack\/CameraFrontBack.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraFrontBack\/CameraFrontBack.pde",
+		"oF": 0
+		},
+	"\/code\/camera\/CameraFrontBack\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraFrontBack\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/camera\/CameraGettingStarted.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraGettingStarted.pde",
+		"oF": 0
+		},
+	"\/code\/camera\/CameraMagicMarker\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraMagicMarker\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/camera\/CameraMagicMarker\/CameraControls.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraMagicMarker\/CameraControls.pde",
+		"oF": 0
+		},
+	"\/code\/camera\/CameraMagicMarker\/CameraMagicMarker.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraMagicMarker\/CameraMagicMarker.pde",
+		"oF": 0
+		},
+	"\/code\/camera\/CameraMagicMarker\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraMagicMarker\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/camera\/CameraPhotoBooth\/CameraControls.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraPhotoBooth\/CameraControls.pde",
+		"oF": 0
+		},
+	"\/code\/camera\/CameraPhotoBooth\/CameraPhotoBooth.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraPhotoBooth\/CameraPhotoBooth.pde",
+		"oF": 0
+		},
+	"\/code\/camera\/CameraPhotoBooth\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/code\/camera\/CameraPhotoBooth\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/code\/camera\/CameraSavingImages\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraSavingImages\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/camera\/CameraSavingImages\/CameraControls.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraSavingImages\/CameraControls.pde",
+		"oF": 0
+		},
+	"\/code\/camera\/CameraSavingImages\/CameraSavingImages.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraSavingImages\/CameraSavingImages.pde",
+		"oF": 0
+		},
+	"\/code\/camera\/CameraSavingImages\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/camera\/CameraSavingImages\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/camera\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/code\/camera\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/code\/Data\/DataEarthquakes\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataEarthquakes\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Data\/DataEarthquakes\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataEarthquakes\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/Data\/DataEarthquakes\/data\/all_hour_2015-02-24.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataEarthquakes\/data\/all_hour_2015-02-24.txt",
+		"oF": 0
+		},
+	"\/code\/Data\/DataEarthquakes\/data\/eqs1hour_2012-07-24.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataEarthquakes\/data\/eqs1hour_2012-07-24.txt",
+		"oF": 0
+		},
+	"\/code\/Data\/DataEarthquakes\/data\/world.png": {
+		"ft": 32768,
+		"iS": 375445,
+		"oA": 0,
+		"oAP": "\/code\/Data\/DataEarthquakes\/data\/world.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/code\/Data\/DataEarthquakes\/DataEarthquakes.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataEarthquakes\/DataEarthquakes.pde",
+		"oF": 0
+		},
+	"\/code\/Data\/DataEarthquakes\/Location.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataEarthquakes\/Location.pde",
+		"oF": 0
+		},
+	"\/code\/Data\/DataEarthquakes\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataEarthquakes\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/Data\/DataEarthquakesShake\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataEarthquakesShake\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Data\/DataEarthquakesShake\/data\/all_week_2015-02-24.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataEarthquakesShake\/data\/all_week_2015-02-24.txt",
+		"oF": 0
+		},
+	"\/code\/Data\/DataEarthquakesShake\/data\/eqs7day-M2_5_2012-08-14.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataEarthquakesShake\/data\/eqs7day-M2_5_2012-08-14.txt",
+		"oF": 0
+		},
+	"\/code\/Data\/DataEarthquakesShake\/data\/world.png": {
+		"ft": 32768,
+		"iS": 375445,
+		"oA": 0,
+		"oAP": "\/code\/Data\/DataEarthquakesShake\/data\/world.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/code\/Data\/DataEarthquakesShake\/DataEarthquakesShake.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataEarthquakesShake\/DataEarthquakesShake.pde",
+		"oF": 0
+		},
+	"\/code\/Data\/DataEarthquakesShake\/Location.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataEarthquakesShake\/Location.pde",
+		"oF": 0
+		},
+	"\/code\/Data\/DataEarthquakesShake\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataEarthquakesShake\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/Data\/DataRead\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataRead\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Data\/DataRead\/data\/colors.csv": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataRead\/data\/colors.csv",
+		"oF": 0
+		},
+	"\/code\/Data\/DataRead\/DataRead.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataRead\/DataRead.pde",
+		"oF": 0
+		},
+	"\/code\/Data\/DataRead\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataRead\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/Data\/DataReadGroceries\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataReadGroceries\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Data\/DataReadGroceries\/data\/groceries.tsv": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataReadGroceries\/data\/groceries.tsv",
+		"oF": 0
+		},
+	"\/code\/Data\/DataReadGroceries\/DataReadGroceries.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataReadGroceries\/DataReadGroceries.pde",
+		"oF": 0
+		},
+	"\/code\/Data\/DataReadGroceries\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataReadGroceries\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/Data\/DataWrite\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataWrite\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Data\/DataWrite\/DataWrite.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataWrite\/DataWrite.pde",
+		"oF": 0
+		},
+	"\/code\/Data\/DataWrite\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataWrite\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/Data\/DataWriteExternal\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataWriteExternal\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Data\/DataWriteExternal\/DataWriteExternal.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataWriteExternal\/DataWriteExternal.pde",
+		"oF": 0
+		},
+	"\/code\/Data\/DataWriteExternal\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Data\/DataWriteExternal\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/display\/gestures.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/display\/gestures.pde",
+		"oF": 0
+		},
+	"\/code\/display\/MouseSpeedHue.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/display\/MouseSpeedHue.pde",
+		"oF": 0
+		},
+	"\/code\/display\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/code\/display\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/code\/geolocation\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/geolocation\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/geolocation\/DestinationCompass.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/geolocation\/DestinationCompass.pde",
+		"oF": 0
+		},
+	"\/code\/geolocation\/DeviceLocator.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/geolocation\/DeviceLocator.pde",
+		"oF": 0
+		},
+	"\/code\/geolocation\/geolocation.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/geolocation\/geolocation.pde",
+		"oF": 0
+		},
+	"\/code\/geolocation\/LocationDistance.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/geolocation\/LocationDistance.pde",
+		"oF": 0
+		},
+	"\/code\/geolocation\/LocationSpeed.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/geolocation\/LocationSpeed.pde",
+		"oF": 0
+		},
+	"\/code\/geolocation\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/code\/geolocation\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/code\/gettingStarted\/ellipseMouse.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/gettingStarted\/ellipseMouse.pde",
+		"oF": 0
+		},
+	"\/code\/gettingStarted\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/code\/gettingStarted\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/code\/gettingStarted\/test.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/gettingStarted\/test.pde",
+		"oF": 0
+		},
+	"\/code\/Mobile3D\/CameraTexture\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Mobile3D\/CameraTexture\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Mobile3D\/CameraTexture\/CameraTexture.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Mobile3D\/CameraTexture\/CameraTexture.pde",
+		"oF": 0
+		},
+	"\/code\/Mobile3D\/CameraTexture\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Mobile3D\/CameraTexture\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/Mobile3D\/Geometry\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Mobile3D\/Geometry\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Mobile3D\/Geometry\/Geometry.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Mobile3D\/Geometry\/Geometry.pde",
+		"oF": 0
+		},
+	"\/code\/Mobile3D\/Geometry\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Mobile3D\/Geometry\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/Mobile3D\/LoadFont\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Mobile3D\/LoadFont\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Mobile3D\/LoadFont\/data\/DroidSerif-48.vlw": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Mobile3D\/LoadFont\/data\/DroidSerif-48.vlw",
+		"oF": 0
+		},
+	"\/code\/Mobile3D\/LoadFont\/LoadFont.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Mobile3D\/LoadFont\/LoadFont.pde",
+		"oF": 0
+		},
+	"\/code\/Mobile3D\/PrimitivesLights\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Mobile3D\/PrimitivesLights\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Mobile3D\/PrimitivesLights\/PrimitivesLights.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Mobile3D\/PrimitivesLights\/PrimitivesLights.pde",
+		"oF": 0
+		},
+	"\/code\/Mobile3D\/SpotLights\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Mobile3D\/SpotLights\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Mobile3D\/SpotLights\/SpotLights.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Mobile3D\/SpotLights\/SpotLights.pde",
+		"oF": 0
+		},
+	"\/code\/Mobile3D\/TextLights\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Mobile3D\/TextLights\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Mobile3D\/TextLights\/TextLights.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Mobile3D\/TextLights\/TextLights.pde",
+		"oF": 0
+		},
+	"\/code\/Mobile3D\/TexturedSphere\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Mobile3D\/TexturedSphere\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Mobile3D\/TexturedSphere\/data\/earth_lights.jpg": {
+		"ft": 16384,
+		"iS": 547269,
+		"oA": 0,
+		"oAP": "\/code\/Mobile3D\/TexturedSphere\/data\/earth_lights.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/code\/Mobile3D\/TexturedSphere\/TexturedSphere.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Mobile3D\/TexturedSphere\/TexturedSphere.pde",
+		"oF": 0
+		},
+	"\/code\/Networking\/MultiplayerBalance\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/MultiplayerBalance\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Networking\/MultiplayerBalance\/data\/marble.png": {
+		"ft": 32768,
+		"iS": 6548,
+		"oA": 0,
+		"oAP": "\/code\/Networking\/MultiplayerBalance\/data\/marble.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/code\/Networking\/MultiplayerBalance\/MultiplayerBalance.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/MultiplayerBalance\/MultiplayerBalance.pde",
+		"oF": 0
+		},
+	"\/code\/Networking\/MultiplayerBalance\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/MultiplayerBalance\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/Networking\/WiFiDataExchangeAndroid\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/WiFiDataExchangeAndroid\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Networking\/WiFiDataExchangeAndroid\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/WiFiDataExchangeAndroid\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/Networking\/WiFiDataExchangeAndroid\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/WiFiDataExchangeAndroid\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/Networking\/WiFiDataExchangeAndroid\/WiFiDataExchangeAndroid.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/WiFiDataExchangeAndroid\/WiFiDataExchangeAndroid.pde",
+		"oF": 0
+		},
+	"\/code\/Networking\/WiFiDataExchangeAndroidDrawing\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/WiFiDataExchangeAndroidDrawing\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Networking\/WiFiDataExchangeAndroidDrawing\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/WiFiDataExchangeAndroidDrawing\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/Networking\/WiFiDataExchangeAndroidDrawing\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/WiFiDataExchangeAndroidDrawing\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/Networking\/WiFiDataExchangeAndroidDrawing\/WiFiDataExchangeAndroidDrawing.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/WiFiDataExchangeAndroidDrawing\/WiFiDataExchangeAndroidDrawing.pde",
+		"oF": 0
+		},
+	"\/code\/Networking\/WiFiDataExchangePC\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/WiFiDataExchangePC\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Networking\/WiFiDataExchangePC\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/WiFiDataExchangePC\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/Networking\/WiFiDataExchangePC\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/WiFiDataExchangePC\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/Networking\/WiFiDataExchangePC\/WiFiDataExchangePC.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/WiFiDataExchangePC\/WiFiDataExchangePC.pde",
+		"oF": 0
+		},
+	"\/code\/Networking\/WiFiDataExchangePCDrawing\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/WiFiDataExchangePCDrawing\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/Networking\/WiFiDataExchangePCDrawing\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/WiFiDataExchangePCDrawing\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/Networking\/WiFiDataExchangePCDrawing\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/WiFiDataExchangePCDrawing\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/Networking\/WiFiDataExchangePCDrawing\/WiFiDataExchangePCDrawing.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/Networking\/WiFiDataExchangePCDrawing\/WiFiDataExchangePCDrawing.pde",
+		"oF": 0
+		},
+	"\/code\/NFC\/NFCBTTransmit\/ActivityLifecycle.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/NFC\/NFCBTTransmit\/ActivityLifecycle.pde",
+		"oF": 0
+		},
+	"\/code\/NFC\/NFCBTTransmit\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/NFC\/NFCBTTransmit\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/NFC\/NFCBTTransmit\/Bluetooth.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/NFC\/NFCBTTransmit\/Bluetooth.pde",
+		"oF": 0
+		},
+	"\/code\/NFC\/NFCBTTransmit\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/NFC\/NFCBTTransmit\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/NFC\/NFCBTTransmit\/NFC.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/NFC\/NFCBTTransmit\/NFC.pde",
+		"oF": 0
+		},
+	"\/code\/NFC\/NFCBTTransmit\/NFCBTTransmit.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/NFC\/NFCBTTransmit\/NFCBTTransmit.pde",
+		"oF": 0
+		},
+	"\/code\/NFC\/NFCBTTransmit\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/NFC\/NFCBTTransmit\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/NFC\/NFCRead\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/NFC\/NFCRead\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/NFC\/NFCRead\/EnableNFC.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/NFC\/NFCRead\/EnableNFC.pde",
+		"oF": 0
+		},
+	"\/code\/NFC\/NFCRead\/NFCRead.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/NFC\/NFCRead\/NFCRead.pde",
+		"oF": 0
+		},
+	"\/code\/NFC\/NFCRead\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/NFC\/NFCRead\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/NFC\/NFCWrite\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/NFC\/NFCWrite\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/NFC\/NFCWrite\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/NFC\/NFCWrite\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/NFC\/NFCWrite\/EnableNFC.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/NFC\/NFCWrite\/EnableNFC.pde",
+		"oF": 0
+		},
+	"\/code\/NFC\/NFCWrite\/NFCWrite.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/NFC\/NFCWrite\/NFCWrite.pde",
+		"oF": 0
+		},
+	"\/code\/P2P\/BluetoothCursors\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/BluetoothCursors\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/P2P\/BluetoothCursors\/BluetoothCursors.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/BluetoothCursors\/BluetoothCursors.pde",
+		"oF": 0
+		},
+	"\/code\/P2P\/BluetoothCursors\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/BluetoothCursors\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/P2P\/BluetoothCursors\/EnableBluetooth.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/BluetoothCursors\/EnableBluetooth.pde",
+		"oF": 0
+		},
+	"\/code\/P2P\/BluetoothCursors\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/BluetoothCursors\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/P2P\/BluetoothCursors\/UI.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/BluetoothCursors\/UI.pde",
+		"oF": 0
+		},
+	"\/code\/P2P\/BluetoothSurvey\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/BluetoothSurvey\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/P2P\/BluetoothSurvey\/BluetoothSurvey.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/BluetoothSurvey\/BluetoothSurvey.pde",
+		"oF": 0
+		},
+	"\/code\/P2P\/BluetoothSurvey\/data\/next.png": {
+		"ft": 32768,
+		"iS": 1737,
+		"oA": 0,
+		"oAP": "\/code\/P2P\/BluetoothSurvey\/data\/next.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/code\/P2P\/BluetoothSurvey\/data\/previous.png": {
+		"ft": 32768,
+		"iS": 1734,
+		"oA": 0,
+		"oAP": "\/code\/P2P\/BluetoothSurvey\/data\/previous.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/code\/P2P\/BluetoothSurvey\/data\/questions.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/BluetoothSurvey\/data\/questions.txt",
+		"oF": 0
+		},
+	"\/code\/P2P\/BluetoothSurvey\/EnableBluetooth.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/BluetoothSurvey\/EnableBluetooth.pde",
+		"oF": 0
+		},
+	"\/code\/P2P\/BluetoothSurvey\/Question.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/BluetoothSurvey\/Question.pde",
+		"oF": 0
+		},
+	"\/code\/P2P\/BluetoothSurvey\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/BluetoothSurvey\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/P2P\/BluetoothSurvey\/UI.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/BluetoothSurvey\/UI.pde",
+		"oF": 0
+		},
+	"\/code\/P2P\/BluetoothSurvey\/web-export\/BluetoothSurvey.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/BluetoothSurvey\/web-export\/BluetoothSurvey.pde",
+		"oF": 0
+		},
+	"\/code\/P2P\/BluetoothSurvey\/web-export\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/BluetoothSurvey\/web-export\/index.html",
+		"oF": 0
+		},
+	"\/code\/P2P\/BluetoothSurvey\/web-export\/next.png": {
+		"ft": 32768,
+		"iS": 1737,
+		"oA": 0,
+		"oAP": "\/code\/P2P\/BluetoothSurvey\/web-export\/next.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/code\/P2P\/BluetoothSurvey\/web-export\/previous.png": {
+		"ft": 32768,
+		"iS": 1734,
+		"oA": 0,
+		"oAP": "\/code\/P2P\/BluetoothSurvey\/web-export\/previous.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/code\/P2P\/BluetoothSurvey\/web-export\/processing.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/code\/P2P\/BluetoothSurvey\/web-export\/processing-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/code\/P2P\/BluetoothSurvey\/web-export\/questions.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/BluetoothSurvey\/web-export\/questions.txt",
+		"oF": 0
+		},
+	"\/code\/P2P\/WiFiDirectCursors\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/WiFiDirectCursors\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/P2P\/WiFiDirectCursors\/code\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/WiFiDirectCursors\/code\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/P2P\/WiFiDirectCursors\/UI.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/WiFiDirectCursors\/UI.pde",
+		"oF": 0
+		},
+	"\/code\/P2P\/WiFiDirectCursors\/WiFiDirectCursors.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/P2P\/WiFiDirectCursors\/WiFiDirectCursors.pde",
+		"oF": 0
+		},
+	"\/code\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/code\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/code\/sensors\/Accelerometer.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/sensors\/Accelerometer.pde",
+		"oF": 0
+		},
+	"\/code\/sensors\/AccelerometerColor.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/sensors\/AccelerometerColor.pde",
+		"oF": 0
+		},
+	"\/code\/sensors\/AccelerometerColorPicker.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/sensors\/AccelerometerColorPicker.pde",
+		"oF": 0
+		},
+	"\/code\/sensors\/AccelerometerColorPickerArray.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/sensors\/AccelerometerColorPickerArray.pde",
+		"oF": 0
+		},
+	"\/code\/sensors\/ColorPickerComplete.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/sensors\/ColorPickerComplete.pde",
+		"oF": 0
+		},
+	"\/code\/sensors\/MultipleSensors.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/sensors\/MultipleSensors.pde",
+		"oF": 0
+		},
+	"\/code\/sensors\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/code\/sensors\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/code\/sensors\/SensorList.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/sensors\/SensorList.pde",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/data\/earth_lights.jpg": {
+		"ft": 16384,
+		"iS": 405510,
+		"oA": 0,
+		"oAP": "\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/data\/earth_lights.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/data\/earth_lights_lrg.jpg": {
+		"ft": 16384,
+		"iS": 405510,
+		"oA": 0,
+		"oAP": "\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/data\/earth_lights_lrg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/LiveFaceDetectionAndroid.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/LiveFaceDetectionAndroid.pde",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/LiveFaceDetectionAndroid\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/Moebius\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/Moebius\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/Moebius\/Moebius.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/Moebius\/Moebius.pde",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/Moebius\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/Moebius\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/MoebiusRetained\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/MoebiusRetained\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/MoebiusRetained\/MoebiusRetained.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/MoebiusRetained\/MoebiusRetained.pde",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/MoebiusRetained\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/MoebiusRetained\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/data\/OneWTC.mtl": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/data\/OneWTC.mtl",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/data\/OneWTC.obj": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/data\/OneWTC.obj",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/data\/texture0.jpg": {
+		"ft": 16384,
+		"iS": 49976,
+		"oA": 0,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/data\/texture0.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/data\/texture1.jpg": {
+		"ft": 16384,
+		"iS": 94774,
+		"oA": 0,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/data\/texture1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/data\/texture10.jpg": {
+		"ft": 16384,
+		"iS": 29182,
+		"oA": 0,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/data\/texture10.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/data\/texture11.jpg": {
+		"ft": 16384,
+		"iS": 26090,
+		"oA": 0,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/data\/texture11.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/data\/texture12.jpg": {
+		"ft": 16384,
+		"iS": 2307,
+		"oA": 0,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/data\/texture12.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/data\/texture2.jpg": {
+		"ft": 16384,
+		"iS": 71462,
+		"oA": 0,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/data\/texture2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/data\/texture3.jpg": {
+		"ft": 16384,
+		"iS": 69247,
+		"oA": 0,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/data\/texture3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/data\/texture4.jpg": {
+		"ft": 16384,
+		"iS": 67760,
+		"oA": 0,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/data\/texture4.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/data\/texture5.jpg": {
+		"ft": 16384,
+		"iS": 66022,
+		"oA": 0,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/data\/texture5.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/data\/texture6.jpg": {
+		"ft": 16384,
+		"iS": 22920,
+		"oA": 0,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/data\/texture6.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/data\/texture7.jpg": {
+		"ft": 16384,
+		"iS": 7530,
+		"oA": 0,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/data\/texture7.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/data\/texture8.jpg": {
+		"ft": 16384,
+		"iS": 2508,
+		"oA": 0,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/data\/texture8.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/data\/texture9.jpg": {
+		"ft": 16384,
+		"iS": 25778,
+		"oA": 0,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/data\/texture9.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/ObjectFiles.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/ObjectFiles.pde",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/ObjectFiles\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/ObjectFiles\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/ScalableVectorGraphics\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/ScalableVectorGraphics\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/ScalableVectorGraphics\/data\/Blank_US_map_borders.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/ScalableVectorGraphics\/data\/Blank_US_map_borders.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/code\/ShapesObjects\/ScalableVectorGraphics\/ScalableVectorGraphics.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/ScalableVectorGraphics\/ScalableVectorGraphics.pde",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/ScalableVectorGraphics\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/ScalableVectorGraphics\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/ScalableVectorGraphicsChild\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/ScalableVectorGraphicsChild\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/ScalableVectorGraphicsChild\/data\/Blank_US_map_borders.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/ScalableVectorGraphicsChild\/data\/Blank_US_map_borders.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/code\/ShapesObjects\/ScalableVectorGraphicsChild\/ScalableVectorGraphicsChild.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/ScalableVectorGraphicsChild\/ScalableVectorGraphicsChild.pde",
+		"oF": 0
+		},
+	"\/code\/ShapesObjects\/ScalableVectorGraphicsChild\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/ShapesObjects\/ScalableVectorGraphicsChild\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/SQLite\/DataCapture\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/SQLite\/DataCapture\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/SQLite\/DataCapture\/DataCapture.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/SQLite\/DataCapture\/DataCapture.pde",
+		"oF": 0
+		},
+	"\/code\/SQLite\/DataCapture\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/SQLite\/DataCapture\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/SQLite\/DataCaptureClause\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/SQLite\/DataCaptureClause\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/SQLite\/DataCaptureClause\/DataCaptureClause.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/SQLite\/DataCaptureClause\/DataCaptureClause.pde",
+		"oF": 0
+		},
+	"\/code\/SQLite\/DataCaptureClause\/sketch.properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/SQLite\/DataCaptureClause\/sketch.properties",
+		"oF": 0
+		},
+	"\/code\/SQLite\/SQLite\/AndroidManifest.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/SQLite\/SQLite\/AndroidManifest.xml",
+		"oF": 0
+		},
+	"\/code\/SQLite\/SQLite\/SQLite.pde": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/code\/SQLite\/SQLite\/SQLite.pde",
+		"oF": 0
+		},
+	"\/cover.jpg": {
+		"ft": 16384,
+		"iS": 553987,
+		"oA": 0,
+		"oAP": "\/cover.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/data.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/data.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/display.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/display.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/geolocation.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/geolocation.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/gettingStarted.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/gettingStarted.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/images\/camera\/FaceFinder-sm.png": {
+		"ft": 32768,
+		"iS": 521750,
+		"oA": 0,
+		"oAP": "\/images\/camera\/FaceFinder-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/camera\/FrontBack-sm.jpg": {
+		"ft": 16384,
+		"iS": 241435,
+		"oA": 0,
+		"oAP": "\/images\/camera\/FrontBack-sm.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/camera\/GalleryAlbum-sm.jpg": {
+		"ft": 16384,
+		"iS": 542712,
+		"oA": 0,
+		"oAP": "\/images\/camera\/GalleryAlbum-sm.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/camera\/GettingStarted-sm.png": {
+		"ft": 32768,
+		"iS": 673127,
+		"oA": 0,
+		"oAP": "\/images\/camera\/GettingStarted-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/camera\/MagicMarker-sm.png": {
+		"ft": 32768,
+		"iS": 484753,
+		"oA": 0,
+		"oAP": "\/images\/camera\/MagicMarker-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/camera\/Photobooth-sm.jpg": {
+		"ft": 16384,
+		"iS": 902133,
+		"oA": 0,
+		"oAP": "\/images\/camera\/Photobooth-sm.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/camera\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/images\/camera\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/images\/Data\/DataRead.jpg": {
+		"ft": 16384,
+		"iS": 194980,
+		"oA": 0,
+		"oAP": "\/images\/Data\/DataRead.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/Data\/DataWrite.jpg": {
+		"ft": 16384,
+		"iS": 108585,
+		"oA": 0,
+		"oAP": "\/images\/Data\/DataWrite.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/Data\/Earthquakes.jpg": {
+		"ft": 16384,
+		"iS": 460138,
+		"oA": 0,
+		"oAP": "\/images\/Data\/Earthquakes.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/Data\/EarthquakesSevenDays.jpg": {
+		"ft": 16384,
+		"iS": 710141,
+		"oA": 0,
+		"oAP": "\/images\/Data\/EarthquakesSevenDays.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/Data\/GroceryList.jpg": {
+		"ft": 16384,
+		"iS": 255976,
+		"oA": 0,
+		"oAP": "\/images\/Data\/GroceryList.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/display\/DisplayGestureFinger.png": {
+		"ft": 32768,
+		"iS": 930875,
+		"oA": 0,
+		"oAP": "\/images\/display\/DisplayGestureFinger.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/display\/MouseSpeed-sm.png": {
+		"ft": 32768,
+		"iS": 135332,
+		"oA": 0,
+		"oAP": "\/images\/display\/MouseSpeed-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/display\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/images\/display\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/images\/geolocation\/DestinationCompass-sm.png": {
+		"ft": 32768,
+		"iS": 170896,
+		"oA": 0,
+		"oAP": "\/images\/geolocation\/DestinationCompass-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/geolocation\/Geolocation-sm.png": {
+		"ft": 32768,
+		"iS": 195108,
+		"oA": 0,
+		"oAP": "\/images\/geolocation\/Geolocation-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/geolocation\/geolocationSketchPermissions-sm.png": {
+		"ft": 32768,
+		"iS": 99437,
+		"oA": 0,
+		"oAP": "\/images\/geolocation\/geolocationSketchPermissions-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/geolocation\/LocationDistance-sm.png": {
+		"ft": 32768,
+		"iS": 227022,
+		"oA": 0,
+		"oAP": "\/images\/geolocation\/LocationDistance-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/geolocation\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/images\/geolocation\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/images\/gettingStarted\/basicDrawing1.png": {
+		"ft": 32768,
+		"iS": 62009,
+		"oA": 0,
+		"oAP": "\/images\/gettingStarted\/basicDrawing1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/gettingStarted\/BasicDrawingEmulatorAndDevice-sm.png": {
+		"ft": 32768,
+		"iS": 551050,
+		"oA": 0,
+		"oAP": "\/images\/gettingStarted\/BasicDrawingEmulatorAndDevice-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/gettingStarted\/Processing_IDE.png": {
+		"ft": 32768,
+		"iS": 27790,
+		"oA": 0,
+		"oAP": "\/images\/gettingStarted\/Processing_IDE.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/gettingStarted\/Processing_IDE_basicDrawing-sm.png": {
+		"ft": 32768,
+		"iS": 84783,
+		"oA": 0,
+		"oAP": "\/images\/gettingStarted\/Processing_IDE_basicDrawing-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/gettingStarted\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/images\/gettingStarted\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/images\/Mobile3D\/CameraTexture.png": {
+		"ft": 32768,
+		"iS": 363437,
+		"oA": 0,
+		"oAP": "\/images\/Mobile3D\/CameraTexture.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/Mobile3D\/LoadDroidFont.png": {
+		"ft": 32768,
+		"iS": 91505,
+		"oA": 0,
+		"oAP": "\/images\/Mobile3D\/LoadDroidFont.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/Mobile3D\/LoadFont.png": {
+		"ft": 32768,
+		"iS": 496182,
+		"oA": 0,
+		"oAP": "\/images\/Mobile3D\/LoadFont.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/Mobile3D\/PrimitivesLights.png": {
+		"ft": 32768,
+		"iS": 161743,
+		"oA": 0,
+		"oAP": "\/images\/Mobile3D\/PrimitivesLights.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/Mobile3D\/SpotLights.png": {
+		"ft": 32768,
+		"iS": 368269,
+		"oA": 0,
+		"oAP": "\/images\/Mobile3D\/SpotLights.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/Mobile3D\/TextLights.png": {
+		"ft": 32768,
+		"iS": 450361,
+		"oA": 0,
+		"oAP": "\/images\/Mobile3D\/TextLights.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/Mobile3D\/TexturedSphere.png": {
+		"ft": 32768,
+		"iS": 646582,
+		"oA": 0,
+		"oAP": "\/images\/Mobile3D\/TexturedSphere.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/Networking\/CollaborativeDrawing.png": {
+		"ft": 32768,
+		"iS": 235995,
+		"oA": 0,
+		"oAP": "\/images\/Networking\/CollaborativeDrawing.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/Networking\/libraries.png": {
+		"ft": 32768,
+		"iS": 100177,
+		"oA": 0,
+		"oAP": "\/images\/Networking\/libraries.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/Networking\/WiFiBalancingGame.png": {
+		"ft": 32768,
+		"iS": 149946,
+		"oA": 0,
+		"oAP": "\/images\/Networking\/WiFiBalancingGame.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/Networking\/WiFiDataExchangeOSC.png": {
+		"ft": 32768,
+		"iS": 294762,
+		"oA": 0,
+		"oAP": "\/images\/Networking\/WiFiDataExchangeOSC.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/NFC\/NFCTags_lowResolution.jpg": {
+		"ft": 16384,
+		"iS": 392508,
+		"oA": 0,
+		"oAP": "\/images\/NFC\/NFCTags_lowResolution.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/NFC\/NFCTransmit.png": {
+		"ft": 32768,
+		"iS": 256767,
+		"oA": 0,
+		"oAP": "\/images\/NFC\/NFCTransmit.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/NFC\/ReadNFC.png": {
+		"ft": 32768,
+		"iS": 164825,
+		"oA": 0,
+		"oAP": "\/images\/NFC\/ReadNFC.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/NFC\/WriteNFC.png": {
+		"ft": 32768,
+		"iS": 196362,
+		"oA": 0,
+		"oAP": "\/images\/NFC\/WriteNFC.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/P2P\/BluetoothCursors.png": {
+		"ft": 32768,
+		"iS": 199741,
+		"oA": 0,
+		"oAP": "\/images\/P2P\/BluetoothCursors.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/P2P\/SurveyServerClient.png": {
+		"ft": 32768,
+		"iS": 368195,
+		"oA": 0,
+		"oAP": "\/images\/P2P\/SurveyServerClient.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/preface\/rapid-android-development_p3_0.jpg": {
+		"ft": 16384,
+		"iS": 115148,
+		"oA": 0,
+		"oAP": "\/images\/preface\/rapid-android-development_p3_0.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/preface\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/images\/preface\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/images\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/images\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/images\/sensors\/AccelerometerColor-sm.png": {
+		"ft": 32768,
+		"iS": 55221,
+		"oA": 0,
+		"oAP": "\/images\/sensors\/AccelerometerColor-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/sensors\/AccelerometerColorPicker-sm.png": {
+		"ft": 32768,
+		"iS": 56309,
+		"oA": 0,
+		"oAP": "\/images\/sensors\/AccelerometerColorPicker-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/sensors\/AccelerometerOutputNexus6-sm.png": {
+		"ft": 32768,
+		"iS": 58277,
+		"oA": 0,
+		"oAP": "\/images\/sensors\/AccelerometerOutputNexus6-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/sensors\/ColorPicker.png": {
+		"ft": 32768,
+		"iS": 54494,
+		"oA": 0,
+		"oAP": "\/images\/sensors\/ColorPicker.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/sensors\/MultipleSensorsNexus6-sm.png": {
+		"ft": 32768,
+		"iS": 113714,
+		"oA": 0,
+		"oAP": "\/images\/sensors\/MultipleSensorsNexus6-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/sensors\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/images\/sensors\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/images\/ShapesObjects\/Gaze.png": {
+		"ft": 32768,
+		"iS": 623176,
+		"oA": 0,
+		"oAP": "\/images\/ShapesObjects\/Gaze.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/ShapesObjects\/Moebius.png": {
+		"ft": 32768,
+		"iS": 199406,
+		"oA": 0,
+		"oAP": "\/images\/ShapesObjects\/Moebius.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/ShapesObjects\/OneWTC.png": {
+		"ft": 32768,
+		"iS": 240598,
+		"oA": 0,
+		"oAP": "\/images\/ShapesObjects\/OneWTC.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/ShapesObjects\/SVG.png": {
+		"ft": 32768,
+		"iS": 338149,
+		"oA": 0,
+		"oAP": "\/images\/ShapesObjects\/SVG.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/SQLite\/DataCapture.png": {
+		"ft": 32768,
+		"iS": 232925,
+		"oA": 0,
+		"oAP": "\/images\/SQLite\/DataCapture.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/SQLite\/DataCaptureClause.png": {
+		"ft": 32768,
+		"iS": 277402,
+		"oA": 0,
+		"oAP": "\/images\/SQLite\/DataCaptureClause.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/SQLite\/DataSQL.jpg": {
+		"ft": 16384,
+		"iS": 179241,
+		"oA": 0,
+		"oAP": "\/images\/SQLite\/DataSQL.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/SQLite\/DataSQL.png": {
+		"ft": 32768,
+		"iS": 232097,
+		"oA": 0,
+		"oAP": "\/images\/SQLite\/DataSQL.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/mobile3d.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/mobile3d.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/networking.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/networking.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/nfc.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/nfc.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/node_modules": {
+		"ft": 65536,
+		"oA": 2,
+		"oAP": "\/build\/node_modules",
+		"oF": 0
+		},
+	"\/p2p.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/p2p.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/preface.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/preface.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/sensors.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/sensors.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/shapes.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/shapes.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/sqlite.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/sqlite.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/styles\/ebook.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/styles\/ebook-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/styles\/website.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/styles\/website-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/SUMMARY.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/SUMMARY.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		}
+	},
+"hooks": [
+	],
+"manualImportLinks": {
+	},
+"projectAttributes": {
+	"creationDate": 517427902,
+	"displayValue": "rapid-android-development",
+	"displayValueWasSetByUser": 0,
+	"iconImageName": "meme-obama"
+	},
+"projectSettings": {
+	"abortBuildOnError": 1,
+	"alwaysUseExternalServer": 0,
+	"animateCSSInjections": 1,
+	"autoBuildNewItems": 1,
+	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
+	"babelAuxiliaryCommentAfter": "",
+	"babelAuxiliaryCommentBefore": "",
+	"babelConfigFileHandlingType": 0,
+	"babelCustomPluginsList": "",
+	"babelCustomPresetsList": "",
+	"babelInsertModuleIDs": 0,
+	"babelModuleID": "",
+	"babelNoComments": 0,
+	"babelPlugins": {
+		"async-generator-functions": {
+			"active": 0
+			},
+		"async-to-generator": {
+			"active": 0
+			},
+		"async-to-module-method": {
+			"active": 0
+			},
+		"class-properties": {
+			"active": 0
+			},
+		"decorators": {
+			"active": 0
+			},
+		"decorators-legacy": {
+			"active": 0
+			},
+		"do-expressions": {
+			"active": 0
+			},
+		"es2015-arrow-functions": {
+			"active": 0
+			},
+		"es2015-block-scoped-functions": {
+			"active": 0
+			},
+		"es2015-block-scoping": {
+			"active": 0
+			},
+		"es2015-classes": {
+			"active": 0
+			},
+		"es2015-computed-properties": {
+			"active": 0
+			},
+		"es2015-constants": {
+			"active": 0
+			},
+		"es2015-destructuring": {
+			"active": 0
+			},
+		"es2015-duplicate-keys": {
+			"active": 0
+			},
+		"es2015-for-of": {
+			"active": 0
+			},
+		"es2015-function-name": {
+			"active": 0
+			},
+		"es2015-literals": {
+			"active": 0
+			},
+		"es2015-modules-amd": {
+			"active": 0
+			},
+		"es2015-modules-commonjs": {
+			"active": 0
+			},
+		"es2015-modules-systemjs": {
+			"active": 0
+			},
+		"es2015-modules-umd": {
+			"active": 0
+			},
+		"es2015-object-super": {
+			"active": 0
+			},
+		"es2015-parameters": {
+			"active": 0
+			},
+		"es2015-shorthand-properties": {
+			"active": 0
+			},
+		"es2015-spread": {
+			"active": 0
+			},
+		"es2015-sticky-regex": {
+			"active": 0
+			},
+		"es2015-template-literals": {
+			"active": 0
+			},
+		"es2015-typeof-symbol": {
+			"active": 0
+			},
+		"es2015-unicode-regex": {
+			"active": 0
+			},
+		"es3-member-expression-literals": {
+			"active": 0
+			},
+		"es3-property-literals": {
+			"active": 0
+			},
+		"es5-property-mutators": {
+			"active": 0
+			},
+		"eval": {
+			"active": 0
+			},
+		"exponentiation-operator": {
+			"active": 0
+			},
+		"export-extensions": {
+			"active": 0
+			},
+		"external-helpers": {
+			"active": 0
+			},
+		"flow-comments": {
+			"active": 0
+			},
+		"flow-strip-types": {
+			"active": 0
+			},
+		"function-bind": {
+			"active": 0
+			},
+		"inline-environment-variables": {
+			"active": 0
+			},
+		"jscript": {
+			"active": 0
+			},
+		"member-expression-literals": {
+			"active": 0
+			},
+		"merge-sibling-variables": {
+			"active": 0
+			},
+		"minify-booleans": {
+			"active": 0
+			},
+		"node-env-inline": {
+			"active": 0
+			},
+		"object-assign": {
+			"active": 0
+			},
+		"object-rest-spread": {
+			"active": 0
+			},
+		"object-set-prototype-of-to-assign": {
+			"active": 0
+			},
+		"property-literals": {
+			"active": 0
+			},
+		"proto-to-assign": {
+			"active": 0
+			},
+		"react-constant-elements": {
+			"active": 0
+			},
+		"react-display-name": {
+			"active": 0
+			},
+		"react-inline-elements": {
+			"active": 0
+			},
+		"react-jsx": {
+			"active": 0
+			},
+		"react-jsx-compat": {
+			"active": 0
+			},
+		"react-jsx-self": {
+			"active": 0
+			},
+		"react-jsx-source": {
+			"active": 0
+			},
+		"regenerator": {
+			"active": 0
+			},
+		"remove-console": {
+			"active": 0
+			},
+		"remove-debugger": {
+			"active": 0
+			},
+		"runtime": {
+			"active": 0
+			},
+		"simplify-comparison-operators": {
+			"active": 0
+			},
+		"strict-mode": {
+			"active": 0
+			},
+		"syntax-async-generators": {
+			"active": 0
+			},
+		"syntax-class-properties": {
+			"active": 0
+			},
+		"syntax-decorators": {
+			"active": 0
+			},
+		"syntax-do-expressions": {
+			"active": 0
+			},
+		"syntax-export-extensions": {
+			"active": 0
+			},
+		"syntax-flow": {
+			"active": 0
+			},
+		"syntax-function-bind": {
+			"active": 0
+			},
+		"syntax-function-sent": {
+			"active": 0
+			},
+		"syntax-jsx": {
+			"active": 0
+			},
+		"syntax-object-rest-spread": {
+			"active": 0
+			},
+		"undeclared-variables-check": {
+			"active": 0
+			},
+		"undefined-to-void": {
+			"active": 0
+			}
+		},
+	"babelPresetType": 193,
+	"babelRetainLines": 0,
+	"bowerAbbreviatedPath": "bower_components",
+	"bowerAutoCreateInfoFile": 1,
+	"bowerInstallDevDependencies": 0,
+	"bowerSaveDependencies": 1,
+	"bowerSaveDevDependencies": 0,
+	"bowerUseExactVersion": 0,
+	"browserRefreshDelay": 0,
+	"buildFolderActive": 0,
+	"buildFolderName": "build",
+	"cleanBuild": 1,
+	"coffeeLintFlags2": {
+		"arrow_spacing": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"camel_case_classes": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"colon_assignment_spacing": {
+			"active": 0,
+			"flagValue": 1
+			},
+		"cyclomatic_complexity": {
+			"active": 0,
+			"flagValue": 10
+			},
+		"duplicate_key": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"empty_constructor_needs_parens": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"ensure_comprehensions": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"indentation": {
+			"active": 1,
+			"flagValue": 2
+			},
+		"line_endings": {
+			"active": 0,
+			"flagValue": 0
+			},
+		"max_line_length": {
+			"active": 0,
+			"flagValue": 150
+			},
+		"missing_fat_arrows": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"newlines_after_classes": {
+			"active": 0,
+			"flagValue": 3
+			},
+		"no_backticks": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_debugger": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_empty_functions": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_empty_param_list": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_implicit_braces": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_implicit_parens": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_interpolation_in_single_quotes": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_nested_string_interpolation": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_plusplus": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_private_function_fat_arrows": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_stand_alone_at": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_tabs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_this": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_throwing_strings": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_trailing_semicolons": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_trailing_whitespace": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_unnecessary_double_quotes": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_unnecessary_fat_arrows": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"non_empty_constructor_needs_parens": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"prefer_english_operator": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"space_operators": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"spacing_after_comma": {
+			"active": 1,
+			"flagValue": -1
+			}
+		},
+	"esLintConfigFileHandlingType": 0,
+	"esLintECMAVersion": 7,
+	"esLintEnvironmentsMask": 1,
+	"esLintRules": {
+		"accessor-pairs": {
+			"active": 0,
+			"optionString": "{'setWithoutGet': true, 'getWithoutSet': false}"
+			},
+		"array-bracket-spacing": {
+			"active": 0,
+			"optionString": "'never', {'singleValue': false, 'objectsInArrays': false, 'arraysInArrays': false}"
+			},
+		"array-callback-return": {
+			"active": 0,
+			"optionString": ""
+			},
+		"arrow-body-style": {
+			"active": 0,
+			"optionString": "'as-needed', {'requireReturnForObjectLiteral': false}"
+			},
+		"arrow-parens": {
+			"active": 0,
+			"optionString": "'always'"
+			},
+		"arrow-spacing": {
+			"active": 0,
+			"optionString": "{'before': true, 'after': true}"
+			},
+		"block-scoped-var": {
+			"active": 0,
+			"optionString": ""
+			},
+		"block-spacing": {
+			"active": 0,
+			"optionString": "'always'"
+			},
+		"brace-style": {
+			"active": 0,
+			"optionString": "'1tbs', {'allowSingleLine': true}"
+			},
+		"callback-return": {
+			"active": 0,
+			"optionString": "['callback', 'cb', 'next']"
+			},
+		"camelcase": {
+			"active": 0,
+			"optionString": "{'properties': 'always'}"
+			},
+		"capitalized-comments": {
+			"active": 0,
+			"optionString": "'always', {'ignoreInlineComments': false, 'ignoreConsecutiveComments': false}"
+			},
+		"class-methods-use-this": {
+			"active": 0,
+			"optionString": "{'exceptMethods': []}"
+			},
+		"comma-dangle": {
+			"active": 1,
+			"optionString": "'never'"
+			},
+		"comma-spacing": {
+			"active": 0,
+			"optionString": "{'before': false, 'after': true}"
+			},
+		"comma-style": {
+			"active": 0,
+			"optionString": "'last'"
+			},
+		"complexity": {
+			"active": 0,
+			"optionString": "20"
+			},
+		"computed-property-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"consistent-return": {
+			"active": 0,
+			"optionString": "{'treatUndefinedAsUnspecified': false}"
+			},
+		"consistent-this": {
+			"active": 0,
+			"optionString": "'that'"
+			},
+		"constructor-super": {
+			"active": 1,
+			"optionString": ""
+			},
+		"curly": {
+			"active": 0,
+			"optionString": "'all'"
+			},
+		"default-case": {
+			"active": 0,
+			"optionString": ""
+			},
+		"dot-location": {
+			"active": 0,
+			"optionString": "'object'"
+			},
+		"dot-notation": {
+			"active": 0,
+			"optionString": "{'allowKeywords': false}"
+			},
+		"eol-last": {
+			"active": 0,
+			"optionString": "'always'"
+			},
+		"eqeqeq": {
+			"active": 0,
+			"optionString": "'always', {'null': 'always'}"
+			},
+		"func-call-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"func-name-matching": {
+			"active": 0,
+			"optionString": "'always', {'includeCommonJSModuleExports': false}"
+			},
+		"func-names": {
+			"active": 0,
+			"optionString": "'always'"
+			},
+		"func-style": {
+			"active": 0,
+			"optionString": "'expression'"
+			},
+		"generator-star-spacing": {
+			"active": 0,
+			"optionString": "{'before': true, 'after': false}"
+			},
+		"global-require": {
+			"active": 0,
+			"optionString": ""
+			},
+		"guard-for-in": {
+			"active": 0,
+			"optionString": ""
+			},
+		"handle-callback-err": {
+			"active": 0,
+			"optionString": "'err'"
+			},
+		"id-blacklist": {
+			"active": 0,
+			"optionString": "'data', 'err', 'e', 'cb', 'callback'"
+			},
+		"id-length": {
+			"active": 0,
+			"optionString": "{'min': 2, 'max': 1000, 'properties': 'always', 'exceptions': ['x', 'i', 'y']}"
+			},
+		"id-match": {
+			"active": 0,
+			"optionString": "'^[a-z]+([A-Z][a-z]+)*$', {'properties': false, 'onlyDeclarations': true}"
+			},
+		"indent": {
+			"active": 0,
+			"optionString": "4, {'SwitchCase': 0, 'VariableDeclarator': 1, 'outerIIFEBody': 1, }"
+			},
+		"init-declarations": {
+			"active": 0,
+			"optionString": "'always',  {'ignoreForLoopInit': true}"
+			},
+		"jsx-quotes": {
+			"active": 0,
+			"optionString": "'prefer-double'"
+			},
+		"key-spacing": {
+			"active": 0,
+			"optionString": "{'singleLine': {'beforeColon': false, 'afterColon': true, 'mode':'strict'}, 'multiLine': {'beforeColon': false, 'afterColon': true, 'align': 'value', 'mode':'minimum'}}"
+			},
+		"keyword-spacing": {
+			"active": 0,
+			"optionString": "{'before': true, 'after': true, 'overrides': {}}"
+			},
+		"line-comment-position": {
+			"active": 0,
+			"optionString": "{'position': 'above'}"
+			},
+		"linebreak-style": {
+			"active": 0,
+			"optionString": "'unix'"
+			},
+		"lines-around-comment": {
+			"active": 0,
+			"optionString": "{'beforeBlockComment': true}"
+			},
+		"lines-around-directive": {
+			"active": 0,
+			"optionString": "{'before': 'always', 'after': 'always'}"
+			},
+		"max-depth": {
+			"active": 0,
+			"optionString": "{'max': 4}"
+			},
+		"max-len": {
+			"active": 0,
+			"optionString": "{'code': 80, 'comments': 80, 'tabWidth': 4, 'ignoreUrls': true, 'ignoreStrings': true, 'ignoreTemplateLiterals': true, 'ignoreRegExpLiterals': true}"
+			},
+		"max-lines": {
+			"active": 0,
+			"optionString": "{'max': 300, 'skipBlankLines': true, 'skipComments': true}"
+			},
+		"max-nested-callbacks": {
+			"active": 0,
+			"optionString": "{'max': 10}"
+			},
+		"max-params": {
+			"active": 0,
+			"optionString": "{'max': 4}"
+			},
+		"max-statements": {
+			"active": 0,
+			"optionString": "{'max': 10}, {'ignoreTopLevelFunctions': true}"
+			},
+		"max-statements-per-line": {
+			"active": 0,
+			"optionString": "{'max': 1}"
+			},
+		"multiline-ternary": {
+			"active": 0,
+			"optionString": "'always'"
+			},
+		"new-cap": {
+			"active": 0,
+			"optionString": "{'newIsCap': true, 'capIsNew': true, 'newIsCapExceptions': [], 'capIsNewExceptions': ['Array', 'Boolean', 'Date', 'Error', 'Function', 'Number', 'Object', 'RegExp', 'String', 'Symbol'], 'properties': true}"
+			},
+		"new-parens": {
+			"active": 0,
+			"optionString": ""
+			},
+		"newline-after-var": {
+			"active": 0,
+			"optionString": "'always'"
+			},
+		"newline-before-return": {
+			"active": 0,
+			"optionString": ""
+			},
+		"newline-per-chained-call": {
+			"active": 0,
+			"optionString": "{'ignoreChainWithDepth': 2}"
+			},
+		"no-alert": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-array-constructor": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-await-in-loop": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-bitwise": {
+			"active": 0,
+			"optionString": "{'allow': ['~'], 'int32Hint': true}"
+			},
+		"no-caller": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-case-declarations": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-catch-shadow": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-class-assign": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-compare-neg-zero": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-cond-assign": {
+			"active": 1,
+			"optionString": "'except-parens'"
+			},
+		"no-confusing-arrow": {
+			"active": 0,
+			"optionString": "{'allowParens': false}"
+			},
+		"no-console": {
+			"active": 1,
+			"optionString": "{'allow': ['warn', 'error']}"
+			},
+		"no-const-assign": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-constant-condition": {
+			"active": 1,
+			"optionString": "{'checkLoops': true}"
+			},
+		"no-continue": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-control-regex": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-debugger": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-delete-var": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-div-regex": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-dupe-args": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-dupe-class-members": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-dupe-keys": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-duplicate-imports": {
+			"active": 0,
+			"optionString": "{'includeExports': false}"
+			},
+		"no-else-return": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-empty": {
+			"active": 1,
+			"optionString": "{'allowEmptyCatch': false}"
+			},
+		"no-empty-character-class": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-empty-function": {
+			"active": 0,
+			"optionString": "{'allow': []}"
+			},
+		"no-empty-pattern": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-eq-null": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-eval": {
+			"active": 0,
+			"optionString": "{'allowIndirect': false}"
+			},
+		"no-ex-assign": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-extend-native": {
+			"active": 0,
+			"optionString": "{'exceptions': []}"
+			},
+		"no-extra-bind": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-extra-boolean-cast": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-extra-labels": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-extra-parens": {
+			"active": 0,
+			"optionString": "'all', {'conditionalAssign': false, 'returnAssign': false, 'nestedBinaryExpressions': false, 'ignoreJSX': 'none'}"
+			},
+		"no-extra-semi": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-fallthrough": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-floating-decimal": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-func-assign": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-global-assign": {
+			"active": 1,
+			"optionString": "{'exceptions': []}"
+			},
+		"no-implicit-coercion": {
+			"active": 0,
+			"optionString": "{'boolean': true, 'number': true, 'string': true, 'allow': []}"
+			},
+		"no-implicit-globals": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-implied-eval": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-inline-comments": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-inner-declarations": {
+			"active": 1,
+			"optionString": "'functions'"
+			},
+		"no-invalid-regexp": {
+			"active": 1,
+			"optionString": "{'allowConstructorFlags': ['u', 'y']}"
+			},
+		"no-invalid-this": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-irregular-whitespace": {
+			"active": 1,
+			"optionString": "{'skipStrings': true, 'skipComments': false, 'skipRegExps': true, 'skipTemplates': true}"
+			},
+		"no-iterator": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-label-var": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-labels": {
+			"active": 0,
+			"optionString": "{'allowLoop': false, 'allowSwitch': false}"
+			},
+		"no-lone-blocks": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-lonely-if": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-loop-func": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-magic-numbers": {
+			"active": 0,
+			"optionString": "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
+			},
+		"no-mixed-operators": {
+			"active": 0,
+			"optionString": "{'groups': [['+', '-', '*', '\/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
+			},
+		"no-mixed-requires": {
+			"active": 0,
+			"optionString": "{'grouping': false, 'allowCall': false }"
+			},
+		"no-mixed-spaces-and-tabs": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-multi-assign": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-multi-spaces": {
+			"active": 0,
+			"optionString": "{'exceptions': {'Property': true, 'BinaryExpression': false, 'VariableDeclarator': false, 'ImportDeclaration': false}}"
+			},
+		"no-multi-str": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-multiple-empty-lines": {
+			"active": 0,
+			"optionString": "{'max': 2, 'maxBOF': 2, 'maxEOF': 2}"
+			},
+		"no-negated-condition": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-nested-ternary": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-new": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-new-func": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-new-object": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-new-require": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-new-symbol": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-new-wrappers": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-obj-calls": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-octal": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-octal-escape": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-param-reassign": {
+			"active": 0,
+			"optionString": "{'props': false}"
+			},
+		"no-path-concat": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-plusplus": {
+			"active": 0,
+			"optionString": "{'allowForLoopAfterthoughts': false}"
+			},
+		"no-process-env": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-process-exit": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-proto": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-prototype-builtins": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-redeclare": {
+			"active": 1,
+			"optionString": "{'builtinGlobals': false}"
+			},
+		"no-regex-spaces": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-restricted-globals": {
+			"active": 0,
+			"optionString": "'event', 'fdescribe'"
+			},
+		"no-restricted-imports": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-restricted-modules": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-restricted-properties": {
+			"active": 0,
+			"optionString": "[{'object': 'disallowedObjectName', 'property': 'disallowedPropertyName'}, {'object': 'disallowedObjectName', 'property': 'anotherDisallowedPropertyName', 'message': 'Please use allowedObjectName.allowedPropertyName.'}]"
+			},
+		"no-restricted-syntax": {
+			"active": 0,
+			"optionString": "'FunctionExpression', 'WithStatement'"
+			},
+		"no-return-assign": {
+			"active": 0,
+			"optionString": "'except-parens'"
+			},
+		"no-return-await": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-script-url": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-self-assign": {
+			"active": 1,
+			"optionString": "{'props': false}"
+			},
+		"no-self-compare": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-sequences": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-shadow": {
+			"active": 0,
+			"optionString": "{'builtinGlobals': false, 'hoist': 'functions', 'allow': []}"
+			},
+		"no-shadow-restricted-names": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-sparse-arrays": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-sync": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-tabs": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-template-curly-in-string": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-ternary": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-this-before-super": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-throw-literal": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-trailing-spaces": {
+			"active": 0,
+			"optionString": "{'skipBlankLines': false}"
+			},
+		"no-undef": {
+			"active": 1,
+			"optionString": "{'typeof': false}"
+			},
+		"no-undef-init": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-undefined": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-underscore-dangle": {
+			"active": 0,
+			"optionString": "{'allow': [], 'allowAfterThis': false, 'allowAfterSuper': false}"
+			},
+		"no-unexpected-multiline": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-unmodified-loop-condition": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-unneeded-ternary": {
+			"active": 0,
+			"optionString": "{'defaultAssignment': true}"
+			},
+		"no-unreachable": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-unsafe-finally": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-unsafe-negation": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-unused-expressions": {
+			"active": 0,
+			"optionString": "{'allowShortCircuit': false, 'allowTernary': false, 'allowTaggedTemplates': false}"
+			},
+		"no-unused-labels": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-unused-vars": {
+			"active": 1,
+			"optionString": "{'vars': 'all', 'args': 'after-used', 'caughtErrors': 'none', 'ignoreRestSiblings': false}"
+			},
+		"no-use-before-define": {
+			"active": 0,
+			"optionString": "{'functions': true, 'classes': true, 'variables': true}"
+			},
+		"no-useless-call": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-useless-computed-key": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-useless-concat": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-useless-constructor": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-useless-escape": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-useless-rename": {
+			"active": 0,
+			"optionString": "{'ignoreDestructuring': false, 'ignoreImport': false, 'ignoreExport': false}"
+			},
+		"no-useless-return": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-var": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-void": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-warning-comments": {
+			"active": 0,
+			"optionString": "{'terms': ['todo', 'fixme', 'xxx'], 'location': 'start'}"
+			},
+		"no-whitespace-before-property": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-with": {
+			"active": 0,
+			"optionString": ""
+			},
+		"nonblock-statement-body-position": {
+			"active": 0,
+			"optionString": "'beside'"
+			},
+		"object-curly-newline": {
+			"active": 0,
+			"optionString": "{'ObjectExpression': {'multiline': true}, 'ObjectPattern': {'multiline': true}}"
+			},
+		"object-curly-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"object-property-newline": {
+			"active": 0,
+			"optionString": "{'allowMultiplePropertiesPerLine': true}"
+			},
+		"object-shorthand": {
+			"active": 0,
+			"optionString": "'always', {'avoidQuotes': false, 'ignoreConstructors': false}"
+			},
+		"one-var": {
+			"active": 0,
+			"optionString": "'always'"
+			},
+		"one-var-declaration-per-line": {
+			"active": 0,
+			"optionString": "'always'"
+			},
+		"operator-assignment": {
+			"active": 0,
+			"optionString": "'always'"
+			},
+		"operator-linebreak": {
+			"active": 0,
+			"optionString": "'after', {'overrides': {'?': 'after', '+=': 'none'}}"
+			},
+		"padded-blocks": {
+			"active": 0,
+			"optionString": "{'blocks': 'always', 'switches': 'always', 'classes': 'always'}"
+			},
+		"prefer-arrow-callback": {
+			"active": 0,
+			"optionString": ""
+			},
+		"prefer-const": {
+			"active": 0,
+			"optionString": "{'destructuring': 'any', 'ignoreReadBeforeAssign': false}"
+			},
+		"prefer-destructuring": {
+			"active": 0,
+			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
+			},
+		"prefer-numeric-literals": {
+			"active": 0,
+			"optionString": ""
+			},
+		"prefer-promise-reject-errors": {
+			"active": 0,
+			"optionString": "{'allowEmptyReject': false}"
+			},
+		"prefer-rest-params": {
+			"active": 0,
+			"optionString": ""
+			},
+		"prefer-spread": {
+			"active": 0,
+			"optionString": ""
+			},
+		"prefer-template": {
+			"active": 0,
+			"optionString": ""
+			},
+		"quote-props": {
+			"active": 0,
+			"optionString": "'always'"
+			},
+		"quotes": {
+			"active": 0,
+			"optionString": "'double', {'avoidEscape': true, 'allowTemplateLiterals': true}"
+			},
+		"radix": {
+			"active": 0,
+			"optionString": "'always'"
+			},
+		"require-await": {
+			"active": 0,
+			"optionString": ""
+			},
+		"require-jsdoc": {
+			"active": 0,
+			"optionString": "{'require': {'FunctionDeclaration': true, 'MethodDefinition': false, 'ClassDeclaration': false, 'ArrowFunctionExpression': false}}"
+			},
+		"require-yield": {
+			"active": 1,
+			"optionString": ""
+			},
+		"rest-spread-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"semi": {
+			"active": 0,
+			"optionString": "'always', {'omitLastInOneLineBlock': false}"
+			},
+		"semi-spacing": {
+			"active": 0,
+			"optionString": "{'before': false, 'after': true}"
+			},
+		"sort-imports": {
+			"active": 0,
+			"optionString": "{'ignoreCase': false, 'ignoreMemberSort': true, 'memberSyntaxSortOrder': ['none', 'all', 'multiple', 'single']}"
+			},
+		"sort-keys": {
+			"active": 0,
+			"optionString": "'asc', {'caseSensitive': true, 'natural': false}"
+			},
+		"sort-vars": {
+			"active": 0,
+			"optionString": "{'ignoreCase': false}"
+			},
+		"space-before-blocks": {
+			"active": 0,
+			"optionString": "{'functions': 'always', 'keywords': 'always', 'classes': 'always'}"
+			},
+		"space-before-function-paren": {
+			"active": 0,
+			"optionString": "{'anonymous': 'always', 'named': 'never'}"
+			},
+		"space-in-parens": {
+			"active": 0,
+			"optionString": "'never', {'exceptions': []}"
+			},
+		"space-infix-ops": {
+			"active": 0,
+			"optionString": "{'int32Hint': false}"
+			},
+		"space-unary-ops": {
+			"active": 0,
+			"optionString": "{'words': true, 'nonwords': false, 'overrides': {}}"
+			},
+		"spaced-comment": {
+			"active": 0,
+			"optionString": "'always', {'line': {'markers': ['\/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
+			},
+		"strict": {
+			"active": 0,
+			"optionString": "'safe'"
+			},
+		"symbol-description": {
+			"active": 0,
+			"optionString": ""
+			},
+		"template-curly-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"template-tag-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"unicode-bom": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"use-isnan": {
+			"active": 1,
+			"optionString": ""
+			},
+		"valid-jsdoc": {
+			"active": 0,
+			"optionString": "{'prefer': {'return': 'returns'}, 'requireReturn': true, 'requireReturnDescription': true, 'requireReturnType': true, 'requireParamDescription': true}"
+			},
+		"valid-typeof": {
+			"active": 1,
+			"optionString": "{'requireStringLiterals': true}"
+			},
+		"vars-on-top": {
+			"active": 0,
+			"optionString": ""
+			},
+		"wrap-iife": {
+			"active": 0,
+			"optionString": "'outside'"
+			},
+		"wrap-regex": {
+			"active": 0,
+			"optionString": ""
+			},
+		"yield-star-spacing": {
+			"active": 0,
+			"optionString": "{'before': false, 'after': true}"
+			},
+		"yoda": {
+			"active": 0,
+			"optionString": "'never', {'exceptRange': false, 'onlyEquality': false}"
+			}
+		},
+	"esLintSourceType": 0,
+	"externalServerAddress": "http:\/\/localhost:8888",
+	"gitIgnoreBuildFolder": 1,
+	"hideConfigFile": 0,
+	"jsCheckerReservedNamesString": "",
+	"jsHintFlags2": {
+		"asi": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"bitwise": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"boss": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"browser": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"browserify": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"camelcase": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"couch": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"curly": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"debug": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"devel": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"dojo": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"elision": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"eqeqeq": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"eqnull": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"es3": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"esnext": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"evil": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"expr": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"forin": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"freeze": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"funcscope": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"futurehostile": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"globalstrict": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"immed": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"indent": {
+			"active": 0,
+			"flagValue": 4
+			},
+		"iterator": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"jasmine": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"jquery": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"lastsemic": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"latedef": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"laxbreak": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"laxcomma": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"loopfunc": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"maxcomplexity": {
+			"active": 0,
+			"flagValue": 10
+			},
+		"maxdepth": {
+			"active": 0,
+			"flagValue": 3
+			},
+		"maxlen": {
+			"active": 0,
+			"flagValue": 150
+			},
+		"maxparams": {
+			"active": 0,
+			"flagValue": 3
+			},
+		"maxstatements": {
+			"active": 0,
+			"flagValue": 4
+			},
+		"mocha": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"mootools": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"moz": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"multistr": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"newcap": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"noarg": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"nocomma": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"node": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"noempty": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"nonbsp": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"nonew": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"nonstandard": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"notypeof": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"noyield": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"onecase": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"phantom": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"plusplus": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"proto": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"prototypejs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"qunit": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"regexp": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"rhino": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"scripturl": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"shadow": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"shelljs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"singleGroups": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"strict": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"sub": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"supernew": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"typed": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"undef": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"unused": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"varstmt": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"withstmt": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"worker": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"wsh": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"yui": {
+			"active": 0,
+			"flagValue": -1
+			}
+		},
+	"jsLintFlags2": {
+		"bitwise": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"browser": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"couch": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"devel": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"es6": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"eval": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"for": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"maxlen": {
+			"active": 0,
+			"flagValue": 150
+			},
+		"node": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"this": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"white": {
+			"active": 0,
+			"flagValue": -1
+			}
+		},
+	"languageDefaultsCOFFEE": {
+		"autoOutputAction": 0,
+		"autoOutputPathFilenamePattern": "*.js",
+		"autoOutputPathRelativePath": "",
+		"autoOutputPathReplace1": "",
+		"autoOutputPathReplace2": "",
+		"autoOutputPathStyle": 0,
+		"createSourceMap": 0,
+		"minifyOutput": 1,
+		"outputStyle": 0,
+		"syntaxCheckerStyle": 1
+		},
+	"languageDefaultsCSS": {
+		"autoOutputAction": 0,
+		"autoOutputPathFilenamePattern": "*-min.css",
+		"autoOutputPathRelativePath": "",
+		"autoOutputPathReplace1": "",
+		"autoOutputPathReplace2": "",
+		"autoOutputPathStyle": 0,
+		"createSourceMap": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0
+		},
+	"languageDefaultsGIF": {
+		"autoOutputAction": 0,
+		"autoOutputPathFilenamePattern": "*.gif",
+		"autoOutputPathRelativePath": "",
+		"autoOutputPathReplace1": "",
+		"autoOutputPathReplace2": "",
+		"autoOutputPathStyle": 0
+		},
+	"languageDefaultsHAML": {
+		"autoOutputAction": 0,
+		"autoOutputPathFilenamePattern": "*.html",
+		"autoOutputPathRelativePath": "",
+		"autoOutputPathReplace1": "",
+		"autoOutputPathReplace2": "",
+		"autoOutputPathStyle": 0,
+		"escapeHTMLCharacters": 0,
+		"noEscapeInAttributes": 0,
+		"outputFormat": 2,
+		"outputStyle": 0,
+		"useCDATA": 0,
+		"useDoubleQuotes": 0,
+		"useUnixNewlines": 0
+		},
+	"languageDefaultsJPG": {
+		"autoOutputAction": 0,
+		"autoOutputPathFilenamePattern": "*.jpg",
+		"autoOutputPathRelativePath": "",
+		"autoOutputPathReplace1": "",
+		"autoOutputPathReplace2": "",
+		"autoOutputPathStyle": 0,
+		"quality": 100
+		},
+	"languageDefaultsJS": {
+		"autoOutputAction": 0,
+		"autoOutputPathFilenamePattern": "*-min.js",
+		"autoOutputPathRelativePath": "\/min",
+		"autoOutputPathReplace1": "",
+		"autoOutputPathReplace2": "",
+		"autoOutputPathStyle": 0,
+		"createSourceMap": 0,
+		"minifyOutput": 1,
+		"syntaxCheckerStyle": 1,
+		"transpilerStyle": 0
+		},
+	"languageDefaultsJSON": {
+		"autoOutputAction": 1,
+		"autoOutputPathFilenamePattern": "*-min.json",
+		"autoOutputPathRelativePath": "",
+		"autoOutputPathReplace1": "",
+		"autoOutputPathReplace2": "",
+		"autoOutputPathStyle": 0,
+		"orderOutput": 0,
+		"outputStyle": 1
+		},
+	"languageDefaultsKIT": {
+		"autoOutputAction": 0,
+		"autoOutputPathFilenamePattern": "*.html",
+		"autoOutputPathRelativePath": "",
+		"autoOutputPathReplace1": "kit",
+		"autoOutputPathReplace2": "html",
+		"autoOutputPathStyle": 0
+		},
+	"languageDefaultsLESS": {
+		"allowInsecureImports": 0,
+		"autoOutputAction": 0,
+		"autoOutputPathFilenamePattern": "*.css",
+		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathReplace1": "less",
+		"autoOutputPathReplace2": "css",
+		"autoOutputPathStyle": 0,
+		"createSourceMap": 1,
+		"disableJavascript": 0,
+		"ieCompatibility": 1,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"languageDefaultsMARKDOWN": {
+		"autoOutputAction": 0,
+		"autoOutputPathFilenamePattern": "*.html",
+		"autoOutputPathRelativePath": "",
+		"autoOutputPathReplace1": "",
+		"autoOutputPathReplace2": "",
+		"autoOutputPathStyle": 0,
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"maskEmailAddresses": 1,
+		"outputFormat": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"languageDefaultsOTHER": {
+		"autoOutputAction": 2,
+		"autoOutputPathFilenamePattern": "*.*",
+		"autoOutputPathRelativePath": "",
+		"autoOutputPathReplace1": "",
+		"autoOutputPathReplace2": "",
+		"autoOutputPathStyle": 0
+		},
+	"languageDefaultsPNG": {
+		"autoOutputAction": 0,
+		"autoOutputPathFilenamePattern": "*.png",
+		"autoOutputPathRelativePath": "",
+		"autoOutputPathReplace1": "",
+		"autoOutputPathReplace2": "",
+		"autoOutputPathStyle": 0,
+		"optimizerType": 1,
+		"quality": 100
+		},
+	"languageDefaultsPUG": {
+		"autoOutputAction": 0,
+		"autoOutputPathFilenamePattern": "*.html",
+		"autoOutputPathRelativePath": "",
+		"autoOutputPathReplace1": "",
+		"autoOutputPathReplace2": "",
+		"autoOutputPathStyle": 0,
+		"compileDebug": 1,
+		"outputStyle": 0
+		},
+	"languageDefaultsSASS": {
+		"autoOutputAction": 0,
+		"autoOutputPathFilenamePattern": "*.css",
+		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathReplace1": "sass",
+		"autoOutputPathReplace2": "css",
+		"autoOutputPathStyle": 0,
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 1
+		},
+	"languageDefaultsSLIM": {
+		"autoOutputAction": 0,
+		"autoOutputPathFilenamePattern": "*.html",
+		"autoOutputPathRelativePath": "",
+		"autoOutputPathReplace1": "",
+		"autoOutputPathReplace2": "",
+		"autoOutputPathStyle": 0,
+		"compileOnly": 0,
+		"logicless": 0,
+		"outputFormat": 0,
+		"outputStyle": 1,
+		"railsCompatible": 0
+		},
+	"languageDefaultsSTYLUS": {
+		"autoOutputAction": 0,
+		"autoOutputPathFilenamePattern": "*.css",
+		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathReplace1": "stylus",
+		"autoOutputPathReplace2": "css",
+		"autoOutputPathStyle": 0,
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"importCSS": 0,
+		"outputStyle": 0,
+		"resolveRelativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0
+		},
+	"languageDefaultsSVG": {
+		"autoOutputAction": 2,
+		"autoOutputPathFilenamePattern": "*.svg",
+		"autoOutputPathRelativePath": "",
+		"autoOutputPathReplace1": "",
+		"autoOutputPathReplace2": "",
+		"autoOutputPathStyle": 0,
+		"pluginMask": 3758088159
+		},
+	"languageDefaultsTS": {
+		"autoOutputAction": 0,
+		"autoOutputPathFilenamePattern": "*.js",
+		"autoOutputPathRelativePath": "\/js",
+		"autoOutputPathReplace1": "",
+		"autoOutputPathReplace2": "",
+		"autoOutputPathStyle": 0,
+		"createDeclarationFile": 0,
+		"createSourceMap": 0,
+		"jsxMode": 0,
+		"minifyOutput": 0,
+		"moduleResolutionType": 0,
+		"moduleType": 2,
+		"noImplicitAny": 0,
+		"preserveConstEnums": 0,
+		"removeComments": 0,
+		"suppressImplicitAnyIndexErrors": 0,
+		"targetECMAVersion": 0
+		},
+	"languageDefaultsUserDefined": [
+		],
+	"previewPathAddition": "",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
+	"sourceFolderName": "source",
+	"uglifyDefinesString": "",
+	"uglifyFlags2": {
+		"ascii-only": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"bare-returns": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"booleans": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"bracketize": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"cascade": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"comments": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"comparisons": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"compress": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"conditionals": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"dead_code": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"drop_console": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"drop_debugger": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"eval": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"evaluate": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"hoist_funs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"hoist_vars": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"if_return": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"indent-level": {
+			"active": 0,
+			"flagValue": 4
+			},
+		"indent-start": {
+			"active": 0,
+			"flagValue": 0
+			},
+		"inline-script": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"join_vars": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"keep_fargs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"keep_fnames": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"loops": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"mangle": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"max-line-len": {
+			"active": 1,
+			"flagValue": 32000
+			},
+		"negate_iife": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"properties": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"pure_getters": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"quote-keys": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"screw-ie8": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"semicolons": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"sequences": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"sort": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"space-colon": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"support-ie8": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"toplevel": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unused": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"warnings": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"width": {
+			"active": 1,
+			"flagValue": 80
+			}
+		},
+	"uglifyReservedNamesString": "$",
+	"websiteRelativeRoot": ""
+	},
+"settingsFileVersion": "3"
+}
