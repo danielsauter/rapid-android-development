@@ -202,6 +202,7 @@ You've just completed your first Processing sketch in Java mode. Time now to mak
 
 <a name="run-sketch-android-emulator">
 ###Run a Sketch in the Android Emulator 
+
 </a>
 Let's now switch our basic drawing sketch Figure 2, to Android mode. Click "Java" in the upper right corner of the Processing IDE and use the drop-down menu to add the Android mode. Click "Add mode..." and install the "Android Mode" from the list. Close the Mode Manager and use the drop-down menu to switch to "Android" mode. The structure and statements of a Processing sketch are identical across modes. So there is nothing we need to change in our sketch to run it on an Android.
 
