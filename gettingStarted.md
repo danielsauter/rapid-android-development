@@ -84,7 +84,9 @@ Go ahead and launch Processing from the applications directory. The Processing I
 
 Since you've launched the application for the first time, Processing has just created a sketchbook folder for you, which is located in ```Documents``` on the hard drive, independent of the OS you are developing on. I recommend you save all your sketches to this location. Then Processing can list them for you within the IDE (click the "Open..." toolbar button). Also, when you update to future versions of Processing, the sketchbook loads up exactly the same way as before.
 
-<!-- 1.2 NOTE I'm not sure that this is exactly true in the newest version - I had to specify and create a folder. It's possible that it did not create a folder because I had previously had Processing 2.2.1 installed. -->
+<!-- 1.2 NOTE I'm not sure that this is exactly true in the newest version - I had to specify and create a folder. It's possible that it did not create a folder because I had previously had Processing 2.2.1 installed. 
+9/27/17 Checked and verified on Ubuntu Linux and Windows 
+-->
 
 ###Explore the Processing IDE
 
