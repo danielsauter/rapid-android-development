@@ -194,7 +194,7 @@ size(400, 400);
 
 Now rerun the sketch. With a bit more pixel real estate (400 x 400px), we now have the space to build up some speed.
 
-###Save the Sketch
+###Save the Sketch 
 
 Let's finish by saving the sketch as ```basicDrawing.pde``` into the ```Processing``` sketchbook, located in ```Documents``` on the hard drive. When the sketch is saved, the tab is renamed to the current sketch name. Press Open in the toolbar and see your sketch listed at the top in the sketchbook.
 
