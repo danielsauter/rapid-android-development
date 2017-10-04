@@ -414,7 +414,7 @@ There are a couple of new methods for us to look at.
 
 4. Get the color value at the image pixel location `x` and `y` using the `PImage` method `get()`. Store the value in the `color` variable `pixelColor`.
 
-5. heck for reddish pixel values within the camera preview using the `red()`, `green()`, and `blue()` `PImage` methods to extract individual color values from the `color` datatype. Consider only pixel values with a red content greater than the `high` threshold and `low` green and blue values. Use the globals `high` and `low` for the upper and lower limits of this condition.
+5. Check for reddish pixel values within the camera preview using the `red()`, `green()`, and `blue()` `PImage` methods to extract individual color values from the `color` datatype. Consider only pixel values with a red content greater than the `high` threshold and `low` green and blue values. Use the globals `high` and `low` for the upper and lower limits of this condition.
 
 6. Check if the pixel is already taken by a color using `brightness`. If the `container` is empty and not set yet, it has a brightness value of `0`.
 
