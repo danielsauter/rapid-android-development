@@ -331,7 +331,7 @@ Now that we’ve completed both reading and writing tags, we know how easy this 
 
 ###Wrapping Up
 
-With all those different networking techniques under your belt, you’ve earned the networking badge of honor. Now you’ll be able to choose the right networking method for your mobile projects. You already know how to share data with a remote device and you’ve mastered peer-to-peer networking for those that are nearby. You’ve seen how near field communication can be used to initiate a peer-to-peer connection between two devices and to read `NFC` tags. Each of these highly relevant mobile concepts complement each other and can be combined—making for a whole lot of apps you can build.
+With all these different networking techniques under your belt, you’ve earned the networking badge of honor. Now you’ll be able to choose the right networking method for your mobile projects. You already know how to share data with a remote device and you’ve mastered peer-to-peer networking for those that are nearby. You’ve seen how near field communication can be used to initiate a peer-to-peer connection between two devices and to read `NFC` tags. Each of these highly relevant mobile concepts complement each other and can be combined—making for a whole lot of apps you can build.
 
 Now that we've seen how to share all kinds of data between networked devices, it's time to take a closer look at the databases and formats we can use both locally and remotely.
 
