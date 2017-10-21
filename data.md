@@ -383,7 +383,7 @@ Let’s test the app now.
 
 ###Run the App
 
-We need to make sure we set the correct Android permissions again to run this sketch. Not only do we need to select `INTERNET` from the Android Permission Selector under Sketch Permissions, we also need to check `ANDROID_COARSE_LOCATION` at least, or if we want to know it more accurately we check `ANDROID_FINE_LOCATION` as well. A couple of hundred feet matter less in this application, so the Fine Location is optional.
+We need to make sure we set the correct Android permissions again to run this sketch. Not only do we need to select `INTERNET` from the Android Permission Selector under Sketch Permissions, we also need to check `ACCESS_COARSE_LOCATION` at least, or if we want to know it more accurately we check `ACCESS_FINE_LOCATION` as well. A couple of hundred feet matter less in this application, so the Fine Location is optional.
 
 Run the sketch on your device. When it starts up, the app will try to connect to the data source online. If your device doesn’t have a connection to the Internet, it will catch the exception (“Failed to open online stream reverting to local data”) and load a sample stored as a fallback inside our data folder.
 
