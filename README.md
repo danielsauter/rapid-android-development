@@ -56,15 +56,21 @@ Irena Haiduk, my wife, on whom I rely for the critical judgment and daily joy th
 
 ## Licenses
 
-![](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)
-
 Rapid Android Development by [Daniel Sauter](http://danielsauter.com) is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/).
 
 Based on a work at [mobileprocessing.org](http://mobileprocessing.org/ "Rapid Android Development site").
 
-Permissions beyond the scope of this license may be available at [danielsauter.com\/contact](http://danielsauter.com/contact "Daniel Sauter contact page").
+Permissions beyond the scope of this license may be available at [danielsauter.com/contact](http://danielsauter.com/contact "Daniel Sauter contact page").
+
+![](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)
+
+## Source Code
+
+You can fork and download the source code for the more than 40 example projects in this book at [https://github.com/ketai/rapid-android-development](https://github.com/ketai/rapid-android-development).
+
+The source code is licensed under the [GNU Lesser General Public License](http://creativecommons.org/licenses/LGPL/2.1/), Version 2.1.
 
 ![](http://www.gnu.org/graphics/lgplv3-88x31.png)
 
-The source code for the more than 40 example projects in the book is licensed under the [GNU Lesser General Public License](http://creativecommons.org/licenses/LGPL/2.1/), Version 2.1.
+
 
